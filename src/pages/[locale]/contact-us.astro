@@ -1,0 +1,50 @@
+---
+import BaseLayout from 'theme/layouts/BaseLayout.astro';
+import ContactForm from 'theme/components/ContactForm.astro';
+import { mergeTranslations, getLocalizedUrl, extractLocaleFromParams, getLocaleStaticPaths } from 'theme/i18n/utils';
+import siteConfig from 'src/data/site-config.json';
+
+export function getStaticPaths() {
+  return getLocaleStaticPaths();
+}
+
+const { locale } = Astro.params;
+const currentLocale = extractLocaleFromParams(Astro.params);
+const translations = await mergeTranslations(currentLocale);
+const canonicalUrl = new URL(getLocalizedUrl('/contact-us/', currentLocale), siteConfig.siteUrl).href;
+---
+
+<BaseLayout
+  title={translations.contact.title}
+  description={translations.contact.description}
+  locale={currentLocale}
+  isContactPage={true}
+  canonicalUrl={canonicalUrl}
+>
+  <section class="py-16 md:py-24">
+    <div class="max-w-2xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-primary-700 to-accent-600 bg-clip-text text-transparent">
+        {translations.contact.title}
+      </h1>
+      <p class="mt-4 text-lg text-surface-600 leading-relaxed">
+        {translations.contact.helperText}
+      </p>
+
+      <div class="mt-10 rounded-2xl border border-surface-200/60 bg-white p-8 shadow-sm">
+        <ContactForm translations={translations} web3FormsKey={siteConfig.web3FormsKey} />
+      </div>
+
+      <div class="mt-8 text-center">
+        <p class="text-surface-500">
+          {translations.contact.fallbackText}{' '}
+          <a
+            href={`mailto:${translations.contact.fallbackEmail}`}
+            class="text-primary-600 font-medium hover:text-primary-700 underline underline-offset-2 transition-colors"
+          >
+            {translations.contact.fallbackEmail}
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

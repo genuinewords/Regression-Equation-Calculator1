@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "aboutUs": "À Propos",
+    "blog": "Blog",
+    "contactUs": "Contactez-nous",
+    "terms": "Conditions",
+    "privacy": "Confidentialité",
+    "sitemap": "Plan du Site"
+  },
+  "footer": {
+    "description": "Calculateur gratuit en ligne d'équation de régression avec solutions étape par étape pour les étudiants, les chercheurs et les professionnels.",
+    "copyright": "Tous droits réservés."
+  },
+  "common": {
+    "learnMore": "En Savoir Plus",
+    "previous": "Précédent",
+    "next": "Suivant"
+  }
+}

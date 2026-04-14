@@ -1,0 +1,69 @@
+{
+  "faqs": [
+    {
+      "question": "Apakah persamaan regresi?",
+      "answer": "A regression equation is a mathematical formula that describes the relationship between a dependent variable and one or more independent variables. In simple linear regression, it takes the form y = mx + b, where m is the slope (rate of change) and b is the y-intercept (value when x = 0). The equation allows you to predict the value of the dependent variable based on known values of the independent variable(s).",
+      "display": true
+    },
+    {
+      "question": "Bagaimana anda mengira persamaan regresi?",
+      "answer": "Untuk mengira persamaan regresi, anda perlu: 1) Mengira min x dan y, 2) Mengira kecerunan m = Σ(xi-x̄)(yi-ȳ) / Σ(xi-x̄)², 3) Mengira pintasan b = ȳ - m·x̄. Kalkulator kami melakukan semua ini secara automatik.",
+      "display": true
+    },
+    {
+      "question": "Apakah R-kuasa dua?",
+      "answer": "R-squared (R²) is a statistical measure that represents the proportion of variance in the dependent variable that can be explained by the independent variable. It ranges from 0 to 1: R² = 0 means the model explains none of the variability; R² = 1 means a perfect fit. Generally, R² above 0.7 indicates a strong relationship, 0.3–0.7 is moderate, and below 0.3 is weak.",
+      "display": true
+    },
+    {
+      "question": "Apakah jenis-jenis regresi yang ada?",
+      "answer": "Jenis biasa termasuk regresi linear, regresi berbilang, regresi polinomial, regresi logistik dan regresi rician. Setiap jenis sesuai untuk corak data dan soalan penyelidikan yang berbeza.",
+      "display": true
+    },
+    {
+      "question": "What is the correlation coefficient?",
+      "answer": "The correlation coefficient (r) measures the strength and direction of the linear relationship between two variables. It ranges from -1 to +1: r = +1 means a perfect positive relationship, r = -1 means a perfect negative relationship, and r = 0 means no linear relationship.",
+      "display": true
+    },
+    {
+      "question": "What is the difference between slope and intercept?",
+      "answer": "In the regression equation y = mx + b, the slope (m) tells you how much y changes for each unit increase in x. The intercept (b) is the predicted value of y when x equals zero — it is the point where the regression line crosses the y-axis.",
+      "display": true
+    },
+    {
+      "question": "How many data points do I need for a regression?",
+      "answer": "At a minimum, you need at least 2 data points to calculate a simple linear regression equation. However, for meaningful and reliable results, it is recommended to have at least 10–15 data points.",
+      "display": true
+    },
+    {
+      "question": "What is the standard error of the regression?",
+      "answer": "The standard error (SE) of the regression measures the average distance that the observed data points fall from the regression line. A smaller SE indicates that the data points are closer to the fitted line, meaning the model predictions are more accurate.",
+      "display": true
+    },
+    {
+      "question": "When should I use linear regression?",
+      "answer": "Use linear regression when you want to model the relationship between a continuous dependent variable and one or more independent variables, and when the relationship appears to be approximately linear.",
+      "display": true
+    },
+    {
+      "question": "What are the assumptions of linear regression?",
+      "answer": "Linear regression assumes: 1) Linearity, 2) Independence, 3) Homoscedasticity, 4) Normality of residuals, 5) No multicollinearity. Violating these assumptions can lead to unreliable results.",
+      "display": true
+    },
+    {
+      "question": "What is the difference between correlation and regression?",
+      "answer": "Correlation measures the strength and direction of the relationship between two variables without implying causation. Regression goes further by fitting a line and providing an equation that can predict one variable from another.",
+      "display": true
+    },
+    {
+      "question": "What types of regression are there?",
+      "answer": "Common types include: Linear Regression, Multiple Regression, Polynomial Regression, Logistic Regression, Ridge Regression, and Lasso Regression. Each type suits different data patterns and research questions.",
+      "display": true
+    },
+    {
+      "question": "Can I use this calculator for multiple regression?",
+      "answer": "Currently, this calculator supports simple linear regression with one independent variable. For multiple regression, you would need specialized statistical software like R, Python, or SPSS.",
+      "display": false
+    }
+  ]
+}

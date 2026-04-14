@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "aboutUs": "私たちについて",
+    "blog": "ブログ",
+    "contactUs": "お問い合わせ",
+    "terms": "利用規約",
+    "privacy": "プライバシー",
+    "sitemap": "サイトマップ"
+  },
+  "footer": {
+    "description": "学生、研究者、専門家のためのステップバイステップ解法付き無料オンライン回帰方程式計算機。",
+    "copyright": "全著作権所有。"
+  },
+  "common": {
+    "learnMore": "詳しく見る",
+    "previous": "前へ",
+    "next": "次へ"
+  }
+}

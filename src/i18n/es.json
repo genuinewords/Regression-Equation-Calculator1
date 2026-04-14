@@ -1,0 +1,121 @@
+{
+  "siteTitle": "Calculadora de Ecuación de Regresión",
+  "siteDescription": "Calculadora gratuita en línea de ecuación de regresión. Calcule ecuaciones de regresión lineal, polinómica y múltiple al instante con soluciones paso a paso.",
+  "home": {
+    "title": "Calculadora de Ecuación de Regresión",
+    "description": "Calcule ecuaciones de regresión al instante con nuestra herramienta gratuita en línea",
+    "intro": "Ingrese sus puntos de datos y obtenga la ecuación de regresión, pendiente, intersección, valor R-cuadrado y cálculos paso a paso en segundos.",
+    "whatIsTitle": "What Is a Regression Equation?",
+    "whatIsText": "A regression equation models the relationship between variables, allowing you to predict outcomes based on input data. In its simplest form — simple linear regression — the equation is <strong>y = mx + b</strong>, where <strong>m</strong> is the slope and <strong>b</strong> is the y-intercept. This powerful statistical tool is used across science, business, and engineering to uncover trends, make forecasts, and quantify relationships between variables.",
+    "whyUseTitle": "Why Use Our Calculator?",
+    "whyUsePoints": [
+      "Instantly computes the regression equation from your data",
+      "Shows step-by-step calculations so you understand the math",
+      "Calculates R², correlation coefficient, slope, and intercept",
+      "No signup required — 100% free and runs in your browser",
+      "Your data stays private — nothing is sent to any server"
+    ],
+    "useCasesTitle": "Common Use Cases",
+    "useCasesPoints": [
+      "Predicting sales from advertising spend",
+      "Estimating house prices from square footage",
+      "Analyzing the impact of study hours on exam scores",
+      "Forecasting temperature changes over time",
+      "Evaluating the relationship between dosage and response"
+    ],
+    "faqTitle": "Frequently Asked Questions",
+    "howItWorksTitle": "Cómo funciona la Calculadora de Ecuación de Regresión",
+    "howItWorksStep1": "Ingrese sus puntos de datos x e y en la tabla a continuación",
+    "howItWorksStep2": "Haga clic en Calcular para calcular la ecuación de regresión",
+    "howItWorksStep3": "Vea sus resultados incluyendo ecuación, pendiente, intersección y valor R²",
+    "tableTitle": "Referencia de Estadísticas de Regresión",
+    "tableDescription": "Estadísticas de regresión comunes y sus interpretaciones",
+    "howItWorksStep1Title": "Enter Data",
+    "howItWorksStep2Title": "Calculate",
+    "howItWorksStep3Title": "View Results",
+    "tableStat": "Statistic",
+    "tableSymbol": "Symbol",
+    "tableInterpretation": "Interpretation",
+    "tableSlope": "Slope",
+    "tableSlopeSym": "m",
+    "tableSlopeInt": "Rate of change",
+    "tableIntercept": "Intercept",
+    "tableInterceptSym": "b",
+    "tableInterceptInt": "Value when x = 0",
+    "tableRSquared": "R-Squared",
+    "tableRSquaredSym": "R²",
+    "tableRSquaredInt": "Goodness of fit",
+    "tableCorrelation": "Correlation",
+    "tableCorrelationSym": "r",
+    "tableCorrelationInt": "Strength of relationship",
+    "tableStdError": "Standard Error",
+    "tableStdErrorSym": "SE",
+    "tableStdErrorInt": "Average distance from line",
+    "tablePValue": "P-value",
+    "tablePValueSym": "p",
+    "tablePValueInt": "Statistical significance"
+  },
+  "about": {
+    "title": "Sobre Nosotros",
+    "description": "Conozca sobre la Calculadora de Ecuación de Regresión",
+    "content": "La Calculadora de Ecuación de Regresión es una herramienta gratuita en línea diseñada para ayudar a estudiantes, investigadores y profesionales a calcular ecuaciones de regresión de forma rápida y precisa. Nuestra calculadora admite regresión lineal y proporciona soluciones paso a paso detalladas para ayudarle a comprender el proceso matemático detrás de los resultados. Ya sea que esté estudiando estadística, analizando datos o trabajando en investigación, nuestra herramienta hace que el análisis de regresión sea accesible para todos."
+  },
+  "contact": {
+    "title": "Contáctenos",
+    "description": "Póngase en contacto con el equipo de la Calculadora de Ecuación de Regresión",
+    "helperText": "¿Tiene alguna pregunta o comentario? Nos encantaría saber de usted. Complete el formulario a continuación y nos pondremos en contacto con usted lo antes posible.",
+    "nameLabel": "Su Nombre",
+    "emailLabel": "Su Correo Electrónico",
+    "messageLabel": "Su Mensaje",
+    "sendButton": "Enviar Mensaje",
+    "sending": "Enviando...",
+    "success": "¡Mensaje enviado con éxito!",
+    "apiError": "Algo salió mal. Por favor, inténtelo de nuevo.",
+    "networkError": "Error de red. Por favor, verifique su conexión.",
+    "fallbackText": "También puede comunicarse directamente con nosotros en",
+    "fallbackEmail": "contact@regressionequationcalculator.com"
+  },
+  "terms": {
+    "title": "Términos de Servicio",
+    "description": "Términos y condiciones para usar la Calculadora de Ecuación de Regresión",
+    "content": "Al acceder y usar el sitio web de la Calculadora de Ecuación de Regresión, usted acepta estar sujeto a estos términos. Nuestra herramienta se proporciona con fines educativos y analíticos. Los resultados deben verificarse para aplicaciones críticas. Nos reservamos el derecho de modificar estos términos en cualquier momento. El uso de la calculadora es gratuito y no garantizamos la precisión de los resultados para fines profesionales o comerciales."
+  },
+  "privacy": {
+    "title": "Política de Privacidad",
+    "description": "Cómo manejamos sus datos en la Calculadora de Ecuación de Regresión",
+    "content": "Valoramos su privacidad. La Calculadora de Ecuación de Regresión no recopila, almacena ni comparte ningún dato personal ingresado en la calculadora. Todos los cálculos se realizan localmente en su navegador. Podemos usar análisis para comprender los patrones de uso del sitio, pero no se recopila información de identificación personal. Los envíos del formulario de contacto se procesan de forma segura y no se comparten con terceros."
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Artículos sobre análisis de regresión y estadística",
+    "readMore": "Leer Más",
+    "resultsMeta": "Mostrando {start}-{end} de {total} artículos"
+  },
+  "calculator": {
+    "title": "Calculadora de Ecuación de Regresión",
+    "description": "Ingrese sus puntos de datos para calcular la ecuación de regresión",
+    "enterData": "Ingrese sus puntos de datos",
+    "xLabel": "Valores X",
+    "yLabel": "Valores Y",
+    "addRow": "Agregar Fila",
+    "calculate": "Calcular",
+    "clear": "Limpiar",
+    "result": "Resultados",
+    "equation": "Ecuación de Regresión",
+    "slope": "Pendiente (m)",
+    "intercept": "Intersección (b)",
+    "rSquared": "R-Cuadrado",
+    "correlation": "Correlación (r)",
+    "invalidData": "Por favor, ingrese al menos 2 puntos de datos válidos",
+    "stepByStep": "Solución Paso a Paso"
+  },
+  "notFound": {
+    "title": "Página No Encontrada",
+    "description": "La página que busca no existe",
+    "backHome": "Volver al Inicio"
+  },
+  "sitemap": {
+    "title": "Mapa del Sitio",
+    "description": "Explore todas las páginas de la Calculadora de Ecuación de Regresión"
+  }
+}

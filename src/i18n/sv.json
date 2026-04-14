@@ -1,0 +1,121 @@
+{
+  "siteTitle": "Regressionsekvationskalkylator",
+  "siteDescription": "Gratis online regressionsekvationskalkylator. Beräkna linjära, polynomella och multipla regressionsekvationer omedelbart med steg-för-steg-lösningar.",
+  "home": {
+    "title": "Regressionsekvationskalkylator",
+    "description": "Beräkna regressionsekvationer omedelbart med vårt gratis onlineverktyg",
+    "intro": "Ange dina datapunkter och få regressionsekvationen, lutningen, skärningspunkten, R-kvadrat-värdet och steg-för-steg-beräkningar på några sekunder.",
+    "whatIsTitle": "What Is a Regression Equation?",
+    "whatIsText": "A regression equation models the relationship between variables, allowing you to predict outcomes based on input data. In its simplest form — simple linear regression — the equation is <strong>y = mx + b</strong>, where <strong>m</strong> is the slope and <strong>b</strong> is the y-intercept. This powerful statistical tool is used across science, business, and engineering to uncover trends, make forecasts, and quantify relationships between variables.",
+    "whyUseTitle": "Why Use Our Calculator?",
+    "whyUsePoints": [
+      "Instantly computes the regression equation from your data",
+      "Shows step-by-step calculations so you understand the math",
+      "Calculates R², correlation coefficient, slope, and intercept",
+      "No signup required — 100% free and runs in your browser",
+      "Your data stays private — nothing is sent to any server"
+    ],
+    "useCasesTitle": "Common Use Cases",
+    "useCasesPoints": [
+      "Predicting sales from advertising spend",
+      "Estimating house prices from square footage",
+      "Analyzing the impact of study hours on exam scores",
+      "Forecasting temperature changes over time",
+      "Evaluating the relationship between dosage and response"
+    ],
+    "faqTitle": "Frequently Asked Questions",
+    "howItWorksTitle": "Hur Regressionsekvationskalkylatorn Fungerar",
+    "howItWorksStep1": "Ange dina x- och y-datapunkter i tabellen nedan",
+    "howItWorksStep2": "Klicka på Beräkna för att beräkna regressionsekvationen",
+    "howItWorksStep3": "Se dina resultat inklusive ekvation, lutning, skärningspunkt och R²-värde",
+    "tableTitle": "Regressionsstatistikreferens",
+    "tableDescription": "Vanliga regressionsstatistik och deras tolkningar",
+    "howItWorksStep1Title": "Enter Data",
+    "howItWorksStep2Title": "Calculate",
+    "howItWorksStep3Title": "View Results",
+    "tableStat": "Statistic",
+    "tableSymbol": "Symbol",
+    "tableInterpretation": "Interpretation",
+    "tableSlope": "Slope",
+    "tableSlopeSym": "m",
+    "tableSlopeInt": "Rate of change",
+    "tableIntercept": "Intercept",
+    "tableInterceptSym": "b",
+    "tableInterceptInt": "Value when x = 0",
+    "tableRSquared": "R-Squared",
+    "tableRSquaredSym": "R²",
+    "tableRSquaredInt": "Goodness of fit",
+    "tableCorrelation": "Correlation",
+    "tableCorrelationSym": "r",
+    "tableCorrelationInt": "Strength of relationship",
+    "tableStdError": "Standard Error",
+    "tableStdErrorSym": "SE",
+    "tableStdErrorInt": "Average distance from line",
+    "tablePValue": "P-value",
+    "tablePValueSym": "p",
+    "tablePValueInt": "Statistical significance"
+  },
+  "about": {
+    "title": "Om Oss",
+    "description": "Lär dig om Regressionsekvationskalkylatorn",
+    "content": "Regressionsekvationskalkylatorn är ett gratis onlineverktyg utformat för att hjälpa studenter, forskare och professionella att beräkna regressionsekvationer snabbt och korrekt. Vår kalkylator stöder linjär regression och ger detaljerade steg-för-steg-lösningar för att hjälpa dig förstå den matematiska processen bakom resultaten. Oavsett om du studerar statistik, analyserar data eller arbetar med forskning, gör vårt verktyg regressionsanalys tillgänglig för alla."
+  },
+  "contact": {
+    "title": "Kontakta Oss",
+    "description": "Kommunicera med teamet bakom Regressionsekvationskalkylatorn",
+    "helperText": "Har du en fråga eller feedback? Vi vill gärna höra från dig. Fyll i formuläret nedan så återkommer vi så snart som möjligt.",
+    "nameLabel": "Ditt Namn",
+    "emailLabel": "Din E-post",
+    "messageLabel": "Ditt Meddelande",
+    "sendButton": "Skicka Meddelande",
+    "sending": "Skickar...",
+    "success": "Meddelande skickat!",
+    "apiError": "Något gick fel. Försök igen.",
+    "networkError": "Nätverksfel. Kontrollera din anslutning.",
+    "fallbackText": "Du kan också nå oss direkt på",
+    "fallbackEmail": "contact@regressionequationcalculator.com"
+  },
+  "terms": {
+    "title": "Användarvillkor",
+    "description": "Villkor och bestämmelser för användning av Regressionsekvationskalkylatorn",
+    "content": "Genom att komma åt och använda Regressionsekvationskalkylatorns webbplats samtycker du till att vara bunden av dessa villkor. Vårt verktyg tillhandahålls för utbildnings- och analyssyften. Resultat bör verifieras för kritiska tillämpningar. Vi förbehåller oss rätten att ändra dessa villkor när som helst. Användningen av kalkylatorn är gratis och vi garanterar inte resultats noggrannhet för professionella eller kommersiella syften."
+  },
+  "privacy": {
+    "title": "Integritetspolicy",
+    "description": "Hur vi hanterar dina data i Regressionsekvationskalkylatorn",
+    "content": "Vi värdesätter din integritet. Regressionsekvationskalkylatorn samlar inte in, lagrar eller delar några personuppgifter som anges i kalkylatorn. Alla beräkningar utförs lokalt i din webbläsare. Vi kan använda analys för att förstå webbplatsens användningsmönster, men ingen personligt identifierbar information samlas in. Kontaktformulärinskick hanteras säkert och delas inte med tredje part."
+  },
+  "blog": {
+    "title": "Blogg",
+    "description": "Artiklar om regressionsanalys och statistik",
+    "readMore": "Läs Mer",
+    "resultsMeta": "Visar {start}-{end} av {total} artiklar"
+  },
+  "calculator": {
+    "title": "Regressionsekvationskalkylator",
+    "description": "Ange dina datapunkter för att beräkna regressionsekvationen",
+    "enterData": "Ange dina datapunkter",
+    "xLabel": "X-värden",
+    "yLabel": "Y-värden",
+    "addRow": "Lägg till Rad",
+    "calculate": "Beräkna",
+    "clear": "Rensa",
+    "result": "Resultat",
+    "equation": "Regressionsekvation",
+    "slope": "Lutning (m)",
+    "intercept": "Skärningspunkt (b)",
+    "rSquared": "R-kvadrat",
+    "correlation": "Korrelation (r)",
+    "invalidData": "Ange minst 2 giltiga datapunkter",
+    "stepByStep": "Steg-för-steg-lösning"
+  },
+  "notFound": {
+    "title": "Sidan Hittades Inte",
+    "description": "Sidan du letar efter existerar inte",
+    "backHome": "Tillbaka till Startsidan"
+  },
+  "sitemap": {
+    "title": "Webbplatskarta",
+    "description": "Utforska alla sidor på Regressionsekvationskalkylatorn"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "home": "Utama",
+    "aboutUs": "Tentang Kami",
+    "blog": "Blog",
+    "contactUs": "Hubungi Kami",
+    "terms": "Terma",
+    "privacy": "Privasi",
+    "sitemap": "Peta Laman"
+  },
+  "footer": {
+    "description": "Kalkulator persamaan regresi dalam talian percuma dengan penyelesaian langkah demi langkah untuk pelajar, penyelidik dan profesional.",
+    "copyright": "Hak cipta terpelihara."
+  },
+  "common": {
+    "learnMore": "Ketahui Lebih Lanjut",
+    "previous": "Sebelumnya",
+    "next": "Seterusnya"
+  }
+}

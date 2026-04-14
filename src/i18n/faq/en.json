@@ -1,0 +1,64 @@
+{
+  "faqs": [
+    {
+      "question": "What is a regression equation?",
+      "answer": "A regression equation is a mathematical formula that describes the relationship between a dependent variable and one or more independent variables. In simple linear regression, it takes the form y = mx + b, where m is the slope (rate of change) and b is the y-intercept (value when x = 0). The equation allows you to predict the value of the dependent variable based on known values of the independent variable(s).",
+      "display": true
+    },
+    {
+      "question": "How do you calculate a regression equation?",
+      "answer": "To calculate a linear regression equation, you need to: 1) Calculate the means (averages) of your x and y data points, 2) Compute the slope using the formula m = Σ(xi - x̄)(yi - ȳ) / Σ(xi - x̄)², 3) Calculate the intercept using b = ȳ - m·x̄. Our calculator performs all these steps automatically and shows you the detailed working.",
+      "display": true
+    },
+    {
+      "question": "What is R-squared and how do I interpret it?",
+      "answer": "R-squared (R²) is a statistical measure that represents the proportion of variance in the dependent variable that can be explained by the independent variable. It ranges from 0 to 1: R² = 0 means the model explains none of the variability; R² = 1 means a perfect fit. Generally, R² above 0.7 indicates a strong relationship, 0.3–0.7 is moderate, and below 0.3 is weak.",
+      "display": true
+    },
+    {
+      "question": "What is the correlation coefficient?",
+      "answer": "The correlation coefficient (r) measures the strength and direction of the linear relationship between two variables. It ranges from -1 to +1: r = +1 means a perfect positive relationship, r = -1 means a perfect negative relationship, and r = 0 means no linear relationship. The closer r is to ±1, the stronger the linear association.",
+      "display": true
+    },
+    {
+      "question": "What is the difference between slope and intercept?",
+      "answer": "In the regression equation y = mx + b, the slope (m) tells you how much y changes for each unit increase in x. A positive slope means y increases as x increases; a negative slope means y decreases. The intercept (b) is the predicted value of y when x equals zero — it is the point where the regression line crosses the y-axis.",
+      "display": true
+    },
+    {
+      "question": "How many data points do I need for a regression?",
+      "answer": "At a minimum, you need at least 2 data points to calculate a simple linear regression equation. However, for meaningful and reliable results, it is recommended to have at least 10–15 data points. The more data points you have, the more reliable and statistically significant your regression model becomes.",
+      "display": true
+    },
+    {
+      "question": "What is the standard error of the regression?",
+      "answer": "The standard error (SE) of the regression measures the average distance that the observed data points fall from the regression line. A smaller SE indicates that the data points are closer to the fitted line, meaning the model predictions are more accurate. It is essentially a measure of the model's precision.",
+      "display": true
+    },
+    {
+      "question": "When should I use linear regression?",
+      "answer": "Use linear regression when you want to model the relationship between a continuous dependent variable and one or more independent variables, and when the relationship appears to be approximately linear. Common applications include predicting sales from advertising spend, estimating house prices from square footage, or analyzing the effect of study time on test scores.",
+      "display": true
+    },
+    {
+      "question": "What are the assumptions of linear regression?",
+      "answer": "Linear regression assumes: 1) Linearity — the relationship between variables is linear, 2) Independence — observations are independent of each other, 3) Homoscedasticity — residuals have constant variance, 4) Normality — residuals are normally distributed, 5) No multicollinearity — independent variables are not highly correlated (for multiple regression). Violating these assumptions can lead to unreliable results.",
+      "display": true
+    },
+    {
+      "question": "What is the difference between correlation and regression?",
+      "answer": "Correlation measures the strength and direction of the relationship between two variables (ranging from -1 to +1) without implying causation. Regression goes further by fitting a line to the data and providing an equation (y = mx + b) that can predict one variable from another. While correlation is symmetric (r_xy = r_yx), regression is not — predicting y from x gives different results than predicting x from y.",
+      "display": true
+    },
+    {
+      "question": "What types of regression are there?",
+      "answer": "Common types include: Linear Regression (one predictor), Multiple Regression (multiple predictors), Polynomial Regression (curved relationships), Logistic Regression (binary outcomes), Ridge Regression (with regularization to prevent overfitting), and Lasso Regression (feature selection via regularization). Each type suits different data patterns and research questions.",
+      "display": true
+    },
+    {
+      "question": "Can I use this calculator for multiple regression?",
+      "answer": "Currently, this calculator supports simple linear regression with one independent variable (x) and one dependent variable (y). For multiple regression with several predictors, you would need to use specialized statistical software like R, Python (statsmodels), or SPSS. We may add multiple regression support in a future update.",
+      "display": false
+    }
+  ]
+}

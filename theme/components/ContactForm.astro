@@ -1,0 +1,114 @@
+---
+import type { MergedTranslations } from 'theme/i18n/types';
+
+interface Props {
+  translations: MergedTranslations;
+  web3FormsKey: string;
+}
+
+const { translations, web3FormsKey } = Astro.props;
+const contact = translations.contact;
+---
+
+<section class="py-8">
+  <div class="mx-auto max-w-xl">
+    <div class="rounded-2xl shadow-lg dark:shadow-surface-950/50 shadow-primary-900/5 border border-surface-200/80 dark:border-surface-700 bg-white dark:bg-surface-800 p-6 sm:p-8">
+      <form id="contact-form" class="space-y-5" novalidate>
+        <div>
+          <label for="contact-name" class="block text-sm font-medium text-surface-700 dark:text-surface-300 mb-1.5">{contact.nameLabel}</label>
+          <input
+            type="text"
+            id="contact-name"
+            name="name"
+            required
+            autocomplete="name"
+            class="w-full px-4 py-2.5 text-sm rounded-lg border border-surface-200 dark:border-surface-600 bg-white dark:bg-surface-700 dark:text-surface-200 placeholder-surface-400 dark:placeholder-surface-500 transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-300"
+          />
+        </div>
+
+        <div>
+          <label for="contact-email" class="block text-sm font-medium text-surface-700 dark:text-surface-300 mb-1.5">{contact.emailLabel}</label>
+          <input
+            type="email"
+            id="contact-email"
+            name="email"
+            required
+            autocomplete="email"
+            class="w-full px-4 py-2.5 text-sm rounded-lg border border-surface-200 dark:border-surface-600 bg-white dark:bg-surface-700 dark:text-surface-200 placeholder-surface-400 dark:placeholder-surface-500 transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-300"
+          />
+        </div>
+
+        <div>
+          <label for="contact-message" class="block text-sm font-medium text-surface-700 dark:text-surface-300 mb-1.5">{contact.messageLabel}</label>
+          <textarea
+            id="contact-message"
+            name="message"
+            rows="5"
+            required
+            class="w-full px-4 py-2.5 text-sm rounded-lg border border-surface-200 dark:border-surface-600 bg-white dark:bg-surface-700 dark:text-surface-200 placeholder-surface-400 dark:placeholder-surface-500 transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-300 resize-y"
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          id="contact-submit"
+          class="w-full px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-primary-600 to-accent-600 rounded-lg shadow-md shadow-primary-600/20 transition-all duration-200 hover:shadow-lg hover:shadow-primary-600/30 hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-primary-500/30 disabled:opacity-60 disabled:cursor-not-allowed"
+        >
+          {contact.sendButton}
+        </button>
+
+        <p id="contact-status" class="text-sm text-center min-h-[1.25rem]"></p>
+      </form>
+
+      <div class="mt-4 pt-4 border-t border-surface-100 dark:border-surface-700 text-center">
+        <p class="text-xs text-surface-500 dark:text-surface-400">
+          {contact.fallbackText} <a href={`mailto:${contact.fallbackEmail}`} class="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium">{contact.fallbackEmail}</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script define:vars={{ accessKey: web3FormsKey, sending: contact.sending, success: contact.success, apiError: contact.apiError, networkError: contact.networkError }}>
+  const form = document.getElementById('contact-form');
+  const statusEl = document.getElementById('contact-status');
+  const submitBtn = document.getElementById('contact-submit');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    submitBtn.disabled = true;
+    statusEl.textContent = sending;
+    statusEl.className = 'text-sm text-center min-h-[1.25rem] text-primary-600 dark:text-primary-400';
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ access_key: accessKey, ...data }),
+      });
+
+      const result = await res.json();
+      if (result.success) {
+        statusEl.textContent = success;
+        statusEl.className = 'text-sm text-center min-h-[1.25rem] text-green-600 dark:text-green-400 font-medium';
+        form.reset();
+      } else {
+        statusEl.textContent = apiError;
+        statusEl.className = 'text-sm text-center min-h-[1.25rem] text-red-600 dark:text-red-400';
+      }
+    } catch {
+      statusEl.textContent = networkError;
+      statusEl.className = 'text-sm text-center min-h-[1.25rem] text-red-600 dark:text-red-400';
+    } finally {
+      submitBtn.disabled = false;
+    }
+  });
+</script>

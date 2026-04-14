@@ -1,0 +1,121 @@
+{
+  "siteTitle": "回帰方程式計算機",
+  "siteDescription": "無料オンライン回帰方程式計算機。ステップバイステップの解法付きで、線形、多項式、重回帰方程式を即座に計算できます。",
+  "home": {
+    "title": "回帰方程式計算機",
+    "description": "無料のオンラインツールで回帰方程式を即座に計算",
+    "intro": "データポイントを入力して、回帰方程式、傾き、切片、R二乗値、ステップバイステップの計算結果を数秒で取得できます。",
+    "whatIsTitle": "What Is a Regression Equation?",
+    "whatIsText": "A regression equation models the relationship between variables, allowing you to predict outcomes based on input data. In its simplest form — simple linear regression — the equation is <strong>y = mx + b</strong>, where <strong>m</strong> is the slope and <strong>b</strong> is the y-intercept. This powerful statistical tool is used across science, business, and engineering to uncover trends, make forecasts, and quantify relationships between variables.",
+    "whyUseTitle": "Why Use Our Calculator?",
+    "whyUsePoints": [
+      "Instantly computes the regression equation from your data",
+      "Shows step-by-step calculations so you understand the math",
+      "Calculates R², correlation coefficient, slope, and intercept",
+      "No signup required — 100% free and runs in your browser",
+      "Your data stays private — nothing is sent to any server"
+    ],
+    "useCasesTitle": "Common Use Cases",
+    "useCasesPoints": [
+      "Predicting sales from advertising spend",
+      "Estimating house prices from square footage",
+      "Analyzing the impact of study hours on exam scores",
+      "Forecasting temperature changes over time",
+      "Evaluating the relationship between dosage and response"
+    ],
+    "faqTitle": "Frequently Asked Questions",
+    "howItWorksTitle": "回帰方程式計算機の仕組み",
+    "howItWorksStep1": "下の表にxとyのデータポイントを入力してください",
+    "howItWorksStep2": "計算ボタンをクリックして回帰方程式を計算します",
+    "howItWorksStep3": "方程式、傾き、切片、R²値を含む結果を確認します",
+    "tableTitle": "回帰統計リファレンス",
+    "tableDescription": "一般的な回帰統計とその解釈",
+    "howItWorksStep1Title": "Enter Data",
+    "howItWorksStep2Title": "Calculate",
+    "howItWorksStep3Title": "View Results",
+    "tableStat": "Statistic",
+    "tableSymbol": "Symbol",
+    "tableInterpretation": "Interpretation",
+    "tableSlope": "Slope",
+    "tableSlopeSym": "m",
+    "tableSlopeInt": "Rate of change",
+    "tableIntercept": "Intercept",
+    "tableInterceptSym": "b",
+    "tableInterceptInt": "Value when x = 0",
+    "tableRSquared": "R-Squared",
+    "tableRSquaredSym": "R²",
+    "tableRSquaredInt": "Goodness of fit",
+    "tableCorrelation": "Correlation",
+    "tableCorrelationSym": "r",
+    "tableCorrelationInt": "Strength of relationship",
+    "tableStdError": "Standard Error",
+    "tableStdErrorSym": "SE",
+    "tableStdErrorInt": "Average distance from line",
+    "tablePValue": "P-value",
+    "tablePValueSym": "p",
+    "tablePValueInt": "Statistical significance"
+  },
+  "about": {
+    "title": "私たちについて",
+    "description": "回帰方程式計算機について",
+    "content": "回帰方程式計算機は、学生、研究者、専門家が回帰方程式を迅速かつ正確に計算できるよう設計された無料のオンラインツールです。当計算機は線形回帰をサポートし、結果の背後にある数学的プロセスを理解するための詳細なステップバイステップの解法を提供します。統計学を学ぶ、データを分析する、研究に取り組むなど、どのような目的でも、当ツールは回帰分析を誰もが利用できるようにします。"
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "description": "回帰方程式計算機チームにご連絡ください",
+    "helperText": "ご質問やフィードバックがありますか？ぜひお聞かせください。下のフォームにご記入いただければ、できるだけ早くご返信いたします。",
+    "nameLabel": "お名前",
+    "emailLabel": "メールアドレス",
+    "messageLabel": "メッセージ",
+    "sendButton": "メッセージを送信",
+    "sending": "送信中...",
+    "success": "メッセージが正常に送信されました！",
+    "apiError": "エラーが発生しました。もう一度お試しください。",
+    "networkError": "ネットワークエラー。接続を確認してください。",
+    "fallbackText": "直接ご連絡いただくこともできます",
+    "fallbackEmail": "contact@regressionequationcalculator.com"
+  },
+  "terms": {
+    "title": "利用規約",
+    "description": "回帰方程式計算機の利用規約と条件",
+    "content": "回帰方程式計算機のウェブサイトにアクセスして使用することにより、これらの規約に拘束されることに同意したものとみなします。当ツールは教育・分析目的で提供されています。重要な用途では結果を検証してください。当方はいつでもこれらの規約を変更する権利を留保します。計算機の利用は無料であり、専門的・商業的目的における結果の正確性は保証いたしません。"
+  },
+  "privacy": {
+    "title": "プライバシーポリシー",
+    "description": "回帰方程式計算機におけるデータの取り扱い",
+    "content": "お客様のプライバシーを尊重しています。回帰方程式計算機は、計算機に入力された個人データを収集、保存、共有しません。すべての計算はお客様のブラウザ内でローカルに実行されます。サイトの利用パターンを理解するために分析を利用する場合がありますが、個人を特定できる情報は収集されません。お問い合わせフォームの送信は安全に処理され、第三者と共有されることはありません。"
+  },
+  "blog": {
+    "title": "ブログ",
+    "description": "回帰分析と統計に関する記事",
+    "readMore": "続きを読む",
+    "resultsMeta": "{total}件の記事中{start}-{end}件を表示"
+  },
+  "calculator": {
+    "title": "回帰方程式計算機",
+    "description": "データポイントを入力して回帰方程式を計算します",
+    "enterData": "データポイントを入力してください",
+    "xLabel": "X値",
+    "yLabel": "Y値",
+    "addRow": "行を追加",
+    "calculate": "計算",
+    "clear": "クリア",
+    "result": "結果",
+    "equation": "回帰方程式",
+    "slope": "傾き (m)",
+    "intercept": "切片 (b)",
+    "rSquared": "R二乗",
+    "correlation": "相関 (r)",
+    "invalidData": "少なくとも2つの有効なデータポイントを入力してください",
+    "stepByStep": "ステップバイステップの解法"
+  },
+  "notFound": {
+    "title": "ページが見つかりません",
+    "description": "お探しのページは存在しません",
+    "backHome": "ホームに戻る"
+  },
+  "sitemap": {
+    "title": "サイトマップ",
+    "description": "回帰方程式計算機のすべてのページを探索"
+  }
+}

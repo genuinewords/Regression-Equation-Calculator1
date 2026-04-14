@@ -1,0 +1,310 @@
+<!DOCTYPE html><html lang="en" dir="ltr"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+      (function(){var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark')}})();
+    </script><title>Multiple Regression Analysis: When One Predictor Isn&#39;t Enough | Regression Equation Calculator</title><meta name="description" content="A comprehensive guide to multiple regression analysis. Learn the equation, assumptions, step-by-step process, real-world applications, and how it differs from simple linear regression — with an interactive demo."><link rel="canonical" href="https://regressionequationcalculator.com/blog/multiple-regression-explained/"><meta name="robots" content="index, follow"><meta name="googlebot" content="index, follow"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" href="/favicon.ico"><meta property="og:title" content="Multiple Regression Analysis: When One Predictor Isn't Enough | Regression Equation Calculator"><meta property="og:description" content="A comprehensive guide to multiple regression analysis. Learn the equation, assumptions, step-by-step process, real-world applications, and how it differs from simple linear regression — with an interactive demo."><meta property="og:url" content="https://regressionequationcalculator.com/blog/multiple-regression-explained/"><meta property="og:site_name" content="Regression Equation Calculator"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://regressionequationcalculator.com/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Regression Equation Calculator"><meta property="og:type" content="article"><meta name="twitter:title" content="Multiple Regression Analysis: When One Predictor Isn't Enough | Regression Equation Calculator"><meta name="twitter:description" content="A comprehensive guide to multiple regression analysis. Learn the equation, assumptions, step-by-step process, real-world applications, and how it differs from simple linear regression — with an interactive demo."><meta name="twitter:image" content="https://regressionequationcalculator.com/og-image.png"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Regression Equation Calculator","url":"https://regressionequationcalculator.com","legalName":"Regression Equation Calculator","logo":{"@type":"ImageObject","url":"https://regressionequationcalculator.com/logo.svg"},"description":"Free online regression equation calculator. Compute linear, polynomial, and multiple regression equations instantly with step-by-step solutions.","sameAs":["https://facebook.com/regressionequationcalculator","https://twitter.com/regcalc","https://linkedin.com/company/regression-equation-calculator"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"SiteNavigationElement","name":["Home","About Us","Blog","Contact Us"],"url":["https://regressionequationcalculator.com/","https://regressionequationcalculator.com/about-us/","https://regressionequationcalculator.com/blog/","https://regressionequationcalculator.com/contact-us/"]}</script><link rel="stylesheet" href="/_astro/BaseLayout.bFUW7Zch.css"></head> <body class="bg-gradient-to-br from-surface-50 via-white to-primary-50/20 dark:from-surface-950 dark:via-surface-900 dark:to-primary-950/40 min-h-screen"> <header id="site-header" class="sticky top-0 z-50 w-full border-b border-surface-200/60 dark:border-surface-700/40 bg-white/80 dark:bg-surface-900/80 backdrop-blur-lg supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-surface-900/70 transition-shadow duration-300"> <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 2xl:px-0 2xl:max-w-[1440px]"> <a href="/" class="flex items-center gap-2.5 group" aria-label="Regression Equation Calculator"> <img src="/logo.svg" alt="" class="h-8 w-8 rounded-lg transition-transform duration-300 group-hover:scale-110" width="32" height="32"> <span class="text-lg font-bold bg-gradient-to-r from-primary-700 to-accent-600 dark:from-primary-400 dark:to-accent-400 bg-clip-text text-transparent"> Regression Equation Calculator </span> </a> <nav class="hidden md:flex items-center gap-1" aria-label="Main navigation"> <a href="/" class="relative px-3 py-2 text-sm font-medium text-surface-600 dark:text-surface-300 transition-colors duration-200 hover:text-primary-600 dark:hover:text-primary-400 after:absolute after:bottom-0.5 after:left-3 after:right-3 after:h-0.5 after:rounded-full after:bg-accent-500 after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:after:scale-x-100"> Home </a><a href="/about-us/" class="relative px-3 py-2 text-sm font-medium text-surface-600 dark:text-surface-300 transition-colors duration-200 hover:text-primary-600 dark:hover:text-primary-400 after:absolute after:bottom-0.5 after:left-3 after:right-3 after:h-0.5 after:rounded-full after:bg-accent-500 after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:after:scale-x-100"> About Us </a><a href="/blog/" class="relative px-3 py-2 text-sm font-medium text-surface-600 dark:text-surface-300 transition-colors duration-200 hover:text-primary-600 dark:hover:text-primary-400 after:absolute after:bottom-0.5 after:left-3 after:right-3 after:h-0.5 after:rounded-full after:bg-accent-500 after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:after:scale-x-100"> Blog </a><a href="/contact-us/" class="relative px-3 py-2 text-sm font-medium text-surface-600 dark:text-surface-300 transition-colors duration-200 hover:text-primary-600 dark:hover:text-primary-400 after:absolute after:bottom-0.5 after:left-3 after:right-3 after:h-0.5 after:rounded-full after:bg-accent-500 after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:after:scale-x-100"> Contact Us </a> <button id="theme-toggle" type="button" class="ml-2 flex items-center justify-center w-9 h-9 rounded-lg text-surface-500 dark:text-surface-400 hover:bg-surface-100 dark:hover:bg-surface-800 transition-colors duration-200" aria-label="Toggle dark mode"> <svg id="sun-icon" class="h-5 w-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path> </svg> <svg id="moon-icon" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path> </svg> </button> </nav> <div class="flex items-center gap-1 md:hidden"> <button id="theme-toggle-mobile" type="button" class="flex items-center justify-center w-9 h-9 rounded-lg text-surface-500 dark:text-surface-400 hover:bg-surface-100 dark:hover:bg-surface-800 transition-colors duration-200" aria-label="Toggle dark mode"> <svg class="sun-icon-m h-5 w-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path> </svg> <svg class="moon-icon-m h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path> </svg> </button> <button id="mobile-menu-toggle" class="relative flex items-center justify-center w-10 h-10 rounded-lg text-surface-600 dark:text-surface-300 hover:bg-surface-100 dark:hover:bg-surface-800 transition-colors" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu"> <svg id="hamburger-icon" class="h-6 w-6 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path> </svg> <svg id="close-icon" class="h-6 w-6 absolute transition-transform duration-300 scale-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path> </svg> </button> </div> </div> <div id="mobile-menu-overlay" class="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"></div> <div id="mobile-menu" class="fixed top-0 right-0 z-50 h-full w-72 bg-white dark:bg-surface-900 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out md:hidden" aria-hidden="true"> <div class="flex items-center justify-between p-4 border-b border-surface-200 dark:border-surface-700"> <a href="/" class="flex items-center gap-2.5 mobile-nav-link"> <img src="/logo.svg" alt="" class="h-7 w-7 rounded-lg" width="28" height="28"> <span class="text-base font-bold bg-gradient-to-r from-primary-700 to-accent-600 dark:from-primary-400 dark:to-accent-400 bg-clip-text text-transparent"> Regression Equation Calculator </span> </a> <button id="mobile-menu-close" class="flex items-center justify-center w-9 h-9 rounded-lg text-surface-500 dark:text-surface-400 hover:bg-surface-100 dark:hover:bg-surface-800 transition-colors" aria-label="Close"> <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path> </svg> </button> </div> <nav class="flex flex-col p-4 gap-1" aria-label="Mobile navigation"> <a href="/" class="mobile-nav-link flex items-center px-4 py-3 rounded-xl text-surface-700 dark:text-surface-300 font-medium transition-colors duration-200 hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-400"> Home </a><a href="/about-us/" class="mobile-nav-link flex items-center px-4 py-3 rounded-xl text-surface-700 dark:text-surface-300 font-medium transition-colors duration-200 hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-400"> About Us </a><a href="/blog/" class="mobile-nav-link flex items-center px-4 py-3 rounded-xl text-surface-700 dark:text-surface-300 font-medium transition-colors duration-200 hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-400"> Blog </a><a href="/contact-us/" class="mobile-nav-link flex items-center px-4 py-3 rounded-xl text-surface-700 dark:text-surface-300 font-medium transition-colors duration-200 hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-400"> Contact Us </a> </nav> </div> </header> <script type="module">const a=document.getElementById("mobile-menu-toggle"),e=document.getElementById("mobile-menu"),t=document.getElementById("mobile-menu-overlay"),c=document.getElementById("mobile-menu-close"),l=document.getElementById("hamburger-icon"),o=document.getElementById("close-icon"),i=e?.querySelectorAll(".mobile-nav-link");function d(){e?.classList.remove("translate-x-full"),e?.classList.add("translate-x-0"),e?.setAttribute("aria-hidden","false"),t?.classList.remove("opacity-0","pointer-events-none"),t?.classList.add("opacity-100","pointer-events-auto"),a?.setAttribute("aria-expanded","true"),l?.classList.add("scale-0"),o?.classList.remove("scale-0"),o?.classList.add("scale-100"),document.body.style.overflow="hidden"}function s(){e?.classList.add("translate-x-full"),e?.classList.remove("translate-x-0"),e?.setAttribute("aria-hidden","true"),t?.classList.add("opacity-0","pointer-events-none"),t?.classList.remove("opacity-100","pointer-events-auto"),a?.setAttribute("aria-expanded","false"),l?.classList.remove("scale-0"),o?.classList.add("scale-0"),o?.classList.remove("scale-100"),document.body.style.overflow=""}a?.addEventListener("click",()=>{a.getAttribute("aria-expanded")==="true"?s():d()});c?.addEventListener("click",s);t?.addEventListener("click",s);i?.forEach(n=>{n.addEventListener("click",s)});document.addEventListener("keydown",n=>{n.key==="Escape"&&s()});</script> <script type="module">function s(l,i,a){const t=document.getElementById(l);if(!t)return;const n=t.querySelector("."+i),o=t.querySelector("."+a);function c(){const e=document.documentElement.classList.contains("dark");n?.classList.toggle("hidden",!e),n?.classList.toggle("block",e),o?.classList.toggle("hidden",e),o?.classList.toggle("block",!e)}c(),t.addEventListener("click",()=>{const e=document.documentElement.classList.toggle("dark");localStorage.setItem("theme",e?"dark":"light"),c(),document.querySelectorAll("[data-theme-sync]").forEach(m=>{m.dispatchEvent(new CustomEvent("themechange",{detail:{dark:e}}))})})}s("theme-toggle","sun-icon","moon-icon");s("theme-toggle-mobile","sun-icon-m","moon-icon-m");</script> <main class="min-h-screen"> <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 2xl:px-0 2xl:max-w-[1440px]">  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Multiple Regression Analysis: When One Predictor Isn't Enough","description":"A comprehensive guide to multiple regression analysis. Learn the equation, assumptions, step-by-step process, real-world applications, and how it differs from simple linear regression — with an interactive demo.","image":"https://regressionequationcalculator.com/blog/multiple-regression.svg","datePublished":"2025-02-10T00:00:00.000Z","author":{"@type":"Organization","name":"Regression Equation Calculator"},"publisher":{"@type":"Organization","name":"Regression Equation Calculator","logo":{"@type":"ImageObject","url":"https://regressionequationcalculator.com/logo.svg"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://regressionequationcalculator.com/blog/multiple-regression-explained/"}}</script> <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://regressionequationcalculator.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://regressionequationcalculator.com/blog/"},{"@type":"ListItem","position":3,"name":"Multiple Regression Analysis: When One Predictor Isn't Enough","item":"https://regressionequationcalculator.com/blog/multiple-regression-explained/"}]}</script> <section class="py-8 md:py-12"> <nav class="mb-6" aria-label="Breadcrumb"> <ol class="flex items-center gap-2 text-sm text-surface-500 dark:text-surface-400"> <li> <a href="/" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Home</a> </li> <li class="before:content-['/'] before:mx-2 before:text-surface-300 dark:before:text-surface-600"> <a href="/blog/" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Blog</a> </li> <li class="before:content-['/'] before:mx-2 before:text-surface-300 dark:before:text-surface-600 text-surface-700 dark:text-surface-300 font-medium truncate max-w-xs"> Multiple Regression Analysis: When One Predictor Isn&#39;t Enough </li> </ol> </nav> </section> <article class="py-8 md:py-12"> <header class="max-w-3xl mx-auto"> <div class="mb-6"> <span class="inline-block rounded-full bg-primary-100 dark:bg-primary-900/30 px-3 py-1 text-xs font-semibold text-primary-700 dark:text-primary-400 uppercase tracking-wide"> Statistics </span> </div> <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-surface-900 dark:text-surface-50 leading-tight"> Multiple Regression Analysis: When One Predictor Isn&#39;t Enough </h1> <p class="mt-4 text-lg md:text-xl text-surface-600 dark:text-surface-400 leading-relaxed"> A comprehensive guide to multiple regression analysis. Learn the equation, assumptions, step-by-step process, real-world applications, and how it differs from simple linear regression — with an interactive demo. </p> <div class="mt-6 flex items-center gap-4 text-sm text-surface-500 dark:text-surface-400"> <span class="font-medium text-surface-700 dark:text-surface-300">Regression Equation Calculator</span> <span>&middot;</span> <time datetime="2025-02-10T00:00:00.000Z"> February 9, 2025 </time> </div> <div class="mt-8 overflow-hidden rounded-2xl bg-gradient-to-br from-primary-50 dark:from-primary-900/20 to-accent-50 dark:to-accent-900/20"> <img src="/blog/multiple-regression.svg" alt="Multiple Regression Analysis: When One Predictor Isn't Enough" class="w-full h-64 md:h-80 object-cover" loading="eager"> </div> </header> <div class="mt-12 max-w-3xl mx-auto prose prose-surface prose-lg prose-headings:text-surface-900 dark:prose-headings:text-surface-50 prose-headings:font-extrabold prose-p:text-surface-600 dark:prose-p:text-surface-400 prose-p:leading-relaxed prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-a:font-semibold prose-a:no-underline prose-a:bg-primary-50 dark:prose-a:bg-primary-900/20 prose-a:px-1 prose-a:rounded prose-a:hover:bg-primary-100 dark:prose-a:hover:bg-primary-900/40 prose-a:transition-colors prose-strong:text-surface-800 dark:prose-strong:text-surface-200 prose-strong:font-bold prose-li:text-surface-600 dark:prose-li:text-surface-400 prose-li:marker:text-primary-500 dark:prose-li:marker:text-primary-400 prose-table:text-sm prose-th:bg-surface-50 dark:prose-th:bg-surface-800 prose-th:font-semibold prose-th:text-surface-700 dark:prose-th:text-surface-300 prose-td:text-surface-600 dark:prose-td:text-surface-400 prose-hr:border-surface-200 dark:prose-hr:border-surface-700 prose-img:rounded-xl prose-img:shadow-md prose-blockquote:border-primary-400 dark:prose-blockquote:border-primary-600 prose-blockquote:bg-primary-50/50 dark:prose-blockquote:bg-primary-900/10 prose-blockquote:rounded-r-lg prose-blockquote:px-4 prose-blockquote:py-2 prose-blockquote:not-italic prose-code:text-primary-700 dark:prose-code:text-primary-300 prose-code:bg-primary-50 dark:prose-code:bg-primary-900/20 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:font-semibold prose-code:before:content-none prose-code:after:content-none"> <p>Imagine you’re trying to predict house prices. Square footage alone gives you a rough estimate — but what about the number of bedrooms, the age of the property, the quality of local schools, or the neighborhood crime rate? When a single independent variable cannot adequately explain the variation in your dependent variable, <strong>multiple regression analysis</strong> comes into play.</p>
+<p>Unlike simple linear regression, which models the relationship between one predictor and one outcome, multiple regression lets you account for <strong>two or more predictors simultaneously</strong>. The result is a far more accurate, nuanced, and actionable model of what truly drives your outcome variable.</p>
+<p>In this guide, we’ll cover everything you need to know about multiple regression: the equation, how to interpret coefficients, key assumptions, a step-by-step process for building a model, real-world applications, common pitfalls, and an interactive demo you can try right on this page.</p>
+<hr/>
+<h2 id="what-is-multiple-regression-analysis">What Is Multiple Regression Analysis?</h2>
+<p>Multiple regression analysis is a statistical technique used to model the relationship between <strong>one dependent (response) variable</strong> and <strong>two or more independent (predictor) variables</strong>. It extends simple linear regression — which handles just one predictor — to situations where multiple factors jointly influence an outcome.</p>
+<p>The core idea is straightforward: instead of fitting a line through data in two dimensions (x and y), multiple regression fits a <strong>hyperplane</strong> through data in three or more dimensions. Each predictor gets its own coefficient, telling you how much the outcome changes per unit change in that predictor, <strong>holding all other predictors constant</strong>.</p>
+<p>This “holding constant” property is what makes multiple regression so valuable. It lets you isolate the effect of each individual variable — something you simply cannot do with separate simple regressions.</p>
+<h3 id="why-not-just-run-several-simple-regressions">Why Not Just Run Several Simple Regressions?</h3>
+<p>A common mistake is running separate simple regressions for each predictor and comparing the results. This approach fails because it ignores the <strong>correlation between predictors</strong>. For example, education level and years of experience are both correlated with salary, and they’re also correlated with each other. Simple regression can’t untangle these overlapping effects — multiple regression can.</p>
+<p><img src="/blog/multiple-regression-3d.svg" alt="3D visualization of multiple regression with multiple predictors"/></p>
+<hr/>
+<h2 id="the-multiple-regression-equation">The Multiple Regression Equation</h2>
+<p>The multiple regression equation extends the familiar <strong>y = mx + b</strong> form by adding a term for each additional predictor:</p>
+<p><strong>y = b₀ + b₁x₁ + b₂x₂ + … + bₙxₙ</strong></p>
+<p>Where:</p>
+<ul>
+<li><strong>y</strong> is the predicted value of the dependent variable</li>
+<li><strong>b₀</strong> is the y-intercept — the predicted value when all predictors equal zero</li>
+<li><strong>b₁, b₂, …, bₙ</strong> are the partial regression coefficients</li>
+<li><strong>x₁, x₂, …, xₙ</strong> are the independent variables (predictors)</li>
+</ul>
+<p>Each coefficient <strong>bᵢ</strong> represents the change in y for a one-unit increase in <strong>xᵢ</strong>, assuming all other predictors remain constant. This is often called the <strong>“partial effect”</strong> or <strong>“ceteris paribus”</strong> effect — and it’s the key insight that sets multiple regression apart.</p>
+<h3 id="interpreting-the-intercept">Interpreting the Intercept</h3>
+<p>The intercept <strong>b₀</strong> is the predicted value of y when every predictor is zero. In practice, this value may not have a meaningful real-world interpretation (a house with 0 square feet and 0 bedrooms doesn’t exist), but it anchors the equation mathematically. In some cases, centering your predictors (subtracting the mean) can make the intercept more interpretable — it becomes the predicted y when all predictors are at their average values.</p>
+<h3 id="interpreting-the-coefficients">Interpreting the Coefficients</h3>
+<p>Let’s walk through a concrete example. Suppose we build a model to predict home prices:</p>
+<p><strong>Price = 50,000 + 150 × (SqFt) + 20,000 × (Bedrooms) − 1,000 × (Age in Years)</strong></p>
+<p>Breaking this down:</p>
+<ul>
+<li><strong>150</strong> — Each additional square foot adds approximately $150 to the predicted price, holding bedrooms and age constant</li>
+<li><strong>20,000</strong> — Each additional bedroom adds approximately $20,000, holding square footage and age constant</li>
+<li><strong>−1,000</strong> — Each additional year of age reduces the predicted price by $1,000, holding size and bedrooms constant</li>
+<li><strong>50,000</strong> — The theoretical base price (intercept)</li>
+</ul>
+<p>Notice how each coefficient isolates the effect of one variable while controlling for the others. That’s the power of multiple regression.</p>
+<h3 id="standardized-coefficients">Standardized Coefficients</h3>
+<p>Raw coefficients depend on the units of measurement (dollars per square foot, dollars per bedroom, dollars per year), making it hard to compare their relative importance. <strong>Standardized coefficients</strong> (also called beta coefficients) solve this by expressing coefficients in terms of standard deviations. A standardized coefficient of 0.5 means “a one-standard-deviation increase in this predictor is associated with a 0.5 standard-deviation increase in the outcome.” This lets you directly compare which predictors have the largest effect.</p>
+<hr/>
+<h2 id="how-multiple-regression-differs-from-simple-regression">How Multiple Regression Differs from Simple Regression</h2>
+<p>Understanding the distinction between simple and multiple regression is essential for choosing the right approach:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Feature</th><th>Simple Linear Regression</th><th>Multiple Linear Regression</th></tr></thead><tbody><tr><td><strong>Number of predictors</strong></td><td>1</td><td>2 or more</td></tr><tr><td><strong>Equation</strong></td><td>y = mx + b</td><td>y = b₀ + b₁x₁ + b₂x₂ + … + bₙxₙ</td></tr><tr><td><strong>Coefficient interpretation</strong></td><td>Total effect of x on y</td><td>Partial effect of xᵢ on y, controlling for others</td></tr><tr><td><strong>Captures interactions</strong></td><td>No</td><td>Partially (with interaction terms)</td></tr><tr><td><strong>R² value</strong></td><td>Typically lower</td><td>Typically higher (more variance explained)</td></tr><tr><td><strong>Risk of overfitting</strong></td><td>Low</td><td>Higher — requires validation</td></tr><tr><td><strong>Omitted variable bias</strong></td><td>High risk</td><td>Reduced (if relevant predictors are included)</td></tr><tr><td><strong>Multicollinearity concern</strong></td><td>Not applicable</td><td>Must be checked (VIF)</td></tr></tbody></table>
+<h3 id="adjusted-r-the-proper-metric-for-multiple-regression">Adjusted R²: The Proper Metric for Multiple Regression</h3>
+<p>Adding more predictors to a model will <strong>always</strong> increase R² — even if those predictors are random noise. This is because R² measures the proportion of variance explained, and any additional variable will capture at least some variance by chance.</p>
+<p><strong>Adjusted R²</strong> corrects for this by penalizing the addition of predictors that don’t genuinely improve the model. It only increases when a new variable adds more explanatory power than would be expected by chance. When comparing models with different numbers of predictors, always use adjusted R² rather than raw R².</p>
+<p>The formula:</p>
+<p><strong>Adjusted R² = 1 − (1 − R²) × (n − 1) / (n − k − 1)</strong></p>
+<p>Where <strong>n</strong> is the sample size and <strong>k</strong> is the number of predictors.</p>
+<hr/>
+<h2 id="the-five-key-assumptions-of-multiple-regression">The Five Key Assumptions of Multiple Regression</h2>
+<p>Before you can trust the results of a multiple regression analysis, you must verify that the data meets five critical assumptions. Violating any of them can lead to unreliable coefficients, misleading p-values, and inaccurate predictions.</p>
+<p><img src="/blog/regression-assumptions.svg" alt="The five assumptions of multiple regression analysis"/></p>
+<h3 id="1-linearity">1. Linearity</h3>
+<p>The relationship between each predictor and the outcome must be linear. If the true relationship is curved (e.g., diminishing returns), a linear model will systematically mispredict at certain ranges.</p>
+<p><strong>How to check:</strong> Create scatter plots of each predictor vs. the outcome. Create residual plots (predicted values vs. residuals) — a random scatter suggests linearity, while a curved pattern suggests non-linearity.</p>
+<p><strong>How to fix:</strong> Add polynomial terms (x², x³), apply transformations (log, square root), or use non-linear models.</p>
+<h3 id="2-independence-of-errors">2. Independence of Errors</h3>
+<p>Residuals (prediction errors) must be independent of each other. This is especially important for time-series or spatial data, where nearby observations tend to be correlated.</p>
+<p><strong>How to check:</strong> Use the <strong>Durbin-Watson test</strong> (values near 2 indicate no autocorrelation). Plot residuals over time or space.</p>
+<p><strong>How to fix:</strong> For time-series data, include lag terms or use ARIMA models. For clustered data, use mixed-effects models.</p>
+<h3 id="3-homoscedasticity-constant-variance">3. Homoscedasticity (Constant Variance)</h3>
+<p>The variance of residuals should be roughly constant across all predicted values. If the spread of residuals increases or decreases with the predicted value (a “funnel” shape), the model has heteroscedasticity.</p>
+<p><strong>How to check:</strong> Plot residuals vs. fitted values. Look for a uniform band — funnel shapes indicate heteroscedasticity.</p>
+<p><strong>How to fix:</strong> Apply a transformation to the dependent variable (e.g., log(y)), use weighted least squares, or use robust standard errors.</p>
+<h3 id="4-normality-of-residuals">4. Normality of Residuals</h3>
+<p>The residuals should be approximately normally distributed. This assumption is important for valid hypothesis tests (t-tests, F-tests) and confidence intervals.</p>
+<p><strong>How to check:</strong> Create a <strong>Q-Q plot</strong> (quantile-quantile plot) — points should fall roughly along the diagonal line. You can also use the <strong>Shapiro-Wilk test</strong>.</p>
+<p><strong>How to fix:</strong> Transform the dependent variable, remove outliers, or use bootstrapping for inference.</p>
+<h3 id="5-no-multicollinearity">5. No Multicollinearity</h3>
+<p>Predictors should not be too highly correlated with each other. When two or more predictors are strongly correlated, their individual coefficients become unstable — small changes in the data can cause large swings in the estimates.</p>
+<p><strong>How to check:</strong> Calculate the <strong>Variance Inflation Factor (VIF)</strong> for each predictor. A VIF above 5–10 indicates problematic multicollinearity. Also examine the correlation matrix of predictors.</p>
+<p><strong>How to fix:</strong> Remove one of the correlated predictors, combine them (e.g., via PCA), or use regularization techniques (Ridge or Lasso regression).</p>
+<hr/>
+<h2 id="step-by-step-building-a-multiple-regression-model">Step-by-Step: Building a Multiple Regression Model</h2>
+<p><img src="/blog/regression-steps.svg" alt="Step-by-step process for building a multiple regression model"/></p>
+<p>Building a reliable multiple regression model requires a systematic approach. Here’s a practical step-by-step process you can follow:</p>
+<h3 id="step-1-define-your-research-question">Step 1: Define Your Research Question</h3>
+<p>Start with a clear question. What are you trying to predict? What factors do you believe influence it? This frames your entire analysis.</p>
+<p><strong>Example:</strong> “What factors determine the selling price of a home in Austin, TX?”</p>
+<h3 id="step-2-collect-and-prepare-your-data">Step 2: Collect and Prepare Your Data</h3>
+<p>Gather observations for your dependent variable and all candidate predictors. Key tasks include:</p>
+<ul>
+<li>Handling <strong>missing data</strong> (impute or remove)</li>
+<li>Detecting and addressing <strong>outliers</strong> that could distort the model</li>
+<li>Checking <strong>sample size</strong> — a common rule of thumb is at least 10–20 observations per predictor</li>
+<li>Converting <strong>categorical variables</strong> into numerical form (dummy/one-hot encoding)</li>
+</ul>
+<h3 id="step-3-exploratory-data-analysis-eda">Step 3: Exploratory Data Analysis (EDA)</h3>
+<p>Before fitting any model, explore your data:</p>
+<ul>
+<li>Plot each predictor against the outcome to check for linearity</li>
+<li>Examine the <strong>correlation matrix</strong> — identify highly correlated predictors</li>
+<li>Calculate <strong>VIF</strong> to flag multicollinearity early</li>
+<li>Look at summary statistics and distributions</li>
+</ul>
+<h3 id="step-4-fit-the-model">Step 4: Fit the Model</h3>
+<p>Run the multiple regression using your chosen software (R, Python, SPSS, or our online calculator for simple cases). Examine:</p>
+<ul>
+<li><strong>Coefficients</strong> — direction and magnitude of each predictor’s effect</li>
+<li><strong>p-values</strong> — which predictors are statistically significant (typically p &lt; 0.05)</li>
+<li><strong>R² and Adjusted R²</strong> — how much variance the model explains</li>
+<li><strong>F-statistic</strong> — whether the overall model is significant</li>
+</ul>
+<h3 id="step-5-validate-and-refine">Step 5: Validate and Refine</h3>
+<p>A model that looks great on training data may perform poorly on new data. Always validate:</p>
+<ul>
+<li><strong>Residual analysis</strong> — check all five assumptions</li>
+<li><strong>Cross-validation</strong> — split data into training and test sets, or use k-fold cross-validation</li>
+<li><strong>Remove non-significant predictors</strong> — simplify the model without sacrificing explanatory power</li>
+<li><strong>Consider interaction terms</strong> — if the effect of one predictor depends on another (e.g., the effect of education on salary may differ by gender)</li>
+</ul>
+<hr/>
+<h2 id="real-world-applications-of-multiple-regression">Real-World Applications of Multiple Regression</h2>
+<p><img src="/blog/regression-applications.svg" alt="Real-world applications of multiple regression analysis"/></p>
+<p>Multiple regression is used across virtually every field that deals with data. Here are some of the most common applications:</p>
+<h3 id="real-estate-and-property-valuation">Real Estate and Property Valuation</h3>
+<p>Real estate platforms like Zillow use multiple regression (and its machine learning extensions) to estimate home values — the “Zestimate.” Predictors include square footage, lot size, bedrooms, bathrooms, age, location metrics, school ratings, and neighborhood demographics.</p>
+<h3 id="finance-and-economics">Finance and Economics</h3>
+<p>The famous <strong>Fama-French three-factor model</strong> uses multiple regression to explain stock returns based on market risk, company size, and value factors. Economists use it to model GDP growth from investment, consumption, government spending, and trade balance.</p>
+<h3 id="healthcare-and-medicine">Healthcare and Medicine</h3>
+<p>Researchers use multiple regression to predict patient outcomes based on age, biomarkers, treatment type, comorbidities, and lifestyle factors. It helps identify which variables are truly associated with outcomes after controlling for confounders.</p>
+<h3 id="marketing-and-business">Marketing and Business</h3>
+<p>Marketing teams use multiple regression to quantify the impact of different advertising channels (TV, digital, print, social media) on sales, while controlling for seasonality, pricing, and competitor activity. This enables data-driven budget allocation.</p>
+<h3 id="environmental-science">Environmental Science</h3>
+<p>Climate scientists use multiple regression to model temperature changes based on greenhouse gas concentrations, solar activity, ocean currents, and aerosol levels — isolating the contribution of each factor.</p>
+<h3 id="education-and-social-science">Education and Social Science</h3>
+<p>Researchers predict student performance from factors like study hours, attendance, socioeconomic status, and school resources — helping identify which interventions matter most.</p>
+<hr/>
+<h2 id="interpreting-output-what-to-look-for">Interpreting Output: What to Look For</h2>
+<p>When you run a multiple regression, the output typically includes several key statistics. Here’s what each one tells you:</p>
+<h3 id="coefficients-and-p-values">Coefficients and p-values</h3>
+<ul>
+<li><strong>Coefficient sign</strong> — positive means the predictor increases the outcome; negative means it decreases it</li>
+<li><strong>Coefficient magnitude</strong> — the size of the effect (in the original units)</li>
+<li><strong>p-value</strong> — the probability of seeing this coefficient by chance if the true effect is zero. Generally, p &lt; 0.05 is considered statistically significant.</li>
+</ul>
+<h3 id="r-and-adjusted-r">R² and Adjusted R²</h3>
+<ul>
+<li><strong>R²</strong> — the percentage of variance in y explained by all predictors together. Values range from 0 to 1.</li>
+<li><strong>Adjusted R²</strong> — same as R² but penalized for the number of predictors. Use this when comparing models.</li>
+</ul>
+<h3 id="f-statistic">F-statistic</h3>
+<ul>
+<li>Tests whether the <strong>overall model</strong> is statistically significant — whether the predictors as a group explain a significant portion of the variance in y.</li>
+</ul>
+<h3 id="confidence-intervals">Confidence Intervals</h3>
+<ul>
+<li>A 95% confidence interval for a coefficient means: if we repeated the study many times, the true coefficient would fall within this interval 95% of the time. Narrower intervals indicate more precise estimates.</li>
+</ul>
+<hr/>
+<h2 id="common-pitfalls-and-how-to-avoid-them">Common Pitfalls and How to Avoid Them</h2>
+<p>Even experienced analysts can fall into these traps:</p>
+<h3 id="overfitting">Overfitting</h3>
+<p>Adding too many predictors relative to your sample size will produce a model that fits the training data beautifully but fails on new data. <strong>Prevention:</strong> Use train/test splits, cross-validation, and keep at least 10–20 observations per predictor.</p>
+<h3 id="ignoring-multicollinearity">Ignoring Multicollinearity</h3>
+<p>If two predictors are highly correlated (e.g., “years of education” and “income level”), their individual coefficients become unstable and uninterpretable. <strong>Prevention:</strong> Check VIF before and after adding each predictor. Remove or combine collinear variables.</p>
+<h3 id="extrapolation">Extrapolation</h3>
+<p>Don’t predict outside the range of your training data. A model built on homes priced between $100k–$500k may fail catastrophically for $2M luxury homes. <strong>Prevention:</strong> Always report the range of your training data and flag predictions outside that range.</p>
+<h3 id="confusing-correlation-with-causation">Confusing Correlation with Causation</h3>
+<p>Multiple regression shows <strong>association</strong>, not causation. A predictor being statistically significant does not mean it <em>causes</em> the outcome. <strong>Prevention:</strong> Use domain knowledge, consider confounders, and design experiments when possible.</p>
+<h3 id="omitted-variable-bias">Omitted Variable Bias</h3>
+<p>Leaving out an important predictor that’s correlated with included predictors will bias the coefficients of the included variables. <strong>Prevention:</strong> Think carefully about the full set of relevant variables before fitting the model.</p>
+<h3 id="data-dredging-p-hacking">Data Dredging (p-hacking)</h3>
+<p>Testing many combinations of predictors and only reporting the “significant” results inflates the false positive rate. <strong>Prevention:</strong> Define your hypotheses before analyzing data, use correction for multiple comparisons, and always validate on hold-out data.</p>
+<hr/>
+<h2 id="when-should-you-use-multiple-regression">When Should You Use Multiple Regression?</h2>
+<p><strong>Use multiple regression when:</strong></p>
+<ul>
+<li>You have <strong>two or more predictors</strong> that you believe influence the outcome</li>
+<li>The relationships appear <strong>approximately linear</strong></li>
+<li>You want to <strong>control for confounding variables</strong> (e.g., predicting salary while accounting for both education and experience)</li>
+<li>You need to <strong>quantify the individual effect</strong> of each predictor</li>
+<li>Your dependent variable is <strong>continuous</strong> (numeric, not categorical)</li>
+</ul>
+<p><strong>Avoid multiple regression when:</strong></p>
+<ul>
+<li>Your outcome is <strong>categorical</strong> (use <strong>logistic regression</strong> instead)</li>
+<li>Relationships are <strong>highly non-linear</strong> (try polynomial regression or machine learning models)</li>
+<li>You have <strong>more predictors than observations</strong> (the model won’t converge — consider regularization)</li>
+<li>Your data has severe <strong>autocorrelation</strong> (use time-series models like ARIMA)</li>
+<li>You need to establish <strong>causation</strong> (use experimental design or causal inference methods)</li>
+</ul>
+<hr/>
+<h2 id="try-it-yourself-interactive-demo">Try It Yourself: Interactive Demo</h2>
+<p>Here’s a quick interactive demo. Adjust the sliders below and see how the predicted house price changes in real time:</p>
+<div id="mr-demo" class="not-prose my-8 rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white dark:bg-surface-800/70 backdrop-blur-sm p-6 shadow-md"> <h3 class="text-lg font-bold text-surface-900 dark:text-surface-50 mb-2">Predict House Price</h3> <p class="text-sm text-surface-600 dark:text-surface-400 mb-5">Model: Price = b₀ + b₁(SqFt) + b₂(Bedrooms) − b₃(Age)</p> <div class="space-y-4"> <div> <label class="flex items-center justify-between text-sm font-medium text-surface-700 dark:text-surface-300 mb-1"> <span>Square Footage (x₁)</span> <span id="sqft-val" class="font-mono text-primary-600 dark:text-primary-400">1500</span> </label> <input id="sqft-slider" type="range" min="500" max="4000" step="50" value="1500" class="w-full accent-primary-600"> </div> <div> <label class="flex items-center justify-between text-sm font-medium text-surface-700 dark:text-surface-300 mb-1"> <span>Bedrooms (x₂)</span> <span id="bed-val" class="font-mono text-primary-600 dark:text-primary-400">3</span> </label> <input id="bed-slider" type="range" min="1" max="6" step="1" value="3" class="w-full accent-primary-600"> </div> <div> <label class="flex items-center justify-between text-sm font-medium text-surface-700 dark:text-surface-300 mb-1"> <span>Age in Years (x₃)</span> <span id="age-val" class="font-mono text-primary-600 dark:text-primary-400">10</span> </label> <input id="age-slider" type="range" min="0" max="50" step="1" value="10" class="w-full accent-primary-600"> </div> </div> <div class="mt-6 p-4 rounded-xl bg-gradient-to-r from-primary-50 to-accent-50 dark:from-primary-900/25 dark:to-accent-900/25 border border-primary-100 dark:border-primary-800/40"> <p class="text-xs font-semibold text-primary-500 dark:text-primary-400 uppercase tracking-wider mb-1">Predicted Price</p> <p id="mr-result" class="text-2xl font-bold text-primary-800 dark:text-primary-200 font-mono">$305,000</p> <p id="mr-equation" class="text-xs text-surface-500 dark:text-surface-400 mt-2 font-mono">= 50,000 + 150(1500) + 20,000(3) − 1,000(10)</p> </div> </div> <script type="module">document.querySelectorAll("#mr-demo").forEach(function(e){var l=e.querySelector("#sqft-slider"),u=e.querySelector("#bed-slider"),v=e.querySelector("#age-slider"),o=e.querySelector("#sqft-val"),c=e.querySelector("#bed-val"),i=e.querySelector("#age-val"),q=e.querySelector("#mr-result"),s=e.querySelector("#mr-equation");function t(){var r=Number(l.value),a=Number(u.value),n=Number(v.value);o.textContent=r,c.textContent=a,i.textContent=n;var S=5e4+150*r+2e4*a-1e3*n;q.textContent="$"+S.toLocaleString(),s.textContent="= 50,000 + 150("+r+") + 20,000("+a+") − 1,000("+n+")"}l.addEventListener("input",t),u.addEventListener("input",t),v.addEventListener("input",t),t()});</script>
+<hr/>
+<h2 id="multiple-regression-vs-other-techniques">Multiple Regression vs. Other Techniques</h2>
+<p>Multiple regression isn’t the only tool in the shed. Here’s how it compares to alternatives:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Technique</th><th>When to Use</th><th>Key Difference from Multiple Regression</th></tr></thead><tbody><tr><td><strong>Simple Linear Regression</strong></td><td>1 predictor, linear relationship</td><td>Can’t control for confounders</td></tr><tr><td><strong>Logistic Regression</strong></td><td>Categorical outcome (yes/no, pass/fail)</td><td>Models probability, not a continuous value</td></tr><tr><td><strong>Polynomial Regression</strong></td><td>Curved relationships</td><td>Adds x², x³ terms to capture non-linearity</td></tr><tr><td><strong>Ridge Regression</strong></td><td>High multicollinearity, many predictors</td><td>Adds L2 penalty to shrink coefficients</td></tr><tr><td><strong>Lasso Regression</strong></td><td>Feature selection needed</td><td>Adds L1 penalty that can zero out coefficients</td></tr><tr><td><strong>Decision Trees / Random Forests</strong></td><td>Non-linear, complex interactions</td><td>Non-parametric, no assumptions needed</td></tr><tr><td><strong>Neural Networks</strong></td><td>Very complex patterns, large datasets</td><td>Highly flexible but requires lots of data</td></tr></tbody></table>
+<hr/>
+<h2 id="how-our-calculator-relates-to-multiple-regression">How Our Calculator Relates to Multiple Regression</h2>
+<p>Our <strong>Regression Equation Calculator</strong> currently supports <strong>simple linear regression</strong> (one predictor). For many real-world problems, this is a great starting point — it gives you the regression equation, slope, intercept, R² value, and a full step-by-step breakdown of the math.</p>
+<p>If you’re working with a single predictor and want to understand the fundamentals before moving to multiple regression, our calculator is the perfect tool. It runs entirely in your browser — no data is sent anywhere, and it’s completely free.</p>
+<p>As you advance to multiple regression, you’ll need specialized software like <strong>R</strong>, <strong>Python (statsmodels/scikit-learn)</strong>, <strong>SPSS</strong>, or <strong>Excel’s Data Analysis ToolPak</strong>. But the conceptual foundation is the same: find the coefficients that minimize the sum of squared residuals.</p>
+<hr/>
+<h2 id="ready-to-compute-your-own-regression">Ready to Compute Your Own Regression?</h2>
+<p>Now that you understand how multiple regression works — the equation, assumptions, interpretation, and pitfalls — why not start with a simple regression using your own data? Our <strong>Regression Equation Calculator</strong> lets you enter data points and instantly get the regression equation, slope, intercept, R² value, correlation coefficient, and a detailed step-by-step breakdown.</p>
+<a href="/" class="not-prose my-8 flex items-center justify-center"><span class="inline-flex items-center gap-2 px-8 py-3.5 text-base font-semibold text-white bg-gradient-to-r from-primary-600 to-accent-600 rounded-xl shadow-lg shadow-primary-600/25 hover:shadow-xl hover:shadow-primary-600/35 hover:brightness-110 hover:scale-[1.03] active:scale-[0.98] transition-all duration-200"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg><p>Try the Regression Equation Calculator — It’s Free</p></span></a>
+<p>No signup required. No data sent to servers. Everything runs right in your browser. Start calculating in seconds and build the intuition you need to tackle multiple regression with confidence.</p>
+<hr/>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ol>
+<li><strong>Multiple regression</strong> models one outcome from two or more predictors simultaneously</li>
+<li>Each <strong>coefficient</strong> represents the partial effect of one predictor, holding others constant</li>
+<li><strong>Adjusted R²</strong> is the proper metric for comparing models with different numbers of predictors</li>
+<li>All five <strong>assumptions</strong> (linearity, independence, homoscedasticity, normality, no multicollinearity) must be verified</li>
+<li><strong>Multicollinearity</strong> between predictors makes individual coefficients unreliable — check VIF</li>
+<li>Multiple regression shows <strong>association, not causation</strong> — experimental design is needed for causal claims</li>
+<li>Always <strong>validate</strong> your model on hold-out data to prevent overfitting</li>
+<li>Start with <strong>simple regression</strong> to build intuition, then advance to multiple regression</li>
+</ol> </div> </article>  </div> </main> <footer class="bg-surface-900 dark:bg-surface-950 text-surface-300 mt-auto border-t border-surface-800 dark:border-surface-800"> <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 2xl:px-0 2xl:max-w-[1440px] py-16"> <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4"> <div class="sm:col-span-2 lg:col-span-1"> <a href="/" class="flex items-center gap-2.5 mb-4"> <img src="/logo.svg" alt="" class="h-8 w-8 rounded-lg" width="32" height="32"> <span class="text-lg font-bold text-white">Regression Equation Calculator</span> </a> <p class="text-sm leading-relaxed text-surface-400 max-w-xs"> Free online regression equation calculator with step-by-step solutions for students, researchers, and professionals. </p> </div> <div> <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Navigation</h3> <ul class="space-y-2.5"> <li> <a href="/" class="text-sm text-surface-400 transition-colors duration-200 hover:text-accent-300"> Home </a> </li><li> <a href="/about-us/" class="text-sm text-surface-400 transition-colors duration-200 hover:text-accent-300"> About Us </a> </li><li> <a href="/blog/" class="text-sm text-surface-400 transition-colors duration-200 hover:text-accent-300"> Blog </a> </li><li> <a href="/contact-us/" class="text-sm text-surface-400 transition-colors duration-200 hover:text-accent-300"> Contact Us </a> </li><li> <a href="/terms/" class="text-sm text-surface-400 transition-colors duration-200 hover:text-accent-300"> Terms </a> </li><li> <a href="/privacy/" class="text-sm text-surface-400 transition-colors duration-200 hover:text-accent-300"> Privacy </a> </li><li> <a href="/sitemap/" class="text-sm text-surface-400 transition-colors duration-200 hover:text-accent-300"> Sitemap </a> </li> </ul> </div> <div>  <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Connect</h3> <div class="flex items-center gap-3"> <a href="https://facebook.com/regressionequationcalculator" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="flex items-center justify-center w-10 h-10 rounded-xl bg-surface-800 text-surface-400 transition-all duration-200 hover:bg-primary-600 hover:text-white"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg> </a> <a href="https://twitter.com/regcalc" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X" class="flex items-center justify-center w-10 h-10 rounded-xl bg-surface-800 text-surface-400 transition-all duration-200 hover:bg-primary-600 hover:text-white"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg> </a> <a href="https://linkedin.com/company/regression-equation-calculator" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="flex items-center justify-center w-10 h-10 rounded-xl bg-surface-800 text-surface-400 transition-all duration-200 hover:bg-primary-600 hover:text-white"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg> </a>  </div>  </div> <div> <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Language</h3> <div class="relative" data-language-switcher> <button id="lang-toggle" type="button" class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-surface-300 rounded-lg border border-surface-700 bg-surface-800 transition-colors duration-200 hover:bg-surface-700 hover:border-surface-600" aria-expanded="false" aria-haspopup="listbox" aria-label="Select language"> <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path> </svg> English <svg class="w-3.5 h-3.5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path> </svg> </button> <ul id="lang-list" class="absolute top-full mt-2 left-0 z-50 w-48 max-h-64 overflow-y-auto rounded-xl border border-surface-700 bg-surface-800 py-1 shadow-xl opacity-0 pointer-events-none transition-all duration-200" role="listbox" aria-label="Available languages"> <li role="option" aria-selected="true"> <a href="/" class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-primary-400 bg-primary-900/20"> <span class="w-5 text-center">EN</span> English </a> </li> <li role="option" aria-selected="false"> <a href="/hi/" class="flex items-center gap-2 px-3 py-2 text-sm text-surface-400 transition-colors duration-150 hover:bg-surface-700 hover:text-white"> <span class="w-5 text-center">HI</span> हिन्दी </a> </li><li role="option" aria-selected="false"> <a href="/es/" class="flex items-center gap-2 px-3 py-2 text-sm text-surface-400 transition-colors duration-150 hover:bg-surface-700 hover:text-white"> <span class="w-5 text-center">ES</span> Español </a> </li><li role="option" aria-selected="false"> <a href="/ru/" class="flex items-center gap-2 px-3 py-2 text-sm text-surface-400 transition-colors duration-150 hover:bg-surface-700 hover:text-white"> <span class="w-5 text-center">RU</span> Русский </a> </li><li role="option" aria-selected="false"> <a href="/fr/" class="flex items-center gap-2 px-3 py-2 text-sm text-surface-400 transition-colors duration-150 hover:bg-surface-700 hover:text-white"> <span class="w-5 text-center">FR</span> Français </a> </li><li role="option" aria-selected="false"> <a href="/de/" class="flex items-center gap-2 px-3 py-2 text-sm text-surface-400 transition-colors duration-150 hover:bg-surface-700 hover:text-white"> <span class="w-5 text-center">DE</span> Deutsch </a> </li><li role="option" aria-selected="false"> <a href="/it/" class="flex items-center gap-2 px-3 py-2 text-sm text-surface-400 transition-colors duration-150 hover:bg-surface-700 hover:text-white"> <span class="w-5 text-center">IT</span> Italiano </a> </li><li role="option" aria-selected="false"> <a href="/pt/" class="flex items-center gap-2 px-3 py-2 text-sm text-surface-400 transition-colors duration-150 hover:bg-surface-700 hover:text-white"> <span class="w-5 text-center">PT</span> Português </a> </li><li role="option" aria-selected="false"> <a href="/bn/" class="flex items-center gap-2 px-3 py-2 text-sm text-surface-400 transition-colors duration-150 hover:bg-surface-700 hover:text-white"> <span class="w-5 text-center">BN</span> বাংলা </a> </li><li role="option" aria-selected="false"> <a href="/ja/" class="flex items-center gap-2 px-3 py-2 text-sm text-surface-400 transition-colors duration-150 hover:bg-surface-700 hover:text-white"> <span class="w-5 text-center">JA</span> 日本語 </a> </li><li role="option" aria-selected="false"> <a href="/ko/" class="flex items-center gap-2 px-3 py-2 text-sm text-surface-400 transition-colors duration-150 hover:bg-surface-700 hover:text-white"> <span class="w-5 text-center">KO</span> 한국어 </a> </li><li role="option" aria-selected="false"> <a href="/ms/" class="flex items-center gap-2 px-3 py-2 text-sm text-surface-400 transition-colors duration-150 hover:bg-surface-700 hover:text-white"> <span class="w-5 text-center">MS</span> Bahasa Melayu </a> </li><li role="option" aria-selected="false"> <a href="/pl/" class="flex items-center gap-2 px-3 py-2 text-sm text-surface-400 transition-colors duration-150 hover:bg-surface-700 hover:text-white"> <span class="w-5 text-center">PL</span> Polski </a> </li><li role="option" aria-selected="false"> <a href="/id/" class="flex items-center gap-2 px-3 py-2 text-sm text-surface-400 transition-colors duration-150 hover:bg-surface-700 hover:text-white"> <span class="w-5 text-center">ID</span> Bahasa Indonesia </a> </li><li role="option" aria-selected="false"> <a href="/ar/" class="flex items-center gap-2 px-3 py-2 text-sm text-surface-400 transition-colors duration-150 hover:bg-surface-700 hover:text-white"> <span class="w-5 text-center">AR</span> العربية </a> </li><li role="option" aria-selected="false"> <a href="/bg/" class="flex items-center gap-2 px-3 py-2 text-sm text-surface-400 transition-colors duration-150 hover:bg-surface-700 hover:text-white"> <span class="w-5 text-center">BG</span> Български </a> </li><li role="option" aria-selected="false"> <a href="/tr/" class="flex items-center gap-2 px-3 py-2 text-sm text-surface-400 transition-colors duration-150 hover:bg-surface-700 hover:text-white"> <span class="w-5 text-center">TR</span> Türkçe </a> </li><li role="option" aria-selected="false"> <a href="/sv/" class="flex items-center gap-2 px-3 py-2 text-sm text-surface-400 transition-colors duration-150 hover:bg-surface-700 hover:text-white"> <span class="w-5 text-center">SV</span> Svenska </a> </li> </ul> </div> <script type="module">const t=document.querySelector("[data-language-switcher]"),n=t?.querySelector("#lang-toggle"),i=t?.querySelector("#lang-list");function a(){i?.classList.remove("opacity-0","pointer-events-none"),i?.classList.add("opacity-100","pointer-events-auto"),n?.setAttribute("aria-expanded","true")}function s(){i?.classList.add("opacity-0","pointer-events-none"),i?.classList.remove("opacity-100","pointer-events-auto"),n?.setAttribute("aria-expanded","false")}n?.addEventListener("click",()=>{n.getAttribute("aria-expanded")==="true"?s():a()});document.addEventListener("click",e=>{t&&!t.contains(e.target)&&s()});document.addEventListener("keydown",e=>{e.key==="Escape"&&s()});</script> </div> </div> <div class="mt-12 pt-8 border-t border-surface-800"> <p class="text-sm text-surface-500 text-center">
+&copy; 2026 Regression Equation Calculator. All rights reserved. </p> </div> </div> </footer> </body></html>

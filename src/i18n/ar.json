@@ -1,0 +1,121 @@
+{
+  "siteTitle": "حاسبة معادلة الانحدار",
+  "siteDescription": "حاسبة مجانية عبر الإنترنت لمعادلة الانحدار. احسب معادلات الانحدار الخطي والمتعدد ومتعدد الحدود فورًا مع حلول خطوة بخطوة.",
+  "home": {
+    "title": "حاسبة معادلة الانحدار",
+    "description": "احسب معادلات الانحدار فورًا باستخدام أداتنا المجانية عبر الإنترنت",
+    "intro": "أدخل نقاط بياناتك واحصل على معادلة الانحدار والميل والتقاطع وقيمة R-تربيع وحسابات خطوة بخطوة في ثوانٍ.",
+    "whatIsTitle": "What Is a Regression Equation?",
+    "whatIsText": "A regression equation models the relationship between variables, allowing you to predict outcomes based on input data. In its simplest form — simple linear regression — the equation is <strong>y = mx + b</strong>, where <strong>m</strong> is the slope and <strong>b</strong> is the y-intercept. This powerful statistical tool is used across science, business, and engineering to uncover trends, make forecasts, and quantify relationships between variables.",
+    "whyUseTitle": "Why Use Our Calculator?",
+    "whyUsePoints": [
+      "Instantly computes the regression equation from your data",
+      "Shows step-by-step calculations so you understand the math",
+      "Calculates R², correlation coefficient, slope, and intercept",
+      "No signup required — 100% free and runs in your browser",
+      "Your data stays private — nothing is sent to any server"
+    ],
+    "useCasesTitle": "Common Use Cases",
+    "useCasesPoints": [
+      "Predicting sales from advertising spend",
+      "Estimating house prices from square footage",
+      "Analyzing the impact of study hours on exam scores",
+      "Forecasting temperature changes over time",
+      "Evaluating the relationship between dosage and response"
+    ],
+    "faqTitle": "Frequently Asked Questions",
+    "howItWorksTitle": "كيف تعمل حاسبة معادلة الانحدار",
+    "howItWorksStep1": "أدخل نقاط بيانات x و y في الجدول أدناه",
+    "howItWorksStep2": "انقر على حساب لحساب معادلة الانحدار",
+    "howItWorksStep3": "اعرض نتائجك بما في ذلك المعادلة والميل والتقاطع وقيمة R²",
+    "tableTitle": "مرجع إحصائيات الانحدار",
+    "tableDescription": "إحصائيات الانحدار الشائعة وتفسيراتها",
+    "howItWorksStep1Title": "Enter Data",
+    "howItWorksStep2Title": "Calculate",
+    "howItWorksStep3Title": "View Results",
+    "tableStat": "Statistic",
+    "tableSymbol": "Symbol",
+    "tableInterpretation": "Interpretation",
+    "tableSlope": "Slope",
+    "tableSlopeSym": "m",
+    "tableSlopeInt": "Rate of change",
+    "tableIntercept": "Intercept",
+    "tableInterceptSym": "b",
+    "tableInterceptInt": "Value when x = 0",
+    "tableRSquared": "R-Squared",
+    "tableRSquaredSym": "R²",
+    "tableRSquaredInt": "Goodness of fit",
+    "tableCorrelation": "Correlation",
+    "tableCorrelationSym": "r",
+    "tableCorrelationInt": "Strength of relationship",
+    "tableStdError": "Standard Error",
+    "tableStdErrorSym": "SE",
+    "tableStdErrorInt": "Average distance from line",
+    "tablePValue": "P-value",
+    "tablePValueSym": "p",
+    "tablePValueInt": "Statistical significance"
+  },
+  "about": {
+    "title": "من نحن",
+    "description": "تعرف على حاسبة معادلة الانحدار",
+    "content": "حاسبة معادلة الانحدار هي أداة مجانية عبر الإنترنت مصممة لمساعدة الطلاب والباحثين والمحترفين في حساب معادلات الانحدار بسرعة ودقة. تدعم حاسبتنا الانحدار الخطي وتوفر حلولًا تفصيلية خطوة بخطوة لمساعدتك في فهم العملية الرياضية وراء النتائج. سواء كنت تدرس الإحصاء أو تحلل البيانات أو تعمل في البحث، تجعل أداتنا تحليل الانحدار متاحًا للجميع."
+  },
+  "contact": {
+    "title": "اتصل بنا",
+    "description": "تواصل مع فريق حاسبة معادلة الانحدار",
+    "helperText": "هل لديك سؤال أو ملاحظات؟ يسعدنا أن نسمع منك. املأ النموذج أدناه وسنتواصل معك في أقرب وقت ممكن.",
+    "nameLabel": "اسمك",
+    "emailLabel": "بريدك الإلكتروني",
+    "messageLabel": "رسالتك",
+    "sendButton": "إرسال الرسالة",
+    "sending": "جارٍ الإرسال...",
+    "success": "تم إرسال الرسالة بنجاح!",
+    "apiError": "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
+    "networkError": "خطأ في الشبكة. يرجى التحقق من اتصالك.",
+    "fallbackText": "يمكنك أيضًا التواصل معنا مباشرة على",
+    "fallbackEmail": "contact@regressionequationcalculator.com"
+  },
+  "terms": {
+    "title": "شروط الخدمة",
+    "description": "الشروط والأحكام لاستخدام حاسبة معادلة الانحدار",
+    "content": "بالوصول إلى واستخدام موقع حاسبة معادلة الانحدار، فإنك توافق على الالتزام بهذه الشروط. يتم توفير أداتنا للأغراض التعليمية والتحليلية. يجب التحقق من النتائج للتطبيقات الحرجة. نحتفظ بالحق في تعديل هذه الشروط في أي وقت. استخدام الحاسبة مجاني ولا نضمن دقة النتائج للأغراض المهنية أو التجارية."
+  },
+  "privacy": {
+    "title": "سياسة الخصوصية",
+    "description": "كيف نتعامل مع بياناتك في حاسبة معادلة الانحدار",
+    "content": "نقدر خصوصيتك. حاسبة معادلة الانحدار لا تجمع أو تخزن أو تشارك أي بيانات شخصية يتم إدخالها في الحاسبة. جميع الحسابات تتم محليًا في متصفحك. قد نستخدم التحليلات لفهم أنماط استخدام الموقع، لكن لا يتم جمع أي معلومات تعريف شخصية. يتم معالجة عمليات إرسال نموذج الاتصال بشكل آمن ولا تتم مشاركتها مع أطراف ثالثة."
+  },
+  "blog": {
+    "title": "المدونة",
+    "description": "مقالات عن تحليل الانحدار والإحصاء",
+    "readMore": "اقرأ المزيد",
+    "resultsMeta": "عرض {start}-{end} من {total} مقال"
+  },
+  "calculator": {
+    "title": "حاسبة معادلة الانحدار",
+    "description": "أدخل نقاط بياناتك لحساب معادلة الانحدار",
+    "enterData": "أدخل نقاط بياناتك",
+    "xLabel": "قيم X",
+    "yLabel": "قيم Y",
+    "addRow": "إضافة صف",
+    "calculate": "حساب",
+    "clear": "مسح",
+    "result": "النتائج",
+    "equation": "معادلة الانحدار",
+    "slope": "الميل (m)",
+    "intercept": "التقاطع (b)",
+    "rSquared": "R-تربيع",
+    "correlation": "الارتباط (r)",
+    "invalidData": "يرجى إدخال نقطتي بيانات صالحتين على الأقل",
+    "stepByStep": "الحل خطوة بخطوة"
+  },
+  "notFound": {
+    "title": "الصفحة غير موجودة",
+    "description": "الصفحة التي تبحث عنها غير موجودة",
+    "backHome": "العودة إلى الصفحة الرئيسية"
+  },
+  "sitemap": {
+    "title": "خريطة الموقع",
+    "description": "استكشف جميع صفحات حاسبة معادلة الانحدار"
+  }
+}

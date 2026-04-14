@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "home": "Strona Główna",
+    "aboutUs": "O Nas",
+    "blog": "Blog",
+    "contactUs": "Kontakt",
+    "terms": "Warunki",
+    "privacy": "Prywatność",
+    "sitemap": "Mapa Strony"
+  },
+  "footer": {
+    "description": "Darmowy kalkulator równania regresji online z rozwiązaniami krok po kroku dla studentów, badaczy i profesjonalistów.",
+    "copyright": "Wszelkie prawa zastrzeżone."
+  },
+  "common": {
+    "learnMore": "Dowiedz się Więcej",
+    "previous": "Poprzednia",
+    "next": "Następna"
+  }
+}

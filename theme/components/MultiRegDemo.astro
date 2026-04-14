@@ -1,0 +1,66 @@
+---
+---
+<div id="mr-demo" class="not-prose my-8 rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white dark:bg-surface-800/70 backdrop-blur-sm p-6 shadow-md">
+  <h3 class="text-lg font-bold text-surface-900 dark:text-surface-50 mb-2">Predict House Price</h3>
+  <p class="text-sm text-surface-600 dark:text-surface-400 mb-5">Model: Price = b₀ + b₁(SqFt) + b₂(Bedrooms) − b₃(Age)</p>
+
+  <div class="space-y-4">
+    <div>
+      <label class="flex items-center justify-between text-sm font-medium text-surface-700 dark:text-surface-300 mb-1">
+        <span>Square Footage (x₁)</span>
+        <span id="sqft-val" class="font-mono text-primary-600 dark:text-primary-400">1500</span>
+      </label>
+      <input id="sqft-slider" type="range" min="500" max="4000" step="50" value="1500" class="w-full accent-primary-600" />
+    </div>
+    <div>
+      <label class="flex items-center justify-between text-sm font-medium text-surface-700 dark:text-surface-300 mb-1">
+        <span>Bedrooms (x₂)</span>
+        <span id="bed-val" class="font-mono text-primary-600 dark:text-primary-400">3</span>
+      </label>
+      <input id="bed-slider" type="range" min="1" max="6" step="1" value="3" class="w-full accent-primary-600" />
+    </div>
+    <div>
+      <label class="flex items-center justify-between text-sm font-medium text-surface-700 dark:text-surface-300 mb-1">
+        <span>Age in Years (x₃)</span>
+        <span id="age-val" class="font-mono text-primary-600 dark:text-primary-400">10</span>
+      </label>
+      <input id="age-slider" type="range" min="0" max="50" step="1" value="10" class="w-full accent-primary-600" />
+    </div>
+  </div>
+
+  <div class="mt-6 p-4 rounded-xl bg-gradient-to-r from-primary-50 to-accent-50 dark:from-primary-900/25 dark:to-accent-900/25 border border-primary-100 dark:border-primary-800/40">
+    <p class="text-xs font-semibold text-primary-500 dark:text-primary-400 uppercase tracking-wider mb-1">Predicted Price</p>
+    <p id="mr-result" class="text-2xl font-bold text-primary-800 dark:text-primary-200 font-mono">$305,000</p>
+    <p id="mr-equation" class="text-xs text-surface-500 dark:text-surface-400 mt-2 font-mono">= 50,000 + 150(1500) + 20,000(3) − 1,000(10)</p>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('#mr-demo').forEach(function(demo) {
+    var sqft = demo.querySelector('#sqft-slider');
+    var bed = demo.querySelector('#bed-slider');
+    var age = demo.querySelector('#age-slider');
+    var sqftVal = demo.querySelector('#sqft-val');
+    var bedVal = demo.querySelector('#bed-val');
+    var ageVal = demo.querySelector('#age-val');
+    var result = demo.querySelector('#mr-result');
+    var equation = demo.querySelector('#mr-equation');
+
+    function update() {
+      var s = Number(sqft.value);
+      var b = Number(bed.value);
+      var a = Number(age.value);
+      sqftVal.textContent = s;
+      bedVal.textContent = b;
+      ageVal.textContent = a;
+      var price = 50000 + 150 * s + 20000 * b - 1000 * a;
+      result.textContent = '$' + price.toLocaleString();
+      equation.textContent = '= 50,000 + 150(' + s + ') + 20,000(' + b + ') \u2212 1,000(' + a + ')';
+    }
+
+    sqft.addEventListener('input', update);
+    bed.addEventListener('input', update);
+    age.addEventListener('input', update);
+    update();
+  });
+</script>

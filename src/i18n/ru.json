@@ -1,0 +1,121 @@
+{
+  "siteTitle": "Калькулятор уравнения регрессии",
+  "siteDescription": "Бесплатный онлайн-калькулятор уравнения регрессии. Вычисляйте уравнения линейной, полиномиальной и множественной регрессии мгновенно с пошаговыми решениями.",
+  "home": {
+    "title": "Калькулятор уравнения регрессии",
+    "description": "Вычисляйте уравнения регрессии мгновенно с нашим бесплатным онлайн-инструментом",
+    "intro": "Введите ваши данные и получите уравнение регрессии, наклон, пересечение, значение R-квадрат и пошаговые вычисления за секунды.",
+    "whatIsTitle": "What Is a Regression Equation?",
+    "whatIsText": "A regression equation models the relationship between variables, allowing you to predict outcomes based on input data. In its simplest form — simple linear regression — the equation is <strong>y = mx + b</strong>, where <strong>m</strong> is the slope and <strong>b</strong> is the y-intercept. This powerful statistical tool is used across science, business, and engineering to uncover trends, make forecasts, and quantify relationships between variables.",
+    "whyUseTitle": "Why Use Our Calculator?",
+    "whyUsePoints": [
+      "Instantly computes the regression equation from your data",
+      "Shows step-by-step calculations so you understand the math",
+      "Calculates R², correlation coefficient, slope, and intercept",
+      "No signup required — 100% free and runs in your browser",
+      "Your data stays private — nothing is sent to any server"
+    ],
+    "useCasesTitle": "Common Use Cases",
+    "useCasesPoints": [
+      "Predicting sales from advertising spend",
+      "Estimating house prices from square footage",
+      "Analyzing the impact of study hours on exam scores",
+      "Forecasting temperature changes over time",
+      "Evaluating the relationship between dosage and response"
+    ],
+    "faqTitle": "Frequently Asked Questions",
+    "howItWorksTitle": "Как работает калькулятор уравнения регрессии",
+    "howItWorksStep1": "Введите ваши данные x и y в таблицу ниже",
+    "howItWorksStep2": "Нажмите «Вычислить» для расчёта уравнения регрессии",
+    "howItWorksStep3": "Просмотрите результаты, включая уравнение, наклон, пересечение и значение R²",
+    "tableTitle": "Справочник статистики регрессии",
+    "tableDescription": "Общие статистики регрессии и их интерпретации",
+    "howItWorksStep1Title": "Enter Data",
+    "howItWorksStep2Title": "Calculate",
+    "howItWorksStep3Title": "View Results",
+    "tableStat": "Statistic",
+    "tableSymbol": "Symbol",
+    "tableInterpretation": "Interpretation",
+    "tableSlope": "Slope",
+    "tableSlopeSym": "m",
+    "tableSlopeInt": "Rate of change",
+    "tableIntercept": "Intercept",
+    "tableInterceptSym": "b",
+    "tableInterceptInt": "Value when x = 0",
+    "tableRSquared": "R-Squared",
+    "tableRSquaredSym": "R²",
+    "tableRSquaredInt": "Goodness of fit",
+    "tableCorrelation": "Correlation",
+    "tableCorrelationSym": "r",
+    "tableCorrelationInt": "Strength of relationship",
+    "tableStdError": "Standard Error",
+    "tableStdErrorSym": "SE",
+    "tableStdErrorInt": "Average distance from line",
+    "tablePValue": "P-value",
+    "tablePValueSym": "p",
+    "tablePValueInt": "Statistical significance"
+  },
+  "about": {
+    "title": "О нас",
+    "description": "Узнайте о калькуляторе уравнения регрессии",
+    "content": "Калькулятор уравнения регрессии — это бесплатный онлайн-инструмент, разработанный для помощи студентам, исследователям и специалистам в быстром и точном вычислении уравнений регрессии. Наш калькулятор поддерживает линейную регрессию и предоставляет подробные пошаговые решения, чтобы помочь вам понять математический процесс, лежащий в основе результатов. Независимо от того, изучаете ли вы статистику, анализируете данные или работаете над исследованием, наш инструмент делает регрессионный анализ доступным для всех."
+  },
+  "contact": {
+    "title": "Свяжитесь с нами",
+    "description": "Свяжитесь с командой калькулятора уравнения регрессии",
+    "helperText": "Есть вопрос или отзыв? Мы будем рады услышать от вас. Заполните форму ниже, и мы свяжемся с вами как можно скорее.",
+    "nameLabel": "Ваше Имя",
+    "emailLabel": "Ваш Email",
+    "messageLabel": "Ваше Сообщение",
+    "sendButton": "Отправить Сообщение",
+    "sending": "Отправка...",
+    "success": "Сообщение успешно отправлено!",
+    "apiError": "Что-то пошло не так. Пожалуйста, попробуйте снова.",
+    "networkError": "Ошибка сети. Пожалуйста, проверьте подключение.",
+    "fallbackText": "Вы также можете связаться с нами напрямую по адресу",
+    "fallbackEmail": "contact@regressionequationcalculator.com"
+  },
+  "terms": {
+    "title": "Условия использования",
+    "description": "Условия и положения использования калькулятора уравнения регрессии",
+    "content": "Получая доступ и используя веб-сайт калькулятора уравнения регрессии, вы соглашаетесь соблюдать эти условия. Наш инструмент предоставляется в образовательных и аналитических целях. Результаты должны быть проверены для критических приложений. Мы оставляем за собой право изменять эти условия в любое время. Использование калькулятора бесплатно, и мы не гарантируем точность результатов для профессиональных или коммерческих целей."
+  },
+  "privacy": {
+    "title": "Политика конфиденциальности",
+    "description": "Как мы обрабатываем ваши данные в калькуляторе уравнения регрессии",
+    "content": "Мы ценим вашу конфиденциальность. Калькулятор уравнения регрессии не собирает, не хранит и не передаёт личные данные, введённые в калькулятор. Все вычисления выполняются локально в вашем браузере. Мы можем использовать аналитику для понимания моделей использования сайта, но никакая личная информация не собирается. Данные формы контактов обрабатываются безопасно и не передаются третьим лицам."
+  },
+  "blog": {
+    "title": "Блог",
+    "description": "Статьи о регрессионном анализе и статистике",
+    "readMore": "Читать далее",
+    "resultsMeta": "Показано {start}-{end} из {total} статей"
+  },
+  "calculator": {
+    "title": "Калькулятор уравнения регрессии",
+    "description": "Введите ваши данные для вычисления уравнения регрессии",
+    "enterData": "Введите ваши данные",
+    "xLabel": "Значения X",
+    "yLabel": "Значения Y",
+    "addRow": "Добавить строку",
+    "calculate": "Вычислить",
+    "clear": "Очистить",
+    "result": "Результаты",
+    "equation": "Уравнение регрессии",
+    "slope": "Наклон (m)",
+    "intercept": "Пересечение (b)",
+    "rSquared": "R-квадрат",
+    "correlation": "Корреляция (r)",
+    "invalidData": "Пожалуйста, введите как минимум 2 допустимые точки данных",
+    "stepByStep": "Пошаговое решение"
+  },
+  "notFound": {
+    "title": "Страница не найдена",
+    "description": "Страница, которую вы ищете, не существует",
+    "backHome": "Вернуться на главную"
+  },
+  "sitemap": {
+    "title": "Карта сайта",
+    "description": "Исследуйте все страницы калькулятора уравнения регрессии"
+  }
+}

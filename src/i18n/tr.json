@@ -1,0 +1,121 @@
+{
+  "siteTitle": "Regresyon Denklemi Hesaplayıcısı",
+  "siteDescription": "Ücretsiz çevrimiçi regresyon denklemi hesaplayıcısı. Adım adım çözümlerle doğrusal, polinom ve çoklu regresyon denklemlerini anında hesaplayın.",
+  "home": {
+    "title": "Regresyon Denklemi Hesaplayıcısı",
+    "description": "Ücretsiz çevrimiçi aracımızla regresyon denklemlerini anında hesaplayın",
+    "intro": "Veri noktalarınızı girin ve saniyeler içinde regresyon denklemini, eğimi, kesişimi, R-kare değerini ve adım adım hesaplamaları elde edin.",
+    "whatIsTitle": "What Is a Regression Equation?",
+    "whatIsText": "A regression equation models the relationship between variables, allowing you to predict outcomes based on input data. In its simplest form — simple linear regression — the equation is <strong>y = mx + b</strong>, where <strong>m</strong> is the slope and <strong>b</strong> is the y-intercept. This powerful statistical tool is used across science, business, and engineering to uncover trends, make forecasts, and quantify relationships between variables.",
+    "whyUseTitle": "Why Use Our Calculator?",
+    "whyUsePoints": [
+      "Instantly computes the regression equation from your data",
+      "Shows step-by-step calculations so you understand the math",
+      "Calculates R², correlation coefficient, slope, and intercept",
+      "No signup required — 100% free and runs in your browser",
+      "Your data stays private — nothing is sent to any server"
+    ],
+    "useCasesTitle": "Common Use Cases",
+    "useCasesPoints": [
+      "Predicting sales from advertising spend",
+      "Estimating house prices from square footage",
+      "Analyzing the impact of study hours on exam scores",
+      "Forecasting temperature changes over time",
+      "Evaluating the relationship between dosage and response"
+    ],
+    "faqTitle": "Frequently Asked Questions",
+    "howItWorksTitle": "Regresyon Denklemi Hesaplayıcısı Nasıl Çalışır",
+    "howItWorksStep1": "Aşağıdaki tabloya x ve y veri noktalarınızı girin",
+    "howItWorksStep2": "Regresyon denklemini hesaplamak için Hesapla'yı tıklayın",
+    "howItWorksStep3": "Denklem, eğim, kesişim ve R² değerini içeren sonuçlarınızı görüntüleyin",
+    "tableTitle": "Regresyon İstatistikleri Referansı",
+    "tableDescription": "Yaygın regresyon istatistikleri ve yorumları",
+    "howItWorksStep1Title": "Enter Data",
+    "howItWorksStep2Title": "Calculate",
+    "howItWorksStep3Title": "View Results",
+    "tableStat": "Statistic",
+    "tableSymbol": "Symbol",
+    "tableInterpretation": "Interpretation",
+    "tableSlope": "Slope",
+    "tableSlopeSym": "m",
+    "tableSlopeInt": "Rate of change",
+    "tableIntercept": "Intercept",
+    "tableInterceptSym": "b",
+    "tableInterceptInt": "Value when x = 0",
+    "tableRSquared": "R-Squared",
+    "tableRSquaredSym": "R²",
+    "tableRSquaredInt": "Goodness of fit",
+    "tableCorrelation": "Correlation",
+    "tableCorrelationSym": "r",
+    "tableCorrelationInt": "Strength of relationship",
+    "tableStdError": "Standard Error",
+    "tableStdErrorSym": "SE",
+    "tableStdErrorInt": "Average distance from line",
+    "tablePValue": "P-value",
+    "tablePValueSym": "p",
+    "tablePValueInt": "Statistical significance"
+  },
+  "about": {
+    "title": "Hakkımızda",
+    "description": "Regresyon Denklemi Hesaplayıcısı hakkında bilgi edinin",
+    "content": "Regresyon Denklemi Hesaplayıcısı, öğrencilerin, araştırmacıların ve profesyonellerin regresyon denklemlerini hızlı ve doğru bir şekilde hesaplamasına yardımcı olmak için tasarlanmış ücretsiz bir çevrimiçi araçtır. Hesaplayıcımız doğrusal regresyonu destekler ve sonuçların arkasındaki matematiksel süreci anlamanıza yardımcı olmak için ayrıntılı adım adım çözümler sunar. İster istatistik çalışıyor olun, ister veri analiz ediyor olun, ister araştırma yapıyor olun, aracımız regresyon analizini herkes için erişilebilir kılar."
+  },
+  "contact": {
+    "title": "İletişim",
+    "description": "Regresyon Denklemi Hesaplayıcısı ekibiyle iletişime geçin",
+    "helperText": "Sorunuz veya geri bildiriminiz mi var? Sizden haber almaktan mutluluk duyarız. Aşağıdaki formu doldurun, en kısa sürede size dönüş yapacağız.",
+    "nameLabel": "Adınız",
+    "emailLabel": "E-postanız",
+    "messageLabel": "Mesajınız",
+    "sendButton": "Mesaj Gönder",
+    "sending": "Gönderiliyor...",
+    "success": "Mesaj başarıyla gönderildi!",
+    "apiError": "Bir şeyler ters gitti. Lütfen tekrar deneyin.",
+    "networkError": "Ağ hatası. Lütfen bağlantınızı kontrol edin.",
+    "fallbackText": "Bize doğrudan şu adresten de ulaşabilirsiniz",
+    "fallbackEmail": "contact@regressionequationcalculator.com"
+  },
+  "terms": {
+    "title": "Kullanım Koşulları",
+    "description": "Regresyon Denklemi Hesaplayıcısı'nı kullanım koşulları ve şartları",
+    "content": "Regresyon Denklemi Hesaplayıcısı web sitesine erişerek ve kullanarak bu koşullara bağlı kalmayı kabul etmiş olursunuz. Aracımız eğitim ve analiz amaçlı sunulmaktadır. Kritik uygulamalar için sonuçlar doğrulanmalıdır. Bu koşulları herhangi bir zamanda değiştirme hakkını saklı tutarız. Hesaplayıcının kullanımı ücretsizdir ve profesyonel veya ticari amaçlar için sonuçların doğruluğunu garanti etmiyoruz."
+  },
+  "privacy": {
+    "title": "Gizlilik Politikası",
+    "description": "Regresyon Denklemi Hesaplayıcısı'nda verilerinizi nasıl işliyoruz",
+    "content": "Gizliliğinize değer veriyoruz. Regresyon Denklemi Hesaplayıcısı, hesaplayıcıya girilen hiçbir kişisel veriyi toplamaz, depolamaz veya paylaşmaz. Tüm hesaplamalar tarayıcınızda yerel olarak gerçekleştirilir. Site kullanım kalıplarını anlamak için analiz kullanabiliriz, ancak hiçbir kişisel tanımlayıcı bilgi toplanmaz. İletişim formu gönderimleri güvenli bir şekilde işlenir ve üçüncü taraflarla paylaşılmaz."
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Regresyon analizi ve istatistik hakkında makaleler",
+    "readMore": "Devamını Oku",
+    "resultsMeta": "Toplam {total} makaleden {start}-{end} arası gösteriliyor"
+  },
+  "calculator": {
+    "title": "Regresyon Denklemi Hesaplayıcısı",
+    "description": "Regresyon denklemini hesaplamak için veri noktalarınızı girin",
+    "enterData": "Veri noktalarınızı girin",
+    "xLabel": "X Değerleri",
+    "yLabel": "Y Değerleri",
+    "addRow": "Satır Ekle",
+    "calculate": "Hesapla",
+    "clear": "Temizle",
+    "result": "Sonuçlar",
+    "equation": "Regresyon Denklemi",
+    "slope": "Eğim (m)",
+    "intercept": "Kesişim (b)",
+    "rSquared": "R-Kare",
+    "correlation": "Korelasyon (r)",
+    "invalidData": "Lütfen en az 2 geçerli veri noktası girin",
+    "stepByStep": "Adım Adım Çözüm"
+  },
+  "notFound": {
+    "title": "Sayfa Bulunamadı",
+    "description": "Aradığınız sayfa mevcut değil",
+    "backHome": "Ana Sayfaya Dön"
+  },
+  "sitemap": {
+    "title": "Site Haritası",
+    "description": "Regresyon Denklemi Hesaplayıcısı'ndaki tüm sayfaları keşfedin"
+  }
+}

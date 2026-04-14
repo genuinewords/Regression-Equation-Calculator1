@@ -1,0 +1,121 @@
+{
+  "siteTitle": "Regressionsgleichungsrechner",
+  "siteDescription": "Kostenloser Online-Regressionsgleichungsrechner. Berechnen Sie lineare, polynomiale und multiple Regressionsgleichungen sofort mit Schritt-für-Schritt-Lösungen.",
+  "home": {
+    "title": "Regressionsgleichungsrechner",
+    "description": "Berechnen Sie Regressionsgleichungen sofort mit unserem kostenlosen Online-Tool",
+    "intro": "Geben Sie Ihre Datenpunkte ein und erhalten Sie die Regressionsgleichung, Steigung, Achsenabschnitt, R-Quadrat-Wert und Schritt-für-Schritt-Berechnungen in Sekunden.",
+    "whatIsTitle": "What Is a Regression Equation?",
+    "whatIsText": "A regression equation models the relationship between variables, allowing you to predict outcomes based on input data. In its simplest form — simple linear regression — the equation is <strong>y = mx + b</strong>, where <strong>m</strong> is the slope and <strong>b</strong> is the y-intercept. This powerful statistical tool is used across science, business, and engineering to uncover trends, make forecasts, and quantify relationships between variables.",
+    "whyUseTitle": "Why Use Our Calculator?",
+    "whyUsePoints": [
+      "Instantly computes the regression equation from your data",
+      "Shows step-by-step calculations so you understand the math",
+      "Calculates R², correlation coefficient, slope, and intercept",
+      "No signup required — 100% free and runs in your browser",
+      "Your data stays private — nothing is sent to any server"
+    ],
+    "useCasesTitle": "Common Use Cases",
+    "useCasesPoints": [
+      "Predicting sales from advertising spend",
+      "Estimating house prices from square footage",
+      "Analyzing the impact of study hours on exam scores",
+      "Forecasting temperature changes over time",
+      "Evaluating the relationship between dosage and response"
+    ],
+    "faqTitle": "Frequently Asked Questions",
+    "howItWorksTitle": "Wie der Regressionsgleichungsrechner funktioniert",
+    "howItWorksStep1": "Geben Sie Ihre x- und y-Datenpunkte in die Tabelle unten ein",
+    "howItWorksStep2": "Klicken Sie auf Berechnen, um die Regressionsgleichung zu berechnen",
+    "howItWorksStep3": "Zeigen Sie Ihre Ergebnisse einschließlich Gleichung, Steigung, Achsenabschnitt und R²-Wert an",
+    "tableTitle": "Regressionsstatistik-Referenz",
+    "tableDescription": "Gängige Regressionsstatistiken und ihre Interpretationen",
+    "howItWorksStep1Title": "Enter Data",
+    "howItWorksStep2Title": "Calculate",
+    "howItWorksStep3Title": "View Results",
+    "tableStat": "Statistic",
+    "tableSymbol": "Symbol",
+    "tableInterpretation": "Interpretation",
+    "tableSlope": "Slope",
+    "tableSlopeSym": "m",
+    "tableSlopeInt": "Rate of change",
+    "tableIntercept": "Intercept",
+    "tableInterceptSym": "b",
+    "tableInterceptInt": "Value when x = 0",
+    "tableRSquared": "R-Squared",
+    "tableRSquaredSym": "R²",
+    "tableRSquaredInt": "Goodness of fit",
+    "tableCorrelation": "Correlation",
+    "tableCorrelationSym": "r",
+    "tableCorrelationInt": "Strength of relationship",
+    "tableStdError": "Standard Error",
+    "tableStdErrorSym": "SE",
+    "tableStdErrorInt": "Average distance from line",
+    "tablePValue": "P-value",
+    "tablePValueSym": "p",
+    "tablePValueInt": "Statistical significance"
+  },
+  "about": {
+    "title": "Über Uns",
+    "description": "Erfahren Sie mehr über den Regressionsgleichungsrechner",
+    "content": "Der Regressionsgleichungsrechner ist ein kostenloses Online-Tool, das entwickelt wurde, um Studenten, Forschern und Fachleuten zu helfen, Regressionsgleichungen schnell und genau zu berechnen. Unser Rechner unterstützt lineare Regression und bietet detaillierte Schritt-für-Schritt-Lösungen, um den mathematischen Prozess hinter den Ergebnissen zu verstehen. Egal, ob Sie Statistik studieren, Daten analysieren oder an Forschung arbeiten – unser Tool macht Regressionsanalyse für jeden zugänglich."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "description": "Nehmen Sie Kontakt mit dem Team des Regressionsgleichungsrechners auf",
+    "helperText": "Haben Sie eine Frage oder ein Feedback? Wir freuen uns, von Ihnen zu hören. Füllen Sie das Formular unten aus und wir melden uns so schnell wie möglich bei Ihnen.",
+    "nameLabel": "Ihr Name",
+    "emailLabel": "Ihre E-Mail",
+    "messageLabel": "Ihre Nachricht",
+    "sendButton": "Nachricht senden",
+    "sending": "Wird gesendet...",
+    "success": "Nachricht erfolgreich gesendet!",
+    "apiError": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+    "networkError": "Netzwerkfehler. Bitte überprüfen Sie Ihre Verbindung.",
+    "fallbackText": "Sie können uns auch direkt erreichen unter",
+    "fallbackEmail": "contact@regressionequationcalculator.com"
+  },
+  "terms": {
+    "title": "Nutzungsbedingungen",
+    "description": "Bedingungen für die Nutzung des Regressionsgleichungsrechners",
+    "content": "Durch den Zugriff auf und die Nutzung der Website des Regressionsgleichungsrechners stimmen Sie diesen Bedingungen zu. Unser Tool wird für Bildungs- und Analysezwecke bereitgestellt. Ergebnisse sollten für kritische Anwendungen überprüft werden. Wir behalten uns das Recht vor, diese Bedingungen jederzeit zu ändern. Die Nutzung des Rechners ist kostenlos, und wir übernehmen keine Gewähr für die Richtigkeit der Ergebnisse für professionelle oder kommerzielle Zwecke."
+  },
+  "privacy": {
+    "title": "Datenschutzrichtlinie",
+    "description": "Wie wir Ihre Daten im Regressionsgleichungsrechner behandeln",
+    "content": "Wir schätzen Ihre Privatsphäre. Der Regressionsgleichungsrechner sammelt, speichert oder teilt keine personenbezogenen Daten, die in den Rechner eingegeben werden. Alle Berechnungen werden lokal in Ihrem Browser durchgeführt. Wir können Analysen verwenden, um Nutzungsmuster der Website zu verstehen, aber es werden keine personenbezogenen Daten erhoben. Kontaktformular-Einreichungen werden sicher verarbeitet und nicht an Dritte weitergegeben."
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Artikel über Regressionsanalyse und Statistik",
+    "readMore": "Weiterlesen",
+    "resultsMeta": "Anzeige {start}-{end} von {total} Artikeln"
+  },
+  "calculator": {
+    "title": "Regressionsgleichungsrechner",
+    "description": "Geben Sie Ihre Datenpunkte ein, um die Regressionsgleichung zu berechnen",
+    "enterData": "Geben Sie Ihre Datenpunkte ein",
+    "xLabel": "X-Werte",
+    "yLabel": "Y-Werte",
+    "addRow": "Zeile hinzufügen",
+    "calculate": "Berechnen",
+    "clear": "Löschen",
+    "result": "Ergebnisse",
+    "equation": "Regressionsgleichung",
+    "slope": "Steigung (m)",
+    "intercept": "Achsenabschnitt (b)",
+    "rSquared": "R-Quadrat",
+    "correlation": "Korrelation (r)",
+    "invalidData": "Bitte geben Sie mindestens 2 gültige Datenpunkte ein",
+    "stepByStep": "Schritt-für-Schritt-Lösung"
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "description": "Die gesuchte Seite existiert nicht",
+    "backHome": "Zurück zur Startseite"
+  },
+  "sitemap": {
+    "title": "Seitenübersicht",
+    "description": "Entdecken Sie alle Seiten des Regressionsgleichungsrechners"
+  }
+}

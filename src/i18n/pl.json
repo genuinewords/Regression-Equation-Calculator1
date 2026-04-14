@@ -1,0 +1,121 @@
+{
+  "siteTitle": "Kalkulator Równania Regresji",
+  "siteDescription": "Darmowy kalkulator równania regresji online. Obliczaj równania regresji liniowej, wielomianowej i wielorakiej natychmiast z rozwiązaniami krok po kroku.",
+  "home": {
+    "title": "Kalkulator Równania Regresji",
+    "description": "Obliczaj równania regresji natychmiast naszym darmowym narzędziem online",
+    "intro": "Wprowadź swoje punkty danych i uzyskaj równanie regresji, nachylenie, wyraz wolny, wartość R-kwadrat oraz obliczenia krok po kroku w kilka sekund.",
+    "whatIsTitle": "What Is a Regression Equation?",
+    "whatIsText": "A regression equation models the relationship between variables, allowing you to predict outcomes based on input data. In its simplest form — simple linear regression — the equation is <strong>y = mx + b</strong>, where <strong>m</strong> is the slope and <strong>b</strong> is the y-intercept. This powerful statistical tool is used across science, business, and engineering to uncover trends, make forecasts, and quantify relationships between variables.",
+    "whyUseTitle": "Why Use Our Calculator?",
+    "whyUsePoints": [
+      "Instantly computes the regression equation from your data",
+      "Shows step-by-step calculations so you understand the math",
+      "Calculates R², correlation coefficient, slope, and intercept",
+      "No signup required — 100% free and runs in your browser",
+      "Your data stays private — nothing is sent to any server"
+    ],
+    "useCasesTitle": "Common Use Cases",
+    "useCasesPoints": [
+      "Predicting sales from advertising spend",
+      "Estimating house prices from square footage",
+      "Analyzing the impact of study hours on exam scores",
+      "Forecasting temperature changes over time",
+      "Evaluating the relationship between dosage and response"
+    ],
+    "faqTitle": "Frequently Asked Questions",
+    "howItWorksTitle": "Jak działa Kalkulator Równania Regresji",
+    "howItWorksStep1": "Wprowadź swoje punkty danych x i y w tabeli poniżej",
+    "howItWorksStep2": "Kliknij Oblicz, aby obliczyć równanie regresji",
+    "howItWorksStep3": "Zobacz wyniki obejmujące równanie, nachylenie, wyraz wolny i wartość R²",
+    "tableTitle": "Referencja Statystyk Regresji",
+    "tableDescription": "Typowe statystyki regresji i ich interpretacje",
+    "howItWorksStep1Title": "Enter Data",
+    "howItWorksStep2Title": "Calculate",
+    "howItWorksStep3Title": "View Results",
+    "tableStat": "Statistic",
+    "tableSymbol": "Symbol",
+    "tableInterpretation": "Interpretation",
+    "tableSlope": "Slope",
+    "tableSlopeSym": "m",
+    "tableSlopeInt": "Rate of change",
+    "tableIntercept": "Intercept",
+    "tableInterceptSym": "b",
+    "tableInterceptInt": "Value when x = 0",
+    "tableRSquared": "R-Squared",
+    "tableRSquaredSym": "R²",
+    "tableRSquaredInt": "Goodness of fit",
+    "tableCorrelation": "Correlation",
+    "tableCorrelationSym": "r",
+    "tableCorrelationInt": "Strength of relationship",
+    "tableStdError": "Standard Error",
+    "tableStdErrorSym": "SE",
+    "tableStdErrorInt": "Average distance from line",
+    "tablePValue": "P-value",
+    "tablePValueSym": "p",
+    "tablePValueInt": "Statistical significance"
+  },
+  "about": {
+    "title": "O Nas",
+    "description": "Dowiedz się o Kalkulatorze Równania Regresji",
+    "content": "Kalkulator Równania Regresji to darmowe narzędzie online zaprojektowane, aby pomóc studentom, badaczom i profesjonalistom w szybkim i dokładnym obliczaniu równań regresji. Nasz kalkulator obsługuje regresję liniową i dostarcza szczegółowe rozwiązania krok po kroku, aby pomóc Ci zrozumieć proces matematyczny stojący za wynikami. Niezależnie od tego, czy studiujesz statystykę, analizujesz dane czy pracujesz nad badaniami, nasze narzędzie czyni analizę regresji dostępną dla każdego."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "description": "Skontaktuj się z zespołem Kalkulatora Równania Regresji",
+    "helperText": "Masz pytanie lub opinię? Chętnie Cię wysłuchamy. Wypełnij poniższy formularz, a odezwiemy się tak szybko, jak to możliwe.",
+    "nameLabel": "Twoje Imię",
+    "emailLabel": "Twój Email",
+    "messageLabel": "Twoja Wiadomość",
+    "sendButton": "Wyślij Wiadomość",
+    "sending": "Wysyłanie...",
+    "success": "Wiadomość wysłana pomyślnie!",
+    "apiError": "Coś poszło nie tak. Spróbuj ponownie.",
+    "networkError": "Błąd sieci. Sprawdź swoje połączenie.",
+    "fallbackText": "Możesz też skontaktować się z nami bezpośrednio pod adresem",
+    "fallbackEmail": "contact@regressionequationcalculator.com"
+  },
+  "terms": {
+    "title": "Warunki Użytkowania",
+    "description": "Warunki korzystania z Kalkulatora Równania Regresji",
+    "content": "Uzyskując dostęp i korzystając ze strony Kalkulatora Równania Regresji, zgadzasz się na przestrzeganie tych warunków. Nasze narzędzie jest dostarczane do celów edukacyjnych i analitycznych. Wyniki powinny być weryfikowane dla krytycznych zastosowań. Zastrzegamy sobie prawo do modyfikacji tych warunków w dowolnym momencie. Korzystanie z kalkulatora jest bezpłatne i nie gwarantujemy dokładności wyników dla celów profesjonalnych lub komercyjnych."
+  },
+  "privacy": {
+    "title": "Polityka Prywatności",
+    "description": "Jak przetwarzamy Twoje dane w Kalkulatorze Równania Regresji",
+    "content": "Cenimy Twoją prywatność. Kalkulator Równania Regresji nie gromadzi, nie przechowuje ani nie udostępnia żadnych danych osobowych wprowadzonych do kalkulatora. Wszystkie obliczenia są wykonywane lokalnie w Twojej przeglądarce. Możemy używać analityki do zrozumienia wzorców korzystania z witryny, ale żadne dane pozwalające na identyfikację osoby nie są gromadzone. Zgłoszenia z formularza kontaktowego są przetwarzane bezpiecznie i nie są udostępniane stronom trzecim."
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Artykuły o analizie regresji i statystyce",
+    "readMore": "Czytaj Dalej",
+    "resultsMeta": "Wyświetlanie {start}-{end} z {total} artykułów"
+  },
+  "calculator": {
+    "title": "Kalkulator Równania Regresji",
+    "description": "Wprowadź swoje punkty danych, aby obliczyć równanie regresji",
+    "enterData": "Wprowadź swoje punkty danych",
+    "xLabel": "Wartości X",
+    "yLabel": "Wartości Y",
+    "addRow": "Dodaj Wiersz",
+    "calculate": "Oblicz",
+    "clear": "Wyczyść",
+    "result": "Wyniki",
+    "equation": "Równanie Regresji",
+    "slope": "Nachylenie (m)",
+    "intercept": "Wyraz Wolny (b)",
+    "rSquared": "R-Kwadrat",
+    "correlation": "Korelacja (r)",
+    "invalidData": "Wprowadź co najmniej 2 prawidłowe punkty danych",
+    "stepByStep": "Rozwiązanie Krok po Kroku"
+  },
+  "notFound": {
+    "title": "Strona Nie Znaleziona",
+    "description": "Strona, której szukasz, nie istnieje",
+    "backHome": "Powrót do Strony Głównej"
+  },
+  "sitemap": {
+    "title": "Mapa Strony",
+    "description": "Przeglądaj wszystkie strony Kalkulatora Równania Regresji"
+  }
+}

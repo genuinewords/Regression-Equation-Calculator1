@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "aboutUs": "Über Uns",
+    "blog": "Blog",
+    "contactUs": "Kontakt",
+    "terms": "Bedingungen",
+    "privacy": "Datenschutz",
+    "sitemap": "Seitenübersicht"
+  },
+  "footer": {
+    "description": "Kostenloser Online-Regressionsgleichungsrechner mit Schritt-für-Schritt-Lösungen für Studenten, Forscher und Fachleute.",
+    "copyright": "Alle Rechte vorbehalten."
+  },
+  "common": {
+    "learnMore": "Mehr erfahren",
+    "previous": "Zurück",
+    "next": "Weiter"
+  }
+}

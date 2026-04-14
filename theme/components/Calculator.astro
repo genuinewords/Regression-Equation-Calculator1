@@ -1,0 +1,267 @@
+---
+import type { MergedTranslations } from 'theme/i18n/types';
+
+interface Props {
+  translations: MergedTranslations;
+}
+
+const { translations } = Astro.props;
+const calc = translations.calculator;
+---
+
+<section class="py-8" id="calculator" data-x-label={calc.xLabel} data-y-label={calc.yLabel} data-invalid-data={calc.invalidData}>
+  <div class="mx-auto max-w-3xl">
+    <div class="rounded-2xl shadow-lg dark:shadow-surface-950/40 shadow-primary-900/5 border border-surface-200/80 dark:border-surface-700/60 overflow-hidden bg-white dark:bg-surface-800/80 backdrop-blur-sm transition-colors duration-300">
+      <div class="bg-gradient-to-r from-primary-600 to-accent-600 px-6 py-5">
+        <h2 class="text-xl font-bold text-white">{calc.title}</h2>
+        <p class="text-primary-100 text-sm mt-1">{calc.description}</p>
+      </div>
+
+      <div class="p-6 bg-surface-50/50 dark:bg-surface-800/50">
+        <div class="mb-4">
+          <h3 class="text-sm font-semibold text-surface-700 dark:text-surface-300 mb-3">{calc.enterData}</h3>
+          <div class="overflow-x-auto rounded-lg border border-surface-200 dark:border-surface-600">
+            <table class="w-full" id="data-table">
+              <thead>
+                <tr class="bg-surface-100 dark:bg-surface-700/50 border-b border-surface-200 dark:border-surface-600">
+                  <th class="px-3 py-2 text-left text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider w-12">#</th>
+                  <th class="px-3 py-2 text-left text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider">{calc.xLabel}</th>
+                  <th class="px-3 py-2 text-left text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider">{calc.yLabel}</th>
+                  <th class="px-3 py-2 w-10"></th>
+                </tr>
+              </thead>
+              <tbody id="data-rows">
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-3 mb-6">
+          <button
+            id="add-row-btn"
+            type="button"
+            class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/25 border border-primary-200 dark:border-primary-800/50 rounded-lg transition-all duration-200 hover:bg-primary-100 dark:hover:bg-primary-900/40 hover:border-primary-300 dark:hover:border-primary-700 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-primary-500/30"
+          >
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" /></svg>
+            {calc.addRow}
+          </button>
+          <button
+            id="calculate-btn"
+            type="button"
+            class="inline-flex items-center gap-1.5 px-6 py-2 text-sm font-semibold text-white bg-gradient-to-r from-primary-600 to-accent-600 rounded-lg shadow-md shadow-primary-600/20 dark:shadow-primary-900/40 transition-all duration-200 hover:shadow-lg hover:shadow-primary-600/30 dark:hover:shadow-primary-900/50 hover:brightness-110 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-primary-500/30"
+          >
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+            {calc.calculate}
+          </button>
+          <button
+            id="clear-btn"
+            type="button"
+            class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-surface-600 dark:text-surface-400 bg-surface-100 dark:bg-surface-700 border border-surface-200 dark:border-surface-600 rounded-lg transition-all duration-200 hover:bg-surface-200 dark:hover:bg-surface-600 hover:border-surface-300 dark:hover:border-surface-500 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-surface-400/30"
+          >
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
+            {calc.clear}
+          </button>
+        </div>
+
+        <div id="error-msg" class="hidden mb-4 p-3 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800/50 text-red-700 dark:text-red-400 text-sm"></div>
+
+        <div id="results-section" class="hidden animate-[fadeIn_0.3s_ease-out]">
+          <div class="mb-6">
+            <h3 class="text-lg font-bold text-surface-800 dark:text-surface-200 mb-4">{calc.result}</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="p-4 rounded-xl bg-gradient-to-br from-primary-50 dark:from-primary-900/30 to-accent-50 dark:to-accent-900/30 border border-primary-100 dark:border-primary-800/40 hover:shadow-md dark:hover:shadow-primary-900/20 transition-all duration-200 hover:scale-[1.01]">
+                <p class="text-xs font-semibold text-primary-500 dark:text-primary-400 uppercase tracking-wider mb-1">{calc.equation}</p>
+                <p id="result-equation" class="text-lg font-bold text-primary-800 dark:text-primary-200 font-mono"></p>
+              </div>
+              <div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 hover:shadow-md dark:hover:shadow-surface-950/30 transition-all duration-200 hover:scale-[1.01]">
+                <p class="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider mb-1">{calc.slope}</p>
+                <p id="result-slope" class="text-lg font-bold text-surface-800 dark:text-surface-200 font-mono"></p>
+              </div>
+              <div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 hover:shadow-md dark:hover:shadow-surface-950/30 transition-all duration-200 hover:scale-[1.01]">
+                <p class="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider mb-1">{calc.intercept}</p>
+                <p id="result-intercept" class="text-lg font-bold text-surface-800 dark:text-surface-200 font-mono"></p>
+              </div>
+              <div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 hover:shadow-md dark:hover:shadow-surface-950/30 transition-all duration-200 hover:scale-[1.01]">
+                <p class="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider mb-1">{calc.rSquared}</p>
+                <p id="result-rsquared" class="text-lg font-bold text-surface-800 dark:text-surface-200 font-mono"></p>
+              </div>
+              <div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 hover:shadow-md dark:hover:shadow-surface-950/30 transition-all duration-200 hover:scale-[1.01] sm:col-span-2">
+                <p class="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider mb-1">{calc.correlation}</p>
+                <p id="result-correlation" class="text-lg font-bold text-surface-800 dark:text-surface-200 font-mono"></p>
+              </div>
+            </div>
+          </div>
+
+          <details class="group">
+            <summary class="flex items-center gap-2 cursor-pointer text-sm font-semibold text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors select-none">
+              <svg class="w-4 h-4 transition-transform duration-200 group-open:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+              {calc.stepByStep}
+            </summary>
+            <div id="steps-content" class="mt-4 p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 text-sm text-surface-700 dark:text-surface-300 space-y-3 font-mono leading-relaxed"></div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('#calculator').forEach((calcEl) => {
+    const tbody = calcEl.querySelector('#data-rows');
+    const addBtn = calcEl.querySelector('#add-row-btn');
+    const calcBtn = calcEl.querySelector('#calculate-btn');
+    const clearBtn = calcEl.querySelector('#clear-btn');
+    const errorEl = calcEl.querySelector('#error-msg');
+    const resultsSection = calcEl.querySelector('#results-section');
+    const xLabel = calcEl.getAttribute('data-x-label') || 'X';
+    const yLabel = calcEl.getAttribute('data-y-label') || 'Y';
+    const invalidData = calcEl.getAttribute('data-invalid-data') || 'Please enter at least 2 valid data points';
+    let rowCounter = 0;
+
+    function createRow(xVal = '', yVal = '') {
+      rowCounter++;
+      const tr = document.createElement('tr');
+      tr.className = 'border-b border-surface-200 dark:border-surface-600 transition-colors duration-150 hover:bg-primary-50/30 dark:hover:bg-primary-900/10';
+      tr.innerHTML = `
+        <td class="px-3 py-2 text-xs text-surface-400 dark:text-surface-500 font-mono">${rowCounter}</td>
+        <td class="px-3 py-2"><input type="number" step="any" class="data-x w-full px-3 py-1.5 text-sm rounded-lg border border-surface-200 dark:border-surface-600 bg-white dark:bg-surface-700 dark:text-surface-200 dark:placeholder-surface-500 focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-300 dark:focus:border-primary-600 transition-all duration-150 hover:border-primary-300 dark:hover:border-primary-700" placeholder="${xLabel}" value="${xVal}" /></td>
+        <td class="px-3 py-2"><input type="number" step="any" class="data-y w-full px-3 py-1.5 text-sm rounded-lg border border-surface-200 dark:border-surface-600 bg-white dark:bg-surface-700 dark:text-surface-200 dark:placeholder-surface-500 focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-300 dark:focus:border-primary-600 transition-all duration-150 hover:border-primary-300 dark:hover:border-primary-700" placeholder="${yLabel}" value="${yVal}" /></td>
+        <td class="px-3 py-2"><button type="button" class="remove-row text-surface-300 dark:text-surface-600 hover:text-red-500 dark:hover:text-red-400 transition-colors duration-150" aria-label="Remove row"><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button></td>
+      `;
+      tr.querySelector('.remove-row')?.addEventListener('click', () => {
+        tr.style.opacity = '0';
+        tr.style.transform = 'translateX(10px)';
+        tr.style.transition = 'all 0.15s ease';
+        setTimeout(() => { tr.remove(); renumberRows(); }, 150);
+      });
+      tbody?.appendChild(tr);
+    }
+
+    function renumberRows() {
+      const rows = tbody?.querySelectorAll('tr') ?? [];
+      rows.forEach((row, i) => {
+        row.querySelector('td')!.textContent = String(i + 1);
+      });
+      rowCounter = rows.length;
+    }
+
+    function getData() {
+      const rows = tbody?.querySelectorAll('tr') ?? [];
+      const points = [];
+      for (const row of rows) {
+        const xInput = row.querySelector('.data-x');
+        const yInput = row.querySelector('.data-y');
+        const x = parseFloat(xInput?.value ?? '');
+        const y = parseFloat(yInput?.value ?? '');
+        if (!isNaN(x) && !isNaN(y)) {
+          points.push({ x, y });
+        }
+      }
+      return points;
+    }
+
+    function showError(msg) {
+      if (errorEl) {
+        errorEl.textContent = msg;
+        errorEl.classList.remove('hidden');
+      }
+      if (resultsSection) resultsSection.classList.add('hidden');
+    }
+
+    function hideError() {
+      if (errorEl) errorEl.classList.add('hidden');
+    }
+
+    function computeRegression(points) {
+      const n = points.length;
+      if (n < 2) {
+        showError(invalidData);
+        return null;
+      }
+
+      const sumX = points.reduce((s, p) => s + p.x, 0);
+      const sumY = points.reduce((s, p) => s + p.y, 0);
+      const meanX = sumX / n;
+      const meanY = sumY / n;
+
+      let ssXX = 0, ssXY = 0, ssYY = 0;
+      for (const p of points) {
+        const dx = p.x - meanX;
+        const dy = p.y - meanY;
+        ssXX += dx * dx;
+        ssXY += dx * dy;
+        ssYY += dy * dy;
+      }
+
+      if (ssXX === 0) {
+        showError(invalidData);
+        return null;
+      }
+
+      const m = ssXY / ssXX;
+      const b = meanY - m * meanX;
+
+      let ssRes = 0;
+      for (const p of points) {
+        const predicted = m * p.x + b;
+        ssRes += (p.y - predicted) ** 2;
+      }
+      const rSquared = ssYY === 0 ? 1 : 1 - ssRes / ssYY;
+      const r = ssYY === 0 ? 1 : ssXY / Math.sqrt(ssXX * ssYY);
+
+      const steps = [
+        `<strong>Step 1:</strong> Calculate means → x̄ = ${meanX.toFixed(4)}, ȳ = ${meanY.toFixed(4)}`,
+        `<strong>Step 2:</strong> Compute deviations`,
+        ...points.map((p, i) => `&nbsp;&nbsp;Point ${i + 1}: (x${i + 1} - x̄) = ${(p.x - meanX).toFixed(4)}, (y${i + 1} - ȳ) = ${(p.y - meanY).toFixed(4)}`),
+        `<strong>Step 3:</strong> Sums of squares → Σ(x-x̄)² = ${ssXX.toFixed(4)}, Σ(x-x̄)(y-ȳ) = ${ssXY.toFixed(4)}, Σ(y-ȳ)² = ${ssYY.toFixed(4)}`,
+        `<strong>Step 4:</strong> Slope m = Σ(x-x̄)(y-ȳ) / Σ(x-x̄)² = ${ssXY.toFixed(4)} / ${ssXX.toFixed(4)} = ${m.toFixed(4)}`,
+        `<strong>Step 5:</strong> Intercept b = ȳ - m·x̄ = ${meanY.toFixed(4)} - ${m.toFixed(4)} × ${meanX.toFixed(4)} = ${b.toFixed(4)}`,
+        `<strong>Step 6:</strong> R² = 1 - SSres/SStot = 1 - ${ssRes.toFixed(4)}/${ssYY.toFixed(4)} = ${rSquared.toFixed(4)}`,
+        `<strong>Step 7:</strong> Correlation r = Σ(x-x̄)(y-ȳ) / √[Σ(x-x̄)²·Σ(y-ȳ)²] = ${r.toFixed(4)}`,
+      ];
+
+      return { m, b, rSquared, r, equation: `y = ${m.toFixed(4)}x + ${b.toFixed(4)}`, steps };
+    }
+
+    addBtn?.addEventListener('click', () => createRow());
+    for (let i = 0; i < 5; i++) createRow();
+
+    calcBtn?.addEventListener('click', () => {
+      hideError();
+      const points = getData();
+      const result = computeRegression(points);
+      if (!result) return;
+
+      calcEl.querySelector('#result-equation')!.textContent = result.equation;
+      calcEl.querySelector('#result-slope')!.textContent = result.m.toFixed(4);
+      calcEl.querySelector('#result-intercept')!.textContent = result.b.toFixed(4);
+      calcEl.querySelector('#result-rsquared')!.textContent = result.rSquared.toFixed(4);
+      calcEl.querySelector('#result-correlation')!.textContent = result.r.toFixed(4);
+
+      const stepsEl = calcEl.querySelector('#steps-content');
+      if (stepsEl) {
+        stepsEl.innerHTML = result.steps.map((s) => `<p>${s}</p>`).join('');
+      }
+
+      if (resultsSection) {
+        resultsSection.classList.remove('hidden');
+        resultsSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    });
+
+    clearBtn?.addEventListener('click', () => {
+      hideError();
+      if (resultsSection) resultsSection.classList.add('hidden');
+      if (tbody) tbody.innerHTML = '';
+      rowCounter = 0;
+      for (let i = 0; i < 5; i++) createRow();
+    });
+  });
+</script>

@@ -1,0 +1,121 @@
+{
+  "siteTitle": "प्रतिगमन समीकरण कैलकुलेटर",
+  "siteDescription": "मुफ्त ऑनलाइन प्रतिगमन समीकरण कैलकुलेटर। चरण-दर-चरण समाधानों के साथ रैखिक, बहुपद और बहु重 प्रतिगमन समीकरणों की तुरंत गणना करें।",
+  "home": {
+    "title": "प्रतिगमन समीकरण कैलकुलेटर",
+    "description": "हमारे मुफ्त ऑनलाइन टूल से प्रतिगमन समीकरणों की तुरंत गणना करें",
+    "intro": "अपने डेटा बिंदु दर्ज करें और सेकंडों में प्रतिगमन समीकरण, ढाल, अवरोध, R-वर्ग मान और चरण-दर-चरण गणनाएँ प्राप्त करें।",
+    "whatIsTitle": "What Is a Regression Equation?",
+    "whatIsText": "A regression equation models the relationship between variables, allowing you to predict outcomes based on input data. In its simplest form — simple linear regression — the equation is <strong>y = mx + b</strong>, where <strong>m</strong> is the slope and <strong>b</strong> is the y-intercept. This powerful statistical tool is used across science, business, and engineering to uncover trends, make forecasts, and quantify relationships between variables.",
+    "whyUseTitle": "Why Use Our Calculator?",
+    "whyUsePoints": [
+      "Instantly computes the regression equation from your data",
+      "Shows step-by-step calculations so you understand the math",
+      "Calculates R², correlation coefficient, slope, and intercept",
+      "No signup required — 100% free and runs in your browser",
+      "Your data stays private — nothing is sent to any server"
+    ],
+    "useCasesTitle": "Common Use Cases",
+    "useCasesPoints": [
+      "Predicting sales from advertising spend",
+      "Estimating house prices from square footage",
+      "Analyzing the impact of study hours on exam scores",
+      "Forecasting temperature changes over time",
+      "Evaluating the relationship between dosage and response"
+    ],
+    "faqTitle": "Frequently Asked Questions",
+    "howItWorksTitle": "प्रतिगमन समीकरण कैलकुलेटर कैसे काम करता है",
+    "howItWorksStep1": "नीचे दी गई तालिका में अपने x और y डेटा बिंदु दर्ज करें",
+    "howItWorksStep2": "प्रतिगमन समीकरण की गणना करने के लिए गणना करें पर क्लिक करें",
+    "howItWorksStep3": "समीकरण, ढाल, अवरोध और R² मान सहित अपने परिणाम देखें",
+    "tableTitle": "प्रतिगमन सांख्यिकी संदर्भ",
+    "tableDescription": "सामान्य प्रतिगमन सांख्यिकी और उनकी व्याख्याएँ",
+    "howItWorksStep1Title": "Enter Data",
+    "howItWorksStep2Title": "Calculate",
+    "howItWorksStep3Title": "View Results",
+    "tableStat": "Statistic",
+    "tableSymbol": "Symbol",
+    "tableInterpretation": "Interpretation",
+    "tableSlope": "Slope",
+    "tableSlopeSym": "m",
+    "tableSlopeInt": "Rate of change",
+    "tableIntercept": "Intercept",
+    "tableInterceptSym": "b",
+    "tableInterceptInt": "Value when x = 0",
+    "tableRSquared": "R-Squared",
+    "tableRSquaredSym": "R²",
+    "tableRSquaredInt": "Goodness of fit",
+    "tableCorrelation": "Correlation",
+    "tableCorrelationSym": "r",
+    "tableCorrelationInt": "Strength of relationship",
+    "tableStdError": "Standard Error",
+    "tableStdErrorSym": "SE",
+    "tableStdErrorInt": "Average distance from line",
+    "tablePValue": "P-value",
+    "tablePValueSym": "p",
+    "tablePValueInt": "Statistical significance"
+  },
+  "about": {
+    "title": "हमारे बारे में",
+    "description": "प्रतिगमन समीकरण कैलकुलेटर के बारे में जानें",
+    "content": "प्रतिगमन समीकरण कैलकुलेटर एक मुफ्त ऑनलाइन टूल है जिसे छात्रों, शोधकर्ताओं और पेशेवरों को प्रतिगमन समीकरणों की जल्दी और सटीक गणना करने में मदद करने के लिए डिज़ाइन किया गया है। हमारा कैलकुलेटर रैखिक प्रतिगमन का समर्थन करता है और आपको परिणामों के पीछे की गणितीय प्रक्रिया को समझने में मदद करने के लिए विस्तृत चरण-दर-चरण समाधान प्रदान करता है। चाहे आप सांख्यिकी का अध्ययन कर रहे हों, डेटा का विश्लेषण कर रहे हों, या शोध पर काम कर रहे हों, हमारा टूल प्रतिगमन विश्लेषण को सभी के लिए सुलभ बनाता है।"
+  },
+  "contact": {
+    "title": "हमसे संपर्क करें",
+    "description": "प्रतिगमन समीकरण कैलकुलेटर टीम से संपर्क करें",
+    "helperText": "कोई प्रश्न या प्रतिक्रिया है? हम आपसे सुनना चाहते हैं। नीचे दिए गए फॉर्म को भरें और हम जल्द से जल्द आपसे संपर्क करेंगे।",
+    "nameLabel": "आपका नाम",
+    "emailLabel": "आपका ईमेल",
+    "messageLabel": "आपका संदेश",
+    "sendButton": "संदेश भेजें",
+    "sending": "भेज रहा है...",
+    "success": "संदेश सफलतापूर्वक भेजा गया!",
+    "apiError": "कुछ गलत हो गया। कृपया पुनः प्रयास करें।",
+    "networkError": "नेटवर्क त्रुटि। कृपया अपना कनेक्शन जांचें।",
+    "fallbackText": "आप हमसे सीधे यहाँ भी संपर्क कर सकते हैं",
+    "fallbackEmail": "contact@regressionequationcalculator.com"
+  },
+  "terms": {
+    "title": "सेवा की शर्तें",
+    "description": "प्रतिगमन समीकरण कैलकुलेटर का उपयोग करने के लिए नियम और शर्तें",
+    "content": "प्रतिगमन समीकरण कैलकुलेटर वेबसाइट तक पहुँचने और उपयोग करके, आप इन शर्तों से बँधे होने के लिए सहमत होते हैं। हमारा टूल शैक्षिक और विश्लेषणात्मक उद्देश्यों के लिए प्रदान किया गया है। महत्वपूर्ण अनुप्रयोगों के लिए परिणामों को सत्यापित किया जाना चाहिए। हम किसी भी समय इन शर्तों को संशोधित करने का अधिकार सुरक्षित रखते हैं। कैलकुलेटर का उपयोग मुफ्त है और हम पेशेवर या व्यावसायिक उद्देश्यों के लिए परिणामों की सटीकता की गारंटी नहीं देते हैं।"
+  },
+  "privacy": {
+    "title": "गोपनीयता नीति",
+    "description": "प्रतिगमन समीकरण कैलकुलेटर पर हम आपके डेटा को कैसे संभालते हैं",
+    "content": "हम आपकी गोपनीयता को महत्व देते हैं। प्रतिगमन समीकरण कैलकुलेटर कैलकुलेटर में दर्ज किसी भी व्यक्तिगत डेटा को एकत्र, संग्रहीत या साझा नहीं करता है। सभी गणनाएँ आपके ब्राउज़र में स्थानीय रूप से की जाती हैं। हम साइट उपयोग पैटर्न को समझने के लिए एनालिटिक्स का उपयोग कर सकते हैं, लेकिन कोई व्यक्तिगत रूप से पहचान योग्य जानकारी एकत्र नहीं की जाती है। संपर्क फॉर्म प्रस्तुतियों को सुरक्षित रूप से संसाधित किया जाता है और तीसरे पक्ष के साथ साझा नहीं किया जाता है।"
+  },
+  "blog": {
+    "title": "ब्लॉग",
+    "description": "प्रतिगमन विश्लेषण और सांख्यिकी पर लेख",
+    "readMore": "और पढ़ें",
+    "resultsMeta": "{total} लेखों में से {start}-{end} दिखा रहा है"
+  },
+  "calculator": {
+    "title": "प्रतिगमन समीकरण कैलकुलेटर",
+    "description": "प्रतिगमन समीकरण की गणना करने के लिए अपने डेटा बिंदु दर्ज करें",
+    "enterData": "अपने डेटा बिंदु दर्ज करें",
+    "xLabel": "X मान",
+    "yLabel": "Y मान",
+    "addRow": "पंक्ति जोड़ें",
+    "calculate": "गणना करें",
+    "clear": "साफ़ करें",
+    "result": "परिणाम",
+    "equation": "प्रतिगमन समीकरण",
+    "slope": "ढाल (m)",
+    "intercept": "अवरोध (b)",
+    "rSquared": "R-वर्ग",
+    "correlation": "सहसंबंध (r)",
+    "invalidData": "कृपया कम से कम 2 मान्य डेटा बिंदु दर्ज करें",
+    "stepByStep": "चरण-दर-चरण समाधान"
+  },
+  "notFound": {
+    "title": "पृष्ठ नहीं मिला",
+    "description": "आप जिस पृष्ठ की तलाश कर रहे हैं वह मौजूद नहीं है",
+    "backHome": "होम पर वापस जाएं"
+  },
+  "sitemap": {
+    "title": "साइटमैप",
+    "description": "प्रतिगमन समीकरण कैलकुलेटर के सभी पृष्ठों का अन्वेषण करें"
+  }
+}

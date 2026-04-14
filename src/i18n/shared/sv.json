@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "home": "Startsida",
+    "aboutUs": "Om Oss",
+    "blog": "Blogg",
+    "contactUs": "Kontakta Oss",
+    "terms": "Villkor",
+    "privacy": "Integritet",
+    "sitemap": "Webbplatskarta"
+  },
+  "footer": {
+    "description": "Gratis online regressionsekvationskalkylator med steg-för-steg-lösningar för studenter, forskare och professionella.",
+    "copyright": "Alla rättigheter förbehållna."
+  },
+  "common": {
+    "learnMore": "Läs Mer",
+    "previous": "Föregående",
+    "next": "Nästa"
+  }
+}

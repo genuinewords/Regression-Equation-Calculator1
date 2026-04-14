@@ -1,0 +1,160 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from 'theme/layouts/BaseLayout.astro';
+import { mergeTranslations } from 'theme/i18n/utils';
+import siteConfig from 'src/data/site-config.json';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { id: post.id.replace(/\.(md|mdx)$/, '') },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const locale = 'en';
+const translations = await mergeTranslations(locale);
+
+const canonicalUrl = new URL(`/blog/${post.id.replace(/\.(md|mdx)$/, '')}/`, siteConfig.siteUrl).href;
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: post.data.title,
+  description: post.data.description,
+  image: new URL(post.data.image, siteConfig.siteUrl).href,
+  datePublished: post.data.date.toISOString(),
+  author: {
+    '@type': 'Organization',
+    name: post.data.author,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: siteConfig.siteName,
+    logo: {
+      '@type': 'ImageObject',
+      url: new URL('/logo.svg', siteConfig.siteUrl).href,
+    },
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': canonicalUrl,
+  },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: translations.nav?.home ?? 'Home',
+      item: siteConfig.siteUrl,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: translations.nav?.blog ?? 'Blog',
+      item: new URL('/blog/', siteConfig.siteUrl).href,
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: post.data.title,
+      item: canonicalUrl,
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title={post.data.title}
+  description={post.data.description}
+  locale={locale}
+  canonicalUrl={canonicalUrl}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <section class="py-8 md:py-12">
+    <nav class="mb-6" aria-label="Breadcrumb">
+      <ol class="flex items-center gap-2 text-sm text-surface-500 dark:text-surface-400">
+        <li>
+          <a href="/" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{translations.nav?.home ?? 'Home'}</a>
+        </li>
+        <li class="before:content-['/'] before:mx-2 before:text-surface-300 dark:before:text-surface-600">
+          <a href="/blog/" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{translations.nav?.blog ?? 'Blog'}</a>
+        </li>
+        <li class="before:content-['/'] before:mx-2 before:text-surface-300 dark:before:text-surface-600 text-surface-700 dark:text-surface-300 font-medium truncate max-w-xs">
+          {post.data.title}
+        </li>
+      </ol>
+    </nav>
+  </section>
+
+  <article class="py-8 md:py-12">
+    <header class="max-w-3xl mx-auto">
+      <div class="mb-6">
+        <span class="inline-block rounded-full bg-primary-100 dark:bg-primary-900/30 px-3 py-1 text-xs font-semibold text-primary-700 dark:text-primary-400 uppercase tracking-wide">
+          {post.data.category}
+        </span>
+      </div>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-surface-900 dark:text-surface-50 leading-tight">
+        {post.data.title}
+      </h1>
+      <p class="mt-4 text-lg md:text-xl text-surface-600 dark:text-surface-400 leading-relaxed">
+        {post.data.description}
+      </p>
+      <div class="mt-6 flex items-center gap-4 text-sm text-surface-500 dark:text-surface-400">
+        <span class="font-medium text-surface-700 dark:text-surface-300">{post.data.author}</span>
+        <span>&middot;</span>
+        <time datetime={post.data.date.toISOString()}>
+          {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+        </time>
+      </div>
+      <div class="mt-8 overflow-hidden rounded-2xl bg-gradient-to-br from-primary-50 dark:from-primary-900/20 to-accent-50 dark:to-accent-900/20">
+        <img
+          src={post.data.image}
+          alt={post.data.title}
+          class="w-full h-64 md:h-80 object-cover"
+          loading="eager"
+        />
+      </div>
+    </header>
+
+    <div class="mt-12 max-w-3xl mx-auto prose prose-surface prose-lg
+      prose-headings:text-surface-900 dark:prose-headings:text-surface-50
+      prose-headings:font-extrabold
+      prose-h2:mt-14 prose-h2:mb-5 prose-h2:text-2xl
+      prose-h3:mt-10 prose-h3:mb-4 prose-h3:text-xl
+      prose-h4:mt-8 prose-h4:mb-3
+      prose-p:text-surface-600 dark:prose-p:text-surface-400
+      prose-p:leading-[1.85] prose-p:my-5
+      prose-a:text-primary-600 dark:prose-a:text-primary-400
+      prose-a:font-semibold prose-a:no-underline
+      prose-a:bg-primary-50 dark:prose-a:bg-primary-900/20
+      prose-a:px-1.5 prose-a:py-0.5 prose-a:rounded
+      prose-a:hover:bg-primary-100 dark:prose-a:hover:bg-primary-900/40
+      prose-a:transition-colors
+      prose-strong:text-surface-800 dark:prose-strong:text-surface-200 prose-strong:font-bold
+      prose-li:text-surface-600 dark:prose-li:text-surface-400
+      prose-li:marker:text-primary-500 dark:prose-li:marker:text-primary-400
+      prose-ul:my-5 prose-ol:my-5
+      prose-hr:border-surface-200 dark:prose-hr:border-surface-700 prose-hr:my-10
+      prose-img:rounded-xl prose-img:shadow-md prose-img:my-8
+      prose-blockquote:border-l-4 prose-blockquote:border-primary-400 dark:prose-blockquote:border-primary-600
+      prose-blockquote:bg-primary-50/50 dark:prose-blockquote:bg-primary-900/10
+      prose-blockquote:rounded-r-xl prose-blockquote:px-6 prose-blockquote:py-4
+      prose-blockquote:not-italic prose-blockquote:my-6
+      prose-code:text-primary-700 dark:prose-code:text-primary-300
+      prose-code:bg-primary-50 dark:prose-code:bg-primary-900/20
+      prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded
+      prose-code:font-semibold prose-code:before:content-none prose-code:after:content-none
+    ">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>

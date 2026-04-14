@@ -1,0 +1,121 @@
+{
+  "siteTitle": "회귀 방정식 계산기",
+  "siteDescription": "무료 온라인 회귀 방정식 계산기. 단계별 해법과 함께 선형, 다항식 및 중회귀 방정식을 즉시 계산하세요.",
+  "home": {
+    "title": "회귀 방정식 계산기",
+    "description": "무료 온라인 도구로 회귀 방정식을 즉시 계산하세요",
+    "intro": "데이터 포인트를 입력하고 회귀 방정식, 기울기, 절편, R-제곱 값 및 단계별 계산을 몇 초 만에 받으세요.",
+    "whatIsTitle": "What Is a Regression Equation?",
+    "whatIsText": "A regression equation models the relationship between variables, allowing you to predict outcomes based on input data. In its simplest form — simple linear regression — the equation is <strong>y = mx + b</strong>, where <strong>m</strong> is the slope and <strong>b</strong> is the y-intercept. This powerful statistical tool is used across science, business, and engineering to uncover trends, make forecasts, and quantify relationships between variables.",
+    "whyUseTitle": "Why Use Our Calculator?",
+    "whyUsePoints": [
+      "Instantly computes the regression equation from your data",
+      "Shows step-by-step calculations so you understand the math",
+      "Calculates R², correlation coefficient, slope, and intercept",
+      "No signup required — 100% free and runs in your browser",
+      "Your data stays private — nothing is sent to any server"
+    ],
+    "useCasesTitle": "Common Use Cases",
+    "useCasesPoints": [
+      "Predicting sales from advertising spend",
+      "Estimating house prices from square footage",
+      "Analyzing the impact of study hours on exam scores",
+      "Forecasting temperature changes over time",
+      "Evaluating the relationship between dosage and response"
+    ],
+    "faqTitle": "Frequently Asked Questions",
+    "howItWorksTitle": "회귀 방정식 계산기 작동 방식",
+    "howItWorksStep1": "아래 표에 x 및 y 데이터 포인트를 입력하세요",
+    "howItWorksStep2": "계산을 클릭하여 회귀 방정식을 계산하세요",
+    "howItWorksStep3": "방정식, 기울기, 절편 및 R² 값을 포함한 결과를 확인하세요",
+    "tableTitle": "회귀 통계 참조",
+    "tableDescription": "일반적인 회귀 통계 및 해석",
+    "howItWorksStep1Title": "Enter Data",
+    "howItWorksStep2Title": "Calculate",
+    "howItWorksStep3Title": "View Results",
+    "tableStat": "Statistic",
+    "tableSymbol": "Symbol",
+    "tableInterpretation": "Interpretation",
+    "tableSlope": "Slope",
+    "tableSlopeSym": "m",
+    "tableSlopeInt": "Rate of change",
+    "tableIntercept": "Intercept",
+    "tableInterceptSym": "b",
+    "tableInterceptInt": "Value when x = 0",
+    "tableRSquared": "R-Squared",
+    "tableRSquaredSym": "R²",
+    "tableRSquaredInt": "Goodness of fit",
+    "tableCorrelation": "Correlation",
+    "tableCorrelationSym": "r",
+    "tableCorrelationInt": "Strength of relationship",
+    "tableStdError": "Standard Error",
+    "tableStdErrorSym": "SE",
+    "tableStdErrorInt": "Average distance from line",
+    "tablePValue": "P-value",
+    "tablePValueSym": "p",
+    "tablePValueInt": "Statistical significance"
+  },
+  "about": {
+    "title": "소개",
+    "description": "회귀 방정식 계산기에 대해 알아보기",
+    "content": "회귀 방정식 계산기는 학생, 연구자 및 전문가가 회귀 방정식을 빠르고 정확하게 계산할 수 있도록 설계된 무료 온라인 도구입니다. 당사 계산기는 선형 회귀를 지원하며 결과 뒤의 수학적 과정을 이해하는 데 도움이 되는 상세한 단계별 해법을 제공합니다. 통계학을 공부하든, 데이터를 분석하든, 연구를 수행하든 당사 도구는 모든 사람이 회귀 분석에 접근할 수 있게 합니다."
+  },
+  "contact": {
+    "title": "문의하기",
+    "description": "회귀 방정식 계산기 팀에 연락하세요",
+    "helperText": "질문이나 피드백이 있으신가요? 연락을 환영합니다. 아래 양식을 작성해 주시면 최대한 빨리 답변드리겠습니다.",
+    "nameLabel": "이름",
+    "emailLabel": "이메일",
+    "messageLabel": "메시지",
+    "sendButton": "메시지 보내기",
+    "sending": "보내는 중...",
+    "success": "메시지가 성공적으로 전송되었습니다!",
+    "apiError": "오류가 발생했습니다. 다시 시도해 주세요.",
+    "networkError": "네트워크 오류. 연결을 확인해 주세요.",
+    "fallbackText": "다음 주소로 직접 연락하실 수도 있습니다",
+    "fallbackEmail": "contact@regressionequationcalculator.com"
+  },
+  "terms": {
+    "title": "이용약관",
+    "description": "회귀 방정식 계산기 이용 약관 및 조건",
+    "content": "회귀 방정식 계산기 웹사이트에 액세스하고 사용함으로써 이 약관에 동의하게 됩니다. 당사 도구는 교육 및 분석 목적으로 제공됩니다. 중요한 응용 분야에서는 결과를 검증해야 합니다. 당사는 언제든지 이 약관을 수정할 권리를 보유합니다. 계산기 사용은 무료이며 전문적 또는 상업적 목적을 위한 결과의 정확성은 보장하지 않습니다."
+  },
+  "privacy": {
+    "title": "개인정보 처리방침",
+    "description": "회귀 방정식 계산기에서 데이터를 처리하는 방법",
+    "content": "귀하의 개인정보를 존중합니다. 회귀 방정식 계산기는 계산기에 입력된 개인 데이터를 수집, 저장 또는 공유하지 않습니다. 모든 계산은 귀하의 브라우저에서 로컬로 수행됩니다. 사이트 사용 패턴을 이해하기 위해 분석을 사용할 수 있지만 개인 식별 정보는 수집되지 않습니다. 문의 양식 제출은 안전하게 처리되며 제3자와 공유되지 않습니다."
+  },
+  "blog": {
+    "title": "블로그",
+    "description": "회귀 분석 및 통계에 관한 글",
+    "readMore": "더 읽기",
+    "resultsMeta": "전체 {total}개 글 중 {start}-{end} 표시"
+  },
+  "calculator": {
+    "title": "회귀 방정식 계산기",
+    "description": "데이터 포인트를 입력하여 회귀 방정식을 계산하세요",
+    "enterData": "데이터 포인트를 입력하세요",
+    "xLabel": "X 값",
+    "yLabel": "Y 값",
+    "addRow": "행 추가",
+    "calculate": "계산",
+    "clear": "지우기",
+    "result": "결과",
+    "equation": "회귀 방정식",
+    "slope": "기울기 (m)",
+    "intercept": "절편 (b)",
+    "rSquared": "R-제곱",
+    "correlation": "상관관계 (r)",
+    "invalidData": "최소 2개의 유효한 데이터 포인트를 입력하세요",
+    "stepByStep": "단계별 해법"
+  },
+  "notFound": {
+    "title": "페이지를 찾을 수 없음",
+    "description": "찾으시는 페이지가 존재하지 않습니다",
+    "backHome": "홈으로 돌아가기"
+  },
+  "sitemap": {
+    "title": "사이트맵",
+    "description": "회귀 방정식 계산기의 모든 페이지 탐색"
+  }
+}

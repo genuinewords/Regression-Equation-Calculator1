@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "home": "Home",
+    "aboutUs": "About Us",
+    "blog": "Blog",
+    "contactUs": "Contact Us",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "sitemap": "Sitemap"
+  },
+  "footer": {
+    "description": "Free online regression equation calculator with step-by-step solutions for students, researchers, and professionals.",
+    "copyright": "All rights reserved."
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "previous": "Previous",
+    "next": "Next"
+  }
+}

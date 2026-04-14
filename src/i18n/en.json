@@ -1,0 +1,121 @@
+{
+  "siteTitle": "Regression Equation Calculator",
+  "siteDescription": "Free online regression equation calculator. Compute linear, polynomial, and multiple regression equations instantly with step-by-step solutions.",
+  "home": {
+    "title": "Regression Equation Calculator",
+    "description": "Compute regression equations instantly with our free online tool",
+    "intro": "Enter your data points and get the regression equation, slope, intercept, R-squared value, and step-by-step calculations in seconds.",
+    "whatIsTitle": "What Is a Regression Equation?",
+    "whatIsText": "A regression equation models the relationship between variables, allowing you to predict outcomes based on input data. In its simplest form — simple linear regression — the equation is <strong>y = mx + b</strong>, where <strong>m</strong> is the slope and <strong>b</strong> is the y-intercept. This powerful statistical tool is used across science, business, and engineering to uncover trends, make forecasts, and quantify relationships between variables.",
+    "whyUseTitle": "Why Use Our Calculator?",
+    "whyUsePoints": [
+      "Instantly computes the regression equation from your data",
+      "Shows step-by-step calculations so you understand the math",
+      "Calculates R², correlation coefficient, slope, and intercept",
+      "No signup required — 100% free and runs in your browser",
+      "Your data stays private — nothing is sent to any server"
+    ],
+    "useCasesTitle": "Common Use Cases",
+    "useCasesPoints": [
+      "Predicting sales from advertising spend",
+      "Estimating house prices from square footage",
+      "Analyzing the impact of study hours on exam scores",
+      "Forecasting temperature changes over time",
+      "Evaluating the relationship between dosage and response"
+    ],
+    "howItWorksTitle": "How Regression Equation Calculator Works",
+    "howItWorksStep1Title": "Enter Data",
+    "howItWorksStep1": "Enter your x and y data points in the table below",
+    "howItWorksStep2Title": "Calculate",
+    "howItWorksStep2": "Click Calculate to compute the regression equation",
+    "howItWorksStep3Title": "View Results",
+    "howItWorksStep3": "View your results including equation, slope, intercept, and R² value",
+    "tableTitle": "Regression Statistics Reference",
+    "tableDescription": "Common regression statistics and their interpretations",
+    "tableStat": "Statistic",
+    "tableSymbol": "Symbol",
+    "tableInterpretation": "Interpretation",
+    "tableSlope": "Slope",
+    "tableSlopeSym": "m",
+    "tableSlopeInt": "Rate of change",
+    "tableIntercept": "Intercept",
+    "tableInterceptSym": "b",
+    "tableInterceptInt": "Value when x = 0",
+    "tableRSquared": "R-Squared",
+    "tableRSquaredSym": "R²",
+    "tableRSquaredInt": "Goodness of fit",
+    "tableCorrelation": "Correlation",
+    "tableCorrelationSym": "r",
+    "tableCorrelationInt": "Strength of relationship",
+    "tableStdError": "Standard Error",
+    "tableStdErrorSym": "SE",
+    "tableStdErrorInt": "Average distance from line",
+    "tablePValue": "P-value",
+    "tablePValueSym": "p",
+    "tablePValueInt": "Statistical significance",
+    "faqTitle": "Frequently Asked Questions"
+  },
+  "about": {
+    "title": "About Us",
+    "description": "Learn about the Regression Equation Calculator",
+    "content": "The Regression Equation Calculator is a free online tool designed to help students, researchers, and professionals compute regression equations quickly and accurately. Our calculator supports linear regression and provides detailed step-by-step solutions to help you understand the mathematical process behind the results. Whether you're studying statistics, analyzing data, or working on research, our tool makes regression analysis accessible to everyone."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Get in touch with the Regression Equation Calculator team",
+    "helperText": "Have a question or feedback? We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.",
+    "nameLabel": "Your Name",
+    "emailLabel": "Your Email",
+    "messageLabel": "Your Message",
+    "sendButton": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "apiError": "Something went wrong. Please try again.",
+    "networkError": "Network error. Please check your connection.",
+    "fallbackText": "You can also reach us directly at",
+    "fallbackEmail": "contact@regressionequationcalculator.com"
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "description": "Terms and conditions for using the Regression Equation Calculator",
+    "content": "By accessing and using the Regression Equation Calculator website, you agree to be bound by these terms. Our tool is provided for educational and analytical purposes. Results should be verified for critical applications. We reserve the right to modify these terms at any time. Use of the calculator is free and we do not guarantee the accuracy of results for professional or commercial purposes."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "description": "How we handle your data at the Regression Equation Calculator",
+    "content": "We value your privacy. The Regression Equation Calculator does not collect, store, or share any personal data entered into the calculator. All calculations are performed locally in your browser. We may use analytics to understand site usage patterns, but no personally identifiable information is collected. Contact form submissions are processed securely and are not shared with third parties."
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Articles about regression analysis and statistics",
+    "readMore": "Read More",
+    "resultsMeta": "Showing {start}-{end} of {total} articles"
+  },
+  "calculator": {
+    "title": "Regression Equation Calculator",
+    "description": "Enter your data points to calculate the regression equation",
+    "enterData": "Enter your data points",
+    "xLabel": "X Values",
+    "yLabel": "Y Values",
+    "addRow": "Add Row",
+    "calculate": "Calculate",
+    "clear": "Clear",
+    "result": "Results",
+    "equation": "Regression Equation",
+    "slope": "Slope (m)",
+    "intercept": "Intercept (b)",
+    "rSquared": "R-Squared",
+    "correlation": "Correlation (r)",
+    "invalidData": "Please enter at least 2 valid data points",
+    "stepByStep": "Step-by-Step Solution"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "The page you're looking for doesn't exist",
+    "backHome": "Back to Home"
+  },
+  "sitemap": {
+    "title": "Sitemap",
+    "description": "Explore all pages on the Regression Equation Calculator"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "aboutUs": "Tentang Kami",
+    "blog": "Blog",
+    "contactUs": "Hubungi Kami",
+    "terms": "Ketentuan",
+    "privacy": "Privasi",
+    "sitemap": "Peta Situs"
+  },
+  "footer": {
+    "description": "Kalkulator persamaan regresi online gratis dengan solusi langkah demi langkah untuk pelajar, peneliti, dan profesional.",
+    "copyright": "Hak cipta dilindungi."
+  },
+  "common": {
+    "learnMore": "Pelajari Lebih Lanjut",
+    "previous": "Sebelumnya",
+    "next": "Selanjutnya"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "home": "Início",
+    "aboutUs": "Sobre Nós",
+    "blog": "Blog",
+    "contactUs": "Contato",
+    "terms": "Termos",
+    "privacy": "Privacidade",
+    "sitemap": "Mapa do Site"
+  },
+  "footer": {
+    "description": "Calculadora gratuita online de equação de regressão com soluções passo a passo para estudantes, pesquisadores e profissionais.",
+    "copyright": "Todos os direitos reservados."
+  },
+  "common": {
+    "learnMore": "Saiba Mais",
+    "previous": "Anterior",
+    "next": "Próximo"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "aboutUs": "Hakkımızda",
+    "blog": "Blog",
+    "contactUs": "İletişim",
+    "terms": "Koşullar",
+    "privacy": "Gizlilik",
+    "sitemap": "Site Haritası"
+  },
+  "footer": {
+    "description": "Öğrenciler, araştırmacılar ve profesyoneller için adım adım çözümlerle ücretsiz çevrimiçi regresyon denklemi hesaplayıcısı.",
+    "copyright": "Tüm hakları saklıdır."
+  },
+  "common": {
+    "learnMore": "Daha Fazla Bilgi",
+    "previous": "Önceki",
+    "next": "Sonraki"
+  }
+}

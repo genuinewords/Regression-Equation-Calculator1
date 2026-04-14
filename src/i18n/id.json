@@ -1,0 +1,121 @@
+{
+  "siteTitle": "Kalkulator Persamaan Regresi",
+  "siteDescription": "Kalkulator persamaan regresi online gratis. Hitung persamaan regresi linear, polinomial, dan berganda secara instan dengan solusi langkah demi langkah.",
+  "home": {
+    "title": "Kalkulator Persamaan Regresi",
+    "description": "Hitung persamaan regresi secara instan dengan alat online gratis kami",
+    "intro": "Masukkan titik data Anda dan dapatkan persamaan regresi, kemiringan, intersep, nilai R-kuadrat, dan perhitungan langkah demi langkah dalam hitungan detik.",
+    "whatIsTitle": "What Is a Regression Equation?",
+    "whatIsText": "A regression equation models the relationship between variables, allowing you to predict outcomes based on input data. In its simplest form — simple linear regression — the equation is <strong>y = mx + b</strong>, where <strong>m</strong> is the slope and <strong>b</strong> is the y-intercept. This powerful statistical tool is used across science, business, and engineering to uncover trends, make forecasts, and quantify relationships between variables.",
+    "whyUseTitle": "Why Use Our Calculator?",
+    "whyUsePoints": [
+      "Instantly computes the regression equation from your data",
+      "Shows step-by-step calculations so you understand the math",
+      "Calculates R², correlation coefficient, slope, and intercept",
+      "No signup required — 100% free and runs in your browser",
+      "Your data stays private — nothing is sent to any server"
+    ],
+    "useCasesTitle": "Common Use Cases",
+    "useCasesPoints": [
+      "Predicting sales from advertising spend",
+      "Estimating house prices from square footage",
+      "Analyzing the impact of study hours on exam scores",
+      "Forecasting temperature changes over time",
+      "Evaluating the relationship between dosage and response"
+    ],
+    "faqTitle": "Frequently Asked Questions",
+    "howItWorksTitle": "Cara Kerja Kalkulator Persamaan Regresi",
+    "howItWorksStep1": "Masukkan titik data x dan y Anda dalam tabel di bawah",
+    "howItWorksStep2": "Klik Hitung untuk menghitung persamaan regresi",
+    "howItWorksStep3": "Lihat hasil Anda termasuk persamaan, kemiringan, intersep, dan nilai R²",
+    "tableTitle": "Referensi Statistik Regresi",
+    "tableDescription": "Statistik regresi umum dan interpretasinya",
+    "howItWorksStep1Title": "Enter Data",
+    "howItWorksStep2Title": "Calculate",
+    "howItWorksStep3Title": "View Results",
+    "tableStat": "Statistic",
+    "tableSymbol": "Symbol",
+    "tableInterpretation": "Interpretation",
+    "tableSlope": "Slope",
+    "tableSlopeSym": "m",
+    "tableSlopeInt": "Rate of change",
+    "tableIntercept": "Intercept",
+    "tableInterceptSym": "b",
+    "tableInterceptInt": "Value when x = 0",
+    "tableRSquared": "R-Squared",
+    "tableRSquaredSym": "R²",
+    "tableRSquaredInt": "Goodness of fit",
+    "tableCorrelation": "Correlation",
+    "tableCorrelationSym": "r",
+    "tableCorrelationInt": "Strength of relationship",
+    "tableStdError": "Standard Error",
+    "tableStdErrorSym": "SE",
+    "tableStdErrorInt": "Average distance from line",
+    "tablePValue": "P-value",
+    "tablePValueSym": "p",
+    "tablePValueInt": "Statistical significance"
+  },
+  "about": {
+    "title": "Tentang Kami",
+    "description": "Pelajari tentang Kalkulator Persamaan Regresi",
+    "content": "Kalkulator Persamaan Regresi adalah alat online gratis yang dirancang untuk membantu pelajar, peneliti, dan profesional menghitung persamaan regresi dengan cepat dan akurat. Kalkulator kami mendukung regresi linear dan menyediakan solusi langkah demi langkah yang detail untuk membantu Anda memahami proses matematis di balik hasil. Baik Anda belajar statistik, menganalisis data, atau mengerjakan penelitian, alat kami membuat analisis regresi dapat diakses oleh siapa saja."
+  },
+  "contact": {
+    "title": "Hubungi Kami",
+    "description": "Hubungi tim Kalkulator Persamaan Regresi",
+    "helperText": "Ada pertanyaan atau masukan? Kami ingin mendengar dari Anda. Isi formulir di bawah dan kami akan menghubungi Anda sesegera mungkin.",
+    "nameLabel": "Nama Anda",
+    "emailLabel": "Email Anda",
+    "messageLabel": "Pesan Anda",
+    "sendButton": "Kirim Pesan",
+    "sending": "Mengirim...",
+    "success": "Pesan berhasil dikirim!",
+    "apiError": "Terjadi kesalahan. Silakan coba lagi.",
+    "networkError": "Kesalahan jaringan. Silakan periksa koneksi Anda.",
+    "fallbackText": "Anda juga dapat menghubungi kami langsung di",
+    "fallbackEmail": "contact@regressionequationcalculator.com"
+  },
+  "terms": {
+    "title": "Ketentuan Layanan",
+    "description": "Syarat dan ketentuan untuk menggunakan Kalkulator Persamaan Regresi",
+    "content": "Dengan mengakses dan menggunakan situs web Kalkulator Persamaan Regresi, Anda menyetujui untuk terikat dengan ketentuan ini. Alat kami disediakan untuk tujuan pendidikan dan analitis. Hasil harus diverifikasi untuk aplikasi kritis. Kami berhak mengubah ketentuan ini kapan saja. Penggunaan kalkulator gratis dan kami tidak menjamin keakuratan hasil untuk tujuan profesional atau komersial."
+  },
+  "privacy": {
+    "title": "Kebijakan Privasi",
+    "description": "Bagaimana kami menangani data Anda di Kalkulator Persamaan Regresi",
+    "content": "Kami menghargai privasi Anda. Kalkulator Persamaan Regresi tidak mengumpulkan, menyimpan, atau membagikan data pribadi yang dimasukkan ke dalam kalkulator. Semua perhitungan dilakukan secara lokal di browser Anda. Kami mungkin menggunakan analitik untuk memahami pola penggunaan situs, tetapi tidak ada informasi pengidentifikasian pribadi yang dikumpulkan. Pengiriman formulir kontak diproses secara aman dan tidak dibagikan kepada pihak ketiga."
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Artikel tentang analisis regresi dan statistik",
+    "readMore": "Baca Selengkapnya",
+    "resultsMeta": "Menampilkan {start}-{end} dari {total} artikel"
+  },
+  "calculator": {
+    "title": "Kalkulator Persamaan Regresi",
+    "description": "Masukkan titik data Anda untuk menghitung persamaan regresi",
+    "enterData": "Masukkan titik data Anda",
+    "xLabel": "Nilai X",
+    "yLabel": "Nilai Y",
+    "addRow": "Tambah Baris",
+    "calculate": "Hitung",
+    "clear": "Hapus",
+    "result": "Hasil",
+    "equation": "Persamaan Regresi",
+    "slope": "Kemiringan (m)",
+    "intercept": "Intersep (b)",
+    "rSquared": "R-Kuadrat",
+    "correlation": "Korelasi (r)",
+    "invalidData": "Silakan masukkan setidaknya 2 titik data yang valid",
+    "stepByStep": "Solusi Langkah demi Langkah"
+  },
+  "notFound": {
+    "title": "Halaman Tidak Ditemukan",
+    "description": "Halaman yang Anda cari tidak ada",
+    "backHome": "Kembali ke Beranda"
+  },
+  "sitemap": {
+    "title": "Peta Situs",
+    "description": "Jelajahi semua halaman di Kalkulator Persamaan Regresi"
+  }
+}

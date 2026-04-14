@@ -1,0 +1,17 @@
+{
+  "headerNav": [
+    { "label": "home", "href": "/" },
+    { "label": "aboutUs", "href": "/about-us/" },
+    { "label": "blog", "href": "/blog/" },
+    { "label": "contactUs", "href": "/contact-us/" }
+  ],
+  "footerNav": [
+    { "label": "home", "href": "/" },
+    { "label": "aboutUs", "href": "/about-us/" },
+    { "label": "blog", "href": "/blog/" },
+    { "label": "contactUs", "href": "/contact-us/" },
+    { "label": "terms", "href": "/terms/" },
+    { "label": "privacy", "href": "/privacy/" },
+    { "label": "sitemap", "href": "/sitemap/" }
+  ]
+}

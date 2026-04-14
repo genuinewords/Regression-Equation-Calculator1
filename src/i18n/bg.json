@@ -1,0 +1,121 @@
+{
+  "siteTitle": "Калкулатор за Регресионно Уравнение",
+  "siteDescription": "Безплатен онлайн калкулатор за регресионно уравнение. Изчислявайте линейни, полиномиални и множествени регресионни уравнения мигновено с решения стъпка по стъпка.",
+  "home": {
+    "title": "Калкулатор за Регресионно Уравнение",
+    "description": "Изчислявайте регресионни уравнения мигновено с нашия безплатен онлайн инструмент",
+    "intro": "Въведете вашите точки данни и получите регресионното уравнение, наклона, пресечката, стойността R-квадрат и изчисления стъпка по стъпка за секунди.",
+    "whatIsTitle": "What Is a Regression Equation?",
+    "whatIsText": "A regression equation models the relationship between variables, allowing you to predict outcomes based on input data. In its simplest form — simple linear regression — the equation is <strong>y = mx + b</strong>, where <strong>m</strong> is the slope and <strong>b</strong> is the y-intercept. This powerful statistical tool is used across science, business, and engineering to uncover trends, make forecasts, and quantify relationships between variables.",
+    "whyUseTitle": "Why Use Our Calculator?",
+    "whyUsePoints": [
+      "Instantly computes the regression equation from your data",
+      "Shows step-by-step calculations so you understand the math",
+      "Calculates R², correlation coefficient, slope, and intercept",
+      "No signup required — 100% free and runs in your browser",
+      "Your data stays private — nothing is sent to any server"
+    ],
+    "useCasesTitle": "Common Use Cases",
+    "useCasesPoints": [
+      "Predicting sales from advertising spend",
+      "Estimating house prices from square footage",
+      "Analyzing the impact of study hours on exam scores",
+      "Forecasting temperature changes over time",
+      "Evaluating the relationship between dosage and response"
+    ],
+    "faqTitle": "Frequently Asked Questions",
+    "howItWorksTitle": "Как работи Калкулаторът за Регресионно Уравнение",
+    "howItWorksStep1": "Въведете вашите x и y точки данни в таблицата по-долу",
+    "howItWorksStep2": "Натиснете Изчисли за изчисляване на регресионното уравнение",
+    "howItWorksStep3": "Вижте вашите резултати включително уравнението, наклона, пресечката и стойността R²",
+    "tableTitle": "Справочник за Регресионни Статистики",
+    "tableDescription": "Често срещани регресионни статистики и техните интерпретации",
+    "howItWorksStep1Title": "Enter Data",
+    "howItWorksStep2Title": "Calculate",
+    "howItWorksStep3Title": "View Results",
+    "tableStat": "Statistic",
+    "tableSymbol": "Symbol",
+    "tableInterpretation": "Interpretation",
+    "tableSlope": "Slope",
+    "tableSlopeSym": "m",
+    "tableSlopeInt": "Rate of change",
+    "tableIntercept": "Intercept",
+    "tableInterceptSym": "b",
+    "tableInterceptInt": "Value when x = 0",
+    "tableRSquared": "R-Squared",
+    "tableRSquaredSym": "R²",
+    "tableRSquaredInt": "Goodness of fit",
+    "tableCorrelation": "Correlation",
+    "tableCorrelationSym": "r",
+    "tableCorrelationInt": "Strength of relationship",
+    "tableStdError": "Standard Error",
+    "tableStdErrorSym": "SE",
+    "tableStdErrorInt": "Average distance from line",
+    "tablePValue": "P-value",
+    "tablePValueSym": "p",
+    "tablePValueInt": "Statistical significance"
+  },
+  "about": {
+    "title": "За Нас",
+    "description": "Научете за Калкулатора за Регресионно Уравнение",
+    "content": "Калкулаторът за Регресионно Уравнение е безплатен онлайн инструмент, проектиран да помага на студенти, изследователи и професионалисти да изчисляват регресионни уравнения бързо и точно. Нашият калкулатор поддържа линейна регресия и предоставя подробни решения стъпка по стъпка, за да ви помогне да разберете математическия процес зад резултатите. Независимо дали изучавате статистика, анализирате данни или работите върху изследвания, нашият инструмент прави регресионния анализ достъпен за всички."
+  },
+  "contact": {
+    "title": "Свържете се с Нас",
+    "description": "Свържете се с екипа на Калкулатора за Регресионно Уравнение",
+    "helperText": "Имате въпрос или обратна връзка? Ще се радваме да чуем от вас. Попълнете формуляра по-долу и ще се свържем с вас възможно най-скоро.",
+    "nameLabel": "Вашето Име",
+    "emailLabel": "Вашият Имейл",
+    "messageLabel": "Вашето Съобщение",
+    "sendButton": "Изпрати Съобщение",
+    "sending": "Изпращане...",
+    "success": "Съобщението е изпратено успешно!",
+    "apiError": "Нещо се обърка. Моля, опитайте отново.",
+    "networkError": "Мрежова грешка. Моля, проверете вашата връзка.",
+    "fallbackText": "Можете също да се свържете с нас директно на",
+    "fallbackEmail": "contact@regressionequationcalculator.com"
+  },
+  "terms": {
+    "title": "Условия за Ползване",
+    "description": "Условия и положения за използване на Калкулатора за Регресионно Уравнение",
+    "content": "Чрез достъпа и използването на уебсайта на Калкулатора за Регресионно Уравнение, вие се съгласявате да бъдете обвързани с тези условия. Нашият инструмент се предоставя за образователни и аналитични цели. Резултатите трябва да се проверяват за критични приложения. Запазваме си правото да променяме тези условия по всяко време. Използването на калкулатора е безплатно и не гарантираме точността на резултатите за професионални или търговски цели."
+  },
+  "privacy": {
+    "title": "Политика за Поверителност",
+    "description": "Как обработваме вашите данни в Калкулатора за Регресионно Уравнение",
+    "content": "Ценим вашата поверителност. Калкулаторът за Регресионно Уравнение не събира, съхранява или споделя никакви лични данни, въведени в калкулатора. Всички изчисления се извършват локално във вашия браузър. Може да използваме анализи, за да разберем моделей на използване на сайта, но не се събират никакви лични идентифициращи информации. Подаванията на формуляра за контакт се обработват сигурно и не се споделят с трети страни."
+  },
+  "blog": {
+    "title": "Блог",
+    "description": "Статии за регресионен анализ и статистика",
+    "readMore": "Прочетете Още",
+    "resultsMeta": "Показване {start}-{end} от {total} статии"
+  },
+  "calculator": {
+    "title": "Калкулатор за Регресионно Уравнение",
+    "description": "Въведете вашите точки данни за изчисляване на регресионното уравнение",
+    "enterData": "Въведете вашите точки данни",
+    "xLabel": "X Стойности",
+    "yLabel": "Y Стойности",
+    "addRow": "Добави Ред",
+    "calculate": "Изчисли",
+    "clear": "Изчисти",
+    "result": "Резултати",
+    "equation": "Регресионно Уравнение",
+    "slope": "Наклон (m)",
+    "intercept": "Пресечка (b)",
+    "rSquared": "R-Квадрат",
+    "correlation": "Корелация (r)",
+    "invalidData": "Моля, въведете поне 2 валидни точки данни",
+    "stepByStep": "Решение Стъпка по Стъпка"
+  },
+  "notFound": {
+    "title": "Страницата Не Е Намерена",
+    "description": "Страницата, която търсите, не съществува",
+    "backHome": "Обратно към Началото"
+  },
+  "sitemap": {
+    "title": "Карта на Сайта",
+    "description": "Разгледайте всички страници на Калкулатора за Регресионно Уравнение"
+  }
+}

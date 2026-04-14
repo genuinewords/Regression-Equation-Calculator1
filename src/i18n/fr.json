@@ -1,0 +1,121 @@
+{
+  "siteTitle": "Calculateur d'Équation de Régression",
+  "siteDescription": "Calculateur gratuit en ligne d'équation de régression. Calculez instantanément les équations de régression linéaire, polynomiale et multiple avec des solutions étape par étape.",
+  "home": {
+    "title": "Calculateur d'Équation de Régression",
+    "description": "Calculez instantanément les équations de régression avec notre outil gratuit en ligne",
+    "intro": "Entrez vos points de données et obtenez l'équation de régression, la pente, l'ordonnée à l'origine, la valeur R-carré et les calculs étape par étape en quelques secondes.",
+    "whatIsTitle": "What Is a Regression Equation?",
+    "whatIsText": "A regression equation models the relationship between variables, allowing you to predict outcomes based on input data. In its simplest form — simple linear regression — the equation is <strong>y = mx + b</strong>, where <strong>m</strong> is the slope and <strong>b</strong> is the y-intercept. This powerful statistical tool is used across science, business, and engineering to uncover trends, make forecasts, and quantify relationships between variables.",
+    "whyUseTitle": "Why Use Our Calculator?",
+    "whyUsePoints": [
+      "Instantly computes the regression equation from your data",
+      "Shows step-by-step calculations so you understand the math",
+      "Calculates R², correlation coefficient, slope, and intercept",
+      "No signup required — 100% free and runs in your browser",
+      "Your data stays private — nothing is sent to any server"
+    ],
+    "useCasesTitle": "Common Use Cases",
+    "useCasesPoints": [
+      "Predicting sales from advertising spend",
+      "Estimating house prices from square footage",
+      "Analyzing the impact of study hours on exam scores",
+      "Forecasting temperature changes over time",
+      "Evaluating the relationship between dosage and response"
+    ],
+    "faqTitle": "Frequently Asked Questions",
+    "howItWorksTitle": "Comment fonctionne le Calculateur d'Équation de Régression",
+    "howItWorksStep1": "Entrez vos points de données x et y dans le tableau ci-dessous",
+    "howItWorksStep2": "Cliquez sur Calculer pour calculer l'équation de régression",
+    "howItWorksStep3": "Consultez vos résultats incluant l'équation, la pente, l'ordonnée à l'origine et la valeur R²",
+    "tableTitle": "Référence des Statistiques de Régression",
+    "tableDescription": "Statistiques de régression courantes et leurs interprétations",
+    "howItWorksStep1Title": "Enter Data",
+    "howItWorksStep2Title": "Calculate",
+    "howItWorksStep3Title": "View Results",
+    "tableStat": "Statistic",
+    "tableSymbol": "Symbol",
+    "tableInterpretation": "Interpretation",
+    "tableSlope": "Slope",
+    "tableSlopeSym": "m",
+    "tableSlopeInt": "Rate of change",
+    "tableIntercept": "Intercept",
+    "tableInterceptSym": "b",
+    "tableInterceptInt": "Value when x = 0",
+    "tableRSquared": "R-Squared",
+    "tableRSquaredSym": "R²",
+    "tableRSquaredInt": "Goodness of fit",
+    "tableCorrelation": "Correlation",
+    "tableCorrelationSym": "r",
+    "tableCorrelationInt": "Strength of relationship",
+    "tableStdError": "Standard Error",
+    "tableStdErrorSym": "SE",
+    "tableStdErrorInt": "Average distance from line",
+    "tablePValue": "P-value",
+    "tablePValueSym": "p",
+    "tablePValueInt": "Statistical significance"
+  },
+  "about": {
+    "title": "À Propos",
+    "description": "Découvrez le Calculateur d'Équation de Régression",
+    "content": "Le Calculateur d'Équation de Régression est un outil gratuit en ligne conçu pour aider les étudiants, les chercheurs et les professionnels à calculer rapidement et avec précision des équations de régression. Notre calculateur prend en charge la régression linéaire et fournit des solutions détaillées étape par étape pour vous aider à comprendre le processus mathématique derrière les résultats. Que vous étudiiez les statistiques, analysiez des données ou travailliez sur une recherche, notre outil rend l'analyse de régression accessible à tous."
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "description": "Prenez contact avec l'équipe du Calculateur d'Équation de Régression",
+    "helperText": "Vous avez une question ou un commentaire ? Nous serions ravis de vous entendre. Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.",
+    "nameLabel": "Votre Nom",
+    "emailLabel": "Votre Email",
+    "messageLabel": "Votre Message",
+    "sendButton": "Envoyer le Message",
+    "sending": "Envoi en cours...",
+    "success": "Message envoyé avec succès !",
+    "apiError": "Une erreur s'est produite. Veuillez réessayer.",
+    "networkError": "Erreur réseau. Veuillez vérifier votre connexion.",
+    "fallbackText": "Vous pouvez également nous joindre directement à",
+    "fallbackEmail": "contact@regressionequationcalculator.com"
+  },
+  "terms": {
+    "title": "Conditions d'Utilisation",
+    "description": "Conditions générales d'utilisation du Calculateur d'Équation de Régression",
+    "content": "En accédant et en utilisant le site Web du Calculateur d'Équation de Régression, vous acceptez d'être lié par ces conditions. Notre outil est fourni à des fins éducatives et analytiques. Les résultats doivent être vérifiés pour les applications critiques. Nous nous réservons le droit de modifier ces conditions à tout moment. L'utilisation du calculateur est gratuite et nous ne garantissons pas l'exactitude des résultats à des fins professionnelles ou commerciales."
+  },
+  "privacy": {
+    "title": "Politique de Confidentialité",
+    "description": "Comment nous traitons vos données sur le Calculateur d'Équation de Régression",
+    "content": "Nous respectons votre vie privée. Le Calculateur d'Équation de Régression ne collecte, ne stocke ni ne partage aucune donnée personnelle saisie dans le calculateur. Tous les calculs sont effectués localement dans votre navigateur. Nous pouvons utiliser des analyses pour comprendre les modèles d'utilisation du site, mais aucune information personnellement identifiable n'est collectée. Les soumissions de formulaire de contact sont traitées de manière sécurisée et ne sont pas partagées avec des tiers."
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Articles sur l'analyse de régression et les statistiques",
+    "readMore": "Lire la Suite",
+    "resultsMeta": "Affichage de {start}-{end} sur {total} articles"
+  },
+  "calculator": {
+    "title": "Calculateur d'Équation de Régression",
+    "description": "Entrez vos points de données pour calculer l'équation de régression",
+    "enterData": "Entrez vos points de données",
+    "xLabel": "Valeurs X",
+    "yLabel": "Valeurs Y",
+    "addRow": "Ajouter une Ligne",
+    "calculate": "Calculer",
+    "clear": "Effacer",
+    "result": "Résultats",
+    "equation": "Équation de Régression",
+    "slope": "Pente (m)",
+    "intercept": "Ordonnée à l'Origine (b)",
+    "rSquared": "R-Carré",
+    "correlation": "Corrélation (r)",
+    "invalidData": "Veuillez entrer au moins 2 points de données valides",
+    "stepByStep": "Solution Étape par Étape"
+  },
+  "notFound": {
+    "title": "Page Non Trouvée",
+    "description": "La page que vous recherchez n'existe pas",
+    "backHome": "Retour à l'Accueil"
+  },
+  "sitemap": {
+    "title": "Plan du Site",
+    "description": "Explorez toutes les pages du Calculateur d'Équation de Régression"
+  }
+}

@@ -1,0 +1,40 @@
+---
+import BaseLayout from 'theme/layouts/BaseLayout.astro';
+import { mergeTranslations, getLocalizedUrl } from 'theme/i18n/utils';
+
+const locale = 'en';
+const translations = await mergeTranslations(locale);
+---
+
+<BaseLayout
+  title={translations.notFound.title}
+  description={translations.notFound.description}
+  locale={locale}
+>
+  <section class="py-24 md:py-36 flex items-center justify-center min-h-[60vh]">
+    <div class="text-center max-w-lg mx-auto">
+      <div class="mb-8">
+        <span class="text-8xl md:text-9xl font-extrabold bg-gradient-to-r from-primary-400 via-primary-600 to-accent-500 bg-clip-text text-transparent select-none">
+          404
+        </span>
+      </div>
+      <h1 class="text-3xl md:text-4xl font-extrabold text-surface-900">
+        {translations.notFound.title}
+      </h1>
+      <p class="mt-4 text-lg text-surface-500">
+        {translations.notFound.description}
+      </p>
+      <div class="mt-10">
+        <a
+          href={getLocalizedUrl('/', locale)}
+          class="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-primary-600 to-accent-600 px-8 py-3.5 text-white font-semibold shadow-lg shadow-primary-500/25 hover:shadow-xl hover:shadow-primary-500/30 hover:from-primary-700 hover:to-accent-700 transition-all duration-300"
+        >
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+          </svg>
+          {translations.notFound.backHome}
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
