@@ -128,6 +128,9 @@ export interface Translations {
 
 export interface NavLabels {
   home: string;
+  pearsonCorrelation: string;
+  grubbsTest: string;
+  assumptionsChecker: string;
   aboutUs: string;
   blog: string;
   contactUs: string;

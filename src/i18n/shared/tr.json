@@ -6,7 +6,10 @@
     "contactUs": "İletişim",
     "terms": "Koşullar",
     "privacy": "Gizlilik",
-    "sitemap": "Site Haritası"
+    "sitemap": "Site Haritası",
+    "pearsonCorrelation": "Pearson r Hesaplayıcı",
+    "grubbsTest": "Grubbs Testi",
+    "assumptionsChecker": "Varsayım Kontrolü"
   },
   "footer": {
     "description": "Öğrenciler, araştırmacılar ve profesyoneller için adım adım çözümlerle ücretsiz çevrimiçi regresyon denklemi hesaplayıcısı.",

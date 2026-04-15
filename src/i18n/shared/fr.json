@@ -6,7 +6,10 @@
     "contactUs": "Contactez-nous",
     "terms": "Conditions",
     "privacy": "Confidentialité",
-    "sitemap": "Plan du Site"
+    "sitemap": "Plan du Site",
+    "pearsonCorrelation": "Calculateur de Pearson r",
+    "grubbsTest": "Test de Grubbs",
+    "assumptionsChecker": "Vérificateur d'hypothèses"
   },
   "footer": {
     "description": "Calculateur gratuit en ligne d'équation de régression avec solutions étape par étape pour les étudiants, les chercheurs et les professionnels.",

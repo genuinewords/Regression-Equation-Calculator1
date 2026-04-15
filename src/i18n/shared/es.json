@@ -6,7 +6,10 @@
     "contactUs": "Contáctenos",
     "terms": "Términos",
     "privacy": "Privacidad",
-    "sitemap": "Mapa del Sitio"
+    "sitemap": "Mapa del Sitio",
+    "pearsonCorrelation": "Calculadora de Pearson r",
+    "grubbsTest": "Prueba de Grubbs",
+    "assumptionsChecker": "Verificador de supuestos"
   },
   "footer": {
     "description": "Calculadora gratuita en línea de ecuación de regresión con soluciones paso a paso para estudiantes, investigadores y profesionales.",

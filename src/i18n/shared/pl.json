@@ -6,7 +6,10 @@
     "contactUs": "Kontakt",
     "terms": "Warunki",
     "privacy": "Prywatność",
-    "sitemap": "Mapa Strony"
+    "sitemap": "Mapa Strony",
+    "pearsonCorrelation": "Kalkulator Pearsona r",
+    "grubbsTest": "Test Grubbsa",
+    "assumptionsChecker": "Sprawdzanie założeń"
   },
   "footer": {
     "description": "Darmowy kalkulator równania regresji online z rozwiązaniami krok po kroku dla studentów, badaczy i profesjonalistów.",

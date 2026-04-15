@@ -47,6 +47,7 @@ const faqTitle: string = (home as any).faqTitle ?? 'Frequently Asked Questions';
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   )}
 
+  <!-- Hero Section -->
   <section class="py-10 md:py-14">
     <div class="max-w-3xl mx-auto text-center">
       <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-primary-700 via-primary-600 to-accent-600 dark:from-primary-400 dark:via-primary-500 dark:to-accent-400 bg-clip-text text-transparent leading-tight">
@@ -58,20 +59,42 @@ const faqTitle: string = (home as any).faqTitle ?? 'Frequently Asked Questions';
     </div>
   </section>
 
+  <!-- Calculator Section -->
   <section class="py-8 md:py-12 bg-surface-50/60 dark:bg-surface-800/40 rounded-t-3xl -mt-2">
     <div class="max-w-4xl mx-auto">
       <Calculator locale={locale} translations={translations} />
     </div>
   </section>
 
+  <!-- What Is a Regression Equation? -->
   <section class="py-8 md:py-12">
-    <div class="content-box max-w-3xl mx-auto rounded-2xl border border-surface-200/60 dark:border-surface-700/40 bg-white/60 dark:bg-surface-800/40 backdrop-blur-sm p-6 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-primary-500/0 before:to-accent-500/0 hover:before:from-primary-500/5 hover:before:to-accent-500/5 dark:hover:before:from-primary-400/8 dark:hover:before:to-accent-400/8 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-surface-950/40 hover:-translate-y-1 hover:border-primary-200 dark:hover:border-primary-700/50 transition-all duration-300">
-      <h2 class="text-2xl font-bold text-surface-900 dark:text-surface-50 mb-4">{whatIsTitle}</h2>
-      <div class="prose prose-surface max-w-none text-surface-600 dark:text-surface-400 leading-relaxed" set:html={whatIsText} />
+    <div class="content-box max-w-4xl mx-auto rounded-2xl border border-surface-200/60 dark:border-surface-700/40 bg-white/60 dark:bg-surface-800/40 backdrop-blur-sm p-6 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-primary-500/0 before:to-accent-500/0 hover:before:from-primary-500/5 hover:before:to-accent-500/5 dark:hover:before:from-primary-400/8 dark:hover:before:to-accent-400/8 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-surface-950/40 hover:-translate-y-1 hover:border-primary-200 dark:hover:border-primary-700/50 transition-all duration-300">
+      <div class="flex flex-col md:flex-row gap-6 items-center">
+        <div class="flex-1">
+          <h2 class="text-2xl font-bold text-surface-900 dark:text-surface-50 mb-4">{whatIsTitle}</h2>
+          <div class="prose prose-surface max-w-none text-surface-600 dark:text-surface-400 leading-relaxed" set:html={whatIsText} />
+        </div>
+        <div class="w-full md:w-2/5 flex-shrink-0">
+          <div class="interactive-img-wrapper reveal-on-scroll" data-tilt>
+            <div class="interactive-img-glow"></div>
+            <img
+              src="/images/what-is-regression.png"
+              alt="Visual explanation of y = mx + b showing slope and intercept on a coordinate plane"
+              class="interactive-img rounded-xl"
+              loading="lazy"
+              width="400"
+              height="225"
+            />
+            <div class="interactive-img-shine"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- Why Use / Use Cases -->
   <section class="py-8 md:py-12 bg-surface-50/40 dark:bg-surface-900/40 rounded-t-3xl -mt-2">
+
     <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
       <div class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-6 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-primary-500/0 before:to-primary-500/0 hover:before:from-primary-500/5 hover:before:to-primary-500/8 dark:hover:before:from-primary-400/8 dark:hover:before:to-primary-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-primary-900/10 hover:-translate-y-1 hover:border-primary-300 dark:hover:border-primary-700/50 transition-all duration-300">
         <h2 class="text-xl font-bold text-surface-900 dark:text-surface-50 mb-4">{whyUseTitle}</h2>
@@ -102,14 +125,19 @@ const faqTitle: string = (home as any).faqTitle ?? 'Frequently Asked Questions';
     </div>
   </section>
 
+  <!-- How It Works -->
   <section class="py-8 md:py-10">
+
     <HowItWorks translations={translations} />
   </section>
 
+  <!-- Statistics Reference Table -->
   <section class="py-8 md:py-10 bg-surface-50/40 dark:bg-surface-900/40 rounded-t-3xl -mt-2">
+
     <ChartTable translations={translations} />
   </section>
 
+  <!-- FAQ -->
   <section class="py-8 md:py-12">
     <div class="max-w-3xl mx-auto">
       <h2 class="text-2xl font-bold text-surface-900 dark:text-surface-50 text-center mb-6">{faqTitle}</h2>
@@ -117,3 +145,89 @@ const faqTitle: string = (home as any).faqTitle ?? 'Frequently Asked Questions';
     {displayFaqs.length > 0 && <FAQ translations={translations} />}
   </section>
 </BaseLayout>
+
+<script>
+  // ── Reveal on Scroll (IntersectionObserver) ──
+  const revealElements = document.querySelectorAll('.reveal-on-scroll');
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+  );
+  revealElements.forEach((el) => revealObserver.observe(el));
+
+  // ── Interactive 3D Tilt Effect ──
+  const tiltElements = document.querySelectorAll<HTMLElement>('[data-tilt]');
+  tiltElements.forEach((el) => {
+    const img = el.querySelector<HTMLElement>('.interactive-img');
+    const glow = el.querySelector<HTMLElement>('.interactive-img-glow');
+    const shine = el.querySelector<HTMLElement>('.interactive-img-shine');
+
+    el.addEventListener('mousemove', (e: MouseEvent) => {
+      const rect = el.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = ((y - centerY) / centerY) * -8;
+      const rotateY = ((x - centerX) / centerX) * 8;
+      const percentX = (x / rect.width) * 100;
+      const percentY = (y / rect.height) * 100;
+
+      if (img) {
+        img.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
+      }
+      if (glow) {
+        glow.style.opacity = '1';
+        glow.style.background = `radial-gradient(circle at ${percentX}% ${percentY}%, rgba(99, 102, 241, 0.25), transparent 60%)`;
+      }
+      if (shine) {
+        shine.style.opacity = '1';
+        shine.style.background = `linear-gradient(${105 + rotateY * 3}deg, transparent 30%, rgba(255,255,255,0.12) 50%, transparent 70%)`;
+      }
+    });
+
+    el.addEventListener('mouseleave', () => {
+      if (img) {
+        img.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+      }
+      if (glow) {
+        glow.style.opacity = '0';
+      }
+      if (shine) {
+        shine.style.opacity = '0';
+      }
+    });
+  });
+
+  // ── Parallax on Scroll ──
+  const parallaxImages = document.querySelectorAll<HTMLElement>('.interactive-img');
+  let ticking = false;
+  const onScroll = () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        parallaxImages.forEach((img) => {
+          const rect = img.getBoundingClientRect();
+          const viewH = window.innerHeight;
+          if (rect.top < viewH && rect.bottom > 0) {
+            const progress = (viewH - rect.top) / (viewH + rect.height);
+            const offset = (progress - 0.5) * 20;
+            // Only apply parallax if not being tilt-hovered
+            if (!img.style.transform.includes('rotateX')) {
+              img.style.transform = `translateY(${offset}px)`;
+            }
+          }
+        });
+        ticking = false;
+      });
+      ticking = true;
+    }
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+</script>

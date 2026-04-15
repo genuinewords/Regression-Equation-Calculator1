@@ -6,7 +6,10 @@
     "contactUs": "Kontakta Oss",
     "terms": "Villkor",
     "privacy": "Integritet",
-    "sitemap": "Webbplatskarta"
+    "sitemap": "Webbplatskarta",
+    "pearsonCorrelation": "Pearson r-beräkning",
+    "grubbsTest": "Grubbs test",
+    "assumptionsChecker": "Antagandekontroll"
   },
   "footer": {
     "description": "Gratis online regressionsekvationskalkylator med steg-för-steg-lösningar för studenter, forskare och professionella.",

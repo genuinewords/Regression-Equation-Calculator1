@@ -6,7 +6,10 @@
     "contactUs": "Hubungi Kami",
     "terms": "Ketentuan",
     "privacy": "Privasi",
-    "sitemap": "Peta Situs"
+    "sitemap": "Peta Situs",
+    "pearsonCorrelation": "Kalkulator Pearson r",
+    "grubbsTest": "Uji Grubbs",
+    "assumptionsChecker": "Pemeriksa asumsi"
   },
   "footer": {
     "description": "Kalkulator persamaan regresi online gratis dengan solusi langkah demi langkah untuk pelajar, peneliti, dan profesional.",

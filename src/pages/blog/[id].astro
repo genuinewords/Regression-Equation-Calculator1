@@ -128,11 +128,11 @@ const breadcrumbSchema = {
     <div class="mt-12 max-w-3xl mx-auto prose prose-surface prose-lg
       prose-headings:text-surface-900 dark:prose-headings:text-surface-50
       prose-headings:font-extrabold
-      prose-h2:mt-14 prose-h2:mb-5 prose-h2:text-2xl
+      prose-h2:mt-14 prose-h2:mb-5 prose-h2:text-2xl prose-h2:text-center
       prose-h3:mt-10 prose-h3:mb-4 prose-h3:text-xl
       prose-h4:mt-8 prose-h4:mb-3
       prose-p:text-surface-600 dark:prose-p:text-surface-400
-      prose-p:leading-[1.85] prose-p:my-5
+      prose-p:leading-[2] prose-p:my-5
       prose-a:text-primary-600 dark:prose-a:text-primary-400
       prose-a:font-semibold prose-a:no-underline
       prose-a:bg-primary-50 dark:prose-a:bg-primary-900/20
@@ -156,5 +156,26 @@ const breadcrumbSchema = {
     ">
       <Content />
     </div>
-  </article>
+   </article>
+
+  <script>
+    document.querySelectorAll('.prose img').forEach((img) => {
+      img.addEventListener('click', () => {
+        const overlay = document.createElement('div');
+        overlay.className = 'img-lightbox';
+        const clone = document.createElement('img');
+        clone.src = img.src;
+        clone.alt = img.alt || '';
+        overlay.appendChild(clone);
+        overlay.addEventListener('click', () => overlay.remove());
+        document.addEventListener('keydown', function handler(e) {
+          if (e.key === 'Escape') {
+            overlay.remove();
+            document.removeEventListener('keydown', handler);
+          }
+        });
+        document.body.appendChild(overlay);
+      });
+    });
+  </script>
 </BaseLayout>

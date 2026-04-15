@@ -6,7 +6,10 @@
     "contactUs": "Hubungi Kami",
     "terms": "Terma",
     "privacy": "Privasi",
-    "sitemap": "Peta Laman"
+    "sitemap": "Peta Laman",
+    "pearsonCorrelation": "Kalkulator Pearson r",
+    "grubbsTest": "Ujian Grubbs",
+    "assumptionsChecker": "Pemeriksa anggapan"
   },
   "footer": {
     "description": "Kalkulator persamaan regresi dalam talian percuma dengan penyelesaian langkah demi langkah untuk pelajar, penyelidik dan profesional.",

@@ -6,7 +6,10 @@
     "contactUs": "お問い合わせ",
     "terms": "利用規約",
     "privacy": "プライバシー",
-    "sitemap": "サイトマップ"
+    "sitemap": "サイトマップ",
+    "pearsonCorrelation": "ピアソンのr計算機",
+    "grubbsTest": "グラブス検定",
+    "assumptionsChecker": "前提チェック"
   },
   "footer": {
     "description": "学生、研究者、専門家のためのステップバイステップ解法付き無料オンライン回帰方程式計算機。",

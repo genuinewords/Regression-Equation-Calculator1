@@ -6,7 +6,10 @@
     "contactUs": "Kontakt",
     "terms": "Bedingungen",
     "privacy": "Datenschutz",
-    "sitemap": "Seitenübersicht"
+    "sitemap": "Seitenübersicht",
+    "pearsonCorrelation": "Pearson-r-Rechner",
+    "grubbsTest": "Grubbs-Test",
+    "assumptionsChecker": "Annahmenprüfung"
   },
   "footer": {
     "description": "Kostenloser Online-Regressionsgleichungsrechner mit Schritt-für-Schritt-Lösungen für Studenten, Forscher und Fachleute.",

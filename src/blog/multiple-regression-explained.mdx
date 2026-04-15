@@ -8,6 +8,7 @@ category: "Statistics"
 ---
 
 import MultiRegDemo from '../../theme/components/MultiRegDemo.astro';
+import InteractiveImage from '../../theme/components/InteractiveImage.astro';
 
 Imagine you're trying to predict house prices. Square footage alone gives you a rough estimate — but what about the number of bedrooms, the age of the property, the quality of local schools, or the neighborhood crime rate? When a single independent variable cannot adequately explain the variation in your dependent variable, **multiple regression analysis** comes into play.
 
@@ -29,7 +30,7 @@ This "holding constant" property is what makes multiple regression so valuable. 
 
 A common mistake is running separate simple regressions for each predictor and comparing the results. This approach fails because it ignores the **correlation between predictors**. For example, education level and years of experience are both correlated with salary, and they're also correlated with each other. Simple regression can't untangle these overlapping effects — multiple regression can.
 
-![3D visualization of multiple regression with multiple predictors](/blog/multiple-regression-3d.svg)
+<InteractiveImage src="/blog/multiple-regression-3d.png" alt="3D visualization of multiple regression with multiple predictors" />
 
 ---
 
@@ -104,7 +105,7 @@ Where **n** is the sample size and **k** is the number of predictors.
 
 Before you can trust the results of a multiple regression analysis, you must verify that the data meets five critical assumptions. Violating any of them can lead to unreliable coefficients, misleading p-values, and inaccurate predictions.
 
-![The five assumptions of multiple regression analysis](/blog/regression-assumptions.svg)
+<InteractiveImage src="/blog/regression-assumptions.svg" alt="The five assumptions of multiple regression analysis" />
 
 ### 1. Linearity
 
@@ -150,7 +151,7 @@ Predictors should not be too highly correlated with each other. When two or more
 
 ## Step-by-Step: Building a Multiple Regression Model
 
-![Step-by-step process for building a multiple regression model](/blog/regression-steps.svg)
+<InteractiveImage src="/blog/regression-steps.svg" alt="Step-by-step process for building a multiple regression model" />
 
 Building a reliable multiple regression model requires a systematic approach. Here's a practical step-by-step process you can follow:
 
@@ -196,7 +197,7 @@ A model that looks great on training data may perform poorly on new data. Always
 
 ## Real-World Applications of Multiple Regression
 
-![Real-world applications of multiple regression analysis](/blog/regression-applications.svg)
+<InteractiveImage src="/blog/regression-applications.svg" alt="Real-world applications of multiple regression analysis" />
 
 Multiple regression is used across virtually every field that deals with data. Here are some of the most common applications:
 

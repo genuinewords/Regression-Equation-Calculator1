@@ -1,0 +1,374 @@
+---
+import type { MergedTranslations } from 'theme/i18n/types';
+
+interface Props {
+  translations: MergedTranslations;
+}
+
+const { translations } = Astro.props;
+const gt = (translations as any).grubbs;
+---
+
+<section class="py-8" id="grubbs-calculator" data-invalid-data={gt?.invalidData || 'Please enter at least 3 valid data points'}>
+  <div class="mx-auto max-w-3xl">
+    <div class="rounded-2xl shadow-lg dark:shadow-surface-950/40 shadow-primary-900/5 border border-surface-200/80 dark:border-surface-700/60 overflow-hidden bg-white dark:bg-surface-800/80 backdrop-blur-sm transition-colors duration-300">
+      <div class="bg-gradient-to-r from-primary-600 to-accent-600 px-6 py-5">
+        <h2 class="text-xl font-bold text-white">{gt?.title || "Grubbs' Test Calculator"}</h2>
+        <p class="text-primary-100 text-sm mt-1">{gt?.description || "Detect outliers in your dataset using Grubbs' test"}</p>
+      </div>
+
+      <div class="p-6 bg-surface-50/50 dark:bg-surface-800/50">
+        <div class="mb-4">
+          <h3 class="text-sm font-semibold text-surface-700 dark:text-surface-300 mb-3">{gt?.enterData || 'Enter your data points'}</h3>
+          <div class="overflow-x-auto rounded-lg border border-surface-200 dark:border-surface-600">
+            <table class="w-full" id="grubbs-data-table">
+              <thead>
+                <tr class="bg-surface-100 dark:bg-surface-700/50 border-b border-surface-200 dark:border-surface-600">
+                  <th class="px-3 py-2 text-left text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider w-12">#</th>
+                  <th class="px-3 py-2 text-left text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider">{gt?.valueLabel || 'Value'}</th>
+                  <th class="px-3 py-2 w-10"></th>
+                </tr>
+              </thead>
+              <tbody id="grubbs-data-rows">
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <label class="text-sm font-semibold text-surface-700 dark:text-surface-300 mb-2 block">{gt?.significanceLevel || 'Significance Level (α)'}</label>
+          <div class="flex gap-3">
+            <label class="flex items-center gap-2 px-4 py-2 rounded-lg border border-surface-200 dark:border-surface-600 bg-white dark:bg-surface-700 cursor-pointer transition-all duration-200 hover:border-primary-300 dark:hover:border-primary-700 has-[:checked]:border-primary-500 has-[:checked]:bg-primary-50 dark:has-[:checked]:bg-primary-900/30 has-[:checked]:ring-2 has-[:checked]:ring-primary-500/20">
+              <input type="radio" name="alpha" value="0.05" checked class="accent-primary-600" />
+              <span class="text-sm font-medium text-surface-700 dark:text-surface-300">0.05</span>
+            </label>
+            <label class="flex items-center gap-2 px-4 py-2 rounded-lg border border-surface-200 dark:border-surface-600 bg-white dark:bg-surface-700 cursor-pointer transition-all duration-200 hover:border-primary-300 dark:hover:border-primary-700 has-[:checked]:border-primary-500 has-[:checked]:bg-primary-50 dark:has-[:checked]:bg-primary-900/30 has-[:checked]:ring-2 has-[:checked]:ring-primary-500/20">
+              <input type="radio" name="alpha" value="0.01" class="accent-primary-600" />
+              <span class="text-sm font-medium text-surface-700 dark:text-surface-300">0.01</span>
+            </label>
+            <label class="flex items-center gap-2 px-4 py-2 rounded-lg border border-surface-200 dark:border-surface-600 bg-white dark:bg-surface-700 cursor-pointer transition-all duration-200 hover:border-primary-300 dark:hover:border-primary-700 has-[:checked]:border-primary-500 has-[:checked]:bg-primary-50 dark:has-[:checked]:bg-primary-900/30 has-[:checked]:ring-2 has-[:checked]:ring-primary-500/20">
+              <input type="radio" name="alpha" value="0.10" class="accent-primary-600" />
+              <span class="text-sm font-medium text-surface-700 dark:text-surface-300">0.10</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-3 mb-6">
+          <button
+            id="grubbs-add-row-btn"
+            type="button"
+            class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/25 border border-primary-200 dark:border-primary-800/50 rounded-lg transition-all duration-200 hover:bg-primary-100 dark:hover:bg-primary-900/40 hover:border-primary-300 dark:hover:border-primary-700 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-primary-500/30"
+          >
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" /></svg>
+            {gt?.addRow || 'Add Row'}
+          </button>
+          <button
+            id="grubbs-calculate-btn"
+            type="button"
+            class="inline-flex items-center gap-1.5 px-6 py-2 text-sm font-semibold text-white bg-gradient-to-r from-primary-600 to-accent-600 rounded-lg shadow-md shadow-primary-600/20 dark:shadow-primary-900/40 transition-all duration-200 hover:shadow-lg hover:shadow-primary-600/30 dark:hover:shadow-primary-900/50 hover:brightness-110 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-primary-500/30"
+          >
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+            {gt?.calculate || 'Calculate'}
+          </button>
+          <button
+            id="grubbs-clear-btn"
+            type="button"
+            class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-surface-600 dark:text-surface-400 bg-surface-100 dark:bg-surface-700 border border-surface-200 dark:border-surface-600 rounded-lg transition-all duration-200 hover:bg-surface-200 dark:hover:bg-surface-600 hover:border-surface-300 dark:hover:border-surface-500 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-surface-400/30"
+          >
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
+            {gt?.clear || 'Clear'}
+          </button>
+        </div>
+
+        <div id="grubbs-error-msg" class="hidden mb-4 p-3 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800/50 text-red-700 dark:text-red-400 text-sm"></div>
+
+        <div id="grubbs-results-section" class="hidden animate-[fadeIn_0.3s_ease-out]">
+          <div class="mb-6">
+            <h3 class="text-lg font-bold text-surface-800 dark:text-surface-200 mb-4">{gt?.result || 'Results'}</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="p-4 rounded-xl bg-gradient-to-br from-primary-50 dark:from-primary-900/30 to-accent-50 dark:to-accent-900/30 border border-primary-100 dark:border-primary-800/40 hover:shadow-md dark:hover:shadow-primary-900/20 transition-all duration-200 hover:scale-[1.01] sm:col-span-2">
+                <p class="text-xs font-semibold text-primary-500 dark:text-primary-400 uppercase tracking-wider mb-1">{gt?.testResult || 'Test Result'}</p>
+                <p id="grubbs-result-verdict" class="text-lg font-bold font-mono"></p>
+              </div>
+              <div class="p-4 rounded-xl bg-gradient-to-br from-accent-50 dark:from-accent-900/30 to-primary-50 dark:to-primary-900/30 border border-accent-100 dark:border-accent-800/40 hover:shadow-md dark:hover:shadow-accent-900/20 transition-all duration-200 hover:scale-[1.01]">
+                <p class="text-xs font-semibold text-accent-500 dark:text-accent-400 uppercase tracking-wider mb-1">{gt?.gStatistic || 'G Statistic'}</p>
+                <p id="grubbs-result-g" class="text-lg font-bold text-accent-800 dark:text-accent-200 font-mono"></p>
+              </div>
+              <div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 hover:shadow-md dark:hover:shadow-surface-950/30 transition-all duration-200 hover:scale-[1.01]">
+                <p class="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider mb-1">{gt?.criticalValue || 'Critical Value'}</p>
+                <p id="grubbs-result-critical" class="text-lg font-bold text-surface-800 dark:text-surface-200 font-mono"></p>
+              </div>
+              <div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 hover:shadow-md dark:hover:shadow-surface-950/30 transition-all duration-200 hover:scale-[1.01]">
+                <p class="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider mb-1">{gt?.suspectedOutlier || 'Suspected Outlier'}</p>
+                <p id="grubbs-result-outlier" class="text-lg font-bold text-surface-800 dark:text-surface-200 font-mono"></p>
+              </div>
+              <div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 hover:shadow-md dark:hover:shadow-surface-950/30 transition-all duration-200 hover:scale-[1.01]">
+                <p class="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider mb-1">{gt?.mean || 'Mean (x̄)'}</p>
+                <p id="grubbs-result-mean" class="text-lg font-bold text-surface-800 dark:text-surface-200 font-mono"></p>
+              </div>
+              <div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 hover:shadow-md dark:hover:shadow-surface-950/30 transition-all duration-200 hover:scale-[1.01]">
+                <p class="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider mb-1">{gt?.stdDev || 'Std. Deviation (s)'}</p>
+                <p id="grubbs-result-stddev" class="text-lg font-bold text-surface-800 dark:text-surface-200 font-mono"></p>
+              </div>
+              <div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 hover:shadow-md dark:hover:shadow-surface-950/30 transition-all duration-200 hover:scale-[1.01]">
+                <p class="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider mb-1">{gt?.pValue || 'P-value (approx.)'}</p>
+                <p id="grubbs-result-pvalue" class="text-lg font-bold text-surface-800 dark:text-surface-200 font-mono"></p>
+              </div>
+              <div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 hover:shadow-md dark:hover:shadow-surface-950/30 transition-all duration-200 hover:scale-[1.01]">
+                <p class="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider mb-1">{gt?.nPoints || 'Data Points (n)'}</p>
+                <p id="grubbs-result-n" class="text-lg font-bold text-surface-800 dark:text-surface-200 font-mono"></p>
+              </div>
+            </div>
+          </div>
+
+          <details class="group">
+            <summary class="flex items-center gap-2 cursor-pointer text-sm font-semibold text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors select-none">
+              <svg class="w-4 h-4 transition-transform duration-200 group-open:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+              {gt?.stepByStep || 'Step-by-Step Solution'}
+            </summary>
+            <div id="grubbs-steps-content" class="mt-4 p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 text-sm text-surface-700 dark:text-surface-300 space-y-3 font-mono leading-relaxed"></div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('#grubbs-calculator').forEach((calcEl) => {
+    const tbody = calcEl.querySelector('#grubbs-data-rows');
+    const addBtn = calcEl.querySelector('#grubbs-add-row-btn');
+    const calcBtn = calcEl.querySelector('#grubbs-calculate-btn');
+    const clearBtn = calcEl.querySelector('#grubbs-clear-btn');
+    const errorEl = calcEl.querySelector('#grubbs-error-msg');
+    const resultsSection = calcEl.querySelector('#grubbs-results-section');
+    const invalidData = calcEl.getAttribute('data-invalid-data') || 'Please enter at least 3 valid data points';
+    let rowCounter = 0;
+
+    function createRow(val = '') {
+      rowCounter++;
+      const tr = document.createElement('tr');
+      tr.className = 'border-b border-surface-200 dark:border-surface-600 transition-colors duration-150 hover:bg-primary-50/30 dark:hover:bg-primary-900/10';
+      tr.innerHTML = `
+        <td class="px-3 py-2 text-xs text-surface-400 dark:text-surface-500 font-mono">${rowCounter}</td>
+        <td class="px-3 py-2"><input type="number" step="any" class="data-val w-full px-3 py-1.5 text-sm rounded-lg border border-surface-200 dark:border-surface-600 bg-white dark:bg-surface-700 dark:text-surface-200 dark:placeholder-surface-500 focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-300 dark:focus:border-primary-600 transition-all duration-150 hover:border-primary-300 dark:hover:border-primary-700" placeholder="Value" value="${val}" /></td>
+        <td class="px-3 py-2"><button type="button" class="remove-row text-surface-300 dark:text-surface-600 hover:text-red-500 dark:hover:text-red-400 transition-colors duration-150" aria-label="Remove row"><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button></td>
+      `;
+      tr.querySelector('.remove-row')?.addEventListener('click', () => {
+        tr.style.opacity = '0';
+        tr.style.transform = 'translateX(10px)';
+        tr.style.transition = 'all 0.15s ease';
+        setTimeout(() => { tr.remove(); renumberRows(); }, 150);
+      });
+      tbody?.appendChild(tr);
+    }
+
+    function renumberRows() {
+      const rows = tbody?.querySelectorAll('tr') ?? [];
+      rows.forEach((row, i) => {
+        row.querySelector('td')!.textContent = String(i + 1);
+      });
+      rowCounter = rows.length;
+    }
+
+    function getData() {
+      const rows = tbody?.querySelectorAll('tr') ?? [];
+      const values = [];
+      for (const row of rows) {
+        const input = row.querySelector('.data-val');
+        const v = parseFloat(input?.value ?? '');
+        if (!isNaN(v)) values.push(v);
+      }
+      return values;
+    }
+
+    function getAlpha() {
+      const checked = calcEl.querySelector('input[name="alpha"]:checked') as HTMLInputElement | null;
+      return checked ? parseFloat(checked.value) : 0.05;
+    }
+
+    function showError(msg) {
+      if (errorEl) { errorEl.textContent = msg; errorEl.classList.remove('hidden'); }
+      if (resultsSection) resultsSection.classList.add('hidden');
+    }
+
+    function hideError() {
+      if (errorEl) errorEl.classList.add('hidden');
+    }
+
+    function tInv(p, df) {
+      const a = p < 0.5 ? p : 1 - p;
+      const g = Math.log(Math.min(a, 1 - a));
+      const c0 = 2.515517, c1 = 0.802853, c2 = 0.010328;
+      const d1 = 1.432788, d2 = 0.1892659, d3 = 0.001308;
+      let t;
+      if (g > -7.6) {
+        t = Math.max(0.001, 1 - a);
+        for (let i = 0; i < 50; i++) {
+          const bt = betaIncomplete(0.5 * df, 0.5, df / (df + t * t));
+          const diff = bt - t;
+          if (Math.abs(diff) < 1e-10) break;
+          t -= diff;
+        }
+        return p < 0.5 ? -t : t;
+      }
+      const sign = p < 0.5 ? -1 : 1;
+      return sign * Math.sqrt(-g * (1 + (c0 + c1 * Math.sqrt(-g) + c2 * g) / (1 + d1 * Math.sqrt(-g) + d2 * g + d3 * Math.sqrt(-g) * Math.sqrt(-g))));
+    }
+
+    function betaIncomplete(a, b, x) {
+      if (x <= 0) return 0;
+      if (x >= 1) return 1;
+      const lnBeta = lnGamma(a) + lnGamma(b) - lnGamma(a + b);
+      const prefix = Math.exp(Math.log(x) * a + Math.log(1 - x) * b - lnBeta);
+      if (x < (a + 1) / (a + b + 2)) {
+        return prefix * cfBeta(a, b, x) / a;
+      }
+      return 1 - prefix * cfBeta(b, a, 1 - x) / b;
+    }
+
+    function cfBeta(a, b, x) {
+      let am = 1, bm = 1, ax = 1;
+      let qab = a + b, qap = a + 1, qam = a - 1;
+      let bz = 1 - qab * x / qap;
+      for (let m = 1; m <= 200; m++) {
+        let em = m, tem = em + em;
+        let d = em * (b - m) * x / ((qam + tem) * (a + tem));
+        let ap = am + ax * d;
+        let bp = bm + bz * d;
+        d = -(a + em) * (qab + em) * x / ((a + tem) * (qap + tem));
+        let app = ap + ax * d;
+        let bpp = bp + bz * d;
+        let aold = ax;
+        ax = app * bpp;
+        am = ap / bpp;
+        bm = bp / bpp;
+        bz = 1;
+        if (Math.abs(ax - aold) < 1e-10 * Math.abs(ax)) break;
+      }
+      return ax;
+    }
+
+    function lnGamma(z) {
+      const c = [76.18009172947146, -86.50532032941677, 24.01409824083091, -1.231739572450155, 0.1208650973866179e-2, -0.5395239384953e-5];
+      let x = z, y = z, tmp = 1.000000000190015;
+      for (let j = 0; j < 6; j++) tmp += c[j] / ++y;
+      return Math.log(2.5066282746310005 * tmp / x) + (--x) * Math.log(x) - x;
+    }
+
+    function grubbsCriticalValue(n, alpha) {
+      if (n < 3) return Infinity;
+      const t = tInv(alpha / (2 * n), n - 2);
+      return ((n - 1) * Math.abs(t)) / Math.sqrt(n * (n - 2 + t * t));
+    }
+
+    function approxPValue(g, n) {
+      if (n < 3) return 1;
+      const t = g * Math.sqrt((n - 2) / (n - 1 - g * g));
+      const df = n - 2;
+      const p = 2 * (1 - betaIncomplete(0.5 * df, 0.5, df / (df + t * t)));
+      return Math.min(1, Math.max(0, p * n / 2));
+    }
+
+    function computeGrubbs(values) {
+      const n = values.length;
+      if (n < 3) {
+        showError(invalidData);
+        return null;
+      }
+
+      const mean = values.reduce((s, v) => s + v, 0) / n;
+      const variance = values.reduce((s, v) => s + (v - mean) ** 2, 0) / (n - 1);
+      const s = Math.sqrt(variance);
+
+      if (s === 0) {
+        showError(invalidData);
+        return null;
+      }
+
+      let maxDev = 0, outlier = values[0], outlierIndex = 0;
+      values.forEach((v, i) => {
+        const dev = Math.abs(v - mean);
+        if (dev > maxDev) {
+          maxDev = dev;
+          outlier = v;
+          outlierIndex = i;
+        }
+      });
+
+      const G = maxDev / s;
+      const alpha = getAlpha();
+      const critical = grubbsCriticalValue(n, alpha);
+      const pValue = approxPValue(G, n);
+      const isOutlier = G > critical;
+
+      const steps = [
+        `<strong>Step 1:</strong> Calculate mean → x̄ = Σxᵢ / n = ${values.reduce((s, v) => s + v, 0).toFixed(4)} / ${n} = ${mean.toFixed(4)}`,
+        `<strong>Step 2:</strong> Calculate standard deviation → s = √[Σ(xᵢ - x̄)² / (n-1)]`,
+        ...values.map((v, i) => `&nbsp;&nbsp;Value ${i + 1}: (x${i + 1} - x̄)² = (${v.toFixed(4)} - ${mean.toFixed(4)})² = ${((v - mean) ** 2).toFixed(4)}`),
+        `&nbsp;&nbsp;Σ(xᵢ - x̄)² = ${values.reduce((s, v) => s + (v - mean) ** 2, 0).toFixed(4)}`,
+        `&nbsp;&nbsp;s = √[${values.reduce((s, v) => s + (v - mean) ** 2, 0).toFixed(4)} / ${n - 1}] = ${s.toFixed(4)}`,
+        `<strong>Step 3:</strong> Find the most extreme value → |x${outlierIndex + 1} - x̄| = |${outlier.toFixed(4)} - ${mean.toFixed(4)}| = ${maxDev.toFixed(4)}`,
+        `<strong>Step 4:</strong> Calculate G statistic → G = max|xᵢ - x̄| / s = ${maxDev.toFixed(4)} / ${s.toFixed(4)} = <strong>${G.toFixed(4)}</strong>`,
+        `<strong>Step 5:</strong> Find critical value at α = ${alpha} → G_crit = ${critical.toFixed(4)}`,
+        `<strong>Step 6:</strong> Compare → G (${G.toFixed(4)}) ${isOutlier ? '>' : '≤'} G_crit (${critical.toFixed(4)})`,
+        `<strong>Step 7:</strong> Approximate p-value → ${pValue.toFixed(4)}`,
+        `<strong>Conclusion:</strong> ${isOutlier ? `The value ${outlier.toFixed(4)} IS an outlier (reject H₀ at α = ${alpha})` : `The value ${outlier.toFixed(4)} is NOT an outlier (fail to reject H₀ at α = ${alpha})`}`,
+      ];
+
+      return { G, critical, outlier, outlierIndex, mean, s, n, alpha, pValue, isOutlier, steps };
+    }
+
+    addBtn?.addEventListener('click', () => createRow());
+    for (let i = 0; i < 7; i++) createRow();
+
+    calcBtn?.addEventListener('click', () => {
+      hideError();
+      const values = getData();
+      const result = computeGrubbs(values);
+      if (!result) return;
+
+      const verdictEl = calcEl.querySelector('#grubbs-result-verdict')!;
+      if (result.isOutlier) {
+        verdictEl.textContent = `Outlier detected: ${result.outlier.toFixed(4)}`;
+        verdictEl.className = 'text-lg font-bold text-red-600 dark:text-red-400 font-mono';
+      } else {
+        verdictEl.textContent = `No outlier detected at α = ${result.alpha}`;
+        verdictEl.className = 'text-lg font-bold text-green-600 dark:text-green-400 font-mono';
+      }
+
+      calcEl.querySelector('#grubbs-result-g')!.textContent = result.G.toFixed(4);
+      calcEl.querySelector('#grubbs-result-critical')!.textContent = result.critical.toFixed(4);
+      calcEl.querySelector('#grubbs-result-outlier')!.textContent = `${result.outlier.toFixed(4)} (index ${result.outlierIndex + 1})`;
+      calcEl.querySelector('#grubbs-result-mean')!.textContent = result.mean.toFixed(4);
+      calcEl.querySelector('#grubbs-result-stddev')!.textContent = result.s.toFixed(4);
+      calcEl.querySelector('#grubbs-result-pvalue')!.textContent = result.pValue < 0.0001 ? '< 0.0001' : result.pValue.toFixed(4);
+      calcEl.querySelector('#grubbs-result-n')!.textContent = String(result.n);
+
+      const stepsEl = calcEl.querySelector('#grubbs-steps-content');
+      if (stepsEl) {
+        stepsEl.innerHTML = result.steps.map((s) => `<p>${s}</p>`).join('');
+      }
+
+      if (resultsSection) {
+        resultsSection.classList.remove('hidden');
+        resultsSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    });
+
+    clearBtn?.addEventListener('click', () => {
+      hideError();
+      if (resultsSection) resultsSection.classList.add('hidden');
+      if (tbody) tbody.innerHTML = '';
+      rowCounter = 0;
+      for (let i = 0; i < 7; i++) createRow();
+    });
+  });
+</script>

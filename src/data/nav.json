@@ -1,12 +1,18 @@
 {
   "headerNav": [
     { "label": "home", "href": "/" },
+    { "label": "pearsonCorrelation", "href": "/pearson-correlation-calculator/" },
+    { "label": "grubbsTest", "href": "/grubbs-test-calculator/" },
+    { "label": "assumptionsChecker", "href": "/regression-assumptions-checker/" },
     { "label": "aboutUs", "href": "/about-us/" },
     { "label": "blog", "href": "/blog/" },
     { "label": "contactUs", "href": "/contact-us/" }
   ],
   "footerNav": [
     { "label": "home", "href": "/" },
+    { "label": "pearsonCorrelation", "href": "/pearson-correlation-calculator/" },
+    { "label": "grubbsTest", "href": "/grubbs-test-calculator/" },
+    { "label": "assumptionsChecker", "href": "/regression-assumptions-checker/" },
     { "label": "aboutUs", "href": "/about-us/" },
     { "label": "blog", "href": "/blog/" },
     { "label": "contactUs", "href": "/contact-us/" },

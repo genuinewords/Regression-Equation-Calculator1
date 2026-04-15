@@ -1,6 +1,9 @@
 {
   "nav": {
     "home": "Home",
+    "pearsonCorrelation": "Pearson r Calculator",
+    "grubbsTest": "Grubbs' Test",
+    "assumptionsChecker": "Assumptions Checker",
     "aboutUs": "About Us",
     "blog": "Blog",
     "contactUs": "Contact Us",
