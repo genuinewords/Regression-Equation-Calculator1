@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "Utama",
+    "tools": "Alat",
     "aboutUs": "Tentang Kami",
     "blog": "Blog",
     "contactUs": "Hubungi Kami",
@@ -9,7 +10,10 @@
     "sitemap": "Peta Laman",
     "pearsonCorrelation": "Kalkulator Pearson r",
     "grubbsTest": "Ujian Grubbs",
-    "assumptionsChecker": "Pemeriksa anggapan"
+    "assumptionsChecker": "Pemeriksa anggapan",
+    "linearCalc": "Kalkulator linear",
+    "quadCalc": "Kalkulator kuadratik",
+    "multiCalc": "Kalkulator berbilang"
   },
   "footer": {
     "description": "Kalkulator persamaan regresi dalam talian percuma dengan penyelesaian langkah demi langkah untuk pelajar, penyelidik dan profesional.",

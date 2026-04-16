@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "Accueil",
+    "tools": "Outils",
     "aboutUs": "À Propos",
     "blog": "Blog",
     "contactUs": "Contactez-nous",
@@ -9,7 +10,10 @@
     "sitemap": "Plan du Site",
     "pearsonCorrelation": "Calculateur de Pearson r",
     "grubbsTest": "Test de Grubbs",
-    "assumptionsChecker": "Vérificateur d'hypothèses"
+    "assumptionsChecker": "Vérificateur d'hypothèses",
+    "linearCalc": "Calculateur linéaire",
+    "quadCalc": "Calculateur quadratique",
+    "multiCalc": "Calculateur multiple"
   },
   "footer": {
     "description": "Calculateur gratuit en ligne d'équation de régression avec solutions étape par étape pour les étudiants, les chercheurs et les professionnels.",

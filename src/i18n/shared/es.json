@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "Inicio",
+    "tools": "Herramientas",
     "aboutUs": "Sobre Nosotros",
     "blog": "Blog",
     "contactUs": "Contáctenos",
@@ -9,7 +10,10 @@
     "sitemap": "Mapa del Sitio",
     "pearsonCorrelation": "Calculadora de Pearson r",
     "grubbsTest": "Prueba de Grubbs",
-    "assumptionsChecker": "Verificador de supuestos"
+    "assumptionsChecker": "Verificador de supuestos",
+    "linearCalc": "Calculadora lineal",
+    "quadCalc": "Calculadora cuadrática",
+    "multiCalc": "Calculadora múltiple"
   },
   "footer": {
     "description": "Calculadora gratuita en línea de ecuación de regresión con soluciones paso a paso para estudiantes, investigadores y profesionales.",

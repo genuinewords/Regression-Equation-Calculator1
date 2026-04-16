@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "Ana Sayfa",
+    "tools": "Araçlar",
     "aboutUs": "Hakkımızda",
     "blog": "Blog",
     "contactUs": "İletişim",
@@ -9,7 +10,10 @@
     "sitemap": "Site Haritası",
     "pearsonCorrelation": "Pearson r Hesaplayıcı",
     "grubbsTest": "Grubbs Testi",
-    "assumptionsChecker": "Varsayım Kontrolü"
+    "assumptionsChecker": "Varsayım Kontrolü",
+    "linearCalc": "Doğrusal Hesaplayıcı",
+    "quadCalc": "Karesel Hesaplayıcı",
+    "multiCalc": "Çoklu Hesaplayıcı"
   },
   "footer": {
     "description": "Öğrenciler, araştırmacılar ve profesyoneller için adım adım çözümlerle ücretsiz çevrimiçi regresyon denklemi hesaplayıcısı.",

@@ -128,6 +128,7 @@ export interface Translations {
 
 export interface NavLabels {
   home: string;
+  tools: string;
   linearCalc: string;
   quadCalc: string;
   multiCalc: string;

@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "Home",
+    "tools": "Strumenti",
     "aboutUs": "Chi Siamo",
     "blog": "Blog",
     "contactUs": "Contattaci",
@@ -9,7 +10,10 @@
     "sitemap": "Mappa del Sito",
     "pearsonCorrelation": "Calcolatore di Pearson r",
     "grubbsTest": "Test di Grubbs",
-    "assumptionsChecker": "Verifica assunzioni"
+    "assumptionsChecker": "Verifica assunzioni",
+    "linearCalc": "Calcolatore lineare",
+    "quadCalc": "Calcolatore quadratico",
+    "multiCalc": "Calcolatore multiplo"
   },
   "footer": {
     "description": "Calcolatore gratuito online di equazione di regressione con soluzioni passo dopo passo per studenti, ricercatori e professionisti.",

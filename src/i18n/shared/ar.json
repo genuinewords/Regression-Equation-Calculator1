@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "الرئيسية",
+    "tools": "أدوات",
     "aboutUs": "من نحن",
     "blog": "المدونة",
     "contactUs": "اتصل بنا",
@@ -9,7 +10,10 @@
     "sitemap": "خريطة الموقع",
     "pearsonCorrelation": "حاسبة بيرسون r",
     "grubbsTest": "اختبار غروبز",
-    "assumptionsChecker": "مدقق الافتراضات"
+    "assumptionsChecker": "مدقق الافتراضات",
+    "linearCalc": "حاسبة خطية",
+    "quadCalc": "حاسبة تربيعية",
+    "multiCalc": "حاسبة متعددة"
   },
   "footer": {
     "description": "حاسبة مجانية عبر الإنترنت لمعادلة الانحدار مع حلول خطوة بخطوة للطلاب والباحثين والمحترفين.",

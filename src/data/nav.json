@@ -1,12 +1,14 @@
 {
   "headerNav": [
     { "label": "home", "href": "/" },
-    { "label": "linearCalc", "href": "/linear-regression-calculator/" },
-    { "label": "quadCalc", "href": "/quadratic-regression-calculator/" },
-    { "label": "multiCalc", "href": "/multiple-regression-calculator/" },
-    { "label": "pearsonCorrelation", "href": "/pearson-correlation-calculator/" },
-    { "label": "grubbsTest", "href": "/grubbs-test-calculator/" },
-    { "label": "assumptionsChecker", "href": "/regression-assumptions-checker/" },
+    { "label": "tools", "children": [
+      { "label": "linearCalc", "href": "/linear-regression-calculator/" },
+      { "label": "quadCalc", "href": "/quadratic-regression-calculator/" },
+      { "label": "multiCalc", "href": "/multiple-regression-calculator/" },
+      { "label": "pearsonCorrelation", "href": "/pearson-correlation-calculator/" },
+      { "label": "grubbsTest", "href": "/grubbs-test-calculator/" },
+      { "label": "assumptionsChecker", "href": "/regression-assumptions-checker/" }
+    ]},
     { "label": "aboutUs", "href": "/about-us/" },
     { "label": "blog", "href": "/blog/" },
     { "label": "contactUs", "href": "/contact-us/" }

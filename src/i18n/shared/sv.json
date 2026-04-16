@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "Startsida",
+    "tools": "Verktyg",
     "aboutUs": "Om Oss",
     "blog": "Blogg",
     "contactUs": "Kontakta Oss",
@@ -9,7 +10,10 @@
     "sitemap": "Webbplatskarta",
     "pearsonCorrelation": "Pearson r-beräkning",
     "grubbsTest": "Grubbs test",
-    "assumptionsChecker": "Antagandekontroll"
+    "assumptionsChecker": "Antagandekontroll",
+    "linearCalc": "Linjär kalkylator",
+    "quadCalc": "Kvadratisk kalkylator",
+    "multiCalc": "Multipel kalkylator"
   },
   "footer": {
     "description": "Gratis online regressionsekvationskalkylator med steg-för-steg-lösningar för studenter, forskare och professionella.",

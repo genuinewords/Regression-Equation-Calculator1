@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "Beranda",
+    "tools": "Alat",
     "aboutUs": "Tentang Kami",
     "blog": "Blog",
     "contactUs": "Hubungi Kami",
@@ -9,7 +10,10 @@
     "sitemap": "Peta Situs",
     "pearsonCorrelation": "Kalkulator Pearson r",
     "grubbsTest": "Uji Grubbs",
-    "assumptionsChecker": "Pemeriksa asumsi"
+    "assumptionsChecker": "Pemeriksa asumsi",
+    "linearCalc": "Kalkulator linear",
+    "quadCalc": "Kalkulator kuadratik",
+    "multiCalc": "Kalkulator berganda"
   },
   "footer": {
     "description": "Kalkulator persamaan regresi online gratis dengan solusi langkah demi langkah untuk pelajar, peneliti, dan profesional.",

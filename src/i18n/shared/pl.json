@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "Strona Główna",
+    "tools": "Narzędzia",
     "aboutUs": "O Nas",
     "blog": "Blog",
     "contactUs": "Kontakt",
@@ -9,7 +10,10 @@
     "sitemap": "Mapa Strony",
     "pearsonCorrelation": "Kalkulator Pearsona r",
     "grubbsTest": "Test Grubbsa",
-    "assumptionsChecker": "Sprawdzanie założeń"
+    "assumptionsChecker": "Sprawdzanie założeń",
+    "linearCalc": "Kalkulator liniowy",
+    "quadCalc": "Kalkulator kwadratowy",
+    "multiCalc": "Kalkulator wielokrotny"
   },
   "footer": {
     "description": "Darmowy kalkulator równania regresji online z rozwiązaniami krok po kroku dla studentów, badaczy i profesjonalistów.",

@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "Startseite",
+    "tools": "Werkzeuge",
     "aboutUs": "Über Uns",
     "blog": "Blog",
     "contactUs": "Kontakt",
@@ -9,7 +10,10 @@
     "sitemap": "Seitenübersicht",
     "pearsonCorrelation": "Pearson-r-Rechner",
     "grubbsTest": "Grubbs-Test",
-    "assumptionsChecker": "Annahmenprüfung"
+    "assumptionsChecker": "Annahmenprüfung",
+    "linearCalc": "Linearer Rechner",
+    "quadCalc": "Quadratischer Rechner",
+    "multiCalc": "Mehrfacher Rechner"
   },
   "footer": {
     "description": "Kostenloser Online-Regressionsgleichungsrechner mit Schritt-für-Schritt-Lösungen für Studenten, Forscher und Fachleute.",

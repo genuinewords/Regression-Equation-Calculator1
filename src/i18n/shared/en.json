@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "Home",
+    "tools": "Tools",
     "linearCalc": "Linear Regression",
     "quadCalc": "Quadratic Regression",
     "multiCalc": "Multiple Regression",
