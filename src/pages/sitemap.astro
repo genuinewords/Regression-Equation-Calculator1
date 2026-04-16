@@ -10,6 +10,9 @@ const translations = await mergeTranslations(locale);
 
 const staticPages = [
   { href: '/', label: translations.nav?.home ?? 'Home' },
+  { href: '/linear-regression-calculator/', label: (translations as any).nav?.linearCalc ?? 'Linear Regression Calculator' },
+  { href: '/quadratic-regression-calculator/', label: (translations as any).nav?.quadCalc ?? 'Quadratic Regression Calculator' },
+  { href: '/multiple-regression-calculator/', label: (translations as any).nav?.multiCalc ?? 'Multiple Regression Calculator' },
   { href: '/pearson-correlation-calculator/', label: (translations as any).nav?.pearsonCorrelation ?? 'Pearson r Calculator' },
   { href: '/grubbs-test-calculator/', label: (translations as any).nav?.grubbsTest ?? "Grubbs' Test" },
   { href: '/regression-assumptions-checker/', label: (translations as any).nav?.assumptionsChecker ?? 'Assumptions Checker' },

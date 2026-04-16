@@ -1,0 +1,486 @@
+---
+import type { MergedTranslations } from 'theme/i18n/types';
+
+interface Props {
+  translations: MergedTranslations;
+}
+
+const { translations } = Astro.props;
+const mc = (translations as any).multiCalc;
+---
+
+<section class="py-8" id="multiple-regression-calculator" data-invalid-data={mc?.invalidData || 'Please enter at least (p+1) valid data points where p is the number of predictors'} data-equation-label={mc?.equation || 'Equation'} data-rsquared-label={mc?.rSquared || 'R-Squared'} data-adj-rsquared-label={mc?.adjustedRSquared || 'Adjusted R-Squared'} data-std-error-label={mc?.standardError || 'Standard Error'} data-intercept-label={mc?.intercept || 'Intercept (b₀)'} data-predictors-label={mc?.numPredictors || 'Number of Predictors'} data-enter-data-label={mc?.enterData || 'Enter your data points'} data-result-label={mc?.result || 'Results'} data-step-by-step-label={mc?.stepByStep || 'Step-by-Step Solution'}>
+  <div class="mx-auto max-w-3xl">
+    <div class="rounded-2xl shadow-lg dark:shadow-surface-950/40 shadow-primary-900/5 border border-surface-200/80 dark:border-surface-700/60 overflow-hidden bg-white dark:bg-surface-800/80 backdrop-blur-sm transition-colors duration-300">
+      <div class="bg-gradient-to-r from-primary-600 to-accent-600 px-6 py-5">
+        <h2 class="text-xl font-bold text-white">{mc?.title || 'Multiple Regression Calculator'}</h2>
+        <p class="text-primary-100 text-sm mt-1">{mc?.description || 'Compute multiple linear regression with 2–4 independent variables'}</p>
+      </div>
+
+      <div class="p-6 bg-surface-50/50 dark:bg-surface-800/50">
+        <div class="mb-4">
+          <label class="text-sm font-semibold text-surface-700 dark:text-surface-300 mb-2 block">{mc?.numPredictors || 'Number of Predictors'}</label>
+          <select id="mr-predictor-select" class="px-4 py-2 text-sm font-medium rounded-lg border border-surface-200 dark:border-surface-600 bg-white dark:bg-surface-700 text-surface-700 dark:text-surface-300 focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-300 dark:focus:border-primary-600 transition-all duration-150 hover:border-primary-300 dark:hover:border-primary-700 cursor-pointer">
+            <option value="2" selected>2 predictors (x₁, x₂)</option>
+            <option value="3">3 predictors (x₁, x₂, x₃)</option>
+            <option value="4">4 predictors (x₁, x₂, x₃, x₄)</option>
+          </select>
+        </div>
+
+        <div class="mb-4">
+          <h3 class="text-sm font-semibold text-surface-700 dark:text-surface-300 mb-3">{mc?.enterData || 'Enter your data points'}</h3>
+          <div class="overflow-x-auto rounded-lg border border-surface-200 dark:border-surface-600">
+            <table class="w-full" id="mr-data-table">
+              <thead id="mr-table-head">
+              </thead>
+              <tbody id="mr-data-rows">
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-3 mb-6">
+          <button
+            id="mr-add-row-btn"
+            type="button"
+            class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/25 border border-primary-200 dark:border-primary-800/50 rounded-lg transition-all duration-200 hover:bg-primary-100 dark:hover:bg-primary-900/40 hover:border-primary-300 dark:hover:border-primary-700 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-primary-500/30"
+          >
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" /></svg>
+            {mc?.addRow || 'Add Row'}
+          </button>
+          <button
+            id="mr-calculate-btn"
+            type="button"
+            class="inline-flex items-center gap-1.5 px-6 py-2 text-sm font-semibold text-white bg-gradient-to-r from-primary-600 to-accent-600 rounded-lg shadow-md shadow-primary-600/20 dark:shadow-primary-900/40 transition-all duration-200 hover:shadow-lg hover:shadow-primary-600/30 dark:hover:shadow-primary-900/50 hover:brightness-110 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-primary-500/30"
+          >
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+            {mc?.calculate || 'Calculate'}
+          </button>
+          <button
+            id="mr-clear-btn"
+            type="button"
+            class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-surface-600 dark:text-surface-400 bg-surface-100 dark:bg-surface-700 border border-surface-200 dark:border-surface-600 rounded-lg transition-all duration-200 hover:bg-surface-200 dark:hover:bg-surface-600 hover:border-surface-300 dark:hover:border-surface-500 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-surface-400/30"
+          >
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
+            {mc?.clear || 'Clear'}
+          </button>
+        </div>
+
+        <div id="mr-error-msg" class="hidden mb-4 p-3 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800/50 text-red-700 dark:text-red-400 text-sm"></div>
+
+        <div id="mr-results-section" class="hidden animate-[fadeIn_0.3s_ease-out]">
+          <div class="mb-6">
+            <h3 class="text-lg font-bold text-surface-800 dark:text-surface-200 mb-4">{mc?.result || 'Results'}</h3>
+            <div id="mr-coefficient-cards" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
+              <div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 hover:shadow-md dark:hover:shadow-surface-950/30 transition-all duration-200 hover:scale-[1.01]">
+                <p class="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider mb-1">{mc?.rSquared || 'R-Squared'}</p>
+                <p id="mr-result-rsquared" class="text-lg font-bold text-surface-800 dark:text-surface-200 font-mono"></p>
+              </div>
+              <div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 hover:shadow-md dark:hover:shadow-surface-950/30 transition-all duration-200 hover:scale-[1.01]">
+                <p class="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider mb-1">{mc?.adjustedRSquared || 'Adjusted R-Squared'}</p>
+                <p id="mr-result-adj-rsquared" class="text-lg font-bold text-surface-800 dark:text-surface-200 font-mono"></p>
+              </div>
+              <div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 hover:shadow-md dark:hover:shadow-surface-950/30 transition-all duration-200 hover:scale-[1.01]">
+                <p class="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider mb-1">{mc?.standardError || 'Standard Error'}</p>
+                <p id="mr-result-std-error" class="text-lg font-bold text-surface-800 dark:text-surface-200 font-mono"></p>
+              </div>
+            </div>
+          </div>
+
+          <details class="group">
+            <summary class="flex items-center gap-2 cursor-pointer text-sm font-semibold text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors select-none">
+              <svg class="w-4 h-4 transition-transform duration-200 group-open:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+              {mc?.stepByStep || 'Step-by-Step Solution'}
+            </summary>
+            <div id="mr-steps-content" class="mt-4 p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 text-sm text-surface-700 dark:text-surface-300 space-y-3 font-mono leading-relaxed"></div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('#multiple-regression-calculator').forEach((calcEl) => {
+    const selector = calcEl.querySelector('#mr-predictor-select') as HTMLSelectElement;
+    const thead = calcEl.querySelector('#mr-table-head');
+    const tbody = calcEl.querySelector('#mr-data-rows');
+    const addBtn = calcEl.querySelector('#mr-add-row-btn');
+    const calcBtn = calcEl.querySelector('#mr-calculate-btn');
+    const clearBtn = calcEl.querySelector('#mr-clear-btn');
+    const errorEl = calcEl.querySelector('#mr-error-msg');
+    const resultsSection = calcEl.querySelector('#mr-results-section');
+    const invalidData = calcEl.getAttribute('data-invalid-data') || 'Please enter at least (p+1) valid data points where p is the number of predictors';
+    let rowCounter = 0;
+
+    function getNumPredictors() {
+      return selector ? parseInt(selector.value) : 2;
+    }
+
+    const subscripts = ['₁', '₂', '₃', '₄'];
+
+    function buildTableHeader() {
+      const p = getNumPredictors();
+      let html = '<tr class="bg-surface-100 dark:bg-surface-700/50 border-b border-surface-200 dark:border-surface-600">';
+      html += '<th class="px-3 py-2 text-left text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider w-12">#</th>';
+      for (let j = 0; j < p; j++) {
+        html += `<th class="px-3 py-2 text-left text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider">x${subscripts[j]}</th>`;
+      }
+      html += '<th class="px-3 py-2 text-left text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider">y</th>';
+      html += '<th class="px-3 py-2 w-10"></th>';
+      html += '</tr>';
+      if (thead) thead.innerHTML = html;
+    }
+
+    function createRow(values: string[] = []) {
+      const p = getNumPredictors();
+      rowCounter++;
+      const tr = document.createElement('tr');
+      tr.className = 'border-b border-surface-200 dark:border-surface-600 transition-colors duration-150 hover:bg-primary-50/30 dark:hover:bg-primary-900/10';
+
+      let html = `<td class="px-3 py-2 text-xs text-surface-400 dark:text-surface-500 font-mono">${rowCounter}</td>`;
+      for (let j = 0; j < p; j++) {
+        const val = values[j] || '';
+        html += `<td class="px-3 py-2"><input type="number" step="any" class="data-x-${j} w-full px-3 py-1.5 text-sm rounded-lg border border-surface-200 dark:border-surface-600 bg-white dark:bg-surface-700 dark:text-surface-200 dark:placeholder-surface-500 focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-300 dark:focus:border-primary-600 transition-all duration-150 hover:border-primary-300 dark:hover:border-primary-700" placeholder="x${subscripts[j]}" value="${val}" /></td>`;
+      }
+      const yVal = values[p] || '';
+      html += `<td class="px-3 py-2"><input type="number" step="any" class="data-y w-full px-3 py-1.5 text-sm rounded-lg border border-surface-200 dark:border-surface-600 bg-white dark:bg-surface-700 dark:text-surface-200 dark:placeholder-surface-500 focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-300 dark:focus:border-primary-600 transition-all duration-150 hover:border-primary-300 dark:hover:border-primary-700" placeholder="y" value="${yVal}" /></td>`;
+      html += `<td class="px-3 py-2"><button type="button" class="remove-row text-surface-300 dark:text-surface-600 hover:text-red-500 dark:hover:text-red-400 transition-colors duration-150" aria-label="Remove row"><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button></td>`;
+
+      tr.innerHTML = html;
+      tr.querySelector('.remove-row')?.addEventListener('click', () => {
+        tr.style.opacity = '0';
+        tr.style.transform = 'translateX(10px)';
+        tr.style.transition = 'all 0.15s ease';
+        setTimeout(() => { tr.remove(); renumberRows(); }, 150);
+      });
+      tbody?.appendChild(tr);
+    }
+
+    function renumberRows() {
+      const rows = tbody?.querySelectorAll('tr') ?? [];
+      rows.forEach((row, i) => {
+        row.querySelector('td')!.textContent = String(i + 1);
+      });
+      rowCounter = rows.length;
+    }
+
+    function getData() {
+      const p = getNumPredictors();
+      const rows = tbody?.querySelectorAll('tr') ?? [];
+      const yArr: number[] = [];
+      const xArr: number[][] = [];
+      for (const row of rows) {
+        const yInput = row.querySelector('.data-y') as HTMLInputElement;
+        const y = parseFloat(yInput?.value ?? '');
+        if (isNaN(y)) continue;
+        const xRow: number[] = [];
+        let allValid = true;
+        for (let j = 0; j < p; j++) {
+          const xInput = row.querySelector(`.data-x-${j}`) as HTMLInputElement;
+          const x = parseFloat(xInput?.value ?? '');
+          if (isNaN(x)) { allValid = false; break; }
+          xRow.push(x);
+        }
+        if (!allValid) continue;
+        yArr.push(y);
+        xArr.push(xRow);
+      }
+      return { y: yArr, x: xArr };
+    }
+
+    function showError(msg: string) {
+      if (errorEl) {
+        errorEl.textContent = msg;
+        errorEl.classList.remove('hidden');
+      }
+      if (resultsSection) resultsSection.classList.add('hidden');
+    }
+
+    function hideError() {
+      if (errorEl) errorEl.classList.add('hidden');
+    }
+
+    function matMul(A: number[][], B: number[][]): number[][] {
+      const m = A.length, n = B[0].length, k = B.length;
+      const C: number[][] = [];
+      for (let i = 0; i < m; i++) {
+        C[i] = [];
+        for (let j = 0; j < n; j++) {
+          let s = 0;
+          for (let l = 0; l < k; l++) s += A[i][l] * B[l][j];
+          C[i][j] = s;
+        }
+      }
+      return C;
+    }
+
+    function matTranspose(A: number[][]): number[][] {
+      const m = A.length, n = A[0].length;
+      const T: number[][] = [];
+      for (let j = 0; j < n; j++) {
+        T[j] = [];
+        for (let i = 0; i < m; i++) T[j][i] = A[i][j];
+      }
+      return T;
+    }
+
+    function matInverse(A: number[][]): number[][] | null {
+      const n = A.length;
+      const aug: number[][] = [];
+      for (let i = 0; i < n; i++) {
+        aug[i] = [];
+        for (let j = 0; j < n; j++) aug[i][j] = A[i][j];
+        for (let j = 0; j < n; j++) aug[i][n + j] = i === j ? 1 : 0;
+      }
+
+      for (let col = 0; col < n; col++) {
+        let maxRow = col;
+        let maxVal = Math.abs(aug[col][col]);
+        for (let row = col + 1; row < n; row++) {
+          if (Math.abs(aug[row][col]) > maxVal) {
+            maxVal = Math.abs(aug[row][col]);
+            maxRow = row;
+          }
+        }
+        if (maxVal < 1e-12) return null;
+
+        [aug[col], aug[maxRow]] = [aug[maxRow], aug[col]];
+
+        const pivot = aug[col][col];
+        for (let j = 0; j < 2 * n; j++) aug[col][j] /= pivot;
+
+        for (let row = 0; row < n; row++) {
+          if (row === col) continue;
+          const factor = aug[row][col];
+          for (let j = 0; j < 2 * n; j++) aug[row][j] -= factor * aug[col][j];
+        }
+      }
+
+      const inv: number[][] = [];
+      for (let i = 0; i < n; i++) {
+        inv[i] = [];
+        for (let j = 0; j < n; j++) inv[i][j] = aug[i][n + j];
+      }
+      return inv;
+    }
+
+    function formatCoeff(val: number): string {
+      const sign = val >= 0 ? '+' : '−';
+      const abs = Math.abs(val).toFixed(4);
+      return `${sign} ${abs}`;
+    }
+
+    function computeMultipleRegression(data: { y: number[]; x: number[][] }) {
+      const n = data.y.length;
+      const p = data.x[0]?.length ?? 0;
+
+      if (n < p + 1) {
+        showError(invalidData.replace('(p+1)', `(${p}+1)`).replace('p is the number of predictors', `p = ${p}, need at least ${p + 1} data points`));
+        return null;
+      }
+
+      const X: number[][] = [];
+      for (let i = 0; i < n; i++) {
+        const row = [1, ...data.x[i]];
+        X.push(row);
+      }
+
+      const yMat: number[][] = data.y.map(v => [v]);
+      const Xt = matTranspose(X);
+      const XtX = matMul(Xt, X);
+      const XtY = matMul(Xt, yMat);
+      const XtXinv = matInverse(XtX);
+
+      if (!XtXinv) {
+        showError('Matrix XᵀX is singular — predictors may be collinear');
+        return null;
+      }
+
+      const betaMat = matMul(XtXinv, XtY);
+      const beta: number[] = betaMat.map(row => row[0]);
+
+      const yMean = data.y.reduce((s, v) => s + v, 0) / n;
+      let ssRes = 0, ssTot = 0;
+      for (let i = 0; i < n; i++) {
+        let yHat = beta[0];
+        for (let j = 0; j < p; j++) yHat += beta[j + 1] * data.x[i][j];
+        ssRes += (data.y[i] - yHat) ** 2;
+        ssTot += (data.y[i] - yMean) ** 2;
+      }
+
+      const rSquared = ssTot === 0 ? 1 : 1 - ssRes / ssTot;
+      const adjRSquared = 1 - (1 - rSquared) * (n - 1) / (n - p - 1);
+      const stdError = Math.sqrt(ssRes / (n - p - 1));
+
+      let equation = `y = ${beta[0].toFixed(4)}`;
+      for (let j = 0; j < p; j++) {
+        const sign = beta[j + 1] >= 0 ? ' + ' : ' − ';
+        equation += `${sign}${Math.abs(beta[j + 1]).toFixed(4)}x${subscripts[j]}`;
+      }
+
+      const steps: string[] = [];
+
+      steps.push(`<strong>Step 1:</strong> Data summary → n = ${n}, p = ${p} predictors`);
+      for (let j = 0; j < p; j++) {
+        const col = data.x.map(row => row[j]);
+        const mean = col.reduce((s, v) => s + v, 0) / n;
+        steps.push(`&nbsp;&nbsp;x${subscripts[j]}: mean = ${mean.toFixed(4)}`);
+      }
+      steps.push(`&nbsp;&nbsp;y: mean = ${yMean.toFixed(4)}`);
+
+      steps.push(`<strong>Step 2:</strong> Design matrix X (${n}×${p + 1}) — first column is intercept (1s), then predictors`);
+      steps.push(`&nbsp;&nbsp;X = [1, x${subscripts.slice(0, p).join(', x')}] for each observation`);
+
+      steps.push(`<strong>Step 3:</strong> Compute XᵀX (${p + 1}×${p + 1})`);
+      for (let i = 0; i < p + 1; i++) {
+        const rowStr = XtX[i].map(v => v.toFixed(4)).join(', ');
+        steps.push(`&nbsp;&nbsp;[${rowStr}]`);
+      }
+
+      steps.push(`<strong>Step 4:</strong> Compute Xᵀy`);
+      for (let i = 0; i < p + 1; i++) {
+        steps.push(`&nbsp;&nbsp;[${XtY[i][0].toFixed(4)}]`);
+      }
+
+      steps.push(`<strong>Step 5:</strong> Solve β = (XᵀX)⁻¹Xᵀy using Gaussian elimination`);
+      steps.push(`&nbsp;&nbsp;β = [${beta.map(v => v.toFixed(4)).join(', ')}]`);
+
+      steps.push(`<strong>Step 6:</strong> Coefficients`);
+      steps.push(`&nbsp;&nbsp;b₀ (intercept) = ${beta[0].toFixed(4)}`);
+      for (let j = 0; j < p; j++) {
+        steps.push(`&nbsp;&nbsp;b${j + 1} (x${subscripts[j]}) = ${beta[j + 1].toFixed(4)}`);
+      }
+
+      steps.push(`<strong>Step 7:</strong> Goodness of fit`);
+      steps.push(`&nbsp;&nbsp;SSres = ${ssRes.toFixed(4)}, SStot = ${ssTot.toFixed(4)}`);
+      steps.push(`&nbsp;&nbsp;R² = 1 − SSres/SStot = 1 − ${ssRes.toFixed(4)}/${ssTot.toFixed(4)} = ${rSquared.toFixed(4)}`);
+      steps.push(`&nbsp;&nbsp;Adjusted R² = 1 − (1−R²)(n−1)/(n−p−1) = 1 − ${(1 - rSquared).toFixed(4)}×${n - 1}/${n - p - 1} = ${adjRSquared.toFixed(4)}`);
+      steps.push(`&nbsp;&nbsp;Standard Error = √(SSres/(n−p−1)) = √(${ssRes.toFixed(4)}/${n - p - 1}) = ${stdError.toFixed(4)}`);
+
+      return { beta, rSquared, adjRSquared, stdError, equation, n, p, steps };
+    }
+
+    function renderCoefficientCards(beta: number[], p: number) {
+      const container = calcEl.querySelector('#mr-coefficient-cards');
+      if (!container) return;
+
+      let html = '';
+
+      html += `<div class="p-4 rounded-xl bg-gradient-to-br from-primary-50 dark:from-primary-900/30 to-accent-50 dark:to-accent-900/30 border border-primary-100 dark:border-primary-800/40 hover:shadow-md dark:hover:shadow-primary-900/20 transition-all duration-200 hover:scale-[1.01] sm:col-span-2">`;
+      html += `<p class="text-xs font-semibold text-primary-500 dark:text-primary-400 uppercase tracking-wider mb-1">${calcEl.getAttribute('data-equation-label') || 'Equation'}</p>`;
+      html += `<p id="mr-result-equation" class="text-lg font-bold text-primary-800 dark:text-primary-200 font-mono"></p>`;
+      html += `</div>`;
+
+      html += `<div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 hover:shadow-md dark:hover:shadow-surface-950/30 transition-all duration-200 hover:scale-[1.01]">`;
+      html += `<p class="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider mb-1">${calcEl.getAttribute('data-intercept-label') || 'Intercept (b₀)'}</p>`;
+      html += `<p id="mr-result-b0" class="text-lg font-bold text-surface-800 dark:text-surface-200 font-mono"></p>`;
+      html += `</div>`;
+
+      for (let j = 0; j < p; j++) {
+        html += `<div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 hover:shadow-md dark:hover:shadow-surface-950/30 transition-all duration-200 hover:scale-[1.01]">`;
+        html += `<p class="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider mb-1">b${j + 1} (x${subscripts[j]})</p>`;
+        html += `<p id="mr-result-b${j + 1}" class="text-lg font-bold text-surface-800 dark:text-surface-200 font-mono"></p>`;
+        html += `</div>`;
+      }
+
+      container.innerHTML = html;
+    }
+
+    function rebuildTable() {
+      const existingRows = tbody?.querySelectorAll('tr') ?? [];
+      const savedData: string[][] = [];
+      const oldP = existingRows.length > 0
+        ? (existingRows[0].querySelectorAll('input[type="number"]').length - 1)
+        : 0;
+
+      for (const row of existingRows) {
+        const inputs = row.querySelectorAll('input[type="number"]');
+        const vals: string[] = [];
+        inputs.forEach((input, idx) => {
+          vals.push((input as HTMLInputElement).value);
+        });
+        savedData.push(vals);
+      }
+
+      const newP = getNumPredictors();
+
+      if (tbody) tbody.innerHTML = '';
+      rowCounter = 0;
+      buildTableHeader();
+
+      for (const vals of savedData) {
+        const newRow: string[] = [];
+        for (let j = 0; j < newP; j++) {
+          newRow.push(j < oldP ? vals[j] : '');
+        }
+        newRow.push(oldP > 0 ? vals[oldP] : '');
+        createRow(newRow);
+      }
+
+      if (savedData.length === 0) {
+        for (let i = 0; i < 5; i++) createRow();
+      }
+    }
+
+    selector?.addEventListener('change', rebuildTable);
+
+    addBtn?.addEventListener('click', () => createRow());
+
+    buildTableHeader();
+    for (let i = 0; i < 5; i++) createRow();
+
+    calcBtn?.addEventListener('click', () => {
+      hideError();
+      const data = getData();
+      const result = computeMultipleRegression(data);
+      if (!result) return;
+
+      renderCoefficientCards(result.beta, result.p);
+
+      const eqEl = calcEl.querySelector('#mr-result-equation');
+      if (eqEl) eqEl.textContent = result.equation;
+
+      const b0El = calcEl.querySelector('#mr-result-b0');
+      if (b0El) b0El.textContent = result.beta[0].toFixed(4);
+
+      for (let j = 0; j < result.p; j++) {
+        const bjEl = calcEl.querySelector(`#mr-result-b${j + 1}`);
+        if (bjEl) bjEl.textContent = result.beta[j + 1].toFixed(4);
+      }
+
+      calcEl.querySelector('#mr-result-rsquared')!.textContent = result.rSquared.toFixed(4);
+      calcEl.querySelector('#mr-result-adj-rsquared')!.textContent = result.adjRSquared.toFixed(4);
+      calcEl.querySelector('#mr-result-std-error')!.textContent = result.stdError.toFixed(4);
+
+      const stepsEl = calcEl.querySelector('#mr-steps-content');
+      if (stepsEl) {
+        stepsEl.innerHTML = result.steps.map(s => `<p>${s}</p>`).join('');
+      }
+
+      if (resultsSection) {
+        resultsSection.classList.remove('hidden');
+        resultsSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    });
+
+    clearBtn?.addEventListener('click', () => {
+      hideError();
+      if (resultsSection) resultsSection.classList.add('hidden');
+      if (tbody) tbody.innerHTML = '';
+      rowCounter = 0;
+      if (selector) selector.value = '2';
+      buildTableHeader();
+      for (let i = 0; i < 5; i++) createRow();
+    });
+  });
+</script>

@@ -9,6 +9,8 @@ category: "Statistics"
 
 import MultiRegDemo from '../../theme/components/MultiRegDemo.astro';
 import InteractiveImage from '../../theme/components/InteractiveImage.astro';
+import MathFormula from '../../theme/components/MathFormula.astro';
+import Callout from '../../theme/components/Callout.astro';
 
 Imagine you're trying to predict house prices. Square footage alone gives you a rough estimate — but what about the number of bedrooms, the age of the property, the quality of local schools, or the neighborhood crime rate? When a single independent variable cannot adequately explain the variation in your dependent variable, **multiple regression analysis** comes into play.
 
@@ -38,7 +40,7 @@ A common mistake is running separate simple regressions for each predictor and c
 
 The multiple regression equation extends the familiar **y = mx + b** form by adding a term for each additional predictor:
 
-**y = b₀ + b₁x₁ + b₂x₂ + ... + bₙxₙ**
+<MathFormula formula="y = b₀ + b₁x₁ + b₂x₂ + ... + bₙxₙ" description="Multiple Regression Equation" />
 
 Where:
 - **y** is the predicted value of the dependent variable
@@ -56,7 +58,7 @@ The intercept **b₀** is the predicted value of y when every predictor is zero.
 
 Let's walk through a concrete example. Suppose we build a model to predict home prices:
 
-**Price = 50,000 + 150 × (SqFt) + 20,000 × (Bedrooms) − 1,000 × (Age in Years)**
+<MathFormula formula="Price = 50,000 + 150(SqFt) + 20,000(Beds) − 1,000(Age)" description="Example Practical Model" />
 
 Breaking this down:
 - **150** — Each additional square foot adds approximately $150 to the predicted price, holding bedrooms and age constant
@@ -95,7 +97,7 @@ Adding more predictors to a model will **always** increase R² — even if those
 
 The formula:
 
-**Adjusted R² = 1 − (1 − R²) × (n − 1) / (n − k − 1)**
+<MathFormula formula="Adj. R² = 1 − \frac{(1 − R²)(n − 1)}{n − k − 1}" description="Adjusted R-Squared" />
 
 Where **n** is the sample size and **k** is the number of predictors.
 
@@ -247,22 +249,28 @@ When you run a multiple regression, the output typically includes several key st
 Even experienced analysts can fall into these traps:
 
 ### Overfitting
-Adding too many predictors relative to your sample size will produce a model that fits the training data beautifully but fails on new data. **Prevention:** Use train/test splits, cross-validation, and keep at least 10–20 observations per predictor.
+Adding too many predictors relative to your sample size will produce a model that fits the training data beautifully but fails on new data. 
+<Callout type="warning" title="Prevention">Use train/test splits, cross-validation, and keep at least 10–20 observations per predictor.</Callout>
 
 ### Ignoring Multicollinearity
-If two predictors are highly correlated (e.g., "years of education" and "income level"), their individual coefficients become unstable and uninterpretable. **Prevention:** Check VIF before and after adding each predictor. Remove or combine collinear variables.
+If two predictors are highly correlated (e.g., "years of education" and "income level"), their individual coefficients become unstable and uninterpretable. 
+<Callout type="info" title="Prevention">Check VIF before and after adding each predictor. Remove or combine collinear variables.</Callout>
 
 ### Extrapolation
-Don't predict outside the range of your training data. A model built on homes priced between $100k–$500k may fail catastrophically for $2M luxury homes. **Prevention:** Always report the range of your training data and flag predictions outside that range.
+Don't predict outside the range of your training data. A model built on homes priced between $100k–$500k may fail catastrophically for $2M luxury homes. 
+<Callout type="warning" title="Prevention">Always report the range of your training data and flag predictions outside that range.</Callout>
 
 ### Confusing Correlation with Causation
-Multiple regression shows **association**, not causation. A predictor being statistically significant does not mean it *causes* the outcome. **Prevention:** Use domain knowledge, consider confounders, and design experiments when possible.
+Multiple regression shows **association**, not causation. A predictor being statistically significant does not mean it *causes* the outcome. 
+<Callout type="conceptual" title="Prevention">Use domain knowledge, consider confounders, and design experiments when possible.</Callout>
 
 ### Omitted Variable Bias
-Leaving out an important predictor that's correlated with included predictors will bias the coefficients of the included variables. **Prevention:** Think carefully about the full set of relevant variables before fitting the model.
+Leaving out an important predictor that's correlated with included predictors will bias the coefficients of the included variables. 
+<Callout type="info" title="Prevention">Think carefully about the full set of relevant variables before fitting the model.</Callout>
 
 ### Data Dredging (p-hacking)
-Testing many combinations of predictors and only reporting the "significant" results inflates the false positive rate. **Prevention:** Define your hypotheses before analyzing data, use correction for multiple comparisons, and always validate on hold-out data.
+Testing many combinations of predictors and only reporting the "significant" results inflates the false positive rate. 
+<Callout type="warning" title="Prevention">Define your hypotheses before analyzing data, use correction for multiple comparisons, and always validate on hold-out data.</Callout>
 
 ---
 

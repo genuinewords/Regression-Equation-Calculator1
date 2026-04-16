@@ -48,7 +48,7 @@ const faqTitle: string = (home as any).faqTitle ?? 'Frequently Asked Questions';
   )}
 
   <!-- Hero Section -->
-  <section class="py-10 md:py-14">
+  <section class="pt-8 pb-4 md:pt-12 md:pb-6">
     <div class="max-w-3xl mx-auto text-center">
       <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-primary-700 via-primary-600 to-accent-600 dark:from-primary-400 dark:via-primary-500 dark:to-accent-400 bg-clip-text text-transparent leading-tight">
         {translations.home.title}
@@ -56,12 +56,40 @@ const faqTitle: string = (home as any).faqTitle ?? 'Frequently Asked Questions';
       <p class="mt-5 text-lg md:text-xl text-surface-600 dark:text-surface-400 max-w-2xl mx-auto leading-relaxed">
         {translations.home.intro}
       </p>
+
+      <!-- Calculator Buttons -->
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href="/linear-regression-calculator/" class="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-primary-600 to-primary-500 rounded-xl shadow-md shadow-primary-600/20 dark:shadow-primary-900/40 transition-all duration-200 hover:shadow-lg hover:brightness-110 hover:scale-[1.03] active:scale-[0.97]">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+          Linear Regression
+        </a>
+        <a href="/quadratic-regression-calculator/" class="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-accent-600 to-accent-500 rounded-xl shadow-md shadow-accent-600/20 dark:shadow-accent-900/40 transition-all duration-200 hover:shadow-lg hover:brightness-110 hover:scale-[1.03] active:scale-[0.97]">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" /></svg>
+          Quadratic Regression
+        </a>
+        <a href="/multiple-regression-calculator/" class="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-primary-700 to-accent-600 rounded-xl shadow-md shadow-primary-600/20 dark:shadow-primary-900/40 transition-all duration-200 hover:shadow-lg hover:brightness-110 hover:scale-[1.03] active:scale-[0.97]">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" /></svg>
+          Multiple Regression
+        </a>
+        <a href="/pearson-correlation-calculator/" class="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-primary-700 dark:text-primary-300 bg-primary-100 dark:bg-primary-900/30 border border-primary-200 dark:border-primary-800/50 rounded-xl transition-all duration-200 hover:bg-primary-200 dark:hover:bg-primary-900/50 hover:shadow-md hover:scale-[1.03] active:scale-[0.97]">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+          Pearson Correlation
+        </a>
+        <a href="/grubbs-test-calculator/" class="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-surface-700 dark:text-surface-300 bg-surface-100 dark:bg-surface-700 border border-surface-200 dark:border-surface-600 rounded-xl transition-all duration-200 hover:bg-surface-200 dark:hover:bg-surface-600 hover:shadow-md hover:scale-[1.03] active:scale-[0.97]">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4.5c-.77-.833-2.694-.833-3.464 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z" /></svg>
+          Grubbs' Test
+        </a>
+        <a href="/regression-assumptions-checker/" class="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-surface-700 dark:text-surface-300 bg-surface-100 dark:bg-surface-700 border border-surface-200 dark:border-surface-600 rounded-xl transition-all duration-200 hover:bg-surface-200 dark:hover:bg-surface-600 hover:shadow-md hover:scale-[1.03] active:scale-[0.97]">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          Assumptions Checker
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- Calculator Section -->
-  <section class="py-8 md:py-12 bg-surface-50/60 dark:bg-surface-800/40 rounded-t-3xl -mt-2">
-    <div class="max-w-4xl mx-auto">
+  <section class="pt-2 pb-8 md:pt-4 md:pb-12 bg-surface-50/60 dark:bg-surface-800/40 rounded-t-3xl border-t border-surface-200/50 dark:border-surface-700/50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
       <Calculator locale={locale} translations={translations} />
     </div>
   </section>

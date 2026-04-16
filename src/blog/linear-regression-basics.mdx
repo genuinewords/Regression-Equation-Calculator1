@@ -7,11 +7,19 @@ author: "Regression Equation Calculator"
 category: "Statistics"
 ---
 
+import InteractiveImage from '../../theme/components/InteractiveImage.astro';
+import MathFormula from '../../theme/components/MathFormula.astro';
+import Callout from '../../theme/components/Callout.astro';
+
 Imagine you're a business owner trying to predict next month's revenue based on your advertising spend. Or a student wondering how study hours translate into exam scores. Or a farmer estimating crop yield from rainfall. In each case, you have two variables — one you can measure or control (ad spending, study time, rainfall) and one you want to predict (revenue, exam score, yield).
 
 **Linear regression** is the simplest and most fundamental tool for making these predictions. It draws the best-fitting straight line through your data points, giving you an equation you can use to forecast, explain, and understand the relationship between your variables.
 
 In this guide, we'll cover everything you need to know about simple linear regression: the equation, the math behind it, how to interpret every part of the output, the assumptions you must verify, real-world applications, common mistakes, and a comparison with other regression techniques.
+
+<Callout type="conceptual" title="The Core Idea">
+Linear regression finds the straight line that best describes how a dependent variable changes as an independent variable changes. Think of it as summarizing a cloud of data points into a single, predictable mathematical rule.
+</Callout>
 
 ---
 
@@ -35,11 +43,11 @@ People often confuse correlation with regression. **Correlation** measures the *
 
 The simple linear regression equation takes the familiar form:
 
-**y = mx + b**
+<MathFormula formula="y = mx + b" description="Common Algebraic Form" />
 
 Or, using statistical notation:
 
-**y = b₀ + b₁x**
+<MathFormula formula="y = b₀ + b₁x" description="Statistical Form" />
 
 Where:
 - **y** is the dependent (response) variable — the outcome you're predicting
@@ -65,7 +73,7 @@ The intercept **b₀** is the predicted value of y when x = 0. Sometimes this ha
 
 An important distinction: the regression equation predicts the **average** value of y for a given x. Any individual observation will typically differ from the prediction. The full model is:
 
-**y = b₀ + b₁x + ε**
+<MathFormula formula="y = b₀ + b₁x + ε" description="Full Population Model" />
 
 Where **ε** (epsilon) is the **residual** — the difference between the actual and predicted value. This error term captures everything the model doesn't explain: random variation, measurement error, and the influence of variables not included in the model.
 
@@ -73,7 +81,7 @@ Where **ε** (epsilon) is the **residual** — the difference between the actual
 
 ## How Linear Regression Works: The Least Squares Method
 
-![How linear regression works — the regression line minimizes the sum of squared residuals](/blog/linear-regression-how.svg)
+<InteractiveImage src="/blog/linear-regression-how.svg" alt="How linear regression works — the regression line minimizes the sum of squared residuals" />
 
 Linear regression uses the **method of least squares** (also called ordinary least squares, or OLS) to find the best-fitting line. But what does "best-fitting" actually mean?
 
@@ -91,13 +99,13 @@ Some residuals are positive (the point is above the line), some are negative (be
 
 The least squares method finds the values of **b₀** and **b₁** that minimize:
 
-**SSR = Σ(yᵢ − ŷᵢ)² = Σ(yᵢ − b₀ − b₁xᵢ)²**
+<MathFormula formula="SSR = Σ(yᵢ − ŷᵢ)²" description="Sum of Squared Residuals" />
 
 This is a calculus optimization problem. By taking partial derivatives with respect to b₀ and b₁, setting them equal to zero, and solving, we get closed-form formulas:
 
-**b₁ = Σ(xᵢ − x̄)(yᵢ − ȳ) / Σ(xᵢ − x̄)²**
+<MathFormula formula="b₁ = \frac{Σ(xᵢ − x̄)(yᵢ − ȳ)}{Σ(xᵢ − x̄)²}" description="Slope Calculation" />
 
-**b₀ = ȳ − b₁x̄**
+<MathFormula formula="b₀ = ȳ − b₁x̄" description="Intercept Calculation" />
 
 Where **x̄** and **ȳ** are the means (averages) of x and y respectively.
 
@@ -115,7 +123,7 @@ You might wonder: why square the residuals instead of using absolute values? Thr
 
 ## Step-by-Step: Calculating a Linear Regression
 
-![Four steps to calculate a linear regression equation](/blog/linear-regression-steps.svg)
+<InteractiveImage src="/blog/linear-regression-steps.svg" alt="Four steps to calculate a linear regression equation" />
 
 Let's walk through a complete example with real numbers. Suppose we have the following data showing study hours (x) and exam scores (y):
 
@@ -174,7 +182,7 @@ Getting the regression equation is only half the job. You also need to know how 
 
 The formula:
 
-**R² = 1 − SSᵣₑₛ / SSₜₒₜ**
+<MathFormula formula="R² = 1 − \frac{SS_{res}}{SS_{tot}}" description="Coefficient of Determination" />
 
 Where **SSᵣₑₛ** is the sum of squared residuals (unexplained variation) and **SSₜₒₜ** is the total sum of squares (total variation in y).
 
@@ -197,7 +205,7 @@ For simple linear regression, **R² = r²**. The sign of r tells you the directi
 
 The **standard error of the estimate (Sₑ)** measures the average distance that the observed values fall from the regression line. It's in the same units as y, making it intuitive:
 
-**Sₑ = √[SSᵣₑₛ / (n − 2)]**
+<MathFormula formula="S_e = \sqrt{\frac{SS_{res}}{n−2}}" description="Standard Error" />
 
 A smaller Sₑ means the data points are closer to the line — the predictions are more precise. Roughly, about 95% of actual values will fall within **±2Sₑ** of the predicted value.
 
@@ -249,7 +257,9 @@ The residuals should be approximately normally distributed. This assumption matt
 
 **How to fix:** Transform the dependent variable, remove extreme outliers, or rely on the Central Limit Theorem for large samples (n > 30–50 makes normality less critical for inference).
 
-> **Important:** Unlike multiple regression, simple linear regression does **not** have a multicollinearity assumption — there's only one predictor, so there's nothing for it to be collinear with.
+<Callout type="warning" title="Important distinction">
+Unlike multiple regression, simple linear regression does **not** have a multicollinearity assumption. There's only one predictor, so there's nothing for it to be collinear with!
+</Callout>
 
 ---
 
@@ -284,7 +294,7 @@ When you run a linear regression (whether using our calculator, R, Python, or Ex
 
 ## Real-World Applications of Linear Regression
 
-![Real-world applications of linear regression across industries](/blog/linear-regression-applications.svg)
+<InteractiveImage src="/blog/linear-regression-applications.svg" alt="Real-world applications of linear regression across industries" />
 
 Linear regression is one of the most widely used statistical techniques across virtually every field. Here are some of the most common applications:
 
@@ -320,27 +330,33 @@ Even experienced analysts can fall into these traps when using linear regression
 
 ### Extrapolation
 
-Don't predict outside the range of your data. If your data covers study times from 2 to 10 hours, predicting the score for someone who studies 50 hours is unreliable — the relationship may not remain linear at extreme values. **Prevention:** Only make predictions within (or very close to) the range of your training data, and always report that range.
+Don't predict outside the range of your data. If your data covers study times from 2 to 10 hours, predicting the score for someone who studies 50 hours is unreliable — the relationship may not remain linear at extreme values. 
+<Callout type="warning" title="Prevention">Only make predictions within (or very close to) the range of your training data, and always report that range.</Callout>
 
 ### Confusing Correlation with Causation
 
-A significant regression slope means x and y are **associated** — it does **not** mean x *causes* y. Ice cream sales and drowning deaths are both correlated with temperature, but eating ice cream doesn't cause drowning. **Prevention:** Use domain knowledge, consider confounding variables, and design experiments when possible.
+A significant regression slope means x and y are **associated** — it does **not** mean x *causes* y. Ice cream sales and drowning deaths are both correlated with temperature, but eating ice cream doesn't cause drowning. 
+<Callout type="conceptual" title="Prevention">Use domain knowledge, consider confounding variables, and design experiments when possible.</Callout>
 
 ### Ignoring Outliers
 
-A single extreme data point can dramatically shift the regression line, especially in small datasets. This is because least squares penalizes large errors quadratically — an outlier with a large residual exerts disproportionate influence. **Prevention:** Always visualize your data first. Identify outliers and investigate whether they're genuine observations or data errors. Consider robust regression methods if outliers are legitimate but influential.
+A single extreme data point can dramatically shift the regression line, especially in small datasets. This is because least squares penalizes large errors quadratically — an outlier with a large residual exerts disproportionate influence. 
+<Callout type="warning" title="Prevention">Always visualize your data first. Identify outliers and investigate whether they're genuine observations or data errors. Consider robust regression methods if outliers are legitimate but influential.</Callout>
 
 ### Assuming Linearity Without Checking
 
-Not all relationships are linear. Diminishing returns, threshold effects, and exponential growth all produce curved relationships that a straight line will poorly represent. **Prevention:** Always plot your data before fitting a regression. If you see curvature, try transformations or polynomial terms.
+Not all relationships are linear. Diminishing returns, threshold effects, and exponential growth all produce curved relationships that a straight line will poorly represent. 
+<Callout type="info" title="Prevention">Always plot your data before fitting a regression. If you see curvature, try transformations or polynomial terms.</Callout>
 
 ### Over-relying on R²
 
-A high R² doesn't guarantee a good model. You can have a high R² with violated assumptions, meaningless relationships, or poor predictive performance on new data. Conversely, a low R² in some contexts (like predicting human behavior) may be perfectly acceptable. **Prevention:** Always check residual plots, consider the practical significance of the effect size, and validate predictions on new data.
+A high R² doesn't guarantee a good model. You can have a high R² with violated assumptions, meaningless relationships, or poor predictive performance on new data. Conversely, a low R² in some contexts (like predicting human behavior) may be perfectly acceptable. 
+<Callout type="warning" title="Prevention">Always check residual plots, consider the practical significance of the effect size, and validate predictions on new data.</Callout>
 
 ### Small Sample Sizes
 
-With very few data points, the regression line is highly sensitive to individual observations. The slope might look impressive but be statistically non-significant due to the small sample. **Prevention:** Aim for at least 10–15 observations for simple regression. Report confidence intervals to show the uncertainty in your estimates.
+With very few data points, the regression line is highly sensitive to individual observations. The slope might look impressive but be statistically non-significant due to the small sample. 
+<Callout type="info" title="Prevention">Aim for at least 10–15 observations for simple regression. Report confidence intervals to show the uncertainty in your estimates.</Callout>
 
 ---
 

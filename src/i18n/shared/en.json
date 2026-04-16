@@ -1,6 +1,9 @@
 {
   "nav": {
     "home": "Home",
+    "linearCalc": "Linear Regression",
+    "quadCalc": "Quadratic Regression",
+    "multiCalc": "Multiple Regression",
     "pearsonCorrelation": "Pearson r Calculator",
     "grubbsTest": "Grubbs' Test",
     "assumptionsChecker": "Assumptions Checker",
