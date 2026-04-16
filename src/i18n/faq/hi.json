@@ -2,67 +2,62 @@
   "faqs": [
     {
       "question": "प्रतिगमन समीकरण क्या है?",
-      "answer": "A regression equation is a mathematical formula that describes the relationship between a dependent variable and one or more independent variables. In simple linear regression, it takes the form y = mx + b, where m is the slope (rate of change) and b is the y-intercept (value when x = 0). The equation allows you to predict the value of the dependent variable based on known values of the independent variable(s).",
+      "answer": "प्रतिगमन समीकरण एक गणितीय सूत्र है जो एक आश्रित चर और एक या अधिक स्वतंत्र चरों के बीच संबंध का वर्णन करता है। सरल रैखिक प्रतिगमन में, यह y = mx + b के रूप में होता है, जहाँ m ढाल (परिवर्तन की दर) है और b y-अवरोधन (जब x = 0 हो तो का मान) है। यह समीकरण आपको स्वतंत्र चर के ज्ञात मानों के आधार पर आश्रित चर के मान की भविष्यवाणी करने की अनुमति देता है।",
       "display": true
     },
     {
       "question": "प्रतिगमन समीकरण की गणना आप कैसे करते हैं?",
-      "answer": "प्रतिगमन समीकरण की गणना करने के लिए, आपको यह करना होगा: 1) x और y के माध्य की गणना करें, 2) ढाल m = Σ(xi-x̄)(yi-ȳ) / Σ(xi-x̄)² की गणना करें, 3) अवरोध b = ȳ - m·x̄ की गणना करें। हमारा कैलकुलेटर यह सब स्वचालित रूप से करता है।",
+      "answer": "रैखिक प्रतिगमन समीकरण की गणना करने के लिए, आपको यह करना होगा: 1) अपने x और y डेटा बिंदुओं के माध्य (औसत) की गणना करें, 2) ढाल की गणना सूत्र m = Σ(xi - x̄)(yi - ȳ) / Σ(xi - x̄)² से करें, 3) अवरोधन की गणना b = ȳ - m·x̄ से करें। हमारा कैलकुलेटर ये सभी चरण स्वचालित रूप से करता है और आपको विस्तृत कार्य दिखाता है।",
       "display": true
     },
     {
-      "question": "R-वर्ग क्या है?",
-      "answer": "R-squared (R²) is a statistical measure that represents the proportion of variance in the dependent variable that can be explained by the independent variable. It ranges from 0 to 1: R² = 0 means the model explains none of the variability; R² = 1 means a perfect fit. Generally, R² above 0.7 indicates a strong relationship, 0.3–0.7 is moderate, and below 0.3 is weak.",
+      "question": "R-वर्ग क्या है और मैं इसकी व्याख्या कैसे करूँ?",
+      "answer": "R-वर्ग (R²) एक सांख्यिकीय माप है जो आश्रित चर में विचरण के उस अनुपात को दर्शाता है जिसे स्वतंत्र चर द्वारा समझाया जा सकता है। यह 0 से 1 तक होता है: R² = 0 का अर्थ है कि मॉडल कोई भी विचरण नहीं समझाता; R² = 1 का अर्थ है पूर्ण अनुकूलन। सामान्यतः, 0.7 से अधिक R² मजबूत संबंध दर्शाता है, 0.3–0.7 मध्यम है, और 0.3 से कम कमजोर है।",
       "display": true
     },
     {
-      "question": "प्रतिगमन कित प्रकार के होते हैं?",
-      "answer": "सामान्य प्रकारों में रैखिक प्रतिगमन, बहु重 प्रतिगमन, बहुपद प्रतिगमन, लॉजिस्टिक प्रतिगमन और रिज प्रतिगमन शामिल हैं। प्रत्येक प्रकार अलग-अलग डेटा पैटर्न और शोध प्रश्नों के लिए उपयुक्त है।",
+      "question": "सहसंबंध गुणांक क्या है?",
+      "answer": "सहसंबंध गुणांक (r) दो चरों के बीच रैखिक संबंध की ताकत और दिशा को मापता है। यह -1 से +1 तक होता है: r = +1 का अर्थ है पूर्ण सकारात्मक संबंध, r = -1 का अर्थ है पूर्ण नकारात्मक संबंध, और r = 0 का अर्थ है कोई रैखिक संबंध नहीं। r जितना ±1 के करीब होगा, रैखिक संबंध उतना ही मजबूत होगा।",
       "display": true
     },
     {
-      "question": "What is the correlation coefficient?",
-      "answer": "The correlation coefficient (r) measures the strength and direction of the linear relationship between two variables. It ranges from -1 to +1: r = +1 means a perfect positive relationship, r = -1 means a perfect negative relationship, and r = 0 means no linear relationship.",
+      "question": "ढाल और अवरोधन में क्या अंतर है?",
+      "answer": "प्रतिगमन समीकरण y = mx + b में, ढाल (m) आपको बताती है कि x में प्रत्येक इकाई वृद्धि पर y कितना बदलता है। धनात्मक ढाल का अर्थ है कि x बढ़ने पर y भी बढ़ता है; ऋणात्मक ढाल का अर्थ है कि y घटता है। अवरोधन (b) x = 0 होने पर y का भविष्यवाणी मान है — यह वह बिंदु है जहाँ प्रतिगमन रेखा y-अक्ष को काटती है।",
       "display": true
     },
     {
-      "question": "What is the difference between slope and intercept?",
-      "answer": "In the regression equation y = mx + b, the slope (m) tells you how much y changes for each unit increase in x. The intercept (b) is the predicted value of y when x equals zero — it is the point where the regression line crosses the y-axis.",
+      "question": "प्रतिगमन के लिए मुझे कितने डेटा बिंदुओं की आवश्यकता है?",
+      "answer": "न्यूनतम, आपको सरल रैखिक प्रतिगमन समीकरण की गणना के लिए कम से कम 2 डेटा बिंदुओं की आवश्यकता है। हालांकि, सार्थक और विश्वसनीय परिणामों के लिए, कम से कम 10–15 डेटा बिंदु होने की अनुशंसा की जाती है। आपके पास जितने अधिक डेटा बिंदु होंगे, आपका प्रतिगमन मॉडल उतना ही अधिक विश्वसनीय और सांख्यिकीय रूप से महत्वपूर्ण बनेगा।",
       "display": true
     },
     {
-      "question": "How many data points do I need for a regression?",
-      "answer": "At a minimum, you need at least 2 data points to calculate a simple linear regression equation. However, for meaningful and reliable results, it is recommended to have at least 10–15 data points.",
+      "question": "प्रतिगमन की प्रमाण त्रुटि क्या है?",
+      "answer": "प्रतिगमन की प्रमाण त्रुटि (SE) औसत दूरी को मापती है जिस पर देखे गए डेटा बिंदु प्रतिगमन रेखा से दूर होते हैं। छोटा SE इंगित करता है कि डेटा बिंदु अनुकूलित रेखा के करीब हैं, जिसका अर्थ है कि मॉडल भविष्यवाणियाँ अधिक सटीक हैं। यह मूल रूप से मॉडल की परिशुद्धता का माप है।",
       "display": true
     },
     {
-      "question": "What is the standard error of the regression?",
-      "answer": "The standard error (SE) of the regression measures the average distance that the observed data points fall from the regression line. A smaller SE indicates that the data points are closer to the fitted line, meaning the model predictions are more accurate.",
+      "question": "मुझे रैखिक प्रतिगमन का उपयोग कब करना चाहिए?",
+      "answer": "रैखिक प्रतिगमन का उपयोग तब करें जब आप एक सतत आश्रित चर और एक या अधिक स्वतंत्र चरों के बीच संबंध को मॉडल करना चाहते हों, और जब संबंध लगभग रैखिक प्रतीत होता हो। सामान्य अनुप्रयोगों में विज्ञापन खर्च से बिक्री की भविष्यवाणी, वर्ग फुटेज से घर की कीमत का अनुमान, या अध्ययन समय का परीक्षा अंकों पर प्रभाव का विश्लेषण शामिल है।",
       "display": true
     },
     {
-      "question": "When should I use linear regression?",
-      "answer": "Use linear regression when you want to model the relationship between a continuous dependent variable and one or more independent variables, and when the relationship appears to be approximately linear.",
+      "question": "रैखिक प्रतिगमन की मान्यताएँ क्या हैं?",
+      "answer": "रैखिक प्रतिगमन मानता है: 1) रैखिकता — चरों के बीच संबंध रैखिक है, 2) स्वतंत्रता — प्रेक्षण एक-दूसरे से स्वतंत्र हैं, 3) समप्रसरणता — अवशिष्टों में स्थिर विचरण है, 4) प्रसामान्यता — अवशिष्ट प्रसामान्य रूप से वितरित हैं, 5) बहुसंरेखणता नहीं — स्वतंत्र चर अत्यधिक सहसंबंधित नहीं हैं (बहु प्रतिगमन के लिए)। इन मान्यताओं का उल्लंघन अविश्वसनीय परिणाम दे सकता है।",
       "display": true
     },
     {
-      "question": "What are the assumptions of linear regression?",
-      "answer": "Linear regression assumes: 1) Linearity, 2) Independence, 3) Homoscedasticity, 4) Normality of residuals, 5) No multicollinearity. Violating these assumptions can lead to unreliable results.",
+      "question": "सहसंबंध और प्रतिगमन में क्या अंतर है?",
+      "answer": "सहसंबंध दो चरों के बीच संबंध की ताकत और दिशा को मापता है (-1 से +1 तक) बिना कारणता सिद्ध किए। प्रतिगमन इससे आगे बढ़कर डेटा पर एक रेखा फिट करता है और एक समीकरण (y = mx + b) प्रदान करता है जो एक चर को दूसरे से भविष्यवाणी कर सकता है। जबकि सहसंबंध सममित है (r_xy = r_yx), प्रतिगमन नहीं है — x से y की भविष्यवाणी y से x की भविष्यवाणी से भिन्न परिणाम देती है।",
       "display": true
     },
     {
-      "question": "What is the difference between correlation and regression?",
-      "answer": "Correlation measures the strength and direction of the relationship between two variables without implying causation. Regression goes further by fitting a line and providing an equation that can predict one variable from another.",
+      "question": "प्रतिगमन कितने प्रकार के होते हैं?",
+      "answer": "सामान्य प्रकारों में शामिल हैं: रैखिक प्रतिगमन (एक भविष्यवक्ता), बहु प्रतिगमन (अनेक भविष्यवक्ता), बहुपद प्रतिगमन (वक्र संबंध), लॉजिस्टिक प्रतिगमन (द्विआधारी परिणाम), रिज प्रतिगमन (अतिरिक्तीकरण रोकने के लिए नियमितीकरण के साथ), और लैसो प्रतिगमन (नियमितीकरण द्वारा विशेषता चयन)। प्रत्येक प्रकार अलग-अलग डेटा पैटर्न और शोध प्रश्नों के लिए उपयुक्त है।",
       "display": true
     },
     {
-      "question": "What types of regression are there?",
-      "answer": "Common types include: Linear Regression, Multiple Regression, Polynomial Regression, Logistic Regression, Ridge Regression, and Lasso Regression. Each type suits different data patterns and research questions.",
-      "display": true
-    },
-    {
-      "question": "Can I use this calculator for multiple regression?",
-      "answer": "Currently, this calculator supports simple linear regression with one independent variable. For multiple regression, you would need specialized statistical software like R, Python, or SPSS.",
+      "question": "क्या मैं इस कैलकुलेटर का उपयोग बहु प्रतिगमन के लिए कर सकता हूँ?",
+      "answer": "वर्तमान में, यह कैलकुलेटर एक स्वतंत्र चर (x) और एक आश्रित चर (y) के साथ सरल रैखिक प्रतिगमन का समर्थन करता है। अनेक भविष्यवक्ताओं वाले बहु प्रतिगमन के लिए, आपको R, Python (statsmodels), या SPSS जैसे विशेष सांख्यिकीय सॉफ्टवेयर का उपयोग करना होगा। हम भविष्य के अद्यतन में बहु प्रतिगमन समर्थन जोड़ सकते हैं।",
       "display": false
     }
   ]

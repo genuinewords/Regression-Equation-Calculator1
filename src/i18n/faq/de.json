@@ -2,67 +2,62 @@
   "faqs": [
     {
       "question": "Was ist eine Regressionsgleichung?",
-      "answer": "A regression equation is a mathematical formula that describes the relationship between a dependent variable and one or more independent variables. In simple linear regression, it takes the form y = mx + b, where m is the slope (rate of change) and b is the y-intercept (value when x = 0). The equation allows you to predict the value of the dependent variable based on known values of the independent variable(s).",
+      "answer": "Eine Regressionsgleichung ist eine mathematische Formel, die die Beziehung zwischen einer abhängigen Variable und einer oder mehreren unabhängigen Variablen beschreibt. In der einfachen linearen Regression hat sie die Form y = mx + b, wobei m die Steigung (Änderungsrate) und b der y-Achsenabschnitt (Wert bei x = 0) ist. Die Gleichung ermöglicht es, den Wert der abhängigen Variable auf Grundlage bekannter Werte der unabhängigen Variable(n) vorherzusagen.",
       "display": true
     },
     {
       "question": "Wie berechnet man eine Regressionsgleichung?",
-      "answer": "Um eine Regressionsgleichung zu berechnen, müssen Sie: 1) Die Mittelwerte von x und y berechnen, 2) Die Steigung m = Σ(xi-x̄)(yi-ȳ) / Σ(xi-x̄)² berechnen, 3) Den Achsenabschnitt b = ȳ - m·x̄ berechnen. Unser Rechner macht all das automatisch.",
+      "answer": "Um eine lineare Regressionsgleichung zu berechnen, müssen Sie: 1) Die Mittelwerte Ihrer x- und y-Datenpunkte berechnen, 2) Die Steigung mit der Formel m = Σ(xi - x̄)(yi - ȳ) / Σ(xi - x̄)² berechnen, 3) Den Achsenabschnitt mit b = ȳ - m·x̄ berechnen. Unser Rechner führt all diese Schritte automatisch durch und zeigt Ihnen die detaillierte Rechnung.",
       "display": true
     },
     {
-      "question": "Was ist R-Quadrat?",
-      "answer": "R-squared (R²) is a statistical measure that represents the proportion of variance in the dependent variable that can be explained by the independent variable. It ranges from 0 to 1: R² = 0 means the model explains none of the variability; R² = 1 means a perfect fit. Generally, R² above 0.7 indicates a strong relationship, 0.3–0.7 is moderate, and below 0.3 is weak.",
+      "question": "Was ist R-Quadrat und wie interpretiere ich es?",
+      "answer": "R-Quadrat (R²) ist ein statistisches Maß, das den Anteil der Varianz in der abhängigen Variable darstellt, der durch die unabhängige Variable erklärt werden kann. Es reicht von 0 bis 1: R² = 0 bedeutet, dass das Modell keine der Variabilität erklärt; R² = 1 bedeutet eine perfekte Anpassung. Im Allgemeinen deutet ein R² über 0,7 auf eine starke Beziehung hin, 0,3–0,7 ist moderat und unter 0,3 ist schwach.",
+      "display": true
+    },
+    {
+      "question": "Was ist der Korrelationskoeffizient?",
+      "answer": "Der Korrelationskoeffizient (r) misst die Stärke und Richtung der linearen Beziehung zwischen zwei Variablen. Er reicht von -1 bis +1: r = +1 bedeutet eine perfekte positive Beziehung, r = -1 bedeutet eine perfekte negative Beziehung und r = 0 bedeutet keine lineare Beziehung. Je näher r an ±1 liegt, desto stärker ist der lineare Zusammenhang.",
+      "display": true
+    },
+    {
+      "question": "Was ist der Unterschied zwischen Steigung und Achsenabschnitt?",
+      "answer": "In der Regressionsgleichung y = mx + b gibt die Steigung (m) an, wie stark sich y ändert, wenn x um eine Einheit zunimmt. Eine positive Steigung bedeutet, dass y zunimmt, wenn x zunimmt; eine negative Steigung bedeutet, dass y abnimmt. Der Achsenabschnitt (b) ist der vorhergesagte Wert von y, wenn x gleich null ist — es ist der Punkt, an dem die Regressionsgerade die y-Achse schneidet.",
+      "display": true
+    },
+    {
+      "question": "Wie viele Datenpunkte benötige ich für eine Regression?",
+      "answer": "Mindestens 2 Datenpunkte sind erforderlich, um eine einfache lineare Regressionsgleichung zu berechnen. Für aussagekräftige und zuverlässige Ergebnisse wird jedoch empfohlen, mindestens 10–15 Datenpunkte zu verwenden. Je mehr Datenpunkte vorhanden sind, desto zuverlässiger und statistisch signifikanter wird Ihr Regressionsmodell.",
+      "display": true
+    },
+    {
+      "question": "Was ist der Standardfehler der Regression?",
+      "answer": "Der Standardfehler (SE) der Regression misst die durchschnittliche Entfernung, die die beobachteten Datenpunkte von der Regressionsgeraden abweichen. Ein kleinerer SE zeigt, dass die Datenpunkte näher an der angepassten Geraden liegen, was bedeutet, dass die Modellvorhersagen genauer sind. Es ist im Wesentlichen ein Maß für die Genauigkeit des Modells.",
+      "display": true
+    },
+    {
+      "question": "Wann sollte ich lineare Regression verwenden?",
+      "answer": "Verwenden Sie lineare Regression, wenn Sie die Beziehung zwischen einer kontinuierlichen abhängigen Variable und einer oder mehreren unabhängigen Variablen modellieren möchten und die Beziehung annähernd linear zu sein scheint. Typische Anwendungen sind die Vorhersage von Umsätzen anhand von Werbeausgaben, die Schätzung von Hauspreisen anhand der Wohnfläche oder die Analyse des Einflusses von Lernzeit auf Prüfungsergebnisse.",
+      "display": true
+    },
+    {
+      "question": "Was sind die Voraussetzungen der linearen Regression?",
+      "answer": "Die lineare Regression setzt voraus: 1) Linearität — die Beziehung zwischen den Variablen ist linear, 2) Unabhängigkeit — die Beobachtungen sind unabhängig voneinander, 3) Homoskedastizität — die Residuen haben eine konstante Varianz, 4) Normalität — die Residuen sind normalverteilt, 5) Keine Multikollinearität — die unabhängigen Variablen sind nicht stark korreliert (bei multipler Regression). Eine Verletzung dieser Voraussetzungen kann zu unzuverlässigen Ergebnissen führen.",
+      "display": true
+    },
+    {
+      "question": "Was ist der Unterschied zwischen Korrelation und Regression?",
+      "answer": "Korrelation misst die Stärke und Richtung der Beziehung zwischen zwei Variablen (im Bereich von -1 bis +1), ohne eine Kausalität zu implizieren. Regression geht darüber hinaus, indem sie eine Gerade an die Daten anpasst und eine Gleichung (y = mx + b) liefert, mit der eine Variable aus der anderen vorhergesagt werden kann. Während die Korrelation symmetrisch ist (r_xy = r_yx), ist die Regression es nicht — die Vorhersage von y aus x führt zu anderen Ergebnissen als die Vorhersage von x aus y.",
       "display": true
     },
     {
       "question": "Welche Arten von Regression gibt es?",
-      "answer": "Gängige Arten sind lineare Regression, multiple Regression, polynomiale Regression, logistische Regression und Ridge-Regression. Jede Art eignet sich für unterschiedliche Datenmuster und Forschungsfragen.",
+      "answer": "Gängige Arten sind: Lineare Regression (ein Prädiktor), Multiple Regression (mehrere Prädiktoren), Polynomiale Regression (gekrümmte Beziehungen), Logistische Regression (binäre Ergebnisse), Ridge-Regression (mit Regularisierung zur Vermeidung von Überanpassung) und Lasso-Regression (Merkmalssauswahl durch Regularisierung). Jede Art eignet sich für unterschiedliche Datenmuster und Forschungsfragen.",
       "display": true
     },
     {
-      "question": "What is the correlation coefficient?",
-      "answer": "The correlation coefficient (r) measures the strength and direction of the linear relationship between two variables. It ranges from -1 to +1: r = +1 means a perfect positive relationship, r = -1 means a perfect negative relationship, and r = 0 means no linear relationship.",
-      "display": true
-    },
-    {
-      "question": "What is the difference between slope and intercept?",
-      "answer": "In the regression equation y = mx + b, the slope (m) tells you how much y changes for each unit increase in x. The intercept (b) is the predicted value of y when x equals zero — it is the point where the regression line crosses the y-axis.",
-      "display": true
-    },
-    {
-      "question": "How many data points do I need for a regression?",
-      "answer": "At a minimum, you need at least 2 data points to calculate a simple linear regression equation. However, for meaningful and reliable results, it is recommended to have at least 10–15 data points.",
-      "display": true
-    },
-    {
-      "question": "What is the standard error of the regression?",
-      "answer": "The standard error (SE) of the regression measures the average distance that the observed data points fall from the regression line. A smaller SE indicates that the data points are closer to the fitted line, meaning the model predictions are more accurate.",
-      "display": true
-    },
-    {
-      "question": "When should I use linear regression?",
-      "answer": "Use linear regression when you want to model the relationship between a continuous dependent variable and one or more independent variables, and when the relationship appears to be approximately linear.",
-      "display": true
-    },
-    {
-      "question": "What are the assumptions of linear regression?",
-      "answer": "Linear regression assumes: 1) Linearity, 2) Independence, 3) Homoscedasticity, 4) Normality of residuals, 5) No multicollinearity. Violating these assumptions can lead to unreliable results.",
-      "display": true
-    },
-    {
-      "question": "What is the difference between correlation and regression?",
-      "answer": "Correlation measures the strength and direction of the relationship between two variables without implying causation. Regression goes further by fitting a line and providing an equation that can predict one variable from another.",
-      "display": true
-    },
-    {
-      "question": "What types of regression are there?",
-      "answer": "Common types include: Linear Regression, Multiple Regression, Polynomial Regression, Logistic Regression, Ridge Regression, and Lasso Regression. Each type suits different data patterns and research questions.",
-      "display": true
-    },
-    {
-      "question": "Can I use this calculator for multiple regression?",
-      "answer": "Currently, this calculator supports simple linear regression with one independent variable. For multiple regression, you would need specialized statistical software like R, Python, or SPSS.",
+      "question": "Kann ich diesen Rechner für multiple Regression verwenden?",
+      "answer": "Derzeit unterstützt dieser Rechner nur die einfache lineare Regression mit einer unabhängigen Variable (x) und einer abhängigen Variable (y). Für multiple Regression mit mehreren Prädiktoren benötigen Sie spezialisierte Statistiksoftware wie R, Python (statsmodels) oder SPSS. Möglicherweise werden wir in einem zukünftigen Update die Unterstützung für multiple Regression hinzufügen.",
       "display": false
     }
   ]
