@@ -2,67 +2,62 @@
   "faqs": [
     {
       "question": "Czym jest równanie regresji?",
-      "answer": "A regression equation is a mathematical formula that describes the relationship between a dependent variable and one or more independent variables. In simple linear regression, it takes the form y = mx + b, where m is the slope (rate of change) and b is the y-intercept (value when x = 0). The equation allows you to predict the value of the dependent variable based on known values of the independent variable(s).",
+      "answer": "Równanie regresji to wzór matematyczny opisujący zależność między zmienną zależną a jedną lub więcej zmiennymi niezależnymi. W prostej regresji liniowej przyjmuje ono postać y = mx + b, gdzie m to nachylenie (współczynnik kierunkowy, tempo zmian), a b to punkt przecięcia z osią y (wartość gdy x = 0). Równanie to pozwala przewidywać wartość zmiennej zależnej na podstawie znanych wartości zmiennej niezależnej (lub zmiennych niezależnych).",
       "display": true
     },
     {
       "question": "Jak obliczyć równanie regresji?",
-      "answer": "Aby obliczyć równanie regresji, musisz: 1) Obliczyć średnie x i y, 2) Obliczyć nachylenie m = Σ(xi-x̄)(yi-ȳ) / Σ(xi-x̄)², 3) Obliczyć wyraz wolny b = ȳ - m·x̄. Nasz kalkulator wykonuje to wszystko automatycznie.",
+      "answer": "Aby obliczyć równanie regresji liniowej, należy: 1) Obliczyć średnie (wartości średnie) punktów danych x i y, 2) Obliczyć nachylenie za pomocą wzoru m = Σ(xi - x̄)(yi - ȳ) / Σ(xi - x̄)², 3) Obliczyć wyraz wolny za pomocą b = ȳ - m·x̄. Nasz kalkulator wykonuje wszystkie te kroki automatycznie i pokazuje szczegółowe obliczenia.",
       "display": true
     },
     {
-      "question": "Czym jest R-kwadrat?",
-      "answer": "R-squared (R²) is a statistical measure that represents the proportion of variance in the dependent variable that can be explained by the independent variable. It ranges from 0 to 1: R² = 0 means the model explains none of the variability; R² = 1 means a perfect fit. Generally, R² above 0.7 indicates a strong relationship, 0.3–0.7 is moderate, and below 0.3 is weak.",
+      "question": "Czym jest R-kwadrat i jak je interpretować?",
+      "answer": "R-kwadrat (R²) to miara statystyczna określająca proporcję wariancji zmiennej zależnej, którą można wyjaśnić za pomocą zmiennej niezależnej. Przyjmuje wartości od 0 do 1: R² = 0 oznacza, że model nie wyjaśnia żadnej zmienności; R² = 1 oznacza idealne dopasowanie. Ogólnie, R² powyżej 0,7 wskazuje na silną zależność, 0,3–0,7 to zależność umiarkowana, a poniżej 0,3 to słaba zależność.",
+      "display": true
+    },
+    {
+      "question": "Czym jest współczynnik korelacji?",
+      "answer": "Współczynnik korelacji (r) mierzy siłę i kierunek liniowej zależności między dwiema zmiennymi. Przyjmuje wartości od -1 do +1: r = +1 oznacza idealną zależność dodatnią, r = -1 oznacza idealną zależność ujemną, a r = 0 oznacza brak zależności liniowej. Im bliżej r wartości ±1, tym silniejsze powiązanie liniowe.",
+      "display": true
+    },
+    {
+      "question": "Jaka jest różnica między nachyleniem a wyrazem wolnym?",
+      "answer": "W równaniu regresji y = mx + b, nachylenie (m) informuje, o ile zmienia się y przy jednostkowym wzroście x. Nachylenie dodatnie oznacza, że y rośnie wraz ze wzrostem x; nachylenie ujemne oznacza, że y maleje. Wyraz wolny (b) to przewidywana wartość y, gdy x wynosi zero — jest to punkt, w którym prosta regresji przecina oś y.",
+      "display": true
+    },
+    {
+      "question": "Ile punktów danych potrzebuję do regresji?",
+      "answer": "Wymagane jest minimum 2 punktów danych do obliczenia równania prostej regresji liniowej. Jednakże, aby uzyskać wyniki sensowne i wiarygodne, zaleca się posiadanie co najmniej 10–15 punktów danych. Im więcej punktów danych posiadasz, tym bardziej wiarygodny i statystycznie istotny staje się model regresji.",
+      "display": true
+    },
+    {
+      "question": "Czym jest błąd standardowy regresji?",
+      "answer": "Błąd standardowy (SE) regresji mierzy średnią odległość, o jaką obserwowane punkty danych odstają od prostej regresji. Mniejszy SE wskazuje, że punkty danych leżą bliżej dopasowanej prostej, co oznacza, że przewidywania modelu są bardziej dokładne. Jest to zasadniczo miara precyzji modelu.",
+      "display": true
+    },
+    {
+      "question": "Kiedy należy stosować regresję liniową?",
+      "answer": "Stosuj regresję liniową, gdy chcesz modelować zależność między ciągłą zmienną zależną a jedną lub więcej zmiennymi niezależnymi, a zależność wydaje się w przybliżeniu liniowa. Typowe zastosowania obejmują przewidywanie sprzedaży na podstawie wydatków na reklamę, szacowanie cen domów na podstawie metrażu lub analizę wpływu czasu nauki na wyniki testów.",
+      "display": true
+    },
+    {
+      "question": "Jakie są założenia regresji liniowej?",
+      "answer": "Regresja liniowa zakłada: 1) Liniowość — zależność między zmiennymi jest liniowa, 2) Niezależność — obserwacje są od siebie niezależne, 3) Homoskedastyczność — reszty mają stałą wariancję, 4) Normalność — reszty mają rozkład normalny, 5) Brak multikolinearności — zmienne niezależne nie są ze sobą silnie skorelowane (dla regresji wielorakiej). Naruszenie tych założeń może prowadzić do niewiarygodnych wyników.",
+      "display": true
+    },
+    {
+      "question": "Jaka jest różnica między korelacją a regresją?",
+      "answer": "Korelacja mierzy siłę i kierunek zależności między dwiema zmiennymi (w zakresie od -1 do +1) bez sugerowania związku przyczynowego. Regresja idzie o krok dalej, dopasowując prostą do danych i dostarczając równanie (y = mx + b), które pozwala przewidywać jedną zmienną na podstawie drugiej. O ile korelacja jest symetryczna (r_xy = r_yx), o tyle regresja nie jest — przewidywanie y na podstawie x daje inne wyniki niż przewidywanie x na podstawie y.",
       "display": true
     },
     {
       "question": "Jakie rodzaje regresji istnieją?",
-      "answer": "Typowe rodzaje to regresja liniowa, regresja wieloraka, regresja wielomianowa, regresja logistyczna i regresja grzbietowa. Każdy rodzaj nadaje się do różnych wzorców danych i pytań badawczych.",
+      "answer": "Typowe rodzaje obejmują: Regresję Liniową (jeden predyktor), Regresję Wieloraką (wiele predyktorów), Regresję Wielomianową (zależności nieliniowe), Regresję Logistyczną (wyniki binarne), Regresję Grzbietową (z regularyzacją zapobiegającą przeuczeniu) i Regresję Lasso (selekcja cech poprzez regularyzację). Każdy rodzaj nadaje się do różnych wzorców danych i pytań badawczych.",
       "display": true
     },
     {
-      "question": "What is the correlation coefficient?",
-      "answer": "The correlation coefficient (r) measures the strength and direction of the linear relationship between two variables. It ranges from -1 to +1: r = +1 means a perfect positive relationship, r = -1 means a perfect negative relationship, and r = 0 means no linear relationship.",
-      "display": true
-    },
-    {
-      "question": "What is the difference between slope and intercept?",
-      "answer": "In the regression equation y = mx + b, the slope (m) tells you how much y changes for each unit increase in x. The intercept (b) is the predicted value of y when x equals zero — it is the point where the regression line crosses the y-axis.",
-      "display": true
-    },
-    {
-      "question": "How many data points do I need for a regression?",
-      "answer": "At a minimum, you need at least 2 data points to calculate a simple linear regression equation. However, for meaningful and reliable results, it is recommended to have at least 10–15 data points.",
-      "display": true
-    },
-    {
-      "question": "What is the standard error of the regression?",
-      "answer": "The standard error (SE) of the regression measures the average distance that the observed data points fall from the regression line. A smaller SE indicates that the data points are closer to the fitted line, meaning the model predictions are more accurate.",
-      "display": true
-    },
-    {
-      "question": "When should I use linear regression?",
-      "answer": "Use linear regression when you want to model the relationship between a continuous dependent variable and one or more independent variables, and when the relationship appears to be approximately linear.",
-      "display": true
-    },
-    {
-      "question": "What are the assumptions of linear regression?",
-      "answer": "Linear regression assumes: 1) Linearity, 2) Independence, 3) Homoscedasticity, 4) Normality of residuals, 5) No multicollinearity. Violating these assumptions can lead to unreliable results.",
-      "display": true
-    },
-    {
-      "question": "What is the difference between correlation and regression?",
-      "answer": "Correlation measures the strength and direction of the relationship between two variables without implying causation. Regression goes further by fitting a line and providing an equation that can predict one variable from another.",
-      "display": true
-    },
-    {
-      "question": "What types of regression are there?",
-      "answer": "Common types include: Linear Regression, Multiple Regression, Polynomial Regression, Logistic Regression, Ridge Regression, and Lasso Regression. Each type suits different data patterns and research questions.",
-      "display": true
-    },
-    {
-      "question": "Can I use this calculator for multiple regression?",
-      "answer": "Currently, this calculator supports simple linear regression with one independent variable. For multiple regression, you would need specialized statistical software like R, Python, or SPSS.",
+      "question": "Czy mogę użyć tego kalkulatora do regresji wielorakiej?",
+      "answer": "Obecnie ten kalkulator obsługuje prostą regresję liniową z jedną zmienną niezależną (x) i jedną zmienną zależną (y). Do regresji wielorakiej z kilkoma predyktorami należy użyć specjalistycznego oprogramowania statystycznego, takiego jak R, Python (statsmodels) lub SPSS. Możemy dodać obsługę regresji wielorakiej w przyszłej aktualizacji.",
       "display": false
     }
   ]

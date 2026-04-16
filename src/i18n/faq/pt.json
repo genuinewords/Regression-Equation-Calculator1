@@ -2,67 +2,62 @@
   "faqs": [
     {
       "question": "O que é uma equação de regressão?",
-      "answer": "A regression equation is a mathematical formula that describes the relationship between a dependent variable and one or more independent variables. In simple linear regression, it takes the form y = mx + b, where m is the slope (rate of change) and b is the y-intercept (value when x = 0). The equation allows you to predict the value of the dependent variable based on known values of the independent variable(s).",
+      "answer": "Uma equação de regressão é uma fórmula matemática que descreve a relação entre uma variável dependente e uma ou mais variáveis independentes. Na regressão linear simples, ela assume a forma y = mx + b, onde m é a inclinação (taxa de variação) e b é o intercepto y (valor quando x = 0). A equação permite prever o valor da variável dependente com base em valores conhecidos da(s) variável(is) independente(s).",
       "display": true
     },
     {
       "question": "Como se calcula uma equação de regressão?",
-      "answer": "Para calcular uma equação de regressão, você precisa: 1) Calcular as médias de x e y, 2) Calcular a inclinação m = Σ(xi-x̄)(yi-ȳ) / Σ(xi-x̄)², 3) Calcular o intercepto b = ȳ - m·x̄. Nossa calculadora faz tudo isso automaticamente.",
+      "answer": "Para calcular uma equação de regressão linear, você precisa: 1) Calcular as médias dos seus pontos de dados x e y, 2) Calcular a inclinação usando a fórmula m = Σ(xi - x̄)(yi - ȳ) / Σ(xi - x̄)², 3) Calcular o intercepto usando b = ȳ - m·x̄. Nossa calculadora realiza todos esses passos automaticamente e mostra o cálculo detalhado.",
       "display": true
     },
     {
-      "question": "O que é R-quadrado?",
-      "answer": "R-squared (R²) is a statistical measure that represents the proportion of variance in the dependent variable that can be explained by the independent variable. It ranges from 0 to 1: R² = 0 means the model explains none of the variability; R² = 1 means a perfect fit. Generally, R² above 0.7 indicates a strong relationship, 0.3–0.7 is moderate, and below 0.3 is weak.",
+      "question": "O que é R-quadrado e como interpretá-lo?",
+      "answer": "O R-quadrado (R²) é uma medida estatística que representa a proporção da variância na variável dependente que pode ser explicada pela variável independente. Varia de 0 a 1: R² = 0 significa que o modelo não explica nenhuma variabilidade; R² = 1 significa um ajuste perfeito. Geralmente, R² acima de 0,7 indica uma relação forte, 0,3–0,7 é moderada, e abaixo de 0,3 é fraca.",
+      "display": true
+    },
+    {
+      "question": "O que é o coeficiente de correlação?",
+      "answer": "O coeficiente de correlação (r) mede a força e a direção da relação linear entre duas variáveis. Varia de -1 a +1: r = +1 significa uma relação positiva perfeita, r = -1 significa uma relação negativa perfeita, e r = 0 significa ausência de relação linear. Quanto mais próximo de ±1, mais forte é a associação linear.",
+      "display": true
+    },
+    {
+      "question": "Qual é a diferença entre inclinação e intercepto?",
+      "answer": "Na equação de regressão y = mx + b, a inclinação (m) indica quanto y muda para cada aumento unitário em x. Uma inclinação positiva significa que y aumenta conforme x aumenta; uma inclinação negativa significa que y diminui. O intercepto (b) é o valor previsto de y quando x é igual a zero — é o ponto onde a linha de regressão cruza o eixo y.",
+      "display": true
+    },
+    {
+      "question": "Quantos pontos de dados preciso para uma regressão?",
+      "answer": "No mínimo, você precisa de pelo menos 2 pontos de dados para calcular uma equação de regressão linear simples. No entanto, para resultados significativos e confiáveis, recomenda-se ter pelo menos 10–15 pontos de dados. Quanto mais pontos de dados você tiver, mais confiável e estatisticamente significativo seu modelo de regressão se torna.",
+      "display": true
+    },
+    {
+      "question": "O que é o erro padrão da regressão?",
+      "answer": "O erro padrão (EP) da regressão mede a distância média que os pontos de dados observados ficam da linha de regressão. Um EP menor indica que os pontos de dados estão mais próximos da linha ajustada, significando que as previsões do modelo são mais precisas. É essencialmente uma medida da precisão do modelo.",
+      "display": true
+    },
+    {
+      "question": "Quando devo usar regressão linear?",
+      "answer": "Use regressão linear quando desejar modelar a relação entre uma variável dependente contínua e uma ou mais variáveis independentes, e quando a relação parece ser aproximadamente linear. Aplicações comuns incluem prever vendas a partir de gastos com publicidade, estimar preços de imóveis a partir da metragem quadrada, ou analisar o efeito do tempo de estudo nas notas de provas.",
+      "display": true
+    },
+    {
+      "question": "Quais são os pressupostos da regressão linear?",
+      "answer": "A regressão linear assume: 1) Linearidade — a relação entre as variáveis é linear, 2) Independência — as observações são independentes entre si, 3) Homocedasticidade — os resíduos têm variância constante, 4) Normalidade — os resíduos seguem uma distribuição normal, 5) Ausência de multicolinearidade — as variáveis independentes não são altamente correlacionadas (para regressão múltipla). Violar esses pressupostos pode levar a resultados não confiáveis.",
+      "display": true
+    },
+    {
+      "question": "Qual é a diferença entre correlação e regressão?",
+      "answer": "A correlação mede a força e a direção da relação entre duas variáveis (variando de -1 a +1) sem implicar causalidade. A regressão vai além, ajustando uma linha aos dados e fornecendo uma equação (y = mx + b) que pode prever uma variável a partir da outra. Enquanto a correlação é simétrica (r_xy = r_yx), a regressão não é — prever y a partir de x produz resultados diferentes de prever x a partir de y.",
       "display": true
     },
     {
       "question": "Quais tipos de regressão existem?",
-      "answer": "Os tipos comuns incluem regressão linear, regressão múltipla, regressão polinomial, regressão logística e regressão ridge. Cada tipo é adequado para diferentes padrões de dados e perguntas de pesquisa.",
+      "answer": "Os tipos comuns incluem: Regressão Linear (um preditor), Regressão Múltipla (múltiplos preditores), Regressão Polinomial (relações curvas), Regressão Logística (resultados binários), Regressão Ridge (com regularização para evitar sobreajuste) e Regressão Lasso (seleção de variáveis via regularização). Cada tipo é adequado para diferentes padrões de dados e questões de pesquisa.",
       "display": true
     },
     {
-      "question": "What is the correlation coefficient?",
-      "answer": "The correlation coefficient (r) measures the strength and direction of the linear relationship between two variables. It ranges from -1 to +1: r = +1 means a perfect positive relationship, r = -1 means a perfect negative relationship, and r = 0 means no linear relationship.",
-      "display": true
-    },
-    {
-      "question": "What is the difference between slope and intercept?",
-      "answer": "In the regression equation y = mx + b, the slope (m) tells you how much y changes for each unit increase in x. The intercept (b) is the predicted value of y when x equals zero — it is the point where the regression line crosses the y-axis.",
-      "display": true
-    },
-    {
-      "question": "How many data points do I need for a regression?",
-      "answer": "At a minimum, you need at least 2 data points to calculate a simple linear regression equation. However, for meaningful and reliable results, it is recommended to have at least 10–15 data points.",
-      "display": true
-    },
-    {
-      "question": "What is the standard error of the regression?",
-      "answer": "The standard error (SE) of the regression measures the average distance that the observed data points fall from the regression line. A smaller SE indicates that the data points are closer to the fitted line, meaning the model predictions are more accurate.",
-      "display": true
-    },
-    {
-      "question": "When should I use linear regression?",
-      "answer": "Use linear regression when you want to model the relationship between a continuous dependent variable and one or more independent variables, and when the relationship appears to be approximately linear.",
-      "display": true
-    },
-    {
-      "question": "What are the assumptions of linear regression?",
-      "answer": "Linear regression assumes: 1) Linearity, 2) Independence, 3) Homoscedasticity, 4) Normality of residuals, 5) No multicollinearity. Violating these assumptions can lead to unreliable results.",
-      "display": true
-    },
-    {
-      "question": "What is the difference between correlation and regression?",
-      "answer": "Correlation measures the strength and direction of the relationship between two variables without implying causation. Regression goes further by fitting a line and providing an equation that can predict one variable from another.",
-      "display": true
-    },
-    {
-      "question": "What types of regression are there?",
-      "answer": "Common types include: Linear Regression, Multiple Regression, Polynomial Regression, Logistic Regression, Ridge Regression, and Lasso Regression. Each type suits different data patterns and research questions.",
-      "display": true
-    },
-    {
-      "question": "Can I use this calculator for multiple regression?",
-      "answer": "Currently, this calculator supports simple linear regression with one independent variable. For multiple regression, you would need specialized statistical software like R, Python, or SPSS.",
+      "question": "Posso usar esta calculadora para regressão múltipla?",
+      "answer": "Atualmente, esta calculadora suporta apenas regressão linear simples com uma variável independente (x) e uma variável dependente (y). Para regressão múltipla com vários preditores, você precisaria usar software estatístico especializado como R, Python (statsmodels) ou SPSS. Podemos adicionar suporte a regressão múltipla em uma atualização futura.",
       "display": false
     }
   ]

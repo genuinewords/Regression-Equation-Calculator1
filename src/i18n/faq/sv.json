@@ -2,67 +2,62 @@
   "faqs": [
     {
       "question": "Vad är en regressionsekvation?",
-      "answer": "A regression equation is a mathematical formula that describes the relationship between a dependent variable and one or more independent variables. In simple linear regression, it takes the form y = mx + b, where m is the slope (rate of change) and b is the y-intercept (value when x = 0). The equation allows you to predict the value of the dependent variable based on known values of the independent variable(s).",
+      "answer": "En regressionsekvation är en matematisk formel som beskriver sambandet mellan en beroende variabel och en eller flera oberoende variabler. Vid enkel linjär regression antar den formen y = mx + b, där m är lutningen (förändringstakt) och b är y-skärningen (värdet när x = 0). Ekvationen låter dig förutsäga värdet på den beroende variabeln baserat på kända värden på den oberoende variabeln.",
       "display": true
     },
     {
       "question": "Hur beräknar man en regressionsekvation?",
-      "answer": "För att beräkna en regressionsekvation behöver du: 1) Beräkna medelvärdena för x och y, 2) Beräkna lutningen m = Σ(xi-x̄)(yi-ȳ) / Σ(xi-x̄)², 3) Beräkna skärningspunkten b = ȳ - m·x̄. Vår kalkylator gör allt detta automatiskt.",
+      "answer": "För att beräkna en linjär regressionsekvation behöver du: 1) Beräkna medelvärdena för dina x- och y-datapunkter, 2) Beräkna lutningen med formeln m = Σ(xi - x̄)(yi - ȳ) / Σ(xi - x̄)², 3) Beräkna skärningspunkten med b = ȳ - m·x̄. Vår kalkylator utför alla dessa steg automatiskt och visar dig den detaljerade uträkningen.",
       "display": true
     },
     {
-      "question": "Vad är R-kvadrat?",
-      "answer": "R-squared (R²) is a statistical measure that represents the proportion of variance in the dependent variable that can be explained by the independent variable. It ranges from 0 to 1: R² = 0 means the model explains none of the variability; R² = 1 means a perfect fit. Generally, R² above 0.7 indicates a strong relationship, 0.3–0.7 is moderate, and below 0.3 is weak.",
+      "question": "Vad är R-kvadrat och hur tolkar jag det?",
+      "answer": "R-kvadrat (R²) är ett statistiskt mått som representerar andelen av variansen i den beroende variabeln som kan förklaras av den oberoende variabeln. Det sträcker sig från 0 till 1: R² = 0 betyder att modellen inte förklarar någon variabilitet; R² = 1 betyder en perfekt passning. I allmänhet indikerar R² över 0.7 ett starkt samband, 0.3–0.7 är måttligt, och under 0.3 är svagt.",
+      "display": true
+    },
+    {
+      "question": "Vad är korrelationskoefficienten?",
+      "answer": "Korrelationskoefficienten (r) mäter styrkan och riktningen på det linjära sambandet mellan två variabler. Den sträcker sig från -1 till +1: r = +1 betyder ett perfekt positivt samband, r = -1 betyder ett perfekt negativt samband, och r = 0 betyder inget linjärt samband. Ju närmare r är ±1, desto starkare är det linjära sambandet.",
+      "display": true
+    },
+    {
+      "question": "Vad är skillnaden mellan lutning och skärningspunkt?",
+      "answer": "I regressionsekvationen y = mx + b berättar lutningen (m) hur mycket y ändras för varje enhets ökning av x. En positiv lutning betyder att y ökar när x ökar; en negativ lutning betyder att y minskar. Skärningspunkten (b) är det förväntade värdet av y när x är lika med noll — det är punkten där regressionslinjen korsar y-axeln.",
+      "display": true
+    },
+    {
+      "question": "Hur många datapunkter behöver jag för en regression?",
+      "answer": "Som minimum behöver du minst 2 datapunkter för att beräkna en enkel linjär regressionsekvation. För meningsfulla och tillförlitliga resultat rekommenderas det dock att ha minst 10–15 datapunkter. Ju fler datapunkter du har, desto mer tillförlitlig och statistiskt signifikant blir din regressionsmodell.",
+      "display": true
+    },
+    {
+      "question": "Vad är standardfelet för regressionen?",
+      "answer": "Standardfelet (SE) för regressionen mäter det genomsnittliga avståndet som de observerade datapunkterna faller från regressionslinjen. Ett mindre SE indikerar att datapunkterna ligger närmare den anpassade linjen, vilket innebär att modellens förutsägelser är mer exakta. Det är i grunden ett mått på modellens precision.",
+      "display": true
+    },
+    {
+      "question": "När ska jag använda linjär regression?",
+      "answer": "Använd linjär regression när du vill modellera sambandet mellan en kontinuerlig beroende variabel och en eller flera oberoende variabler, och när sambandet verkar vara ungefärt linjärt. Vanliga tillämpningar inkluderar att förutsäga försäljning från annonsutgifter, uppskatta huspriser från kvadratmeter eller analysera effekten av studiedtid på provresultat.",
+      "display": true
+    },
+    {
+      "question": "Vilka antaganden gör linjär regression?",
+      "answer": "Linjär regression antar: 1) Linearitet — sambandet mellan variablerna är linjärt, 2) Oberoende — observationer är oberoende av varandra, 3) Homoskedasticitet — residualer har konstant varians, 4) Normalitet — residualer är normalfördelade, 5) Ingen multikollinearitet — oberoende variabler är inte högt korrelerade (för multipel regression). Att bryta mot dessa antaganden kan leda till otillförlitliga resultat.",
+      "display": true
+    },
+    {
+      "question": "Vad är skillnaden mellan korrelation och regression?",
+      "answer": "Korrelation mäter styrkan och riktningen på sambandet mellan två variabler (mellan -1 och +1) utan att antyda orsakssamband. Regression går längre genom att anpassa en linje till data och tillhandahålla en ekvation (y = mx + b) som kan förutsäga en variabel från en annan. Medan korrelation är symmetrisk (r_xy = r_yx), är regression det inte — att förutsäga y från x ger andra resultat än att förutsäga x från y.",
       "display": true
     },
     {
       "question": "Vilka typer av regression finns det?",
-      "answer": "Vanliga typer inkluderar linjär regression, multipel regression, polynomell regression, logistisk regression och ridge-regression. Varje typ passar olika datamönster och forskningsfrågor.",
+      "answer": "Vanliga typer inkluderar: Linjär regression (en prediktor), Multipel regression (flera prediktorer), Polynomisk regression (krökta samband), Logistisk regression (binära utfall), Ridge-regression (med regularisering för att förhindra överanpassning) och Lasso-regression (variabelval via regularisering). Varje typ passar olika datamönster och forskningsfrågor.",
       "display": true
     },
     {
-      "question": "What is the correlation coefficient?",
-      "answer": "The correlation coefficient (r) measures the strength and direction of the linear relationship between two variables. It ranges from -1 to +1: r = +1 means a perfect positive relationship, r = -1 means a perfect negative relationship, and r = 0 means no linear relationship.",
-      "display": true
-    },
-    {
-      "question": "What is the difference between slope and intercept?",
-      "answer": "In the regression equation y = mx + b, the slope (m) tells you how much y changes for each unit increase in x. The intercept (b) is the predicted value of y when x equals zero — it is the point where the regression line crosses the y-axis.",
-      "display": true
-    },
-    {
-      "question": "How many data points do I need for a regression?",
-      "answer": "At a minimum, you need at least 2 data points to calculate a simple linear regression equation. However, for meaningful and reliable results, it is recommended to have at least 10–15 data points.",
-      "display": true
-    },
-    {
-      "question": "What is the standard error of the regression?",
-      "answer": "The standard error (SE) of the regression measures the average distance that the observed data points fall from the regression line. A smaller SE indicates that the data points are closer to the fitted line, meaning the model predictions are more accurate.",
-      "display": true
-    },
-    {
-      "question": "When should I use linear regression?",
-      "answer": "Use linear regression when you want to model the relationship between a continuous dependent variable and one or more independent variables, and when the relationship appears to be approximately linear.",
-      "display": true
-    },
-    {
-      "question": "What are the assumptions of linear regression?",
-      "answer": "Linear regression assumes: 1) Linearity, 2) Independence, 3) Homoscedasticity, 4) Normality of residuals, 5) No multicollinearity. Violating these assumptions can lead to unreliable results.",
-      "display": true
-    },
-    {
-      "question": "What is the difference between correlation and regression?",
-      "answer": "Correlation measures the strength and direction of the relationship between two variables without implying causation. Regression goes further by fitting a line and providing an equation that can predict one variable from another.",
-      "display": true
-    },
-    {
-      "question": "What types of regression are there?",
-      "answer": "Common types include: Linear Regression, Multiple Regression, Polynomial Regression, Logistic Regression, Ridge Regression, and Lasso Regression. Each type suits different data patterns and research questions.",
-      "display": true
-    },
-    {
-      "question": "Can I use this calculator for multiple regression?",
-      "answer": "Currently, this calculator supports simple linear regression with one independent variable. For multiple regression, you would need specialized statistical software like R, Python, or SPSS.",
+      "question": "Kan jag använda denna kalkylator för multipel regression?",
+      "answer": "För närvarande stöder denna kalkylator enkel linjär regression med en oberoende variabel (x) och en beroende variabel (y). För multipel regression med flera prediktorer behöver du använda specialiserad statistisk programvara som R, Python (statsmodels) eller SPSS. Vi kan komma att lägga till stöd för multipel regression i en framtida uppdatering.",
       "display": false
     }
   ]

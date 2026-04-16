@@ -2,67 +2,62 @@
   "faqs": [
     {
       "question": "Apakah persamaan regresi?",
-      "answer": "A regression equation is a mathematical formula that describes the relationship between a dependent variable and one or more independent variables. In simple linear regression, it takes the form y = mx + b, where m is the slope (rate of change) and b is the y-intercept (value when x = 0). The equation allows you to predict the value of the dependent variable based on known values of the independent variable(s).",
+      "answer": "Persamaan regresi ialah formula matematik yang menerangkan hubungan antara pemboleh ubah bersandar dan satu atau lebih pemboleh ubah bebas. Dalam regresi linear ringkas, ia mengambil bentuk y = mx + b, di mana m ialah kecerunan (kadar perubahan) dan b ialah pintasan-y (nilai apabila x = 0). Persamaan ini membolehkan anda meramal nilai pemboleh ubah bersandar berdasarkan nilai pemboleh ubah bebas yang diketahui.",
       "display": true
     },
     {
       "question": "Bagaimana anda mengira persamaan regresi?",
-      "answer": "Untuk mengira persamaan regresi, anda perlu: 1) Mengira min x dan y, 2) Mengira kecerunan m = Σ(xi-x̄)(yi-ȳ) / Σ(xi-x̄)², 3) Mengira pintasan b = ȳ - m·x̄. Kalkulator kami melakukan semua ini secara automatik.",
+      "answer": "Untuk mengira persamaan regresi linear, anda perlu: 1) Mengira min (purata) titik data x dan y anda, 2) Mengira kecerunan menggunakan formula m = Σ(xi - x̄)(yi - ȳ) / Σ(xi - x̄)², 3) Mengira pintasan menggunakan b = ȳ - m·x̄. Kalkulator kami melakukan semua langkah ini secara automatik dan menunjukkan hasil pengiraan terperinci kepada anda.",
       "display": true
     },
     {
-      "question": "Apakah R-kuasa dua?",
-      "answer": "R-squared (R²) is a statistical measure that represents the proportion of variance in the dependent variable that can be explained by the independent variable. It ranges from 0 to 1: R² = 0 means the model explains none of the variability; R² = 1 means a perfect fit. Generally, R² above 0.7 indicates a strong relationship, 0.3–0.7 is moderate, and below 0.3 is weak.",
+      "question": "Apakah R-kuasa dua dan bagaimana saya mentafsirkannya?",
+      "answer": "R-kuasa dua (R²) ialah ukuran statistik yang mewakili perkadaran varians dalam pemboleh ubah bersandar yang boleh diterangkan oleh pemboleh ubah bebas. Julatnya ialah dari 0 hingga 1: R² = 0 bermakna model tidak menerangkan sebarang kebolehubahan; R² = 1 bermakna padanan sempurna. Secara amnya, R² melebihi 0.7 menunjukkan hubungan yang kuat, 0.3–0.7 sederhana, dan kurang daripada 0.3 lemah.",
+      "display": true
+    },
+    {
+      "question": "Apakah pekali korelasi?",
+      "answer": "Pekali korelasi (r) mengukur kekuatan dan arah hubungan linear antara dua pemboleh ubah. Julatnya ialah dari -1 hingga +1: r = +1 bermakna hubungan positif sempurna, r = -1 bermakna hubungan negatif sempurna, dan r = 0 bermakna tiada hubungan linear. Semakin hampir r dengan ±1, semakin kuat perkaitan linear tersebut.",
+      "display": true
+    },
+    {
+      "question": "Apakah perbezaan antara kecerunan dan pintasan?",
+      "answer": "Dalam persamaan regresi y = mx + b, kecerunan (m) memberitahu anda berapa banyak perubahan y bagi setiap peningkatan satu unit dalam x. Kecerunan positif bermakna y meningkat apabila x meningkat; kecerunan negatif bermakna y berkurangan. Pintasan (b) ialah nilai ramalan y apabila x sama dengan sifar — iaitu titik di mana garisan regresi memotong paksi-y.",
+      "display": true
+    },
+    {
+      "question": "Berapa banyak titik data yang saya perlukan untuk regresi?",
+      "answer": "Pada minimum, anda memerlukan sekurang-kurangnya 2 titik data untuk mengira persamaan regresi linear ringkas. Walau bagaimanapun, untuk keputusan yang bermakna dan boleh dipercayai, adalah disyorkan untuk mempunyai sekurang-kurangnya 10–15 titik data. Semakin banyak titik data yang anda miliki, semakin boleh dipercayai dan signifikan secara statistik model regresi anda menjadi.",
+      "display": true
+    },
+    {
+      "question": "Apakah ralat piawai regresi?",
+      "answer": "Ralat piawai (SE) regresi mengukur jarak purata yang titik data yang diperhatikan jatuh dari garisan regresi. SE yang lebih kecil menunjukkan bahawa titik data lebih hampir dengan garisan yang dipadankan, bermakna ramalan model lebih tepat. Pada asasnya, ia adalah ukuran ketepatan model.",
+      "display": true
+    },
+    {
+      "question": "Bila saya harus menggunakan regresi linear?",
+      "answer": "Gunakan regresi linear apabila anda ingin memodelkan hubungan antara pemboleh ubah bersandar selanjar dan satu atau lebih pemboleh ubah bebas, serta apabila hubungan tersebut kelihatan hampir linear. Aplikasi biasa termasuk meramal jualan daripada perbelanjaan pengiklanan, menganggar harga rumah daripada kaki persegi, atau menganalisis kesan masa belajar ke atas skor ujian.",
+      "display": true
+    },
+    {
+      "question": "Apakah anggapan regresi linear?",
+      "answer": "Regresi linear menganggap: 1) Keberlinearan — hubungan antara pemboleh ubah adalah linear, 2) Kebebasan — pemerhatian adalah bebas antara satu sama lain, 3) Homoskedastisiti — residual mempunyai varians malar, 4) Kenormalan — residual bertaburan normal, 5) Tiada multikolineariti — pemboleh ubah bebas tidak berkorelasi tinggi (untuk regresi berbilang). Pelanggaran anggapan ini boleh membawa kepada keputusan yang tidak boleh dipercayai.",
+      "display": true
+    },
+    {
+      "question": "Apakah perbezaan antara korelasi dan regresi?",
+      "answer": "Korelasi mengukur kekuatan dan arah hubungan antara dua pemboleh ubah (dalam julat -1 hingga +1) tanpa menunjukkan sebab-akibat. Regresi melangkah lebih jauh dengan memadankan garisan pada data dan menyediakan persamaan (y = mx + b) yang boleh meramal satu pemboleh ubah daripada pemboleh ubah yang lain. Walaupun korelasi adalah simetri (r_xy = r_yx), regresi tidak — meramal y daripada x memberikan hasil yang berbeza daripada meramal x daripada y.",
       "display": true
     },
     {
       "question": "Apakah jenis-jenis regresi yang ada?",
-      "answer": "Jenis biasa termasuk regresi linear, regresi berbilang, regresi polinomial, regresi logistik dan regresi rician. Setiap jenis sesuai untuk corak data dan soalan penyelidikan yang berbeza.",
+      "answer": "Jenis biasa termasuk: Regresi Linear (satu peramal), Regresi Berbilang (berbilang peramal), Regresi Polinomial (hubungan melengkung), Regresi Logistik (hasil binari), Regresi Rician (dengan regularisasi untuk mengelakkan lebih-padanan), dan Regresi Lasso (pemilihan ciri melalui regularisasi). Setiap jenis sesuai untuk corak data dan soalan penyelidikan yang berbeza.",
       "display": true
     },
     {
-      "question": "What is the correlation coefficient?",
-      "answer": "The correlation coefficient (r) measures the strength and direction of the linear relationship between two variables. It ranges from -1 to +1: r = +1 means a perfect positive relationship, r = -1 means a perfect negative relationship, and r = 0 means no linear relationship.",
-      "display": true
-    },
-    {
-      "question": "What is the difference between slope and intercept?",
-      "answer": "In the regression equation y = mx + b, the slope (m) tells you how much y changes for each unit increase in x. The intercept (b) is the predicted value of y when x equals zero — it is the point where the regression line crosses the y-axis.",
-      "display": true
-    },
-    {
-      "question": "How many data points do I need for a regression?",
-      "answer": "At a minimum, you need at least 2 data points to calculate a simple linear regression equation. However, for meaningful and reliable results, it is recommended to have at least 10–15 data points.",
-      "display": true
-    },
-    {
-      "question": "What is the standard error of the regression?",
-      "answer": "The standard error (SE) of the regression measures the average distance that the observed data points fall from the regression line. A smaller SE indicates that the data points are closer to the fitted line, meaning the model predictions are more accurate.",
-      "display": true
-    },
-    {
-      "question": "When should I use linear regression?",
-      "answer": "Use linear regression when you want to model the relationship between a continuous dependent variable and one or more independent variables, and when the relationship appears to be approximately linear.",
-      "display": true
-    },
-    {
-      "question": "What are the assumptions of linear regression?",
-      "answer": "Linear regression assumes: 1) Linearity, 2) Independence, 3) Homoscedasticity, 4) Normality of residuals, 5) No multicollinearity. Violating these assumptions can lead to unreliable results.",
-      "display": true
-    },
-    {
-      "question": "What is the difference between correlation and regression?",
-      "answer": "Correlation measures the strength and direction of the relationship between two variables without implying causation. Regression goes further by fitting a line and providing an equation that can predict one variable from another.",
-      "display": true
-    },
-    {
-      "question": "What types of regression are there?",
-      "answer": "Common types include: Linear Regression, Multiple Regression, Polynomial Regression, Logistic Regression, Ridge Regression, and Lasso Regression. Each type suits different data patterns and research questions.",
-      "display": true
-    },
-    {
-      "question": "Can I use this calculator for multiple regression?",
-      "answer": "Currently, this calculator supports simple linear regression with one independent variable. For multiple regression, you would need specialized statistical software like R, Python, or SPSS.",
+      "question": "Bolehkah saya menggunakan kalkulator ini untuk regresi berbilang?",
+      "answer": "Pada masa ini, kalkulator ini menyokong regresi linear ringkas dengan satu pemboleh ubah bebas (x) dan satu pemboleh ubah bersandar (y). Untuk regresi berbilang dengan beberapa peramal, anda perlu menggunakan perisian statistik khusus seperti R, Python (statsmodels), atau SPSS. Kami mungkin menambah sokongan regresi berbilang dalam kemas kini akan datang.",
       "display": false
     }
   ]

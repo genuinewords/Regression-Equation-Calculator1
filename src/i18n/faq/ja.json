@@ -2,67 +2,62 @@
   "faqs": [
     {
       "question": "回帰方程式とは何ですか？",
-      "answer": "A regression equation is a mathematical formula that describes the relationship between a dependent variable and one or more independent variables. In simple linear regression, it takes the form y = mx + b, where m is the slope (rate of change) and b is the y-intercept (value when x = 0). The equation allows you to predict the value of the dependent variable based on known values of the independent variable(s).",
+      "answer": "回帰方程式とは、従属変数と1つ以上の独立変数との関係を記述する数学的な公式です。単回帰では、y = mx + b の形をとります。ここで、m は傾き（変化率）、b はy切片（x = 0のときの値）です。この方程式により、独立変数の既知の値に基づいて従属変数の値を予測することができます。",
       "display": true
     },
     {
       "question": "回帰方程式の計算方法は？",
-      "answer": "回帰方程式を計算するには：1) xとyの平均を計算する、2) 傾き m = Σ(xi-x̄)(yi-ȳ) / Σ(xi-x̄)² を計算する、3) 切片 b = ȳ - m·x̄ を計算する。当計算機はこれらすべてを自動で行います。",
+      "answer": "線形回帰方程式を計算するには：1) xとyのデータの平均を計算する、2) 傾きを公式 m = Σ(xi - x̄)(yi - ȳ) / Σ(xi - x̄)² で計算する、3) 切片を b = ȳ - m·x̄ で計算する。当計算機はこれらすべての手順を自動で実行し、詳細な計算過程を表示します。",
       "display": true
     },
     {
-      "question": "R二乗とは何ですか？",
-      "answer": "R-squared (R²) is a statistical measure that represents the proportion of variance in the dependent variable that can be explained by the independent variable. It ranges from 0 to 1: R² = 0 means the model explains none of the variability; R² = 1 means a perfect fit. Generally, R² above 0.7 indicates a strong relationship, 0.3–0.7 is moderate, and below 0.3 is weak.",
+      "question": "R二乗とは何ですか？また、どう解釈すればよいですか？",
+      "answer": "決定係数（R²）は、従属変数の分散のうち独立変数によって説明できる割合を表す統計量です。0から1の範囲をとります：R² = 0はモデルが変動性を全く説明していないことを意味し、R² = 1は完全な適合を意味します。一般的に、R²が0.7以上は強い関係、0.3～0.7は中程度、0.3未満は弱い関係を示します。",
+      "display": true
+    },
+    {
+      "question": "相関係数とは何ですか？",
+      "answer": "相関係数（r）は、2つの変数間の線形関係の強さと方向を測る指標です。-1から+1の範囲をとります：r = +1は完全な正の関係、r = -1は完全な負の関係、r = 0は線形関係がないことを意味します。rが±1に近いほど、線形の関連性は強くなります。",
+      "display": true
+    },
+    {
+      "question": "傾きと切片の違いは何ですか？",
+      "answer": "回帰方程式 y = mx + b において、傾き（m）はxが1単位増加したときにyがどれだけ変化するかを示します。正の傾きはxの増加に伴いyが増加することを、負の傾きはyが減少することを意味します。切片（b）はxがゼロのときのyの予測値であり、回帰直線がy軸と交わる点です。",
+      "display": true
+    },
+    {
+      "question": "回帰分析には何個のデータポイントが必要ですか？",
+      "answer": "単回帰方程式を計算するには最低2個のデータポイントが必要です。ただし、有意で信頼できる結果を得るには、10～15個以上のデータポイントを推奨します。データポイントが多いほど、回帰モデルの信頼性と統計的有意性が高くなります。",
+      "display": true
+    },
+    {
+      "question": "回帰の標準誤差とは何ですか？",
+      "answer": "回帰の標準誤差（SE）は、観測されたデータポイントが回帰直線から外れる平均距離を測ります。SEが小さいほどデータポイントが当てはめ直線に近いことを意味し、モデルの予測がより正確です。本質的に、モデルの精度を測る指標です。",
+      "display": true
+    },
+    {
+      "question": "いつ線形回帰を使うべきですか？",
+      "answer": "連続する従属変数と1つ以上の独立変数の関係をモデル化したいとき、またその関係がほぼ線形であると思われるときに線形回帰を使用します。一般的な応用例には、広告費から売上を予測する、床面積から住宅価格を推定する、学習時間がテストの点数に与える影響を分析するなどがあります。",
+      "display": true
+    },
+    {
+      "question": "線形回帰の前提条件は何ですか？",
+      "answer": "線形回帰は以下を前提とします：1) 線形性—変数間の関係が線形であること、2) 独立性—観測値が互いに独立していること、3) 等分散性—残差が一定の分散を持つこと、4) 正規性—残差が正規分布に従うこと、5) 多重共線性がない—独立変数間の高い相関がないこと（重回帰の場合）。これらの前提に違反すると、信頼できない結果につながる可能性があります。",
+      "display": true
+    },
+    {
+      "question": "相関と回帰の違いは何ですか？",
+      "answer": "相関は2つの変数間の関係の強さと方向を（-1から+1の範囲で）測りますが、因果関係を暗示しません。回帰はさらに進んで、データに直線を当てはめ、一方の変数から他方を予測できる方程式（y = mx + b）を提供します。相関は対称的（r_xy = r_yx）ですが、回帰は非対称です—xからyを予測するのとyからxを予測するので結果が異なります。",
       "display": true
     },
     {
       "question": "回帰にはどのような種類がありますか？",
-      "answer": "一般的な種類には、線形回帰、重回帰、多項式回帰、ロジスティック回帰、リッジ回帰があります。それぞれの種類は異なるデータパターンや研究質問に適しています。",
+      "answer": "一般的な種類には以下が含まれます：線形回帰（1つの予測変数）、重回帰（複数の予測変数）、多項式回帰（曲線関係）、ロジスティック回帰（二値結果）、リッジ回帰（過学習を防ぐための正則化付き）、ラッソ回帰（正則化による特徴選択）。それぞれの種類は異なるデータパターンや研究質問に適しています。",
       "display": true
     },
     {
-      "question": "What is the correlation coefficient?",
-      "answer": "The correlation coefficient (r) measures the strength and direction of the linear relationship between two variables. It ranges from -1 to +1: r = +1 means a perfect positive relationship, r = -1 means a perfect negative relationship, and r = 0 means no linear relationship.",
-      "display": true
-    },
-    {
-      "question": "What is the difference between slope and intercept?",
-      "answer": "In the regression equation y = mx + b, the slope (m) tells you how much y changes for each unit increase in x. The intercept (b) is the predicted value of y when x equals zero — it is the point where the regression line crosses the y-axis.",
-      "display": true
-    },
-    {
-      "question": "How many data points do I need for a regression?",
-      "answer": "At a minimum, you need at least 2 data points to calculate a simple linear regression equation. However, for meaningful and reliable results, it is recommended to have at least 10–15 data points.",
-      "display": true
-    },
-    {
-      "question": "What is the standard error of the regression?",
-      "answer": "The standard error (SE) of the regression measures the average distance that the observed data points fall from the regression line. A smaller SE indicates that the data points are closer to the fitted line, meaning the model predictions are more accurate.",
-      "display": true
-    },
-    {
-      "question": "When should I use linear regression?",
-      "answer": "Use linear regression when you want to model the relationship between a continuous dependent variable and one or more independent variables, and when the relationship appears to be approximately linear.",
-      "display": true
-    },
-    {
-      "question": "What are the assumptions of linear regression?",
-      "answer": "Linear regression assumes: 1) Linearity, 2) Independence, 3) Homoscedasticity, 4) Normality of residuals, 5) No multicollinearity. Violating these assumptions can lead to unreliable results.",
-      "display": true
-    },
-    {
-      "question": "What is the difference between correlation and regression?",
-      "answer": "Correlation measures the strength and direction of the relationship between two variables without implying causation. Regression goes further by fitting a line and providing an equation that can predict one variable from another.",
-      "display": true
-    },
-    {
-      "question": "What types of regression are there?",
-      "answer": "Common types include: Linear Regression, Multiple Regression, Polynomial Regression, Logistic Regression, Ridge Regression, and Lasso Regression. Each type suits different data patterns and research questions.",
-      "display": true
-    },
-    {
-      "question": "Can I use this calculator for multiple regression?",
-      "answer": "Currently, this calculator supports simple linear regression with one independent variable. For multiple regression, you would need specialized statistical software like R, Python, or SPSS.",
+      "question": "この計算機は重回帰に使えますか？",
+      "answer": "現在、この計算機は1つの独立変数（x）と1つの従属変数（y）による単回帰のみをサポートしています。複数の予測変数を使った重回帰には、R、Python（statsmodels）、SPSSなどの専門的な統計ソフトウェアを使用する必要があります。今後のアップデートで重回帰のサポートを追加する可能性があります。",
       "display": false
     }
   ]

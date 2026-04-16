@@ -2,67 +2,62 @@
   "faqs": [
     {
       "question": "Какво е регресионно уравнение?",
-      "answer": "A regression equation is a mathematical formula that describes the relationship between a dependent variable and one or more independent variables. In simple linear regression, it takes the form y = mx + b, where m is the slope (rate of change) and b is the y-intercept (value when x = 0). The equation allows you to predict the value of the dependent variable based on known values of the independent variable(s).",
+      "answer": "Регресионното уравнение е математическа формула, която описва връзката между зависима променлива и една или повече независими променливи. При простата линейна регресия то приема формата y = mx + b, където m е наклонът (скорост на промяна), а b е пресечката с оста y (стойността при x = 0). Уравнението позволява да предскажете стойността на зависимата променлива въз основа на известни стойности на независимата променлива(и).",
       "display": true
     },
     {
       "question": "Как се изчислява регресионно уравнение?",
-      "answer": "За да изчислите регресионно уравнение, трябва да: 1) Изчислите средните стойности на x и y, 2) Изчислите наклона m = Σ(xi-x̄)(yi-ȳ) / Σ(xi-x̄)², 3) Изчислите пресечката b = ȳ - m·x̄. Нашият калкулатор прави всичко това автоматично.",
+      "answer": "За да изчислите уравнение на линейна регресия, трябва да: 1) Изчислите средните стойности на вашите x и y точки данни, 2) Изчислете наклона чрез формулата m = Σ(xi - x̄)(yi - ȳ) / Σ(xi - x̄)², 3) Изчислете пресечката чрез b = ȳ - m·x̄. Нашият калкулатор извършва всички тези стъпки автоматично и ви показва подробните изчисления.",
       "display": true
     },
     {
-      "question": "Какво е R-квадрат?",
-      "answer": "R-squared (R²) is a statistical measure that represents the proportion of variance in the dependent variable that can be explained by the independent variable. It ranges from 0 to 1: R² = 0 means the model explains none of the variability; R² = 1 means a perfect fit. Generally, R² above 0.7 indicates a strong relationship, 0.3–0.7 is moderate, and below 0.3 is weak.",
+      "question": "Какво е R-квадрат и как да го тълкувам?",
+      "answer": "R-квадрат (R²) е статистическа мярка, която представлява делът от дисперсията на зависимата променлива, който може да бъде обяснен от независимата променлива. Тя варира от 0 до 1: R² = 0 означава, че моделът не обяснява никаква изменчивост; R² = 1 означава перфектно съвпадение. Обикновено R² над 0.7 показва силна връзка, 0.3–0.7 е умерена, а под 0.3 е слаба.",
+      "display": true
+    },
+    {
+      "question": "Какво е коефициентът на корелация?",
+      "answer": "Коефициентът на корелация (r) измерва силата и посоката на линейната връзка между две променливи. Той варира от -1 до +1: r = +1 означава перфектна положителна връзка, r = -1 означава перфектна отрицателна връзка, а r = 0 означава липса на линейна връзка. Колкото по-близо е r до ±1, толкова по-силна е линейната асоциация.",
+      "display": true
+    },
+    {
+      "question": "Каква е разликата между наклон и пресечка?",
+      "answer": "В регресионното уравнение y = mx + b, наклонът (m) ви казва колко се променя y при увеличение на x с една единица. Положителен наклон означава, че y нараства с нарастването на x; отрицателен наклон означава, че y намалява. Пресечката (b) е предвидената стойност на y, когато x е равно на нула — това е точката, в която регресионната линия пресича оста y.",
+      "display": true
+    },
+    {
+      "question": "Колко точки данни са необходими за регресия?",
+      "answer": "Минимумът е поне 2 точки данни за изчисляване на просто линейно регресионно уравнение. Въпреки това, за значими и надежни резултати се препоръчва да имате поне 10–15 точки данни. Колкото повече точки данни имате, толкова по-надежден и статистически значим става вашият регресионен модел.",
+      "display": true
+    },
+    {
+      "question": "Какво е стандартната грешка на регресията?",
+      "answer": "Стандартната грешка (SE) на регресията измерва средното разстояние, на което наблюдаваните точки данни попадат от регресионната линия. По-малка SE показва, че точките данни са по-близо до приближаващата линия, което означава, че предвижданията на модела са по-точни. Това е по същество мярка за точността на модела.",
+      "display": true
+    },
+    {
+      "question": "Кога трябва да използвам линейна регресия?",
+      "answer": "Използвайте линейна регресия, когато искате да моделирате връзката между непрекъсната зависима променлива и една или повече независими променливи, и когато връзката изглежда приблизително линейна. Чести приложения включват предвиждане на продажби от разходи за реклама, оценка на цени на жилища от квадратни метри или анализ на ефекта на времето за учене върху резултатите от изпити.",
+      "display": true
+    },
+    {
+      "question": "Какви са допусканията на линейната регресия?",
+      "answer": "Линейната регресия допуска: 1) Линейност — връзката между променливите е линейна, 2) Независимост — наблюденията са независими едно от друго, 3) Хомоскедастичност — остатъците имат постоянна дисперсия, 4) Нормалност — остатъците са нормално разпределени, 5) Липса на мултиколинеарност — независимите променливи не са силно корелирани (за множествена регресия). Нарушаването на тези допускания може да доведе до ненадеждни резултати.",
+      "display": true
+    },
+    {
+      "question": "Каква е разликата между корелация и регресия?",
+      "answer": "Корелацията измерва силата и посоката на връзката между две променливи (варираща от -1 до +1) без да предполага причинно-следствена връзка. Регресията отива по-далеч, като приближава линия към данните и предоставя уравнение (y = mx + b), което може да предвижда една променлива от друга. Докато корелацията е симетрична (r_xy = r_yx), регресията не е — предвиждането на y от x дава различни резултати от предвиждането на x от y.",
       "display": true
     },
     {
       "question": "Какви видове регресия съществуват?",
-      "answer": "Често срещани видове включват линейна регресия, множествена регресия, полиномиална регресия, логистична регресия и ридж регресия. Всеки вид е подходящ за различни модели данни и изследователски въпроси.",
+      "answer": "Често срещани видове включват: Линейна регресия (един предсказвател), Множествена регресия (множество предсказватели), Полиномиална регресия (извит връзки), Логистична регресия (двоични резултати), Ридж регресия (с регуляризация за предотвратяване на преапроксимация) и Ласо регресия (избор на характеристики чрез регуляризация). Всеки вид е подходящ за различни модели данни и изследователски въпроси.",
       "display": true
     },
     {
-      "question": "What is the correlation coefficient?",
-      "answer": "The correlation coefficient (r) measures the strength and direction of the linear relationship between two variables. It ranges from -1 to +1: r = +1 means a perfect positive relationship, r = -1 means a perfect negative relationship, and r = 0 means no linear relationship.",
-      "display": true
-    },
-    {
-      "question": "What is the difference between slope and intercept?",
-      "answer": "In the regression equation y = mx + b, the slope (m) tells you how much y changes for each unit increase in x. The intercept (b) is the predicted value of y when x equals zero — it is the point where the regression line crosses the y-axis.",
-      "display": true
-    },
-    {
-      "question": "How many data points do I need for a regression?",
-      "answer": "At a minimum, you need at least 2 data points to calculate a simple linear regression equation. However, for meaningful and reliable results, it is recommended to have at least 10–15 data points.",
-      "display": true
-    },
-    {
-      "question": "What is the standard error of the regression?",
-      "answer": "The standard error (SE) of the regression measures the average distance that the observed data points fall from the regression line. A smaller SE indicates that the data points are closer to the fitted line, meaning the model predictions are more accurate.",
-      "display": true
-    },
-    {
-      "question": "When should I use linear regression?",
-      "answer": "Use linear regression when you want to model the relationship between a continuous dependent variable and one or more independent variables, and when the relationship appears to be approximately linear.",
-      "display": true
-    },
-    {
-      "question": "What are the assumptions of linear regression?",
-      "answer": "Linear regression assumes: 1) Linearity, 2) Independence, 3) Homoscedasticity, 4) Normality of residuals, 5) No multicollinearity. Violating these assumptions can lead to unreliable results.",
-      "display": true
-    },
-    {
-      "question": "What is the difference between correlation and regression?",
-      "answer": "Correlation measures the strength and direction of the relationship between two variables without implying causation. Regression goes further by fitting a line and providing an equation that can predict one variable from another.",
-      "display": true
-    },
-    {
-      "question": "What types of regression are there?",
-      "answer": "Common types include: Linear Regression, Multiple Regression, Polynomial Regression, Logistic Regression, Ridge Regression, and Lasso Regression. Each type suits different data patterns and research questions.",
-      "display": true
-    },
-    {
-      "question": "Can I use this calculator for multiple regression?",
-      "answer": "Currently, this calculator supports simple linear regression with one independent variable. For multiple regression, you would need specialized statistical software like R, Python, or SPSS.",
+      "question": "Мога ли да използвам този калкулатор за множествена регресия?",
+      "answer": "В момента този калкулатор поддържа проста линейна регресия с една независима променлива (x) и една зависима променлива (y). За множествена регресия с няколко предсказвателя ще трябва да използвате специализиран статистически софтуер като R, Python (statsmodels) или SPSS. Може да добавим поддръжка за множествена регресия в бъдеща актуализация.",
       "display": false
     }
   ]

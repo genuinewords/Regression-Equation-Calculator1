@@ -2,67 +2,62 @@
   "faqs": [
     {
       "question": "Regresyon denklemi nedir?",
-      "answer": "A regression equation is a mathematical formula that describes the relationship between a dependent variable and one or more independent variables. In simple linear regression, it takes the form y = mx + b, where m is the slope (rate of change) and b is the y-intercept (value when x = 0). The equation allows you to predict the value of the dependent variable based on known values of the independent variable(s).",
+      "answer": "Regresyon denklemi, bağımlı bir değişken ile bir veya daha fazla bağımsız değişken arasındaki ilişkiyi tanımlayan matematiksel bir formüldür. Basit doğrusal regresyonda, y = mx + b formunu alır; burada m eğim (değişim hızı) ve b y-kesişim noktasıdır (x = 0 olduğundaki değer). Denklem, bağımsız değişkenin bilinen değerlerine dayanarak bağımlı değişkenin değerini tahmin etmenizi sağlar.",
       "display": true
     },
     {
       "question": "Regresyon denklemi nasıl hesaplanır?",
-      "answer": "Regresyon denklemini hesaplamak için şunları yapmalısınız: 1) x ve y'nin ortalamalarını hesaplayın, 2) Eğim m = Σ(xi-x̄)(yi-ȳ) / Σ(xi-x̄)² hesaplayın, 3) Kesişim b = ȳ - m·x̄ hesaplayın. Hesaplayıcımız bunların hepsini otomatik olarak yapar.",
+      "answer": "Doğrusal regresyon denklemini hesaplamak için şunları yapmalısınız: 1) x ve y veri noktalarınızın ortalamalarını hesaplayın, 2) Eğimi m = Σ(xi - x̄)(yi - ȳ) / Σ(xi - x̄)² formülüyle hesaplayın, 3) Kesişimi b = ȳ - m·x̄ ile hesaplayın. Hesaplayıcımız tüm bu adımları otomatik olarak gerçekleştirir ve size ayrıntılı hesaplamayı gösterir.",
       "display": true
     },
     {
-      "question": "R-kare nedir?",
-      "answer": "R-squared (R²) is a statistical measure that represents the proportion of variance in the dependent variable that can be explained by the independent variable. It ranges from 0 to 1: R² = 0 means the model explains none of the variability; R² = 1 means a perfect fit. Generally, R² above 0.7 indicates a strong relationship, 0.3–0.7 is moderate, and below 0.3 is weak.",
+      "question": "R-kare nedir ve nasıl yorumlanır?",
+      "answer": "R-kare (R²), bağımlı değişkendeki varyansın bağımsız değişken tarafından açıklanabilen oranını temsil eden istatistiksel bir ölçüdür. 0 ile 1 arasında değişir: R² = 0, modelin hiçbir değişkenliği açıklamadığı anlamına gelir; R² = 1, mükemmel bir uyum anlamına gelir. Genellikle, 0.7 üzerindeki R² güçlü bir ilişkiyi, 0.3–0.7 orta düzey bir ilişkiyi ve 0.3 altı zayıf bir ilişkiyi gösterir.",
+      "display": true
+    },
+    {
+      "question": "Korelasyon katsayısı nedir?",
+      "answer": "Korelasyon katsayısı (r), iki değişken arasındaki doğrusal ilişkinin gücünü ve yönünü ölçer. -1 ile +1 arasında değişir: r = +1 mükemmel pozitif ilişki, r = -1 mükemmel negatif ilişki ve r = 0 doğrusal ilişki yok anlamına gelir. r ±1'e ne kadar yakınsa, doğrusal ilişki o kadar güçlüdür.",
+      "display": true
+    },
+    {
+      "question": "Eğim ve kesişim arasındaki fark nedir?",
+      "answer": "Regresyon denklemi y = mx + b'de, eğim (m) x'teki her birim artış için y'nin ne kadar değiştiğini söyler. Pozitif eğim, y'nin x arttıkça arttığı anlamına gelir; negatif eğim, y'nin azaldığı anlamına gelir. Kesişim (b), x sıfıra eşit olduğunda y'nin tahmin edilen değeridir — regresyon doğrusunun y-eksenini kestiği noktadır.",
+      "display": true
+    },
+    {
+      "question": "Regresyon için kaç veri noktasına ihtiyacım var?",
+      "answer": "En azından, basit doğrusal regresyon denklemi hesaplamak için en az 2 veri noktasına ihtiyacınız vardır. Ancak anlamlı ve güvenilir sonuçlar için en az 10–15 veri noktasına sahip olmanız önerilir. Ne kadar çok veri noktanız varsa, regresyon modeliniz o kadar güvenilir ve istatistiksel olarak anlamlı hale gelir.",
+      "display": true
+    },
+    {
+      "question": "Regresyonun standart hatası nedir?",
+      "answer": "Regresyonun standart hatası (SE), gözlemlenen veri noktalarının regresyon doğrusundan ortalama uzaklığını ölçer. Daha küçük bir SE, veri noktalarının uyum doğrusuna daha yakın olduğunu, yani model tahminlerinin daha doğru olduğunu gösterir. Bu esas olarak modelin kesinliğinin bir ölçüsüdür.",
+      "display": true
+    },
+    {
+      "question": "Doğrusal regresyon ne zaman kullanılmalıdır?",
+      "answer": "Sürekli bir bağımlı değişken ile bir veya daha fazla bağımsız değişken arasındaki ilişkiyi modellemek istediğinizde ve ilişki yaklaşık olarak doğrusal göründüğünde doğrusal regresyon kullanın. Yaygın uygulamalar arasında reklam harcamalarından satış tahmini, metrekareden ev fiyatı tahmini veya çalışma süresinin sınav puanları üzerindeki etkisinin analizi yer alır.",
+      "display": true
+    },
+    {
+      "question": "Doğrusal regresyonun varsayımları nelerdir?",
+      "answer": "Doğrusal regresyon şu varsayımlarda bulunur: 1) Doğrusallık — değişkenler arasındaki ilişki doğrusaldır, 2) Bağımsızlık — gözlemler birbirinden bağımsızdır, 3) Homoskedastisite — artıklar sabit varyansa sahiptir, 4) Normallik — artıklar normal dağılıma sahiptir, 5) Çoklu doğrusallık yok — bağımsız değişkenler yüksek düzeyde ilişkili değildir (çoklu regresyon için). Bu varsayımların ihlali güvenilir olmayan sonuçlara yol açabilir.",
+      "display": true
+    },
+    {
+      "question": "Korelasyon ve regresyon arasındaki fark nedir?",
+      "answer": "Korelasyon, iki değişken arasındaki ilişkinin gücünü ve yönünü (-1 ile +1 arasında) neden-sonuç ima etmeden ölçer. Regresyon daha ileri giderek verilere bir doğru uydurur ve bir değişkeni diğerinden tahmin edebilen bir denklem (y = mx + b) sağlar. Korelasyon simetrik iken (r_xy = r_yx), regresyon simetrik değildir — y'yi x'ten tahmin etmek, x'i y'den tahmin etmekten farklı sonuçlar verir.",
       "display": true
     },
     {
       "question": "Hangi regresyon türleri vardır?",
-      "answer": "Yaygın türler doğrusal regresyon, çoklu regresyon, polinom regresyon, lojistik regresyon ve ridge regresyonu içerir. Her tür farklı veri kalıplarına ve araştırma sorularına uygundur.",
+      "answer": "Yaygın türler şunları içerir: Doğrusal Regresyon (bir tahmin değişkeni), Çoklu Regresyon (birden fazla tahmin değişkeni), Polinom Regresyon (eğri ilişkiler), Lojistik Regresyon (ikili sonuçlar), Ridge Regresyonu (aşırı uyumu önlemek için düzenlileştirme ile) ve Lasso Regresyonu (düzenlileştirme yoluyla özellik seçimi). Her tür farklı veri kalıplarına ve araştırma sorularına uygundur.",
       "display": true
     },
     {
-      "question": "What is the correlation coefficient?",
-      "answer": "The correlation coefficient (r) measures the strength and direction of the linear relationship between two variables. It ranges from -1 to +1: r = +1 means a perfect positive relationship, r = -1 means a perfect negative relationship, and r = 0 means no linear relationship.",
-      "display": true
-    },
-    {
-      "question": "What is the difference between slope and intercept?",
-      "answer": "In the regression equation y = mx + b, the slope (m) tells you how much y changes for each unit increase in x. The intercept (b) is the predicted value of y when x equals zero — it is the point where the regression line crosses the y-axis.",
-      "display": true
-    },
-    {
-      "question": "How many data points do I need for a regression?",
-      "answer": "At a minimum, you need at least 2 data points to calculate a simple linear regression equation. However, for meaningful and reliable results, it is recommended to have at least 10–15 data points.",
-      "display": true
-    },
-    {
-      "question": "What is the standard error of the regression?",
-      "answer": "The standard error (SE) of the regression measures the average distance that the observed data points fall from the regression line. A smaller SE indicates that the data points are closer to the fitted line, meaning the model predictions are more accurate.",
-      "display": true
-    },
-    {
-      "question": "When should I use linear regression?",
-      "answer": "Use linear regression when you want to model the relationship between a continuous dependent variable and one or more independent variables, and when the relationship appears to be approximately linear.",
-      "display": true
-    },
-    {
-      "question": "What are the assumptions of linear regression?",
-      "answer": "Linear regression assumes: 1) Linearity, 2) Independence, 3) Homoscedasticity, 4) Normality of residuals, 5) No multicollinearity. Violating these assumptions can lead to unreliable results.",
-      "display": true
-    },
-    {
-      "question": "What is the difference between correlation and regression?",
-      "answer": "Correlation measures the strength and direction of the relationship between two variables without implying causation. Regression goes further by fitting a line and providing an equation that can predict one variable from another.",
-      "display": true
-    },
-    {
-      "question": "What types of regression are there?",
-      "answer": "Common types include: Linear Regression, Multiple Regression, Polynomial Regression, Logistic Regression, Ridge Regression, and Lasso Regression. Each type suits different data patterns and research questions.",
-      "display": true
-    },
-    {
-      "question": "Can I use this calculator for multiple regression?",
-      "answer": "Currently, this calculator supports simple linear regression with one independent variable. For multiple regression, you would need specialized statistical software like R, Python, or SPSS.",
+      "question": "Bu hesaplayıcıyı çoklu regresyon için kullanabilir miyim?",
+      "answer": "Şu anda bu hesaplayıcı, bir bağımsız değişken (x) ve bir bağımlı değişken (y) ile basit doğrusal regresyonu desteklemektedir. Birden fazla tahmin değişkeniyle çoklu regresyon için R, Python (statsmodels) veya SPSS gibi uzmanlaşmış istatistiksel yazılımlar kullanmanız gerekir. Gelecekteki bir güncellemede çoklu regresyon desteği ekleyebiliriz.",
       "display": false
     }
   ]
