@@ -47,6 +47,19 @@ const faqTitle: string = (home as any).faqTitle ?? 'Frequently Asked Questions';
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   )}
 
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Regression Equation Calculator",
+    "applicationCategory": "MathApplication",
+    "operatingSystem": "Web Browser",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  })} />
+
   <!-- Hero Section -->
   <section class="pt-8 pb-4 md:pt-12 md:pb-6">
     <div class="max-w-3xl mx-auto text-center">

@@ -3,7 +3,7 @@
   "siteDescription": "Free online regression equation calculator. Compute linear, polynomial, and multiple regression equations instantly with step-by-step solutions.",
   "home": {
     "title": "Regression Equation Calculator - Find Linear, Exponential & Polynomial Equations",
-    "description": "Compute regression equations instantly with our free online tool",
+    "description": "Calculate regression equations in seconds. Our free calculator finds linear, quadratic, and exponential regression models with complete statistics. Perfect for students, researchers, and data analysis.",
     "intro": "Enter your data points and get the regression equation, slope, intercept, R-squared value, and step-by-step calculations in seconds.",
     "whatIsTitle": "What Is a Regression Equation?",
     "whatIsText": "A regression equation models the relationship between variables, allowing you to predict outcomes based on input data. In its simplest form — simple linear regression — the equation is <strong>y = mx + b</strong>, where <strong>m</strong> is the slope and <strong>b</strong> is the y-intercept. This powerful statistical tool is used across science, business, and engineering to uncover trends, make forecasts, and quantify relationships between variables.",
