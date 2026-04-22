@@ -58,7 +58,13 @@
   "about": {
     "title": "Sobre Nosotros",
     "description": "Conozca sobre la Calculadora de Ecuación de Regresión",
-    "content": "La Calculadora de Ecuación de Regresión es una herramienta gratuita en línea diseñada para ayudar a estudiantes, investigadores y profesionales a calcular ecuaciones de regresión de forma rápida y precisa. Nuestra calculadora admite regresión lineal y proporciona soluciones paso a paso detalladas para ayudarle a comprender el proceso matemático detrás de los resultados. Ya sea que esté estudiando estadística, analizando datos o trabajando en investigación, nuestra herramienta hace que el análisis de regresión sea accesible para todos."
+    "content": "La Calculadora de Ecuación de Regresión es una herramienta gratuita en línea diseñada para ayudar a estudiantes, investigadores y profesionales a calcular ecuaciones de regresión de forma rápida y precisa. Nuestra calculadora admite regresión lineal y proporciona soluciones paso a paso detalladas para ayudarle a comprender el proceso matemático detrás de los resultados. Ya sea que esté estudiando estadística, analizando datos o trabajando en investigación, nuestra herramienta hace que el análisis de regresión sea accesible para todos.",
+    "mission": "Nuestra Misión",
+    "missionText": "Hacer que el análisis de regresión sea accesible para todos — desde estudiantes que aprenden estadística por primera vez hasta profesionales que necesitan resultados rápidos y confiables. Creemos que las herramientas estadísticas potentes deben ser gratuitas, privadas y fáciles de usar.",
+    "values": "Nuestros Valores",
+    "valuesText": "Privacidad primero — todos los cálculos se ejecutan en su navegador, nada se envía a ningún servidor. Enfoque educativo — cada resultado incluye explicaciones paso a paso para que aprenda la matemática, no solo la respuesta. Siempre gratuito — sin registro, sin pago, sin límites.",
+    "team": "Nuestro Equipo",
+    "teamText": "Somos un pequeño equipo de estadísticos, educadores y desarrolladores apasionados por hacer que el análisis de datos sea comprensible. Si tiene sugerencias o desea contribuir, comuníquese a través de nuestra página de contacto."
   },
   "contact": {
     "title": "Contáctenos",

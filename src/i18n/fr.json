@@ -58,7 +58,13 @@
   "about": {
     "title": "À Propos",
     "description": "Découvrez le Calculateur d'Équation de Régression",
-    "content": "Le Calculateur d'Équation de Régression est un outil gratuit en ligne conçu pour aider les étudiants, les chercheurs et les professionnels à calculer rapidement et avec précision des équations de régression. Notre calculateur prend en charge la régression linéaire et fournit des solutions détaillées étape par étape pour vous aider à comprendre le processus mathématique derrière les résultats. Que vous étudiiez les statistiques, analysiez des données ou travailliez sur une recherche, notre outil rend l'analyse de régression accessible à tous."
+    "content": "Le Calculateur d'Équation de Régression est un outil gratuit en ligne conçu pour aider les étudiants, les chercheurs et les professionnels à calculer rapidement et avec précision des équations de régression. Notre calculateur prend en charge la régression linéaire et fournit des solutions détaillées étape par étape pour vous aider à comprendre le processus mathématique derrière les résultats. Que vous étudiiez les statistiques, analysiez des données ou travailliez sur une recherche, notre outil rend l'analyse de régression accessible à tous.",
+    "mission": "Notre Mission",
+    "missionText": "Rendre l'analyse de régression accessible à tous — des étudiants qui découvrent les statistiques pour la première fois aux professionnels qui ont besoin de résultats rapides et fiables. Nous croyons que les outils statistiques puissants doivent être gratuits, privés et faciles à utiliser.",
+    "values": "Nos Valeurs",
+    "valuesText": "La vie privée d'abord — tous les calculs s'exécutent dans votre navigateur, rien n'est envoyé à aucun serveur. Axé sur l'éducation — chaque résultat inclut des explications étape par étape pour que vous appreniez les mathématiques, pas seulement la réponse. Toujours gratuit — aucune inscription, aucun paywall, aucune limite.",
+    "team": "Notre Équipe",
+    "teamText": "Nous sommes une petite équipe de statisticiens, d'éducateurs et de développeurs passionnés par rendre l'analyse de données compréhensible. Si vous avez des suggestions ou souhaitez contribuer, contactez-nous via notre page de contact."
   },
   "contact": {
     "title": "Contactez-nous",

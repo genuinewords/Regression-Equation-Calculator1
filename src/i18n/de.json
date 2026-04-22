@@ -58,7 +58,13 @@
   "about": {
     "title": "Über Uns",
     "description": "Erfahren Sie mehr über den Regressionsgleichungsrechner",
-    "content": "Der Regressionsgleichungsrechner ist ein kostenloses Online-Tool, das entwickelt wurde, um Studenten, Forschern und Fachleuten zu helfen, Regressionsgleichungen schnell und genau zu berechnen. Unser Rechner unterstützt lineare Regression und bietet detaillierte Schritt-für-Schritt-Lösungen, um den mathematischen Prozess hinter den Ergebnissen zu verstehen. Egal, ob Sie Statistik studieren, Daten analysieren oder an Forschung arbeiten – unser Tool macht Regressionsanalyse für jeden zugänglich."
+    "content": "Der Regressionsgleichungsrechner ist ein kostenloses Online-Tool, das entwickelt wurde, um Studenten, Forschern und Fachleuten zu helfen, Regressionsgleichungen schnell und genau zu berechnen. Unser Rechner unterstützt lineare Regression und bietet detaillierte Schritt-für-Schritt-Lösungen, um den mathematischen Prozess hinter den Ergebnissen zu verstehen. Egal, ob Sie Statistik studieren, Daten analysieren oder an Forschung arbeiten – unser Tool macht Regressionsanalyse für jeden zugänglich.",
+    "mission": "Unsere Mission",
+    "missionText": "Regressionsanalyse für jeden zugänglich machen — von Studenten, die zum ersten Mal Statistik lernen, bis hin zu Fachleuten, die schnelle, zuverlässige Ergebnisse benötigen. Wir glauben, dass leistungsstarke statistische Werkzeuge kostenlos, privat und einfach zu bedienen sein sollten.",
+    "values": "Unsere Werte",
+    "valuesText": "Privatsphäre zuerst — alle Berechnungen laufen in Ihrem Browser, nichts wird an einen Server gesendet. Bildungsorientiert — jedes Ergebnis enthält Schritt-für-Schritt-Erklärungen, damit Sie die Mathematik lernen, nicht nur die Antwort. Immer kostenlos — keine Anmeldung, keine Bezahlschranke, keine Limits.",
+    "team": "Unser Team",
+    "teamText": "Wir sind ein kleines Team aus Statistikern, Pädagogen und Entwicklern, die sich dafür einsetzen, Datenanalyse verständlich zu machen. Wenn Sie Vorschläge haben oder einen Beitrag leisten möchten, kontaktieren Sie uns über unsere Kontaktseite."
   },
   "contact": {
     "title": "Kontakt",
