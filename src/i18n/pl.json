@@ -67,7 +67,7 @@
     "teamText": "Jesteśmy małym zespołem statystyków, edukatorów i programistów z pasją do tworzenia zrozumiałej analizy danych. Jeśli masz sugestie lub chcesz wnieść swój wkład, skontaktuj się z nami przez naszą stronę kontaktową."
   },
   "contact": {
-    "title": "Kontakt",
+    "title": "Skontaktuj się z nami",
     "description": "Skontaktuj się z zespołem Kalkulatora Równania Regresji",
     "helperText": "Masz pytanie lub opinię? Chętnie Cię wysłuchamy. Wypełnij poniższy formularz, a odezwiemy się tak szybko, jak to możliwe.",
     "nameLabel": "Twoje Imię",
@@ -386,7 +386,7 @@
     ],
     "avoidTitle": "Kiedy Unikać Regresji Kwadratowej",
     "avoidPoints": [
-      "Związek jest w przybliżeniu liniowy — użyj naszego <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Kalkulator Najmniejszych Kwadrat�w</a>",
+      "Związek jest w przybliżeniu liniowy — użyj naszego <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Kalkulator Najmniejszych Kwadrat�w</a>",
       "Potrzebujesz więcej niż jednego predyktora — użyj naszego <a href=\"/multiple-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Kalkulatora Regresji Wielorakiej</a>",
       "Wymagana jest krzywizna wyższego rzędu (sześcienna lub wyższa) — rozważ regresję wielomianową stopnia 3+",
       "Ekstrapolujesz daleko poza zakres swoich danych — parabole mogą szybko dywergować"
@@ -433,7 +433,7 @@
     ],
     "avoidTitle": "Kiedy Unikać Regresji Wielorakiej",
     "avoidPoints": [
-      "Masz tylko jeden predyktor — użyj naszego <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Kalkulator Najmniejszych Kwadrat�w</a>",
+      "Masz tylko jeden predyktor — użyj naszego <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Kalkulator Najmniejszych Kwadrat�w</a>",
       "Związek jest zakrzywiony — wypróbuj nasz <a href=\"/quadratic-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Kalkulator Regresji Kwadratowej</a>",
       "Predyktory są ze sobą silnie skorelowane (współliniowość) — rozważ usunięcie lub połączenie zmiennych",
       "Twoja próba jest mała względem liczby predyktorów (wymagane n > p + 1)"
@@ -456,5 +456,17 @@
   "sitemap": {
     "title": "Mapa Strony",
     "description": "Przeglądaj wszystkie strony Kalkulatora Równania Regresji"
+  },
+  "expCalc": {
+    "title": "Kalkulator Regresji Wykładniczej",
+    "description": "Oblicz równanie regresji wykładniczej (y = a · e^(bx))"
+  },
+  "lsrlCalc": {
+    "title": "Kalkulator Regresji MNK",
+    "description": "Oblicz linię regresji metodą najmniejszych kwadratów (y = mx + b)"
+  },
+  "rcCalc": {
+    "title": "Kalkulator Krzywej Regresji",
+    "description": "Analizuj zależności wieloma typami modeli regresji"
   }
 }

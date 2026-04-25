@@ -456,5 +456,17 @@
   "sitemap": {
     "title": "Peta Situs",
     "description": "Jelajahi semua halaman di Kalkulator Persamaan Regresi"
+  },
+  "expCalc": {
+    "title": "Kalkulator Regresi Eksponensial",
+    "description": "Hitung persamaan regresi eksponensial (y = a · e^(bx))"
+  },
+  "lsrlCalc": {
+    "title": "Kalkulator Garis Regresi Kuadrat Terkecil",
+    "description": "Hitung garis regresi kuadrat terkecil (y = mx + b)"
+  },
+  "rcCalc": {
+    "title": "Kalkulator Kurva Regresi",
+    "description": "Analisis hubungan dengan berbagai jenis model regresi"
   }
 }

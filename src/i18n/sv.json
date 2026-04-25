@@ -456,5 +456,17 @@
   "sitemap": {
     "title": "Webbplatskarta",
     "description": "Utforska alla sidor på Regressionsekvationskalkylatorn"
+  },
+  "expCalc": {
+    "title": "Exponentiell Regressionskalkylator",
+    "description": "Beräkna exponentiell regressionsekvation (y = a · e^(bx))"
+  },
+  "lsrlCalc": {
+    "title": "Minsta-Kvadrat-Regressionskalkylator",
+    "description": "Beräkna minsta-kvadrat-regressionslinjen (y = mx + b)"
+  },
+  "rcCalc": {
+    "title": "Regressionskurvkalkylator",
+    "description": "Analysera relationer med flera regressionstyper"
   }
 }

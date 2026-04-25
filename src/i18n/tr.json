@@ -456,5 +456,17 @@
   "sitemap": {
     "title": "Site Haritası",
     "description": "Regresyon Denklemi Hesaplayıcısı'ndaki tüm sayfaları keşfedin"
+  },
+  "expCalc": {
+    "title": "Üstel Regresyon Hesaplayıcı",
+    "description": "Üstel regresyon denklemini (y = a · e^(bx)) hesaplayın"
+  },
+  "lsrlCalc": {
+    "title": "En Küçük Kareler Regresyon Hesaplayıcı",
+    "description": "En küçük kareler regresyon doğrusunu (y = mx + b) hesaplayın"
+  },
+  "rcCalc": {
+    "title": "Regresyon Eğrisi Hesaplayıcı",
+    "description": "Birden fazla regresyon modeli türüyle ilişkileri analiz edin"
   }
 }

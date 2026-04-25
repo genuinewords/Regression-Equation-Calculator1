@@ -456,5 +456,17 @@
   "sitemap": {
     "title": "Mappa del Sito",
     "description": "Esplora tutte le pagine del Calcolatore di Equazione di Regressione"
+  },
+  "expCalc": {
+    "title": "Calcolatore di Regressione Esponenziale",
+    "description": "Calcola l'equazione di regressione esponenziale (y = a · e^(bx))"
+  },
+  "lsrlCalc": {
+    "title": "Calcolatore della Retta dei Minimi Quadrati",
+    "description": "Calcola la retta di regressione dei minimi quadrati (y = mx + b)"
+  },
+  "rcCalc": {
+    "title": "Calcolatore di Curva di Regressione",
+    "description": "Analizza le relazioni con più tipi di modelli di regressione"
   }
 }

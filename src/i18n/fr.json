@@ -427,5 +427,17 @@
   "sitemap": {
     "title": "Plan du Site",
     "description": "Explorez toutes les pages du Calculateur d'Équation de Régression"
+  },
+  "expCalc": {
+    "title": "Calculateur de Régression Exponentielle",
+    "description": "Calculez l'équation de régression exponentielle (y = a · e^(bx))"
+  },
+  "lsrlCalc": {
+    "title": "Calculateur de Droite des Moindres Carrés",
+    "description": "Calculez la droite de régression des moindres carrés (y = mx + b)"
+  },
+  "rcCalc": {
+    "title": "Calculateur de Courbe de Régression",
+    "description": "Analysez les relations avec plusieurs types de modèles de régression"
   }
 }

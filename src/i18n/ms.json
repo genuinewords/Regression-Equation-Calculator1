@@ -1,8 +1,8 @@
 {
-  "siteTitle": "Kalkulator Persamaan Regresi",
+  "siteTitle": "Pengira Persamaan Regresi",
   "siteDescription": "Kalkulator persamaan regresi dalam talian percuma. Kira persamaan regresi linear, polinomial dan berbilang serta-merta dengan penyelesaian langkah demi langkah.",
   "home": {
-    "title": "Kalkulator Persamaan Regresi",
+    "title": "Pengira Persamaan Regresi",
     "description": "Kira persamaan regresi serta-merta dengan alat dalam talian percuma kami",
     "intro": "Masukkan titik data anda dan dapatkan persamaan regresi, kecerunan, pintasan, nilai R-kuasa dua dan pengiraan langkah demi langkah dalam beberapa saat.",
     "whatIsTitle": "Apakah Persamaan Regresi?",
@@ -56,7 +56,7 @@
     "faqTitle": "Soalan Lazim"
   },
   "about": {
-    "title": "Tentang Kami",
+    "title": "Perihal Kami",
     "description": "Ketahui tentang Kalkulator Persamaan Regresi",
     "content": "Kalkulator Persamaan Regresi adalah alat dalam talian percuma yang direka untuk membantu pelajar, penyelidik dan profesional mengira persamaan regresi dengan cepat dan tepat. Kalkulator kami menyokong regresi linear dan menyediakan penyelesaian langkah demi langkah yang terperinci untuk membantu anda memahami proses matematik di sebalik keputusan. Sama ada anda belajar statistik, menganalisis data atau bekerja dalam penyelidikan, alat kami menjadikan analisis regresi mudah diakses oleh semua orang.",
     "mission": "Misi Kami",
@@ -67,7 +67,7 @@
     "teamText": "Kami adalah pasukan kecil ahli statistik, pendidik dan pembangun yang bersemangat untuk menjadikan analisis data mudah difahami. Jika anda mempunyai cadangan atau ingin menyumbang, hubungi kami melalui halaman hubungan kami."
   },
   "contact": {
-    "title": "Hubungi Kami",
+    "title": "Berhubung dengan Kami",
     "description": "Berhubung dengan pasukan Kalkulator Persamaan Regresi",
     "helperText": "Ada soalan atau maklum balas? Kami ingin mendengar daripada anda. Isi borang di bawah dan kami akan menghubungi anda secepat mungkin.",
     "nameLabel": "Nama Anda",
@@ -145,7 +145,7 @@
     "stepByStep": "Penyelesaian Langkah demi Langkah"
   },
   "pearson": {
-    "title": "Kalkulator Korelasi Pearson",
+    "title": "Pengira Korelasi Pearson",
     "description": "Masukkan data anda untuk mengira pekali korelasi Pearson",
     "enterData": "Masukkan data anda",
     "xLabel": "Nilai X",
@@ -353,7 +353,7 @@
     "seeAlsoAssumptionsDesc": "Sahkan data anda memenuhi empat anggapan OLS"
   },
   "quadCalc": {
-    "title": "Kalkulator Regresi Kuadratik",
+    "title": "Pengira Regresi Kuadratik",
     "description": "Kira persamaan regresi kuadratik y = ax² + bx + c daripada data anda",
     "enterData": "Masukkan titik data anda",
     "xLabel": "Nilai X",
@@ -456,5 +456,17 @@
   "sitemap": {
     "title": "Peta Laman",
     "description": "Terokai semua halaman di Kalkulator Persamaan Regresi"
+  },
+  "expCalc": {
+    "title": "Kalkulator Regresi Eksponen",
+    "description": "Kira persamaan regresi eksponen (y = a · e^(bx))"
+  },
+  "lsrlCalc": {
+    "title": "Kalkulator Garis Regresi Kuasa Dua Terkecil",
+    "description": "Kira garis regresi kuasa dua terkecil (y = mx + b)"
+  },
+  "rcCalc": {
+    "title": "Kalkulator Lengkung Regresi",
+    "description": "Analisis hubungan dengan pelbagai jenis model regresi"
   }
 }

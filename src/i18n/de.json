@@ -427,5 +427,17 @@
   "sitemap": {
     "title": "Seitenübersicht",
     "description": "Entdecken Sie alle Seiten des Regressionsgleichungsrechners"
+  },
+  "expCalc": {
+    "title": "Exponentieller Regressionsrechner",
+    "description": "Berechnen Sie die exponentielle Regressionsgleichung (y = a · e^(bx))"
+  },
+  "lsrlCalc": {
+    "title": "Kleinste-Quadrate-Regressionsrechner",
+    "description": "Berechnen Sie die Kleinste-Quadrate-Regressionsgerade (y = mx + b)"
+  },
+  "rcCalc": {
+    "title": "Regressionskurvenrechner",
+    "description": "Analysieren Sie Beziehungen mit mehreren Regressionsmodelltypen"
   }
 }

@@ -456,5 +456,17 @@
   "sitemap": {
     "title": "사이트맵",
     "description": "회귀 방정식 계산기의 모든 페이지 탐색"
+  },
+  "expCalc": {
+    "title": "지수 회귀 계산기",
+    "description": "지수 회귀 방정식 (y = a · e^(bx)) 계산"
+  },
+  "lsrlCalc": {
+    "title": "최소제곱 회귀선 계산기",
+    "description": "최소제곱 회귀선 (y = mx + b) 계산"
+  },
+  "rcCalc": {
+    "title": "회귀 곡선 계산기",
+    "description": "여러 회귀 모델 유형으로 관계 분석"
   }
 }

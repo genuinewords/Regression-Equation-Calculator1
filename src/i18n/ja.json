@@ -456,5 +456,17 @@
   "sitemap": {
     "title": "サイトマップ",
     "description": "回帰方程式計算機のすべてのページを探索"
+  },
+  "expCalc": {
+    "title": "指数回帰計算機",
+    "description": "指数回帰方程式 (y = a · e^(bx)) を計算"
+  },
+  "lsrlCalc": {
+    "title": "最小二乗回帰直線計算機",
+    "description": "最小二乗回帰直線 (y = mx + b) を計算"
+  },
+  "rcCalc": {
+    "title": "回帰曲線計算機",
+    "description": "複数の回帰モデルタイプで関係を分析"
   }
 }

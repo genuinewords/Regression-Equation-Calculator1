@@ -49,7 +49,7 @@ const itemListSchema = {
 ---
 
 <BaseLayout
-  title={translations.blog.title}
+  title={page.currentPage > 1 ? `${translations.blog.title} — Page ${page.currentPage}` : translations.blog.title}
   description={translations.blog.description}
   locale={locale}
   canonicalUrl={new URL(page.url.pathname ?? '/blog/', siteConfig.siteUrl).href}
