@@ -7,7 +7,7 @@ import mdx from '@astrojs/mdx';
 import { fileURLToPath } from 'node:url';
 
 export default defineConfig({
-  site: 'https://regressionequationcalculator.com',
+  site: 'https://www.regressionequationcalculator.com',
   output: 'static',
   adapter: vercel(),
   trailingSlash: 'always',
