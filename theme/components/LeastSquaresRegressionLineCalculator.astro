@@ -73,7 +73,7 @@ const lc = (translations as any).lsrlCalc;
 
         <div id="lsrl-error-msg" class="hidden mb-4 p-3 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800/50 text-red-700 dark:text-red-400 text-sm"></div>
 
-        <div id="lsrl-results-section" class="hidden animate-[fadeIn_0.3s_ease-out]">
+        <div id="lsrl-results-section" class="animate-[fadeIn_0.3s_ease-out]">
           <div class="mb-6">
             <h3 class="text-lg font-bold text-surface-800 dark:text-surface-200 mb-4">{lc?.result || 'Results'}</h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -468,10 +468,15 @@ const lc = (translations as any).lsrlCalc;
       const stepsEl = calcEl.querySelector('#lsrl-steps-content');
       if (stepsEl) stepsEl.innerHTML = result.steps.map((s) => `<p>${s}</p>`).join('');
 
-      drawChart(points, result.predict);
-
       if (resultsSection) {
         resultsSection.classList.remove('hidden');
+      }
+
+      requestAnimationFrame(() => {
+        drawChart(points, result.predict);
+      });
+
+      if (resultsSection) {
         resultsSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
     });
