@@ -1,0 +1,11 @@
+{
+  "cleanUrls": false,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "regressionequationcalculator.com" }],
+      "destination": "https://www.regressionequationcalculator.com/:path",
+      "permanent": true
+    }
+  ]
+}
