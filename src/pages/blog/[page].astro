@@ -16,13 +16,14 @@ const { page } = Astro.props;
 const locale = 'en';
 const translations = await mergeTranslations(locale);
 
-const startIndex = (page.currentPage - 1) * 12 + 1;
-const endIndex = Math.min(page.currentPage * 12, page.totalItems);
+const totalItems = page.total;
+const startIndex = (page.currentPage - 1) * page.size + 1;
+const endIndex = Math.min(page.currentPage * page.size, totalItems);
 const resultsMeta = translations.blog.resultsMeta
   ?.replace('{start}', String(startIndex))
   .replace('{end}', String(endIndex))
-  .replace('{total}', String(page.totalItems))
-  ?? `Showing ${startIndex}-${endIndex} of ${page.totalItems} articles`;
+  .replace('{total}', String(totalItems))
+  ?? `Showing ${startIndex}-${endIndex} of ${totalItems} articles`;
 
 const blogSchema = {
   '@context': 'https://schema.org',
