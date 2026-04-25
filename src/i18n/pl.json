@@ -386,7 +386,7 @@
     ],
     "avoidTitle": "Kiedy Unikać Regresji Kwadratowej",
     "avoidPoints": [
-      "Związek jest w przybliżeniu liniowy — użyj naszego <a href=\"/linear-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Kalkulatora Regresji Liniowej</a>",
+      "Związek jest w przybliżeniu liniowy — użyj naszego <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Kalkulator Najmniejszych Kwadrat�w</a>",
       "Potrzebujesz więcej niż jednego predyktora — użyj naszego <a href=\"/multiple-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Kalkulatora Regresji Wielorakiej</a>",
       "Wymagana jest krzywizna wyższego rzędu (sześcienna lub wyższa) — rozważ regresję wielomianową stopnia 3+",
       "Ekstrapolujesz daleko poza zakres swoich danych — parabole mogą szybko dywergować"
@@ -433,7 +433,7 @@
     ],
     "avoidTitle": "Kiedy Unikać Regresji Wielorakiej",
     "avoidPoints": [
-      "Masz tylko jeden predyktor — użyj naszego <a href=\"/linear-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Kalkulatora Regresji Liniowej</a>",
+      "Masz tylko jeden predyktor — użyj naszego <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Kalkulator Najmniejszych Kwadrat�w</a>",
       "Związek jest zakrzywiony — wypróbuj nasz <a href=\"/quadratic-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Kalkulator Regresji Kwadratowej</a>",
       "Predyktory są ze sobą silnie skorelowane (współliniowość) — rozważ usunięcie lub połączenie zmiennych",
       "Twoja próba jest mała względem liczby predyktorów (wymagane n > p + 1)"

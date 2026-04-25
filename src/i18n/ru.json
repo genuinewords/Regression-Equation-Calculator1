@@ -362,7 +362,7 @@
     ],
     "avoidTitle": "Когда избегать квадратичной регрессии",
     "avoidPoints": [
-      "Связь приблизительно линейна — используйте наш <a href=\"/linear-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Калькулятор линейной регрессии</a>",
+      "Связь приблизительно линейна — используйте наш <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Калькулятор линейной регрессии</a>",
       "Вам нужен более чем один предиктор — используйте наш <a href=\"/multiple-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Калькулятор множественной регрессии</a>",
       "Требуется кривизна более высокого порядка (кубическая и выше) — рассмотрите полиномиальную регрессию степени 3+",
       "Экстраполяция далеко за пределы ваших данных — квадратичные функции могут быстро расходиться"
@@ -409,7 +409,7 @@
     ],
     "avoidTitle": "Когда избегать множественной регрессии",
     "avoidPoints": [
-      "У вас только один предиктор — используйте наш <a href=\"/linear-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Калькулятор линейной регрессии</a>",
+      "У вас только один предиктор — используйте наш <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Калькулятор линейной регрессии</a>",
       "Связь криволинейна — попробуйте наш <a href=\"/quadratic-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Калькулятор квадратичной регрессии</a>",
       "Предикторы сильно коррелируют друг с другом (мультиколлинеарность) — рассмотрите удаление или объединение переменных",
       "Размер выборки мал по сравнению с числом предикторов (необходимо n > p + 1)"

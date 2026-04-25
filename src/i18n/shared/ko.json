@@ -11,7 +11,7 @@
     "pearsonCorrelation": "피어슨 r 계산기",
     "grubbsTest": "그럽스 검정",
     "assumptionsChecker": "가정 검정",
-    "linearCalc": "선형 계산기",
+    "expCalc": "Exponential Regression"`n    "lsrlCalc": "Least Squares Line"`n    "rcCalc": "Regression Curve",
     "quadCalc": "이차 계산기",
     "multiCalc": "다중 계산기"
   },

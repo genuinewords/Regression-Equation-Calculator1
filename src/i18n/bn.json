@@ -391,7 +391,7 @@
     ],
     "avoidTitle": "দ্বিঘাত রিগ্রেশন কখন এড়াবেন",
     "avoidPoints": [
-      "সম্পর্ক প্রায় রৈখিক — আমাদের <a href=\"/linear-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">রৈখিক রিগ্রেশন ক্যালকুলেটর</a> ব্যবহার করুন",
+      "সম্পর্ক প্রায় রৈখিক — আমাদের <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">রৈখিক রিগ্রেশন ক্যালকুলেটর</a> ব্যবহার করুন",
       "আপনার একাধিক ভবিষ্যদ্বাণীকারী প্রয়োজন — আমাদের <a href=\"/multiple-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">বহুচর রিগ্রেশন ক্যালকুলেটর</a> ব্যবহার করুন",
       "উচ্চতর-মাত্রার বক্রতা (ঘন বা তার বেশি) প্রয়োজন — মাত্রা 3+ বহুপদী রিগ্রেশন বিবেচনা করুন",
       "আপনার ডেটা ব্যাপ্তির বাইরে অঙ্কন করা — দ্বিঘাত দ্রুত বিচ্যুত হতে পারে"
@@ -438,7 +438,7 @@
     ],
     "avoidTitle": "বহুচর রিগ্রেশন কখন এড়াবেন",
     "avoidPoints": [
-      "আপনার শুধুমাত্র একটি ভবিষ্যদ্বাণীকারী আছে — আমাদের <a href=\"/linear-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">রৈখিক রিগ্রেশন ক্যালকুলেটর</a> ব্যবহার করুন",
+      "আপনার শুধুমাত্র একটি ভবিষ্যদ্বাণীকারী আছে — আমাদের <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">রৈখিক রিগ্রেশন ক্যালকুলেটর</a> ব্যবহার করুন",
       "সম্পর্ক বক্র — আমাদের <a href=\"/quadratic-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">দ্বিঘাত রিগ্রেশন ক্যালকুলেটর</a> ব্যবহার করুন",
       "ভবিষ্যদ্বাণীকারীগুলো পরস্পরের সাথে অত্যন্ত সহসম্পর্কিত (বহুসংযোগতা) — চলক বাদ দেওয়া বা সমন্বয় করার কথা বিবেচনা করুন",
       "আপনার নমুনা আকার ভবিষ্যদ্বাণীকারীর সংখ্যার তুলনায় ছোট (n > p + 1 প্রয়োজন)"

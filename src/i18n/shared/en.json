@@ -2,7 +2,9 @@
   "nav": {
     "home": "Home",
     "tools": "Tools",
-    "linearCalc": "Linear Regression",
+    "expCalc": "Exponential Regression",
+    "lsrlCalc": "Least Squares Line",
+    "rcCalc": "Regression Curve",
     "quadCalc": "Quadratic Regression",
     "multiCalc": "Multiple Regression",
     "pearsonCorrelation": "Pearson r Calculator",

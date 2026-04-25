@@ -362,7 +362,7 @@
     ],
     "avoidTitle": "Cuándo evitar regresión cuadrática",
     "avoidPoints": [
-      "La relación es aproximadamente lineal — use nuestra <a href=\"/linear-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Calculadora de Regresión Lineal</a> en su lugar",
+      "La relación es aproximadamente lineal — use nuestra <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Calculadora de Regresión Lineal</a> en su lugar",
       "Necesita más de un predictor — use nuestra <a href=\"/multiple-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Calculadora de Regresión Múltiple</a>",
       "Se necesita curvatura de orden superior (cúbica o superior) — considere regresión polinómica de grado 3+",
       "Extrapolar mucho más allá del rango de sus datos — las cuadráticas pueden divergir rápidamente"
@@ -409,7 +409,7 @@
     ],
     "avoidTitle": "Cuándo evitar regresión múltiple",
     "avoidPoints": [
-      "Solo tiene un predictor — use nuestra <a href=\"/linear-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Calculadora de Regresión Lineal</a>",
+      "Solo tiene un predictor — use nuestra <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Calculadora de Regresión Lineal</a>",
       "La relación es curva — pruebe nuestra <a href=\"/quadratic-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Calculadora de Regresión Cuadrática</a>",
       "Los predictores están altamente correlacionados entre sí (multicolinealidad) — considere eliminar o combinar variables",
       "Su tamaño de muestra es pequeño en relación al número de predictores (necesita n > p + 1)"

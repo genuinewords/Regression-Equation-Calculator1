@@ -11,7 +11,7 @@
     "pearsonCorrelation": "Калькулятор Пирсона r",
     "grubbsTest": "Критерий Граббса",
     "assumptionsChecker": "Проверка предпосылок",
-    "linearCalc": "Линейный калькулятор",
+    "expCalc": "Exponential Regression"`n    "lsrlCalc": "Least Squares Line"`n    "rcCalc": "Regression Curve",
     "quadCalc": "Квадратичный калькулятор",
     "multiCalc": "Множественный калькулятор"
   },

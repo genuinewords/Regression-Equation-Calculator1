@@ -391,7 +391,7 @@
     ],
     "avoidTitle": "二次回帰を避ける場合",
     "avoidPoints": [
-      "関係がほぼ線形 — <a href=\"/linear-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">線形回帰計算機</a>を使用してください",
+      "関係がほぼ線形 — <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">線形回帰計算機</a>を使用してください",
       "複数の予測変数が必要 — <a href=\"/multiple-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">重回帰計算機</a>を使用してください",
       "より高次の曲率（3次以上）が必要 — 3次以上の多項式回帰を検討",
       "データ範囲を大きく外挿する場合 — 二次関数は急速に発散する可能性"
@@ -438,7 +438,7 @@
     ],
     "avoidTitle": "重回帰を避ける場合",
     "avoidPoints": [
-      "予測変数が1つだけ — <a href=\"/linear-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">線形回帰計算機</a>を使用してください",
+      "予測変数が1つだけ — <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">線形回帰計算機</a>を使用してください",
       "関係が曲線的 — <a href=\"/quadratic-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">二次回帰計算機</a>をお試しください",
       "予測変数同士が高く相関している（多重共線性）— 変数の削除または統合を検討",
       "予測変数の数に対してサンプルサイズが小さい (n > p + 1 が必要)"

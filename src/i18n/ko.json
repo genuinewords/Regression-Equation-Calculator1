@@ -391,7 +391,7 @@
     ],
     "avoidTitle": "이차 회귀를 피할 때",
     "avoidPoints": [
-      "관계가 대략 선형 — <a href=\"/linear-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">선형 회귀 계산기</a>를 사용하세요",
+      "관계가 대략 선형 — <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">선형 회귀 계산기</a>를 사용하세요",
       "여러 예측변수가 필요 — <a href=\"/multiple-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">다중 회귀 계산기</a>를 사용하세요",
       "더 높은 차수의 곡률(3차 이상)이 필요 — 3차 이상 다항식 회귀 고려",
       "데이터 범위를 크게 외삽하는 경우 — 이차함수는 급격히 발산할 수 있음"
@@ -438,7 +438,7 @@
     ],
     "avoidTitle": "다중 회귀를 피할 때",
     "avoidPoints": [
-      "예측변수가 하나뿐 — <a href=\"/linear-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">선형 회귀 계산기</a>를 사용하세요",
+      "예측변수가 하나뿐 — <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">선형 회귀 계산기</a>를 사용하세요",
       "관계가 곡선적 — <a href=\"/quadratic-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">이차 회귀 계산기</a>를 사용하세요",
       "예측변수 간에 높은 상관이 있음 (다중공선성) — 변수 제거 또는 결합 고려",
       "예측변수 수에 비해 표본 크기가 작음 (n > p + 1 필요)"

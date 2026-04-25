@@ -391,7 +391,7 @@
     ],
     "avoidTitle": "När ska man undvika kvadratisk regression",
     "avoidPoints": [
-      "Sambandet är ungefärligen linjärt — använd vår <a href=\"/linear-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Linjära Regressionskalkylator</a> istället",
+      "Sambandet är ungefärligen linjärt — använd vår <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Linjära Regressionskalkylator</a> istället",
       "Du behöver mer än en prediktor — använd vår <a href=\"/multiple-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Multipla Regressionskalkylator</a>",
       "Krökning av högre ordning (kubisk eller mer) behövs — överväg polynomregression av grad 3+",
       "Du extrapolerar långt bortom ditt dataområde — kvadratiska kan avvika snabbt"
@@ -438,7 +438,7 @@
     ],
     "avoidTitle": "När ska man undvika multipel regression",
     "avoidPoints": [
-      "Du har bara en prediktor — använd vår <a href=\"/linear-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Linjära Regressionskalkylator</a>",
+      "Du har bara en prediktor — använd vår <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Linjära Regressionskalkylator</a>",
       "Sambandet är krökt — prova vår <a href=\"/quadratic-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Kvadratiska Regressionskalkylator</a>",
       "Prediktorerna är högt korrelerade med varandra (multikollinearitet) — överväg att ta bort eller kombinera variabler",
       "Ditt urval är litet i förhållande till antalet prediktorer (behöver n > p + 1)"

@@ -391,7 +391,7 @@
     ],
     "avoidTitle": "متى تتجنب الانحدار التربيعي",
     "avoidPoints": [
-      "العلاقة تقريباً خطية — استخدم <a href=\"/linear-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">حاسبة الانحدار الخطي</a> بدلاً من ذلك",
+      "العلاقة تقريباً خطية — استخدم <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">حاسبة الانحدار الخطي</a> بدلاً من ذلك",
       "تحتاج أكثر من متنبئ واحد — استخدم <a href=\"/multiple-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">حاسبة الانحدار المتعدد</a>",
       "انحناء من رتبة أعلى (تكعيبية أو أكثر) مطلوب — فكر في انحدار كثيرات حدود من الدرجة 3+",
       "الاستقراء بعيداً عن نطاق بياناتك — التربيعية يمكن أن تتباعد بسرعة"
@@ -438,7 +438,7 @@
     ],
     "avoidTitle": "متى تتجنب الانحدار المتعدد",
     "avoidPoints": [
-      "لديك متنبيء واحد فقط — استخدم <a href=\"/linear-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">حاسبة الانحدار الخطي</a>",
+      "لديك متنبيء واحد فقط — استخدم <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">حاسبة الانحدار الخطي</a>",
       "العلاقة منحنية — جرب <a href=\"/quadratic-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">حاسبة الانحدار التربيعي</a>",
       "المتنبئات مرتبطة ارتباطاً عالياً مع بعضها (تعددية التعاون الخطي) — فكر في حذف أو دمج المتغيرات",
       "حجم عينتك صغير بالنسبة لعدد المتنبئات (يحتاج n > p + 1)"

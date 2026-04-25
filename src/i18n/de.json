@@ -362,7 +362,7 @@
     ],
     "avoidTitle": "Wann quadratische Regression vermeiden",
     "avoidPoints": [
-      "Die Beziehung ist ungefähr linear — verwenden Sie stattdessen unseren <a href=\"/linear-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Linearen Regressionsrechner</a>",
+      "Die Beziehung ist ungefähr linear — verwenden Sie stattdessen unseren <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Kleinste-Quadrate-Rechner</a>",
       "Sie benötigen mehr als einen Prädiktor — verwenden Sie unseren <a href=\"/multiple-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Multiplen Regressionsrechner</a>",
       "Höhergradige Krümmung (kubisch oder höher) ist erforderlich — beachten Sie Polynomregression 3. Grades oder höher",
       "Extrapolation weit über Ihren Datenbereich hinaus — Quadraten können schnell divergieren"
@@ -409,7 +409,7 @@
     ],
     "avoidTitle": "Wann multiple Regression vermeiden",
     "avoidPoints": [
-      "Sie haben nur einen Prädiktor — verwenden Sie unseren <a href=\"/linear-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Linearen Regressionsrechner</a>",
+      "Sie haben nur einen Prädiktor — verwenden Sie unseren <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Kleinste-Quadrate-Rechner</a>",
       "Die Beziehung ist gekrümmt — probieren Sie unseren <a href=\"/quadratic-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Quadratischen Regressionsrechner</a>",
       "Prädiktoren sind stark miteinander korreliert (Multikollinearität) — entfernen oder kombinieren Sie Variablen",
       "Ihre Stichprobengröße ist klein im Verhältnis zur Anzahl der Prädiktoren (n > p + 1 erforderlich)"

@@ -1,0 +1,518 @@
+---
+import type { MergedTranslations } from 'theme/i18n/types';
+
+interface Props {
+  translations: MergedTranslations;
+}
+
+const { translations } = Astro.props;
+const rc = (translations as any).rcCalc;
+---
+
+<section class="py-8" id="rc-regression-calculator" data-x-label={rc?.xLabel || 'X'} data-y-label={rc?.yLabel || 'Y'} data-invalid-data={rc?.invalidData || 'Please enter at least 2 valid data points'}>
+  <div class="mx-auto max-w-3xl">
+    <div class="rounded-2xl shadow-lg dark:shadow-surface-950/40 shadow-primary-900/5 border border-surface-200/80 dark:border-surface-700/60 overflow-hidden bg-white dark:bg-surface-800/80 backdrop-blur-sm transition-colors duration-300">
+      <div class="bg-gradient-to-r from-primary-600 to-accent-600 px-6 py-5">
+        <h2 class="text-xl font-bold text-white">{rc?.title || 'Regression Curve Calculator'}</h2>
+        <p class="text-primary-100 text-sm mt-1">{rc?.description || 'Analyze relationships between variables with multiple regression model types'}</p>
+      </div>
+
+      <div class="p-6 bg-surface-50/50 dark:bg-surface-800/50">
+        <p class="text-sm text-surface-500 dark:text-surface-400 mb-5">{rc?.enterDataHint || 'Select a regression model and enter your data points below'}</p>
+
+        <!-- Model Type Selector -->
+        <div class="mb-5">
+          <label class="block text-sm font-semibold text-surface-700 dark:text-surface-300 mb-2">{rc?.modelType || 'Regression Model Type'}</label>
+          <div class="flex flex-wrap gap-2" id="rc-regression-type-group">
+            <button type="button" data-type="linear" class="rc-reg-type-btn px-4 py-2 text-sm font-medium rounded-lg border transition-all duration-200 bg-primary-600 text-white border-primary-600 ring-2 ring-primary-300 dark:ring-primary-700">
+              {rc?.linear || 'Linear'}
+            </button>
+            <button type="button" data-type="quadratic" class="rc-reg-type-btn px-4 py-2 text-sm font-medium rounded-lg border transition-all duration-200 bg-white dark:bg-surface-700 text-surface-700 dark:text-surface-300 border-surface-200 dark:border-surface-600 hover:border-primary-300 dark:hover:border-primary-700">
+              {rc?.quadratic || 'Quadratic'}
+            </button>
+            <button type="button" data-type="exponential" class="rc-reg-type-btn px-4 py-2 text-sm font-medium rounded-lg border transition-all duration-200 bg-white dark:bg-surface-700 text-surface-700 dark:text-surface-300 border-surface-200 dark:border-surface-600 hover:border-primary-300 dark:hover:border-primary-700">
+              {rc?.exponential || 'Exponential'}
+            </button>
+            <button type="button" data-type="logarithmic" class="rc-reg-type-btn px-4 py-2 text-sm font-medium rounded-lg border transition-all duration-200 bg-white dark:bg-surface-700 text-surface-700 dark:text-surface-300 border-surface-200 dark:border-surface-600 hover:border-primary-300 dark:hover:border-primary-700">
+              {rc?.logarithmic || 'Logarithmic'}
+            </button>
+          </div>
+        </div>
+
+        <!-- Data Points Table -->
+        <div class="mb-5">
+          <h3 class="text-sm font-semibold text-surface-700 dark:text-surface-300 mb-3">{rc?.enterData || 'Data Points (X, Y)'}</h3>
+          <div class="overflow-x-auto rounded-lg border border-surface-200 dark:border-surface-600">
+            <table class="w-full" id="rc-data-table">
+              <thead>
+                <tr class="bg-surface-100 dark:bg-surface-700/50 border-b border-surface-200 dark:border-surface-600">
+                  <th class="px-3 py-2 text-left text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider w-12">#</th>
+                  <th class="px-3 py-2 text-left text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider">{rc?.xLabel || 'X'}</th>
+                  <th class="px-3 py-2 text-left text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider">{rc?.yLabel || 'Y'}</th>
+                  <th class="px-3 py-2 w-10"></th>
+                </tr>
+              </thead>
+              <tbody id="rc-data-rows">
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Prediction X -->
+        <div class="mb-5">
+          <label class="block text-sm font-semibold text-surface-700 dark:text-surface-300 mb-2">{rc?.predictionX || 'Prediction for X ='}</label>
+          <input type="number" step="any" id="rc-prediction-x-input" placeholder="e.g. 10" class="w-full sm:w-48 px-3 py-2 text-sm rounded-lg border border-surface-200 dark:border-surface-600 bg-white dark:bg-surface-700 dark:text-surface-200 dark:placeholder-surface-500 focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-300 dark:focus:border-primary-600 transition-all duration-150" />
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-wrap gap-3 mb-6">
+          <button id="rc-add-row-btn" type="button" class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/25 border border-primary-200 dark:border-primary-800/50 rounded-lg transition-all duration-200 hover:bg-primary-100 dark:hover:bg-primary-900/40 hover:border-primary-300 dark:hover:border-primary-700 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-primary-500/30">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" /></svg>
+            {rc?.addRow || 'Add Row'}
+          </button>
+          <button id="rc-calculate-btn" type="button" class="inline-flex items-center gap-1.5 px-6 py-2 text-sm font-semibold text-white bg-gradient-to-r from-primary-600 to-accent-600 rounded-lg shadow-md shadow-primary-600/20 dark:shadow-primary-900/40 transition-all duration-200 hover:shadow-lg hover:shadow-primary-600/30 dark:hover:shadow-primary-900/50 hover:brightness-110 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-primary-500/30">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+            {rc?.calculate || 'Calculate'}
+          </button>
+          <button id="rc-clear-btn" type="button" class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-surface-600 dark:text-surface-400 bg-surface-100 dark:bg-surface-700 border border-surface-200 dark:border-surface-600 rounded-lg transition-all duration-200 hover:bg-surface-200 dark:hover:bg-surface-600 hover:border-surface-300 dark:hover:border-surface-500 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-surface-400/30">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
+            {rc?.clear || 'Clear'}
+          </button>
+          <button id="rc-example-btn" type="button" class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-accent-600 dark:text-accent-400 bg-accent-50 dark:bg-accent-900/25 border border-accent-200 dark:border-accent-800/50 rounded-lg transition-all duration-200 hover:bg-accent-100 dark:hover:bg-accent-900/40 hover:border-accent-300 dark:hover:border-accent-700 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-accent-500/30">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16" /></svg>
+            {rc?.loadExample || 'Load Example'}
+          </button>
+        </div>
+
+        <div id="rc-error-msg" class="hidden mb-4 p-3 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800/50 text-red-700 dark:text-red-400 text-sm"></div>
+
+        <!-- Results Section -->
+        <div id="rc-results-section" class="animate-[rcFadeIn_0.3s_ease-out]">
+          <h3 class="text-lg font-bold text-surface-800 dark:text-surface-200 mb-2">{rc?.results || 'Regression Results'}</h3>
+
+          <!-- Regression Chart -->
+          <div class="mb-6">
+            <h4 class="text-sm font-semibold text-surface-700 dark:text-surface-300 mb-3">{rc?.graphTitle || 'Regression Visualization'}</h4>
+            <div class="rounded-xl border border-surface-200 dark:border-surface-600 bg-white dark:bg-surface-700/30 p-2 overflow-hidden">
+              <canvas id="rc-regression-chart" width="640" height="360" class="w-full h-auto"></canvas>
+            </div>
+          </div>
+
+          <!-- Key Results Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+            <div class="p-4 rounded-xl bg-gradient-to-br from-primary-50 dark:from-primary-900/30 to-accent-50 dark:to-accent-900/30 border border-primary-100 dark:border-primary-800/40">
+              <p class="text-xs font-semibold text-primary-500 dark:text-primary-400 uppercase tracking-wider mb-1">{rc?.equation || 'Regression Equation'}</p>
+              <p id="rc-result-equation" class="text-base font-bold text-primary-800 dark:text-primary-200 font-mono break-all">—</p>
+            </div>
+            <div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50">
+              <p class="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider mb-1">{rc?.rSquared || 'R²'}</p>
+              <p id="rc-result-rsquared" class="text-lg font-bold text-surface-800 dark:text-surface-200 font-mono">0.000</p>
+            </div>
+            <div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50">
+              <p class="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider mb-1">{rc?.bestFit || 'Best Fit Model'}</p>
+              <p id="rc-result-best-fit" class="text-lg font-bold text-emerald-700 dark:text-emerald-400 font-mono">—</p>
+            </div>
+            <div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50">
+              <p class="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider mb-1">{rc?.predictedY || 'Predicted Y'}</p>
+              <p id="rc-result-predicted-y" class="text-lg font-bold text-surface-800 dark:text-surface-200 font-mono">—</p>
+            </div>
+          </div>
+
+          <!-- Model Comparison Table -->
+          <div class="mb-6">
+            <h4 class="text-sm font-semibold text-surface-700 dark:text-surface-300 mb-3">{rc?.modelComparison || 'Model Comparison'}</h4>
+            <div class="overflow-x-auto rounded-lg border border-surface-200 dark:border-surface-600">
+              <table class="w-full text-sm">
+                <thead>
+                  <tr class="bg-surface-100 dark:bg-surface-700/50">
+                    <th class="px-4 py-2.5 text-left font-semibold text-surface-600 dark:text-surface-400">{rc?.modelType || 'Model'}</th>
+                    <th class="px-4 py-2.5 text-left font-semibold text-surface-600 dark:text-surface-400">{rc?.equation || 'Equation'}</th>
+                    <th class="px-4 py-2.5 text-left font-semibold text-surface-600 dark:text-surface-400">R²</th>
+                    <th class="px-4 py-2.5 text-left font-semibold text-surface-600 dark:text-surface-400">{rc?.fit || 'Fit'}</th>
+                  </tr>
+                </thead>
+                <tbody id="rc-comparison-tbody">
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Step by Step -->
+          <details class="group">
+            <summary class="flex items-center gap-2 cursor-pointer text-sm font-semibold text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors select-none">
+              <svg class="w-4 h-4 transition-transform duration-200 group-open:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+              {rc?.stepByStep || 'Step-by-Step Solution'}
+            </summary>
+            <div id="rc-steps-content" class="mt-4 p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 text-sm text-surface-700 dark:text-surface-300 space-y-3 font-mono leading-relaxed"></div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes rcFadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('#rc-regression-calculator').forEach((calcEl) => {
+    const tbody = calcEl.querySelector('#rc-data-rows') as HTMLTableSectionElement;
+    const addBtn = calcEl.querySelector('#rc-add-row-btn');
+    const calcBtn = calcEl.querySelector('#rc-calculate-btn');
+    const clearBtn = calcEl.querySelector('#rc-clear-btn');
+    const exampleBtn = calcEl.querySelector('#rc-example-btn');
+    const errorEl = calcEl.querySelector('#rc-error-msg');
+    const predictionXInput = calcEl.querySelector('#rc-prediction-x-input') as HTMLInputElement;
+    const canvas = calcEl.querySelector('#rc-regression-chart') as HTMLCanvasElement;
+    const xLabel = calcEl.getAttribute('data-x-label') || 'X';
+    const yLabel = calcEl.getAttribute('data-y-label') || 'Y';
+    const invalidData = calcEl.getAttribute('data-invalid-data') || 'Please enter at least 2 valid data points';
+    let rowCounter = 0;
+    let currentType = 'linear';
+
+    const typeButtons = calcEl.querySelectorAll<HTMLButtonElement>('.rc-reg-type-btn');
+    typeButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        typeButtons.forEach(b => {
+          b.className = 'rc-reg-type-btn px-4 py-2 text-sm font-medium rounded-lg border transition-all duration-200 bg-white dark:bg-surface-700 text-surface-700 dark:text-surface-300 border-surface-200 dark:border-surface-600 hover:border-primary-300 dark:hover:border-primary-700';
+        });
+        btn.className = 'rc-reg-type-btn px-4 py-2 text-sm font-medium rounded-lg border transition-all duration-200 bg-primary-600 text-white border-primary-600 ring-2 ring-primary-300 dark:ring-primary-700';
+        currentType = btn.getAttribute('data-type') || 'linear';
+        autoCalculate();
+      });
+    });
+
+    function createRow(xVal = '', yVal = '') {
+      rowCounter++;
+      const tr = document.createElement('tr');
+      tr.className = 'border-b border-surface-200 dark:border-surface-600 transition-colors duration-150 hover:bg-primary-50/30 dark:hover:bg-primary-900/10';
+      tr.innerHTML = `
+        <td class="px-3 py-2 text-xs text-surface-400 dark:text-surface-500 font-mono">${rowCounter}</td>
+        <td class="px-3 py-2"><input type="number" step="any" class="rc-data-x w-full px-3 py-1.5 text-sm rounded-lg border border-surface-200 dark:border-surface-600 bg-white dark:bg-surface-700 dark:text-surface-200 dark:placeholder-surface-500 focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-300 dark:focus:border-primary-600 transition-all duration-150 hover:border-primary-300 dark:hover:border-primary-700" placeholder="${xLabel}" value="${xVal}" /></td>
+        <td class="px-3 py-2"><input type="number" step="any" class="rc-data-y w-full px-3 py-1.5 text-sm rounded-lg border border-surface-200 dark:border-surface-600 bg-white dark:bg-surface-700 dark:text-surface-200 dark:placeholder-surface-500 focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-300 dark:focus:border-primary-600 transition-all duration-150 hover:border-primary-300 dark:hover:border-primary-700" placeholder="${yLabel}" value="${yVal}" /></td>
+        <td class="px-3 py-2"><button type="button" class="rc-remove-row text-surface-300 dark:text-surface-600 hover:text-red-500 dark:hover:text-red-400 transition-colors duration-150" aria-label="Remove row"><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button></td>
+      `;
+      tr.querySelector('.rc-remove-row')?.addEventListener('click', () => {
+        tr.style.opacity = '0';
+        tr.style.transform = 'translateX(10px)';
+        tr.style.transition = 'all 0.15s ease';
+        setTimeout(() => { tr.remove(); renumberRows(); }, 150);
+      });
+      tbody?.appendChild(tr);
+    }
+
+    function renumberRows() {
+      const rows = tbody?.querySelectorAll('tr') ?? [];
+      rows.forEach((row, i) => { row.querySelector('td')!.textContent = String(i + 1); });
+      rowCounter = rows.length;
+    }
+
+    function getData() {
+      const rows = tbody?.querySelectorAll('tr') ?? [];
+      const points: {x:number,y:number}[] = [];
+      for (const row of rows) {
+        const x = parseFloat((row.querySelector('.rc-data-x') as HTMLInputElement)?.value ?? '');
+        const y = parseFloat((row.querySelector('.rc-data-y') as HTMLInputElement)?.value ?? '');
+        if (!isNaN(x) && !isNaN(y)) points.push({ x, y });
+      }
+      return points;
+    }
+
+    function showError(msg: string) { if (errorEl) { errorEl.textContent = msg; errorEl.classList.remove('hidden'); } }
+    function hideError() { if (errorEl) errorEl.classList.add('hidden'); }
+
+    function linearRegression(points: {x:number,y:number}[]) {
+      const n = points.length;
+      const sumX = points.reduce((s,p) => s+p.x, 0);
+      const sumY = points.reduce((s,p) => s+p.y, 0);
+      const meanX = sumX/n, meanY = sumY/n;
+      let ssXX=0, ssXY=0, ssYY=0;
+      for (const p of points) { const dx=p.x-meanX, dy=p.y-meanY; ssXX+=dx*dx; ssXY+=dx*dy; ssYY+=dy*dy; }
+      if (ssXX===0) return null;
+      const m = ssXY/ssXX, b = meanY - m*meanX;
+      let ssRes=0;
+      for (const p of points) ssRes += (p.y - (m*p.x+b))**2;
+      const rSquared = ssYY===0 ? 1 : 1 - ssRes/ssYY;
+      const r = ssYY===0 ? 1 : ssXY/Math.sqrt(ssXX*ssYY);
+      const se = Math.sqrt(ssRes/(n-2));
+      const eq = `y = ${m.toFixed(4)}x + ${b.toFixed(4)}`;
+      const predict = (x:number) => m*x+b;
+      const steps = [
+        `<strong>Linear Regression:</strong> y = mx + b`,
+        `<strong>Step 1:</strong> x̄ = ${meanX.toFixed(4)}, ȳ = ${meanY.toFixed(4)}`,
+        `<strong>Step 2:</strong> SSxx = ${ssXX.toFixed(4)}, SSxy = ${ssXY.toFixed(4)}`,
+        `<strong>Step 3:</strong> Slope m = ${m.toFixed(4)}, Intercept b = ${b.toFixed(4)}`,
+        `<strong>Step 4:</strong> R² = ${rSquared.toFixed(4)}, r = ${r.toFixed(4)}, SE = ${se.toFixed(4)}`
+      ];
+      return { equation: eq, rSquared, r, se, n, df: n-2, predict, steps, type: 'linear' };
+    }
+
+    function quadraticRegression(points: {x:number,y:number}[]) {
+      const n = points.length;
+      if (n < 3) return null;
+      const sums = [0,0,0,0,0,0,0,0];
+      for (let k=0; k<=4; k++) sums[k] = points.reduce((s,p) => s+Math.pow(p.x,k), 0);
+      sums[5] = points.reduce((s,p) => s+p.y, 0);
+      sums[6] = points.reduce((s,p) => s+p.x*p.y, 0);
+      sums[7] = points.reduce((s,p) => s+p.x*p.x*p.y, 0);
+      const M = [[sums[0],sums[1],sums[2]],[sums[1],sums[2],sums[3]],[sums[2],sums[3],sums[4]]];
+      const R = [sums[5],sums[6],sums[7]];
+      const sol = gaussianElimination(M, R);
+      if (!sol) return null;
+      const [c,b,a] = sol;
+      let ssRes=0, ssTot=0;
+      const meanY = points.reduce((s,p) => s+p.y,0)/n;
+      for (const p of points) { const pred=a*p.x*p.x+b*p.x+c; ssRes+=(p.y-pred)**2; ssTot+=(p.y-meanY)**2; }
+      const rSquared = ssTot===0 ? 1 : 1-ssRes/ssTot;
+      const r = Math.sqrt(Math.max(0, rSquared));
+      const se = Math.sqrt(ssRes/(n-3));
+      const eq = `y = ${a.toFixed(4)}x² + ${b.toFixed(4)}x + ${c.toFixed(4)}`;
+      const predict = (x:number) => a*x*x+b*x+c;
+      const steps = [
+        `<strong>Quadratic Regression:</strong> y = ax² + bx + c`,
+        `<strong>Step 1:</strong> Compute sums of powers and cross-products`,
+        `<strong>Step 2:</strong> Solve normal equations via Gaussian elimination`,
+        `<strong>Step 3:</strong> a = ${a.toFixed(4)}, b = ${b.toFixed(4)}, c = ${c.toFixed(4)}`,
+        `<strong>Step 4:</strong> R² = ${rSquared.toFixed(4)}, SE = ${se.toFixed(4)}`
+      ];
+      return { equation: eq, rSquared, r, se, n, df: n-3, predict, steps, type: 'quadratic' };
+    }
+
+    function exponentialRegression(points: {x:number,y:number}[]) {
+      const validPts = points.filter(p => p.y > 0);
+      if (validPts.length < 2) return null;
+      const n = validPts.length;
+      const lnY = validPts.map(p => ({x:p.x, y:Math.log(p.y)}));
+      const res = linearRegression(lnY);
+      if (!res) return null;
+      const bCoeff = parseFloat(res.equation.match(/y\s*=\s*([-\d.]+)x/)?.[1] ?? '0');
+      const lnA = parseFloat(res.equation.match(/\+\s*([-\d.]+)$/)?.[1] ?? '0');
+      const aCoeff = Math.exp(lnA);
+      let ssRes=0, ssTot=0;
+      const meanY = validPts.reduce((s,p) => s+p.y,0)/n;
+      for (const p of validPts) { const pred=aCoeff*Math.exp(bCoeff*p.x); ssRes+=(p.y-pred)**2; ssTot+=(p.y-meanY)**2; }
+      const rSquared = ssTot===0 ? 1 : 1-ssRes/ssTot;
+      const r = Math.sqrt(Math.max(0, rSquared));
+      const se = Math.sqrt(ssRes/(n-2));
+      const eq = `y = ${aCoeff.toFixed(4)} · e^(${bCoeff.toFixed(4)}x)`;
+      const predict = (x:number) => aCoeff*Math.exp(bCoeff*x);
+      const steps = [
+        `<strong>Exponential Regression:</strong> y = a · e^(bx)`,
+        `<strong>Step 1:</strong> Transform: ln(y) for positive y`,
+        `<strong>Step 2:</strong> Linear regression on (x, ln(y))`,
+        `<strong>Step 3:</strong> a = e^(intercept) = ${aCoeff.toFixed(4)}, b = slope = ${bCoeff.toFixed(4)}`,
+        `<strong>Step 4:</strong> R² = ${rSquared.toFixed(4)}, SE = ${se.toFixed(4)}`
+      ];
+      return { equation: eq, rSquared, r, se, n, df: n-2, predict, steps, type: 'exponential' };
+    }
+
+    function logarithmicRegression(points: {x:number,y:number}[]) {
+      const validPts = points.filter(p => p.x > 0);
+      if (validPts.length < 2) return null;
+      const n = validPts.length;
+      const lnX = validPts.map(p => ({x:Math.log(p.x), y:p.y}));
+      const res = linearRegression(lnX);
+      if (!res) return null;
+      const bCoeff = parseFloat(res.equation.match(/y\s*=\s*([-\d.]+)x/)?.[1] ?? '0');
+      const aCoeff = parseFloat(res.equation.match(/\+\s*([-\d.]+)$/)?.[1] ?? '0');
+      let ssRes=0, ssTot=0;
+      const meanY = validPts.reduce((s,p) => s+p.y,0)/n;
+      for (const p of validPts) { const pred=aCoeff+bCoeff*Math.log(p.x); ssRes+=(p.y-pred)**2; ssTot+=(p.y-meanY)**2; }
+      const rSquared = ssTot===0 ? 1 : 1-ssRes/ssTot;
+      const r = Math.sqrt(Math.max(0, rSquared));
+      const se = Math.sqrt(ssRes/(n-2));
+      const eq = `y = ${aCoeff.toFixed(4)} + ${bCoeff.toFixed(4)} · ln(x)`;
+      const predict = (x:number) => x>0 ? aCoeff+bCoeff*Math.log(x) : NaN;
+      const steps = [
+        `<strong>Logarithmic Regression:</strong> y = a + b · ln(x)`,
+        `<strong>Step 1:</strong> Transform: ln(x) for positive x`,
+        `<strong>Step 2:</strong> Linear regression on (ln(x), y)`,
+        `<strong>Step 3:</strong> a = ${aCoeff.toFixed(4)}, b = ${bCoeff.toFixed(4)}`,
+        `<strong>Step 4:</strong> R² = ${rSquared.toFixed(4)}, SE = ${se.toFixed(4)}`
+      ];
+      return { equation: eq, rSquared, r, se, n, df: n-2, predict, steps, type: 'logarithmic' };
+    }
+
+    function gaussianElimination(A: number[][], b: number[]) {
+      const n = A.length;
+      const aug = A.map((row, i) => [...row, b[i]]);
+      for (let col=0; col<n; col++) {
+        let maxRow = col;
+        for (let row=col+1; row<n; row++) { if (Math.abs(aug[row][col]) > Math.abs(aug[maxRow][col])) maxRow = row; }
+        [aug[col], aug[maxRow]] = [aug[maxRow], aug[col]];
+        if (Math.abs(aug[col][col]) < 1e-12) return null;
+        for (let row=col+1; row<n; row++) {
+          const f = aug[row][col]/aug[col][col];
+          for (let j=col; j<=n; j++) aug[row][j] -= f*aug[col][j];
+        }
+      }
+      const x = new Array(n).fill(0);
+      for (let i=n-1; i>=0; i--) {
+        x[i] = aug[i][n];
+        for (let j=i+1; j<n; j++) x[i] -= aug[i][j]*x[j];
+        x[i] /= aug[i][i];
+      }
+      return x;
+    }
+
+    function drawChart(points: {x:number,y:number}[], predictFn: (x:number)=>number) {
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return;
+      const dpr = window.devicePixelRatio || 1;
+      const w = canvas.clientWidth, h = canvas.clientHeight;
+      canvas.width = w * dpr; canvas.height = h * dpr;
+      ctx.scale(dpr, dpr);
+
+      const isDark = document.documentElement.classList.contains('dark');
+      const bg = isDark ? '#1e293b' : '#ffffff';
+      const gridColor = isDark ? '#334155' : '#e2e8f0';
+      const textColor = isDark ? '#94a3b8' : '#64748b';
+      const pointColor = isDark ? '#818cf8' : '#4f46e5';
+      const lineColor = isDark ? '#a78bfa' : '#7c3aed';
+
+      ctx.fillStyle = bg; ctx.fillRect(0,0,w,h);
+      if (points.length === 0) return;
+      const xs = points.map(p=>p.x), ys = points.map(p=>p.y);
+      const xMin = Math.min(...xs), xMax = Math.max(...xs);
+      const yMin = Math.min(...ys), yMax = Math.max(...ys);
+      const xPad = (xMax-xMin)*0.1||1, yPad = (yMax-yMin)*0.1||1;
+      const dxMin=xMin-xPad, dxMax=xMax+xPad, dyMin=yMin-yPad, dyMax=yMax+yPad;
+
+      const margin = {top:20, right:20, bottom:40, left:55};
+      const pw = w-margin.left-margin.right, ph = h-margin.top-margin.bottom;
+
+      function tx(x:number) { return margin.left + (x-dxMin)/(dxMax-dxMin)*pw; }
+      function ty(y:number) { return margin.top + ph - (y-dyMin)/(dyMax-dyMin)*ph; }
+
+      ctx.strokeStyle = gridColor; ctx.lineWidth = 0.5;
+      const xTicks = 6, yTicks = 5;
+      for (let i=0; i<=xTicks; i++) {
+        const xv = dxMin + (dxMax-dxMin)*i/xTicks;
+        ctx.beginPath(); ctx.moveTo(tx(xv), margin.top); ctx.lineTo(tx(xv), margin.top+ph); ctx.stroke();
+        ctx.fillStyle = textColor; ctx.font = '11px sans-serif'; ctx.textAlign = 'center';
+        ctx.fillText(xv.toFixed(1), tx(xv), margin.top+ph+18);
+      }
+      for (let i=0; i<=yTicks; i++) {
+        const yv = dyMin + (dyMax-dyMin)*i/yTicks;
+        ctx.beginPath(); ctx.moveTo(margin.left, ty(yv)); ctx.lineTo(margin.left+pw, ty(yv)); ctx.stroke();
+        ctx.fillStyle = textColor; ctx.font = '11px sans-serif'; ctx.textAlign = 'right';
+        ctx.fillText(yv.toFixed(1), margin.left-8, ty(yv)+4);
+      }
+
+      ctx.strokeStyle = lineColor; ctx.lineWidth = 2.5; ctx.beginPath();
+      const steps = 100;
+      let first = true;
+      for (let i=0; i<=steps; i++) {
+        const xv = dxMin + (dxMax-dxMin)*i/steps;
+        const yv = predictFn(xv);
+        if (isNaN(yv) || !isFinite(yv)) { first = true; continue; }
+        if (first) { ctx.moveTo(tx(xv), ty(yv)); first=false; }
+        else ctx.lineTo(tx(xv), ty(yv));
+      }
+      ctx.stroke();
+
+      for (const p of points) {
+        ctx.fillStyle = pointColor;
+        ctx.beginPath(); ctx.arc(tx(p.x), ty(p.y), 5, 0, Math.PI*2); ctx.fill();
+        ctx.strokeStyle = isDark ? '#312e81' : '#e0e7ff'; ctx.lineWidth = 2;
+        ctx.beginPath(); ctx.arc(tx(p.x), ty(p.y), 5, 0, Math.PI*2); ctx.stroke();
+      }
+    }
+
+    function computeAll(points: {x:number,y:number}[]) {
+      const models: any[] = [];
+      const lr = linearRegression(points);
+      if (lr) models.push({ ...lr, label: 'Linear' });
+      const qr = quadraticRegression(points);
+      if (qr) models.push({ ...qr, label: 'Quadratic' });
+      const er = exponentialRegression(points);
+      if (er) models.push({ ...er, label: 'Exponential' });
+      const logr = logarithmicRegression(points);
+      if (logr) models.push({ ...logr, label: 'Logarithmic' });
+      return models;
+    }
+
+    function autoCalculate() {
+      const points = getData();
+      if (points.length < 2) return;
+      const allModels = computeAll(points);
+      if (allModels.length === 0) return;
+
+      const bestModel = allModels.reduce((best, m) => m.rSquared > best.rSquared ? m : best, allModels[0]);
+      let result = allModels.find(m => m.type === currentType);
+      if (!result) result = allModels[0];
+
+      const predX = parseFloat(predictionXInput?.value ?? '');
+      const predY = isNaN(predX) ? '—' : result.predict(predX).toFixed(4);
+
+      (calcEl.querySelector('#rc-result-equation') as HTMLElement).textContent = result.equation;
+      (calcEl.querySelector('#rc-result-rsquared') as HTMLElement).textContent = result.rSquared.toFixed(4);
+      (calcEl.querySelector('#rc-result-best-fit') as HTMLElement).textContent = bestModel.label;
+      (calcEl.querySelector('#rc-result-predicted-y') as HTMLElement).textContent = predY;
+
+      const stepsEl = calcEl.querySelector('#rc-steps-content');
+      if (stepsEl) stepsEl.innerHTML = result.steps.map((s:string) => `<p>${s}</p>`).join('');
+
+      const compTbody = calcEl.querySelector('#rc-comparison-tbody') as HTMLTableSectionElement;
+      if (compTbody) {
+        compTbody.innerHTML = '';
+        for (const m of allModels) {
+          const isBest = m === bestModel;
+          const fitLabel = m.rSquared >= 0.9 ? 'Excellent' : m.rSquared >= 0.7 ? 'Good' : m.rSquared >= 0.5 ? 'Moderate' : 'Weak';
+          const tr = document.createElement('tr');
+          tr.className = `border-t border-surface-200 dark:border-surface-600 ${isBest ? 'bg-emerald-50/50 dark:bg-emerald-900/10' : ''}`;
+          tr.innerHTML = `
+            <td class="px-4 py-2.5 text-surface-700 dark:text-surface-300 font-semibold">${m.label}${isBest ? ' <span class="text-emerald-600 text-xs">(Best)</span>' : ''}</td>
+            <td class="px-4 py-2.5 font-mono text-surface-800 dark:text-surface-200 text-xs">${m.equation}</td>
+            <td class="px-4 py-2.5 font-mono text-surface-800 dark:text-surface-200">${m.rSquared.toFixed(4)}</td>
+            <td class="px-4 py-2.5 ${isBest ? 'text-emerald-700 dark:text-emerald-400 font-semibold' : 'text-surface-500 dark:text-surface-400'}">${fitLabel}</td>
+          `;
+          compTbody.appendChild(tr);
+        }
+      }
+
+      drawChart(points, result.predict);
+    }
+
+    addBtn?.addEventListener('click', () => createRow());
+    const dummyData = [[1,2.5],[2,5.1],[3,7.8],[4,10.3],[5,13.2],[6,15.9]];
+    dummyData.forEach(([x, y]) => createRow(String(x), String(y)));
+
+    calcBtn?.addEventListener('click', () => {
+      hideError();
+      const points = getData();
+      if (points.length < 2) { showError(invalidData); return; }
+      autoCalculate();
+    });
+
+    clearBtn?.addEventListener('click', () => {
+      hideError();
+      if (tbody) tbody.innerHTML = '';
+      rowCounter = 0;
+      if (predictionXInput) predictionXInput.value = '';
+      (calcEl.querySelector('#rc-result-equation') as HTMLElement).textContent = '—';
+      (calcEl.querySelector('#rc-result-rsquared') as HTMLElement).textContent = '0.000';
+      (calcEl.querySelector('#rc-result-best-fit') as HTMLElement).textContent = '—';
+      (calcEl.querySelector('#rc-result-predicted-y') as HTMLElement).textContent = '—';
+      const compTbody = calcEl.querySelector('#rc-comparison-tbody') as HTMLTableSectionElement;
+      if (compTbody) compTbody.innerHTML = '';
+      const stepsEl = calcEl.querySelector('#rc-steps-content');
+      if (stepsEl) stepsEl.innerHTML = '';
+    });
+
+    exampleBtn?.addEventListener('click', () => {
+      hideError();
+      if (tbody) tbody.innerHTML = '';
+      rowCounter = 0;
+      dummyData.forEach(([x, y]) => createRow(String(x), String(y)));
+      autoCalculate();
+    });
+
+    autoCalculate();
+  });
+</script>

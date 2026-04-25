@@ -11,7 +11,7 @@
     "pearsonCorrelation": "Pearson r-beräkning",
     "grubbsTest": "Grubbs test",
     "assumptionsChecker": "Antagandekontroll",
-    "linearCalc": "Linjär kalkylator",
+    "expCalc": "Exponential Regression"`n    "lsrlCalc": "Least Squares Line"`n    "rcCalc": "Regression Curve",
     "quadCalc": "Kvadratisk kalkylator",
     "multiCalc": "Multipel kalkylator"
   },

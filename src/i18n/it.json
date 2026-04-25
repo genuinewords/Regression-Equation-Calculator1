@@ -310,7 +310,7 @@
     "backHome": "Torna alla Home"
   },
   "linearCalc": {
-    "title": "Calcolatore di Regressione Lineare",
+    "title": "Calcolatore dei Minimi Quadrati",
     "description": "Calcola l'equazione di regressione lineare y = mx + b dai tuoi dati",
     "enterData": "Inserisci i tuoi punti dati",
     "xLabel": "Valori X",
@@ -391,13 +391,13 @@
     ],
     "avoidTitle": "Quando evitare la regressione quadratica",
     "avoidPoints": [
-      "La relazione è all'incirca lineare — usa il nostro <a href=\"/linear-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Calcolatore di Regressione Lineare</a> invece",
+      "La relazione è all'incirca lineare — usa il nostro <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Calcolatore dei Minimi Quadrati</a> invece",
       "Hai bisogno di più di un predittore — usa il nostro <a href=\"/multiple-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Calcolatore di Regressione Multipla</a>",
       "È necessaria una curvatura di ordine superiore (cubica o oltre) — considera la regressione polinomiale di grado 3+",
       "Estrapolando oltre l'intervallo dei tuoi dati — le quadratiche possono divergere rapidamente"
     ],
     "seeAlsoTitle": "Vedi Anche",
-    "seeAlsoLinear": "Calcolatore di Regressione Lineare",
+    "seeAlsoLinear": "Calcolatore dei Minimi Quadrati",
     "seeAlsoLinearDesc": "Modella relazioni lineari con y = mx + b",
     "seeAlsoMulti": "Calcolatore di Regressione Multipla",
     "seeAlsoMultiDesc": "Usa due o più predittori con y = b₀ + b₁x₁ + b₂x₂",
@@ -438,13 +438,13 @@
     ],
     "avoidTitle": "Quando evitare la regressione multipla",
     "avoidPoints": [
-      "Hai solo un predittore — usa il nostro <a href=\"/linear-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Calcolatore di Regressione Lineare</a>",
+      "Hai solo un predittore — usa il nostro <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Calcolatore dei Minimi Quadrati</a>",
       "La relazione è curva — prova il nostro <a href=\"/quadratic-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Calcolatore di Regressione Quadratica</a>",
       "I predittori sono altamente correlati tra loro (multicollinearità) — considera di rimuovere o combinare variabili",
       "La dimensione del campione è piccola rispetto al numero di predittori (serve n > p + 1)"
     ],
     "seeAlsoTitle": "Vedi Anche",
-    "seeAlsoLinear": "Calcolatore di Regressione Lineare",
+    "seeAlsoLinear": "Calcolatore dei Minimi Quadrati",
     "seeAlsoLinearDesc": "Modella relazioni lineari con y = mx + b",
     "seeAlsoQuad": "Calcolatore di Regressione Quadratica",
     "seeAlsoQuadDesc": "Modella relazioni curve con y = ax² + bx + c",

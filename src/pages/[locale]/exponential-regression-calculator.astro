@@ -1,6 +1,6 @@
 ---
 import BaseLayout from 'theme/layouts/BaseLayout.astro';
-import LinearRegressionCalculator from 'theme/components/LinearRegressionCalculator.astro';
+import ExponentialRegressionCalculator from 'theme/components/ExponentialRegressionCalculator.astro';
 import { mergeTranslations, getLocalizedUrl, extractLocaleFromParams, getLocaleStaticPaths } from 'theme/i18n/utils';
 import siteConfig from 'src/data/site-config.json';
 
@@ -11,25 +11,23 @@ export function getStaticPaths() {
 const { locale } = Astro.params;
 const currentLocale = extractLocaleFromParams(Astro.params);
 const translations = await mergeTranslations(currentLocale);
-const lc = (translations as any).linearCalc;
+const ec = (translations as any).expCalc;
 
-const canonicalUrl = new URL(getLocalizedUrl('/linear-regression-calculator/', currentLocale), siteConfig.siteUrl).href;
+const canonicalUrl = new URL(getLocalizedUrl('/exponential-regression-calculator/', currentLocale), siteConfig.siteUrl).href;
 
-const whatIsTitle = lc?.whatIsTitle || 'How to Calculate Linear Regression';
-const whatIsText = lc?.whatIsText || '';
-const formulaTitle = lc?.formulaTitle || 'The Linear Regression Formulas';
-const formulaText = lc?.formulaText || '';
-const exampleTitle = lc?.exampleTitle || 'Linear Regression Example';
-const exampleText = lc?.exampleText || '';
-const whenTitle = lc?.whenTitle || 'When to Use Linear Regression';
-const whenPoints: string[] = lc?.whenPoints ?? [];
-const avoidTitle = lc?.avoidTitle || 'When to Avoid Linear Regression';
-const avoidPoints: string[] = lc?.avoidPoints ?? [];
-const seeAlsoTitle = lc?.seeAlsoTitle || 'See Also';
-const breadcrumb = lc?.breadcrumb || 'Back to Main Regression Calculator';
+const whatIsTitle = ec?.whatIsTitle || 'What Is Exponential Regression?';
+const whatIsText = ec?.whatIsText || '';
+const howWorksTitle = ec?.howWorksTitle || 'How Exponential Regression Works';
+const howWorksPoints: string[] = ec?.howWorksPoints ?? [];
+const whenTitle = ec?.whenTitle || 'When to Use Exponential Regression';
+const whenPoints: string[] = ec?.whenPoints ?? [];
+const avoidTitle = ec?.avoidTitle || 'When to Avoid Exponential Regression';
+const avoidPoints: string[] = ec?.avoidPoints ?? [];
+const seeAlsoTitle = ec?.seeAlsoTitle || 'See Also';
+const breadcrumb = ec?.breadcrumb || 'Back to Main Regression Calculator';
 
-const pageTitle = lc?.title || 'Linear Regression Calculator';
-const pageDescription = lc?.description || 'Calculate the linear regression equation';
+const pageTitle = ec?.title || 'Exponential Regression Calculator';
+const pageDescription = ec?.description || 'Model growth and decay patterns with y = a·e^(bx)';
 ---
 
 <BaseLayout
@@ -44,17 +42,17 @@ const pageDescription = lc?.description || 'Calculate the linear regression equa
         <a href={getLocalizedUrl('/', currentLocale)} class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{breadcrumb}</a>
       </nav>
       <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-primary-700 via-primary-600 to-accent-600 dark:from-primary-400 dark:via-primary-500 dark:to-accent-400 bg-clip-text text-transparent leading-tight">
-        {lc?.title || 'Linear Regression Calculator'}
+        {pageTitle}
       </h1>
       <p class="mt-5 text-lg md:text-xl text-surface-600 dark:text-surface-400 max-w-2xl mx-auto leading-relaxed">
-        {lc?.description || 'Calculate the linear regression equation y = mx + b'}
+        {pageDescription}
       </p>
     </div>
   </section>
 
   <section class="py-8 md:py-12 bg-surface-50/60 dark:bg-surface-800/40 rounded-t-3xl -mt-2">
     <div class="max-w-4xl mx-auto">
-      <LinearRegressionCalculator translations={translations} />
+      <ExponentialRegressionCalculator translations={translations} />
     </div>
   </section>
 
@@ -67,15 +65,17 @@ const pageDescription = lc?.description || 'Calculate the linear regression equa
 
   <section class="py-8 md:py-12 bg-surface-50/40 dark:bg-surface-900/40 rounded-t-3xl -mt-2">
     <div class="content-box max-w-3xl mx-auto rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-6 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-primary-500/0 before:to-primary-500/0 hover:before:from-primary-500/5 hover:before:to-primary-500/8 dark:hover:before:from-primary-400/8 dark:hover:before:to-primary-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-primary-900/10 hover:-translate-y-1 hover:border-primary-300 dark:hover:border-primary-700/50 transition-all duration-300">
-      <h2 class="text-xl font-bold text-surface-900 dark:text-surface-50 mb-4">{formulaTitle}</h2>
-      <div class="prose prose-surface max-w-none text-surface-600 dark:text-surface-400 leading-relaxed font-mono" set:html={formulaText} />
-    </div>
-  </section>
-
-  <section class="py-8 md:py-12">
-    <div class="content-box max-w-3xl mx-auto rounded-2xl border border-surface-200/60 dark:border-surface-700/40 bg-white/60 dark:bg-surface-800/40 backdrop-blur-sm p-6 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-r before:from-emerald-500/0 before:to-primary-500/0 hover:before:from-emerald-500/5 hover:before:to-primary-500/5 dark:hover:before:from-emerald-400/8 dark:hover:before:to-primary-400/8 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-emerald-900/10 hover:-translate-y-1 hover:border-emerald-200 dark:hover:border-emerald-700/50 transition-all duration-300">
-      <h2 class="text-2xl font-bold text-surface-900 dark:text-surface-50 mb-4">{exampleTitle}</h2>
-      <div class="prose prose-surface max-w-none text-surface-600 dark:text-surface-400 leading-relaxed" set:html={exampleText} />
+      <h2 class="text-xl font-bold text-surface-900 dark:text-surface-50 mb-4">{howWorksTitle}</h2>
+      <ul class="space-y-3">
+        {howWorksPoints.map((point, i) => (
+          <li class="flex items-start gap-3 group/item translate-x-0 hover:translate-x-1 transition-transform duration-200" style={`transition-delay: ${i * 40}ms`}>
+            <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center group-hover/item:bg-blue-200 dark:group-hover/item:bg-blue-800/40 group-hover/item:scale-110 transition-all duration-200">
+              <svg class="w-3 h-3 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+            </span>
+            <span class="text-sm text-surface-600 dark:text-surface-400 leading-relaxed" set:html={point} />
+          </li>
+        ))}
+      </ul>
     </div>
   </section>
 
@@ -115,24 +115,32 @@ const pageDescription = lc?.description || 'Calculate the linear regression equa
       <h2 class="text-2xl font-bold text-surface-900 dark:text-surface-50 mb-6">{seeAlsoTitle}</h2>
       <div class="grid sm:grid-cols-2 gap-4">
         <a href={getLocalizedUrl('/quadratic-regression-calculator/', currentLocale)} class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-5 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-accent-500/0 before:to-accent-500/0 hover:before:from-accent-500/5 hover:before:to-accent-500/8 dark:hover:before:from-accent-400/8 dark:hover:before:to-accent-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-accent-900/10 hover:-translate-y-1 hover:border-accent-300 dark:hover:border-accent-700/50 transition-all duration-300 group/card">
-          <h3 class="text-base font-bold text-accent-700 dark:text-accent-400 group-hover/card:text-accent-800 dark:group-hover/card:text-accent-300">{lc?.seeAlsoLinear || 'Quadratic Regression Calculator'}</h3>
-          <p class="text-sm text-surface-500 dark:text-surface-400 mt-1">{lc?.seeAlsoLinearDesc || 'Model curved relationships'}</p>
+          <h3 class="text-base font-bold text-accent-700 dark:text-accent-400 group-hover/card:text-accent-800 dark:group-hover/card:text-accent-300">{ec?.seeAlsoQuad || 'Quadratic Regression Calculator'}</h3>
+          <p class="text-sm text-surface-500 dark:text-surface-400 mt-1">{ec?.seeAlsoQuadDesc || 'Model curved relationships with y = ax² + bx + c'}</p>
         </a>
         <a href={getLocalizedUrl('/multiple-regression-calculator/', currentLocale)} class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-5 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-primary-500/0 before:to-primary-500/0 hover:before:from-primary-500/5 hover:before:to-primary-500/8 dark:hover:before:from-primary-400/8 dark:hover:before:to-primary-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-primary-900/10 hover:-translate-y-1 hover:border-primary-300 dark:hover:border-primary-700/50 transition-all duration-300 group/card">
-          <h3 class="text-base font-bold text-primary-700 dark:text-primary-400 group-hover/card:text-primary-800 dark:group-hover/card:text-primary-300">{lc?.seeAlsoMulti || 'Multiple Regression Calculator'}</h3>
-          <p class="text-sm text-surface-500 dark:text-surface-400 mt-1">{lc?.seeAlsoMultiDesc || 'Use two or more predictors'}</p>
+          <h3 class="text-base font-bold text-primary-700 dark:text-primary-400 group-hover/card:text-primary-800 dark:group-hover/card:text-primary-300">{ec?.seeAlsoMulti || 'Multiple Regression Calculator'}</h3>
+          <p class="text-sm text-surface-500 dark:text-surface-400 mt-1">{ec?.seeAlsoMultiDesc || 'Use two or more predictors'}</p>
         </a>
         <a href={getLocalizedUrl('/pearson-correlation-calculator/', currentLocale)} class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-5 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-emerald-500/0 before:to-emerald-500/0 hover:before:from-emerald-500/5 hover:before:to-emerald-500/8 dark:hover:before:from-emerald-400/8 dark:hover:before:to-emerald-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-emerald-900/10 hover:-translate-y-1 hover:border-emerald-300 dark:hover:border-emerald-700/50 transition-all duration-300 group/card">
-          <h3 class="text-base font-bold text-emerald-700 dark:text-emerald-400 group-hover/card:text-emerald-800 dark:group-hover/card:text-emerald-300">{lc?.seeAlsoPearson || 'Pearson Correlation Calculator'}</h3>
-          <p class="text-sm text-surface-500 dark:text-surface-400 mt-1">{lc?.seeAlsoPearsonDesc || 'Measure the strength of the linear relationship'}</p>
+          <h3 class="text-base font-bold text-emerald-700 dark:text-emerald-400 group-hover/card:text-emerald-800 dark:group-hover/card:text-emerald-300">{ec?.seeAlsoPearson || 'Pearson Correlation Calculator'}</h3>
+          <p class="text-sm text-surface-500 dark:text-surface-400 mt-1">{ec?.seeAlsoPearsonDesc || 'Measure the strength of the linear relationship'}</p>
         </a>
-        <a href={getLocalizedUrl('/regression-assumptions-checker/', currentLocale)} class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-5 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-amber-500/0 before:to-amber-500/0 hover:before:from-amber-500/5 hover:before:to-amber-500/8 dark:hover:before:from-amber-400/8 dark:hover:before:to-amber-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-amber-900/10 hover:-translate-y-1 hover:border-amber-300 dark:hover:border-amber-700/50 transition-all duration-300 group/card">
-          <h3 class="text-base font-bold text-amber-700 dark:text-amber-400 group-hover/card:text-amber-800 dark:group-hover/card:text-amber-300">{lc?.seeAlsoAssumptions || 'Regression Assumptions Checker'}</h3>
-          <p class="text-sm text-surface-500 dark:text-surface-400 mt-1">{lc?.seeAlsoAssumptionsDesc || 'Verify that your data meets the four OLS assumptions'}</p>
+        <a href={getLocalizedUrl('/grubbs-test-calculator/', currentLocale)} class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-5 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-amber-500/0 before:to-amber-500/0 hover:before:from-amber-500/5 hover:before:to-amber-500/8 dark:hover:before:from-amber-400/8 dark:hover:before:to-amber-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-amber-900/10 hover:-translate-y-1 hover:border-amber-300 dark:hover:border-amber-700/50 transition-all duration-300 group/card">
+          <h3 class="text-base font-bold text-amber-700 dark:text-amber-400 group-hover/card:text-amber-800 dark:group-hover/card:text-amber-300">{ec?.seeAlsoGrubbs || "Grubbs' Test Calculator"}</h3>
+          <p class="text-sm text-surface-500 dark:text-surface-400 mt-1">{ec?.seeAlsoGrubbsDesc || 'Detect outliers in your dataset'}</p>
         </a>
-        <a href={getLocalizedUrl('/grubbs-test-calculator/', currentLocale)} class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-5 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-rose-500/0 before:to-rose-500/0 hover:before:from-rose-500/5 hover:before:to-rose-500/8 dark:hover:before:from-rose-400/8 dark:hover:before:to-rose-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-rose-900/10 hover:-translate-y-1 hover:border-rose-300 dark:hover:border-rose-700/50 transition-all duration-300 group/card">
-          <h3 class="text-base font-bold text-rose-700 dark:text-rose-400 group-hover/card:text-rose-800 dark:group-hover/card:text-rose-300">{lc?.seeAlsoGrubbs || "Grubbs' Test Calculator"}</h3>
-          <p class="text-sm text-surface-500 dark:text-surface-400 mt-1">{lc?.seeAlsoGrubbsDesc || 'Detect outliers in your dataset'}</p>
+        <a href={getLocalizedUrl('/regression-assumptions-checker/', currentLocale)} class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-5 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-rose-500/0 before:to-rose-500/0 hover:before:from-rose-500/5 hover:before:to-rose-500/8 dark:hover:before:from-rose-400/8 dark:hover:before:to-rose-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-rose-900/10 hover:-translate-y-1 hover:border-rose-300 dark:hover:border-rose-700/50 transition-all duration-300 group/card">
+          <h3 class="text-base font-bold text-rose-700 dark:text-rose-400 group-hover/card:text-rose-800 dark:group-hover/card:text-rose-300">{ec?.seeAlsoAssumptions || 'Regression Assumptions Checker'}</h3>
+          <p class="text-sm text-surface-500 dark:text-surface-400 mt-1">{ec?.seeAlsoAssumptionsDesc || 'Verify that your data meets the four OLS assumptions'}</p>
+        </a>
+        <a href={getLocalizedUrl('/regression-curve-calculator/', currentLocale)} class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-5 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-accent-500/0 before:to-accent-500/0 hover:before:from-accent-500/5 hover:before:to-accent-500/8 dark:hover:before:from-accent-400/8 dark:hover:before:to-accent-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-accent-900/10 hover:-translate-y-1 hover:border-accent-300 dark:hover:border-accent-700/50 transition-all duration-300 group/card">
+          <h3 class="text-base font-bold text-accent-700 dark:text-accent-400 group-hover/card:text-accent-800 dark:group-hover/card:text-accent-300">{ec?.seeAlsoRC || 'Regression Curve Calculator'}</h3>
+          <p class="text-sm text-surface-500 dark:text-surface-400 mt-1">{ec?.seeAlsoRCDesc || 'Compare multiple regression models'}</p>
+        </a>
+        <a href={getLocalizedUrl('/least-squares-regression-line-calculator/', currentLocale)} class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-5 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-primary-500/0 before:to-primary-500/0 hover:before:from-primary-500/5 hover:before:to-primary-500/8 dark:hover:before:from-primary-400/8 dark:hover:before:to-primary-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-primary-900/10 hover:-translate-y-1 hover:border-primary-300 dark:hover:border-primary-700/50 transition-all duration-300 group/card">
+          <h3 class="text-base font-bold text-primary-700 dark:text-primary-400 group-hover/card:text-primary-800 dark:group-hover/card:text-primary-300">{ec?.seeAlsoLSRL || 'Least Squares Line Calculator'}</h3>
+          <p class="text-sm text-surface-500 dark:text-surface-400 mt-1">{ec?.seeAlsoLSRLDesc || 'Compute the OLS best fit line'}</p>
         </a>
       </div>
     </div>

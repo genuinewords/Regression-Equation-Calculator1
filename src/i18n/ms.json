@@ -305,7 +305,7 @@
     "manualDemoSumLabel": "Jumlah (Σ)"
   },
   "linearCalc": {
-    "title": "Kalkulator Regresi Linear",
+    "title": "Kalkulator Kuadrat Terkecil",
     "description": "Kira persamaan regresi linear y = mx + b daripada data anda",
     "enterData": "Masukkan titik data anda",
     "xLabel": "Nilai X",
@@ -386,13 +386,13 @@
     ],
     "avoidTitle": "Bila Mengelakkan Regresi Kuadratik",
     "avoidPoints": [
-      "Hubungan lebih kurang linear — guna <a href=\"/linear-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Kalkulator Regresi Linear</a> kami",
+      "Hubungan lebih kurang linear — guna <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Kalkulator Kuadrat Terkecil</a> kami",
       "Anda memerlukan lebih daripada satu peramal — guna <a href=\"/multiple-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Kalkulator Regresi Berbilang</a> kami",
       "Kelengkungan tertib lebih tinggi (kubik atau lebih) diperlukan — pertimbangkan regresi polinomial darjah 3+",
       "Mengekstrapolasi jauh melebihi julat data anda — kuadratik boleh menyimpang dengan cepat"
     ],
     "seeAlsoTitle": "Lihat Juga",
-    "seeAlsoLinear": "Kalkulator Regresi Linear",
+    "seeAlsoLinear": "Kalkulator Kuadrat Terkecil",
     "seeAlsoLinearDesc": "Modelkan hubungan garis lurus dengan y = mx + b",
     "seeAlsoMulti": "Kalkulator Regresi Berbilang",
     "seeAlsoMultiDesc": "Gunakan dua atau lebih peramal dengan y = b₀ + b₁x₁ + b₂x₂",
@@ -433,13 +433,13 @@
     ],
     "avoidTitle": "Bila Mengelakkan Regresi Berbilang",
     "avoidPoints": [
-      "Anda hanya mempunyai satu peramal — guna <a href=\"/linear-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Kalkulator Regresi Linear</a> kami",
+      "Anda hanya mempunyai satu peramal — guna <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Kalkulator Kuadrat Terkecil</a> kami",
       "Hubungan adalah melengkung — cuba <a href=\"/quadratic-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Kalkulator Regresi Kuadratik</a> kami",
       "Peramal berkorelasi tinggi antara satu sama lain (multikolineariti) — pertimbangkan membuang atau menggabungkan pemboleh ubah",
       "Saiz sampel anda kecil berbanding bilangan peramal (perlu n > p + 1)"
     ],
     "seeAlsoTitle": "Lihat Juga",
-    "seeAlsoLinear": "Kalkulator Regresi Linear",
+    "seeAlsoLinear": "Kalkulator Kuadrat Terkecil",
     "seeAlsoLinearDesc": "Modelkan hubungan garis lurus dengan y = mx + b",
     "seeAlsoQuad": "Kalkulator Regresi Kuadratik",
     "seeAlsoQuadDesc": "Modelkan hubungan melengkung dengan y = ax² + bx + c",

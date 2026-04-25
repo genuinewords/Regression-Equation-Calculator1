@@ -362,7 +362,7 @@
     ],
     "avoidTitle": "Quand éviter la régression quadratique",
     "avoidPoints": [
-      "La relation est approximativement linéaire — utilisez notre <a href=\"/linear-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Calculateur de Régression Linéaire</a>",
+      "La relation est approximativement linéaire — utilisez notre <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Calculateur de Régression Linéaire</a>",
       "Vous avez besoin de plus d'un prédicteur — utilisez notre <a href=\"/multiple-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Calculateur de Régression Multiple</a>",
       "Une courbure d'ordre supérieur (cubique ou au-delà) est nécessaire — envisagez la régression polynomiale de degré 3+",
       "Vous extrapolez loin au-delà de votre plage de données — les paraboles peuvent diverger rapidement"
@@ -409,7 +409,7 @@
     ],
     "avoidTitle": "Quand éviter la régression multiple",
     "avoidPoints": [
-      "Vous n'avez qu'un seul prédicteur — utilisez notre <a href=\"/linear-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Calculateur de Régression Linéaire</a>",
+      "Vous n'avez qu'un seul prédicteur — utilisez notre <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Calculateur de Régression Linéaire</a>",
       "La relation est courbe — essayez notre <a href=\"/quadratic-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Calculateur de Régression Quadratique</a>",
       "Les prédicteurs sont fortement corrélés entre eux (multicolinéarité) — envisagez de supprimer ou combiner des variables",
       "La taille de votre échantillon est petite par rapport au nombre de prédicteurs (nécessite n > p + 1)"

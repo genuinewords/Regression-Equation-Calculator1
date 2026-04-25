@@ -11,7 +11,7 @@
     "pearsonCorrelation": "ピアソンのr計算機",
     "grubbsTest": "グラブス検定",
     "assumptionsChecker": "前提チェック",
-    "linearCalc": "線形計算機",
+    "expCalc": "Exponential Regression"`n    "lsrlCalc": "Least Squares Line"`n    "rcCalc": "Regression Curve",
     "quadCalc": "二次計算機",
     "multiCalc": "重回帰計算機"
   },

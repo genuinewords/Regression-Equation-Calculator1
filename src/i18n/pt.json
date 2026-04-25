@@ -391,7 +391,7 @@
     ],
     "avoidTitle": "Quando evitar regressão quadrática",
     "avoidPoints": [
-      "A relação é aproximadamente linear — use nossa <a href=\"/linear-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Calculadora de Regressão Linear</a>",
+      "A relação é aproximadamente linear — use nossa <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Calculadora de Regressão Linear</a>",
       "Você precisa de mais de um preditor — use nossa <a href=\"/multiple-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Calculadora de Regressão Múltipla</a>",
       "Curvatura de ordem superior (cúbica ou além) é necessária — considere regressão polinomial de grau 3+",
       "Extrapolando muito além do intervalo dos seus dados — parábolas podem divergir rapidamente"
@@ -438,7 +438,7 @@
     ],
     "avoidTitle": "Quando evitar regressão múltipla",
     "avoidPoints": [
-      "Você só tem um preditor — use nossa <a href=\"/linear-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Calculadora de Regressão Linear</a>",
+      "Você só tem um preditor — use nossa <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Calculadora de Regressão Linear</a>",
       "A relação é curva — experimente nossa <a href=\"/quadratic-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Calculadora de Regressão Quadrática</a>",
       "Os preditores estão altamente correlacionados entre si (multicolinearidade) — considere eliminar ou combinar variáveis",
       "O tamanho da sua amostra é pequeno em relação ao número de preditores (precisa de n > p + 1)"

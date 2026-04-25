@@ -391,7 +391,7 @@
     ],
     "avoidTitle": "Karesel regresyon ne zaman kullanılmamalı",
     "avoidPoints": [
-      "İlişki yaklaşık olarak doğrusal — <a href=\"/linear-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Doğrusal Regresyon Hesaplayıcımızı</a> kullanın",
+      "İlişki yaklaşık olarak doğrusal — <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Doğrusal Regresyon Hesaplayıcımızı</a> kullanın",
       "Birden fazla tahmin ediciye ihtiyacınız var — <a href=\"/multiple-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Çoklu Regresyon Hesaplayıcımızı</a> kullanın",
       "Daha yüksek dereceli eğrilik (kübik veya ötesi) gerekiyor — 3. derece+ polinom regresyonu düşünün",
       "Veri aralığınızın çok ötesine ekstrapolasyon yapıyorsunuz — kareseller hızla sapabilir"
@@ -438,7 +438,7 @@
     ],
     "avoidTitle": "Çoklu regresyon ne zaman kullanılmamalı",
     "avoidPoints": [
-      "Sadece bir tahmin ediciniz var — <a href=\"/linear-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Doğrusal Regresyon Hesaplayıcımızı</a> kullanın",
+      "Sadece bir tahmin ediciniz var — <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Doğrusal Regresyon Hesaplayıcımızı</a> kullanın",
       "İlişki eğri — <a href=\"/quadratic-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Karesel Regresyon Hesaplayıcımızı</a> deneyin",
       "Tahmin ediciler birbiriyle yüksek oranda korele (multikolinearite) — değişkenleri çıkarmayı veya birleştirmeyi düşünün",
       "Örneklem büyüklüğünüz tahmin edici sayısına göre küçük (n > p + 1 gerekir)"

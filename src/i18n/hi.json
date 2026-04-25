@@ -362,7 +362,7 @@
     ],
     "avoidTitle": "द्विघात प्रतिगमन से कब बचें",
     "avoidPoints": [
-      "संबंध लगभग रैखिक है — हमारा <a href=\"/linear-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">रैखिक प्रतिगमन कैलकुलेटर</a> उपयोग करें",
+      "संबंध लगभग रैखिक है — हमारा <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">रैखिक प्रतिगमन कैलकुलेटर</a> उपयोग करें",
       "आपको एक से अधिक भविष्यवक्ता चाहिए — हमारा <a href=\"/multiple-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">बहुचर प्रतिगमन कैलकुलेटर</a> उपयोग करें",
       "उच्च-क्रम वक्रता (घन या उससे अधिक) आवश्यक है — घात-3+ बहुपद प्रतिगमन पर विचार करें",
       "डेटा सीमा से बहुत आगे बाह्यप्रक्षेप — द्विघात तेज़ी से अपसरण कर सकते हैं"
@@ -409,7 +409,7 @@
     ],
     "avoidTitle": "बहुचर प्रतिगमन से कब बचें",
     "avoidPoints": [
-      "आपके पास केवल एक भविष्यवक्ता है — हमारा <a href=\"/linear-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">रैखिक प्रतिगमन कैलकुलेटर</a> उपयोग करें",
+      "आपके पास केवल एक भविष्यवक्ता है — हमारा <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">रैखिक प्रतिगमन कैलकुलेटर</a> उपयोग करें",
       "संबंध वक्र है — हमारा <a href=\"/quadratic-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">द्विघात प्रतिगमन कैलकुलेटर</a> आज़माएं",
       "भविष्यवक्ता एक-दूसरे से अत्यधिक सहसंबंधित हैं (बहुसहसंबंधता) — चरों को हटाने या संयोजित करने पर विचार करें",
       "आपका नमूना आकार भविष्यवक्ताओं की संख्या के सापेक्ष छोटा है (n > p + 1 आवश्यक)"

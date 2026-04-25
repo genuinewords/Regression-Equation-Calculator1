@@ -11,7 +11,7 @@
     "pearsonCorrelation": "حاسبة بيرسون r",
     "grubbsTest": "اختبار غروبز",
     "assumptionsChecker": "مدقق الافتراضات",
-    "linearCalc": "حاسبة خطية",
+    "expCalc": "Exponential Regression"`n    "lsrlCalc": "Least Squares Line"`n    "rcCalc": "Regression Curve",
     "quadCalc": "حاسبة تربيعية",
     "multiCalc": "حاسبة متعددة"
   },

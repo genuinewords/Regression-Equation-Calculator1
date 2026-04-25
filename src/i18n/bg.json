@@ -391,7 +391,7 @@
     ],
     "avoidTitle": "Кога да избягвате квадратична регресия",
     "avoidPoints": [
-      "Връзката е приблизително линейна — използвайте нашия <a href=\"/linear-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Калкулатор за линейна регресия</a>",
+      "Връзката е приблизително линейна — използвайте нашия <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Калкулатор за линейна регресия</a>",
       "Имате нужда от повече от един предсказател — използвайте нашия <a href=\"/multiple-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Калкулатор за множествена регресия</a>",
       "Необходима е извиване от по-висок ред (кубична или повече) — обмислете полиномиална регресия от степен 3+",
       "Екстраполирате далеч отвъд обхвата на вашите данни — квадратичните могат бързо да се отклонят"
@@ -438,7 +438,7 @@
     ],
     "avoidTitle": "Кога да избягвате множествена регресия",
     "avoidPoints": [
-      "Имате само един предсказател — използвайте нашия <a href=\"/linear-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Калкулатор за линейна регресия</a>",
+      "Имате само един предсказател — използвайте нашия <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Калкулатор за линейна регресия</a>",
       "Връзката е извита — опитайте нашия <a href=\"/quadratic-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 underline\">Калкулатор за квадратична регресия</a>",
       "Предсказателите са силно корелирани един с друг (мултиколинеарност) — обмислете премахване или комбиниране на променливите",
       "Размерът на вашата извадка е малък спрямо броя на предсказателите (необходимо е n > p + 1)"

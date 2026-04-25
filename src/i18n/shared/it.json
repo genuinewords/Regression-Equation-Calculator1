@@ -11,7 +11,7 @@
     "pearsonCorrelation": "Calcolatore di Pearson r",
     "grubbsTest": "Test di Grubbs",
     "assumptionsChecker": "Verifica assunzioni",
-    "linearCalc": "Calcolatore lineare",
+    "expCalc": "Exponential Regression"`n    "lsrlCalc": "Least Squares Line"`n    "rcCalc": "Regression Curve",
     "quadCalc": "Calcolatore quadratico",
     "multiCalc": "Calcolatore multiplo"
   },

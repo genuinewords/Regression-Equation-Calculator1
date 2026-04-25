@@ -2,7 +2,9 @@
   "headerNav": [
     { "label": "home", "href": "/" },
     { "label": "tools", "children": [
-      { "label": "linearCalc", "href": "/linear-regression-calculator/" },
+      { "label": "expCalc", "href": "/exponential-regression-calculator/" },
+      { "label": "lsrlCalc", "href": "/least-squares-regression-line-calculator/" },
+      { "label": "rcCalc", "href": "/regression-curve-calculator/" },
       { "label": "quadCalc", "href": "/quadratic-regression-calculator/" },
       { "label": "multiCalc", "href": "/multiple-regression-calculator/" },
       { "label": "pearsonCorrelation", "href": "/pearson-correlation-calculator/" },
@@ -15,7 +17,9 @@
   ],
   "footerNav": [
     { "label": "home", "href": "/" },
-    { "label": "linearCalc", "href": "/linear-regression-calculator/" },
+    { "label": "expCalc", "href": "/exponential-regression-calculator/" },
+    { "label": "lsrlCalc", "href": "/least-squares-regression-line-calculator/" },
+    { "label": "rcCalc", "href": "/regression-curve-calculator/" },
     { "label": "quadCalc", "href": "/quadratic-regression-calculator/" },
     { "label": "multiCalc", "href": "/multiple-regression-calculator/" },
     { "label": "pearsonCorrelation", "href": "/pearson-correlation-calculator/" },
