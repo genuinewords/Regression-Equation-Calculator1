@@ -11,7 +11,9 @@
     "pearsonCorrelation": "Калкулатор на Пиърсън r",
     "grubbsTest": "Тест на Грабс",
     "assumptionsChecker": "Проверка на предпоставки",
-    "expCalc": "Exponential Regression"`n    "lsrlCalc": "Least Squares Line"`n    "rcCalc": "Regression Curve",
+    "expCalc": "Exponential Regression",
+    "lsrlCalc": "Least Squares Line",
+    "rcCalc": "Regression Curve",
     "quadCalc": "Квадратичен калкулатор",
     "multiCalc": "Множествен калкулатор"
   },

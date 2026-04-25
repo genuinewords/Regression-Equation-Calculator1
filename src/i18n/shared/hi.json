@@ -11,7 +11,9 @@
     "pearsonCorrelation": "पियर्सन r कैलकुलेटर",
     "grubbsTest": "ग्रब्स परीक्षण",
     "assumptionsChecker": "अनुमान परीक्षक",
-    "expCalc": "Exponential Regression"`n    "lsrlCalc": "Least Squares Line"`n    "rcCalc": "Regression Curve",
+    "expCalc": "Exponential Regression",
+    "lsrlCalc": "Least Squares Line",
+    "rcCalc": "Regression Curve",
     "quadCalc": "द्विघात कैलकुलेटर",
     "multiCalc": "बहु कैलकुलेटर"
   },

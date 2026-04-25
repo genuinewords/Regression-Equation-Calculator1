@@ -11,7 +11,9 @@
     "pearsonCorrelation": "Pearson r Hesaplayıcı",
     "grubbsTest": "Grubbs Testi",
     "assumptionsChecker": "Varsayım Kontrolü",
-    "expCalc": "Exponential Regression"`n    "lsrlCalc": "Least Squares Line"`n    "rcCalc": "Regression Curve",
+    "expCalc": "Exponential Regression",
+    "lsrlCalc": "Least Squares Line",
+    "rcCalc": "Regression Curve",
     "quadCalc": "Karesel Hesaplayıcı",
     "multiCalc": "Çoklu Hesaplayıcı"
   },
