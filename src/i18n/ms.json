@@ -1,9 +1,9 @@
 {
   "siteTitle": "Pengira Persamaan Regresi",
-  "siteDescription": "Kalkulator persamaan regresi dalam talian percuma. Kira persamaan regresi linear, polinomial dan berbilang serta-merta dengan penyelesaian langkah demi langkah.",
+  "siteDescription": "Kalkulator persamaan regresi dalam talian percuma. Kira persamaan regresi linear, polinomial dan berbilang serta-merta dengan penyelesaian langkah demi...",
   "home": {
     "title": "Pengira Persamaan Regresi",
-    "description": "Kira persamaan regresi serta-merta dengan alat dalam talian percuma kami",
+    "description": "Kira persamaan regresi serta-merta dengan alat dalam talian percuma kami - Pengira Persamaan Regresi",
     "intro": "Masukkan titik data anda dan dapatkan persamaan regresi, kecerunan, pintasan, nilai R-kuasa dua dan pengiraan langkah demi langkah dalam beberapa saat.",
     "whatIsTitle": "Apakah Persamaan Regresi?",
     "whatIsText": "Persamaan regresi memodelkan hubungan antara pemboleh ubah, membolehkan anda meramal hasil berdasarkan data input. Dalam bentuk paling ringkas — regresi linear mudah — persamaannya ialah <strong>y = mx + b</strong>, dengan <strong>m</strong> ialah kecerunan dan <strong>b</strong> ialah pintasan-y. Alat statistik yang berkuasa ini digunakan dalam sains, perniagaan dan kejuruteraan untuk mendedahkan trend, membuat ramalan dan mengukur hubungan antara pemboleh ubah.",
@@ -57,7 +57,7 @@
   },
   "about": {
     "title": "Perihal Kami",
-    "description": "Ketahui tentang Kalkulator Persamaan Regresi",
+    "description": "Ketahui tentang Kalkulator Persamaan Regresi - Pengira Persamaan Regresi",
     "content": "Kalkulator Persamaan Regresi adalah alat dalam talian percuma yang direka untuk membantu pelajar, penyelidik dan profesional mengira persamaan regresi dengan cepat dan tepat. Kalkulator kami menyokong regresi linear dan menyediakan penyelesaian langkah demi langkah yang terperinci untuk membantu anda memahami proses matematik di sebalik keputusan. Sama ada anda belajar statistik, menganalisis data atau bekerja dalam penyelidikan, alat kami menjadikan analisis regresi mudah diakses oleh semua orang.",
     "mission": "Misi Kami",
     "missionText": "Menjadikan analisis regresi mudah diakses oleh semua orang — daripada pelajar yang baru belajar statistik buat kali pertama hinggalah profesional yang memerlukan keputusan pantas dan boleh dipercayai. Kami percaya bahawa alat statistik yang berkuasa haruslah percuma, peribadi dan mudah digunakan.",
@@ -68,7 +68,7 @@
   },
   "contact": {
     "title": "Berhubung dengan Kami",
-    "description": "Berhubung dengan pasukan Kalkulator Persamaan Regresi",
+    "description": "Berhubung dengan pasukan Kalkulator Persamaan Regresi - Pengira Persamaan Regresi",
     "helperText": "Ada soalan atau maklum balas? Kami ingin mendengar daripada anda. Isi borang di bawah dan kami akan menghubungi anda secepat mungkin.",
     "nameLabel": "Nama Anda",
     "emailLabel": "E-mel Anda",
@@ -83,23 +83,23 @@
   },
   "terms": {
     "title": "Terma Perkhidmatan",
-    "description": "Terma dan syarat untuk menggunakan Kalkulator Persamaan Regresi",
+    "description": "Terma dan syarat untuk menggunakan Kalkulator Persamaan Regresi - Pengira Persamaan Regresi",
     "content": "Dengan mengakses dan menggunakan tapak web Kalkulator Persamaan Regresi, anda bersetuju untuk terikat dengan terma ini. Alat kami disediakan untuk tujuan pendidikan dan analisis. Keputusan harus disahkan untuk aplikasi kritikal. Kami berhak mengubah terma ini pada bila-bila masa. Penggunaan kalkulator adalah percuma dan kami tidak menjamin ketepatan keputusan untuk tujuan profesional atau komersial."
   },
   "privacy": {
     "title": "Dasar Privasi",
-    "description": "Cara kami mengendalikan data anda di Kalkulator Persamaan Regresi",
+    "description": "Cara kami mengendalikan data anda di Kalkulator Persamaan Regresi - Pengira Persamaan Regresi",
     "content": "Kami menghargai privasi anda. Kalkulator Persamaan Regresi tidak mengumpul, menyimpan atau berkongsi sebarang data peribadi yang dimasukkan ke dalam kalkulator. Semua pengiraan dilakukan secara tempatan dalam pelayar anda. Kami mungkin menggunakan analisis untuk memahami corak penggunaan tapak, tetapi tiada maklumat pengenalan peribadi dikumpulkan. Penyerahan borang hubungan diproses dengan selamat dan tidak dikongsi dengan pihak ketiga."
   },
   "blog": {
     "title": "Blog",
-    "description": "Artikel tentang analisis regresi dan statistik",
+    "description": "Artikel tentang analisis regresi dan statistik - Pengira Persamaan Regresi",
     "readMore": "Baca Lagi",
     "resultsMeta": "Memaparkan {start}-{end} daripada {total} artikel"
   },
   "calculator": {
     "title": "Kalkulator Persamaan Regresi",
-    "description": "Masukkan titik data anda untuk mengira persamaan regresi",
+    "description": "Masukkan titik data anda untuk mengira persamaan regresi - Pengira Persamaan Regresi",
     "enterData": "Input Data Regresi",
     "enterDataHint": "Masukkan titik data anda di bawah. Untuk analisis regresi yang tepat, sertakan sekurang-kurangnya 10 titik data yang meliputi julat yang munasabah.",
     "xLabel": "Nilai X",
@@ -146,7 +146,7 @@
   },
   "pearson": {
     "title": "Pengira Korelasi Pearson",
-    "description": "Masukkan data anda untuk mengira pekali korelasi Pearson",
+    "description": "Masukkan data anda untuk mengira pekali korelasi Pearson - Pengira Persamaan Regresi",
     "enterData": "Masukkan data anda",
     "xLabel": "Nilai X",
     "yLabel": "Nilai Y",
@@ -199,7 +199,7 @@
   },
   "grubbs": {
     "title": "Kalkulator Ujian Grubbs",
-    "description": "Kesan outlier dalam dataset menggunakan ujian Grubbs",
+    "description": "Kesan outlier dalam dataset menggunakan ujian Grubbs - Pengira Persamaan Regresi",
     "enterData": "Masukkan data anda",
     "valueLabel": "Nilai",
     "significanceLevel": "Tahap keertian (α)",
@@ -251,7 +251,7 @@
   },
   "assumptionsChecker": {
     "title": "Pemeriksa Anggapan Regresi",
-    "description": "Periksa keempat anggapan regresi linear untuk data anda",
+    "description": "Periksa keempat anggapan regresi linear untuk data anda - Pengira Persamaan Regresi",
     "enterData": "Masukkan titik data anda",
     "xLabel": "Nilai X",
     "yLabel": "Nilai Y",
@@ -306,7 +306,7 @@
   },
   "linearCalc": {
     "title": "Kalkulator Kuadrat Terkecil",
-    "description": "Kira persamaan regresi linear y = mx + b daripada data anda",
+    "description": "Kira persamaan regresi linear y = mx + b daripada data anda - Pengira Persamaan Regresi",
     "enterData": "Masukkan titik data anda",
     "xLabel": "Nilai X",
     "yLabel": "Nilai Y",
@@ -354,7 +354,7 @@
   },
   "quadCalc": {
     "title": "Pengira Regresi Kuadratik",
-    "description": "Kira persamaan regresi kuadratik y = ax² + bx + c daripada data anda",
+    "description": "Kira persamaan regresi kuadratik y = ax² + bx + c daripada data anda - Pengira Persamaan Regresi",
     "enterData": "Masukkan titik data anda",
     "xLabel": "Nilai X",
     "yLabel": "Nilai Y",
@@ -403,7 +403,7 @@
   },
   "multiCalc": {
     "title": "Kalkulator Regresi Berbilang",
-    "description": "Kira persamaan regresi berbilang daripada data anda dengan dua atau lebih peramal",
+    "description": "Kira persamaan regresi berbilang daripada data anda dengan dua atau lebih peramal - Pengira Persamaan Regresi",
     "enterData": "Masukkan titik data anda",
     "predictors": "Bilangan Peramal",
     "addRow": "Tambah Baris",
@@ -450,23 +450,23 @@
   },
   "notFound": {
     "title": "Halaman Tidak Dijumpai",
-    "description": "Halaman yang anda cari tidak wujud",
+    "description": "Halaman yang anda cari tidak wujud - Pengira Persamaan Regresi",
     "backHome": "Kembali ke Halaman Utama"
   },
   "sitemap": {
     "title": "Peta Laman",
-    "description": "Terokai semua halaman di Kalkulator Persamaan Regresi"
+    "description": "Terokai semua halaman di Kalkulator Persamaan Regresi - Pengira Persamaan Regresi"
   },
   "expCalc": {
     "title": "Kalkulator Regresi Eksponen",
-    "description": "Kira persamaan regresi eksponen (y = a · e^(bx))"
+    "description": "Kira persamaan regresi eksponen (y = a · e^(bx)) - Pengira Persamaan Regresi"
   },
   "lsrlCalc": {
     "title": "Kalkulator Garis Regresi Kuasa Dua Terkecil",
-    "description": "Kira garis regresi kuasa dua terkecil (y = mx + b)"
+    "description": "Kira garis regresi kuasa dua terkecil (y = mx + b) - Pengira Persamaan Regresi"
   },
   "rcCalc": {
     "title": "Kalkulator Lengkung Regresi",
-    "description": "Analisis hubungan dengan pelbagai jenis model regresi"
+    "description": "Analisis hubungan dengan pelbagai jenis model regresi - Pengira Persamaan Regresi"
   }
 }

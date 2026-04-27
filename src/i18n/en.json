@@ -3,7 +3,7 @@
   "siteDescription": "Free online regression equation calculator. Compute linear, polynomial, and multiple regression equations instantly with step-by-step solutions.",
   "home": {
     "title": "Free Regression Tool Online",
-    "description": "Calculate regression equations in seconds. Our free calculator finds linear, quadratic, and exponential regression models with complete statistics. Perfect for students, researchers, and data analysis.",
+    "description": "Calculate regression equations in seconds. Our free calculator finds linear, quadratic, and exponential regression models. Perfect for data analysis.",
     "intro": "Enter your data points and get the regression equation, slope, intercept, R-squared value, and step-by-step calculations in seconds.",
     "whatIsTitle": "What Is a Regression Equation?",
     "whatIsText": "A regression equation models the relationship between variables, allowing you to predict outcomes based on input data. In its simplest form — simple linear regression — the equation is <strong>y = mx + b</strong>, where <strong>m</strong> is the slope and <strong>b</strong> is the y-intercept. This powerful statistical tool is used across science, business, and engineering to uncover trends, make forecasts, and quantify relationships between variables.",
@@ -57,7 +57,7 @@
   },
   "about": {
     "title": "About Us – View Our Mission!",
-    "description": "Learn about the Regression Equation Calculator",
+    "description": "Learn about the Regression Equation Calculator. We provide a free online tool to compute regression equations quickly with step-by-step math solutions.",
     "content": "The Regression Equation Calculator is a free online tool designed to help students, researchers, and professionals compute regression equations quickly and accurately. Our calculator supports linear regression and provides detailed step-by-step solutions to help you understand the mathematical process behind the results. Whether you're studying statistics, analyzing data, or working on research, our tool makes regression analysis accessible to everyone.",
     "mission": "Our Mission",
     "missionText": "To make regression analysis accessible to everyone — from students learning statistics for the first time to professionals who need quick, reliable results. We believe that powerful statistical tools should be free, private, and easy to use.",
@@ -68,7 +68,7 @@
   },
   "contact": {
     "title": "Contact Us – Get Support Now",
-    "description": "Get in touch with the Regression Equation Calculator team",
+    "description": "Get in touch with the Regression Equation Calculator team. Fill out our contact form for questions, feedback, or support regarding our statistical tool.",
     "helperText": "Have a question or feedback? We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.",
     "nameLabel": "Your Name",
     "emailLabel": "Your Email",
@@ -83,23 +83,23 @@
   },
   "terms": {
     "title": "Terms of Service – Our Rules",
-    "description": "Terms and conditions for using the Regression Equation Calculator",
+    "description": "Review the Terms of Service for using the Regression Equation Calculator. Understand our rules, data usage policies, and educational service guidelines.",
     "content": "By accessing and using the Regression Equation Calculator website, you agree to be bound by these terms. Our tool is provided for educational and analytical purposes. Results should be verified for critical applications. We reserve the right to modify these terms at any time. Use of the calculator is free and we do not guarantee the accuracy of results for professional or commercial purposes."
   },
   "privacy": {
     "title": "Privacy Policy – Data Safety",
-    "description": "How we handle your data at the Regression Equation Calculator",
+    "description": "Read our Privacy Policy to understand how we handle your data. The Regression Equation Calculator runs locally in your browser to ensure complete privacy.",
     "content": "We value your privacy. The Regression Equation Calculator does not collect, store, or share any personal data entered into the calculator. All calculations are performed locally in your browser. We may use analytics to understand site usage patterns, but no personally identifiable information is collected. Contact form submissions are processed securely and are not shared with third parties."
   },
   "blog": {
     "title": "Statistics & Math Guide Blog",
-    "description": "Articles about regression analysis and statistics",
+    "description": "Read our Statistics & Math Guide Blog for comprehensive articles about regression analysis, statistics, data modeling, and practical math applications.",
     "readMore": "Read More",
     "resultsMeta": "Showing {start}-{end} of {total} articles"
   },
   "calculator": {
     "title": "Linear Regression Calculator",
-    "description": "Enter your data points to calculate the regression equation",
+    "description": "Enter your data points to calculate the regression equation. Our tool provides linear, polynomial, and exponential regression results with full statistics.",
     "enterData": "Regression Data Input",
     "enterDataHint": "Enter your data points below. For accurate regression analysis, include at least 10 data points covering a reasonable range.",
     "xLabel": "X Values",
@@ -146,7 +146,7 @@
   },
   "pearson": {
     "title": "Pearson Correlation Calculator",
-    "description": "Enter your data points to calculate the Pearson correlation coefficient",
+    "description": "Enter your data points to calculate the Pearson correlation coefficient. Get r, r-squared, p-values, and step-by-step solutions instantly in your browser.",
     "enterData": "Enter your data points",
     "xLabel": "X Values",
     "yLabel": "Y Values",
@@ -357,7 +357,7 @@
   },
   "grubbs": {
     "title": "Grubbs' Test Calculator: Fast",
-    "description": "Detect outliers in your dataset using Grubbs' test",
+    "description": "Detect outliers in your dataset using Grubbs' test. Our calculator provides the G statistic, critical value, and step-by-step mathematical computations.",
     "enterData": "Enter your data points",
     "valueLabel": "Value",
     "significanceLevel": "Significance Level (α)",
@@ -543,7 +543,7 @@
   },
   "assumptionsChecker": {
     "title": "Regression Assumptions Checker",
-    "description": "Check all four linear regression assumptions for your data",
+    "description": "Check all four linear regression assumptions for your data. Test for linearity, independence, homoscedasticity, and normality with detailed diagnostics.",
     "enterData": "Enter your data points",
     "xLabel": "X Values",
     "yLabel": "Y Values",
@@ -730,12 +730,12 @@
   },
   "notFound": {
     "title": "404 Error - Page Not Found!",
-    "description": "The page you're looking for doesn't exist",
+    "description": "The page you are looking for does not exist. Navigate back to the Regression Equation Calculator homepage to access our free statistical analysis tools.",
     "backHome": "Back to Home"
   },
   "expCalc": {
     "title": "Exponential Regression Solvers",
-    "description": "Free exponential regression calculator online. Calculate y = a·e^(bx) from table data with step-by-step solutions, R², graphs. Learn how to do exponential regression on graphing calculators.",
+    "description": "Calculate exponential regression equations with our free online tool. Enter your data points to find the equation y = a*e^(bx) with full step-by-step math.",
     "xLabel": "X",
     "yLabel": "Y",
     "invalidData": "Please enter at least 2 valid data points with positive Y values",
@@ -1025,7 +1025,7 @@
   },
   "lsrlCalc": {
     "title": "Least Squares Regression Line",
-    "description": "Calculate the least squares regression line (y = mx + b) with detailed intermediate calculations",
+    "description": "Compute the least squares regression line instantly. Enter your data to find the OLS best-fit line equation y = mx + b with comprehensive math solutions.",
     "xLabel": "X",
     "yLabel": "Y",
     "invalidData": "Please enter at least 2 valid data points",
@@ -1306,7 +1306,7 @@
   },
   "rcCalc": {
     "title": "Regression Curve Calculator",
-    "description": "Free regression curve calculator. Compare linear, quadratic, exponential, and logarithmic models side-by-side. Find the best fit curve with R² comparison and visual graphs.",
+    "description": "Compare linear, quadratic, exponential, and logarithmic regression models side by side. Find the best fit curve for your data with our free online tool.",
     "xLabel": "X",
     "yLabel": "Y",
     "invalidData": "Please enter at least 2 valid data points",
@@ -1526,7 +1526,7 @@
   },
   "quadCalc": {
     "title": "Quadratic Regression Calculator",
-    "description": "Calculate the quadratic regression equation y = ax² + bx + c from your data",
+    "description": "Calculate quadratic regression equations (y = ax² + bx + c) instantly. Enter your data points for a free, step-by-step mathematical breakdown and analysis.",
     "enterData": "Enter your data points",
     "xLabel": "X Values",
     "yLabel": "Y Values",
@@ -1795,7 +1795,7 @@
   },
   "multiCalc": {
     "title": "Multiple Regression Calculator",
-    "description": "Calculate the multiple regression equation from your data with two or more predictors",
+    "description": "Calculate multiple regression equations with two or more predictors. Find the best model for your data using our free online statistical analysis tool.",
     "enterData": "Enter your data points",
     "predictors": "Number of Predictors",
     "addRow": "Add Row",
@@ -2041,6 +2041,6 @@
   },
   "sitemap": {
     "title": "Sitemap",
-    "description": "Explore all pages on the Regression Equation Calculator"
+    "description": "Explore the complete Regression Equation Calculator sitemap. Find all our statistical tools, calculators, blog posts, and educational mathematics resources."
   }
 }

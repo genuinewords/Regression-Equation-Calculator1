@@ -1,9 +1,9 @@
 {
   "siteTitle": "Regressionsgleichungsrechner",
-  "siteDescription": "Kostenloser Online-Regressionsgleichungsrechner. Berechnen Sie lineare, polynomiale und multiple Regressionsgleichungen sofort mit Schritt-für-Schritt-Lösungen.",
+  "siteDescription": "Kostenloser Online-Regressionsgleichungsrechner. Berechnen Sie lineare, polynomiale und multiple Regressionsgleichungen sofort mit...",
   "home": {
     "title": "Regressionsgleichungsrechner",
-    "description": "Berechnen Sie Regressionsgleichungen sofort mit unserem kostenlosen Online-Tool",
+    "description": "Berechnen Sie Regressionsgleichungen sofort mit unserem kostenlosen Online-Tool - Regressionsgleichungsrechner",
     "intro": "Geben Sie Ihre Datenpunkte ein und erhalten Sie die Regressionsgleichung, Steigung, Achsenabschnitt, R-Quadrat-Wert und Schritt-für-Schritt-Berechnungen in Sekunden.",
     "whatIsTitle": "Was ist eine Regressionsgleichung?",
     "whatIsText": "Eine Regressionsgleichung modelliert die Beziehung zwischen Variablen und ermöglicht es Ihnen, Ergebnisse auf Basis von Eingabedaten vorherzusagen. In ihrer einfachsten Form — der einfachen linearen Regression — lautet die Gleichung <strong>y = mx + b</strong>, wobei <strong>m</strong> die Steigung und <strong>b</strong> der y-Achsenabschnitt ist. Dieses leistungsstarke statistische Werkzeug wird in Wissenschaft, Wirtschaft und Ingenieurwesen eingesetzt, um Trends aufzudecken, Vorhersagen zu treffen und Beziehungen zwischen Variablen zu quantifizieren.",
@@ -57,7 +57,7 @@
   },
   "about": {
     "title": "Über Uns",
-    "description": "Erfahren Sie mehr über den Regressionsgleichungsrechner",
+    "description": "Erfahren Sie mehr über den Regressionsgleichungsrechner - Regressionsgleichungsrechner",
     "content": "Der Regressionsgleichungsrechner ist ein kostenloses Online-Tool, das entwickelt wurde, um Studenten, Forschern und Fachleuten zu helfen, Regressionsgleichungen schnell und genau zu berechnen. Unser Rechner unterstützt lineare Regression und bietet detaillierte Schritt-für-Schritt-Lösungen, um den mathematischen Prozess hinter den Ergebnissen zu verstehen. Egal, ob Sie Statistik studieren, Daten analysieren oder an Forschung arbeiten – unser Tool macht Regressionsanalyse für jeden zugänglich.",
     "mission": "Unsere Mission",
     "missionText": "Regressionsanalyse für jeden zugänglich machen — von Studenten, die zum ersten Mal Statistik lernen, bis hin zu Fachleuten, die schnelle, zuverlässige Ergebnisse benötigen. Wir glauben, dass leistungsstarke statistische Werkzeuge kostenlos, privat und einfach zu bedienen sein sollten.",
@@ -68,7 +68,7 @@
   },
   "contact": {
     "title": "Kontakt",
-    "description": "Nehmen Sie Kontakt mit dem Team des Regressionsgleichungsrechners auf",
+    "description": "Nehmen Sie Kontakt mit dem Team des Regressionsgleichungsrechners auf - Regressionsgleichungsrechner",
     "helperText": "Haben Sie eine Frage oder ein Feedback? Wir freuen uns, von Ihnen zu hören. Füllen Sie das Formular unten aus und wir melden uns so schnell wie möglich bei Ihnen.",
     "nameLabel": "Ihr Name",
     "emailLabel": "Ihre E-Mail",
@@ -83,23 +83,23 @@
   },
   "terms": {
     "title": "Nutzungsbedingungen",
-    "description": "Bedingungen für die Nutzung des Regressionsgleichungsrechners",
+    "description": "Bedingungen für die Nutzung des Regressionsgleichungsrechners - Regressionsgleichungsrechner",
     "content": "Durch den Zugriff auf und die Nutzung der Website des Regressionsgleichungsrechners stimmen Sie diesen Bedingungen zu. Unser Tool wird für Bildungs- und Analysezwecke bereitgestellt. Ergebnisse sollten für kritische Anwendungen überprüft werden. Wir behalten uns das Recht vor, diese Bedingungen jederzeit zu ändern. Die Nutzung des Rechners ist kostenlos, und wir übernehmen keine Gewähr für die Richtigkeit der Ergebnisse für professionelle oder kommerzielle Zwecke."
   },
   "privacy": {
     "title": "Datenschutzrichtlinie",
-    "description": "Wie wir Ihre Daten im Regressionsgleichungsrechner behandeln",
+    "description": "Wie wir Ihre Daten im Regressionsgleichungsrechner behandeln - Regressionsgleichungsrechner",
     "content": "Wir schätzen Ihre Privatsphäre. Der Regressionsgleichungsrechner sammelt, speichert oder teilt keine personenbezogenen Daten, die in den Rechner eingegeben werden. Alle Berechnungen werden lokal in Ihrem Browser durchgeführt. Wir können Analysen verwenden, um Nutzungsmuster der Website zu verstehen, aber es werden keine personenbezogenen Daten erhoben. Kontaktformular-Einreichungen werden sicher verarbeitet und nicht an Dritte weitergegeben."
   },
   "blog": {
     "title": "Blog",
-    "description": "Artikel über Regressionsanalyse und Statistik",
+    "description": "Artikel über Regressionsanalyse und Statistik - Regressionsgleichungsrechner",
     "readMore": "Weiterlesen",
     "resultsMeta": "Anzeige {start}-{end} von {total} Artikeln"
   },
   "calculator": {
     "title": "Regressionsgleichungsrechner",
-    "description": "Geben Sie Ihre Datenpunkte ein, um die Regressionsgleichung zu berechnen",
+    "description": "Geben Sie Ihre Datenpunkte ein, um die Regressionsgleichung zu berechnen - Regressionsgleichungsrechner",
     "enterData": "Geben Sie Ihre Datenpunkte ein",
     "xLabel": "X-Werte",
     "yLabel": "Y-Werte",
@@ -117,7 +117,7 @@
   },
   "pearson": {
     "title": "Pearson-Korrelationsrechner",
-    "description": "Geben Sie Ihre Daten ein, um den Pearson-Korrelationskoeffizienten zu berechnen",
+    "description": "Geben Sie Ihre Daten ein, um den Pearson-Korrelationskoeffizienten zu berechnen - Regressionsgleichungsrechner",
     "enterData": "Daten eingeben",
     "xLabel": "X-Werte",
     "yLabel": "Y-Werte",
@@ -170,7 +170,7 @@
   },
   "grubbs": {
     "title": "Grubbs-Test-Rechner",
-    "description": "Erkennen Sie Ausreißer in Ihrem Datensatz mit dem Grubbs-Test",
+    "description": "Erkennen Sie Ausreißer in Ihrem Datensatz mit dem Grubbs-Test - Regressionsgleichungsrechner",
     "enterData": "Daten eingeben",
     "valueLabel": "Wert",
     "significanceLevel": "Signifikanzniveau (α)",
@@ -222,7 +222,7 @@
   },
   "assumptionsChecker": {
     "title": "Regressionsannahmen-Prüfung",
-    "description": "Prüfen Sie alle vier linearen Regressionsannahmen für Ihre Daten",
+    "description": "Prüfen Sie alle vier linearen Regressionsannahmen für Ihre Daten - Regressionsgleichungsrechner",
     "enterData": "Daten eingeben",
     "xLabel": "X-Werte",
     "yLabel": "Y-Werte",
@@ -277,12 +277,12 @@
   },
   "notFound": {
     "title": "Seite nicht gefunden",
-    "description": "Die gesuchte Seite existiert nicht",
+    "description": "Die gesuchte Seite existiert nicht - Regressionsgleichungsrechner",
     "backHome": "Zurück zur Startseite"
   },
   "linearCalc": {
     "title": "Linearer Regressionsrechner",
-    "description": "Berechnen Sie die lineare Regressionsgleichung y = mx + b aus Ihren Daten",
+    "description": "Berechnen Sie die lineare Regressionsgleichung y = mx + b aus Ihren Daten - Regressionsgleichungsrechner",
     "enterData": "Geben Sie Ihre Datenpunkte ein",
     "xLabel": "X-Werte",
     "yLabel": "Y-Werte",
@@ -330,7 +330,7 @@
   },
   "quadCalc": {
     "title": "Quadratischer Regressionsrechner",
-    "description": "Berechnen Sie die quadratische Regressionsgleichung y = ax² + bx + c aus Ihren Daten",
+    "description": "Berechnen Sie die quadratische Regressionsgleichung y = ax² + bx + c aus Ihren Daten - Regressionsgleichungsrechner",
     "enterData": "Geben Sie Ihre Datenpunkte ein",
     "xLabel": "X-Werte",
     "yLabel": "Y-Werte",
@@ -379,7 +379,7 @@
   },
   "multiCalc": {
     "title": "Multipler Regressionsrechner",
-    "description": "Berechnen Sie die multiple Regressionsgleichung aus Ihren Daten mit zwei oder mehr Prädiktoren",
+    "description": "Berechnen Sie die multiple Regressionsgleichung aus Ihren Daten mit zwei oder mehr Prädiktoren - Regressionsgleichungsrechner",
     "enterData": "Geben Sie Ihre Datenpunkte ein",
     "predictors": "Anzahl der Prädiktoren",
     "addRow": "Zeile hinzufügen",
@@ -426,18 +426,18 @@
   },
   "sitemap": {
     "title": "Seitenübersicht",
-    "description": "Entdecken Sie alle Seiten des Regressionsgleichungsrechners"
+    "description": "Entdecken Sie alle Seiten des Regressionsgleichungsrechners - Regressionsgleichungsrechner"
   },
   "expCalc": {
     "title": "Exponentieller Regressionsrechner",
-    "description": "Berechnen Sie die exponentielle Regressionsgleichung (y = a · e^(bx))"
+    "description": "Berechnen Sie die exponentielle Regressionsgleichung (y = a · e^(bx)) - Regressionsgleichungsrechner"
   },
   "lsrlCalc": {
     "title": "Kleinste-Quadrate-Regressionsrechner",
-    "description": "Berechnen Sie die Kleinste-Quadrate-Regressionsgerade (y = mx + b)"
+    "description": "Berechnen Sie die Kleinste-Quadrate-Regressionsgerade (y = mx + b) - Regressionsgleichungsrechner"
   },
   "rcCalc": {
     "title": "Regressionskurvenrechner",
-    "description": "Analysieren Sie Beziehungen mit mehreren Regressionsmodelltypen"
+    "description": "Analysieren Sie Beziehungen mit mehreren Regressionsmodelltypen - Regressionsgleichungsrechner"
   }
 }

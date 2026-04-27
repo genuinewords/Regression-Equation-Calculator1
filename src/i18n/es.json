@@ -1,9 +1,9 @@
 {
   "siteTitle": "Calculadora de Ecuación de Regresión",
-  "siteDescription": "Calculadora gratuita en línea de ecuación de regresión. Calcule ecuaciones de regresión lineal, polinómica y múltiple al instante con soluciones paso a paso.",
+  "siteDescription": "Calculadora gratuita en línea de ecuación de regresión. Calcule ecuaciones de regresión lineal, polinómica y múltiple al instante con soluciones paso a...",
   "home": {
     "title": "Calculadora de Ecuación de Regresión",
-    "description": "Calcule ecuaciones de regresión al instante con nuestra herramienta gratuita en línea",
+    "description": "Calcule ecuaciones de regresión al instante con nuestra herramienta gratuita en línea - Calculadora de Ecuación de Regresión",
     "intro": "Ingrese sus puntos de datos y obtenga la ecuación de regresión, pendiente, intersección, valor R-cuadrado y cálculos paso a paso en segundos.",
     "whatIsTitle": "¿Qué es una ecuación de regresión?",
     "whatIsText": "Una ecuación de regresión modela la relación entre variables, permitiéndole predecir resultados basándose en datos de entrada. En su forma más simple — regresión lineal simple — la ecuación es <strong>y = mx + b</strong>, donde <strong>m</strong> es la pendiente y <strong>b</strong> es la intersección con el eje y. Esta poderosa herramienta estadística se utiliza en ciencia, negocios e ingeniería para descubrir tendencias, hacer pronósticos y cuantificar relaciones entre variables.",
@@ -57,7 +57,7 @@
   },
   "about": {
     "title": "Sobre Nosotros",
-    "description": "Conozca sobre la Calculadora de Ecuación de Regresión",
+    "description": "Conozca sobre la Calculadora de Ecuación de Regresión - Calculadora de Ecuación de Regresión",
     "content": "La Calculadora de Ecuación de Regresión es una herramienta gratuita en línea diseñada para ayudar a estudiantes, investigadores y profesionales a calcular ecuaciones de regresión de forma rápida y precisa. Nuestra calculadora admite regresión lineal y proporciona soluciones paso a paso detalladas para ayudarle a comprender el proceso matemático detrás de los resultados. Ya sea que esté estudiando estadística, analizando datos o trabajando en investigación, nuestra herramienta hace que el análisis de regresión sea accesible para todos.",
     "mission": "Nuestra Misión",
     "missionText": "Hacer que el análisis de regresión sea accesible para todos — desde estudiantes que aprenden estadística por primera vez hasta profesionales que necesitan resultados rápidos y confiables. Creemos que las herramientas estadísticas potentes deben ser gratuitas, privadas y fáciles de usar.",
@@ -68,7 +68,7 @@
   },
   "contact": {
     "title": "Contáctenos",
-    "description": "Póngase en contacto con el equipo de la Calculadora de Ecuación de Regresión",
+    "description": "Póngase en contacto con el equipo de la Calculadora de Ecuación de Regresión - Calculadora de Ecuación de Regresión",
     "helperText": "¿Tiene alguna pregunta o comentario? Nos encantaría saber de usted. Complete el formulario a continuación y nos pondremos en contacto con usted lo antes posible.",
     "nameLabel": "Su Nombre",
     "emailLabel": "Su Correo Electrónico",
@@ -83,23 +83,23 @@
   },
   "terms": {
     "title": "Términos de Servicio",
-    "description": "Términos y condiciones para usar la Calculadora de Ecuación de Regresión",
+    "description": "Términos y condiciones para usar la Calculadora de Ecuación de Regresión - Calculadora de Ecuación de Regresión",
     "content": "Al acceder y usar el sitio web de la Calculadora de Ecuación de Regresión, usted acepta estar sujeto a estos términos. Nuestra herramienta se proporciona con fines educativos y analíticos. Los resultados deben verificarse para aplicaciones críticas. Nos reservamos el derecho de modificar estos términos en cualquier momento. El uso de la calculadora es gratuito y no garantizamos la precisión de los resultados para fines profesionales o comerciales."
   },
   "privacy": {
     "title": "Política de Privacidad",
-    "description": "Cómo manejamos sus datos en la Calculadora de Ecuación de Regresión",
+    "description": "Cómo manejamos sus datos en la Calculadora de Ecuación de Regresión - Calculadora de Ecuación de Regresión",
     "content": "Valoramos su privacidad. La Calculadora de Ecuación de Regresión no recopila, almacena ni comparte ningún dato personal ingresado en la calculadora. Todos los cálculos se realizan localmente en su navegador. Podemos usar análisis para comprender los patrones de uso del sitio, pero no se recopila información de identificación personal. Los envíos del formulario de contacto se procesan de forma segura y no se comparten con terceros."
   },
   "blog": {
     "title": "Blog",
-    "description": "Artículos sobre análisis de regresión y estadística",
+    "description": "Artículos sobre análisis de regresión y estadística - Calculadora de Ecuación de Regresión",
     "readMore": "Leer Más",
     "resultsMeta": "Mostrando {start}-{end} de {total} artículos"
   },
   "calculator": {
     "title": "Calculadora de Ecuación de Regresión",
-    "description": "Ingrese sus puntos de datos para calcular la ecuación de regresión",
+    "description": "Ingrese sus puntos de datos para calcular la ecuación de regresión - Calculadora de Ecuación de Regresión",
     "enterData": "Ingrese sus puntos de datos",
     "xLabel": "Valores X",
     "yLabel": "Valores Y",
@@ -117,7 +117,7 @@
   },
   "pearson": {
     "title": "Calculadora de Correlación de Pearson",
-    "description": "Introduzca sus puntos de datos para calcular el coeficiente de correlación de Pearson",
+    "description": "Introduzca sus puntos de datos para calcular el coeficiente de correlación de Pearson - Calculadora de Ecuación de Regresión",
     "enterData": "Introduzca sus puntos de datos",
     "xLabel": "Valores X",
     "yLabel": "Valores Y",
@@ -170,7 +170,7 @@
   },
   "grubbs": {
     "title": "Calculadora de Prueba de Grubbs",
-    "description": "Detecte valores atípicos en su conjunto de datos usando la prueba de Grubbs",
+    "description": "Detecte valores atípicos en su conjunto de datos usando la prueba de Grubbs - Calculadora de Ecuación de Regresión",
     "enterData": "Introduzca sus datos",
     "valueLabel": "Valor",
     "significanceLevel": "Nivel de significancia (α)",
@@ -222,7 +222,7 @@
   },
   "assumptionsChecker": {
     "title": "Verificador de Supuestos de Regresión",
-    "description": "Verifique los cuatro supuestos de regresión lineal para sus datos",
+    "description": "Verifique los cuatro supuestos de regresión lineal para sus datos - Calculadora de Ecuación de Regresión",
     "enterData": "Introduzca sus datos",
     "xLabel": "Valores X",
     "yLabel": "Valores Y",
@@ -277,12 +277,12 @@
   },
   "notFound": {
     "title": "Página No Encontrada",
-    "description": "La página que busca no existe",
+    "description": "La página que busca no existe - Calculadora de Ecuación de Regresión",
     "backHome": "Volver al Inicio"
   },
   "linearCalc": {
     "title": "Calculadora de Regresión Lineal",
-    "description": "Calcule la ecuación de regresión lineal y = mx + b a partir de sus datos",
+    "description": "Calcule la ecuación de regresión lineal y = mx + b a partir de sus datos - Calculadora de Ecuación de Regresión",
     "enterData": "Ingrese sus puntos de datos",
     "xLabel": "Valores X",
     "yLabel": "Valores Y",
@@ -330,7 +330,7 @@
   },
   "quadCalc": {
     "title": "Calculadora de Regresión Cuadrática",
-    "description": "Calcule la ecuación de regresión cuadrática y = ax² + bx + c a partir de sus datos",
+    "description": "Calcule la ecuación de regresión cuadrática y = ax² + bx + c a partir de sus datos - Calculadora de Ecuación de Regresión",
     "enterData": "Ingrese sus puntos de datos",
     "xLabel": "Valores X",
     "yLabel": "Valores Y",
@@ -379,7 +379,7 @@
   },
   "multiCalc": {
     "title": "Calculadora de Regresión Múltiple",
-    "description": "Calcule la ecuación de regresión múltiple a partir de sus datos con dos o más predictores",
+    "description": "Calcule la ecuación de regresión múltiple a partir de sus datos con dos o más predictores - Calculadora de Ecuación de Regresión",
     "enterData": "Ingrese sus puntos de datos",
     "predictors": "Número de predictores",
     "addRow": "Agregar Fila",
@@ -426,18 +426,18 @@
   },
   "sitemap": {
     "title": "Mapa del Sitio",
-    "description": "Explore todas las páginas de la Calculadora de Ecuación de Regresión"
+    "description": "Explore todas las páginas de la Calculadora de Ecuación de Regresión - Calculadora de Ecuación de Regresión"
   },
   "expCalc": {
     "title": "Calculadora de Regresión Exponencial",
-    "description": "Calcule la ecuación de regresión exponencial (y = a · e^(bx))"
+    "description": "Calcule la ecuación de regresión exponencial (y = a · e^(bx)) - Calculadora de Ecuación de Regresión"
   },
   "lsrlCalc": {
     "title": "Calculadora de Recta de Mínimos Cuadrados",
-    "description": "Calcule la recta de regresión por mínimos cuadrados (y = mx + b)"
+    "description": "Calcule la recta de regresión por mínimos cuadrados (y = mx + b) - Calculadora de Ecuación de Regresión"
   },
   "rcCalc": {
     "title": "Calculadora de Curva de Regresión",
-    "description": "Analice relaciones con múltiples tipos de modelos de regresión"
+    "description": "Analice relaciones con múltiples tipos de modelos de regresión - Calculadora de Ecuación de Regresión"
   }
 }

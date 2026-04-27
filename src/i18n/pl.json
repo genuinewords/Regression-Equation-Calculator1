@@ -3,7 +3,7 @@
   "siteDescription": "Darmowy kalkulator równania regresji online. Obliczaj równania regresji liniowej, wielomianowej i wielorakiej natychmiast z rozwiązaniami krok po kroku.",
   "home": {
     "title": "Kalkulator Równania Regresji",
-    "description": "Obliczaj równania regresji natychmiast naszym darmowym narzędziem online",
+    "description": "Obliczaj równania regresji natychmiast naszym darmowym narzędziem online - Kalkulator Równania Regresji",
     "intro": "Wprowadź swoje punkty danych i uzyskaj równanie regresji, nachylenie, wyraz wolny, wartość R-kwadrat oraz obliczenia krok po kroku w kilka sekund.",
     "whatIsTitle": "Czym Jest Równanie Regresji?",
     "whatIsText": "Równanie regresji modeluje związek między zmiennymi, pozwalając przewidywać wyniki na podstawie danych wejściowych. W najprostszej formie — prostej regresji liniowej — równanie ma postać <strong>y = mx + b</strong>, gdzie <strong>m</strong> to nachylenie, a <strong>b</strong> to wyraz wolny osi y. To potężne narzędzie statystyczne jest stosowane w nauce, biznesie i inżynierii do wykrywania trendów, tworzenia prognoz i ilościowego określania związków między zmiennymi.",
@@ -57,7 +57,7 @@
   },
   "about": {
     "title": "O Nas",
-    "description": "Dowiedz się o Kalkulatorze Równania Regresji",
+    "description": "Dowiedz się o Kalkulatorze Równania Regresji - Kalkulator Równania Regresji",
     "content": "Kalkulator Równania Regresji to darmowe narzędzie online zaprojektowane, aby pomóc studentom, badaczom i profesjonalistom w szybkim i dokładnym obliczaniu równań regresji. Nasz kalkulator obsługuje regresję liniową i dostarcza szczegółowe rozwiązania krok po kroku, aby pomóc Ci zrozumieć proces matematyczny stojący za wynikami. Niezależnie od tego, czy studiujesz statystykę, analizujesz dane czy pracujesz nad badaniami, nasze narzędzie czyni analizę regresji dostępną dla każdego.",
     "mission": "Nasza Misja",
     "missionText": "Udokumentować analizę regresji dostępną dla wszystkich — od studentów uczących się statystyki po raz pierwszy po profesjonalistów potrzebujących szybkich, wiarygodnych wyników. Wierzymy, że potężne narzędzia statystyczne powinny być darmowe, prywatne i łatwe w użyciu.",
@@ -68,7 +68,7 @@
   },
   "contact": {
     "title": "Skontaktuj się z nami",
-    "description": "Skontaktuj się z zespołem Kalkulatora Równania Regresji",
+    "description": "Skontaktuj się z zespołem Kalkulatora Równania Regresji - Kalkulator Równania Regresji",
     "helperText": "Masz pytanie lub opinię? Chętnie Cię wysłuchamy. Wypełnij poniższy formularz, a odezwiemy się tak szybko, jak to możliwe.",
     "nameLabel": "Twoje Imię",
     "emailLabel": "Twój Email",
@@ -83,23 +83,23 @@
   },
   "terms": {
     "title": "Warunki Użytkowania",
-    "description": "Warunki korzystania z Kalkulatora Równania Regresji",
+    "description": "Warunki korzystania z Kalkulatora Równania Regresji - Kalkulator Równania Regresji",
     "content": "Uzyskując dostęp i korzystając ze strony Kalkulatora Równania Regresji, zgadzasz się na przestrzeganie tych warunków. Nasze narzędzie jest dostarczane do celów edukacyjnych i analitycznych. Wyniki powinny być weryfikowane dla krytycznych zastosowań. Zastrzegamy sobie prawo do modyfikacji tych warunków w dowolnym momencie. Korzystanie z kalkulatora jest bezpłatne i nie gwarantujemy dokładności wyników dla celów profesjonalnych lub komercyjnych."
   },
   "privacy": {
     "title": "Polityka Prywatności",
-    "description": "Jak przetwarzamy Twoje dane w Kalkulatorze Równania Regresji",
+    "description": "Jak przetwarzamy Twoje dane w Kalkulatorze Równania Regresji - Kalkulator Równania Regresji",
     "content": "Cenimy Twoją prywatność. Kalkulator Równania Regresji nie gromadzi, nie przechowuje ani nie udostępnia żadnych danych osobowych wprowadzonych do kalkulatora. Wszystkie obliczenia są wykonywane lokalnie w Twojej przeglądarce. Możemy używać analityki do zrozumienia wzorców korzystania z witryny, ale żadne dane pozwalające na identyfikację osoby nie są gromadzone. Zgłoszenia z formularza kontaktowego są przetwarzane bezpiecznie i nie są udostępniane stronom trzecim."
   },
   "blog": {
     "title": "Blog",
-    "description": "Artykuły o analizie regresji i statystyce",
+    "description": "Artykuły o analizie regresji i statystyce - Kalkulator Równania Regresji",
     "readMore": "Czytaj Dalej",
     "resultsMeta": "Wyświetlanie {start}-{end} z {total} artykułów"
   },
   "calculator": {
     "title": "Kalkulator Równania Regresji",
-    "description": "Wprowadź swoje punkty danych, aby obliczyć równanie regresji",
+    "description": "Wprowadź swoje punkty danych, aby obliczyć równanie regresji - Kalkulator Równania Regresji",
     "enterData": "Wprowadzenie Danych Regresji",
     "enterDataHint": "Wprowadź swoje punkty danych poniżej. Aby uzyskać dokładną analizę regresji, uwzględnij co najmniej 10 punktów danych pokrywających rozsądny zakres.",
     "xLabel": "Wartości X",
@@ -146,7 +146,7 @@
   },
   "pearson": {
     "title": "Kalkulator Korelacji Pearsona",
-    "description": "Wprowadź dane, aby obliczyć współczynnik korelacji Pearsona",
+    "description": "Wprowadź dane, aby obliczyć współczynnik korelacji Pearsona - Kalkulator Równania Regresji",
     "enterData": "Wprowadź dane",
     "xLabel": "Wartości X",
     "yLabel": "Wartości Y",
@@ -199,7 +199,7 @@
   },
   "grubbs": {
     "title": "Kalkulator testu Grubbsa",
-    "description": "Wykryj wartości odstające za pomocą testu Grubbsa",
+    "description": "Wykryj wartości odstające za pomocą testu Grubbsa - Kalkulator Równania Regresji",
     "enterData": "Wprowadź dane",
     "valueLabel": "Wartość",
     "significanceLevel": "Poziom istotności (α)",
@@ -251,7 +251,7 @@
   },
   "assumptionsChecker": {
     "title": "Sprawdzanie założeń regresji",
-    "description": "Sprawdź wszystkie cztery założenia regresji liniowej dla swoich danych",
+    "description": "Sprawdź wszystkie cztery założenia regresji liniowej dla swoich danych - Kalkulator Równania Regresji",
     "enterData": "Wprowadź dane",
     "xLabel": "Wartości X",
     "yLabel": "Wartości Y",
@@ -306,7 +306,7 @@
   },
   "linearCalc": {
     "title": "Kalkulator Regresji Liniowej",
-    "description": "Oblicz równanie regresji liniowej y = mx + b ze swoich danych",
+    "description": "Oblicz równanie regresji liniowej y = mx + b ze swoich danych - Kalkulator Równania Regresji",
     "enterData": "Wprowadź swoje punkty danych",
     "xLabel": "Wartości X",
     "yLabel": "Wartości Y",
@@ -354,7 +354,7 @@
   },
   "quadCalc": {
     "title": "Kalkulator Regresji Kwadratowej",
-    "description": "Oblicz równanie regresji kwadratowej y = ax² + bx + c ze swoich danych",
+    "description": "Oblicz równanie regresji kwadratowej y = ax² + bx + c ze swoich danych - Kalkulator Równania Regresji",
     "enterData": "Wprowadź swoje punkty danych",
     "xLabel": "Wartości X",
     "yLabel": "Wartości Y",
@@ -403,7 +403,7 @@
   },
   "multiCalc": {
     "title": "Kalkulator Regresji Wielorakiej",
-    "description": "Oblicz równanie regresji wielorakiej ze swoich danych z dwoma lub więcej predyktorami",
+    "description": "Oblicz równanie regresji wielorakiej ze swoich danych z dwoma lub więcej predyktorami - Kalkulator Równania Regresji",
     "enterData": "Wprowadź swoje punkty danych",
     "predictors": "Liczba Predyktorów",
     "addRow": "Dodaj Wiersz",
@@ -450,23 +450,23 @@
   },
   "notFound": {
     "title": "Strona Nie Znaleziona",
-    "description": "Strona, której szukasz, nie istnieje",
+    "description": "Strona, której szukasz, nie istnieje - Kalkulator Równania Regresji",
     "backHome": "Powrót do Strony Głównej"
   },
   "sitemap": {
     "title": "Mapa Strony",
-    "description": "Przeglądaj wszystkie strony Kalkulatora Równania Regresji"
+    "description": "Przeglądaj wszystkie strony Kalkulatora Równania Regresji - Kalkulator Równania Regresji"
   },
   "expCalc": {
     "title": "Kalkulator Regresji Wykładniczej",
-    "description": "Oblicz równanie regresji wykładniczej (y = a · e^(bx))"
+    "description": "Oblicz równanie regresji wykładniczej (y = a · e^(bx)) - Kalkulator Równania Regresji"
   },
   "lsrlCalc": {
     "title": "Kalkulator Regresji MNK",
-    "description": "Oblicz linię regresji metodą najmniejszych kwadratów (y = mx + b)"
+    "description": "Oblicz linię regresji metodą najmniejszych kwadratów (y = mx + b) - Kalkulator Równania Regresji"
   },
   "rcCalc": {
     "title": "Kalkulator Krzywej Regresji",
-    "description": "Analizuj zależności wieloma typami modeli regresji"
+    "description": "Analizuj zależności wieloma typami modeli regresji - Kalkulator Równania Regresji"
   }
 }

@@ -3,7 +3,7 @@
   "siteDescription": "Ücretsiz çevrimiçi regresyon denklemi hesaplayıcısı. Adım adım çözümlerle doğrusal, polinom ve çoklu regresyon denklemlerini anında hesaplayın.",
   "home": {
     "title": "Regresyon Denklemi Hesaplayıcısı",
-    "description": "Ücretsiz çevrimiçi aracımızla regresyon denklemlerini anında hesaplayın",
+    "description": "Ücretsiz çevrimiçi aracımızla regresyon denklemlerini anında hesaplayın - Regresyon Denklemi Hesaplayıcısı",
     "intro": "Veri noktalarınızı girin ve saniyeler içinde regresyon denklemini, eğimi, kesişimi, R-kare değerini ve adım adım hesaplamaları elde edin.",
     "whatIsTitle": "Regresyon Denklemi Nedir?",
     "whatIsText": "Regresyon denklemi, değişkenler arasındaki ilişkiyi modelleyerek giriş verilerine dayalı sonuçları tahmin etmenizi sağlar. En basit haliyle — basit doğrusal regresyon — denklem <strong>y = mx + b</strong> şeklindedir; burada <strong>m</strong> eğim ve <strong>b</strong> y-kesişim noktasıdır. Bu güçlü istatistiksel araç, bilim, iş dünyası ve mühendislikte eğilimleri ortaya çıkarmak, tahminler yapmak ve değişkenler arasındaki ilişkileri nicel olarak belirlemek için kullanılır.",
@@ -57,7 +57,7 @@
   },
   "about": {
     "title": "Hakkımızda",
-    "description": "Regresyon Denklemi Hesaplayıcısı hakkında bilgi edinin",
+    "description": "Regresyon Denklemi Hesaplayıcısı hakkında bilgi edinin - Regresyon Denklemi Hesaplayıcısı",
     "content": "Regresyon Denklemi Hesaplayıcısı, öğrencilerin, araştırmacıların ve profesyonellerin regresyon denklemlerini hızlı ve doğru bir şekilde hesaplamasına yardımcı olmak için tasarlanmış ücretsiz bir çevrimiçi araçtır. Hesaplayıcımız doğrusal regresyonu destekler ve sonuçların arkasındaki matematiksel süreci anlamanıza yardımcı olmak için ayrıntılı adım adım çözümler sunar. İster istatistik çalışıyor olun, ister veri analiz ediyor olun, ister araştırma yapıyor olun, aracımız regresyon analizini herkes için erişilebilir kılar.",
     "mission": "Misyonumuz",
     "missionText": "Regresyon analizini herkes için erişilebilir kılmak — istatistiği ilk kez öğrenen öğrencilerden hızlı ve güvenilir sonuçlara ihtiyaç duyan profesyonellere kadar. Güçlü istatistiksel araçların ücretsiz, gizli ve kullanımı kolay olması gerektiğine inanıyoruz.",
@@ -68,7 +68,7 @@
   },
   "contact": {
     "title": "İletişim",
-    "description": "Regresyon Denklemi Hesaplayıcısı ekibiyle iletişime geçin",
+    "description": "Regresyon Denklemi Hesaplayıcısı ekibiyle iletişime geçin - Regresyon Denklemi Hesaplayıcısı",
     "helperText": "Sorunuz veya geri bildiriminiz mi var? Sizden haber almaktan mutluluk duyarız. Aşağıdaki formu doldurun, en kısa sürede size dönüş yapacağız.",
     "nameLabel": "Adınız",
     "emailLabel": "E-postanız",
@@ -83,23 +83,23 @@
   },
   "terms": {
     "title": "Kullanım Koşulları",
-    "description": "Regresyon Denklemi Hesaplayıcısı'nı kullanım koşulları ve şartları",
+    "description": "Regresyon Denklemi Hesaplayıcısı'nı kullanım koşulları ve şartları - Regresyon Denklemi Hesaplayıcısı",
     "content": "Regresyon Denklemi Hesaplayıcısı web sitesine erişerek ve kullanarak bu koşullara bağlı kalmayı kabul etmiş olursunuz. Aracımız eğitim ve analiz amaçlı sunulmaktadır. Kritik uygulamalar için sonuçlar doğrulanmalıdır. Bu koşulları herhangi bir zamanda değiştirme hakkını saklı tutarız. Hesaplayıcının kullanımı ücretsizdir ve profesyonel veya ticari amaçlar için sonuçların doğruluğunu garanti etmiyoruz."
   },
   "privacy": {
     "title": "Gizlilik Politikası",
-    "description": "Regresyon Denklemi Hesaplayıcısı'nda verilerinizi nasıl işliyoruz",
+    "description": "Regresyon Denklemi Hesaplayıcısı'nda verilerinizi nasıl işliyoruz - Regresyon Denklemi Hesaplayıcısı",
     "content": "Gizliliğinize değer veriyoruz. Regresyon Denklemi Hesaplayıcısı, hesaplayıcıya girilen hiçbir kişisel veriyi toplamaz, depolamaz veya paylaşmaz. Tüm hesaplamalar tarayıcınızda yerel olarak gerçekleştirilir. Site kullanım kalıplarını anlamak için analiz kullanabiliriz, ancak hiçbir kişisel tanımlayıcı bilgi toplanmaz. İletişim formu gönderimleri güvenli bir şekilde işlenir ve üçüncü taraflarla paylaşılmaz."
   },
   "blog": {
     "title": "Blog",
-    "description": "Regresyon analizi ve istatistik hakkında makaleler",
+    "description": "Regresyon analizi ve istatistik hakkında makaleler - Regresyon Denklemi Hesaplayıcısı",
     "readMore": "Devamını Oku",
     "resultsMeta": "Toplam {total} makaleden {start}-{end} arası gösteriliyor"
   },
   "calculator": {
     "title": "Regresyon Denklemi Hesaplayıcısı",
-    "description": "Regresyon denklemini hesaplamak için veri noktalarınızı girin",
+    "description": "Regresyon denklemini hesaplamak için veri noktalarınızı girin - Regresyon Denklemi Hesaplayıcısı",
     "enterData": "Regresyon Veri Girişi",
     "enterDataHint": "Veri noktalarınızı aşağıya girin. Doğru regresyon analizi için makul bir aralığı kapsayan en az 10 veri noktası ekleyin.",
     "xLabel": "X Değerleri",
@@ -146,7 +146,7 @@
   },
   "pearson": {
     "title": "Pearson Korelasyon Hesaplayıcı",
-    "description": "Pearson korelasyon katsayısını hesaplamak için veri noktalarınızı girin",
+    "description": "Pearson korelasyon katsayısını hesaplamak için veri noktalarınızı girin - Regresyon Denklemi Hesaplayıcısı",
     "enterData": "Veri noktalarınızı girin",
     "xLabel": "X Değerleri",
     "yLabel": "Y Değerleri",
@@ -199,7 +199,7 @@
   },
   "grubbs": {
     "title": "Grubbs Testi Hesaplayıcı",
-    "description": "Grubbs testi ile veri setinizdeki aykırı değerleri tespit edin",
+    "description": "Grubbs testi ile veri setinizdeki aykırı değerleri tespit edin - Regresyon Denklemi Hesaplayıcısı",
     "enterData": "Verilerinizi girin",
     "valueLabel": "Değer",
     "significanceLevel": "Anlamlılık düzeyi (α)",
@@ -251,7 +251,7 @@
   },
   "assumptionsChecker": {
     "title": "Regresyon varsayım kontrolü",
-    "description": "Verileriniz için dört doğrusal regresyon varsayımını kontrol edin",
+    "description": "Verileriniz için dört doğrusal regresyon varsayımını kontrol edin - Regresyon Denklemi Hesaplayıcısı",
     "enterData": "Verilerinizi girin",
     "xLabel": "X Değerleri",
     "yLabel": "Y Değerleri",
@@ -306,12 +306,12 @@
   },
   "notFound": {
     "title": "Sayfa Bulunamadı",
-    "description": "Aradığınız sayfa mevcut değil",
+    "description": "Aradığınız sayfa mevcut değil - Regresyon Denklemi Hesaplayıcısı",
     "backHome": "Ana Sayfaya Dön"
   },
   "linearCalc": {
     "title": "Doğrusal Regresyon Hesaplayıcı",
-    "description": "Verilerinizden doğrusal regresyon denklemini y = mx + b hesaplayın",
+    "description": "Verilerinizden doğrusal regresyon denklemini y = mx + b hesaplayın - Regresyon Denklemi Hesaplayıcısı",
     "enterData": "Veri noktalarınızı girin",
     "xLabel": "X Değerleri",
     "yLabel": "Y Değerleri",
@@ -359,7 +359,7 @@
   },
   "quadCalc": {
     "title": "Karesel Regresyon Hesaplayıcı",
-    "description": "Verilerinizden karesel regresyon denklemini y = ax² + bx + c hesaplayın",
+    "description": "Verilerinizden karesel regresyon denklemini y = ax² + bx + c hesaplayın - Regresyon Denklemi Hesaplayıcısı",
     "enterData": "Veri noktalarınızı girin",
     "xLabel": "X Değerleri",
     "yLabel": "Y Değerleri",
@@ -408,7 +408,7 @@
   },
   "multiCalc": {
     "title": "Çoklu Regresyon Hesaplayıcı",
-    "description": "İki veya daha fazla tahmin edici ile verilerinizden çoklu regresyon denklemini hesaplayın",
+    "description": "İki veya daha fazla tahmin edici ile verilerinizden çoklu regresyon denklemini hesaplayın - Regresyon Denklemi Hesaplayıcısı",
     "enterData": "Veri noktalarınızı girin",
     "predictors": "Tahmin Edici Sayısı",
     "addRow": "Satır Ekle",
@@ -455,18 +455,18 @@
   },
   "sitemap": {
     "title": "Site Haritası",
-    "description": "Regresyon Denklemi Hesaplayıcısı'ndaki tüm sayfaları keşfedin"
+    "description": "Regresyon Denklemi Hesaplayıcısı'ndaki tüm sayfaları keşfedin - Regresyon Denklemi Hesaplayıcısı"
   },
   "expCalc": {
     "title": "Üstel Regresyon Hesaplayıcı",
-    "description": "Üstel regresyon denklemini (y = a · e^(bx)) hesaplayın"
+    "description": "Üstel regresyon denklemini (y = a · e^(bx)) hesaplayın - Regresyon Denklemi Hesaplayıcısı"
   },
   "lsrlCalc": {
     "title": "En Küçük Kareler Regresyon Hesaplayıcı",
-    "description": "En küçük kareler regresyon doğrusunu (y = mx + b) hesaplayın"
+    "description": "En küçük kareler regresyon doğrusunu (y = mx + b) hesaplayın - Regresyon Denklemi Hesaplayıcısı"
   },
   "rcCalc": {
     "title": "Regresyon Eğrisi Hesaplayıcı",
-    "description": "Birden fazla regresyon modeli türüyle ilişkileri analiz edin"
+    "description": "Birden fazla regresyon modeli türüyle ilişkileri analiz edin - Regresyon Denklemi Hesaplayıcısı"
   }
 }

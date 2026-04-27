@@ -3,7 +3,7 @@
   "siteDescription": "Gratis online regressionsekvationskalkylator. Beräkna linjära, polynomella och multipla regressionsekvationer omedelbart med steg-för-steg-lösningar.",
   "home": {
     "title": "Regressionsekvationskalkylator",
-    "description": "Beräkna regressionsekvationer omedelbart med vårt gratis onlineverktyg",
+    "description": "Beräkna regressionsekvationer omedelbart med vårt gratis onlineverktyg - Regressionsekvationskalkylator",
     "intro": "Ange dina datapunkter och få regressionsekvationen, lutningen, skärningspunkten, R-kvadrat-värdet och steg-för-steg-beräkningar på några sekunder.",
     "whatIsTitle": "Vad är en regressionsekvation?",
     "whatIsText": "En regressionsekvation modellerar sambandet mellan variabler, vilket gör att du kan förutsäga resultat baserat på indata. I sin enklaste form — enkel linjär regression — är ekvationen <strong>y = mx + b</strong>, där <strong>m</strong> är lutningen och <strong>b</strong> är y-skärningspunkten. Detta kraftfulla statistiska verktyg används inom vetenskap, affärsvärlden och ingenjörskonst för att upptäcka trender, göra prognoser och kvantifiera samband mellan variabler.",
@@ -57,7 +57,7 @@
   },
   "about": {
     "title": "Om Oss",
-    "description": "Lär dig om Regressionsekvationskalkylatorn",
+    "description": "Lär dig om Regressionsekvationskalkylatorn - Regressionsekvationskalkylator",
     "content": "Regressionsekvationskalkylatorn är ett gratis onlineverktyg utformat för att hjälpa studenter, forskare och professionella att beräkna regressionsekvationer snabbt och korrekt. Vår kalkylator stöder linjär regression och ger detaljerade steg-för-steg-lösningar för att hjälpa dig förstå den matematiska processen bakom resultaten. Oavsett om du studerar statistik, analyserar data eller arbetar med forskning, gör vårt verktyg regressionsanalys tillgänglig för alla.",
     "mission": "Vårt Uppdrag",
     "missionText": "Att göra regressionsanalys tillgänglig för alla — från studenter som lär sig statistik för första gången till professionella som behöver snabba, pålitliga resultat. Vi tror att kraftfulla statistiska verktyg ska vara gratis, privata och enkla att använda.",
@@ -68,7 +68,7 @@
   },
   "contact": {
     "title": "Kontakta Oss",
-    "description": "Kommunicera med teamet bakom Regressionsekvationskalkylatorn",
+    "description": "Kommunicera med teamet bakom Regressionsekvationskalkylatorn - Regressionsekvationskalkylator",
     "helperText": "Har du en fråga eller feedback? Vi vill gärna höra från dig. Fyll i formuläret nedan så återkommer vi så snart som möjligt.",
     "nameLabel": "Ditt Namn",
     "emailLabel": "Din E-post",
@@ -83,23 +83,23 @@
   },
   "terms": {
     "title": "Användarvillkor",
-    "description": "Villkor och bestämmelser för användning av Regressionsekvationskalkylatorn",
+    "description": "Villkor och bestämmelser för användning av Regressionsekvationskalkylatorn - Regressionsekvationskalkylator",
     "content": "Genom att komma åt och använda Regressionsekvationskalkylatorns webbplats samtycker du till att vara bunden av dessa villkor. Vårt verktyg tillhandahålls för utbildnings- och analyssyften. Resultat bör verifieras för kritiska tillämpningar. Vi förbehåller oss rätten att ändra dessa villkor när som helst. Användningen av kalkylatorn är gratis och vi garanterar inte resultats noggrannhet för professionella eller kommersiella syften."
   },
   "privacy": {
     "title": "Integritetspolicy",
-    "description": "Hur vi hanterar dina data i Regressionsekvationskalkylatorn",
+    "description": "Hur vi hanterar dina data i Regressionsekvationskalkylatorn - Regressionsekvationskalkylator",
     "content": "Vi värdesätter din integritet. Regressionsekvationskalkylatorn samlar inte in, lagrar eller delar några personuppgifter som anges i kalkylatorn. Alla beräkningar utförs lokalt i din webbläsare. Vi kan använda analys för att förstå webbplatsens användningsmönster, men ingen personligt identifierbar information samlas in. Kontaktformulärinskick hanteras säkert och delas inte med tredje part."
   },
   "blog": {
     "title": "Blogg",
-    "description": "Artiklar om regressionsanalys och statistik",
+    "description": "Artiklar om regressionsanalys och statistik - Regressionsekvationskalkylator",
     "readMore": "Läs Mer",
     "resultsMeta": "Visar {start}-{end} av {total} artiklar"
   },
   "calculator": {
     "title": "Regressionsekvationskalkylator",
-    "description": "Ange dina datapunkter för att beräkna regressionsekvationen",
+    "description": "Ange dina datapunkter för att beräkna regressionsekvationen - Regressionsekvationskalkylator",
     "enterData": "Regressionsdatainmatning",
     "enterDataHint": "Ange dina datapunkter nedan. För en noggrann regressionsanalys, inkludera minst 10 datapunkter som täcker ett rimligt område.",
     "xLabel": "X-värden",
@@ -146,7 +146,7 @@
   },
   "pearson": {
     "title": "Pearson-korrelationsberäkning",
-    "description": "Ange dina datapunkter för att beräkna Pearsons korrelationskoefficient",
+    "description": "Ange dina datapunkter för att beräkna Pearsons korrelationskoefficient - Regressionsekvationskalkylator",
     "enterData": "Ange dina datapunkter",
     "xLabel": "X-värden",
     "yLabel": "Y-värden",
@@ -199,7 +199,7 @@
   },
   "grubbs": {
     "title": "Grubbs test-beräkning",
-    "description": "Upptäck avvikare i ditt dataset med Grubbs test",
+    "description": "Upptäck avvikare i ditt dataset med Grubbs test - Regressionsekvationskalkylator",
     "enterData": "Ange dina datapunkter",
     "valueLabel": "Värde",
     "significanceLevel": "Signifikansnivå (α)",
@@ -251,7 +251,7 @@
   },
   "assumptionsChecker": {
     "title": "Regressionsantagandekontroll",
-    "description": "Kontrollera alla fyra linjära regressionsantaganden för dina data",
+    "description": "Kontrollera alla fyra linjära regressionsantaganden för dina data - Regressionsekvationskalkylator",
     "enterData": "Ange dina datapunkter",
     "xLabel": "X-värden",
     "yLabel": "Y-värden",
@@ -306,12 +306,12 @@
   },
   "notFound": {
     "title": "Sidan Hittades Inte",
-    "description": "Sidan du letar efter existerar inte",
+    "description": "Sidan du letar efter existerar inte - Regressionsekvationskalkylator",
     "backHome": "Tillbaka till Startsidan"
   },
   "linearCalc": {
     "title": "Linjär Regressionskalkylator",
-    "description": "Beräkna den linjära regressionsekvationen y = mx + b från dina data",
+    "description": "Beräkna den linjära regressionsekvationen y = mx + b från dina data - Regressionsekvationskalkylator",
     "enterData": "Ange dina datapunkter",
     "xLabel": "X-värden",
     "yLabel": "Y-värden",
@@ -359,7 +359,7 @@
   },
   "quadCalc": {
     "title": "Kvadratisk Regressionskalkylator",
-    "description": "Beräkna den kvadratiska regressionsekvationen y = ax² + bx + c från dina data",
+    "description": "Beräkna den kvadratiska regressionsekvationen y = ax² + bx + c från dina data - Regressionsekvationskalkylator",
     "enterData": "Ange dina datapunkter",
     "xLabel": "X-värden",
     "yLabel": "Y-värden",
@@ -408,7 +408,7 @@
   },
   "multiCalc": {
     "title": "Multipel Regressionskalkylator",
-    "description": "Beräkna den multipla regressionsekvationen från dina data med två eller fler prediktorer",
+    "description": "Beräkna den multipla regressionsekvationen från dina data med två eller fler prediktorer - Regressionsekvationskalkylator",
     "enterData": "Ange dina datapunkter",
     "predictors": "Antal prediktorer",
     "addRow": "Lägg till Rad",
@@ -455,18 +455,18 @@
   },
   "sitemap": {
     "title": "Webbplatskarta",
-    "description": "Utforska alla sidor på Regressionsekvationskalkylatorn"
+    "description": "Utforska alla sidor på Regressionsekvationskalkylatorn - Regressionsekvationskalkylator"
   },
   "expCalc": {
     "title": "Exponentiell Regressionskalkylator",
-    "description": "Beräkna exponentiell regressionsekvation (y = a · e^(bx))"
+    "description": "Beräkna exponentiell regressionsekvation (y = a · e^(bx)) - Regressionsekvationskalkylator"
   },
   "lsrlCalc": {
     "title": "Minsta-Kvadrat-Regressionskalkylator",
-    "description": "Beräkna minsta-kvadrat-regressionslinjen (y = mx + b)"
+    "description": "Beräkna minsta-kvadrat-regressionslinjen (y = mx + b) - Regressionsekvationskalkylator"
   },
   "rcCalc": {
     "title": "Regressionskurvkalkylator",
-    "description": "Analysera relationer med flera regressionstyper"
+    "description": "Analysera relationer med flera regressionstyper - Regressionsekvationskalkylator"
   }
 }

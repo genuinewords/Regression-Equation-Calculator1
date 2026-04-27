@@ -1,9 +1,9 @@
 {
   "siteTitle": "Calcolatore di Equazione di Regressione",
-  "siteDescription": "Calcolatore gratuito online di equazione di regressione. Calcola istantaneamente equazioni di regressione lineare, polinomiale e multipla con soluzioni passo dopo passo.",
+  "siteDescription": "Calcolatore gratuito online di equazione di regressione. Calcola istantaneamente equazioni di regressione lineare, polinomiale e multipla con soluzioni...",
   "home": {
     "title": "Calcolatore di Equazione di Regressione",
-    "description": "Calcola istantaneamente le equazioni di regressione con il nostro strumento gratuito online",
+    "description": "Calcola istantaneamente le equazioni di regressione con il nostro strumento gratuito online - Calcolatore di Equazione di Regressione",
     "intro": "Inserisci i tuoi punti dati e ottieni l'equazione di regressione, pendenza, intercetta, valore R-quadrato e calcoli passo dopo passo in pochi secondi.",
     "whatIsTitle": "Cos'è un'equazione di regressione?",
     "whatIsText": "Un'equazione di regressione modella la relazione tra variabili, permettendoti di prevedere risultati basandoti sui dati di input. Nella sua forma più semplice — regressione lineare semplice — l'equazione è <strong>y = mx + b</strong>, dove <strong>m</strong> è la pendenza e <strong>b</strong> è l'intercetta y. Questo potente strumento statistico è usato in scienza, economia e ingegneria per scoprire tendenze, fare previsioni e quantificare le relazioni tra variabili.",
@@ -57,7 +57,7 @@
   },
   "about": {
     "title": "Chi Siamo",
-    "description": "Scopri il Calcolatore di Equazione di Regressione",
+    "description": "Scopri il Calcolatore di Equazione di Regressione - Calcolatore di Equazione di Regressione",
     "content": "Il Calcolatore di Equazione di Regressione è uno strumento gratuito online progettato per aiutare studenti, ricercatori e professionisti a calcolare equazioni di regressione in modo rapido e accurato. Il nostro calcolatore supporta la regressione lineare e fornisce soluzioni dettagliate passo dopo passo per aiutarti a comprendere il processo matematico alla base dei risultati. Che tu stia studiando statistica, analizzando dati o lavorando alla ricerca, il nostro strumento rende l'analisi di regressione accessibile a tutti.",
     "mission": "La Nostra Missione",
     "missionText": "Rendere l'analisi di regressione accessibile a tutti — dagli studenti che imparano la statistica per la prima volta ai professionisti che hanno bisogno di risultati rapidi e affidabili. Crediamo che strumenti statistici potenti dovrebbero essere gratuiti, privati e facili da usare.",
@@ -68,7 +68,7 @@
   },
   "contact": {
     "title": "Contattaci",
-    "description": "Mettiti in contatto con il team del Calcolatore di Equazione di Regressione",
+    "description": "Mettiti in contatto con il team del Calcolatore di Equazione di Regressione - Calcolatore di Equazione di Regressione",
     "helperText": "Hai una domanda o un feedback? Ci piacerebbe sentirti. Compila il modulo sottostante e ti risponderemo il prima possibile.",
     "nameLabel": "Il Tuo Nome",
     "emailLabel": "La Tua Email",
@@ -83,23 +83,23 @@
   },
   "terms": {
     "title": "Termini di Servizio",
-    "description": "Termini e condizioni per l'utilizzo del Calcolatore di Equazione di Regressione",
+    "description": "Termini e condizioni per l'utilizzo del Calcolatore di Equazione di Regressione - Calcolatore di Equazione di Regressione",
     "content": "Accedendo e utilizzando il sito web del Calcolatore di Equazione di Regressione, accetti di essere vincolato a questi termini. Il nostro strumento è fornito a scopi educativi e analitici. I risultati dovrebbero essere verificati per applicazioni critiche. Ci riserviamo il diritto di modificare questi termini in qualsiasi momento. L'uso del calcolatore è gratuito e non garantiamo l'accuratezza dei risultati per scopi professionali o commerciali."
   },
   "privacy": {
     "title": "Informativa sulla Privacy",
-    "description": "Come gestiamo i tuoi dati nel Calcolatore di Equazione di Regressione",
+    "description": "Come gestiamo i tuoi dati nel Calcolatore di Equazione di Regressione - Calcolatore di Equazione di Regressione",
     "content": "Apprezziamo la tua privacy. Il Calcolatore di Equazione di Regressione non raccoglie, memorizza o condivide alcun dato personale inserito nel calcolatore. Tutti i calcoli vengono eseguiti localmente nel tuo browser. Potremmo utilizzare analisi per comprendere i modelli di utilizzo del sito, ma nessuna informazione di identificazione personale viene raccolta. Gli invii dei moduli di contatto vengono elaborati in modo sicuro e non vengono condivisi con terze parti."
   },
   "blog": {
     "title": "Blog",
-    "description": "Articoli sull'analisi di regressione e la statistica",
+    "description": "Articoli sull'analisi di regressione e la statistica - Calcolatore di Equazione di Regressione",
     "readMore": "Leggi di Più",
     "resultsMeta": "Visualizzazione {start}-{end} di {total} articoli"
   },
   "calculator": {
     "title": "Calcolatore di Equazione di Regressione",
-    "description": "Inserisci i tuoi punti dati per calcolare l'equazione di regressione",
+    "description": "Inserisci i tuoi punti dati per calcolare l'equazione di regressione - Calcolatore di Equazione di Regressione",
     "enterData": "Inserimento Dati di Regressione",
     "xLabel": "Valori X",
     "yLabel": "Valori Y",
@@ -146,7 +146,7 @@
   },
   "pearson": {
     "title": "Calcolatore di Correlazione di Pearson",
-    "description": "Inserisci i tuoi dati per calcolare il coefficiente di correlazione di Pearson",
+    "description": "Inserisci i tuoi dati per calcolare il coefficiente di correlazione di Pearson - Calcolatore di Equazione di Regressione",
     "enterData": "Inserisci i dati",
     "xLabel": "Valori X",
     "yLabel": "Valori Y",
@@ -199,7 +199,7 @@
   },
   "grubbs": {
     "title": "Calcolatore del Test di Grubbs",
-    "description": "Rileva outlier nel tuo dataset usando il test di Grubbs",
+    "description": "Rileva outlier nel tuo dataset usando il test di Grubbs - Calcolatore di Equazione di Regressione",
     "enterData": "Inserisci i dati",
     "valueLabel": "Valore",
     "significanceLevel": "Livello di significatività (α)",
@@ -251,7 +251,7 @@
   },
   "assumptionsChecker": {
     "title": "Verifica assunzioni di regressione",
-    "description": "Verifica le quattro assunzioni della regressione lineare per i tuoi dati",
+    "description": "Verifica le quattro assunzioni della regressione lineare per i tuoi dati - Calcolatore di Equazione di Regressione",
     "enterData": "Inserisci i tuoi dati",
     "xLabel": "Valori X",
     "yLabel": "Valori Y",
@@ -306,12 +306,12 @@
   },
   "notFound": {
     "title": "Pagina Non Trovata",
-    "description": "La pagina che stai cercando non esiste",
+    "description": "La pagina che stai cercando non esiste - Calcolatore di Equazione di Regressione",
     "backHome": "Torna alla Home"
   },
   "linearCalc": {
     "title": "Calcolatore dei Minimi Quadrati",
-    "description": "Calcola l'equazione di regressione lineare y = mx + b dai tuoi dati",
+    "description": "Calcola l'equazione di regressione lineare y = mx + b dai tuoi dati - Calcolatore di Equazione di Regressione",
     "enterData": "Inserisci i tuoi punti dati",
     "xLabel": "Valori X",
     "yLabel": "Valori Y",
@@ -359,7 +359,7 @@
   },
   "quadCalc": {
     "title": "Calcolatore di Regressione Quadratica",
-    "description": "Calcola l'equazione di regressione quadratica y = ax² + bx + c dai tuoi dati",
+    "description": "Calcola l'equazione di regressione quadratica y = ax² + bx + c dai tuoi dati - Calcolatore di Equazione di Regressione",
     "enterData": "Inserisci i tuoi punti dati",
     "xLabel": "Valori X",
     "yLabel": "Valori Y",
@@ -408,7 +408,7 @@
   },
   "multiCalc": {
     "title": "Calcolatore di Regressione Multipla",
-    "description": "Calcola l'equazione di regressione multipla dai tuoi dati con due o più predittori",
+    "description": "Calcola l'equazione di regressione multipla dai tuoi dati con due o più predittori - Calcolatore di Equazione di Regressione",
     "enterData": "Inserisci i tuoi punti dati",
     "predictors": "Numero di Predittori",
     "addRow": "Aggiungi Riga",
@@ -455,18 +455,18 @@
   },
   "sitemap": {
     "title": "Mappa del Sito",
-    "description": "Esplora tutte le pagine del Calcolatore di Equazione di Regressione"
+    "description": "Esplora tutte le pagine del Calcolatore di Equazione di Regressione - Calcolatore di Equazione di Regressione"
   },
   "expCalc": {
     "title": "Calcolatore di Regressione Esponenziale",
-    "description": "Calcola l'equazione di regressione esponenziale (y = a · e^(bx))"
+    "description": "Calcola l'equazione di regressione esponenziale (y = a · e^(bx)) - Calcolatore di Equazione di Regressione"
   },
   "lsrlCalc": {
     "title": "Calcolatore della Retta dei Minimi Quadrati",
-    "description": "Calcola la retta di regressione dei minimi quadrati (y = mx + b)"
+    "description": "Calcola la retta di regressione dei minimi quadrati (y = mx + b) - Calcolatore di Equazione di Regressione"
   },
   "rcCalc": {
     "title": "Calcolatore di Curva di Regressione",
-    "description": "Analizza le relazioni con più tipi di modelli di regressione"
+    "description": "Analizza le relazioni con più tipi di modelli di regressione - Calcolatore di Equazione di Regressione"
   }
 }
