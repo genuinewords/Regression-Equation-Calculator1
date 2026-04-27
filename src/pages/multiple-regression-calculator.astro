@@ -1,6 +1,7 @@
 ---
 import BaseLayout from 'theme/layouts/BaseLayout.astro';
 import MultipleRegressionCalculator from 'theme/components/MultipleRegressionCalculator.astro';
+import ToolInfoBox from 'theme/components/ToolInfoBox.astro';
 import { mergeTranslations } from 'theme/i18n/utils';
 import siteConfig from 'src/data/site-config.json';
 
@@ -11,7 +12,6 @@ const mc = (translations as any).multiCalc;
 const canonicalUrl = new URL('/multiple-regression-calculator/', siteConfig.siteUrl).href;
 
 const breadcrumb = mc?.breadcrumb || 'Back to Main Regression Calculator';
-const introText = mc?.introText || '';
 
 const whatIsTitle = mc?.whatIsTitle || 'How to Calculate Multiple Regression';
 const whatIsText = mc?.whatIsText || '';
@@ -160,15 +160,33 @@ const howToSchema = {
     </div>
   </section>
 
-  <!-- Intro Text -->
-  <section class="py-8 md:py-12">
-    <div class="max-w-3xl mx-auto">
-      <p class="text-lg md:text-xl text-surface-600 dark:text-surface-400 leading-relaxed mb-6">
-        Calculate the multiple regression equation with two or more predictors, R², adjusted R², and step-by-step solution
-      </p>
-      <div class="prose prose-surface max-w-none text-surface-600 dark:text-surface-400 leading-relaxed" set:html={introText} />
-    </div>
-  </section>
+  <!-- Tool Info Box -->
+  <ToolInfoBox
+    toolName="Multiple Regression Calculator"
+    keyPoints={[
+      {
+        icon: "🧮",
+        title: "Multi-Variable Model",
+        description: "Fits a regression equation with two or more predictor variables."
+      },
+      {
+        icon: "📥",
+        title: "Input Variables",
+        description: "Enter dependent (Y) and multiple independent (X) variables as data columns."
+      },
+      {
+        icon: "📊",
+        title: "Comprehensive Output",
+        description: "Get coefficients, R², adjusted R², ANOVA table, and residual analysis."
+      },
+      {
+        icon: "🔬",
+        title: "Best For",
+        description: "Predicting outcomes influenced by multiple factors simultaneously."
+      }
+    ]}
+    highlightTip="Check for multicollinearity between predictors — highly correlated X variables can distort coefficient estimates."
+  />
 
   <!-- H2: What Is Multiple Regression -->
   <section class="py-8 md:py-12">

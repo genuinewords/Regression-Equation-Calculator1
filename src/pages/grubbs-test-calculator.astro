@@ -1,6 +1,7 @@
 ---
 import BaseLayout from 'theme/layouts/BaseLayout.astro';
 import GrubbsTestCalculator from 'theme/components/GrubbsTestCalculator.astro';
+import ToolInfoBox from 'theme/components/ToolInfoBox.astro';
 import { mergeTranslations } from 'theme/i18n/utils';
 import siteConfig from 'src/data/site-config.json';
 
@@ -9,8 +10,6 @@ const translations = await mergeTranslations(locale);
 const gc = (translations as any).grubbs;
 
 const canonicalUrl = new URL('/grubbs-test-calculator/', siteConfig.siteUrl).href;
-
-const introText = gc?.introText || '';
 
 const whatIsTitle = gc?.whatIsTitle || "What Is Grubbs' Test?";
 const whatIsText = gc?.whatIsText || '';
@@ -119,13 +118,33 @@ const howToSchema = {
     </div>
   </section>
 
-  <!-- Intro Text -->
-  <section class="py-8 md:py-12">
-    <div class="max-w-3xl mx-auto">
-      <p class="text-lg md:text-xl text-surface-600 dark:text-surface-400 leading-relaxed mb-6">Detect outliers in your dataset with step-by-step solutions</p>
-      <div class="prose prose-surface max-w-none text-surface-600 dark:text-surface-400 leading-relaxed" set:html={introText} />
-    </div>
-  </section>
+  <!-- Tool Info Box -->
+  <ToolInfoBox
+    toolName="Grubbs' Test Calculator"
+    keyPoints={[
+      {
+        icon: "🎯",
+        title: "Outlier Detection",
+        description: "Identifies statistically significant outliers in univariate datasets using Grubbs' method."
+      },
+      {
+        icon: "📥",
+        title: "Input Your Data",
+        description: "Enter comma-separated numbers and select a significance level (α = 0.05 or 0.01)."
+      },
+      {
+        icon: "📊",
+        title: "Instant Results",
+        description: "Get G statistic, critical value, p-value, and a clear outlier verdict."
+      },
+      {
+        icon: "🔬",
+        title: "Best For",
+        description: "Lab data, quality control, sensor readings, and any normally distributed sample."
+      }
+    ]}
+    highlightTip="Always verify your data is approximately normal before applying Grubbs' test — non-normal data can produce misleading results."
+  />
 
   <!-- What Is -->
   <section class="py-8 md:py-12">

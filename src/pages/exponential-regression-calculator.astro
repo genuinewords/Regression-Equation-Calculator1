@@ -1,6 +1,7 @@
 ---
 import BaseLayout from 'theme/layouts/BaseLayout.astro';
 import ExponentialRegressionCalculator from 'theme/components/ExponentialRegressionCalculator.astro';
+import ToolInfoBox from 'theme/components/ToolInfoBox.astro';
 import { mergeTranslations } from 'theme/i18n/utils';
 import siteConfig from 'src/data/site-config.json';
 
@@ -11,7 +12,6 @@ const ec = (translations as any).expCalc;
 const canonicalUrl = new URL('/exponential-regression-calculator/', siteConfig.siteUrl).href;
 
 const breadcrumb = ec?.breadcrumb || 'Back to Main Regression Calculator';
-const introText = ec?.introText || '';
 
 const whatIsTitle = ec?.whatIsTitle || 'What Is Exponential Regression?';
 const whatIsText = ec?.whatIsText || '';
@@ -185,15 +185,33 @@ const howToSchema = {
     </div>
   </section>
 
-  <!-- Intro Text -->
-  <section class="py-8 md:py-12">
-    <div class="max-w-3xl mx-auto">
-      <p class="text-lg md:text-xl text-surface-600 dark:text-surface-400 leading-relaxed mb-6">
-        Calculate y = a·e^(bx) from your data with step-by-step solutions, R², graphs, and predictions
-      </p>
-      <div class="prose prose-surface max-w-none text-surface-600 dark:text-surface-400 leading-relaxed" set:html={introText} />
-    </div>
-  </section>
+  <!-- Tool Info Box -->
+  <ToolInfoBox
+    toolName="Exponential Regression Calculator"
+    keyPoints={[
+      {
+        icon: "📈",
+        title: "Exponential Modeling",
+        description: "Fits y = a·e^(bx) to your data using log-transformed least squares."
+      },
+      {
+        icon: "📥",
+        title: "Enter X & Y Data",
+        description: "Input paired values — all Y values must be positive for valid results."
+      },
+      {
+        icon: "📊",
+        title: "Growth Analysis",
+        description: "Get equation coefficients, R², doubling time, and prediction forecasts."
+      },
+      {
+        icon: "🔬",
+        title: "Best For",
+        description: "Population growth, compound interest, radioactive decay, and viral spread."
+      }
+    ]}
+    highlightTip="Exponential regression requires all Y values to be positive — zero or negative values will produce errors."
+  />
 
   <!-- H2: What Is Exponential Regression? -->
   <section class="py-8 md:py-12">

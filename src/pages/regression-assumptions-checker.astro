@@ -1,6 +1,7 @@
 ---
 import BaseLayout from 'theme/layouts/BaseLayout.astro';
 import RegressionAssumptionsChecker from 'theme/components/RegressionAssumptionsChecker.astro';
+import ToolInfoBox from 'theme/components/ToolInfoBox.astro';
 import { mergeTranslations } from 'theme/i18n/utils';
 import siteConfig from 'src/data/site-config.json';
 
@@ -11,7 +12,6 @@ const ac = (translations as any).assumptionsChecker;
 const canonicalUrl = new URL('/regression-assumptions-checker/', siteConfig.siteUrl).href;
 
 const breadcrumb = ac?.breadcrumb || 'Back to Main Regression Calculator';
-const introText = ac?.introText || '';
 
 const whatIsTitle = ac?.whatIsTitle || 'Why Check Regression Assumptions?';
 const whatIsText = ac?.whatIsText || '';
@@ -150,15 +150,33 @@ const howToSchema = {
     </div>
   </section>
 
-  <!-- Intro Text -->
-  <section class="py-8 md:py-12">
-    <div class="max-w-3xl mx-auto">
-      <p class="text-lg md:text-xl text-surface-600 dark:text-surface-400 leading-relaxed mb-6">
-        Check all four linear regression assumptions with formal statistical tests — free, instant, and private.
-      </p>
-      <div class="prose prose-surface max-w-none text-surface-600 dark:text-surface-400 leading-relaxed" set:html={introText} />
-    </div>
-  </section>
+  <!-- Tool Info Box -->
+  <ToolInfoBox
+    toolName="Regression Assumptions Checker"
+    keyPoints={[
+      {
+        icon: "✅",
+        title: "Assumption Validation",
+        description: "Tests all four OLS assumptions: linearity, independence, homoscedasticity, normality."
+      },
+      {
+        icon: "📥",
+        title: "Enter X & Y Data",
+        description: "Input paired data — the tool fits the regression and analyzes residuals automatically."
+      },
+      {
+        icon: "📊",
+        title: "Formal Test Results",
+        description: "Get Durbin-Watson, Breusch-Pagan, RESET, and Jarque-Bera test statistics."
+      },
+      {
+        icon: "🔬",
+        title: "Best For",
+        description: "Validating regression models before interpreting coefficients or making predictions."
+      }
+    ]}
+    highlightTip="Always check assumptions before trusting regression results — violated assumptions can invalidate your conclusions."
+  />
 
   <!-- H2: What Is -->
   <section class="py-8 md:py-12">

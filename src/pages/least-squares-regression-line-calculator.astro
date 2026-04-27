@@ -1,6 +1,7 @@
 ---
 import BaseLayout from 'theme/layouts/BaseLayout.astro';
 import LeastSquaresRegressionLineCalculator from 'theme/components/LeastSquaresRegressionLineCalculator.astro';
+import ToolInfoBox from 'theme/components/ToolInfoBox.astro';
 import { mergeTranslations } from 'theme/i18n/utils';
 import siteConfig from 'src/data/site-config.json';
 
@@ -11,7 +12,6 @@ const lsc = (translations as any).lsrlCalc;
 const canonicalUrl = new URL('/least-squares-regression-line-calculator/', siteConfig.siteUrl).href;
 
 const breadcrumb = lsc?.breadcrumb || 'Back to Main Regression Calculator';
-const introText = lsc?.introText || '';
 
 const whatIsTitle = lsc?.whatIsTitle || 'What Is the Least Squares Regression Line?';
 const whatIsText = lsc?.whatIsText || '';
@@ -174,15 +174,33 @@ const howToSchema = {
     </div>
   </section>
 
-  <!-- Intro Text -->
-  <section class="py-8 md:py-12">
-    <div class="max-w-3xl mx-auto">
-      <p class="text-lg md:text-xl text-surface-600 dark:text-surface-400 leading-relaxed mb-6">
-        Compute the OLS best-fit line y = mx + b with step-by-step solutions, R², and predictions
-      </p>
-      <div class="prose prose-surface max-w-none text-surface-600 dark:text-surface-400 leading-relaxed" set:html={introText} />
-    </div>
-  </section>
+  <!-- Tool Info Box -->
+  <ToolInfoBox
+    toolName="Least Squares Regression Line Calculator"
+    keyPoints={[
+      {
+        icon: "📏",
+        title: "Best-Fit Line",
+        description: "Computes the OLS regression line y = mx + b that minimizes squared residuals."
+      },
+      {
+        icon: "📥",
+        title: "Enter X & Y Data",
+        description: "Input paired data points as comma-separated values or paste from a spreadsheet."
+      },
+      {
+        icon: "📊",
+        title: "Step-by-Step Output",
+        description: "Get slope, intercept, R², intermediate sums, and residual diagnostics."
+      },
+      {
+        icon: "🔬",
+        title: "Best For",
+        description: "Linear trend analysis, prediction, and introductory statistics coursework."
+      }
+    ]}
+    highlightTip="Check the residual plot for patterns — a clear pattern suggests a linear model may not be the best fit."
+  />
 
   <!-- H2: What Is the Least Squares Regression Line? -->
   <section class="py-8 md:py-12">

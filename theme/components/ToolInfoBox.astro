@@ -1,0 +1,71 @@
+---
+/**
+ * ToolInfoBox – Reusable "How to Use This Tool" section
+ *
+ * Placed directly below the calculator UI and above the first
+ * explanatory heading (e.g. "What Is …?") on every tool page.
+ *
+ * Props
+ * ─────
+ * toolName     – The display name of the tool (e.g. "Grubbs' Test Calculator")
+ * keyPoints    – Array of 3–4 feature items, each with { icon, title, description }
+ * highlightTip – A single short sentence styled as a tip/info box
+ */
+
+interface KeyPoint {
+  icon: string;       // emoji or placeholder like "icon-chart"
+  title: string;      // 2–4 word short title
+  description: string; // one-line description (max 12–15 words)
+}
+
+interface Props {
+  toolName: string;
+  keyPoints: KeyPoint[];
+  highlightTip: string;
+}
+
+const { toolName, keyPoints, highlightTip } = Astro.props;
+---
+
+<section class="tool-info-section py-8 md:py-12" id="tool-info-box">
+  <div class="tool-info-box max-w-3xl mx-auto">
+
+    <!-- Headline -->
+    <h2 class="tool-info-box__headline">
+      How to Use This {toolName}
+    </h2>
+
+    <!-- Key Points Grid -->
+    <div class="tool-info-box__grid">
+      {keyPoints.map((point, i) => (
+        <div
+          class="tool-info-box__card"
+          style={`animation-delay: ${i * 80}ms`}
+        >
+          <span class="tool-info-box__icon" aria-hidden="true">
+            {point.icon}
+          </span>
+          <div class="tool-info-box__card-content">
+            <h3 class="tool-info-box__card-title">{point.title}</h3>
+            <p class="tool-info-box__card-desc">{point.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Highlight Tip -->
+    {highlightTip && (
+      <div class="tool-info-box__tip">
+        <span class="tool-info-box__tip-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 16v-4"/>
+            <path d="M12 8h.01"/>
+          </svg>
+        </span>
+        <p class="tool-info-box__tip-text">{highlightTip}</p>
+      </div>
+    )}
+
+  </div>
+</section>

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from 'theme/layouts/BaseLayout.astro';
 import PearsonCorrelationCalculator from 'theme/components/PearsonCorrelationCalculator.astro';
+import ToolInfoBox from 'theme/components/ToolInfoBox.astro';
 import { mergeTranslations } from 'theme/i18n/utils';
 import siteConfig from 'src/data/site-config.json';
 
@@ -11,7 +12,6 @@ const pc = (translations as any).pearson;
 const canonicalUrl = new URL('/pearson-correlation-calculator/', siteConfig.siteUrl).href;
 
 const breadcrumb = pc?.breadcrumb || 'Back to Main Regression Calculator';
-const introText = pc?.introText || '';
 
 const whatIsTitle = pc?.whatIsTitle || 'What Is the Pearson Correlation Coefficient?';
 const whatIsText = pc?.whatIsText || '';
@@ -123,13 +123,33 @@ const howToSchema = {
     </div>
   </section>
 
-  <!-- Intro Text -->
-  <section class="py-8 md:py-12">
-    <div class="max-w-3xl mx-auto">
-      <p class="text-lg md:text-xl text-surface-600 dark:text-surface-400 leading-relaxed mb-6">Calculate the Pearson correlation coefficient between two variables with step-by-step solutions</p>
-      <div class="prose prose-surface max-w-none text-surface-600 dark:text-surface-400 leading-relaxed" set:html={introText} />
-    </div>
-  </section>
+  <!-- Tool Info Box -->
+  <ToolInfoBox
+    toolName="Pearson Correlation Calculator"
+    keyPoints={[
+      {
+        icon: "📈",
+        title: "Measure Correlation",
+        description: "Computes the Pearson r coefficient between two continuous variables."
+      },
+      {
+        icon: "📥",
+        title: "Enter X & Y Pairs",
+        description: "Input paired numeric data as comma-separated values in two columns."
+      },
+      {
+        icon: "📊",
+        title: "Full Analysis",
+        description: "Get r, R², p-value, covariance, and a step-by-step breakdown."
+      },
+      {
+        icon: "🔬",
+        title: "Best For",
+        description: "Testing linear relationships in research, finance, and social sciences."
+      }
+    ]}
+    highlightTip="Pearson r only measures linear association — use a scatterplot first to check for non-linear patterns."
+  />
 
   <!-- What Is -->
   <section class="py-8 md:py-12">

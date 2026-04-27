@@ -1,6 +1,7 @@
 ---
 import BaseLayout from 'theme/layouts/BaseLayout.astro';
 import QuadraticRegressionCalculator from 'theme/components/QuadraticRegressionCalculator.astro';
+import ToolInfoBox from 'theme/components/ToolInfoBox.astro';
 import { mergeTranslations } from 'theme/i18n/utils';
 import siteConfig from 'src/data/site-config.json';
 
@@ -11,7 +12,6 @@ const qc = (translations as any).quadCalc;
 const canonicalUrl = new URL('/quadratic-regression-calculator/', siteConfig.siteUrl).href;
 
 const breadcrumb = qc?.breadcrumb || 'Back to Main Regression Calculator';
-const introText = qc?.introText || '';
 
 const whatIsTitle = qc?.whatIsTitle || 'How to Calculate Quadratic Regression';
 const whatIsText = qc?.whatIsText || '';
@@ -166,15 +166,33 @@ const howToSchema = {
     </div>
   </section>
 
-  <!-- Intro Text -->
-  <section class="py-8 md:py-12">
-    <div class="max-w-3xl mx-auto">
-      <p class="text-lg md:text-xl text-surface-600 dark:text-surface-400 leading-relaxed mb-6">
-        Calculate the quadratic regression equation y = ax² + bx + c with coefficients, R², and step-by-step solution
-      </p>
-      <div class="prose prose-surface max-w-none text-surface-600 dark:text-surface-400 leading-relaxed" set:html={introText} />
-    </div>
-  </section>
+  <!-- Tool Info Box -->
+  <ToolInfoBox
+    toolName="Quadratic Regression Calculator"
+    keyPoints={[
+      {
+        icon: "📐",
+        title: "Curve Fitting",
+        description: "Fits a parabolic (y = ax² + bx + c) model to your data."
+      },
+      {
+        icon: "📥",
+        title: "Enter Data Points",
+        description: "Input X and Y values as comma-separated pairs or pasted columns."
+      },
+      {
+        icon: "📊",
+        title: "Equation & Metrics",
+        description: "Get the quadratic equation, R², vertex, and predicted values."
+      },
+      {
+        icon: "🔬",
+        title: "Best For",
+        description: "Data with curvature — projectile motion, growth rates, pricing models."
+      }
+    ]}
+    highlightTip="Compare quadratic R² with linear R² to confirm that a curve genuinely fits better than a straight line."
+  />
 
   <!-- H2: What Is Quadratic Regression -->
   <section class="py-8 md:py-12">
