@@ -1,0 +1,9 @@
+---
+const { url } = Astro;
+let pathname = url.pathname;
+if (!pathname.endsWith('/')) {
+  pathname += '/';
+}
+const canonical = `https://www.regressionequationcalculator.com${pathname}`;
+---
+<link rel="canonical" href={canonical} />

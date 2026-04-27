@@ -31,8 +31,27 @@ const {
 const translations: MergedTranslations = await mergeTranslations(locale);
 const direction = getDirection(locale);
 const ogLocale = getLocaleOgLocale(locale);
-const fullTitle = title === siteConfig.defaultTitle ? title : `${title} | ${siteConfig.siteName}`;
-const resolvedCanonical = canonicalUrl ?? new URL(Astro.url.pathname, siteConfig.siteUrl).href;
+const baseTitle = title;
+const brand = "Regression Equation Calculator";
+
+let fullTitle = `${baseTitle} | ${brand}`;
+
+// Optional trim safeguard
+if (fullTitle.length > 65) {
+  fullTitle = fullTitle.slice(0, 65).trim();
+}
+let pathForCanonical = Astro.url.pathname;
+if (!pathForCanonical.endsWith('/')) {
+  pathForCanonical += '/';
+}
+let resolvedCanonical = canonicalUrl ?? `https://www.regressionequationcalculator.com${pathForCanonical}`;
+if (!resolvedCanonical.endsWith('/')) {
+  resolvedCanonical += '/';
+}
+// Force www on resolvedCanonical if it uses non-www
+if (resolvedCanonical.startsWith('https://regressionequationcalculator.com')) {
+  resolvedCanonical = resolvedCanonical.replace('https://regressionequationcalculator.com', 'https://www.regressionequationcalculator.com');
+}
 const ogImageUrl = new URL(siteConfig.ogImage, siteConfig.siteUrl).href;
 
 const sameAs = Object.values(socialConfig).filter((url): url is string => Boolean(url));
