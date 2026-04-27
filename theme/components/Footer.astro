@@ -3,6 +3,7 @@ import { getLocalizedUrl } from 'theme/i18n/utils';
 import navConfig from 'src/data/nav.json';
 import socialConfig from 'src/data/social.json';
 import siteConfig from 'src/data/site-config.json';
+import Logo from 'theme/components/Logo.astro';
 import LanguageSwitcher from 'theme/components/LanguageSwitcher.astro';
 import type { MergedTranslations } from 'theme/i18n/types';
 
@@ -24,7 +25,7 @@ const companyNav = navConfig.footerNav.filter(item => ['aboutUs', 'contactUs', '
     <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
       <div class="sm:col-span-2 lg:col-span-1">
         <a href={getLocalizedUrl('/', locale)} class="flex items-center gap-2.5 mb-4">
-          <img src="/logo.svg" alt="" class="h-8 w-8 rounded-lg" width="32" height="32" />
+          <Logo class="h-8 w-8 rounded-lg" width="32" height="32" />
           <span class="text-lg font-bold text-white">{translations.siteTitle}</span>
         </a>
         <p class="text-sm leading-relaxed text-surface-400 max-w-xs">

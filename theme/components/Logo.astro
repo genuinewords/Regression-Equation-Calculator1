@@ -1,0 +1,16 @@
+---
+interface Props {
+  class?: string;
+  width?: string | number;
+  height?: string | number;
+}
+
+const { class: className = "h-8 w-8 rounded-lg", width = 32, height = 32 } = Astro.props;
+---
+<img
+  src="/logo.svg"
+  alt="Regression Equation Calculator logo"
+  class={className}
+  width={width}
+  height={height}
+/>

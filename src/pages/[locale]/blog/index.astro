@@ -1,0 +1,28 @@
+---
+import BaseLayout from 'theme/layouts/BaseLayout.astro';
+import { extractLocaleFromParams, mergeTranslations, getLocaleStaticPaths } from 'theme/i18n/utils';
+
+export function getStaticPaths() {
+  return getLocaleStaticPaths();
+}
+
+const locale = extractLocaleFromParams(Astro.params);
+const translations = await mergeTranslations(locale);
+---
+
+<BaseLayout
+  title={`${translations.blog.title} — Page 1`}
+  description={translations.blog.description}
+  locale={locale}
+>
+  <section class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto text-center">
+      <h1 class="text-3xl font-bold text-surface-900">{translations.blog.title}</h1>
+      <p class="mt-4 text-surface-500">Loading...</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<script is:inline define:vars={{ locale }}>
+  window.location.replace(`/${locale}/blog/1/`);
+</script>

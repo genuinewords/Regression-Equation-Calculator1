@@ -1,0 +1,101 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from 'theme/layouts/BaseLayout.astro';
+import BlogCard from 'theme/components/BlogCard.astro';
+import Pagination from 'theme/components/Pagination.astro';
+import { extractLocaleFromParams, mergeTranslations, getLocaleStaticPaths } from 'theme/i18n/utils';
+import siteConfig from 'src/data/site-config.json';
+
+export async function getStaticPaths({ paginate }) {
+  const locales = getLocaleStaticPaths();
+  const blogEntries = await getCollection('blog');
+  const sortedPosts = blogEntries.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  
+  return locales.flatMap(({ params: { locale } }) => {
+    return paginate(sortedPosts, { params: { locale }, pageSize: 12 });
+  });
+}
+
+const { page } = Astro.props;
+const locale = extractLocaleFromParams(Astro.params);
+const translations = await mergeTranslations(locale);
+
+const totalItems = page.total;
+const startIndex = (page.currentPage - 1) * page.size + 1;
+const endIndex = Math.min(page.currentPage * page.size, totalItems);
+const resultsMeta = translations.blog?.resultsMeta
+  ?.replace('{start}', String(startIndex))
+  .replace('{end}', String(endIndex))
+  .replace('{total}', String(totalItems))
+  ?? `Showing ${startIndex}-${endIndex} of ${totalItems} articles`;
+
+const blogSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  name: translations.blog?.title ?? 'Blog',
+  description: translations.blog?.description ?? '',
+  url: new URL(`/${locale}/blog/`, siteConfig.siteUrl).href,
+};
+
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  itemListElement: page.data.map((post, index) => {
+    const slug = post.id.replace(/\.(md|mdx)$/, '');
+    return {
+      '@type': 'ListItem',
+      position: index + 1 + (page.currentPage - 1) * 12,
+      url: new URL(`/${locale}/blog/${slug}/`, siteConfig.siteUrl).href,
+      name: post.data.title,
+    };
+  }),
+};
+
+const pageTitle = page.currentPage > 1 ? `${translations.blog?.title ?? 'Blog'} — Page ${page.currentPage} (${locale.toUpperCase()})` : `${translations.blog?.title ?? 'Blog'} (${locale.toUpperCase()})`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={translations.blog?.description ?? ''}
+  locale={locale}
+  canonicalUrl={new URL(page.url.pathname ?? `/${locale}/blog/`, siteConfig.siteUrl).href}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(blogSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)} />
+
+  <section class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-primary-700 to-accent-600 bg-clip-text text-transparent">
+        {translations.blog?.title ?? 'Blog'}
+      </h1>
+      <p class="mt-4 text-lg text-surface-600">{resultsMeta}</p>
+
+      <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {page.data.map((post) => {
+          const slug = post.id.replace(/\.(md|mdx)$/, '');
+          return (
+            <BlogCard
+              title={post.data.title}
+              description={post.data.description}
+              image={post.data.image}
+              href={`/${locale}/blog/${slug}/`}
+              readMoreLabel={translations.blog?.readMore ?? 'Read More'}
+            />
+          );
+        })}
+      </div>
+
+      {page.lastPage > 1 && (
+        <div class="mt-16">
+          <Pagination
+            currentPage={page.currentPage}
+            totalPages={page.lastPage}
+            basePath={`/${locale}/blog/`}
+            prevLabel={translations.common?.previous ?? 'Previous'}
+            nextLabel={translations.common?.next ?? 'Next'}
+          />
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>
