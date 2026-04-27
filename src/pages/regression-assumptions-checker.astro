@@ -1,36 +1,141 @@
 ---
 import BaseLayout from 'theme/layouts/BaseLayout.astro';
 import RegressionAssumptionsChecker from 'theme/components/RegressionAssumptionsChecker.astro';
-import PearsonManualDemo from 'theme/components/PearsonManualDemo.astro';
 import { mergeTranslations } from 'theme/i18n/utils';
 import siteConfig from 'src/data/site-config.json';
 
 const locale = 'en';
 const translations = await mergeTranslations(locale);
-const ra = (translations as any).assumptionsChecker;
+const ac = (translations as any).assumptionsChecker;
 
 const canonicalUrl = new URL('/regression-assumptions-checker/', siteConfig.siteUrl).href;
 
-const whatIsTitle = ra?.whatIsTitle || 'Why Check Regression Assumptions?';
-const whatIsText = ra?.whatIsText || '';
-const testsTitle = ra?.testsTitle || 'The Four Assumptions & How We Test Them';
-const testsPoints: string[] = ra?.testsPoints ?? [];
-const whenTitle = ra?.whenTitle || 'When to Check Assumptions';
-const whenPoints: string[] = ra?.whenPoints ?? [];
-const fixTitle = ra?.fixTitle || 'What to Do When Assumptions Fail';
-const fixPoints: string[] = ra?.fixPoints ?? [];
+const breadcrumb = ac?.breadcrumb || 'Back to Main Regression Calculator';
+const introText = ac?.introText || '';
+
+const whatIsTitle = ac?.whatIsTitle || 'Why Check Regression Assumptions?';
+const whatIsText = ac?.whatIsText || '';
+
+const formulaTitle = ac?.formulaTitle || 'Regression Assumptions Tests Explained';
+const formulaText = ac?.formulaText || '';
+const formulaTable = ac?.formulaTable || '';
+const formulas: string[] = ac?.formulas ?? [];
+
+const howCalcTitle = ac?.howCalcTitle || 'How to Check Regression Assumptions';
+const howCalcManual = ac?.howCalcManual || '';
+const howCalcSteps: string[] = ac?.howCalcSteps ?? [];
+
+const calcStepsTitle = ac?.calcStepsTitle || 'Regression Assumptions Checker Steps';
+const calcStepsIntro = ac?.calcStepsIntro || '';
+const calcStepsPoints: string[] = ac?.calcStepsPoints ?? [];
+
+const testsTitle = ac?.testsTitle || 'The Four Assumptions & How We Test Them';
+const testsPoints: string[] = ac?.testsPoints ?? [];
+
+const fixTitle = ac?.fixTitle || 'What to Do When Assumptions Fail';
+const fixText = ac?.fixText || '';
+const fixPoints: string[] = ac?.fixPoints ?? [];
+
+const manualDemoTitle = ac?.manualDemoTitle || 'How to calculate Pearson correlation by hand (step‑by‑step)';
+const manualDemoStep1 = ac?.manualDemoStep1 || '';
+const manualDemoStep2 = ac?.manualDemoStep2 || '';
+const manualDemoStep3 = ac?.manualDemoStep3 || '';
+const manualDemoStep4 = ac?.manualDemoStep4 || '';
+const manualDemoStep5 = ac?.manualDemoStep5 || '';
+const manualDemoStep6 = ac?.manualDemoStep6 || '';
+const manualDemoInterpretation = ac?.manualDemoInterpretation || '';
+const manualDemoNote = ac?.manualDemoNote || '';
+const manualDemoSumLabel = ac?.manualDemoSumLabel || 'Sum (Σ)';
+
+const whenTitle = ac?.whenTitle || 'When to Check Assumptions';
+const whenText = ac?.whenText || '';
+const whenTable = ac?.whenTable || '';
+const whenPoints: string[] = ac?.whenPoints ?? [];
+
+const faqTitle = ac?.faqTitle || 'Frequently Asked Questions';
+const faqs: Array<{q: string; a: string}> = ac?.faqs ?? [];
+
+const relatedTitle = ac?.relatedTitle || 'Related Regression Calculators';
+const relatedItems: Array<{name: string; url: string; desc: string}> = ac?.relatedItems ?? [];
+
+const fmHeaders = formulaTable ? formulaTable.split('|').slice(0, 3) : [];
+const fmRows: string[][] = [];
+if (formulaTable) {
+  const fmParts = formulaTable.split('|');
+  for (let i = 3; i + 2 < fmParts.length; i += 3) {
+    fmRows.push([fmParts[i], fmParts[i+1], fmParts[i+2]]);
+  }
+}
+
+const wnHeaders = whenTable ? whenTable.split('|').slice(0, 3) : [];
+const wnRows: string[][] = [];
+if (whenTable) {
+  const wnParts = whenTable.split('|');
+  for (let i = 3; i + 2 < wnParts.length; i += 3) {
+    wnRows.push([wnParts[i], wnParts[i+1], wnParts[i+2]]);
+  }
+}
+
+const manualDemoSteps = [manualDemoStep1, manualDemoStep2, manualDemoStep3, manualDemoStep4, manualDemoStep5, manualDemoStep6].filter(Boolean);
+
+const webAppSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Regression Assumptions Checker",
+  "description": "Free online tool to check all four linear regression assumptions: linearity (RESET test), independence (Durbin-Watson), homoscedasticity (Breusch-Pagan), and normality (Jarque-Bera). With step-by-step details.",
+  "url": "https://www.regressionequationcalculator.com/regression-assumptions-checker/",
+  "applicationCategory": "MathCalculator",
+  "operatingSystem": "Web Browser",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "featureList": ["Linearity check (RESET test)", "Independence check (Durbin-Watson)", "Homoscedasticity check (Breusch-Pagan)", "Normality check (Jarque-Bera)", "Step-by-step details", "Remediation suggestions"]
+};
+
+const faqSchema = faqs.length > 0
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.q,
+        acceptedAnswer: { '@type': 'Answer', text: faq.a },
+      })),
+    }
+  : null;
+
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Check Regression Assumptions",
+  "description": "Step-by-step guide to checking all four OLS regression assumptions",
+  "totalTime": "PT5M",
+  "step": [
+    { "@type": "HowToStep", "name": "Fit Regression Line", "text": "Compute the OLS regression equation ŷ = mx + b from your data." },
+    { "@type": "HowToStep", "name": "Compute Residuals", "text": "Calculate residuals eᵢ = yᵢ − ŷᵢ for each data point." },
+    { "@type": "HowToStep", "name": "Check Linearity", "text": "Examine residual-vs-fitted plot for patterns; run RESET test." },
+    { "@type": "HowToStep", "name": "Check Independence", "text": "Compute Durbin-Watson statistic; values near 2 indicate no autocorrelation." },
+    { "@type": "HowToStep", "name": "Check Homoscedasticity", "text": "Run Breusch-Pagan test for constant residual variance." },
+    { "@type": "HowToStep", "name": "Check Normality", "text": "Run Shapiro-Wilk or Jarque-Bera test on residuals." }
+  ]
+};
 ---
 
 <BaseLayout
-  title="Regression Assumptions Checker — Test Linearity, Normality & More"
-  description="Free online tool to check all four linear regression assumptions: linearity (RESET test), independence (Durbin-Watson), homoscedasticity (Breusch-Pagan), and normality (Jarque-Bera). With step-by-step details."
+  title={ac?.title || "Regression Assumptions Checker — Test Linearity, Normality & More"}
+  description={ac?.description || "Check all four linear regression assumptions with formal statistical tests — free, instant, and private."}
   locale={locale}
   canonicalUrl={canonicalUrl}
 >
+  <script type="application/ld+json" set:html={JSON.stringify(webAppSchema)} />
+  {faqSchema && (
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  )}
+  <script type="application/ld+json" set:html={JSON.stringify(howToSchema)} />
+
+  <!-- H1 + Intro -->
   <section class="py-10 md:py-14">
     <div class="max-w-3xl mx-auto text-center">
       <nav class="mb-4 text-sm text-surface-500 dark:text-surface-400">
-        <a href="/" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Back to Main Regression Calculator</a>
+        <a href="/" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{breadcrumb}</a>
       </nav>
       <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-primary-700 via-primary-600 to-accent-600 dark:from-primary-400 dark:via-primary-500 dark:to-accent-400 bg-clip-text text-transparent leading-tight">
         Regression Assumptions Checker
@@ -39,98 +144,254 @@ const fixPoints: string[] = ra?.fixPoints ?? [];
         Check all four linear regression assumptions with formal statistical tests — free, instant, and private.
       </p>
     </div>
+    <div class="max-w-3xl mx-auto mt-6">
+      <div class="prose prose-surface max-w-none text-surface-600 dark:text-surface-400 leading-relaxed" set:html={introText} />
+    </div>
   </section>
 
+  <!-- Calculator Tool -->
   <section class="py-8 md:py-12 bg-surface-50/60 dark:bg-surface-800/40 rounded-t-3xl -mt-2">
     <div class="max-w-4xl mx-auto">
       <RegressionAssumptionsChecker translations={translations} />
     </div>
   </section>
 
+  <!-- H2: What Is -->
   <section class="py-8 md:py-12">
-    <div class="content-box max-w-3xl mx-auto rounded-2xl border border-surface-200/60 dark:border-surface-700/40 bg-white/60 dark:bg-surface-800/40 backdrop-blur-sm p-6 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-primary-500/0 before:to-accent-500/0 hover:before:from-primary-500/5 hover:before:to-accent-500/5 dark:hover:before:from-primary-400/8 dark:hover:before:to-accent-400/8 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-surface-950/40 hover:-translate-y-1 hover:border-primary-200 dark:hover:border-primary-700/50 transition-all duration-300">
+    <div class="content-box max-w-3xl mx-auto rounded-2xl border border-surface-200/60 dark:border-surface-700/40 bg-white/60 dark:bg-surface-800/40 backdrop-blur-sm p-6 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-r before:from-primary-500/0 before:to-accent-500/0 hover:before:from-primary-500/5 hover:before:to-accent-500/5 dark:hover:before:from-primary-400/8 dark:hover:before:to-accent-400/8 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-surface-950/40 hover:-translate-y-1 hover:border-primary-200 dark:hover:border-primary-700/50 transition-all duration-300">
       <h2 class="text-2xl font-bold text-surface-900 dark:text-surface-50 mb-4">{whatIsTitle}</h2>
       <div class="prose prose-surface max-w-none text-surface-600 dark:text-surface-400 leading-relaxed" set:html={whatIsText} />
     </div>
   </section>
 
+  <!-- H2: Formula / Tests -->
   <section class="py-8 md:py-12 bg-surface-50/40 dark:bg-surface-900/40 rounded-t-3xl -mt-2">
-    <div class="content-box max-w-3xl mx-auto rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-6 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-primary-500/0 before:to-primary-500/0 hover:before:from-primary-500/5 hover:before:to-primary-500/8 dark:hover:before:from-primary-400/8 dark:hover:before:to-primary-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-primary-900/10 hover:-translate-y-1 hover:border-primary-300 dark:hover:border-primary-700/50 transition-all duration-300">
+    <div class="content-box max-w-3xl mx-auto rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-6 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-accent-500/0 before:to-accent-500/0 hover:before:from-accent-500/5 hover:before:to-accent-500/8 dark:hover:before:from-accent-400/8 dark:hover:before:to-accent-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-accent-900/10 hover:-translate-y-1 hover:border-accent-300 dark:hover:border-accent-700/50 transition-all duration-300">
+      <h2 class="text-xl font-bold text-surface-900 dark:text-surface-50 mb-3">{formulaTitle}</h2>
+      <div class="prose prose-surface max-w-none text-surface-600 dark:text-surface-400 leading-relaxed mb-4" set:html={formulaText} />
+      {fmRows.length > 0 && (
+        <div class="overflow-x-auto mb-5 rounded-lg border border-surface-200 dark:border-surface-700/50">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="bg-gradient-to-r from-accent-600 to-accent-500 dark:from-accent-800 dark:to-accent-700">
+                {fmHeaders.map((h) => (
+                  <th class="px-4 py-2 text-left text-xs font-semibold text-white uppercase tracking-wider">{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-surface-100 dark:divide-surface-700/40">
+              {fmRows.map((row) => (
+                <tr class="hover:bg-accent-50/30 dark:hover:bg-accent-900/10 transition-colors">
+                  {row.map((cell) => (
+                    <td class="px-4 py-2 text-surface-600 dark:text-surface-400">{cell}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+      {formulas.length > 0 && (
+        <div class="space-y-2.5 mt-4">
+          {formulas.map((f, i) => (
+            <div class="flex items-start gap-3 px-4 py-2.5 rounded-lg bg-surface-50 dark:bg-surface-900/40 border border-surface-100 dark:border-surface-700/40">
+              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-accent-100 dark:bg-accent-900/30 flex items-center justify-center text-xs font-bold text-accent-700 dark:text-accent-400">{i + 1}</span>
+              <span class="text-sm text-surface-700 dark:text-surface-300 leading-relaxed" set:html={f} />
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- H2: How to Check -->
+  <section class="py-8 md:py-12">
+    <div class="content-box max-w-3xl mx-auto rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-6 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-primary-500/0 before:to-primary-500/0 hover:before:from-primary-500/5 hover:before:to-primary-500/8 dark:hover:before:from-primary-400/8 dark:hover:before:to-primary-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-primary-900/10 hover:-translate-y-1 hover:border-primary-300 dark:hover:border-primary-700/50 transition-all duration-300">
+      <h2 class="text-xl font-bold text-surface-900 dark:text-surface-50 mb-4">{howCalcTitle}</h2>
+      <div class="prose prose-surface max-w-none text-surface-600 dark:text-surface-400 leading-relaxed mb-5" set:html={howCalcManual} />
+      {howCalcSteps.length > 0 && (
+        <ol class="space-y-4 list-decimal list-inside">
+          {howCalcSteps.map((step) => (
+            <li class="text-sm text-surface-600 dark:text-surface-400 leading-relaxed" set:html={step} />
+          ))}
+        </ol>
+      )}
+    </div>
+  </section>
+
+  <!-- H2: Calculator Steps -->
+  <section class="py-8 md:py-12 bg-surface-50/40 dark:bg-surface-900/40 rounded-t-3xl -mt-2">
+    <div class="content-box max-w-3xl mx-auto rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-6 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-emerald-500/0 before:to-emerald-500/0 hover:before:from-emerald-500/5 hover:before:to-emerald-500/8 dark:hover:before:from-emerald-400/8 dark:hover:before:to-emerald-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-emerald-900/10 hover:-translate-y-1 hover:border-emerald-300 dark:hover:border-emerald-700/50 transition-all duration-300">
+      <h2 class="text-xl font-bold text-surface-900 dark:text-surface-50 mb-3">{calcStepsTitle}</h2>
+      <p class="text-sm text-surface-500 dark:text-surface-400 mb-5">{calcStepsIntro}</p>
+      <div class="space-y-4">
+        {calcStepsPoints.map((point, i) => (
+          <div class="flex items-start gap-3">
+            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center text-xs font-bold text-emerald-700 dark:text-emerald-400">{i + 1}</span>
+            <div class="text-sm text-surface-600 dark:text-surface-400 leading-relaxed" set:html={point} />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- H2: Tests Overview -->
+  <section class="py-8 md:py-12">
+    <div class="content-box max-w-3xl mx-auto rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-6 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-violet-500/0 before:to-violet-500/0 hover:before:from-violet-500/5 hover:before:to-violet-500/8 dark:hover:before:from-violet-400/8 dark:hover:before:to-violet-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-violet-900/10 hover:-translate-y-1 hover:border-violet-300 dark:hover:border-violet-700/50 transition-all duration-300">
       <h2 class="text-xl font-bold text-surface-900 dark:text-surface-50 mb-4">{testsTitle}</h2>
       <ul class="space-y-4">
         {testsPoints.map((point, i) => (
           <li class="flex items-start gap-3 group/item translate-x-0 hover:translate-x-1 transition-transform duration-200" style={`transition-delay: ${i * 40}ms`}>
-            <span class="mt-0.5 flex-shrink-0 w-6 h-6 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center group-hover/item:bg-primary-200 dark:group-hover/item:bg-primary-800/40 group-hover/item:scale-110 transition-all duration-200">
-              <span class="text-xs font-bold text-primary-600 dark:text-primary-400">{i + 1}</span>
+            <span class="mt-0.5 flex-shrink-0 w-6 h-6 rounded-full bg-violet-100 dark:bg-violet-900/30 flex items-center justify-center group-hover/item:bg-violet-200 dark:group-hover/item:bg-violet-800/40 group-hover/item:scale-110 transition-all duration-200">
+              <span class="text-xs font-bold text-violet-600 dark:text-violet-400">{i + 1}</span>
             </span>
-            <span class="text-sm text-surface-600 dark:text-surface-400 leading-relaxed" set:html={point} />
+            <div class="text-sm text-surface-600 dark:text-surface-400 leading-relaxed" set:html={point} />
           </li>
         ))}
       </ul>
     </div>
   </section>
 
-  <section class="py-8 md:py-12">
-    <div class="max-w-3xl mx-auto grid md:grid-cols-2 gap-6">
-      <div class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-6 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-green-500/0 before:to-emerald-500/0 hover:before:from-green-500/5 hover:before:to-emerald-500/5 dark:hover:before:from-green-400/8 dark:hover:before:to-emerald-400/8 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-green-900/10 hover:-translate-y-1 hover:border-green-300 dark:hover:border-green-700/50 transition-all duration-300">
-        <h2 class="text-xl font-bold text-surface-900 dark:text-surface-50 mb-4">{whenTitle}</h2>
-        <ul class="space-y-3">
-          {whenPoints.map((point, i) => (
-            <li class="flex items-start gap-3 group/item translate-x-0 hover:translate-x-1 transition-transform duration-200" style={`transition-delay: ${i * 40}ms`}>
-              <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center group-hover/item:bg-green-200 dark:group-hover/item:bg-green-800/40 group-hover/item:scale-110 transition-all duration-200">
-                <svg class="w-3 h-3 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
-              </span>
-              <span class="text-sm text-surface-600 dark:text-surface-400 leading-relaxed">{point}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-6 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-orange-500/0 before:to-amber-500/0 hover:before:from-orange-500/5 hover:before:to-amber-500/5 dark:hover:before:from-orange-400/8 dark:hover:before:to-amber-400/8 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-surface-950/40 hover:-translate-y-1 hover:border-orange-200 dark:hover:border-orange-700/50 transition-all duration-300">
-        <h2 class="text-xl font-bold text-surface-900 dark:text-surface-50 mb-4">{fixTitle}</h2>
-        <ul class="space-y-3">
-          {fixPoints.map((point, i) => (
-            <li class="flex items-start gap-3 group/item translate-x-0 hover:translate-x-1 transition-transform duration-200" style={`transition-delay: ${i * 40}ms`}>
-              <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center group-hover/item:bg-orange-200 dark:group-hover/item:bg-orange-800/40 group-hover/item:scale-110 transition-all duration-200">
-                <svg class="w-3 h-3 text-orange-600 dark:text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-              </span>
-              <span class="text-sm text-surface-600 dark:text-surface-400 leading-relaxed" set:html={point} />
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
-  </section>
-
+  <!-- H2: How to Fix Violations -->
   <section class="py-8 md:py-12 bg-surface-50/40 dark:bg-surface-900/40 rounded-t-3xl -mt-2">
-    <div class="content-box max-w-3xl mx-auto rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-6 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-primary-500/0 before:to-primary-500/0 hover:before:from-primary-500/5 hover:before:to-primary-500/8 dark:hover:before:from-primary-400/8 dark:hover:before:to-primary-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-primary-900/10 hover:-translate-y-1 hover:border-primary-300 dark:hover:border-primary-700/50 transition-all duration-300">
-      <PearsonManualDemo translations={translations} />
+    <div class="max-w-3xl mx-auto">
+      <div class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-6 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-orange-500/0 before:to-amber-500/0 hover:before:from-orange-500/5 hover:before:to-amber-500/5 dark:hover:before:from-orange-400/8 dark:hover:before:to-amber-400/8 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-surface-950/40 hover:-translate-y-1 hover:border-orange-200 dark:hover:border-orange-700/50 transition-all duration-300">
+        <h2 class="text-xl font-bold text-surface-900 dark:text-surface-50 mb-4">{fixTitle}</h2>
+        <div class="prose prose-surface max-w-none text-surface-600 dark:text-surface-400 leading-relaxed" set:html={fixText} />
+      </div>
+      {fixPoints.length > 0 && (
+        <div class="content-box mt-6 rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-6 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-orange-500/0 before:to-orange-500/0 hover:before:from-orange-500/5 hover:before:to-orange-500/8 dark:hover:before:from-orange-400/8 dark:hover:before:to-orange-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-orange-900/10 hover:-translate-y-1 hover:border-orange-300 dark:hover:border-orange-700/50 transition-all duration-300">
+          <ul class="space-y-3">
+            {fixPoints.map((point, i) => (
+              <li class="flex items-start gap-3 group/item translate-x-0 hover:translate-x-1 transition-transform duration-200" style={`transition-delay: ${i * 40}ms`}>
+                <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center group-hover/item:bg-orange-200 dark:group-hover/item:bg-orange-800/40 group-hover/item:scale-110 transition-all duration-200">
+                  <svg class="w-3 h-3 text-orange-600 dark:text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                </span>
+                <div class="text-sm text-surface-600 dark:text-surface-400 leading-relaxed" set:html={point} />
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   </section>
 
+  <!-- H2: Manual Demo -->
+  <section class="py-8 md:py-12">
+    <div class="content-box max-w-3xl mx-auto rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-6 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-cyan-500/0 before:to-cyan-500/0 hover:before:from-cyan-500/5 hover:before:to-cyan-500/8 dark:hover:before:from-cyan-400/8 dark:hover:before:to-cyan-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-cyan-900/10 hover:-translate-y-1 hover:border-cyan-300 dark:hover:border-cyan-700/50 transition-all duration-300">
+      <h2 class="text-xl font-bold text-surface-900 dark:text-surface-50 mb-4">{manualDemoTitle}</h2>
+      <div class="space-y-5">
+        <div class="overflow-x-auto rounded-lg border border-surface-200 dark:border-surface-700/50">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="bg-gradient-to-r from-cyan-600 to-cyan-500 dark:from-cyan-800 dark:to-cyan-700">
+                <th class="px-4 py-2 text-left text-xs font-semibold text-white uppercase tracking-wider">Step</th>
+                <th class="px-4 py-2 text-left text-xs font-semibold text-white uppercase tracking-wider">Operation</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-surface-100 dark:divide-surface-700/40">
+              {manualDemoSteps.map((step, i) => (
+                <tr class="hover:bg-cyan-50/30 dark:hover:bg-cyan-900/10 transition-colors">
+                  <td class="px-4 py-2 text-surface-600 dark:text-surface-400 font-medium">{i + 1}</td>
+                  <td class="px-4 py-2 text-surface-600 dark:text-surface-400">{step}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        {manualDemoInterpretation && (
+          <div class="flex items-start gap-3 px-4 py-3 rounded-lg bg-cyan-50 dark:bg-cyan-900/20 border border-cyan-200 dark:border-cyan-700/40">
+            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-cyan-100 dark:bg-cyan-900/30 flex items-center justify-center text-xs font-bold text-cyan-700 dark:text-cyan-400">✓</span>
+            <div class="text-sm text-surface-600 dark:text-surface-400 leading-relaxed" set:html={manualDemoInterpretation} />
+          </div>
+        )}
+        {manualDemoNote && (
+          <p class="text-sm text-surface-500 dark:text-surface-400 italic leading-relaxed" set:html={manualDemoNote} />
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- H2: When to Check -->
+  <section class="py-8 md:py-12 bg-surface-50/40 dark:bg-surface-900/40 rounded-t-3xl -mt-2">
+    <div class="content-box max-w-3xl mx-auto rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-6 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-green-500/0 before:to-emerald-500/0 hover:before:from-green-500/5 hover:before:to-emerald-500/5 dark:hover:before:from-green-400/8 dark:hover:before:to-emerald-400/8 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-green-900/10 hover:-translate-y-1 hover:border-green-300 dark:hover:border-green-700/50 transition-all duration-300">
+      <h2 class="text-xl font-bold text-surface-900 dark:text-surface-50 mb-4">{whenTitle}</h2>
+      <div class="prose prose-surface max-w-none text-surface-600 dark:text-surface-400 leading-relaxed mb-5" set:html={whenText} />
+      {wnRows.length > 0 && (
+        <div class="overflow-x-auto mb-5 rounded-lg border border-surface-200 dark:border-surface-700/50">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="bg-gradient-to-r from-green-600 to-emerald-500 dark:from-green-800 dark:to-emerald-700">
+                {wnHeaders.map((h) => (
+                  <th class="px-4 py-2 text-left text-xs font-semibold text-white uppercase tracking-wider">{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-surface-100 dark:divide-surface-700/40">
+              {wnRows.map((row) => (
+                <tr class="hover:bg-green-50/30 dark:hover:bg-green-900/10 transition-colors">
+                  {row.map((cell) => (
+                    <td class="px-4 py-2 text-surface-600 dark:text-surface-400">{cell}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+      <ul class="space-y-3">
+        {whenPoints.map((point, i) => (
+          <li class="flex items-start gap-3 group/item translate-x-0 hover:translate-x-1 transition-transform duration-200" style={`transition-delay: ${i * 40}ms`}>
+            <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center group-hover/item:bg-green-200 dark:group-hover/item:bg-green-800/40 group-hover/item:scale-110 transition-all duration-200">
+              <svg class="w-3 h-3 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+            </span>
+            <span class="text-sm text-surface-600 dark:text-surface-400 leading-relaxed">{point}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- H2: FAQs -->
   <section class="py-8 md:py-12">
     <div class="max-w-3xl mx-auto">
-      <h2 class="text-2xl font-bold text-surface-900 dark:text-surface-50 mb-6">See Also</h2>
+      <h2 class="text-2xl font-bold text-surface-900 dark:text-surface-50 text-center mb-6">{faqTitle}</h2>
+      <div class="space-y-3">
+        {faqs.map((faq, i) => (
+          <details class="group rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm overflow-hidden hover:shadow-md dark:hover:shadow-surface-950/30 transition-all duration-200">
+            <summary class="flex items-center justify-between px-6 py-4 cursor-pointer text-sm font-semibold text-surface-800 dark:text-surface-200 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+              <span>{faq.q}</span>
+              <svg class="w-4 h-4 flex-shrink-0 text-surface-400 group-open:rotate-180 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </summary>
+            <div class="px-6 pb-4 text-sm text-surface-600 dark:text-surface-400 leading-relaxed" set:html={faq.a} />
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- H2: Related Calculators -->
+  <section class="py-8 md:py-12 bg-surface-50/40 dark:bg-surface-900/40 rounded-t-3xl -mt-2">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl font-bold text-surface-900 dark:text-surface-50 mb-6">{relatedTitle}</h2>
       <div class="grid sm:grid-cols-2 gap-4">
-        <a href="/exponential-regression-calculator/" class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-5 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-accent-500/0 before:to-accent-500/0 hover:before:from-accent-500/5 hover:before:to-accent-500/8 dark:hover:before:from-accent-400/8 dark:hover:before:to-accent-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-accent-900/10 hover:-translate-y-1 hover:border-accent-300 dark:hover:border-accent-700/50 transition-all duration-300 group/card">
-          <h3 class="text-base font-bold text-accent-700 dark:text-accent-400 group-hover/card:text-accent-800 dark:group-hover/card:text-accent-300">Exponential Regression Calculator</h3>
-          <p class="text-sm text-surface-500 dark:text-surface-400 mt-1">Model growth and decay with y = a·e^(bx)</p>
-        </a>
-        <a href="/quadratic-regression-calculator/" class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-5 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-primary-500/0 before:to-primary-500/0 hover:before:from-primary-500/5 hover:before:to-primary-500/8 dark:hover:before:from-primary-400/8 dark:hover:before:to-primary-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-primary-900/10 hover:-translate-y-1 hover:border-primary-300 dark:hover:border-primary-700/50 transition-all duration-300 group/card">
-          <h3 class="text-base font-bold text-primary-700 dark:text-primary-400 group-hover/card:text-primary-800 dark:group-hover/card:text-primary-300">Quadratic Regression Calculator</h3>
-          <p class="text-sm text-surface-500 dark:text-surface-400 mt-1">Model curved relationships</p>
-        </a>
-        <a href="/multiple-regression-calculator/" class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-5 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-emerald-500/0 before:to-emerald-500/0 hover:before:from-emerald-500/5 hover:before:to-emerald-500/8 dark:hover:before:from-emerald-400/8 dark:hover:before:to-emerald-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-emerald-900/10 hover:-translate-y-1 hover:border-emerald-300 dark:hover:border-emerald-700/50 transition-all duration-300 group/card">
-          <h3 class="text-base font-bold text-emerald-700 dark:text-emerald-400 group-hover/card:text-emerald-800 dark:group-hover/card:text-emerald-300">Multiple Regression Calculator</h3>
-          <p class="text-sm text-surface-500 dark:text-surface-400 mt-1">Use two or more predictors</p>
-        </a>
-        <a href="/pearson-correlation-calculator/" class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-5 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-amber-500/0 before:to-amber-500/0 hover:before:from-amber-500/5 hover:before:to-amber-500/8 dark:hover:before:from-amber-400/8 dark:hover:before:to-amber-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-amber-900/10 hover:-translate-y-1 hover:border-amber-300 dark:hover:border-amber-700/50 transition-all duration-300 group/card">
-          <h3 class="text-base font-bold text-amber-700 dark:text-amber-400 group-hover/card:text-amber-800 dark:group-hover/card:text-amber-300">Pearson Correlation Calculator</h3>
-          <p class="text-sm text-surface-500 dark:text-surface-400 mt-1">Measure linear relationship strength</p>
-        </a>
-        <a href="/grubbs-test-calculator/" class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-5 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-rose-500/0 before:to-rose-500/0 hover:before:from-rose-500/5 hover:before:to-rose-500/8 dark:hover:before:from-rose-400/8 dark:hover:before:to-rose-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-rose-900/10 hover:-translate-y-1 hover:border-rose-300 dark:hover:border-rose-700/50 transition-all duration-300 group/card">
-          <h3 class="text-base font-bold text-rose-700 dark:text-rose-400 group-hover/card:text-rose-800 dark:group-hover/card:text-rose-300">Grubbs' Test Calculator</h3>
-          <p class="text-sm text-surface-500 dark:text-surface-400 mt-1">Detect outliers in your dataset</p>
-        </a>
+        {relatedItems.map((item, i) => {
+          const themes = [
+            { titleClass: 'text-accent-700 dark:text-accent-400 group-hover/card:text-accent-800 dark:group-hover/card:text-accent-300', before: 'before:from-accent-500/5 before:to-accent-500/8 dark:before:from-accent-400/8 dark:before:to-accent-400/12', shadow: 'dark:hover:shadow-accent-900/10', border: 'hover:border-accent-300 dark:hover:border-accent-700/50' },
+            { titleClass: 'text-primary-700 dark:text-primary-400 group-hover/card:text-primary-800 dark:group-hover/card:text-primary-300', before: 'before:from-primary-500/5 before:to-primary-500/8 dark:before:from-primary-400/8 dark:before:to-primary-400/12', shadow: 'dark:hover:shadow-primary-900/10', border: 'hover:border-primary-300 dark:hover:border-primary-700/50' },
+            { titleClass: 'text-emerald-700 dark:text-emerald-400 group-hover/card:text-emerald-800 dark:group-hover/card:text-emerald-300', before: 'before:from-emerald-500/5 before:to-emerald-500/8 dark:before:from-emerald-400/8 dark:before:to-emerald-400/12', shadow: 'dark:hover:shadow-emerald-900/10', border: 'hover:border-emerald-300 dark:hover:border-emerald-700/50' },
+            { titleClass: 'text-violet-700 dark:text-violet-400 group-hover/card:text-violet-800 dark:group-hover/card:text-violet-300', before: 'before:from-violet-500/5 before:to-violet-500/8 dark:before:from-violet-400/8 dark:before:to-violet-400/12', shadow: 'dark:hover:shadow-violet-900/10', border: 'hover:border-violet-300 dark:hover:border-violet-700/50' },
+            { titleClass: 'text-cyan-700 dark:text-cyan-400 group-hover/card:text-cyan-800 dark:group-hover/card:text-cyan-300', before: 'before:from-cyan-500/5 before:to-cyan-500/8 dark:before:from-cyan-400/8 dark:before:to-cyan-400/12', shadow: 'dark:hover:shadow-cyan-900/10', border: 'hover:border-cyan-300 dark:hover:border-cyan-700/50' },
+            { titleClass: 'text-rose-700 dark:text-rose-400 group-hover/card:text-rose-800 dark:group-hover/card:text-rose-300', before: 'before:from-rose-500/5 before:to-rose-500/8 dark:before:from-rose-400/8 dark:before:to-rose-400/12', shadow: 'dark:hover:shadow-rose-900/10', border: 'hover:border-rose-300 dark:hover:border-rose-700/50' },
+          ];
+          const t = themes[i % themes.length];
+          return (
+            <a href={item.url} class={`content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-5 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br ${t.before} before:transition-all before:duration-500 hover:shadow-lg ${t.shadow} hover:-translate-y-1 ${t.border} transition-all duration-300 group/card`}>
+              <h3 class={`text-base font-bold ${t.titleClass}`}>{item.name}</h3>
+              <p class="text-sm text-surface-500 dark:text-surface-400 mt-1">{item.desc}</p>
+            </a>
+          );
+        })}
       </div>
     </div>
   </section>
