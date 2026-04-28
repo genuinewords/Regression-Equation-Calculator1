@@ -488,15 +488,23 @@ const faqTitle: string = (home as any).faqTitle ?? 'Frequently Asked Questions';
   const onScroll = () => {
     if (!ticking && visibleImages.size > 0) {
       requestAnimationFrame(() => {
+        const updates: {img: HTMLElement, offset: number}[] = [];
+        const viewH = window.innerHeight;
+        
+        // Batch READS
         visibleImages.forEach((img) => {
           const rect = img.getBoundingClientRect();
-          const viewH = window.innerHeight;
           const progress = (viewH - rect.top) / (viewH + rect.height);
-          const offset = (progress - 0.5) * 20;
+          updates.push({ img, offset: (progress - 0.5) * 20 });
+        });
+
+        // Batch WRITES
+        updates.forEach(({ img, offset }) => {
           if (!img.style.transform.includes('rotateX')) {
             img.style.transform = `translateY(${offset}px)`;
           }
         });
+        
         ticking = false;
       });
       ticking = true;

@@ -229,14 +229,19 @@ const calc = translations.calculator;
     
     // Initial size
     if (canvas) {
-      const ro = new ResizeObserver(() => {
-        updateCanvasSize();
-        // If we have points, redraw immediately on resize
-        const points = getData();
-        if (points.length >= 2) autoCalculate();
+      const ro = new ResizeObserver((entries) => {
+        for (let entry of entries) {
+          canvasW = entry.contentRect.width || 640;
+          canvasH = (canvasW * 9 / 16); // Maintain aspect ratio or use actual height if needed
+          // If we have points, redraw immediately
+          const points = getData();
+          if (points.length >= 2) autoCalculate();
+        }
       });
       ro.observe(canvas);
-      updateCanvasSize();
+      // Fallback initial read if needed, but ResizeObserver fires immediately
+      canvasW = canvas.clientWidth || 640;
+      canvasH = canvas.clientHeight || 360;
     }
 
     const typeButtons = calcEl.querySelectorAll('.reg-type-btn');
@@ -477,7 +482,8 @@ const calc = translations.calculator;
       const points = getData();
       if (points.length < 2) { errorEl.textContent = invalidData; errorEl.classList.remove('hidden'); return; }
       autoCalculate();
-      setTimeout(() => resultsSection?.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 50);
+      // Wait for the requestAnimationFrame in autoCalculate to finish + a bit more for layout
+      setTimeout(() => resultsSection?.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 100);
     });
 
     clearBtn?.addEventListener('click', () => {
