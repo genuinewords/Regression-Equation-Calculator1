@@ -22,6 +22,9 @@ export default defineConfig({
     sitemap(),
     mdx(),
   ],
+  build: {
+    inlineStylesheets: 'always',
+  },
   vite: {
     plugins: [tailwindcss()],
     resolve: {
