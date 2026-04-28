@@ -421,19 +421,24 @@ const faqTitle: string = (home as any).faqTitle ?? 'Frequently Asked Questions';
         }
       });
     },
-    { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+    { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
   );
   revealElements.forEach((el) => revealObserver.observe(el));
 
-  // ── Interactive 3D Tilt Effect ──
+  // ── Interactive 3D Tilt Effect (Optimized) ──
   const tiltElements = document.querySelectorAll<HTMLElement>('[data-tilt]');
   tiltElements.forEach((el) => {
     const img = el.querySelector<HTMLElement>('.interactive-img');
     const glow = el.querySelector<HTMLElement>('.interactive-img-glow');
     const shine = el.querySelector<HTMLElement>('.interactive-img-shine');
+    let rect: DOMRect | null = null;
+
+    el.addEventListener('mouseenter', () => {
+      rect = el.getBoundingClientRect();
+    });
 
     el.addEventListener('mousemove', (e: MouseEvent) => {
-      const rect = el.getBoundingClientRect();
+      if (!rect) rect = el.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
       const centerX = rect.width / 2;
@@ -457,34 +462,39 @@ const faqTitle: string = (home as any).faqTitle ?? 'Frequently Asked Questions';
     });
 
     el.addEventListener('mouseleave', () => {
+      rect = null;
       if (img) {
         img.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
       }
-      if (glow) {
-        glow.style.opacity = '0';
-      }
-      if (shine) {
-        shine.style.opacity = '0';
-      }
+      if (glow) glow.style.opacity = '0';
+      if (shine) shine.style.opacity = '0';
     });
   });
 
-  // ── Parallax on Scroll ──
+  // ── Parallax on Scroll (Optimized with IntersectionObserver) ──
   const parallaxImages = document.querySelectorAll<HTMLElement>('.interactive-img');
+  const visibleImages = new Set<HTMLElement>();
+
+  const parallaxObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) visibleImages.add(entry.target as HTMLElement);
+      else visibleImages.delete(entry.target as HTMLElement);
+    });
+  }, { threshold: 0 });
+
+  parallaxImages.forEach(img => parallaxObserver.observe(img));
+
   let ticking = false;
   const onScroll = () => {
-    if (!ticking) {
+    if (!ticking && visibleImages.size > 0) {
       requestAnimationFrame(() => {
-        parallaxImages.forEach((img) => {
+        visibleImages.forEach((img) => {
           const rect = img.getBoundingClientRect();
           const viewH = window.innerHeight;
-          if (rect.top < viewH && rect.bottom > 0) {
-            const progress = (viewH - rect.top) / (viewH + rect.height);
-            const offset = (progress - 0.5) * 20;
-            // Only apply parallax if not being tilt-hovered
-            if (!img.style.transform.includes('rotateX')) {
-              img.style.transform = `translateY(${offset}px)`;
-            }
+          const progress = (viewH - rect.top) / (viewH + rect.height);
+          const offset = (progress - 0.5) * 20;
+          if (!img.style.transform.includes('rotateX')) {
+            img.style.transform = `translateY(${offset}px)`;
           }
         });
         ticking = false;

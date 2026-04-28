@@ -233,8 +233,14 @@ const about = translations.about;
   // ── Interactive 3D Tilt Effect ──
   const tiltElements = document.querySelectorAll<HTMLElement>('[data-tilt]');
   tiltElements.forEach((el) => {
+    let rect: DOMRect | null = null;
+    
+    el.addEventListener('mouseenter', () => {
+      rect = el.getBoundingClientRect();
+    });
+
     el.addEventListener('mousemove', (e: MouseEvent) => {
-      const rect = el.getBoundingClientRect();
+      if (!rect) rect = el.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
       const centerX = rect.width / 2;
@@ -246,6 +252,7 @@ const about = translations.about;
     });
 
     el.addEventListener('mouseleave', () => {
+      rect = null;
       el.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
     });
   });
