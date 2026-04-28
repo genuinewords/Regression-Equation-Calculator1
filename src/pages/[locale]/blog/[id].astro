@@ -6,25 +6,41 @@ import siteConfig from 'src/data/site-config.json';
 
 export async function getStaticPaths() {
   const locales = getLocaleStaticPaths();
-  const posts = await getCollection('blog');
+  const allPosts = await getCollection('blog');
   
-  return locales.flatMap(({ params: { locale } }) => 
-    posts.map((post) => ({
-      params: { 
-        locale,
-        id: post.id.replace(/\.(md|mdx)$/, '') 
-      },
-      props: { post },
-    }))
-  );
+  // Group posts by their slug (filename without locale prefix)
+  const postsBySlug = allPosts.reduce((acc, post) => {
+    const parts = post.id.split('/');
+    const locale = parts.length > 1 ? parts[0] : 'en';
+    const slug = parts.length > 1 ? parts.slice(1).join('/') : post.id;
+    
+    if (!acc[slug]) acc[slug] = {};
+    acc[slug][locale] = post;
+    return acc;
+  }, {} as Record<string, Record<string, any>>);
+
+  return locales.flatMap(({ params: { locale } }) => {
+    return Object.keys(postsBySlug).map((slug) => {
+      // Use localized post if available, else fallback to English
+      const post = postsBySlug[slug][locale] || postsBySlug[slug]['en'];
+      
+      return {
+        params: { 
+          locale,
+          id: slug.replace(/\.(md|mdx)$/, '') 
+        },
+        props: { post, slug },
+      };
+    });
+  });
 }
 
-const { post } = Astro.props;
+const { post, slug } = Astro.props;
 const { Content } = await render(post);
 const locale = extractLocaleFromParams(Astro.params);
 const translations = await mergeTranslations(locale);
 
-const canonicalUrl = new URL(`/${locale}/blog/${post.id.replace(/\.(md|mdx)$/, '')}/`, siteConfig.siteUrl).href;
+const canonicalUrl = new URL(`/${locale}/blog/${slug.replace(/\.(md|mdx)$/, '')}/`, siteConfig.siteUrl).href;
 
 const articleSchema = {
   '@context': 'https://schema.org',

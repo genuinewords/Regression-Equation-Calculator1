@@ -6,18 +6,23 @@ import siteConfig from 'src/data/site-config.json';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
-  return posts.map((post) => ({
-    params: { id: post.id.replace(/\.(md|mdx)$/, '') },
-    props: { post },
-  }));
+  const enPosts = posts.filter(post => post.id.startsWith('en/'));
+  
+  return enPosts.map((post) => {
+    const slug = post.id.replace(/^en\//, '').replace(/\.(md|mdx)$/, '');
+    return {
+      params: { id: slug },
+      props: { post, slug },
+    };
+  });
 }
 
-const { post } = Astro.props;
+const { post, slug } = Astro.props;
 const { Content } = await render(post);
 const locale = 'en';
 const translations = await mergeTranslations(locale);
 
-const canonicalUrl = new URL(`/blog/${post.id.replace(/\.(md|mdx)$/, '')}/`, siteConfig.siteUrl).href;
+const canonicalUrl = new URL(`/blog/${slug}/`, siteConfig.siteUrl).href;
 
 const articleSchema = {
   '@context': 'https://schema.org',

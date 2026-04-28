@@ -8,8 +8,11 @@ import siteConfig from 'src/data/site-config.json';
 
 export async function getStaticPaths({ paginate }) {
   const blogEntries = await getCollection('blog');
-  const sortedPosts = blogEntries.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-  return paginate(sortedPosts, { pageSize: 12 });
+  const enPosts = blogEntries
+    .filter(post => post.id.startsWith('en/'))
+    .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+    
+  return paginate(enPosts, { pageSize: 12 });
 }
 
 const { page } = Astro.props;
@@ -37,7 +40,7 @@ const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   itemListElement: page.data.map((post, index) => {
-    const slug = post.id.replace(/\.(md|mdx)$/, '');
+    const slug = post.id.replace(/^en\//, '').replace(/\.(md|mdx)$/, '');
     return {
       '@type': 'ListItem',
       position: index + 1 + (page.currentPage - 1) * 12,
@@ -81,7 +84,7 @@ const itemListSchema = {
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {page.data.map((post, i) => {
-          const slug = post.id.replace(/\.(md|mdx)$/, '');
+          const slug = post.id.replace(/^en\//, '').replace(/\.(md|mdx)$/, '');
           return (
             <div class="reveal-on-scroll" style={`transition-delay: ${i % 3 * 100}ms`}>
                 <BlogCard

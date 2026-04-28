@@ -8,11 +8,25 @@ import siteConfig from 'src/data/site-config.json';
 
 export async function getStaticPaths({ paginate }) {
   const locales = getLocaleStaticPaths();
-  const blogEntries = await getCollection('blog');
-  const sortedPosts = blogEntries.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-  
+  const allPosts = await getCollection('blog');
+
+  // Group posts by slug to find the best version for each locale
+  const postsBySlug = allPosts.reduce((acc, post) => {
+    const parts = post.id.split('/');
+    const locale = parts.length > 1 ? parts[0] : 'en';
+    const slug = parts.length > 1 ? parts.slice(1).join('/') : post.id;
+    if (!acc[slug]) acc[slug] = {};
+    acc[slug][locale] = post;
+    return acc;
+  }, {} as Record<string, Record<string, any>>);
+
+  const slugs = Object.keys(postsBySlug);
+
   return locales.flatMap(({ params: { locale } }) => {
-    return paginate(sortedPosts, { params: { locale }, pageSize: 12 });
+    const localizedPosts = slugs.map(slug => postsBySlug[slug][locale] || postsBySlug[slug]['en'])
+      .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+      
+    return paginate(localizedPosts, { params: { locale }, pageSize: 12 });
   });
 }
 
@@ -41,7 +55,7 @@ const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   itemListElement: page.data.map((post, index) => {
-    const slug = post.id.replace(/\.(md|mdx)$/, '');
+    const slug = post.id.split('/').slice(1).join('/').replace(/\.(md|mdx)$/, '');
     return {
       '@type': 'ListItem',
       position: index + 1 + (page.currentPage - 1) * 12,
@@ -72,7 +86,7 @@ const pageTitle = page.currentPage > 1 ? `${translations.blog?.title ?? 'Blog'} 
 
       <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {page.data.map((post) => {
-          const slug = post.id.replace(/\.(md|mdx)$/, '');
+          const slug = post.id.split('/').slice(1).join('/').replace(/\.(md|mdx)$/, '');
           return (
             <BlogCard
               title={post.data.title}
