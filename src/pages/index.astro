@@ -43,9 +43,7 @@ const faqTitle: string = (home as any).faqTitle ?? 'Frequently Asked Questions';
   locale={locale}
   isHomePage={true}
 >
-  {faqSchema && (
-    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
-  )}
+  {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
 
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
@@ -61,356 +59,254 @@ const faqTitle: string = (home as any).faqTitle ?? 'Frequently Asked Questions';
   })} />
 
   <!-- Hero Section -->
-  <section class="pt-8 pb-4 md:pt-12 md:pb-6">
-    <div class="max-w-3xl mx-auto text-center">
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-primary-700 via-primary-600 to-accent-600 dark:from-primary-400 dark:via-primary-500 dark:to-accent-400 bg-clip-text text-transparent leading-tight">
-        Regression Equation Calculator
-      </h1>
-      <p class="mt-3 text-lg md:text-xl text-surface-600 dark:text-surface-400 max-w-2xl mx-auto leading-relaxed">
-        Find Linear, Exponential &amp; Polynomial Equations.
-      </p>
+  <section class="relative pt-16 pb-20 overflow-hidden">
+    <!-- Ambient Background Decor -->
+    <div class="absolute inset-0 -z-10 pointer-events-none">
+        <div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary-100/30 dark:bg-primary-900/10 blur-[120px] rounded-full animate-pulse"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-accent-100/30 dark:bg-accent-900/10 blur-[100px] rounded-full animate-pulse" style="animation-delay: 2s"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+        <div class="flex-1 text-center lg:text-left reveal-on-scroll">
+          <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight bg-gradient-to-r from-primary-700 via-primary-600 to-accent-600 dark:from-primary-400 dark:via-primary-500 dark:to-accent-400 bg-clip-text text-transparent leading-tight mb-6">
+            Regression Equation Calculator
+          </h1>
+          <p class="text-xl text-surface-600 dark:text-surface-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8">
+            The world's most versatile statistical modeling engine. Instantly derive Linear, Exponential, and Polynomial equations from your data with professional precision.
+          </p>
+          <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+            <a href="#calculator-main" class="px-8 py-4 rounded-2xl bg-primary-600 text-white font-bold shadow-xl shadow-primary-600/20 hover:bg-primary-700 hover:shadow-2xl hover:shadow-primary-600/30 transition-all duration-300 hover:-translate-y-1">
+              Start Calculating
+            </a>
+            <a href="#features" class="px-8 py-4 rounded-2xl bg-white dark:bg-surface-800 text-surface-700 dark:text-surface-200 font-bold border border-surface-200 dark:border-surface-700 hover:border-primary-300 transition-all duration-300 hover:-translate-y-1">
+              Explore Features
+            </a>
+          </div>
+        </div>
+        <div class="flex-1 w-full max-w-lg lg:max-w-none reveal-on-scroll" style="transition-delay: 200ms">
+            <!-- Optional: Hero Visual if desired, or just space -->
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Calculator Section -->
-  <section class="pt-2 pb-8 md:pt-4 md:pb-12 bg-surface-50/60 dark:bg-surface-800/40 rounded-t-3xl border-t border-surface-200/50 dark:border-surface-700/50">
+  <section id="calculator-main" class="py-12 md:py-20 bg-surface-50/60 dark:bg-surface-800/40 rounded-t-[3rem] -mt-10 border-t border-surface-200/50 dark:border-surface-700/50 shadow-2xl">
     <div class="max-w-4xl mx-auto px-4 sm:px-6">
       <Calculator locale={locale} translations={translations} />
     </div>
   </section>
 
-  <!-- Understanding Regression Analysis -->
-  <section class="py-8 md:py-12">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl font-bold text-surface-900 dark:text-surface-50 text-center mb-8">Understanding Regression Analysis</h2>
-      <div class="grid sm:grid-cols-2 gap-5">
-        <div class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-6 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-primary-500/0 before:to-primary-500/0 hover:before:from-primary-500/5 hover:before:to-primary-500/8 dark:hover:before:from-primary-400/8 dark:hover:before:to-primary-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-primary-900/10 hover:-translate-y-1 hover:border-primary-300 dark:hover:border-primary-700/50 transition-all duration-300">
-          <div class="flex items-center gap-3 mb-3">
-            <span class="flex-shrink-0 w-9 h-9 rounded-lg bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center">
-              <svg class="w-4 h-4 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
-            </span>
-            <h3 class="text-lg font-bold text-primary-700 dark:text-primary-400">Linear Regression</h3>
-          </div>
-          <p class="text-sm text-surface-600 dark:text-surface-400 leading-relaxed">Models a straight-line relationship between variables using the equation <strong>y = a + bx</strong>. Best when data follows a constant rate of change — ideal for forecasting trends, analyzing sales growth, or estimating cost over time.</p>
-        </div>
-        <div class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-6 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-accent-500/0 before:to-accent-500/0 hover:before:from-accent-500/5 hover:before:to-accent-500/8 dark:hover:before:from-accent-400/8 dark:hover:before:to-accent-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-accent-900/10 hover:-translate-y-1 hover:border-accent-300 dark:hover:border-accent-700/50 transition-all duration-300">
-          <div class="flex items-center gap-3 mb-3">
-            <span class="flex-shrink-0 w-9 h-9 rounded-lg bg-accent-100 dark:bg-accent-900/30 flex items-center justify-center">
-              <svg class="w-4 h-4 text-accent-600 dark:text-accent-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" /></svg>
-            </span>
-            <h3 class="text-lg font-bold text-accent-700 dark:text-accent-400">Polynomial Regression</h3>
-          </div>
-          <p class="text-sm text-surface-600 dark:text-surface-400 leading-relaxed">Fits a curved relationship using <strong>y = a + bx + cx²</strong> (or higher degrees). Perfect when data shows acceleration or deceleration — useful for projectile motion, population modeling, or price-demand curves.</p>
-        </div>
-        <div class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-6 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-emerald-500/0 before:to-emerald-500/0 hover:before:from-emerald-500/5 hover:before:to-emerald-500/8 dark:hover:before:from-emerald-400/8 dark:hover:before:to-emerald-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-emerald-900/10 hover:-translate-y-1 hover:border-emerald-300 dark:hover:border-emerald-700/50 transition-all duration-300">
-          <div class="flex items-center gap-3 mb-3">
-            <span class="flex-shrink-0 w-9 h-9 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center">
-              <svg class="w-4 h-4 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
-            </span>
-            <h3 class="text-lg font-bold text-emerald-700 dark:text-emerald-400">Exponential Regression</h3>
-          </div>
-          <p class="text-sm text-surface-600 dark:text-surface-400 leading-relaxed">Models rapid growth or decay with <strong>y = ae<sup>bx</sup></strong>. Ideal when values multiply at a constant rate — commonly used for compound interest, bacterial growth, radioactive decay, and viral spread analysis.</p>
-        </div>
-        <div class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-6 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-amber-500/0 before:to-amber-500/0 hover:before:from-amber-500/5 hover:before:to-amber-500/8 dark:hover:before:from-amber-400/8 dark:hover:before:to-amber-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-amber-900/10 hover:-translate-y-1 hover:border-amber-300 dark:hover:border-amber-700/50 transition-all duration-300">
-          <div class="flex items-center gap-3 mb-3">
-            <span class="flex-shrink-0 w-9 h-9 rounded-lg bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center">
-              <svg class="w-4 h-4 text-amber-600 dark:text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 12l3-3 3 3 4-4" /></svg>
-            </span>
-            <h3 class="text-lg font-bold text-amber-700 dark:text-amber-400">Logarithmic Regression</h3>
-          </div>
-          <p class="text-sm text-surface-600 dark:text-surface-400 leading-relaxed">Fits diminishing-returns patterns with <strong>y = a + b·ln(x)</strong>. Great when growth starts fast then plateaus — fits learning curves, sensory perception, economic saturation, and diminishing marginal returns.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Advanced Features -->
-  <section class="py-8 md:py-12 bg-surface-50/40 dark:bg-surface-900/40 rounded-t-3xl -mt-2">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl font-bold text-surface-900 dark:text-surface-50 text-center mb-2">Advanced Features of Regression Equation Calculator</h2>
-      <p class="text-center text-sm text-surface-500 dark:text-surface-400 mb-8">Built for accuracy, usability, and compliance</p>
-      <div class="rounded-2xl border border-surface-200/60 dark:border-surface-700/40 bg-white/60 dark:bg-surface-800/40 backdrop-blur-sm overflow-hidden">
-        <div class="divide-y divide-surface-100 dark:divide-surface-700/50">
-          <div class="flex items-start gap-4 px-6 py-5 hover:bg-primary-50/40 dark:hover:bg-primary-900/10 transition-colors duration-200">
-            <span class="flex-shrink-0 mt-0.5 w-8 h-8 rounded-lg bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center">
-              <svg class="w-4 h-4 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg>
-            </span>
-            <div>
-              <h3 class="text-sm font-semibold text-surface-900 dark:text-surface-50">Multiple Regression Models</h3>
-              <p class="mt-1 text-sm text-surface-500 dark:text-surface-400 leading-relaxed">Support for linear, polynomial, exponential, and logarithmic relationship patterns — choose the model that best fits your data structure.</p>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 space-y-24 py-24">
+    <!-- Understanding Regression Analysis -->
+    <section class="reveal-on-scroll">
+      <h2 class="text-3xl md:text-4xl font-bold text-surface-900 dark:text-surface-50 text-center mb-12">Understanding Regression Analysis</h2>
+      <div class="grid sm:grid-cols-2 gap-8">
+        {[
+          {
+            title: "Linear Regression",
+            desc: "Models a straight-line relationship between variables using the equation y = a + bx. Ideal for forecasting trends and analyzing constant growth rates.",
+            icon: "📈",
+            accent: "primary"
+          },
+          {
+            title: "Polynomial Regression",
+            desc: "Fits a curved relationship using y = a + bx + cx². Perfect when data shows acceleration or deceleration in complex physical systems.",
+            icon: "📐",
+            accent: "accent"
+          },
+          {
+            title: "Exponential Regression",
+            desc: "Models rapid growth or decay with y = ae^bx. Ideal for compound interest, bacterial growth, and radioactive decay analysis.",
+            icon: "🧬",
+            accent: "emerald"
+          },
+          {
+            title: "Logarithmic Regression",
+            desc: "Fits diminishing-returns patterns with y = a + b·ln(x). Great for learning curves, economic saturation, and sensory perception.",
+            icon: "🔬",
+            accent: "amber"
+          }
+        ].map(item => (
+          <div class={`group p-8 rounded-3xl border border-surface-200 dark:border-surface-700/60 bg-white dark:bg-surface-800 shadow-lg hover:-translate-y-2 transition-all duration-500 overflow-hidden relative`}>
+            <div class={`absolute inset-0 bg-gradient-to-br from-${item.accent}-500/0 to-${item.accent}-500/5 group-hover:from-${item.accent}-500/10 transition-all duration-500`}></div>
+            <div class="relative z-10">
+              <div class={`w-14 h-14 rounded-2xl bg-${item.accent}-100 dark:bg-${item.accent}-900/30 flex items-center justify-center mb-6 text-2xl group-hover:scale-110 transition-transform`}>
+                {item.icon}
+              </div>
+              <h3 class={`text-xl font-bold text-${item.accent}-700 dark:text-${item.accent}-400 mb-3`}>{item.title}</h3>
+              <p class="text-surface-600 dark:text-surface-400 leading-relaxed">{item.desc}</p>
             </div>
           </div>
-          <div class="flex items-start gap-4 px-6 py-5 hover:bg-accent-50/40 dark:hover:bg-accent-900/10 transition-colors duration-200">
-            <span class="flex-shrink-0 mt-0.5 w-8 h-8 rounded-lg bg-accent-100 dark:bg-accent-900/30 flex items-center justify-center">
-              <svg class="w-4 h-4 text-accent-600 dark:text-accent-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" /></svg>
-            </span>
-            <div>
-              <h3 class="text-sm font-semibold text-surface-900 dark:text-surface-50">Graphical Visualization</h3>
-              <p class="mt-1 text-sm text-surface-500 dark:text-surface-400 leading-relaxed">Interactive scatter plot with regression line overlay — instantly see how well your model fits the observed data points.</p>
-            </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Advanced Features -->
+    <section id="features" class="reveal-on-scroll">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-surface-900 dark:text-surface-50">Advanced Diagnostic Engine</h2>
+        <p class="text-surface-500 mt-4 max-w-2xl mx-auto">Built for institutional-grade research, combining mathematical rigor with an intuitive interactive experience.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Multiple Models", desc: "Compare linear, polynomial, exponential, and logarithmic fits side-by-side.", icon: "🎯" },
+          { title: "Interactive Viz", desc: "Explore your data with dynamic scatter plots and model overlay visualizations.", icon: "📊" },
+          { title: "Prediction Tools", desc: "Forecast outcomes with automated confidence interval calculations.", icon: "🔮" },
+          { title: "Full Diagnostics", desc: "Detailed output including R², Standard Error, and p-values for all models.", icon: "📋" },
+          { title: "Mobile Optimized", desc: "Perform complex regression analysis on any device without compromise.", icon: "📱" },
+          { title: "Standardized", desc: "Calculations follow ISO 3534 and ASTM E2586 professional standards.", icon: "⚖️" }
+        ].map(f => (
+          <div class="p-6 rounded-2xl border border-surface-200/60 dark:border-surface-700/40 bg-white/50 dark:bg-surface-800/50 backdrop-blur-sm hover:shadow-xl transition-all duration-300">
+            <div class="text-3xl mb-4">{f.icon}</div>
+            <h3 class="text-lg font-bold text-surface-900 dark:text-surface-50 mb-2">{f.title}</h3>
+            <p class="text-sm text-surface-500 dark:text-surface-400 leading-relaxed">{f.desc}</p>
           </div>
-          <div class="flex items-start gap-4 px-6 py-5 hover:bg-emerald-50/40 dark:hover:bg-emerald-900/10 transition-colors duration-200">
-            <span class="flex-shrink-0 mt-0.5 w-8 h-8 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center">
-              <svg class="w-4 h-4 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
-            </span>
-            <div>
-              <h3 class="text-sm font-semibold text-surface-900 dark:text-surface-50">Prediction Capability</h3>
-              <p class="mt-1 text-sm text-surface-500 dark:text-surface-400 leading-relaxed">Enter any X value to estimate Y with confidence intervals — make reliable forecasts from your regression model.</p>
+        ))}
+      </div>
+    </section>
+
+    <!-- Data Requirements Table -->
+    <section class="reveal-on-scroll">
+      <div class="content-box rounded-[2.5rem] border border-surface-200 dark:border-surface-700/60 bg-white dark:bg-surface-800 shadow-2xl overflow-hidden">
+        <div class="p-8 md:p-12">
+            <h2 class="text-3xl font-bold text-surface-900 dark:text-surface-50 text-center mb-10">Data Requirements</h2>
+            <div class="overflow-x-auto rounded-2xl border border-surface-100 dark:border-surface-700/50">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="bg-gradient-to-r from-primary-600 via-primary-500 to-accent-500 text-white">
+                            <th class="px-6 py-4 text-left font-bold uppercase tracking-wider">Requirement</th>
+                            <th class="px-6 py-4 text-left font-bold uppercase tracking-wider">Minimum</th>
+                            <th class="px-6 py-4 text-left font-bold uppercase tracking-wider">Recommended</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-surface-50 dark:divide-surface-700/40">
+                        {[
+                            ["Sample Size", "3 data points", "30+ data points"],
+                            ["Observations/Parameter", "2 per coefficient", "10+ per coefficient"],
+                            ["X-Variable Range", "2 distinct values", "Wide, evenly spaced"],
+                            ["Y-Variable Type", "Continuous", "Continuous, no ceiling effects"],
+                            ["Distribution", "Normal residuals", "Normal, outliers removed"],
+                            ["Durbin-Watson", "N/A", "Statistic ≈ 2"]
+                        ].map(([r, m, re]) => (
+                            <tr class="hover:bg-primary-50/20 dark:hover:bg-primary-900/10 transition-colors">
+                                <td class="px-6 py-4 font-bold text-surface-800 dark:text-surface-100">{r}</td>
+                                <td class="px-6 py-4 text-surface-600 dark:text-surface-400">{m}</td>
+                                <td class="px-6 py-4 text-surface-600 dark:text-surface-400">{re}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
             </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What Is a Regression Equation? -->
+    <section class="reveal-on-scroll">
+      <div class="content-box rounded-[2.5rem] border border-surface-200 dark:border-surface-700/60 bg-white dark:bg-surface-800 p-8 md:p-12 shadow-xl relative overflow-hidden group">
+        <div class="flex flex-col md:flex-row gap-12 items-center">
+          <div class="flex-1">
+            <h2 class="text-3xl font-bold text-surface-900 dark:text-surface-50 mb-6">{whatIsTitle}</h2>
+            <div class="prose prose-surface prose-lg max-w-none text-surface-600 dark:text-surface-400 leading-relaxed" set:html={whatIsText} />
           </div>
-          <div class="flex items-start gap-4 px-6 py-5 hover:bg-purple-50/40 dark:hover:bg-purple-900/10 transition-colors duration-200">
-            <span class="flex-shrink-0 mt-0.5 w-8 h-8 rounded-lg bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center">
-              <svg class="w-4 h-4 text-purple-600 dark:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
-            </span>
-            <div>
-              <h3 class="text-sm font-semibold text-surface-900 dark:text-surface-50">Statistical Diagnostics</h3>
-              <p class="mt-1 text-sm text-surface-500 dark:text-surface-400 leading-relaxed">Complete output including R-squared, standard error, degrees of freedom, and confidence levels — assess model quality at a glance.</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-4 px-6 py-5 hover:bg-amber-50/40 dark:hover:bg-amber-900/10 transition-colors duration-200">
-            <span class="flex-shrink-0 mt-0.5 w-8 h-8 rounded-lg bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center">
-              <svg class="w-4 h-4 text-amber-600 dark:text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
-            </span>
-            <div>
-              <h3 class="text-sm font-semibold text-surface-900 dark:text-surface-50">Mobile-Responsive Design</h3>
-              <p class="mt-1 text-sm text-surface-500 dark:text-surface-400 leading-relaxed">Fully adaptive layout for phones, tablets, and desktops — perform regression analysis anywhere without compromise.</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-4 px-6 py-5 hover:bg-rose-50/40 dark:hover:bg-rose-900/10 transition-colors duration-200">
-            <span class="flex-shrink-0 mt-0.5 w-8 h-8 rounded-lg bg-rose-100 dark:bg-rose-900/30 flex items-center justify-center">
-              <svg class="w-4 h-4 text-rose-600 dark:text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            </span>
-            <div>
-              <h3 class="text-sm font-semibold text-surface-900 dark:text-surface-50">International Standards Compliance</h3>
-              <p class="mt-1 text-sm text-surface-500 dark:text-surface-400 leading-relaxed">Calculations follow ISO 3534 and ASTM E2586 standards — trusted results valid for academic, professional, and regulatory use worldwide.</p>
+          <div class="w-full md:w-1/3 flex-shrink-0">
+            <div class="relative group" data-tilt>
+              <div class="absolute -inset-4 bg-primary-500/20 rounded-3xl blur-2xl opacity-40"></div>
+              <img
+                src="/images/what-is-regression.png"
+                alt="Regression Analysis Visual"
+                class="relative rounded-2xl shadow-2xl border border-white/20 w-full h-auto object-cover"
+                loading="lazy"
+                width="400"
+                height="300"
+              />
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Data Requirements Table -->
-  <section class="py-8 md:py-12">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl font-bold text-surface-900 dark:text-surface-50 text-center mb-2">Data Requirements for Regression Equation Calculator</h2>
-      <p class="text-center text-sm text-surface-500 dark:text-surface-400 mb-8">Ensure your dataset meets these standards for reliable results</p>
-      <div class="overflow-hidden rounded-2xl border border-surface-200/60 dark:border-surface-700/40 bg-white/60 dark:bg-surface-800/40 backdrop-blur-sm shadow-sm dark:shadow-surface-950/20">
-        <table class="w-full text-sm">
-          <thead>
-            <tr class="bg-gradient-to-r from-primary-600 via-primary-500 to-accent-500 dark:from-primary-800 dark:via-primary-700 dark:to-accent-700">
-              <th class="px-5 py-3.5 text-left text-xs font-semibold text-white uppercase tracking-wider">Requirement</th>
-              <th class="px-5 py-3.5 text-left text-xs font-semibold text-white uppercase tracking-wider">Minimum Standard</th>
-              <th class="px-5 py-3.5 text-left text-xs font-semibold text-white uppercase tracking-wider">Recommended Standard</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-surface-100 dark:divide-surface-700/40">
-            <tr class="hover:bg-primary-50/30 dark:hover:bg-primary-900/10 transition-colors duration-150">
-              <td class="px-5 py-3.5 font-medium text-surface-800 dark:text-surface-100">Sample Size</td>
-              <td class="px-5 py-3.5 text-surface-600 dark:text-surface-400">3 data points</td>
-              <td class="px-5 py-3.5 text-surface-600 dark:text-surface-400">30+ data points</td>
-            </tr>
-            <tr class="hover:bg-primary-50/30 dark:hover:bg-primary-900/10 transition-colors duration-150">
-              <td class="px-5 py-3.5 font-medium text-surface-800 dark:text-surface-100">Observations per Parameter</td>
-              <td class="px-5 py-3.5 text-surface-600 dark:text-surface-400">2 per coefficient</td>
-              <td class="px-5 py-3.5 text-surface-600 dark:text-surface-400">10+ per coefficient</td>
-            </tr>
-            <tr class="hover:bg-primary-50/30 dark:hover:bg-primary-900/10 transition-colors duration-150">
-              <td class="px-5 py-3.5 font-medium text-surface-800 dark:text-surface-100">Independent Variable Range</td>
-              <td class="px-5 py-3.5 text-surface-600 dark:text-surface-400">2 distinct values</td>
-              <td class="px-5 py-3.5 text-surface-600 dark:text-surface-400">Wide, evenly spaced coverage</td>
-            </tr>
-            <tr class="hover:bg-primary-50/30 dark:hover:bg-primary-900/10 transition-colors duration-150">
-              <td class="px-5 py-3.5 font-medium text-surface-800 dark:text-surface-100">Dependent Variable Type</td>
-              <td class="px-5 py-3.5 text-surface-600 dark:text-surface-400">Continuous (interval/ratio)</td>
-              <td class="px-5 py-3.5 text-surface-600 dark:text-surface-400">Continuous, no ceiling/floor effects</td>
-            </tr>
-            <tr class="hover:bg-primary-50/30 dark:hover:bg-primary-900/10 transition-colors duration-150">
-              <td class="px-5 py-3.5 font-medium text-surface-800 dark:text-surface-100">Data Distribution</td>
-              <td class="px-5 py-3.5 text-surface-600 dark:text-surface-400">Approximately normal residuals</td>
-              <td class="px-5 py-3.5 text-surface-600 dark:text-surface-400">Normal residuals, outliers removed</td>
-            </tr>
-            <tr class="hover:bg-primary-50/30 dark:hover:bg-primary-900/10 transition-colors duration-150">
-              <td class="px-5 py-3.5 font-medium text-surface-800 dark:text-surface-100">Linearity</td>
-              <td class="px-5 py-3.5 text-surface-600 dark:text-surface-400">Scatter plot visual check</td>
-              <td class="px-5 py-3.5 text-surface-600 dark:text-surface-400">Residual plot analysis + Lack-of-Fit test</td>
-            </tr>
-            <tr class="hover:bg-primary-50/30 dark:hover:bg-primary-900/10 transition-colors duration-150">
-              <td class="px-5 py-3.5 font-medium text-surface-800 dark:text-surface-100">Homoscedasticity</td>
-              <td class="px-5 py-3.5 text-surface-600 dark:text-surface-400">Visual spread check</td>
-              <td class="px-5 py-3.5 text-surface-600 dark:text-surface-400">Breusch-Pagan test p &gt; 0.05</td>
-            </tr>
-            <tr class="hover:bg-primary-50/30 dark:hover:bg-primary-900/10 transition-colors duration-150">
-              <td class="px-5 py-3.5 font-medium text-surface-800 dark:text-surface-100">Independence of Errors</td>
-              <td class="px-5 py-3.5 text-surface-600 dark:text-surface-400">Random sampling</td>
-              <td class="px-5 py-3.5 text-surface-600 dark:text-surface-400">Durbin-Watson statistic ≈ 2</td>
-            </tr>
-            <tr class="hover:bg-primary-50/30 dark:hover:bg-primary-900/10 transition-colors duration-150">
-              <td class="px-5 py-3.5 font-medium text-surface-800 dark:text-surface-100">Multicollinearity (Multiple Reg.)</td>
-              <td class="px-5 py-3.5 text-surface-600 dark:text-surface-400">VIF &lt; 10</td>
-              <td class="px-5 py-3.5 text-surface-600 dark:text-surface-400">VIF &lt; 5, condition index &lt; 30</td>
-            </tr>
-            <tr class="hover:bg-primary-50/30 dark:hover:bg-primary-900/10 transition-colors duration-150">
-              <td class="px-5 py-3.5 font-medium text-surface-800 dark:text-surface-100">Outlier Treatment</td>
-              <td class="px-5 py-3.5 text-surface-600 dark:text-surface-400">None required</td>
-              <td class="px-5 py-3.5 text-surface-600 dark:text-surface-400">Grubbs' or Cook's distance applied</td>
-            </tr>
-            <tr class="hover:bg-primary-50/30 dark:hover:bg-primary-900/10 transition-colors duration-150">
-              <td class="px-5 py-3.5 font-medium text-surface-800 dark:text-surface-100">Missing Data</td>
-              <td class="px-5 py-3.5 text-surface-600 dark:text-surface-400">Complete cases only</td>
-              <td class="px-5 py-3.5 text-surface-600 dark:text-surface-400">Listwise deletion or multiple imputation</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- What Is a Regression Equation? -->
-  <section class="py-8 md:py-12">
-    <div class="content-box max-w-4xl mx-auto rounded-2xl border border-surface-200/60 dark:border-surface-700/40 bg-white/60 dark:bg-surface-800/40 backdrop-blur-sm p-6 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-primary-500/0 before:to-accent-500/0 hover:before:from-primary-500/5 hover:before:to-accent-500/5 dark:hover:before:from-primary-400/8 dark:hover:before:to-accent-400/8 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-surface-950/40 hover:-translate-y-1 hover:border-primary-200 dark:hover:border-primary-700/50 transition-all duration-300">
-      <div class="flex flex-col md:flex-row gap-6 items-center">
-        <div class="flex-1">
-          <h2 class="text-2xl font-bold text-surface-900 dark:text-surface-50 mb-4">{whatIsTitle}</h2>
-          <div class="prose prose-surface max-w-none text-surface-600 dark:text-surface-400 leading-relaxed" set:html={whatIsText} />
+    <!-- Why Use / Use Cases -->
+    <section class="reveal-on-scroll">
+      <div class="grid md:grid-cols-2 gap-10">
+        <div class="p-8 rounded-[2.5rem] border border-surface-200 dark:border-surface-700 bg-white dark:bg-surface-800 shadow-lg">
+          <h2 class="text-2xl font-bold text-surface-900 dark:text-surface-50 mb-8 flex items-center gap-3">
+            <span class="w-1.5 h-8 bg-primary-600 rounded-full"></span>
+            {whyUseTitle}
+          </h2>
+          <ul class="space-y-4">
+            {whyUsePoints.map((point) => (
+              <li class="flex items-start gap-4">
+                <div class="w-6 h-6 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-600 dark:text-primary-400 flex-shrink-0 mt-0.5">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <span class="text-surface-600 dark:text-surface-400 leading-relaxed">{point}</span>
+              </li>
+            ))}
+          </ul>
         </div>
-        <div class="w-full md:w-2/5 flex-shrink-0">
-          <div class="interactive-img-wrapper reveal-on-scroll" data-tilt>
-            <div class="interactive-img-glow"></div>
-            <img
-              src="/images/what-is-regression.png"
-              alt="Visual explanation of y = mx + b showing slope and intercept on a coordinate plane"
-              class="interactive-img rounded-xl"
-              loading="lazy"
-              width="400"
-              height="225"
-            />
-            <div class="interactive-img-shine"></div>
-          </div>
+        <div class="p-8 rounded-[2.5rem] border border-surface-200 dark:border-surface-700 bg-white dark:bg-surface-800 shadow-lg">
+          <h2 class="text-2xl font-bold text-surface-900 dark:text-surface-50 mb-8 flex items-center gap-3">
+            <span class="w-1.5 h-8 bg-accent-600 rounded-full"></span>
+            {useCasesTitle}
+          </h2>
+          <ul class="space-y-4">
+            {useCasesPoints.map((point) => (
+              <li class="flex items-start gap-4">
+                <div class="w-6 h-6 rounded-full bg-accent-100 dark:bg-accent-900/30 flex items-center justify-center text-accent-600 dark:text-accent-400 flex-shrink-0 mt-0.5">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                </div>
+                <span class="text-surface-600 dark:text-surface-400 leading-relaxed">{point}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
+    </section>
+
+    <!-- How It Works & Reference -->
+    <div class="space-y-24">
+        <HowItWorks translations={translations} />
+        <ChartTable translations={translations} />
     </div>
-  </section>
 
-  <!-- Why Use / Use Cases -->
-  <section class="py-8 md:py-12 bg-surface-50/40 dark:bg-surface-900/40 rounded-t-3xl -mt-2">
-
-    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
-      <div class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-6 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-primary-500/0 before:to-primary-500/0 hover:before:from-primary-500/5 hover:before:to-primary-500/8 dark:hover:before:from-primary-400/8 dark:hover:before:to-primary-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-primary-900/10 hover:-translate-y-1 hover:border-primary-300 dark:hover:border-primary-700/50 transition-all duration-300">
-        <h2 class="text-xl font-bold text-surface-900 dark:text-surface-50 mb-4">{whyUseTitle}</h2>
-        <ul class="space-y-3">
-          {whyUsePoints.map((point, i) => (
-            <li class="flex items-start gap-3 group/item translate-x-0 hover:translate-x-1 transition-transform duration-200" style={`transition-delay: ${i * 40}ms`}>
-              <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center group-hover/item:bg-primary-200 dark:group-hover/item:bg-primary-800/40 group-hover/item:scale-110 transition-all duration-200">
-                <svg class="w-3 h-3 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
-              </span>
-              <span class="text-sm text-surface-600 dark:text-surface-400 leading-relaxed">{point}</span>
-            </li>
-          ))}
-        </ul>
+    <!-- FAQ -->
+    <section class="reveal-on-scroll">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold text-surface-900 dark:text-surface-50 text-center mb-12">{faqTitle}</h2>
+        {displayFaqs.length > 0 && <FAQ translations={translations} />}
       </div>
-      <div class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-6 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-accent-500/0 before:to-accent-500/0 hover:before:from-accent-500/5 hover:before:to-accent-500/8 dark:hover:before:from-accent-400/8 dark:hover:before:to-accent-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-accent-900/10 hover:-translate-y-1 hover:border-accent-300 dark:hover:border-accent-700/50 transition-all duration-300">
-        <h2 class="text-xl font-bold text-surface-900 dark:text-surface-50 mb-4">{useCasesTitle}</h2>
-        <ul class="space-y-3">
-          {useCasesPoints.map((point, i) => (
-            <li class="flex items-start gap-3 group/item translate-x-0 hover:translate-x-1 transition-transform duration-200" style={`transition-delay: ${i * 40}ms`}>
-              <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-accent-100 dark:bg-accent-900/30 flex items-center justify-center group-hover/item:bg-accent-200 dark:group-hover/item:bg-accent-800/40 group-hover/item:scale-110 transition-all duration-200">
-                <svg class="w-3 h-3 text-accent-600 dark:text-accent-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
-              </span>
-              <span class="text-sm text-surface-600 dark:text-surface-400 leading-relaxed">{point}</span>
-            </li>
-          ))}
-        </ul>
+    </section>
+
+    <!-- Tool Grid -->
+    <section class="reveal-on-scroll">
+      <h2 class="text-3xl font-bold text-surface-900 dark:text-surface-50 text-center mb-12">Specialized Regression Tools</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { href: "/exponential-regression-calculator/", title: "Exponential Regression", desc: "Model growth & decay with y = a·e^(bx)", icon: "📈", accent: "primary" },
+          { href: "/quadratic-regression-calculator/", title: "Quadratic Regression", desc: "Model curves with y = ax² + bx + c", icon: "📐", accent: "accent" },
+          { href: "/multiple-regression-calculator/", title: "Multiple Regression", desc: "Use 2+ predictors with b₀ + b₁x₁ + b₂x₂", icon: "📊", accent: "purple" },
+          { href: "/pearson-correlation-calculator/", title: "Pearson Correlation", desc: "Measure relationship strength (r)", icon: "🧬", accent: "emerald" },
+          { href: "/grubbs-test-calculator/", title: "Grubbs' Test", desc: "Identify statistical outliers with precision", icon: "⚠️", accent: "amber" },
+          { href: "/regression-assumptions-checker/", title: "Assumptions Checker", desc: "Verify OLS pillars for model validity", icon: "✅", accent: "rose" }
+        ].map(tool => (
+          <a href={tool.href} class="group p-6 rounded-3xl border border-surface-200 dark:border-surface-700 bg-white dark:bg-surface-800 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+            <div class={`w-12 h-12 rounded-xl bg-${tool.accent}-100 dark:bg-${tool.accent}-900/30 flex items-center justify-center mb-4 text-xl group-hover:scale-110 transition-transform`}>
+              {tool.icon}
+            </div>
+            <h3 class={`text-lg font-bold text-${tool.accent}-700 dark:text-${tool.accent}-400 mb-2`}>{tool.title}</h3>
+            <p class="text-sm text-surface-500 dark:text-surface-400">{tool.desc}</p>
+          </a>
+        ))}
       </div>
-    </div>
-  </section>
-
-  <!-- How It Works -->
-  <section class="py-8 md:py-10">
-
-    <HowItWorks translations={translations} />
-  </section>
-
-  <!-- Statistics Reference Table -->
-  <section class="py-8 md:py-10 bg-surface-50/40 dark:bg-surface-900/40 rounded-t-3xl -mt-2">
-
-    <ChartTable translations={translations} />
-  </section>
-
-  <!-- FAQ -->
-  <section class="py-8 md:py-12">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="text-2xl font-bold text-surface-900 dark:text-surface-50 text-center mb-6">{faqTitle}</h2>
-    </div>
-    {displayFaqs.length > 0 && <FAQ translations={translations} />}
-  </section>
-
-  <!-- All Calculator Tools -->
-  <section class="py-8 md:py-12 bg-surface-50/40 dark:bg-surface-900/40 rounded-t-3xl -mt-2">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-2xl font-bold text-surface-900 dark:text-surface-50 text-center mb-8">Our Regression &amp; Statistics Tools</h2>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        <a href="/exponential-regression-calculator/" class="group/card rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-5 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-primary-500/0 before:to-primary-500/0 hover:before:from-primary-500/5 hover:before:to-primary-500/8 dark:hover:before:from-primary-400/8 dark:hover:before:to-primary-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-primary-900/10 hover:-translate-y-1 hover:border-primary-300 dark:hover:border-primary-700/50 transition-all duration-300">
-          <div class="flex items-center gap-3 mb-2">
-            <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center group-hover/card:scale-110 transition-transform duration-200">
-              <svg class="w-5 h-5 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
-            </span>
-            <h3 class="text-base font-bold text-primary-700 dark:text-primary-400">Exponential Regression</h3>
-          </div>
-          <p class="text-sm text-surface-500 dark:text-surface-400">Model growth &amp; decay with y = a·e^(bx), R², predictions</p>
-        </a>
-        <a href="/quadratic-regression-calculator/" class="group/card rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-5 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-accent-500/0 before:to-accent-500/0 hover:before:from-accent-500/5 hover:before:to-accent-500/8 dark:hover:before:from-accent-400/8 dark:hover:before:to-accent-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-accent-900/10 hover:-translate-y-1 hover:border-accent-300 dark:hover:border-accent-700/50 transition-all duration-300">
-          <div class="flex items-center gap-3 mb-2">
-            <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-accent-100 dark:bg-accent-900/30 flex items-center justify-center group-hover/card:scale-110 transition-transform duration-200">
-              <svg class="w-5 h-5 text-accent-600 dark:text-accent-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" /></svg>
-            </span>
-            <h3 class="text-base font-bold text-accent-700 dark:text-accent-400">Quadratic Regression</h3>
-          </div>
-          <p class="text-sm text-surface-500 dark:text-surface-400">Model curves with y = ax² + bx + c</p>
-        </a>
-        <a href="/multiple-regression-calculator/" class="group/card rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-5 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-purple-500/0 before:to-purple-500/0 hover:before:from-purple-500/5 hover:before:to-purple-500/8 dark:hover:before:from-purple-400/8 dark:hover:before:to-purple-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-purple-900/10 hover:-translate-y-1 hover:border-purple-300 dark:hover:border-purple-700/50 transition-all duration-300">
-          <div class="flex items-center gap-3 mb-2">
-            <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center group-hover/card:scale-110 transition-transform duration-200">
-              <svg class="w-5 h-5 text-purple-600 dark:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" /></svg>
-            </span>
-            <h3 class="text-base font-bold text-purple-700 dark:text-purple-400">Multiple Regression</h3>
-          </div>
-          <p class="text-sm text-surface-500 dark:text-surface-400">Use 2+ predictors with y = b₀ + b₁x₁ + b₂x₂</p>
-        </a>
-        <a href="/pearson-correlation-calculator/" class="group/card rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-5 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-emerald-500/0 before:to-emerald-500/0 hover:before:from-emerald-500/5 hover:before:to-emerald-500/8 dark:hover:before:from-emerald-400/8 dark:hover:before:to-emerald-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-emerald-900/10 hover:-translate-y-1 hover:border-emerald-300 dark:hover:border-emerald-700/50 transition-all duration-300">
-          <div class="flex items-center gap-3 mb-2">
-            <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center group-hover/card:scale-110 transition-transform duration-200">
-              <svg class="w-5 h-5 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
-            </span>
-            <h3 class="text-base font-bold text-emerald-700 dark:text-emerald-400">Pearson Correlation</h3>
-          </div>
-          <p class="text-sm text-surface-500 dark:text-surface-400">Measure linear relationship strength with r and p-value</p>
-        </a>
-        <a href="/grubbs-test-calculator/" class="group/card rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-5 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-amber-500/0 before:to-amber-500/0 hover:before:from-amber-500/5 hover:before:to-amber-500/8 dark:hover:before:from-amber-400/8 dark:hover:before:to-amber-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-amber-900/10 hover:-translate-y-1 hover:border-amber-300 dark:hover:border-amber-700/50 transition-all duration-300">
-          <div class="flex items-center gap-3 mb-2">
-            <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center group-hover/card:scale-110 transition-transform duration-200">
-              <svg class="w-5 h-5 text-amber-600 dark:text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4.5c-.77-.833-2.694-.833-3.464 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z" /></svg>
-            </span>
-            <h3 class="text-base font-bold text-amber-700 dark:text-amber-400">Grubbs' Test</h3>
-          </div>
-          <p class="text-sm text-surface-500 dark:text-surface-400">Detect outliers with G statistic and critical value</p>
-        </a>
-        <a href="/regression-assumptions-checker/" class="group/card rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-5 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-rose-500/0 before:to-rose-500/0 hover:before:from-rose-500/5 hover:before:to-rose-500/8 dark:hover:before:from-rose-400/8 dark:hover:before:to-rose-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-rose-900/10 hover:-translate-y-1 hover:border-rose-300 dark:hover:border-rose-700/50 transition-all duration-300">
-          <div class="flex items-center gap-3 mb-2">
-            <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-rose-100 dark:bg-rose-900/30 flex items-center justify-center group-hover/card:scale-110 transition-transform duration-200">
-              <svg class="w-5 h-5 text-rose-600 dark:text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            </span>
-            <h3 class="text-base font-bold text-rose-700 dark:text-rose-400">Assumptions Checker</h3>
-          </div>
-          <p class="text-sm text-surface-500 dark:text-surface-400">Verify linearity, independence, homoscedasticity, normality</p>
-        </a>
-      </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </BaseLayout>
 
 <script>
-  // ── Reveal on Scroll (IntersectionObserver) ──
+  // ── Reveal on Scroll ──
   const revealElements = document.querySelectorAll('.reveal-on-scroll');
   const revealObserver = new IntersectionObserver(
     (entries) => {
@@ -425,90 +321,36 @@ const faqTitle: string = (home as any).faqTitle ?? 'Frequently Asked Questions';
   );
   revealElements.forEach((el) => revealObserver.observe(el));
 
-  // ── Interactive 3D Tilt Effect (Optimized) ──
+  // ── 3D Tilt ──
   const tiltElements = document.querySelectorAll<HTMLElement>('[data-tilt]');
   tiltElements.forEach((el) => {
-    const img = el.querySelector<HTMLElement>('.interactive-img');
-    const glow = el.querySelector<HTMLElement>('.interactive-img-glow');
-    const shine = el.querySelector<HTMLElement>('.interactive-img-shine');
     let rect: DOMRect | null = null;
-
-    el.addEventListener('mouseenter', () => {
-      rect = el.getBoundingClientRect();
-    });
-
+    el.addEventListener('mouseenter', () => { rect = el.getBoundingClientRect(); });
     el.addEventListener('mousemove', (e: MouseEvent) => {
       if (!rect) rect = el.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
-      const rotateX = ((y - centerY) / centerY) * -8;
-      const rotateY = ((x - centerX) / centerX) * 8;
-      const percentX = (x / rect.width) * 100;
-      const percentY = (y / rect.height) * 100;
-
-      if (img) {
-        img.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
-      }
-      if (glow) {
-        glow.style.opacity = '1';
-        glow.style.background = `radial-gradient(circle at ${percentX}% ${percentY}%, rgba(99, 102, 241, 0.25), transparent 60%)`;
-      }
-      if (shine) {
-        shine.style.opacity = '1';
-        shine.style.background = `linear-gradient(${105 + rotateY * 3}deg, transparent 30%, rgba(255,255,255,0.12) 50%, transparent 70%)`;
-      }
+      const rotateX = ((y - centerY) / centerY) * -10;
+      const rotateY = ((x - centerX) / centerX) * 10;
+      el.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
     });
-
     el.addEventListener('mouseleave', () => {
       rect = null;
-      if (img) {
-        img.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
-      }
-      if (glow) glow.style.opacity = '0';
-      if (shine) shine.style.opacity = '0';
+      el.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
     });
   });
-
-  // ── Parallax on Scroll (Optimized with IntersectionObserver) ──
-  const parallaxImages = document.querySelectorAll<HTMLElement>('.interactive-img');
-  const visibleImages = new Set<HTMLElement>();
-
-  const parallaxObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) visibleImages.add(entry.target as HTMLElement);
-      else visibleImages.delete(entry.target as HTMLElement);
-    });
-  }, { threshold: 0 });
-
-  parallaxImages.forEach(img => parallaxObserver.observe(img));
-
-  let ticking = false;
-  const onScroll = () => {
-    if (!ticking && visibleImages.size > 0) {
-      requestAnimationFrame(() => {
-        const updates: {img: HTMLElement, offset: number}[] = [];
-        const viewH = window.innerHeight;
-        
-        // Batch READS
-        visibleImages.forEach((img) => {
-          const rect = img.getBoundingClientRect();
-          const progress = (viewH - rect.top) / (viewH + rect.height);
-          updates.push({ img, offset: (progress - 0.5) * 20 });
-        });
-
-        // Batch WRITES
-        updates.forEach(({ img, offset }) => {
-          if (!img.style.transform.includes('rotateX')) {
-            img.style.transform = `translateY(${offset}px)`;
-          }
-        });
-        
-        ticking = false;
-      });
-      ticking = true;
-    }
-  };
-  window.addEventListener('scroll', onScroll, { passive: true });
 </script>
+
+<style>
+  .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .reveal-on-scroll.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>

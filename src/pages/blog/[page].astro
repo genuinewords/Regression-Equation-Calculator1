@@ -57,30 +57,47 @@ const itemListSchema = {
   <script type="application/ld+json" set:html={JSON.stringify(blogSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)} />
 
-  <section class="py-16 md:py-24">
-    <div class="max-w-6xl mx-auto">
-      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-primary-700 to-accent-600 bg-clip-text text-transparent">
-        {translations.blog.title}
-      </h1>
-      <p class="mt-4 text-lg text-surface-600">{resultsMeta}</p>
+  <!-- Hero Section -->
+  <section class="relative pt-16 pb-12 overflow-hidden">
+    <!-- Ambient Background -->
+    <div class="absolute inset-0 -z-10 pointer-events-none">
+      <div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary-100/30 dark:bg-primary-900/10 blur-[120px] rounded-full animate-pulse"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-accent-100/30 dark:bg-accent-900/10 blur-[100px] rounded-full animate-pulse" style="animation-delay: 2s"></div>
+    </div>
 
-      <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {page.data.map((post) => {
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center reveal-on-scroll">
+        <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight bg-gradient-to-r from-primary-700 via-primary-600 to-accent-600 dark:from-primary-400 dark:via-primary-500 dark:to-accent-400 bg-clip-text text-transparent leading-tight mb-6">
+          {translations.blog.title}
+        </h1>
+        <p class="text-xl text-surface-600 dark:text-surface-400 max-w-2xl mx-auto leading-relaxed">
+          {resultsMeta}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-20 bg-surface-50/60 dark:bg-surface-800/40 rounded-t-[3rem] -mt-6 border-t border-surface-200/50 dark:border-surface-700/50 shadow-2xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {page.data.map((post, i) => {
           const slug = post.id.replace(/\.(md|mdx)$/, '');
           return (
-            <BlogCard
-              title={post.data.title}
-              description={post.data.description}
-              image={post.data.image}
-              href={`/blog/${slug}/`}
-              readMoreLabel={translations.blog.readMore}
-            />
+            <div class="reveal-on-scroll" style={`transition-delay: ${i % 3 * 100}ms`}>
+                <BlogCard
+                  title={post.data.title}
+                  description={post.data.description}
+                  image={post.data.image}
+                  href={`/blog/${slug}/`}
+                  readMoreLabel={translations.blog.readMore}
+                />
+            </div>
           );
         })}
       </div>
 
       {page.lastPage > 1 && (
-        <div class="mt-16">
+        <div class="mt-20 flex justify-center reveal-on-scroll">
           <Pagination
             currentPage={page.currentPage}
             totalPages={page.lastPage}
@@ -93,3 +110,21 @@ const itemListSchema = {
     </div>
   </section>
 </BaseLayout>
+
+<script>
+  const revealElements = document.querySelectorAll('.reveal-on-scroll');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  revealElements.forEach((el) => revealObserver.observe(el));
+</script>
+
+<style>
+  .reveal-on-scroll { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
+  .reveal-on-scroll.revealed { opacity: 1; transform: translateY(0); }
+</style>

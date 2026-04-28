@@ -1,6 +1,7 @@
 ---
 import BaseLayout from 'theme/layouts/BaseLayout.astro';
-import LeastSquaresRegressionLineCalculator from 'theme/components/LeastSquaresRegressionLineCalculator.astro';
+import LeastSquaresRegressionCalculator from 'theme/components/LeastSquaresRegressionCalculator.astro';
+import ToolInfoBox from 'theme/components/ToolInfoBox.astro';
 import { mergeTranslations, getLocalizedUrl, extractLocaleFromParams, getLocaleStaticPaths } from 'theme/i18n/utils';
 import siteConfig from 'src/data/site-config.json';
 
@@ -11,23 +12,22 @@ export function getStaticPaths() {
 const { locale } = Astro.params;
 const currentLocale = extractLocaleFromParams(Astro.params);
 const translations = await mergeTranslations(currentLocale);
-const lsc = (translations as any).lsrlCalc;
+const lsc = (translations as any).lsCalc;
 
 const canonicalUrl = new URL(getLocalizedUrl('/least-squares-regression-line-calculator/', currentLocale), siteConfig.siteUrl).href;
 
 const whatIsTitle = lsc?.whatIsTitle || 'What Is the Least Squares Regression Line?';
 const whatIsText = lsc?.whatIsText || '';
-const howWorksTitle = lsc?.howWorksTitle || 'The Least Squares Method';
+const howWorksTitle = lsc?.howWorksTitle || 'How the Least Squares Method Works';
 const howWorksPoints: string[] = lsc?.howWorksPoints ?? [];
 const whenTitle = lsc?.whenTitle || 'When to Use Least Squares Regression';
 const whenPoints: string[] = lsc?.whenPoints ?? [];
-const avoidTitle = lsc?.avoidTitle || 'When to Avoid Least Squares Regression';
-const avoidPoints: string[] = lsc?.avoidPoints ?? [];
-const seeAlsoTitle = lsc?.seeAlsoTitle || 'See Also';
+const assumptionsTitle = lsc?.assumptionsTitle || 'Assumptions of Least Squares Line';
+const assumptionsPoints: string[] = lsc?.assumptionsPoints ?? [];
 const breadcrumb = lsc?.breadcrumb || 'Back to Main Regression Calculator';
 
 const pageTitle = lsc?.title || 'Least Squares Regression Line Calculator';
-const pageDescription = lsc?.description || 'Calculate the least squares regression line y = mx + b';
+const pageDescription = lsc?.description || 'Calculate the line of best fit by minimizing the sum of squared residuals';
 ---
 
 <BaseLayout
@@ -36,118 +36,197 @@ const pageDescription = lsc?.description || 'Calculate the least squares regress
   locale={currentLocale}
   canonicalUrl={canonicalUrl}
 >
-  <section class="py-10 md:py-14">
-    <div class="max-w-3xl mx-auto text-center">
-      <nav class="mb-4 text-sm text-surface-500 dark:text-surface-400">
-        <a href={getLocalizedUrl('/', currentLocale)} class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{breadcrumb}</a>
-      </nav>
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-primary-700 via-primary-600 to-accent-600 dark:from-primary-400 dark:via-primary-500 dark:to-accent-400 bg-clip-text text-transparent leading-tight">
-        {pageTitle}
-      </h1>
+  <!-- Hero Section -->
+  <section class="relative pt-12 pb-16 overflow-hidden">
+    <!-- Ambient Background -->
+    <div class="absolute inset-0 -z-10 pointer-events-none">
+        <div class="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-primary-100/30 dark:bg-primary-900/10 blur-[100px] rounded-full animate-pulse"></div>
+        <div class="absolute bottom-1/4 left-1/3 w-[350px] h-[350px] bg-accent-100/30 dark:bg-accent-900/10 blur-[90px] rounded-full animate-pulse" style="animation-delay: 2s"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+        <div class="flex-1 text-center lg:text-left reveal-on-scroll">
+          <nav class="mb-6 text-sm font-medium flex items-center justify-center lg:justify-start gap-2">
+            <a href={getLocalizedUrl('/', currentLocale)} class="text-surface-500 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{breadcrumb}</a>
+          </nav>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-primary-700 via-primary-600 to-accent-600 dark:from-primary-400 dark:via-primary-500 dark:to-accent-400 bg-clip-text text-transparent leading-tight mb-6">
+            {pageTitle}
+          </h1>
+          <p class="text-lg text-surface-600 dark:text-surface-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8">
+            {pageDescription}
+          </p>
+          <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+            <a href="#calculator-tool" class="px-8 py-3 rounded-xl bg-primary-600 text-white font-semibold shadow-lg shadow-primary-600/20 hover:bg-primary-700 hover:shadow-xl hover:shadow-primary-600/30 transition-all duration-300 hover:-translate-y-1">
+              {translations.common?.calculateNow || 'Calculate Now'}
+            </a>
+          </div>
+        </div>
+        <div class="flex-1 w-full max-w-lg lg:max-w-none reveal-on-scroll" style="transition-delay: 200ms">
+          <div class="relative group" data-tilt>
+            <div class="absolute -inset-4 bg-gradient-to-r from-primary-500/20 to-accent-500/20 rounded-3xl blur-2xl opacity-40 group-hover:opacity-70 transition-opacity duration-500"></div>
+            <div class="relative overflow-hidden rounded-3xl border border-white/20 shadow-2xl">
+              <img
+                src="/images/least-squares-hero.png"
+                alt="Least Squares Regression Visualization"
+                class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
+                width="600"
+                height="400"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-900/20 via-transparent to-transparent opacity-40"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="py-8 md:py-12 bg-surface-50/60 dark:bg-surface-800/40 rounded-t-3xl -mt-2">
-    <div class="max-w-4xl mx-auto">
-      <LeastSquaresRegressionLineCalculator translations={translations} />
+  <!-- Calculator Tool -->
+  <section id="calculator-tool" class="py-12 md:py-16 bg-surface-50/60 dark:bg-surface-800/40 rounded-t-[3rem] -mt-6">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <LeastSquaresRegressionCalculator translations={translations} />
     </div>
   </section>
 
-  <section class="py-8 md:py-12">
-    <div class="max-w-3xl mx-auto">
-      <p class="text-lg md:text-xl text-surface-600 dark:text-surface-400 leading-relaxed mb-6">
-        {pageDescription}
-      </p>
-    </div>
-  </section>
+  <!-- Tool Info Box -->
+  <ToolInfoBox
+    toolName={pageTitle}
+    keyPoints={[
+      {
+        icon: "📏",
+        title: translations.common?.bestFitTitle || "Best Fit Line",
+        description: lsc?.bestFitPoint || "Find the unique line that minimizes the total distance from all data points."
+      },
+      {
+        icon: "📊",
+        title: translations.common?.statsTitle || "Statistical Output",
+        description: lsc?.statsPoint || "Get the full equation y = a + bx, slope, intercept, and R-squared metrics."
+      },
+      {
+        icon: "📉",
+        title: translations.common?.residualTitle || "Residual Analysis",
+        description: lsc?.residualPoint || "Understand the deviation between observed values and model predictions."
+      }
+    ]}
+    highlightTip={lsc?.tip || "The least squares method is the gold standard for linear regression in most scientific fields."}
+  />
 
-  <section class="py-8 md:py-12">
-    <div class="content-box max-w-3xl mx-auto rounded-2xl border border-surface-200/60 dark:border-surface-700/40 bg-white/60 dark:bg-surface-800/40 backdrop-blur-sm p-6 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-r before:from-primary-500/0 before:to-accent-500/0 hover:before:from-primary-500/5 hover:before:to-accent-500/5 dark:hover:before:from-primary-400/8 dark:hover:before:to-accent-400/8 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-surface-950/40 hover:-translate-y-1 hover:border-primary-200 dark:hover:border-primary-700/50 transition-all duration-300">
-      <h2 class="text-2xl font-bold text-surface-900 dark:text-surface-50 mb-4">{whatIsTitle}</h2>
-      <div class="prose prose-surface max-w-none text-surface-600 dark:text-surface-400 leading-relaxed" set:html={whatIsText} />
-    </div>
-  </section>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-12 py-16">
+    <!-- What Is -->
+    <section class="reveal-on-scroll">
+      <div class="content-box rounded-3xl border border-surface-200/60 dark:border-surface-700/40 bg-white dark:bg-surface-800/60 backdrop-blur-md p-8 md:p-10 shadow-xl relative overflow-hidden group">
+        <h2 class="text-2xl md:text-3xl font-bold text-surface-900 dark:text-surface-50 mb-6 flex items-center gap-3">
+          <span class="w-1.5 h-8 bg-primary-600 rounded-full"></span>
+          {whatIsTitle}
+        </h2>
+        <div class="prose prose-surface max-w-none text-surface-600 dark:text-surface-400 leading-relaxed text-lg" set:html={whatIsText} />
+      </div>
+    </section>
 
-  <section class="py-8 md:py-12 bg-surface-50/40 dark:bg-surface-900/40 rounded-t-3xl -mt-2">
-    <div class="content-box max-w-3xl mx-auto rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-6 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-primary-500/0 before:to-primary-500/0 hover:before:from-primary-500/5 hover:before:to-primary-500/8 dark:hover:before:from-primary-400/8 dark:hover:before:to-primary-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-primary-900/10 hover:-translate-y-1 hover:border-primary-300 dark:hover:border-primary-700/50 transition-all duration-300">
-      <h2 class="text-xl font-bold text-surface-900 dark:text-surface-50 mb-4">{howWorksTitle}</h2>
-      <ul class="space-y-3">
-        {howWorksPoints.map((point, i) => (
-          <li class="flex items-start gap-3 group/item translate-x-0 hover:translate-x-1 transition-transform duration-200" style={`transition-delay: ${i * 40}ms`}>
-            <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center group-hover/item:bg-blue-200 dark:group-hover/item:bg-blue-800/40 group-hover/item:scale-110 transition-all duration-200">
-              <svg class="w-3 h-3 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
-            </span>
-            <div class="text-sm text-surface-600 dark:text-surface-400 leading-relaxed" set:html={point} />
-          </li>
-        ))}
-      </ul>
-    </div>
-  </section>
-
-  <section class="py-8 md:py-12 bg-surface-50/40 dark:bg-surface-900/40 rounded-t-3xl -mt-2">
-    <div class="max-w-3xl mx-auto grid md:grid-cols-2 gap-6">
-      <div class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-6 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-green-500/0 before:to-emerald-500/0 hover:before:from-green-500/5 hover:before:to-emerald-500/5 dark:hover:before:from-green-400/8 dark:hover:before:to-emerald-400/8 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-green-900/10 hover:-translate-y-1 hover:border-green-300 dark:hover:border-green-700/50 transition-all duration-300">
-        <h2 class="text-xl font-bold text-surface-900 dark:text-surface-50 mb-4">{whenTitle}</h2>
-        <ul class="space-y-3">
-          {whenPoints.map((point, i) => (
-            <li class="flex items-start gap-3 group/item translate-x-0 hover:translate-x-1 transition-transform duration-200" style={`transition-delay: ${i * 40}ms`}>
-              <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center group-hover/item:bg-green-200 dark:group-hover/item:bg-green-800/40 group-hover/item:scale-110 transition-all duration-200">
-                <svg class="w-3 h-3 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
-              </span>
-              <div class="text-sm text-surface-600 dark:text-surface-400 leading-relaxed" set:html={point} />
+    <!-- How It Works -->
+    <section class="reveal-on-scroll">
+      <div class="content-box rounded-3xl border border-surface-200/60 dark:border-surface-700/40 bg-white dark:bg-surface-800/60 backdrop-blur-md p-8 md:p-10 shadow-xl relative overflow-hidden group">
+        <h2 class="text-2xl md:text-3xl font-bold text-surface-900 dark:text-surface-50 mb-6 flex items-center gap-3">
+          <span class="w-1.5 h-8 bg-accent-600 rounded-full"></span>
+          {howWorksTitle}
+        </h2>
+        <ul class="space-y-4">
+          {howWorksPoints.map((point, i) => (
+            <li class="flex items-start gap-4 p-4 rounded-xl bg-surface-50/50 dark:bg-surface-900/40 border border-surface-100 dark:border-surface-700/40 hover:border-accent-300 transition-all">
+              <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-accent-100 dark:bg-accent-900/30 flex items-center justify-center text-sm font-bold text-accent-700 dark:text-accent-400">{i + 1}</span>
+              <div class="text-sm text-surface-700 dark:text-surface-300 leading-relaxed pt-1" set:html={point} />
             </li>
           ))}
         </ul>
       </div>
-      <div class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-6 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-orange-500/0 before:to-amber-500/0 hover:before:from-orange-500/5 hover:before:to-amber-500/5 dark:hover:before:from-orange-400/8 dark:hover:before:to-amber-400/8 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-surface-950/40 hover:-translate-y-1 hover:border-orange-200 dark:hover:border-orange-700/50 transition-all duration-300">
-        <h2 class="text-xl font-bold text-surface-900 dark:text-surface-50 mb-4">{avoidTitle}</h2>
-        <ul class="space-y-3">
-          {avoidPoints.map((point, i) => (
-            <li class="flex items-start gap-3 group/item translate-x-0 hover:translate-x-1 transition-transform duration-200" style={`transition-delay: ${i * 40}ms`}>
-              <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center group-hover/item:bg-orange-200 dark:group-hover/item:bg-orange-800/40 group-hover/item:scale-110 transition-all duration-200">
-                <svg class="w-3 h-3 text-orange-600 dark:text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4.5c-.77-.833-2.694-.833-3.464 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z" /></svg>
-              </span>
-              <div class="text-sm text-surface-600 dark:text-surface-400 leading-relaxed" set:html={point} />
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="py-8 md:py-12">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="text-2xl font-bold text-surface-900 dark:text-surface-50 mb-6">{seeAlsoTitle}</h2>
-      <div class="grid sm:grid-cols-2 gap-4">
-        <a href={getLocalizedUrl('/quadratic-regression-calculator/', currentLocale)} class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-5 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-accent-500/0 before:to-accent-500/0 hover:before:from-accent-500/5 hover:before:to-accent-500/8 dark:hover:before:from-accent-400/8 dark:hover:before:to-accent-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-accent-900/10 hover:-translate-y-1 hover:border-accent-300 dark:hover:border-accent-700/50 transition-all duration-300 group/card">
-          <h3 class="text-base font-bold text-accent-700 dark:text-accent-400 group-hover/card:text-accent-800 dark:group-hover/card:text-accent-300">{lsc?.seeAlsoQuad || 'Quadratic Regression Calculator'}</h3>
-          <p class="text-sm text-surface-500 dark:text-surface-400 mt-1">{lsc?.seeAlsoQuadDesc || 'Model curved relationships with y = ax² + bx + c'}</p>
-        </a>
-        <a href={getLocalizedUrl('/multiple-regression-calculator/', currentLocale)} class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-5 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-primary-500/0 before:to-primary-500/0 hover:before:from-primary-500/5 hover:before:to-primary-500/8 dark:hover:before:from-primary-400/8 dark:hover:before:to-primary-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-primary-900/10 hover:-translate-y-1 hover:border-primary-300 dark:hover:border-primary-700/50 transition-all duration-300 group/card">
-          <h3 class="text-base font-bold text-primary-700 dark:text-primary-400 group-hover/card:text-primary-800 dark:group-hover/card:text-primary-300">{lsc?.seeAlsoMulti || 'Multiple Regression Calculator'}</h3>
-          <p class="text-sm text-surface-500 dark:text-surface-400 mt-1">{lsc?.seeAlsoMultiDesc || 'Use two or more predictors'}</p>
-        </a>
-        <a href={getLocalizedUrl('/pearson-correlation-calculator/', currentLocale)} class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-5 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-emerald-500/0 before:to-emerald-500/0 hover:before:from-emerald-500/5 hover:before:to-emerald-500/8 dark:hover:before:from-emerald-400/8 dark:hover:before:to-emerald-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-emerald-900/10 hover:-translate-y-1 hover:border-emerald-300 dark:hover:border-emerald-700/50 transition-all duration-300 group/card">
-          <h3 class="text-base font-bold text-emerald-700 dark:text-emerald-400 group-hover/card:text-emerald-800 dark:group-hover/card:text-emerald-300">{lsc?.seeAlsoPearson || 'Pearson Correlation Calculator'}</h3>
-          <p class="text-sm text-surface-500 dark:text-surface-400 mt-1">{lsc?.seeAlsoPearsonDesc || 'Measure the strength of the linear relationship'}</p>
-        </a>
-        <a href={getLocalizedUrl('/grubbs-test-calculator/', currentLocale)} class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-5 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-amber-500/0 before:to-amber-500/0 hover:before:from-amber-500/5 hover:before:to-amber-500/8 dark:hover:before:from-amber-400/8 dark:hover:before:to-amber-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-amber-900/10 hover:-translate-y-1 hover:border-amber-300 dark:hover:border-amber-700/50 transition-all duration-300 group/card">
-          <h3 class="text-base font-bold text-amber-700 dark:text-amber-400 group-hover/card:text-amber-800 dark:group-hover/card:text-amber-300">{lsc?.seeAlsoGrubbs || "Grubbs' Test Calculator"}</h3>
-          <p class="text-sm text-surface-500 dark:text-surface-400 mt-1">{lsc?.seeAlsoGrubbsDesc || 'Detect outliers in your dataset'}</p>
-        </a>
-        <a href={getLocalizedUrl('/regression-assumptions-checker/', currentLocale)} class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-5 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-rose-500/0 before:to-rose-500/0 hover:before:from-rose-500/5 hover:before:to-rose-500/8 dark:hover:before:from-rose-400/8 dark:hover:before:to-rose-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-rose-900/10 hover:-translate-y-1 hover:border-rose-300 dark:hover:border-rose-700/50 transition-all duration-300 group/card">
-          <h3 class="text-base font-bold text-rose-700 dark:text-rose-400 group-hover/card:text-rose-800 dark:group-hover/card:text-rose-300">{lsc?.seeAlsoAssumptions || 'Regression Assumptions Checker'}</h3>
-          <p class="text-sm text-surface-500 dark:text-surface-400 mt-1">{lsc?.seeAlsoAssumptionsDesc || 'Verify that your data meets the four OLS assumptions'}</p>
-        </a>
-        <a href={getLocalizedUrl('/regression-curve-calculator/', currentLocale)} class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-5 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-accent-500/0 before:to-accent-500/0 hover:before:from-accent-500/5 hover:before:to-accent-500/8 dark:hover:before:from-accent-400/8 dark:hover:before:to-accent-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-accent-900/10 hover:-translate-y-1 hover:border-accent-300 dark:hover:border-accent-700/50 transition-all duration-300 group/card">
-          <h3 class="text-base font-bold text-accent-700 dark:text-accent-400 group-hover/card:text-accent-800 dark:group-hover/card:text-accent-300">{lsc?.seeAlsoRC || 'Regression Curve Calculator'}</h3>
-          <p class="text-sm text-surface-500 dark:text-surface-400 mt-1">{lsc?.seeAlsoRCDesc || 'Compare multiple regression models'}</p>
-        </a>
-        <a href={getLocalizedUrl('/exponential-regression-calculator/', currentLocale)} class="content-box rounded-2xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm p-5 shadow-sm dark:shadow-surface-950/20 relative overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-br before:from-primary-500/0 before:to-primary-500/0 hover:before:from-primary-500/5 hover:before:to-primary-500/8 dark:hover:before:from-primary-400/8 dark:hover:before:to-primary-400/12 before:transition-all before:duration-500 hover:shadow-lg dark:hover:shadow-primary-900/10 hover:-translate-y-1 hover:border-primary-300 dark:hover:border-primary-700/50 transition-all duration-300 group/card">
-          <h3 class="text-base font-bold text-primary-700 dark:text-primary-400 group-hover/card:text-primary-800 dark:group-hover/card:text-primary-300">{lsc?.seeAlsoExp || 'Exponential Regression Calculator'}</h3>
-          <p class="text-sm text-surface-500 dark:text-surface-400 mt-1">{lsc?.seeAlsoExpDesc || 'Model growth and decay with y = a·e^(bx)'}</p>
-        </a>
+    <!-- When to Use / Assumptions -->
+    <section class="reveal-on-scroll">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="p-8 rounded-3xl border border-surface-200 dark:border-surface-700 bg-white dark:bg-surface-800 shadow-lg">
+          <h2 class="text-xl font-bold text-surface-900 dark:text-surface-50 mb-6 flex items-center gap-3">
+            <span class="w-1.5 h-6 bg-emerald-600 rounded-full"></span>
+            {whenTitle}
+          </h2>
+          <ul class="space-y-3">
+            {whenPoints.map(point => (
+              <li class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400 flex-shrink-0 mt-0.5">
+                    <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <span class="text-sm text-surface-600 dark:text-surface-400 leading-relaxed" set:html={point} />
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="p-8 rounded-3xl border border-surface-200 dark:border-surface-700 bg-white dark:bg-surface-800 shadow-lg">
+          <h2 class="text-xl font-bold text-surface-900 dark:text-surface-50 mb-6 flex items-center gap-3">
+            <span class="w-1.5 h-6 bg-purple-600 rounded-full"></span>
+            {assumptionsTitle}
+          </h2>
+          <ul class="space-y-3">
+            {assumptionsPoints.map(point => (
+              <li class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400 flex-shrink-0 mt-0.5">
+                    <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <span class="text-sm text-surface-600 dark:text-surface-400 leading-relaxed" set:html={point} />
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </BaseLayout>
+
+<script>
+  // ── Reveal on Scroll ──
+  const revealElements = document.querySelectorAll('.reveal-on-scroll');
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+  );
+  revealElements.forEach((el) => revealObserver.observe(el));
+
+  // ── 3D Tilt ──
+  const tiltElements = document.querySelectorAll<HTMLElement>('[data-tilt]');
+  tiltElements.forEach((el) => {
+    let rect: DOMRect | null = null;
+    el.addEventListener('mouseenter', () => { rect = el.getBoundingClientRect(); });
+    el.addEventListener('mousemove', (e: MouseEvent) => {
+      if (!rect) rect = el.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = ((y - centerY) / centerY) * -10;
+      const rotateY = ((x - centerX) / centerX) * 10;
+      el.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+    });
+    el.addEventListener('mouseleave', () => {
+      rect = null;
+      el.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+    });
+  });
+</script>
+
+<style>
+  .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .reveal-on-scroll.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
