@@ -442,7 +442,7 @@ const calc = translations.calculator;
     dummyData.forEach(([x, y]) => createRow(String(x), String(y), fragment));
     tbody.appendChild(fragment);
 
-    autoCalculate();
+    requestAnimationFrame(autoCalculate);
 
     calcBtn?.addEventListener('click', () => {
       errorEl.classList.add('hidden');
@@ -459,7 +459,7 @@ const calc = translations.calculator;
       dummyData.forEach(([x, y]) => createRow(String(x), String(y), frag));
       tbody.appendChild(frag);
       confidenceInput.value = '95'; predictionXInput.value = '';
-      autoCalculate();
+      requestAnimationFrame(autoCalculate);
     });
   })();
 </script>
