@@ -4,91 +4,261 @@ import { mergeTranslations } from 'theme/i18n/utils';
 
 const locale = 'en';
 const translations = await mergeTranslations(locale);
+const about = translations.about;
 ---
 
 <BaseLayout
-  title={translations.about.title}
-  description={translations.about.description}
+  title={about.title}
+  description={about.description}
   locale={locale}
   isAboutPage={true}
 >
-  <section class="py-16 md:py-24">
-    <div class="max-w-3xl mx-auto">
-      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-primary-700 to-accent-600 bg-clip-text text-transparent">
-        {translations.about.title}
-      </h1>
+  <!-- Hero Section -->
+  <section class="relative pt-16 pb-20 overflow-hidden">
+    <!-- Abstract Background Decor -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 opacity-30 dark:opacity-20 pointer-events-none">
+      <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[60%] bg-primary-200/40 blur-[120px] rounded-full animate-pulse"></div>
+      <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[60%] bg-accent-200/40 blur-[120px] rounded-full animate-pulse" style="animation-delay: 2s"></div>
+    </div>
 
-      <div class="mt-10 grid gap-8 md:grid-cols-3">
-        <div class="rounded-2xl border border-surface-200/60 bg-white p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-primary-100 text-primary-600">
-              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <h2 class="text-xl font-bold text-surface-900">{translations.about.mission}</h2>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+        <div class="flex-1 text-center lg:text-left reveal-on-scroll">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-primary-700 via-primary-600 to-accent-600 dark:from-primary-400 dark:via-primary-500 dark:to-accent-400 bg-clip-text text-transparent leading-tight">
+            {about.title}
+          </h1>
+          <p class="mt-6 text-lg md:text-xl text-surface-600 dark:text-surface-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            Empowering researchers, students, and professionals with institutional-grade statistical tools designed for clarity and precision.
+          </p>
+          <div class="mt-10 flex flex-wrap justify-center lg:justify-start gap-4">
+            <a href="#mission" class="px-8 py-3 rounded-xl bg-primary-600 text-white font-semibold shadow-lg shadow-primary-600/20 hover:bg-primary-700 hover:shadow-xl hover:shadow-primary-600/30 transition-all duration-300 hover:-translate-y-1">
+              Our Mission
+            </a>
+            <a href="/exponential-regression-calculator/" class="px-8 py-3 rounded-xl bg-white dark:bg-surface-800 text-surface-700 dark:text-surface-200 font-semibold border border-surface-200 dark:border-surface-700 hover:border-primary-300 dark:hover:border-primary-600 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              Explore Tools
+            </a>
           </div>
-          <p class="text-surface-600 leading-relaxed">{translations.about.missionText}</p>
         </div>
-
-        <div class="rounded-2xl border border-surface-200/60 bg-white p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-accent-100 text-accent-600">
-              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
+        <div class="flex-1 w-full max-w-lg lg:max-w-none reveal-on-scroll" style="transition-delay: 200ms">
+          <div class="relative group" data-tilt>
+            <div class="absolute -inset-4 bg-gradient-to-r from-primary-500/20 to-accent-500/20 rounded-3xl blur-2xl opacity-50 group-hover:opacity-80 transition-opacity duration-500"></div>
+            <div class="relative overflow-hidden rounded-3xl border border-white/20 shadow-2xl">
+              <img
+                src="/images/about-hero.png"
+                alt="Statistics and Data Illustration"
+                class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
+                width="600"
+                height="400"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-900/40 via-transparent to-transparent opacity-60"></div>
             </div>
-            <h2 class="text-xl font-bold text-surface-900">{translations.about.values}</h2>
           </div>
-          <p class="text-surface-600 leading-relaxed">{translations.about.valuesText}</p>
-        </div>
-
-        <div class="rounded-2xl border border-surface-200/60 bg-white p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-primary-100 text-primary-600">
-              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-            </div>
-            <h2 class="text-xl font-bold text-surface-900">{translations.about.team}</h2>
-          </div>
-          <p class="text-surface-599 leading-relaxed">{translations.about.teamText}</p>
-        </div>
-      </div>
-
-      <div class="mt-12 rounded-2xl bg-gradient-to-r from-primary-50 to-accent-50 border border-primary-100/60 p-8">
-        <p class="text-surface-700 leading-relaxed text-lg">{translations.about.content}</p>
-      </div>
-
-      <div class="mt-12">
-        <h2 class="text-2xl font-bold text-surface-900 mb-6">Explore Our Tools</h2>
-        <div class="grid sm:grid-cols-2 gap-4">
-          <a href="/exponential-regression-calculator/" class="rounded-2xl border border-surface-200/60 bg-white p-5 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 group/card">
-            <h3 class="text-base font-bold text-accent-700 group-hover/card:text-accent-800">Exponential Regression Calculator</h3>
-            <p class="text-sm text-surface-500 mt-1">Model growth and decay with y = a·e^(bx)</p>
-          </a>
-          <a href="/quadratic-regression-calculator/" class="rounded-2xl border border-surface-200/60 bg-white p-5 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 group/card">
-            <h3 class="text-base font-bold text-primary-700 group-hover/card:text-primary-800">Quadratic Regression Calculator</h3>
-            <p class="text-sm text-surface-500 mt-1">Model curved relationships</p>
-          </a>
-          <a href="/multiple-regression-calculator/" class="rounded-2xl border border-surface-200/60 bg-white p-5 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 group/card">
-            <h3 class="text-base font-bold text-emerald-700 group-hover/card:text-emerald-800">Multiple Regression Calculator</h3>
-            <p class="text-sm text-surface-500 mt-1">Use two or more predictors</p>
-          </a>
-          <a href="/pearson-correlation-calculator/" class="rounded-2xl border border-surface-200/60 bg-white p-5 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 group/card">
-            <h3 class="text-base font-bold text-amber-700 group-hover/card:text-amber-800">Pearson Correlation Calculator</h3>
-            <p class="text-sm text-surface-500 mt-1">Measure linear relationship strength</p>
-          </a>
-          <a href="/grubbs-test-calculator/" class="rounded-2xl border border-surface-200/60 bg-white p-5 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 group/card">
-            <h3 class="text-base font-bold text-rose-700 group-hover/card:text-rose-800">Grubbs' Test Calculator</h3>
-            <p class="text-sm text-surface-500 mt-1">Detect outliers in your dataset</p>
-          </a>
-          <a href="/regression-assumptions-checker/" class="rounded-2xl border border-surface-200/60 bg-white p-5 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 group/card">
-            <h3 class="text-base font-bold text-primary-700 group-hover/card:text-primary-800">Regression Assumptions Checker</h3>
-            <p class="text-sm text-surface-500 mt-1">Verify your data meets OLS assumptions</p>
-          </a>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Core Pillars -->
+  <section id="mission" class="py-20 bg-surface-50/50 dark:bg-surface-900/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Mission -->
+        <div class="group relative p-8 rounded-3xl border border-surface-200/60 dark:border-surface-700/40 bg-white/80 dark:bg-surface-800/80 backdrop-blur-md shadow-xl shadow-surface-200/20 dark:shadow-surface-950/40 hover:-translate-y-2 transition-all duration-500 reveal-on-scroll">
+          <div class="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
+            <svg class="w-24 h-24 text-primary-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          </div>
+          <div class="w-14 h-14 rounded-2xl bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+            <svg class="w-7 h-7 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h2 class="text-2xl font-bold text-surface-900 dark:text-surface-50 mb-4">{about.mission}</h2>
+          <p class="text-surface-600 dark:text-surface-400 leading-relaxed">
+            {about.missionText}
+          </p>
+        </div>
+
+        <!-- Values -->
+        <div class="group relative p-8 rounded-3xl border border-surface-200/60 dark:border-surface-700/40 bg-white/80 dark:bg-surface-800/80 backdrop-blur-md shadow-xl shadow-surface-200/20 dark:shadow-surface-950/40 hover:-translate-y-2 transition-all duration-500 reveal-on-scroll" style="transition-delay: 100ms">
+          <div class="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
+            <svg class="w-24 h-24 text-accent-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+          </div>
+          <div class="w-14 h-14 rounded-2xl bg-accent-100 dark:bg-accent-900/30 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-300">
+            <svg class="w-7 h-7 text-accent-600 dark:text-accent-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h2 class="text-2xl font-bold text-surface-900 dark:text-surface-50 mb-4">{about.values}</h2>
+          <p class="text-surface-600 dark:text-surface-400 leading-relaxed">
+            {about.valuesText}
+          </p>
+        </div>
+
+        <!-- Team -->
+        <div class="group relative p-8 rounded-3xl border border-surface-200/60 dark:border-surface-700/40 bg-white/80 dark:bg-surface-800/80 backdrop-blur-md shadow-xl shadow-surface-200/20 dark:shadow-surface-950/40 hover:-translate-y-2 transition-all duration-500 reveal-on-scroll" style="transition-delay: 200ms">
+          <div class="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
+            <svg class="w-24 h-24 text-primary-600" fill="currentColor" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          </div>
+          <div class="w-14 h-14 rounded-2xl bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+            <svg class="w-7 h-7 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h2 class="text-2xl font-bold text-surface-900 dark:text-surface-50 mb-4">{about.team}</h2>
+          <p class="text-surface-600 dark:text-surface-400 leading-relaxed">
+            {about.teamText}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section class="py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="relative p-10 md:p-16 rounded-3xl overflow-hidden bg-gradient-to-br from-primary-600 to-accent-700 shadow-2xl reveal-on-scroll">
+        <!-- Abstract Patterns -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-60 h-60 bg-accent-400/20 rounded-full blur-2xl"></div>
+        
+        <div class="relative z-10 text-center">
+          <svg class="w-16 h-16 text-white/20 mx-auto mb-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 7.10457 14.017 6V3L14.017 3C14.017 1.89543 13.1216 1 12.017 1H10.017C8.91243 1 8.01701 1.89543 8.01701 3V6C8.01701 7.10457 7.12158 8 6.01701 8H3.01701C2.46473 8 2.01701 8.44772 2.01701 9V15C2.01701 15.5523 2.46473 16 3.01701 16H6.01701C7.12158 16 8.01701 16.8954 8.01701 18V21L8.01701 21C8.01701 22.1046 8.91243 23 10.017 23H12.017C13.1216 23 14.017 22.1046 14.017 21L14.017 21Z" />
+          </svg>
+          <p class="text-xl md:text-2xl lg:text-3xl font-medium text-white leading-relaxed italic">
+            "{about.content}"
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Explore Tools Grid -->
+  <section class="py-20 bg-surface-50/50 dark:bg-surface-900/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal-on-scroll">
+        <h2 class="text-3xl md:text-4xl font-bold text-surface-900 dark:text-surface-50 mb-4">Precision Engineering for Every Model</h2>
+        <p class="text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
+          Explore our suite of specialized regression tools, each built to handle specific data distributions and research questions.
+        </p>
+      </div>
+      
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="/exponential-regression-calculator/" class="group/card relative p-6 rounded-3xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden reveal-on-scroll">
+          <div class="absolute inset-0 bg-gradient-to-br from-primary-500/0 to-primary-500/0 group-hover/card:from-primary-500/5 group-hover/card:to-primary-500/10 transition-all duration-500"></div>
+          <div class="relative z-10">
+            <div class="w-12 h-12 rounded-xl bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center mb-4 group-hover/card:scale-110 transition-transform duration-300">
+              <svg class="w-6 h-6 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+            </div>
+            <h3 class="text-lg font-bold text-primary-700 dark:text-primary-400 mb-2">Exponential Regression</h3>
+            <p class="text-sm text-surface-500 dark:text-surface-400">Model rapid growth or decay trends with automatic E-notation handling and high-precision prediction intervals.</p>
+          </div>
+        </a>
+
+        <a href="/quadratic-regression-calculator/" class="group/card relative p-6 rounded-3xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden reveal-on-scroll" style="transition-delay: 100ms">
+          <div class="absolute inset-0 bg-gradient-to-br from-accent-500/0 to-accent-500/0 group-hover/card:from-accent-500/5 group-hover/card:to-accent-500/10 transition-all duration-500"></div>
+          <div class="relative z-10">
+            <div class="w-12 h-12 rounded-xl bg-accent-100 dark:bg-accent-900/30 flex items-center justify-center mb-4 group-hover/card:scale-110 transition-transform duration-300">
+              <svg class="w-6 h-6 text-accent-600 dark:text-accent-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" /></svg>
+            </div>
+            <h3 class="text-lg font-bold text-accent-700 dark:text-accent-400 mb-2">Quadratic Regression</h3>
+            <p class="text-sm text-surface-500 dark:text-surface-400">Analyze curved data paths and parabolic movements. Includes vertex calculation and statistical significance testing.</p>
+          </div>
+        </a>
+
+        <a href="/multiple-regression-calculator/" class="group/card relative p-6 rounded-3xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden reveal-on-scroll" style="transition-delay: 200ms">
+          <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/0 to-emerald-500/0 group-hover/card:from-emerald-500/5 group-hover/card:to-emerald-500/10 transition-all duration-500"></div>
+          <div class="relative z-10">
+            <div class="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center mb-4 group-hover/card:scale-110 transition-transform duration-300">
+              <svg class="w-6 h-6 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+            </div>
+            <h3 class="text-lg font-bold text-emerald-700 dark:text-emerald-400 mb-2">Multiple Regression</h3>
+            <p class="text-sm text-surface-500 dark:text-surface-400">Handle complex datasets with multiple independent variables. Featuring matrix calculation and VIF diagnostics.</p>
+          </div>
+        </a>
+
+        <a href="/pearson-correlation-calculator/" class="group/card relative p-6 rounded-3xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden reveal-on-scroll">
+          <div class="absolute inset-0 bg-gradient-to-br from-amber-500/0 to-amber-500/0 group-hover/card:from-amber-500/5 group-hover/card:to-amber-500/10 transition-all duration-500"></div>
+          <div class="relative z-10">
+            <div class="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center mb-4 group-hover/card:scale-110 transition-transform duration-300">
+              <svg class="w-6 h-6 text-amber-600 dark:text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 12l3-3 3 3 4-4" /></svg>
+            </div>
+            <h3 class="text-lg font-bold text-amber-700 dark:text-amber-400 mb-2">Pearson Correlation</h3>
+            <p class="text-sm text-surface-500 dark:text-surface-400">Instantly measure the strength and direction of linear relationships between any two continuous variables.</p>
+          </div>
+        </a>
+
+        <a href="/grubbs-test-calculator/" class="group/card relative p-6 rounded-3xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden reveal-on-scroll" style="transition-delay: 100ms">
+          <div class="absolute inset-0 bg-gradient-to-br from-rose-500/0 to-rose-500/0 group-hover/card:from-rose-500/5 group-hover/card:to-rose-500/10 transition-all duration-500"></div>
+          <div class="relative z-10">
+            <div class="w-12 h-12 rounded-xl bg-rose-100 dark:bg-rose-900/30 flex items-center justify-center mb-4 group-hover/card:scale-110 transition-transform duration-300">
+              <svg class="w-6 h-6 text-rose-600 dark:text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4.5c-.77-.833-2.694-.833-3.464 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z" /></svg>
+            </div>
+            <h3 class="text-lg font-bold text-rose-700 dark:text-rose-400 mb-2">Grubbs' Outlier Test</h3>
+            <p class="text-sm text-surface-500 dark:text-surface-400">Identify statistical anomalies in your data before they bias your regression model. Compliant with ASTM standards.</p>
+          </div>
+        </a>
+
+        <a href="/regression-assumptions-checker/" class="group/card relative p-6 rounded-3xl border border-surface-200 dark:border-surface-700/60 bg-white/70 dark:bg-surface-800/60 backdrop-blur-sm shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden reveal-on-scroll" style="transition-delay: 200ms">
+          <div class="absolute inset-0 bg-gradient-to-br from-primary-500/0 to-primary-500/0 group-hover/card:from-primary-500/5 group-hover/card:to-primary-500/10 transition-all duration-500"></div>
+          <div class="relative z-10">
+            <div class="w-12 h-12 rounded-xl bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center mb-4 group-hover/card:scale-110 transition-transform duration-300">
+              <svg class="w-6 h-6 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            </div>
+            <h3 class="text-lg font-bold text-primary-700 dark:text-primary-400 mb-2">Assumptions Checker</h3>
+            <p class="text-sm text-surface-500 dark:text-surface-400">Validate the four pillars of OLS regression: Linearity, Independence, Homoscedasticity, and Normality.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
+
+<script>
+  // ── Reveal on Scroll (IntersectionObserver) ──
+  const revealElements = document.querySelectorAll('.reveal-on-scroll');
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+  );
+  revealElements.forEach((el) => revealObserver.observe(el));
+
+  // ── Interactive 3D Tilt Effect ──
+  const tiltElements = document.querySelectorAll<HTMLElement>('[data-tilt]');
+  tiltElements.forEach((el) => {
+    el.addEventListener('mousemove', (e: MouseEvent) => {
+      const rect = el.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = ((y - centerY) / centerY) * -10;
+      const rotateY = ((x - centerX) / centerX) * 10;
+
+      el.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+    });
+
+    el.addEventListener('mouseleave', () => {
+      el.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+    });
+  });
+</script>
+
+<style>
+  .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .reveal-on-scroll.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
