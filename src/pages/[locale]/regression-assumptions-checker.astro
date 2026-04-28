@@ -4,6 +4,8 @@ import RegressionAssumptionsChecker from 'theme/components/RegressionAssumptions
 import ToolInfoBox from 'theme/components/ToolInfoBox.astro';
 import { mergeTranslations, getLocalizedUrl, extractLocaleFromParams, getLocaleStaticPaths } from 'theme/i18n/utils';
 import siteConfig from 'src/data/site-config.json';
+import { Image } from 'astro:assets';
+import heroImage from '../../assets/images/what-is-regression.png';
 
 export function getStaticPaths() {
   return getLocaleStaticPaths();
@@ -62,12 +64,13 @@ const pageDescription = rac?.description || 'Verify the four pillars of OLS regr
           <div class="relative group" data-tilt>
             <div class="absolute -inset-4 bg-gradient-to-r from-rose-500/20 to-primary-500/20 rounded-3xl blur-2xl opacity-40 group-hover:opacity-70 transition-opacity duration-500"></div>
             <div class="relative overflow-hidden rounded-3xl border border-white/20 shadow-2xl">
-              <img
-                src="/images/assumptions-hero.png"
+              <Image
+                src={heroImage}
                 alt="Regression Assumptions Diagnostics Visualization"
                 class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
-                width="600"
-                height="400"
+                width={800}
+                densities={[1, 2]}
+                loading="eager"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-surface-900/20 via-transparent to-transparent opacity-40"></div>
             </div>

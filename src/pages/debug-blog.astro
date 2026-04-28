@@ -1,0 +1,16 @@
+---
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog');
+const postsBySlug = allPosts.reduce((acc, post) => {
+  const parts = post.id.split('/');
+  const locale = parts.length > 1 ? parts[0] : 'en';
+  const slug = parts.length > 1 ? parts.slice(1).join('/') : post.id;
+  
+  if (!acc[slug]) acc[slug] = {};
+  acc[slug][locale] = post;
+  return acc;
+}, {} as Record<string, Record<string, any>>);
+
+---
+<pre>{JSON.stringify(postsBySlug, null, 2)}</pre>

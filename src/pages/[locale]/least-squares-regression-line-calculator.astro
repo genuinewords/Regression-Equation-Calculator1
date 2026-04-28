@@ -14,7 +14,7 @@ export function getStaticPaths() {
 const { locale } = Astro.params;
 const currentLocale = extractLocaleFromParams(Astro.params);
 const translations = await mergeTranslations(currentLocale);
-const lsc = (translations as any).lsCalc;
+const lsc = (translations as any).lsrlCalc;
 
 const canonicalUrl = new URL(getLocalizedUrl('/least-squares-regression-line-calculator/', currentLocale), siteConfig.siteUrl).href;
 

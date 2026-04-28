@@ -32,7 +32,7 @@ const translations: MergedTranslations = await mergeTranslations(locale);
 const direction = getDirection(locale);
 const ogLocale = getLocaleOgLocale(locale);
 const baseTitle = title;
-const brand = "Regression Equation Calculator";
+const brand = translations.siteTitle || "Regression Equation Calculator";
 
 let fullTitle = `${baseTitle} | ${brand}`;
 
