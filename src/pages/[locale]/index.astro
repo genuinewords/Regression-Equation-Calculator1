@@ -81,7 +81,19 @@ const faqTitle: string = (home as any).faqTitle ?? 'Frequently Asked Questions';
           </div>
         </div>
         <div class="flex-1 w-full max-w-lg lg:max-w-none reveal-on-scroll" style="transition-delay: 200ms">
-            <!-- Hero Visual could go here -->
+          <div class="relative group" data-tilt>
+            <div class="absolute -inset-4 bg-gradient-to-r from-primary-500/20 to-accent-500/20 rounded-3xl blur-2xl opacity-40 group-hover:opacity-70 transition-opacity duration-500"></div>
+            <div class="relative overflow-hidden rounded-3xl border border-white/20 shadow-2xl">
+              <img
+                src="/images/pearson-hero.png"
+                alt={translations.home.title}
+                class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
+                width="600"
+                height="400"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-900/20 via-transparent to-transparent opacity-40"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
