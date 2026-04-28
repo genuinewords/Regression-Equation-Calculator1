@@ -219,6 +219,26 @@ const calc = translations.calculator;
     let rowCounter = 0;
     let currentType = 'linear';
 
+    // ── Optimized Layout Reads ──
+    let canvasW = 640;
+    let canvasH = 360;
+    const updateCanvasSize = () => {
+      canvasW = canvas.clientWidth || 640;
+      canvasH = canvas.clientHeight || 360;
+    };
+    
+    // Initial size
+    if (canvas) {
+      const ro = new ResizeObserver(() => {
+        updateCanvasSize();
+        // If we have points, redraw immediately on resize
+        const points = getData();
+        if (points.length >= 2) autoCalculate();
+      });
+      ro.observe(canvas);
+      updateCanvasSize();
+    }
+
     const typeButtons = calcEl.querySelectorAll('.reg-type-btn');
     typeButtons.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -268,8 +288,11 @@ const calc = translations.calculator;
       const rows = tbody.querySelectorAll('tr');
       const points = [];
       for (const row of rows) {
-        const x = parseFloat(row.querySelector('.data-x').value);
-        const y = parseFloat(row.querySelector('.data-y').value);
+        const xField = row.querySelector('.data-x');
+        const yField = row.querySelector('.data-y');
+        if (!xField || !yField) continue;
+        const x = parseFloat(xField.value);
+        const y = parseFloat(yField.value);
         if (!isNaN(x) && !isNaN(y)) points.push({ x, y });
       }
       return points;
@@ -353,8 +376,6 @@ const calc = translations.calculator;
     }
 
     function autoCalculate() {
-      const w = canvas.clientWidth;
-      const h = canvas.clientHeight;
       const points = getData();
       if (points.length < 2) return;
       let result = null;
@@ -423,17 +444,23 @@ const calc = translations.calculator;
       const confLevel = parseFloat(confidenceInput?.value || '95');
       const predX = parseFloat(predictionXInput?.value);
       const predY = isNaN(predX) ? '—' : result.predict(predX).toFixed(4);
-      calcEl.querySelector('#result-equation').textContent = result.equation;
-      calcEl.querySelector('#result-rsquared').textContent = result.rSquared.toFixed(4);
-      calcEl.querySelector('#result-correlation').textContent = result.r.toFixed(4);
-      calcEl.querySelector('#result-predicted-y').textContent = predY;
-      calcEl.querySelector('#stat-se').textContent = result.se.toFixed(4);
-      calcEl.querySelector('#stat-n').textContent = String(result.n);
-      calcEl.querySelector('#stat-df').textContent = String(result.df);
-      calcEl.querySelector('#stat-cl').textContent = confLevel + '%';
-      const stepsEl = calcEl.querySelector('#steps-content');
-      if (stepsEl) stepsEl.innerHTML = result.steps.map(s => `<p>${s}</p>`).join('');
-      requestAnimationFrame(() => drawChart(points, result.predict, currentType, w, h));
+      
+      // Batch writes
+      requestAnimationFrame(() => {
+        calcEl.querySelector('#result-equation').textContent = result.equation;
+        calcEl.querySelector('#result-rsquared').textContent = result.rSquared.toFixed(4);
+        calcEl.querySelector('#result-correlation').textContent = result.r.toFixed(4);
+        calcEl.querySelector('#result-predicted-y').textContent = predY;
+        calcEl.querySelector('#stat-se').textContent = result.se.toFixed(4);
+        calcEl.querySelector('#stat-n').textContent = String(result.n);
+        calcEl.querySelector('#stat-df').textContent = String(result.df);
+        calcEl.querySelector('#stat-cl').textContent = confLevel + '%';
+        const stepsEl = calcEl.querySelector('#steps-content');
+        if (stepsEl) stepsEl.innerHTML = result.steps.map(s => `<p>${s}</p>`).join('');
+        
+        // Draw chart using cached dimensions
+        drawChart(points, result.predict, currentType, canvasW, canvasH);
+      });
     }
 
     addBtn?.addEventListener('click', () => createRow());
@@ -442,7 +469,8 @@ const calc = translations.calculator;
     dummyData.forEach(([x, y]) => createRow(String(x), String(y), fragment));
     tbody.appendChild(fragment);
 
-    requestAnimationFrame(autoCalculate);
+    // Initial calculation after a short delay to ensure layout stability
+    setTimeout(() => requestAnimationFrame(autoCalculate), 100);
 
     calcBtn?.addEventListener('click', () => {
       errorEl.classList.add('hidden');
