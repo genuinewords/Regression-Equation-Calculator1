@@ -200,25 +200,26 @@ const calc = translations.calculator;
   }
 </style>
 
-<script>
-  document.querySelectorAll('#calculator').forEach((calcEl) => {
-    const tbody = calcEl.querySelector('#data-rows') as HTMLTableSectionElement;
+<script is:inline>
+  (function() {
+    const calcEl = document.querySelector('#calculator');
+    if (!calcEl) return;
+    const tbody = calcEl.querySelector('#data-rows');
     const addBtn = calcEl.querySelector('#add-row-btn');
     const calcBtn = calcEl.querySelector('#calculate-btn');
     const clearBtn = calcEl.querySelector('#clear-btn');
     const errorEl = calcEl.querySelector('#error-msg');
     const resultsSection = calcEl.querySelector('#results-section');
-    const confidenceInput = calcEl.querySelector('#confidence-input') as HTMLInputElement;
-    const predictionXInput = calcEl.querySelector('#prediction-x-input') as HTMLInputElement;
-    const canvas = calcEl.querySelector('#regression-chart') as HTMLCanvasElement;
+    const confidenceInput = calcEl.querySelector('#confidence-input');
+    const predictionXInput = calcEl.querySelector('#prediction-x-input');
+    const canvas = calcEl.querySelector('#regression-chart');
     const xLabel = calcEl.getAttribute('data-x-label') || 'X';
     const yLabel = calcEl.getAttribute('data-y-label') || 'Y';
     const invalidData = calcEl.getAttribute('data-invalid-data') || 'Please enter at least 2 valid data points';
     let rowCounter = 0;
     let currentType = 'linear';
 
-    // Regression type buttons
-    const typeButtons = calcEl.querySelectorAll<HTMLButtonElement>('.reg-type-btn');
+    const typeButtons = calcEl.querySelectorAll('.reg-type-btn');
     typeButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         typeButtons.forEach(b => {
@@ -230,7 +231,7 @@ const calc = translations.calculator;
       });
     });
 
-    function createRow(xVal = '', yVal = '') {
+    function createRow(xVal = '', yVal = '', container = tbody) {
       rowCounter++;
       const tr = document.createElement('tr');
       tr.className = 'border-b border-surface-200 dark:border-surface-600 transition-colors duration-150 hover:bg-primary-50/30 dark:hover:bg-primary-900/10';
@@ -246,150 +247,35 @@ const calc = translations.calculator;
         tr.style.transition = 'all 0.15s ease';
         setTimeout(() => { tr.remove(); renumberRows(); }, 150);
       });
-      tbody?.appendChild(tr);
+      container.appendChild(tr);
     }
 
     function renumberRows() {
-      const rows = tbody?.querySelectorAll('tr') ?? [];
-      rows.forEach((row, i) => { row.querySelector('td')!.textContent = String(i + 1); });
+      const rows = tbody.querySelectorAll('tr');
+      rows.forEach((row, i) => { 
+        row.querySelector('td').textContent = String(i + 1); 
+        const xInput = row.querySelector('.data-x');
+        const yInput = row.querySelector('.data-y');
+        const remBtn = row.querySelector('.remove-row');
+        if(xInput) xInput.setAttribute('aria-label', `${xLabel} row ${i+1}`);
+        if(yInput) yInput.setAttribute('aria-label', `${yLabel} row ${i+1}`);
+        if(remBtn) remBtn.setAttribute('aria-label', `Remove row ${i+1}`);
+      });
       rowCounter = rows.length;
     }
 
     function getData() {
-      const rows = tbody?.querySelectorAll('tr') ?? [];
-      const points: {x:number,y:number}[] = [];
+      const rows = tbody.querySelectorAll('tr');
+      const points = [];
       for (const row of rows) {
-        const x = parseFloat((row.querySelector('.data-x') as HTMLInputElement)?.value ?? '');
-        const y = parseFloat((row.querySelector('.data-y') as HTMLInputElement)?.value ?? '');
+        const x = parseFloat(row.querySelector('.data-x').value);
+        const y = parseFloat(row.querySelector('.data-y').value);
         if (!isNaN(x) && !isNaN(y)) points.push({ x, y });
       }
       return points;
     }
 
-    function showError(msg: string) {
-      if (errorEl) { errorEl.textContent = msg; errorEl.classList.remove('hidden'); }
-    }
-    function hideError() { if (errorEl) errorEl.classList.add('hidden'); }
-
-    // ── Math helpers ──
-    function linearRegression(points: {x:number,y:number}[]) {
-      const n = points.length;
-      const sumX = points.reduce((s,p) => s+p.x, 0);
-      const sumY = points.reduce((s,p) => s+p.y, 0);
-      const meanX = sumX/n, meanY = sumY/n;
-      let ssXX=0, ssXY=0, ssYY=0;
-      for (const p of points) { const dx=p.x-meanX, dy=p.y-meanY; ssXX+=dx*dx; ssXY+=dx*dy; ssYY+=dy*dy; }
-      if (ssXX===0) return null;
-      const m = ssXY/ssXX, b = meanY - m*meanX;
-      let ssRes=0;
-      for (const p of points) ssRes += (p.y - (m*p.x+b))**2;
-      const rSquared = ssYY===0 ? 1 : 1 - ssRes/ssYY;
-      const r = ssYY===0 ? 1 : ssXY/Math.sqrt(ssXX*ssYY);
-      const se = Math.sqrt(ssRes/(n-2));
-      const eq = `y = ${m.toFixed(4)}x + ${b.toFixed(4)}`;
-      const predict = (x:number) => m*x+b;
-      const steps = [
-        `<strong>Step 1:</strong> Means → x̄ = ${meanX.toFixed(4)}, ȳ = ${meanY.toFixed(4)}`,
-        `<strong>Step 2:</strong> Deviations and cross-products`,
-        ...points.map((p,i) => `&nbsp;&nbsp;Pt ${i+1}: (x-x̄)=${(p.x-meanX).toFixed(4)}, (y-ȳ)=${(p.y-meanY).toFixed(4)}, product=${((p.x-meanX)*(p.y-meanY)).toFixed(4)}`),
-        `<strong>Step 3:</strong> Σ(x-x̄)² = ${ssXX.toFixed(4)}, Σ(x-x̄)(y-ȳ) = ${ssXY.toFixed(4)}`,
-        `<strong>Step 4:</strong> Slope m = ${ssXY.toFixed(4)} / ${ssXX.toFixed(4)} = ${m.toFixed(4)}`,
-        `<strong>Step 5:</strong> Intercept b = ȳ - m·x̄ = ${b.toFixed(4)}`,
-        `<strong>Step 6:</strong> R² = ${rSquared.toFixed(4)}, r = ${r.toFixed(4)}, SE = ${se.toFixed(4)}`
-      ];
-      return { equation: eq, rSquared, r, se, n, df: n-2, predict, steps, type: 'linear' };
-    }
-
-    function polynomialRegression(points: {x:number,y:number}[]) {
-      const n = points.length;
-      if (n < 3) return null;
-      // Build normal equations for y = ax² + bx + c (degree 2)
-      const sums = [0,0,0,0,0,0,0,0]; // x^0..x^7
-      for (let k=0; k<=4; k++) sums[k] = points.reduce((s,p) => s+Math.pow(p.x,k), 0);
-      sums[5] = points.reduce((s,p) => s+p.y, 0);
-      sums[6] = points.reduce((s,p) => s+p.x*p.y, 0);
-      sums[7] = points.reduce((s,p) => s+p.x*p.x*p.y, 0);
-      // Matrix: [[n, Σx, Σx²],[Σx, Σx², Σx³],[Σx², Σx³, Σx⁴]] * [c,b,a]ᵀ = [Σy, Σxy, Σx²y]
-      const M = [[sums[0],sums[1],sums[2]],[sums[1],sums[2],sums[3]],[sums[2],sums[3],sums[4]]];
-      const R = [sums[5],sums[6],sums[7]];
-      const sol = gaussianElimination(M, R);
-      if (!sol) return null;
-      const [c,b,a] = sol;
-      let ssRes=0, ssTot=0;
-      const meanY = points.reduce((s,p) => s+p.y,0)/n;
-      for (const p of points) { const pred=a*p.x*p.x+b*p.x+c; ssRes+=(p.y-pred)**2; ssTot+=(p.y-meanY)**2; }
-      const rSquared = ssTot===0 ? 1 : 1-ssRes/ssTot;
-      const r = Math.sqrt(Math.max(0, rSquared)) * (a >= 0 ? 1 : -1);
-      const se = Math.sqrt(ssRes/(n-3));
-      const eq = `y = ${a.toFixed(4)}x² + ${b.toFixed(4)}x + ${c.toFixed(4)}`;
-      const predict = (x:number) => a*x*x+b*x+c;
-      const steps = [
-        `<strong>Polynomial Regression (degree 2):</strong> y = ax² + bx + c`,
-        `<strong>Step 1:</strong> Compute sums of powers of x and cross-products`,
-        `<strong>Step 2:</strong> Solve normal equations via Gaussian elimination`,
-        `<strong>Step 3:</strong> a = ${a.toFixed(4)}, b = ${b.toFixed(4)}, c = ${c.toFixed(4)}`,
-        `<strong>Step 4:</strong> R² = ${rSquared.toFixed(4)}, SE = ${se.toFixed(4)}`
-      ];
-      return { equation: eq, rSquared, r, se, n, df: n-3, predict, steps, type: 'polynomial' };
-    }
-
-    function exponentialRegression(points: {x:number,y:number}[]) {
-      const validPts = points.filter(p => p.y > 0);
-      if (validPts.length < 2) return null;
-      const n = validPts.length;
-      const lnY = validPts.map(p => ({x:p.x, y:Math.log(p.y)}));
-      const res = linearRegression(lnY);
-      if (!res) return null;
-      // y = a * e^(bx) => ln(y) = ln(a) + bx
-      const bCoeff = parseFloat(res.equation.match(/y\s*=\s*([-\d.]+)x/)?.[1] ?? '0');
-      const lnA = parseFloat(res.equation.match(/\+\s*([-\d.]+)$/)?.[1] ?? '0');
-      const aCoeff = Math.exp(lnA);
-      let ssRes=0, ssTot=0;
-      const meanY = validPts.reduce((s,p) => s+p.y,0)/n;
-      for (const p of validPts) { const pred=aCoeff*Math.exp(bCoeff*p.x); ssRes+=(p.y-pred)**2; ssTot+=(p.y-meanY)**2; }
-      const rSquared = ssTot===0 ? 1 : 1-ssRes/ssTot;
-      const r = Math.sqrt(Math.max(0, rSquared));
-      const se = Math.sqrt(ssRes/(n-2));
-      const eq = `y = ${aCoeff.toFixed(4)} · e^(${bCoeff.toFixed(4)}x)`;
-      const predict = (x:number) => aCoeff*Math.exp(bCoeff*x);
-      const steps = [
-        `<strong>Exponential Regression:</strong> y = a · e^(bx)`,
-        `<strong>Step 1:</strong> Transform: ln(y) values for positive y`,
-        `<strong>Step 2:</strong> Linear regression on (x, ln(y))`,
-        `<strong>Step 3:</strong> a = e^(intercept) = ${aCoeff.toFixed(4)}, b = slope = ${bCoeff.toFixed(4)}`,
-        `<strong>Step 4:</strong> R² = ${rSquared.toFixed(4)}, SE = ${se.toFixed(4)}`
-      ];
-      return { equation: eq, rSquared, r, se, n, df: n-2, predict, steps, type: 'exponential' };
-    }
-
-    function logarithmicRegression(points: {x:number,y:number}[]) {
-      const validPts = points.filter(p => p.x > 0);
-      if (validPts.length < 2) return null;
-      const n = validPts.length;
-      const lnX = validPts.map(p => ({x:Math.log(p.x), y:p.y}));
-      const res = linearRegression(lnX);
-      if (!res) return null;
-      const bCoeff = parseFloat(res.equation.match(/y\s*=\s*([-\d.]+)x/)?.[1] ?? '0');
-      const aCoeff = parseFloat(res.equation.match(/\+\s*([-\d.]+)$/)?.[1] ?? '0');
-      let ssRes=0, ssTot=0;
-      const meanY = validPts.reduce((s,p) => s+p.y,0)/n;
-      for (const p of validPts) { const pred=aCoeff+bCoeff*Math.log(p.x); ssRes+=(p.y-pred)**2; ssTot+=(p.y-meanY)**2; }
-      const rSquared = ssTot===0 ? 1 : 1-ssRes/ssTot;
-      const r = Math.sqrt(Math.max(0, rSquared));
-      const se = Math.sqrt(ssRes/(n-2));
-      const eq = `y = ${aCoeff.toFixed(4)} + ${bCoeff.toFixed(4)} · ln(x)`;
-      const predict = (x:number) => x>0 ? aCoeff+bCoeff*Math.log(x) : NaN;
-      const steps = [
-        `<strong>Logarithmic Regression:</strong> y = a + b · ln(x)`,
-        `<strong>Step 1:</strong> Transform: ln(x) for positive x`,
-        `<strong>Step 2:</strong> Linear regression on (ln(x), y)`,
-        `<strong>Step 3:</strong> a = ${aCoeff.toFixed(4)}, b = ${bCoeff.toFixed(4)}`,
-        `<strong>Step 4:</strong> R² = ${rSquared.toFixed(4)}, SE = ${se.toFixed(4)}`
-      ];
-      return { equation: eq, rSquared, r, se, n, df: n-2, predict, steps, type: 'logarithmic' };
-    }
-
-    function gaussianElimination(A: number[][], b: number[]) {
+    function gaussianElimination(A, b) {
       const n = A.length;
       const aug = A.map((row, i) => [...row, b[i]]);
       for (let col=0; col<n; col++) {
@@ -411,38 +297,30 @@ const calc = translations.calculator;
       return x;
     }
 
-    // ── Chart drawing ──
-    function drawChart(points: {x:number,y:number}[], predictFn: (x:number)=>number, type: string, w: number, h: number) {
+    function drawChart(points, predictFn, type, w, h) {
       if (!canvas) return;
       const ctx = canvas.getContext('2d');
       if (!ctx) return;
       const dpr = window.devicePixelRatio || 1;
       canvas.width = w * dpr; canvas.height = h * dpr;
       ctx.scale(dpr, dpr);
-
       const isDark = document.documentElement.classList.contains('dark');
       const bg = isDark ? '#1e293b' : '#ffffff';
       const gridColor = isDark ? '#334155' : '#e2e8f0';
       const textColor = isDark ? '#94a3b8' : '#64748b';
       const pointColor = isDark ? '#818cf8' : '#4f46e5';
       const lineColor = isDark ? '#a78bfa' : '#7c3aed';
-
       ctx.fillStyle = bg; ctx.fillRect(0,0,w,h);
-
       if (points.length === 0) return;
       const xs = points.map(p=>p.x), ys = points.map(p=>p.y);
       const xMin = Math.min(...xs), xMax = Math.max(...xs);
       const yMin = Math.min(...ys), yMax = Math.max(...ys);
       const xPad = (xMax-xMin)*0.1||1, yPad = (yMax-yMin)*0.1||1;
       const dxMin=xMin-xPad, dxMax=xMax+xPad, dyMin=yMin-yPad, dyMax=yMax+yPad;
-
       const margin = {top:20, right:20, bottom:40, left:55};
       const pw = w-margin.left-margin.right, ph = h-margin.top-margin.bottom;
-
-      function tx(x:number) { return margin.left + (x-dxMin)/(dxMax-dxMin)*pw; }
-      function ty(y:number) { return margin.top + ph - (y-dyMin)/(dyMax-dyMin)*ph; }
-
-      // Grid
+      function tx(x) { return margin.left + (x-dxMin)/(dxMax-dxMin)*pw; }
+      function ty(y) { return margin.top + ph - (y-dyMin)/(dyMax-dyMin)*ph; }
       ctx.strokeStyle = gridColor; ctx.lineWidth = 0.5;
       const xTicks = 6, yTicks = 5;
       for (let i=0; i<=xTicks; i++) {
@@ -457,11 +335,8 @@ const calc = translations.calculator;
         ctx.fillStyle = textColor; ctx.font = '11px sans-serif'; ctx.textAlign = 'right';
         ctx.fillText(yv.toFixed(1), margin.left-8, ty(yv)+4);
       }
-
-      // Regression line
       ctx.strokeStyle = lineColor; ctx.lineWidth = 2.5; ctx.beginPath();
-      const steps = 100;
-      let first = true;
+      const steps = 100; let first = true;
       for (let i=0; i<=steps; i++) {
         const xv = dxMin + (dxMax-dxMin)*i/steps;
         const yv = predictFn(xv);
@@ -470,69 +345,121 @@ const calc = translations.calculator;
         else ctx.lineTo(tx(xv), ty(yv));
       }
       ctx.stroke();
-
-      // Data points
       for (const p of points) {
-        ctx.fillStyle = pointColor;
-        ctx.beginPath(); ctx.arc(tx(p.x), ty(p.y), 5, 0, Math.PI*2); ctx.fill();
+        ctx.fillStyle = pointColor; ctx.beginPath(); ctx.arc(tx(p.x), ty(p.y), 5, 0, Math.PI*2); ctx.fill();
         ctx.strokeStyle = isDark ? '#312e81' : '#e0e7ff'; ctx.lineWidth = 2;
         ctx.beginPath(); ctx.arc(tx(p.x), ty(p.y), 5, 0, Math.PI*2); ctx.stroke();
       }
     }
-
-    // ── Main compute ──
-    addBtn?.addEventListener('click', () => createRow());
-    const dummyData = [[1,2.1],[2,3.9],[3,5.8],[4,8.2],[5,9.7]];
-    dummyData.forEach(([x, y]) => createRow(String(x), String(y)));
 
     function autoCalculate() {
       const w = canvas.clientWidth;
       const h = canvas.clientHeight;
       const points = getData();
       if (points.length < 2) return;
-      let result: any = null;
-      if (currentType === 'linear') result = linearRegression(points);
-      else if (currentType === 'polynomial') result = polynomialRegression(points);
-      else if (currentType === 'exponential') result = exponentialRegression(points);
-      else if (currentType === 'logarithmic') result = logarithmicRegression(points);
-      if (!result) return;
-      const confLevel = parseFloat(confidenceInput?.value ?? '95') || 95;
-      const predX = parseFloat(predictionXInput?.value ?? '');
-      const predY = isNaN(predX) ? '—' : result.predict(predX).toFixed(4);
-      (calcEl.querySelector('#result-equation') as HTMLElement).textContent = result.equation;
-      (calcEl.querySelector('#result-rsquared') as HTMLElement).textContent = result.rSquared.toFixed(4);
-      (calcEl.querySelector('#result-correlation') as HTMLElement).textContent = result.r.toFixed(4);
-      (calcEl.querySelector('#result-predicted-y') as HTMLElement).textContent = predY;
-      (calcEl.querySelector('#stat-se') as HTMLElement).textContent = result.se.toFixed(4);
-      (calcEl.querySelector('#stat-n') as HTMLElement).textContent = String(result.n);
-      (calcEl.querySelector('#stat-df') as HTMLElement).textContent = String(result.df);
-      (calcEl.querySelector('#stat-cl') as HTMLElement).textContent = confLevel + '%';
-      const stepsEl = calcEl.querySelector('#steps-content');
-      if (stepsEl) stepsEl.innerHTML = result.steps.map((s:string) => `<p>${s}</p>`).join('');
+      let result = null;
+      if (currentType === 'linear') {
+        const n = points.length;
+        const sumX = points.reduce((s,p) => s+p.x, 0);
+        const sumY = points.reduce((s,p) => s+p.y, 0);
+        const meanX = sumX/n, meanY = sumY/n;
+        let ssXX=0, ssXY=0, ssYY=0;
+        for (const p of points) { const dx=p.x-meanX, dy=p.y-meanY; ssXX+=dx*dx; ssXY+=dx*dy; ssYY+=dy*dy; }
+        if (ssXX===0) return;
+        const m = ssXY/ssXX, b = meanY - m*meanX;
+        let ssRes=0; for (const p of points) ssRes += (p.y - (m*p.x+b))**2;
+        const rSquared = ssYY===0 ? 1 : 1 - ssRes/ssYY;
+        const r = ssYY===0 ? 1 : ssXY/Math.sqrt(ssXX*ssYY);
+        const se = Math.sqrt(ssRes/(n-2));
+        result = { equation: `y = ${m.toFixed(4)}x + ${b.toFixed(4)}`, rSquared, r, se, n, df: n-2, predict: (x) => m*x+b, steps: [
+          `<strong>Step 1:</strong> Means → x̄ = ${meanX.toFixed(4)}, ȳ = ${meanY.toFixed(4)}`,
+          `<strong>Step 2:</strong> R² = ${rSquared.toFixed(4)}, r = ${r.toFixed(4)}, SE = ${se.toFixed(4)}`
+        ]};
+      } else if (currentType === 'polynomial') {
+        const n = points.length; if (n < 3) return;
+        const sums = [0,0,0,0,0,0,0,0];
+        for (let k=0; k<=4; k++) sums[k] = points.reduce((s,p) => s+Math.pow(p.x,k), 0);
+        sums[5] = points.reduce((s,p) => s+p.y, 0);
+        sums[6] = points.reduce((s,p) => s+p.x*p.y, 0);
+        sums[7] = points.reduce((s,p) => s+p.x*p.x*p.y, 0);
+        const M = [[sums[0],sums[1],sums[2]],[sums[1],sums[2],sums[3]],[sums[2],sums[3],sums[4]]];
+        const R = [sums[5],sums[6],sums[7]];
+        const sol = gaussianElimination(M, R); if (!sol) return;
+        const [c,b,a] = sol;
+        let ssRes=0, ssTot=0; const meanY = points.reduce((s,p) => s+p.y,0)/n;
+        for (const p of points) { const pred=a*p.x*p.x+b*p.x+c; ssRes+=(p.y-pred)**2; ssTot+=(p.y-meanY)**2; }
+        const rSquared = ssTot===0 ? 1 : 1-ssRes/ssTot;
+        const se = Math.sqrt(ssRes/(n-3));
+        result = { equation: `y = ${a.toFixed(4)}x² + ${b.toFixed(4)}x + ${c.toFixed(4)}`, rSquared, r: Math.sqrt(Math.max(0, rSquared)), se, n, df: n-3, predict: (x) => a*x*x+b*x+c, steps: [`Polynomial fit: R² = ${rSquared.toFixed(4)}`] };
+      } else if (currentType === 'exponential') {
+        const validPts = points.filter(p => p.y > 0); if (validPts.length < 2) return;
+        const n = validPts.length;
+        const sumX = validPts.reduce((s,p) => s+p.x, 0);
+        const sumLY = validPts.reduce((s,p) => s+Math.log(p.y), 0);
+        const meanX = sumX/n, meanLY = sumLY/n;
+        let ssXX=0, ssXLY=0;
+        for (const p of validPts) { const dx=p.x-meanX, dly=Math.log(p.y)-meanLY; ssXX+=dx*dx; ssXLY+=dx*dly; }
+        if (ssXX===0) return;
+        const bCoeff = ssXLY/ssXX, lnA = meanLY - bCoeff*meanX, aCoeff = Math.exp(lnA);
+        let ssRes=0, ssTot=0; const meanY = validPts.reduce((s,p) => s+p.y,0)/n;
+        for (const p of validPts) { const pred=aCoeff*Math.exp(bCoeff*p.x); ssRes+=(p.y-pred)**2; ssTot+=(p.y-meanY)**2; }
+        result = { equation: `y = ${aCoeff.toFixed(4)} · e^(${bCoeff.toFixed(4)}x)`, rSquared: ssTot===0 ? 1 : 1-ssRes/ssTot, r: Math.sqrt(Math.max(0, 1-ssRes/ssTot)), se: Math.sqrt(ssRes/(n-2)), n, df: n-2, predict: (x) => aCoeff*Math.exp(bCoeff*x), steps: [`Exponential fit: R² = ${(1-ssRes/ssTot).toFixed(4)}`] };
+      } else if (currentType === 'logarithmic') {
+        const validPts = points.filter(p => p.x > 0); if (validPts.length < 2) return;
+        const n = validPts.length;
+        const sumLX = validPts.reduce((s,p) => s+Math.log(p.x), 0);
+        const sumY = validPts.reduce((s,p) => s+p.y, 0);
+        const meanLX = sumLX/n, meanY = sumY/n;
+        let ssLL=0, ssLY=0;
+        for (const p of validPts) { const dl=Math.log(p.x)-meanLX, dy=p.y-meanY; ssLL+=dl*dl; ssLY+=dl*dy; }
+        if (ssLL===0) return;
+        const bCoeff = ssLY/ssLL, aCoeff = meanY - bCoeff*meanLX;
+        let ssRes=0, ssTot=0;
+        for (const p of validPts) { const pred=aCoeff+bCoeff*Math.log(p.x); ssRes+=(p.y-pred)**2; ssTot+=(p.y-meanY)**2; }
+        result = { equation: `y = ${aCoeff.toFixed(4)} + ${bCoeff.toFixed(4)} · ln(x)`, rSquared: ssTot===0 ? 1 : 1-ssRes/ssTot, r: Math.sqrt(Math.max(0, 1-ssRes/ssTot)), se: Math.sqrt(ssRes/(n-2)), n, df: n-2, predict: (x) => aCoeff+bCoeff*Math.log(x), steps: [`Logarithmic fit: R² = ${(1-ssRes/ssTot).toFixed(4)}`] };
+      }
 
-      // Batch DOM write for chart using requestAnimationFrame to avoid reflow
-      requestAnimationFrame(() => {
-        drawChart(points, result.predict, currentType, w, h);
-      });
+      if (!result) return;
+      const confLevel = parseFloat(confidenceInput?.value || '95');
+      const predX = parseFloat(predictionXInput?.value);
+      const predY = isNaN(predX) ? '—' : result.predict(predX).toFixed(4);
+      calcEl.querySelector('#result-equation').textContent = result.equation;
+      calcEl.querySelector('#result-rsquared').textContent = result.rSquared.toFixed(4);
+      calcEl.querySelector('#result-correlation').textContent = result.r.toFixed(4);
+      calcEl.querySelector('#result-predicted-y').textContent = predY;
+      calcEl.querySelector('#stat-se').textContent = result.se.toFixed(4);
+      calcEl.querySelector('#stat-n').textContent = String(result.n);
+      calcEl.querySelector('#stat-df').textContent = String(result.df);
+      calcEl.querySelector('#stat-cl').textContent = confLevel + '%';
+      const stepsEl = calcEl.querySelector('#steps-content');
+      if (stepsEl) stepsEl.innerHTML = result.steps.map(s => `<p>${s}</p>`).join('');
+      requestAnimationFrame(() => drawChart(points, result.predict, currentType, w, h));
     }
+
+    addBtn?.addEventListener('click', () => createRow());
+    const dummyData = [[1,2.1],[2,3.9],[3,5.8],[4,8.2],[5,9.7]];
+    const fragment = document.createDocumentFragment();
+    dummyData.forEach(([x, y]) => createRow(String(x), String(y), fragment));
+    tbody.appendChild(fragment);
+
     autoCalculate();
 
     calcBtn?.addEventListener('click', () => {
-      hideError();
+      errorEl.classList.add('hidden');
       const points = getData();
-      if (points.length < 2) { showError(invalidData); return; }
+      if (points.length < 2) { errorEl.textContent = invalidData; errorEl.classList.remove('hidden'); return; }
       autoCalculate();
-      resultsSection?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      setTimeout(() => resultsSection?.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 50);
     });
 
     clearBtn?.addEventListener('click', () => {
-      hideError();
-      if (tbody) tbody.innerHTML = '';
-      rowCounter = 0;
-      dummyData.forEach(([x, y]) => createRow(String(x), String(y)));
-      if (confidenceInput) confidenceInput.value = '95';
-      if (predictionXInput) predictionXInput.value = '';
+      errorEl.classList.add('hidden');
+      tbody.innerHTML = ''; rowCounter = 0;
+      const frag = document.createDocumentFragment();
+      dummyData.forEach(([x, y]) => createRow(String(x), String(y), frag));
+      tbody.appendChild(frag);
+      confidenceInput.value = '95'; predictionXInput.value = '';
       autoCalculate();
     });
-  });
+  })();
 </script>
