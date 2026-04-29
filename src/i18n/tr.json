@@ -57,7 +57,91 @@
     "tablePValue": "P değeri",
     "tablePValueSym": "P",
     "tablePValueInt": "İstatistiksel önem",
-    "faqTitle": "Sıkça Sorulan Sorular"
+    "faqTitle": "Sıkça Sorulan Sorular",
+    "educationalGuide": "Eğitim Rehberi ve Referans",
+    "useCasesSubtitle": "Regresyon modellemesinin gerçek dünya uygulamaları.",
+    "understandingTitle": "Regresyon Analizini Anlamak",
+    "linearTitle": "Doğrusal Regresyon",
+    "linearDesc": "y = a + bx denklemi kullanılarak değişkenler arasındaki doğrusal ilişkiyi modeller.",
+    "polyTitle": "Polinom Regresyon",
+    "polyDesc": "y = a + bx + cx² kullanarak eğrisel bir ilişkiyi uyumlar. Karmaşık fiziksel sistemler için idealdir.",
+    "expTitle": "Üstel Regresyon",
+    "expDesc": "y = ae^bx ile hızlı büyüme veya bozunmayı modeller. Bakteri büyümesi ve bozunma analizi için idealdir.",
+    "logTitle": "Logaritmik Regresyon",
+    "logDesc": "y = a + b·ln(x) ile azalan getiri kalıplarını uyumlar. Ekonomik doygunluk için idealdir.",
+    "toolsTitle": "Regresyon ve İstatistik Araçlarımız",
+    "featuresTitle": "Gelişmiş Teşhis Motoru",
+    "featuresSubtitle": "Kurumsal düzeyde araştırma için tasarlanmış, matematiksel titizliği sezgisel etkileşimli deneyimle birleştiriyor.",
+    "featuresPoints": [
+      {
+        "title": "Çoklu Modeller",
+        "desc": "Doğrusal, polinom, üstel ve logaritmik uyumları yan yana karşılaştırın.",
+        "icon": "🎯"
+      },
+      {
+        "title": "Etkileşimli Görselleştirme",
+        "desc": "Dinamik dağılım grafikleri ve model kaplama görselleştirmeleriyle verilerinizi keşfedin.",
+        "icon": "📊"
+      },
+      {
+        "title": "Tahmin Araçları",
+        "desc": "Otomatik güven aralığı hesaplamalarıyla sonuçları tahmin edin.",
+        "icon": "🔮"
+      },
+      {
+        "title": "Tam Teşhis",
+        "desc": "Tüm modeller için R², standart hata ve p-değerlerini içeren ayrıntılı çıktı.",
+        "icon": "📋"
+      },
+      {
+        "title": "Mobil Optimize",
+        "desc": "Herhangi bir cihazda taviz vermeden karmaşık regresyon analizleri yapın.",
+        "icon": "📱"
+      },
+      {
+        "title": "Standartlaştırılmış",
+        "desc": "Hesaplamalar ISO 3534 ve ASTM E2586 profesyonel standartlarına uygundur.",
+        "icon": "⚖️"
+      }
+    ],
+    "requirementsTitle": "Veri Gereksinimleri",
+    "requirementsHeaders": [
+      "Gereksinim",
+      "Minimum",
+      "Önerilen"
+    ],
+    "requirementsRows": [
+      [
+        "Örneklem Boyutu",
+        "3 veri noktası",
+        "30+ veri noktası"
+      ],
+      [
+        "Gözlem/Parametre",
+        "Katsayı başına 2",
+        "Katsayı başına 10+"
+      ],
+      [
+        "X Değişkeni Aralığı",
+        "2 farklı değer",
+        "Geniş, eşit aralıklı"
+      ],
+      [
+        "Y Değişkeni Türü",
+        "Sürekli",
+        "Sürekli, tavan etkisi yok"
+      ],
+      [
+        "Dağılım",
+        "Normal artıklar",
+        "Normal, aykırı değerler çıkarılmış"
+      ],
+      [
+        "Durbin-Watson",
+        "Uygulanamaz",
+        "İstatistik ≈ 2"
+      ]
+    ]
   },
   "about": {
     "title": "Hakkımızda – Misyonumuzu Görüntüleyin!",
@@ -149,7 +233,8 @@
     "noteText": "Sonuçlar ABD, Avrupa, Asya ve dünya çapında geçerli uluslararası istatistiksel standartlar kullanılarak hesaplanmıştır.",
     "dataPoints": "Veri Noktaları (X, Y)",
     "step": "Adım",
-    "means": "Araç"
+    "means": "Araç",
+    "noteLabel": "Not:"
   },
   "pearson": {
     "title": "Pearson Korelasyon Hesaplayıcısı",
@@ -2056,7 +2141,22 @@
     "loading": "Yükleniyor...",
     "error": "Hata",
     "selectLanguage": "Dil seçin",
-    "availableLanguages": "Mevcut diller"
+    "availableLanguages": "Mevcut diller",
+    "previous": "Önceki",
+    "next": "Sonraki",
+    "page": "Sayfa",
+    "total": "Toplam",
+    "showing": "Gösterilen",
+    "of": "arasından",
+    "exploreTools": "Araçları Keşfet",
+    "mainToolsTitle": "Ana Araçlar ve Sayfalar",
+    "languagesTitle": "Diller",
+    "calculateNow": "Şimdi Hesapla",
+    "exploreFeatures": "Özellikleri Keşfet",
+    "howToUse": "Nasıl Kullanılır",
+    "modelTitle": "Büyüme ve Bozunma",
+    "dataTitle": "Giriş Verileri",
+    "statsTitle": "İstatistiksel Çıktı"
   },
   "footer": {
     "description": "Ücretsiz çevrimiçi regresyon denklemi hesaplayıcı. Adım adım çözümlerle doğrusal, polinom ve çoklu regresyon denklemlerini anında hesaplayın.",

@@ -57,7 +57,91 @@
     "tablePValue": "Nilai-P",
     "tablePValueSym": "P",
     "tablePValueInt": "Signifikansi statistik",
-    "faqTitle": "Pertanyaan yang Sering Diajukan"
+    "faqTitle": "Pertanyaan yang Sering Diajukan",
+    "educationalGuide": "Panduan Edukasi dan Referensi",
+    "useCasesSubtitle": "Aplikasi dunia nyata dari pemodelan regresi.",
+    "understandingTitle": "Memahami Analisis Regresi",
+    "linearTitle": "Regresi Linier",
+    "linearDesc": "Memodelkan hubungan garis lurus antara variabel menggunakan persamaan y = a + bx.",
+    "polyTitle": "Regresi Polinomial",
+    "polyDesc": "Menyesuaikan hubungan lengkung menggunakan y = a + bx + cx². Sempurna untuk sistem fisika kompleks.",
+    "expTitle": "Regresi Eksponensial",
+    "expDesc": "Memodelkan pertumbuhan atau peluruhan cepat dengan y = ae^bx. Ideal untuk pertumbuhan bakteri dan analisis peluruhan.",
+    "logTitle": "Regresi Logaritmik",
+    "logDesc": "Menyesuaikan pola hasil yang menurun dengan y = a + b·ln(x). Cocok untuk saturasi ekonomi.",
+    "toolsTitle": "Alat Regresi dan Statistik Kami",
+    "featuresTitle": "Mesin Diagnostik Lanjutan",
+    "featuresSubtitle": "Dibangun untuk penelitian tingkat institusional, menggabungkan ketelitian matematis dengan pengalaman interaktif yang intuitif.",
+    "featuresPoints": [
+      {
+        "title": "Model Ganda",
+        "desc": "Bandingkan penyesuaian linier, polinomial, eksponensial, dan logaritmik secara berdampingan.",
+        "icon": "🎯"
+      },
+      {
+        "title": "Visualisasi Interaktif",
+        "desc": "Jelajahi data Anda dengan diagram sebaran dinamis dan visualisasi model overlay.",
+        "icon": "📊"
+      },
+      {
+        "title": "Alat Prediksi",
+        "desc": "Prakirakan hasil dengan perhitungan interval kepercayaan otomatis.",
+        "icon": "🔮"
+      },
+      {
+        "title": "Diagnostik Lengkap",
+        "desc": "Output terperinci termasuk R², galat standar, dan nilai p untuk semua model.",
+        "icon": "📋"
+      },
+      {
+        "title": "Dioptimalkan untuk Seluler",
+        "desc": "Lakukan analisis regresi kompleks di perangkat apa pun tanpa kompromi.",
+        "icon": "📱"
+      },
+      {
+        "title": "Terstandarisasi",
+        "desc": "Perhitungan mengikuti standar profesional ISO 3534 dan ASTM E2586.",
+        "icon": "⚖️"
+      }
+    ],
+    "requirementsTitle": "Persyaratan Data",
+    "requirementsHeaders": [
+      "Persyaratan",
+      "Minimum",
+      "Direkomendasikan"
+    ],
+    "requirementsRows": [
+      [
+        "Ukuran Sampel",
+        "3 titik data",
+        "30+ titik data"
+      ],
+      [
+        "Pengamatan/Parameter",
+        "2 per koefisien",
+        "10+ per koefisien"
+      ],
+      [
+        "Rentang Variabel X",
+        "2 nilai berbeda",
+        "Luas, berjarak merata"
+      ],
+      [
+        "Tipe Variabel Y",
+        "Kontinu",
+        "Kontinu, tanpa efek langit-langit"
+      ],
+      [
+        "Distribusi",
+        "Residu normal",
+        "Normal, pencilan dihapus"
+      ],
+      [
+        "Durbin-Watson",
+        "T/A",
+        "Statistik ≈ 2"
+      ]
+    ]
   },
   "about": {
     "title": "Tentang Kami – Lihat Misi Kami!",
@@ -149,7 +233,8 @@
     "noteText": "Hasil dihitung menggunakan standar statistik internasional yang berlaku di AS, Eropa, Asia, dan seluruh dunia.",
     "dataPoints": "Poin Data (X, Y)",
     "step": "Melangkah",
-    "means": "Cara"
+    "means": "Cara",
+    "noteLabel": "Catatan:"
   },
   "pearson": {
     "title": "Kalkulator Korelasi Pearson",
@@ -2056,7 +2141,22 @@
     "loading": "Memuat...",
     "error": "Kesalahan",
     "selectLanguage": "Pilih bahasa",
-    "availableLanguages": "Bahasa yang tersedia"
+    "availableLanguages": "Bahasa yang tersedia",
+    "previous": "Sebelumnya",
+    "next": "Berikutnya",
+    "page": "Halaman",
+    "total": "Total",
+    "showing": "Menampilkan",
+    "of": "dari",
+    "exploreTools": "Jelajahi Alat",
+    "mainToolsTitle": "Alat dan Halaman Utama",
+    "languagesTitle": "Bahasa",
+    "calculateNow": "Hitung Sekarang",
+    "exploreFeatures": "Jelajahi Fitur",
+    "howToUse": "Cara Menggunakan Ini",
+    "modelTitle": "Pertumbuhan dan Peluruhan",
+    "dataTitle": "Data Input",
+    "statsTitle": "Output Statistik"
   },
   "footer": {
     "description": "Kalkulator persamaan regresi online gratis. Hitung persamaan regresi linier, polinomial, dan berganda secara instan dengan solusi langkah demi langkah.",

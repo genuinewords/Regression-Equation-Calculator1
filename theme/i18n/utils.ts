@@ -119,9 +119,9 @@ export async function mergeTranslations(
 
   return {
     ...mergedMain,
-    nav: mergedShared.nav ?? enShared.nav ?? {},
-    footer: mergedShared.footer ?? enShared.footer ?? {},
-    common: mergedShared.common ?? enShared.common ?? {},
+    nav: deepMerge(mergedMain.nav ?? {}, mergedShared.nav ?? {}),
+    footer: deepMerge(mergedMain.footer ?? {}, mergedShared.footer ?? {}),
+    common: deepMerge(mergedMain.common ?? {}, mergedShared.common ?? {}),
     faqs: mergedFaq.faqs ?? enFaq.faqs ?? [],
   } as MergedTranslations;
 }

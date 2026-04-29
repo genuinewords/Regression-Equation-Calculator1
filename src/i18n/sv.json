@@ -57,7 +57,91 @@
     "tablePValue": "P-värde",
     "tablePValueSym": "sid",
     "tablePValueInt": "Statistisk signifikans",
-    "faqTitle": "Vanliga frågor"
+    "faqTitle": "Vanliga frågor",
+    "educationalGuide": "Utbildningsguide och referens",
+    "useCasesSubtitle": "Verkliga tillämpningar av regressionsmodellering.",
+    "understandingTitle": "Förstå regressionsanalys",
+    "linearTitle": "Linjär regression",
+    "linearDesc": "Modellerar ett linjärt samband mellan variabler med ekvationen y = a + bx.",
+    "polyTitle": "Polynomregression",
+    "polyDesc": "Anpassar ett kurvlinjärt samband med y = a + bx + cx². Perfekt för komplexa fysiska system.",
+    "expTitle": "Exponentiell regression",
+    "expDesc": "Modellerar snabb tillväxt eller avtagande med y = ae^bx. Idealisk för bakterietillväxt och nedbrytningsanalys.",
+    "logTitle": "Logaritmisk regression",
+    "logDesc": "Anpassar mönster med avtagande avkastning med y = a + b·ln(x). Utmärkt för ekonomisk mättnad.",
+    "toolsTitle": "Våra regressions- och statistikverktyg",
+    "featuresTitle": "Avancerad diagnostikmotor",
+    "featuresSubtitle": "Byggd för institutionell forskning, som kombinerar matematisk stränghet med en intuitiv interaktiv upplevelse.",
+    "featuresPoints": [
+      {
+        "title": "Flera modeller",
+        "desc": "Jämför linjära, polynomiella, exponentiella och logaritmiska anpassningar sida vid sida.",
+        "icon": "🎯"
+      },
+      {
+        "title": "Interaktiv visualisering",
+        "desc": "Utforska dina data med dynamiska spridningsdiagram och överlagrade modellvisualiseringar.",
+        "icon": "📊"
+      },
+      {
+        "title": "Prognosverktyg",
+        "desc": "Förutse resultat med automatiska konfidensintervallberäkningar.",
+        "icon": "🔮"
+      },
+      {
+        "title": "Fullständig diagnostik",
+        "desc": "Detaljerad utdata inklusive R², standardfel och p-värden för alla modeller.",
+        "icon": "📋"
+      },
+      {
+        "title": "Mobiloptimerad",
+        "desc": "Utför komplexa regressionsanalyser på vilken enhet som helst utan kompromisser.",
+        "icon": "📱"
+      },
+      {
+        "title": "Standardiserad",
+        "desc": "Beräkningar följer professionella standarder ISO 3534 och ASTM E2586.",
+        "icon": "⚖️"
+      }
+    ],
+    "requirementsTitle": "Datakrav",
+    "requirementsHeaders": [
+      "Krav",
+      "Minimum",
+      "Rekommenderat"
+    ],
+    "requirementsRows": [
+      [
+        "Urvalsstorlek",
+        "3 datapunkter",
+        "30+ datapunkter"
+      ],
+      [
+        "Observationer/Parameter",
+        "2 per koefficient",
+        "10+ per koefficient"
+      ],
+      [
+        "X-variabelns omfång",
+        "2 olika värden",
+        "Brett, jämnt fördelat"
+      ],
+      [
+        "Y-variabelns typ",
+        "Kontinuerlig",
+        "Kontinuerlig, inga takeffekter"
+      ],
+      [
+        "Fördelning",
+        "Normala residualer",
+        "Normal, extremvärden borttagna"
+      ],
+      [
+        "Durbin-Watson",
+        "Ej tillämpligt",
+        "Statistik ≈ 2"
+      ]
+    ]
   },
   "about": {
     "title": "Om oss – Se vårt uppdrag!",
@@ -149,7 +233,8 @@
     "noteText": "Resultaten beräknas med hjälp av internationella statistiska standarder som är tillämpliga i USA, Europa, Asien och världen över.",
     "dataPoints": "Datapunkter (X, Y)",
     "step": "Steg",
-    "means": "Medel"
+    "means": "Medel",
+    "noteLabel": "Obs:"
   },
   "pearson": {
     "title": "Pearson korrelationsräknare",
@@ -2056,7 +2141,22 @@
     "loading": "Belastning...",
     "error": "Fel",
     "selectLanguage": "Välj språk",
-    "availableLanguages": "Tillgängliga språk"
+    "availableLanguages": "Tillgängliga språk",
+    "previous": "Föregående",
+    "next": "Nästa",
+    "page": "Sida",
+    "total": "Totalt",
+    "showing": "Visar",
+    "of": "av",
+    "exploreTools": "Utforska verktyg",
+    "mainToolsTitle": "Huvudverktyg och sidor",
+    "languagesTitle": "Språk",
+    "calculateNow": "Beräkna nu",
+    "exploreFeatures": "Utforska funktioner",
+    "howToUse": "Hur man använder detta",
+    "modelTitle": "Tillväxt och avtagande",
+    "dataTitle": "Indata",
+    "statsTitle": "Statistisk utdata"
   },
   "footer": {
     "description": "Gratis kalkylator för regressionsekvationer online. Beräkna linjära, polynomiska och multipla regressionsekvationer direkt med steg-för-steg-lösningar.",

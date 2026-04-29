@@ -57,7 +57,91 @@
     "tablePValue": "P-값",
     "tablePValueSym": "피",
     "tablePValueInt": "통계적 중요성",
-    "faqTitle": "자주 묻는 질문"
+    "faqTitle": "자주 묻는 질문",
+    "educationalGuide": "교육 가이드 및 참고자료",
+    "useCasesSubtitle": "회귀 모델링의 실제 응용 사례.",
+    "understandingTitle": "회귀 분석 이해하기",
+    "linearTitle": "선형 회귀",
+    "linearDesc": "방정식 y = a + bx를 사용하여 변수 간의 직선 관계를 모델링합니다.",
+    "polyTitle": "다항 회귀",
+    "polyDesc": "y = a + bx + cx²를 사용하여 곡선 관계를 피팅합니다. 복잡한 물리 시스템에 적합합니다.",
+    "expTitle": "지수 회귀",
+    "expDesc": "y = ae^bx로 급속한 성장 또는 감소를 모델링합니다. 세균 성장 및 감소 분석에 이상적입니다.",
+    "logTitle": "로그 회귀",
+    "logDesc": "y = a + b·ln(x)로 수확 체감 패턴을 피팅합니다. 경제적 포화에 적합합니다.",
+    "toolsTitle": "회귀 및 통계 도구 모음",
+    "featuresTitle": "고급 진단 엔진",
+    "featuresSubtitle": "기관 수준의 연구를 위해 구축되었으며, 수학적 엄밀성과 직관적인 대화형 경험을 결합합니다.",
+    "featuresPoints": [
+      {
+        "title": "다중 모델",
+        "desc": "선형, 다항, 지수, 로그 피팅을 나란히 비교합니다.",
+        "icon": "🎯"
+      },
+      {
+        "title": "대화형 시각화",
+        "desc": "동적 산점도와 모델 오버레이 시각화로 데이터를 탐색합니다.",
+        "icon": "📊"
+      },
+      {
+        "title": "예측 도구",
+        "desc": "자동 신뢰 구간 계산으로 결과를 예측합니다.",
+        "icon": "🔮"
+      },
+      {
+        "title": "전체 진단",
+        "desc": "모든 모델의 R², 표준 오차, p-값을 포함한 상세 출력.",
+        "icon": "📋"
+      },
+      {
+        "title": "모바일 최적화",
+        "desc": "어떤 기기에서든 타협 없이 복잡한 회귀 분석을 수행합니다.",
+        "icon": "📱"
+      },
+      {
+        "title": "표준화",
+        "desc": "ISO 3534 및 ASTM E2586 전문 표준에 따른 계산.",
+        "icon": "⚖️"
+      }
+    ],
+    "requirementsTitle": "데이터 요구 사항",
+    "requirementsHeaders": [
+      "요구 사항",
+      "최소",
+      "권장"
+    ],
+    "requirementsRows": [
+      [
+        "표본 크기",
+        "3개 데이터 포인트",
+        "30개 이상 데이터 포인트"
+      ],
+      [
+        "관측값/매개변수",
+        "계수당 2개",
+        "계수당 10개 이상"
+      ],
+      [
+        "X 변수 범위",
+        "2개의 서로 다른 값",
+        "넓고 균등 간격"
+      ],
+      [
+        "Y 변수 유형",
+        "연속형",
+        "연속형, 천장 효과 없음"
+      ],
+      [
+        "분포",
+        "정규 잔차",
+        "정규, 이상값 제거됨"
+      ],
+      [
+        "Durbin-Watson",
+        "N/A",
+        "통계량 ≈ 2"
+      ]
+    ]
   },
   "about": {
     "title": "회사 소개 - 우리의 임무를 확인하세요!",
@@ -149,7 +233,8 @@
     "noteText": "미국, 유럽, 아시아 및 전 세계에 적용되는 국제 통계 표준을 사용하여 계산된 결과입니다.",
     "dataPoints": "데이터 포인트(X, Y)",
     "step": "단계",
-    "means": "수단"
+    "means": "수단",
+    "noteLabel": "참고:"
   },
   "pearson": {
     "title": "피어슨 상관관계 계산기",
@@ -2056,7 +2141,22 @@
     "loading": "로드 중...",
     "error": "오류",
     "selectLanguage": "언어 선택",
-    "availableLanguages": "사용 가능한 언어"
+    "availableLanguages": "사용 가능한 언어",
+    "previous": "이전",
+    "next": "다음",
+    "page": "페이지",
+    "total": "합계",
+    "showing": "표시 중",
+    "of": "중",
+    "exploreTools": "도구 탐색",
+    "mainToolsTitle": "주요 도구 및 페이지",
+    "languagesTitle": "언어",
+    "calculateNow": "지금 계산",
+    "exploreFeatures": "기능 탐색",
+    "howToUse": "사용 방법",
+    "modelTitle": "성장과 감소",
+    "dataTitle": "입력 데이터",
+    "statsTitle": "통계 출력"
   },
   "footer": {
     "description": "무료 온라인 회귀 방정식 계산기. 단계별 솔루션을 사용하여 선형, 다항식 및 다중 회귀 방정식을 즉시 계산합니다.",

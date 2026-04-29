@@ -57,7 +57,91 @@
     "tablePValue": "Valeur P",
     "tablePValueSym": "p",
     "tablePValueInt": "Importance statistique",
-    "faqTitle": "Foire aux questions"
+    "faqTitle": "Foire aux questions",
+    "educationalGuide": "Guide éducatif et référence",
+    "useCasesSubtitle": "Applications concrètes de la modélisation par régression.",
+    "understandingTitle": "Comprendre l'analyse de régression",
+    "linearTitle": "Régression linéaire",
+    "linearDesc": "Modélise une relation linéaire entre les variables à l'aide de l'équation y = a + bx.",
+    "polyTitle": "Régression polynomiale",
+    "polyDesc": "Ajuste une relation courbe à l'aide de y = a + bx + cx². Idéale pour les systèmes physiques complexes.",
+    "expTitle": "Régression exponentielle",
+    "expDesc": "Modélise la croissance ou la décroissance rapide avec y = ae^bx. Idéale pour la croissance bactérienne et l'analyse de décroissance.",
+    "logTitle": "Régression logarithmique",
+    "logDesc": "Ajuste les schémas de rendements décroissants avec y = a + b·ln(x). Idéale pour la saturation économique.",
+    "toolsTitle": "Nos outils de régression et statistiques",
+    "featuresTitle": "Moteur de diagnostic avancé",
+    "featuresSubtitle": "Conçu pour la recherche de niveau institutionnel, alliant rigueur mathématique et expérience interactive intuitive.",
+    "featuresPoints": [
+      {
+        "title": "Modèles multiples",
+        "desc": "Comparez côte à côte les ajustements linéaire, polynomial, exponentiel et logarithmique.",
+        "icon": "🎯"
+      },
+      {
+        "title": "Visualisation interactive",
+        "desc": "Explorez vos données avec des nuages de points dynamiques et des visualisations de modèles superposés.",
+        "icon": "📊"
+      },
+      {
+        "title": "Outils de prédiction",
+        "desc": "Prévoyez les résultats avec des calculs automatiques d'intervalles de confiance.",
+        "icon": "🔮"
+      },
+      {
+        "title": "Diagnostics complets",
+        "desc": "Résultats détaillés incluant R², erreur standard et valeurs p pour tous les modèles.",
+        "icon": "📋"
+      },
+      {
+        "title": "Optimisé mobile",
+        "desc": "Effectuez des analyses de régression complexes sur tout appareil sans compromis.",
+        "icon": "📱"
+      },
+      {
+        "title": "Standardisé",
+        "desc": "Calculs conformes aux normes professionnelles ISO 3534 et ASTM E2586.",
+        "icon": "⚖️"
+      }
+    ],
+    "requirementsTitle": "Exigences relatives aux données",
+    "requirementsHeaders": [
+      "Exigence",
+      "Minimum",
+      "Recommandé"
+    ],
+    "requirementsRows": [
+      [
+        "Taille de l'échantillon",
+        "3 points de données",
+        "30+ points de données"
+      ],
+      [
+        "Observations/Paramètre",
+        "2 par coefficient",
+        "10+ par coefficient"
+      ],
+      [
+        "Plage de la variable X",
+        "2 valeurs distinctes",
+        "Large, régulièrement espacée"
+      ],
+      [
+        "Type de variable Y",
+        "Continue",
+        "Continue, sans effets plafond"
+      ],
+      [
+        "Distribution",
+        "Résidus normaux",
+        "Normale, valeurs aberrantes supprimées"
+      ],
+      [
+        "Durbin-Watson",
+        "N/A",
+        "Statistique ≈ 2"
+      ]
+    ]
   },
   "about": {
     "title": "À propos de nous – Consultez notre mission !",
@@ -149,7 +233,8 @@
     "noteText": "Résultats calculés à l’aide des normes statistiques internationales applicables aux États-Unis, en Europe, en Asie et dans le monde.",
     "dataPoints": "Points de données (X, Y)",
     "step": "Étape",
-    "means": "Moyens"
+    "means": "Moyens",
+    "noteLabel": "Note :"
   },
   "pearson": {
     "title": "Calculateur de corrélation de Pearson",
@@ -2056,7 +2141,22 @@
     "loading": "Chargement...",
     "error": "Erreur",
     "selectLanguage": "Sélectionnez la langue",
-    "availableLanguages": "Langues disponibles"
+    "availableLanguages": "Langues disponibles",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "page": "Page",
+    "total": "Total",
+    "showing": "Affichage",
+    "of": "de",
+    "exploreTools": "Explorer les outils",
+    "mainToolsTitle": "Outils et pages principaux",
+    "languagesTitle": "Langues",
+    "calculateNow": "Calculer maintenant",
+    "exploreFeatures": "Explorer les fonctionnalités",
+    "howToUse": "Comment utiliser",
+    "modelTitle": "Croissance et décroissance",
+    "dataTitle": "Données d'entrée",
+    "statsTitle": "Résultats statistiques"
   },
   "footer": {
     "description": "Calculateur d'équation de régression en ligne gratuit. Calculez instantanément des équations de régression linéaire, polynomiale et multiple avec des solutions étape par étape.",

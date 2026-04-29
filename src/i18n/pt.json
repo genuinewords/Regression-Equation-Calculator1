@@ -57,7 +57,91 @@
     "tablePValue": "Valor P",
     "tablePValueSym": "p",
     "tablePValueInt": "Significância estatística",
-    "faqTitle": "Perguntas frequentes"
+    "faqTitle": "Perguntas frequentes",
+    "educationalGuide": "Guia educacional e referência",
+    "useCasesSubtitle": "Aplicações reais da modelagem por regressão.",
+    "understandingTitle": "Compreendendo a análise de regressão",
+    "linearTitle": "Regressão linear",
+    "linearDesc": "Modela uma relação linear entre variáveis usando a equação y = a + bx.",
+    "polyTitle": "Regressão polinomial",
+    "polyDesc": "Ajusta uma relação curva usando y = a + bx + cx². Perfeita para sistemas físicos complexos.",
+    "expTitle": "Regressão exponencial",
+    "expDesc": "Modela crescimento ou decaimento rápido com y = ae^bx. Ideal para crescimento bacteriano e análise de decaimento.",
+    "logTitle": "Regressão logarítmica",
+    "logDesc": "Ajusta padrões de retornos decrescentes com y = a + b·ln(x). Ideal para saturação econômica.",
+    "toolsTitle": "Nossas ferramentas de regressão e estatística",
+    "featuresTitle": "Motor de diagnóstico avançado",
+    "featuresSubtitle": "Desenvolvido para pesquisa de nível institucional, combinando rigor matemático com experiência interativa intuitiva.",
+    "featuresPoints": [
+      {
+        "title": "Múltiplos modelos",
+        "desc": "Compare ajustes lineares, polinomiais, exponenciais e logarítmicos lado a lado.",
+        "icon": "🎯"
+      },
+      {
+        "title": "Visualização interativa",
+        "desc": "Explore seus dados com gráficos de dispersão dinâmicos e visualizações de modelos sobrepostos.",
+        "icon": "📊"
+      },
+      {
+        "title": "Ferramentas de previsão",
+        "desc": "Preveja resultados com cálculos automáticos de intervalos de confiança.",
+        "icon": "🔮"
+      },
+      {
+        "title": "Diagnósticos completos",
+        "desc": "Saída detalhada incluindo R², erro padrão e valores p para todos os modelos.",
+        "icon": "📋"
+      },
+      {
+        "title": "Otimizado para celular",
+        "desc": "Realize análises de regressão complexas em qualquer dispositivo sem compromissos.",
+        "icon": "📱"
+      },
+      {
+        "title": "Padronizado",
+        "desc": "Cálculos seguem os padrões profissionais ISO 3534 e ASTM E2586.",
+        "icon": "⚖️"
+      }
+    ],
+    "requirementsTitle": "Requisitos de dados",
+    "requirementsHeaders": [
+      "Requisito",
+      "Mínimo",
+      "Recomendado"
+    ],
+    "requirementsRows": [
+      [
+        "Tamanho da amostra",
+        "3 pontos de dados",
+        "30+ pontos de dados"
+      ],
+      [
+        "Observações/Parâmetro",
+        "2 por coeficiente",
+        "10+ por coeficiente"
+      ],
+      [
+        "Faixa da variável X",
+        "2 valores distintos",
+        "Ampla, uniformemente espaçada"
+      ],
+      [
+        "Tipo de variável Y",
+        "Contínua",
+        "Contínua, sem efeitos teto"
+      ],
+      [
+        "Distribuição",
+        "Resíduos normais",
+        "Normal, outliers removidos"
+      ],
+      [
+        "Durbin-Watson",
+        "N/A",
+        "Estatística ≈ 2"
+      ]
+    ]
   },
   "about": {
     "title": "Sobre nós – Veja nossa missão!",
@@ -149,7 +233,8 @@
     "noteText": "Resultados calculados utilizando padrões estatísticos internacionais aplicáveis ​​nos EUA, Europa, Ásia e em todo o mundo.",
     "dataPoints": "Pontos de dados (X, Y)",
     "step": "Etapa",
-    "means": "Significa"
+    "means": "Significa",
+    "noteLabel": "Nota:"
   },
   "pearson": {
     "title": "Calculadora de Correlação de Pearson",
@@ -2056,7 +2141,22 @@
     "loading": "Carregando...",
     "error": "Erro",
     "selectLanguage": "Selecione o idioma",
-    "availableLanguages": "Idiomas disponíveis"
+    "availableLanguages": "Idiomas disponíveis",
+    "previous": "Anterior",
+    "next": "Próximo",
+    "page": "Página",
+    "total": "Total",
+    "showing": "Exibindo",
+    "of": "de",
+    "exploreTools": "Explorar ferramentas",
+    "mainToolsTitle": "Ferramentas e páginas principais",
+    "languagesTitle": "Idiomas",
+    "calculateNow": "Calcular agora",
+    "exploreFeatures": "Explorar recursos",
+    "howToUse": "Como usar isto",
+    "modelTitle": "Crescimento e decaimento",
+    "dataTitle": "Dados de entrada",
+    "statsTitle": "Saída estatística"
   },
   "footer": {
     "description": "Calculadora de equação de regressão online gratuita. Calcule equações de regressão linear, polinomial e múltipla instantaneamente com soluções passo a passo.",

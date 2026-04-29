@@ -7,6 +7,7 @@
     "intro": "Enter your data points and get the regression equation, slope, intercept, R-squared value, and step-by-step calculations in seconds.",
     "whatIsTitle": "What Is a Regression Equation?",
     "whatIsText": "A regression equation models the relationship between variables, allowing you to predict outcomes based on input data. In its simplest form — simple linear regression — the equation is <strong>y = mx + b</strong>, where <strong>m</strong> is the slope and <strong>b</strong> is the y-intercept. This powerful statistical tool is used across science, business, and engineering to uncover trends, make forecasts, and quantify relationships between variables.",
+    "educationalGuide": "Educational Guide & Reference",
     "whyUseTitle": "Why Use Our Calculator?",
     "whyUsePoints": [
       "Instantly computes the regression equation from your data",
@@ -16,6 +17,7 @@
       "Your data stays private — nothing is sent to any server"
     ],
     "useCasesTitle": "Common Use Cases",
+    "useCasesSubtitle": "Real-world applications of regression modeling.",
     "useCasesPoints": [
       "Predicting sales from advertising spend",
       "Estimating house prices from square footage",
@@ -67,7 +69,79 @@
     "expDesc": "Models rapid growth or decay with y = ae^bx. Ideal for bacterial growth and decay analysis.",
     "logTitle": "Logarithmic Regression",
     "logDesc": "Fits diminishing-returns patterns with y = a + b·ln(x). Great for economic saturation.",
-    "toolsTitle": "Our Regression & Statistics Tools"
+    "toolsTitle": "Our Regression & Statistics Tools",
+    "featuresTitle": "Advanced Diagnostic Engine",
+    "featuresSubtitle": "Built for institutional-grade research, combining mathematical rigor with an intuitive interactive experience.",
+    "featuresPoints": [
+      {
+        "title": "Multiple Models",
+        "desc": "Compare linear, polynomial, exponential, and logarithmic fits side-by-side.",
+        "icon": "🎯"
+      },
+      {
+        "title": "Interactive Viz",
+        "desc": "Explore your data with dynamic scatter plots and model overlay visualizations.",
+        "icon": "📊"
+      },
+      {
+        "title": "Prediction Tools",
+        "desc": "Forecast outcomes with automated confidence interval calculations.",
+        "icon": "🔮"
+      },
+      {
+        "title": "Full Diagnostics",
+        "desc": "Detailed output including R², Standard Error, and p-values for all models.",
+        "icon": "📋"
+      },
+      {
+        "title": "Mobile Optimized",
+        "desc": "Perform complex regression analysis on any device without compromise.",
+        "icon": "📱"
+      },
+      {
+        "title": "Standardized",
+        "desc": "Calculations follow ISO 3534 and ASTM E2586 professional standards.",
+        "icon": "⚖️"
+      }
+    ],
+    "requirementsTitle": "Data Requirements",
+    "requirementsHeaders": [
+      "Requirement",
+      "Minimum",
+      "Recommended"
+    ],
+    "requirementsRows": [
+      [
+        "Sample Size",
+        "3 data points",
+        "30+ data points"
+      ],
+      [
+        "Observations/Parameter",
+        "2 per coefficient",
+        "10+ per coefficient"
+      ],
+      [
+        "X-Variable Range",
+        "2 distinct values",
+        "Wide, evenly spaced"
+      ],
+      [
+        "Y-Variable Type",
+        "Continuous",
+        "Continuous, no ceiling effects"
+      ],
+      [
+        "Distribution",
+        "Normal residuals",
+        "Normal, outliers removed"
+      ],
+      [
+        "Durbin-Watson",
+        "N/A",
+        "Statistic ≈ 2"
+      ]
+    ]
   },
   "about": {
     "title": "About Us – View Our Mission!",
@@ -161,7 +235,8 @@
     "noteText": "Results calculated using international statistical standards applicable in USA, Europe, Asia, and worldwide.",
     "dataPoints": "Data Points (X, Y)",
     "step": "Step",
-    "means": "Means"
+    "means": "Means",
+    "noteLabel": "Note:"
   },
   "pearson": {
     "title": "Pearson Correlation Calculator",

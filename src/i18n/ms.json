@@ -57,7 +57,91 @@
     "tablePValue": "P-nilai",
     "tablePValueSym": "hlm",
     "tablePValueInt": "Kepentingan statistik",
-    "faqTitle": "Soalan Lazim"
+    "faqTitle": "Soalan Lazim",
+    "educationalGuide": "Panduan Pendidikan dan Rujukan",
+    "useCasesSubtitle": "Aplikasi dunia sebenar pemodelan regresi.",
+    "understandingTitle": "Memahami Analisis Regresi",
+    "linearTitle": "Regresi Linear",
+    "linearDesc": "Memodelkan hubungan garis lurus antara pembolehubah menggunakan persamaan y = a + bx.",
+    "polyTitle": "Regresi Polinomial",
+    "polyDesc": "Menyesuaikan hubungan lengkung menggunakan y = a + bx + cx². Sesuai untuk sistem fizikal kompleks.",
+    "expTitle": "Regresi Eksponen",
+    "expDesc": "Memodelkan pertumbuhan atau pereputan pantas dengan y = ae^bx. Ideal untuk pertumbuhan bakteria dan analisis pereputan.",
+    "logTitle": "Regresi Logaritma",
+    "logDesc": "Menyesuaikan corak pulangan berkurangan dengan y = a + b·ln(x). Sesuai untuk ketepuan ekonomi.",
+    "toolsTitle": "Alat Regresi dan Statistik Kami",
+    "featuresTitle": "Enjin Diagnostik Lanjutan",
+    "featuresSubtitle": "Dibina untuk penyelidikan peringkat institusi, menggabungkan ketegasan matematik dengan pengalaman interaktif yang intuitif.",
+    "featuresPoints": [
+      {
+        "title": "Pelbagai Model",
+        "desc": "Bandingkan penyesuaian linear, polinomial, eksponen dan logaritma secara bersebelahan.",
+        "icon": "🎯"
+      },
+      {
+        "title": "Visualisasi Interaktif",
+        "desc": "Terokai data anda dengan plot serakan dinamik dan visualisasi model bertindih.",
+        "icon": "📊"
+      },
+      {
+        "title": "Alat Ramalan",
+        "desc": "Ramalkan hasil dengan pengiraan selang keyakinan automatik.",
+        "icon": "🔮"
+      },
+      {
+        "title": "Diagnostik Lengkap",
+        "desc": "Output terperinci termasuk R², ralat piawai dan nilai p untuk semua model.",
+        "icon": "📋"
+      },
+      {
+        "title": "Dioptimumkan untuk Mudah Alih",
+        "desc": "Lakukan analisis regresi kompleks pada mana-mana peranti tanpa kompromi.",
+        "icon": "📱"
+      },
+      {
+        "title": "Diseragamkan",
+        "desc": "Pengiraan mengikut piawaian profesional ISO 3534 dan ASTM E2586.",
+        "icon": "⚖️"
+      }
+    ],
+    "requirementsTitle": "Keperluan Data",
+    "requirementsHeaders": [
+      "Keperluan",
+      "Minimum",
+      "Disyorkan"
+    ],
+    "requirementsRows": [
+      [
+        "Saiz Sampel",
+        "3 titik data",
+        "30+ titik data"
+      ],
+      [
+        "Pemerhatian/Parameter",
+        "2 setiap pekali",
+        "10+ setiap pekali"
+      ],
+      [
+        "Julat Pembolehubah X",
+        "2 nilai berbeza",
+        "Luas, jarak sekata"
+      ],
+      [
+        "Jenis Pembolehubah Y",
+        "Berterusan",
+        "Berterusan, tiada kesan siling"
+      ],
+      [
+        "Taburan",
+        "Reja normal",
+        "Normal, pencilan dibuang"
+      ],
+      [
+        "Durbin-Watson",
+        "T/B",
+        "Statistik ≈ 2"
+      ]
+    ]
   },
   "about": {
     "title": "Mengenai Kami – Lihat Misi Kami!",
@@ -149,7 +233,8 @@
     "noteText": "Keputusan dikira menggunakan piawaian statistik antarabangsa yang digunakan di Amerika Syarikat, Eropah, Asia dan seluruh dunia.",
     "dataPoints": "Titik Data (X, Y)",
     "step": "Langkah",
-    "means": "Bermakna"
+    "means": "Bermakna",
+    "noteLabel": "Nota:"
   },
   "pearson": {
     "title": "Kalkulator Korelasi Pearson",
@@ -2056,7 +2141,22 @@
     "loading": "Memuatkan...",
     "error": "ralat",
     "selectLanguage": "Pilih bahasa",
-    "availableLanguages": "Bahasa yang tersedia"
+    "availableLanguages": "Bahasa yang tersedia",
+    "previous": "Sebelumnya",
+    "next": "Seterusnya",
+    "page": "Halaman",
+    "total": "Jumlah",
+    "showing": "Memaparkan",
+    "of": "daripada",
+    "exploreTools": "Terokai Alat",
+    "mainToolsTitle": "Alat dan Halaman Utama",
+    "languagesTitle": "Bahasa",
+    "calculateNow": "Kira Sekarang",
+    "exploreFeatures": "Terokai Ciri",
+    "howToUse": "Cara Menggunakan Ini",
+    "modelTitle": "Pertumbuhan dan Pereputan",
+    "dataTitle": "Data Input",
+    "statsTitle": "Output Statistik"
   },
   "footer": {
     "description": "Kalkulator persamaan regresi dalam talian percuma. Kira persamaan linear, polinomial dan regresi berbilang serta-merta dengan penyelesaian langkah demi langkah.",

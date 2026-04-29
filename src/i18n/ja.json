@@ -57,7 +57,91 @@
     "tablePValue": "P値",
     "tablePValueSym": "p",
     "tablePValueInt": "統計的有意性",
-    "faqTitle": "よくある質問"
+    "faqTitle": "よくある質問",
+    "educationalGuide": "教育ガイドとリファレンス",
+    "useCasesSubtitle": "回帰モデリングの実世界での応用。",
+    "understandingTitle": "回帰分析の理解",
+    "linearTitle": "線形回帰",
+    "linearDesc": "方程式 y = a + bx を使用して変数間の直線関係をモデル化します。",
+    "polyTitle": "多項式回帰",
+    "polyDesc": "y = a + bx + cx² を使用して曲線関係を当てはめます。複雑な物理システムに最適です。",
+    "expTitle": "指数回帰",
+    "expDesc": "y = ae^bx で急速な成長または減衰をモデル化します。細菌の増殖や減衰分析に最適です。",
+    "logTitle": "対数回帰",
+    "logDesc": "y = a + b·ln(x) で収穫逓減パターンを当てはめます。経済的飽和に最適です。",
+    "toolsTitle": "回帰・統計ツール一覧",
+    "featuresTitle": "高度な診断エンジン",
+    "featuresSubtitle": "機関レベルの研究向けに構築され、数学的厳密さと直感的なインタラクティブ体験を融合しています。",
+    "featuresPoints": [
+      {
+        "title": "複数モデル",
+        "desc": "線形、多項式、指数、対数の当てはめを並べて比較できます。",
+        "icon": "🎯"
+      },
+      {
+        "title": "インタラクティブな可視化",
+        "desc": "動的な散布図とモデルオーバーレイ可視化でデータを探索できます。",
+        "icon": "📊"
+      },
+      {
+        "title": "予測ツール",
+        "desc": "自動信頼区間計算で結果を予測します。",
+        "icon": "🔮"
+      },
+      {
+        "title": "完全な診断",
+        "desc": "すべてのモデルのR²、標準誤差、p値を含む詳細な出力。",
+        "icon": "📋"
+      },
+      {
+        "title": "モバイル最適化",
+        "desc": "どんなデバイスでも妥協なく複雑な回帰分析を実行できます。",
+        "icon": "📱"
+      },
+      {
+        "title": "標準化",
+        "desc": "ISO 3534およびASTM E2586の専門基準に従った計算。",
+        "icon": "⚖️"
+      }
+    ],
+    "requirementsTitle": "データ要件",
+    "requirementsHeaders": [
+      "要件",
+      "最小",
+      "推奨"
+    ],
+    "requirementsRows": [
+      [
+        "サンプルサイズ",
+        "3データポイント",
+        "30以上のデータポイント"
+      ],
+      [
+        "観測数/パラメータ",
+        "係数あたり2",
+        "係数あたり10以上"
+      ],
+      [
+        "X変数の範囲",
+        "2つの異なる値",
+        "広範囲、均等間隔"
+      ],
+      [
+        "Y変数の型",
+        "連続",
+        "連続、天井効果なし"
+      ],
+      [
+        "分布",
+        "正規残差",
+        "正規、外れ値除去済み"
+      ],
+      [
+        "Durbin-Watson",
+        "N/A",
+        "統計量 ≈ 2"
+      ]
+    ]
   },
   "about": {
     "title": "私たちについて – 私たちの使命をご覧ください!",
@@ -149,7 +233,8 @@
     "noteText": "結果は、米国、ヨーロッパ、アジア、および世界中で適用される国際統計基準を使用して計算されています。",
     "dataPoints": "データポイント (X、Y)",
     "step": "ステップ",
-    "means": "手段"
+    "means": "手段",
+    "noteLabel": "注："
   },
   "pearson": {
     "title": "ピアソン相関計算機",
@@ -2056,7 +2141,22 @@
     "loading": "読み込み中...",
     "error": "エラー",
     "selectLanguage": "言語を選択してください",
-    "availableLanguages": "利用可能な言語"
+    "availableLanguages": "利用可能な言語",
+    "previous": "前へ",
+    "next": "次へ",
+    "page": "ページ",
+    "total": "合計",
+    "showing": "表示中",
+    "of": "の",
+    "exploreTools": "ツールを探索",
+    "mainToolsTitle": "メインツールとページ",
+    "languagesTitle": "言語",
+    "calculateNow": "今すぐ計算",
+    "exploreFeatures": "機能を探索",
+    "howToUse": "使い方",
+    "modelTitle": "成長と減衰",
+    "dataTitle": "入力データ",
+    "statsTitle": "統計出力"
   },
   "footer": {
     "description": "無料のオンライン回帰式計算機。 ステップバイステップのソリューションを使用して、線形、多項式、および重回帰方程式を瞬時に計算します。",

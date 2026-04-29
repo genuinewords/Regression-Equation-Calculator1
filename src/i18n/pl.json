@@ -57,7 +57,91 @@
     "tablePValue": "Wartość P",
     "tablePValueSym": "P",
     "tablePValueInt": "Znaczenie statystyczne",
-    "faqTitle": "Często zadawane pytania"
+    "faqTitle": "Często zadawane pytania",
+    "educationalGuide": "Przewodnik edukacyjny i odniesienie",
+    "useCasesSubtitle": "Rzeczywiste zastosowania modelowania regresyjnego.",
+    "understandingTitle": "Zrozumienie analizy regresji",
+    "linearTitle": "Regresja liniowa",
+    "linearDesc": "Modeluje prostoliniową zależność między zmiennymi za pomocą równania y = a + bx.",
+    "polyTitle": "Regresja wielomianowa",
+    "polyDesc": "Dopasowuje zależność krzywoliniową za pomocą y = a + bx + cx². Idealna dla złożonych systemów fizycznych.",
+    "expTitle": "Regresja wykładnicza",
+    "expDesc": "Modeluje szybki wzrost lub zanik za pomocą y = ae^bx. Idealna do analizy wzrostu bakterii i rozpadu.",
+    "logTitle": "Regresja logarytmiczna",
+    "logDesc": "Dopasowuje wzorce malejących zwrotów za pomocą y = a + b·ln(x). Idealna dla nasycenia ekonomicznego.",
+    "toolsTitle": "Nasze narzędzia regresji i statystyki",
+    "featuresTitle": "Zaawansowany silnik diagnostyczny",
+    "featuresSubtitle": "Stworzony do badań na poziomie instytucjonalnym, łączący rygor matematyczny z intuicyjnym interaktywnym doświadczeniem.",
+    "featuresPoints": [
+      {
+        "title": "Wiele modeli",
+        "desc": "Porównuj dopasowania liniowe, wielomianowe, wykładnicze i logarytmiczne obok siebie.",
+        "icon": "🎯"
+      },
+      {
+        "title": "Interaktywna wizualizacja",
+        "desc": "Eksploruj dane za pomocą dynamicznych wykresów rozrzutu i nałożonych wizualizacji modeli.",
+        "icon": "📊"
+      },
+      {
+        "title": "Narzędzia predykcji",
+        "desc": "Prognozuj wyniki z automatycznymi obliczeniami przedziałów ufności.",
+        "icon": "🔮"
+      },
+      {
+        "title": "Pełna diagnostyka",
+        "desc": "Szczegółowe wyniki obejmujące R², błąd standardowy i wartości p dla wszystkich modeli.",
+        "icon": "📋"
+      },
+      {
+        "title": "Optymalizacja mobilna",
+        "desc": "Wykonuj złożone analizy regresji na dowolnym urządzeniu bez kompromisów.",
+        "icon": "📱"
+      },
+      {
+        "title": "Standaryzacja",
+        "desc": "Obliczenia zgodne z normami zawodowymi ISO 3534 i ASTM E2586.",
+        "icon": "⚖️"
+      }
+    ],
+    "requirementsTitle": "Wymagania dotyczące danych",
+    "requirementsHeaders": [
+      "Wymaganie",
+      "Minimum",
+      "Zalecane"
+    ],
+    "requirementsRows": [
+      [
+        "Wielkość próby",
+        "3 punkty danych",
+        "30+ punktów danych"
+      ],
+      [
+        "Obserwacje/Parametr",
+        "2 na współczynnik",
+        "10+ na współczynnik"
+      ],
+      [
+        "Zakres zmiennej X",
+        "2 różne wartości",
+        "Szeroki, równomiernie rozmieszczony"
+      ],
+      [
+        "Typ zmiennej Y",
+        "Ciągły",
+        "Ciągły, bez efektu sufitowego"
+      ],
+      [
+        "Rozkład",
+        "Normalne reszty",
+        "Normalny, wartości odstające usunięte"
+      ],
+      [
+        "Durbin-Watson",
+        "Nie dotyczy",
+        "Statystyka ≈ 2"
+      ]
+    ]
   },
   "about": {
     "title": "O nas – Zobacz naszą misję!",
@@ -149,7 +233,8 @@
     "noteText": "Wyniki obliczono przy użyciu międzynarodowych standardów statystycznych obowiązujących w USA, Europie, Azji i na świecie.",
     "dataPoints": "Punkty danych (X, Y)",
     "step": "Krok",
-    "means": "Oznacza"
+    "means": "Oznacza",
+    "noteLabel": "Uwaga:"
   },
   "pearson": {
     "title": "Kalkulator korelacji Pearsona",
@@ -2056,7 +2141,22 @@
     "loading": "Załadunek...",
     "error": "Błąd",
     "selectLanguage": "Wybierz język",
-    "availableLanguages": "Dostępne języki"
+    "availableLanguages": "Dostępne języki",
+    "previous": "Poprzedni",
+    "next": "Następny",
+    "page": "Strona",
+    "total": "Razem",
+    "showing": "Wyświetlanie",
+    "of": "z",
+    "exploreTools": "Przeglądaj narzędzia",
+    "mainToolsTitle": "Główne narzędzia i strony",
+    "languagesTitle": "Języki",
+    "calculateNow": "Oblicz teraz",
+    "exploreFeatures": "Poznaj funkcje",
+    "howToUse": "Jak tego używać",
+    "modelTitle": "Wzrost i zanik",
+    "dataTitle": "Dane wejściowe",
+    "statsTitle": "Wyniki statystyczne"
   },
   "footer": {
     "description": "Darmowy kalkulator równań regresji online. Błyskawicznie obliczaj równania regresji liniowej, wielomianowej i wielokrotnej, korzystając z rozwiązań krok po kroku.",

@@ -57,7 +57,91 @@
     "tablePValue": "P-Wert",
     "tablePValueSym": "P",
     "tablePValueInt": "Statistische Bedeutung",
-    "faqTitle": "Häufig gestellte Fragen"
+    "faqTitle": "Häufig gestellte Fragen",
+    "educationalGuide": "Bildungsleitfaden und Referenz",
+    "useCasesSubtitle": "Praxisanwendungen der Regressionsmodellierung.",
+    "understandingTitle": "Regressionsanalyse verstehen",
+    "linearTitle": "Lineare Regression",
+    "linearDesc": "Modelliert eine geradlinige Beziehung zwischen Variablen mit der Gleichung y = a + bx.",
+    "polyTitle": "Polynomiale Regression",
+    "polyDesc": "Passt eine gekrümmte Beziehung mit y = a + bx + cx² an. Ideal für komplexe physikalische Systeme.",
+    "expTitle": "Exponentielle Regression",
+    "expDesc": "Modelliert schnelles Wachstum oder Zerfall mit y = ae^bx. Ideal für Bakterienwachstum und Zerfallsanalyse.",
+    "logTitle": "Logarithmische Regression",
+    "logDesc": "Passt Muster abnehmender Erträge mit y = a + b·ln(x) an. Ideal für wirtschaftliche Sättigung.",
+    "toolsTitle": "Unsere Regressions- und Statistiktools",
+    "featuresTitle": "Erweiterte Diagnose-Engine",
+    "featuresSubtitle": "Entwickelt für institutionelle Forschung, verbindet mathematische Strenge mit intuitiver interaktiver Erfahrung.",
+    "featuresPoints": [
+      {
+        "title": "Mehrere Modelle",
+        "desc": "Vergleichen Sie lineare, polynomiale, exponentielle und logarithmische Anpassungen nebeneinander.",
+        "icon": "🎯"
+      },
+      {
+        "title": "Interaktive Visualisierung",
+        "desc": "Erkunden Sie Ihre Daten mit dynamischen Streudiagrammen und überlagerten Modellvisualisierungen.",
+        "icon": "📊"
+      },
+      {
+        "title": "Vorhersagetools",
+        "desc": "Prognostizieren Sie Ergebnisse mit automatischen Konfidenzintervallberechnungen.",
+        "icon": "🔮"
+      },
+      {
+        "title": "Vollständige Diagnostik",
+        "desc": "Detaillierte Ausgabe einschließlich R², Standardfehler und p-Werte für alle Modelle.",
+        "icon": "📋"
+      },
+      {
+        "title": "Mobiloptimiert",
+        "desc": "Führen Sie komplexe Regressionsanalysen auf jedem Gerät ohne Kompromisse durch.",
+        "icon": "📱"
+      },
+      {
+        "title": "Standardisiert",
+        "desc": "Berechnungen folgen den professionellen Standards ISO 3534 und ASTM E2586.",
+        "icon": "⚖️"
+      }
+    ],
+    "requirementsTitle": "Datenanforderungen",
+    "requirementsHeaders": [
+      "Anforderung",
+      "Minimum",
+      "Empfohlen"
+    ],
+    "requirementsRows": [
+      [
+        "Stichprobengröße",
+        "3 Datenpunkte",
+        "30+ Datenpunkte"
+      ],
+      [
+        "Beobachtungen/Parameter",
+        "2 pro Koeffizient",
+        "10+ pro Koeffizient"
+      ],
+      [
+        "X-Variablen-Bereich",
+        "2 verschiedene Werte",
+        "Breit, gleichmäßig verteilt"
+      ],
+      [
+        "Y-Variablen-Typ",
+        "Stetig",
+        "Stetig, keine Deckeneffekte"
+      ],
+      [
+        "Verteilung",
+        "Normale Residuen",
+        "Normal, Ausreißer entfernt"
+      ],
+      [
+        "Durbin-Watson",
+        "N/A",
+        "Statistik ≈ 2"
+      ]
+    ]
   },
   "about": {
     "title": "Über uns – Sehen Sie sich unsere Mission an!",
@@ -149,7 +233,8 @@
     "noteText": "Die Ergebnisse wurden anhand internationaler statistischer Standards berechnet, die in den USA, Europa, Asien und weltweit gelten.",
     "dataPoints": "Datenpunkte (X, Y)",
     "step": "Schritt",
-    "means": "Bedeutet"
+    "means": "Bedeutet",
+    "noteLabel": "Hinweis:"
   },
   "pearson": {
     "title": "Pearson-Korrelationsrechner",
@@ -2056,7 +2141,22 @@
     "loading": "Laden...",
     "error": "Fehler",
     "selectLanguage": "Sprache auswählen",
-    "availableLanguages": "Verfügbare Sprachen"
+    "availableLanguages": "Verfügbare Sprachen",
+    "previous": "Zurück",
+    "next": "Weiter",
+    "page": "Seite",
+    "total": "Gesamt",
+    "showing": "Anzeige",
+    "of": "von",
+    "exploreTools": "Tools erkunden",
+    "mainToolsTitle": "Haupttools und Seiten",
+    "languagesTitle": "Sprachen",
+    "calculateNow": "Jetzt berechnen",
+    "exploreFeatures": "Funktionen erkunden",
+    "howToUse": "So verwenden Sie dies",
+    "modelTitle": "Wachstum und Zerfall",
+    "dataTitle": "Eingabedaten",
+    "statsTitle": "Statistische Ausgabe"
   },
   "footer": {
     "description": "Kostenloser Online-Regressionsgleichungsrechner. Berechnen Sie lineare, polynomiale und multiple Regressionsgleichungen sofort mit Schritt-für-Schritt-Lösungen.",
