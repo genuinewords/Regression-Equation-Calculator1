@@ -11,11 +11,11 @@
     "pearsonCorrelation": "पियर्सन r कैलकुलेटर",
     "grubbsTest": "ग्रब्स परीक्षण",
     "assumptionsChecker": "अनुमान परीक्षक",
-    "expCalc": "Exponential Regression",
-    "lsrlCalc": "Least Squares Line",
-    "rcCalc": "Regression Curve",
-    "quadCalc": "द्विघात कैलकुलेटर",
-    "multiCalc": "बहु कैलकुलेटर"
+    "expCalc": "घातांतीय प्रतिगमन",
+    "lsrlCalc": "न्यूनतम वर्ग रेखा",
+    "rcCalc": "प्रतिगमन वक्र",
+    "quadCalc": "द्विघात प्रतिगमन",
+    "multiCalc": "बहुचर प्रतिगमन"
   },
   "footer": {
     "description": "छात्रों, शोधकर्ताओं और पेशेवरों के लिए चरण-दर-चरण समाधानों के साथ मुफ्त ऑनलाइन प्रतिगमन समीकरण कैलकुलेटर।",
