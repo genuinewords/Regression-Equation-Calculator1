@@ -23,13 +23,17 @@
       "Prévoir les changements de température au fil du temps",
       "Évaluation de la relation entre la posologie et la réponse"
     ],
-    "howItWorksTitle": "Comment fonctionne le calculateur d'équation de régression",
-    "howItWorksStep1Title": "Saisir des données",
-    "howItWorksStep1": "Entrez vos points de données x et y dans le tableau ci-dessous",
-    "howItWorksStep2Title": "Calculer",
-    "howItWorksStep2": "Cliquez sur Calculer pour calculer l'équation de régression",
-    "howItWorksStep3Title": "Afficher les résultats",
-    "howItWorksStep3": "Affichez vos résultats, y compris l'équation, la pente, l'origine et la valeur R²",
+    "howItWorksTitle": "Comment ça marche",
+    "howItWorksStep1Title": "Choisissez un modèle de régression",
+    "howItWorksStep1": "Choisissez parmi une régression linéaire, polynomiale, exponentielle ou logarithmique pour correspondre au modèle de relation de vos données.",
+    "howItWorksStep2Title": "Saisir des points de données",
+    "howItWorksStep2": "Ajoutez vos paires de données X et Y dans le tableau. Définissez votre niveau de confiance (%) et entrez éventuellement une valeur X de prédiction pour la prévision.",
+    "howItWorksStep3Title": "Calculer et visualiser",
+    "howItWorksStep3": "Cliquez sur Calculer pour générer instantanément l'équation de régression, la valeur R au carré et un nuage de points interactif avec la droite de régression ajustée.",
+    "howItWorksStep4Title": "Examiner les diagnostics",
+    "howItWorksStep4": "Examinez le tableau des statistiques de régression (erreur standard, taille de l'échantillon, degrés de liberté et niveau de confiance) pour évaluer la fiabilité du modèle.",
+    "howItWorksStep5Title": "Prédire et prévoir",
+    "howItWorksStep5": "Utilisez l'entrée de prédiction X pour estimer Y à tout moment, avec des intervalles de confiance basés sur le niveau de confiance que vous avez choisi.",
     "tableTitle": "Référence des statistiques de régression",
     "tableDescription": "Statistiques de régression courantes et leurs interprétations",
     "tableStat": "Statistique",
@@ -62,14 +66,14 @@
     "mission": "Notre mission",
     "missionText": "Rendre l'analyse de régression accessible à tous, des étudiants qui apprennent les statistiques pour la première fois aux professionnels qui ont besoin de résultats rapides et fiables. Nous pensons que les outils statistiques puissants doivent être gratuits, privés et faciles à utiliser.",
     "values": "Nos valeurs",
-    "valuesText": "La confidentialité d'abord : tous les calculs sont exécutés dans votre navigateur, rien n'est envoyé à un serveur. Axé sur l'éducation : chaque résultat comprend des explications étape par étape afin que vous appreniez les mathématiques, pas seulement la réponse. Toujours gratuit – pas d'inscription, pas de paywall, pas de limites.",
+    "valuesText": "La confidentialité avant tout : tous les calculs sont exécutés dans votre navigateur, rien n'est envoyé à un serveur. Axé sur l'éducation : chaque résultat comprend des explications étape par étape afin que vous appreniez les mathématiques, pas seulement la réponse. Toujours gratuit – pas d'inscription, pas de paywall, pas de limites.",
     "team": "Notre équipe",
     "teamText": "Nous sommes une petite équipe de statisticiens, d'éducateurs et de développeurs passionnés par la rendre compréhensible l'analyse des données. Si vous avez des suggestions ou souhaitez contribuer, contactez-nous via notre page de contact."
   },
   "contact": {
     "title": "Contactez-nous – Obtenez de l'aide maintenant",
     "description": "Contactez l’équipe du calculateur d’équation de régression. Remplissez notre formulaire de contact pour toute question, commentaire ou assistance concernant notre outil statistique.",
-    "helperText": "Vous avez une question ou un commentaire ? Nous aimerions avoir de vos nouvelles. Fill out the form below and we'll get back to you as soon as possible.",
+    "helperText": "Vous avez une question ou un commentaire ? Nous aimerions avoir de vos nouvelles. Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.",
     "nameLabel": "Votre nom",
     "emailLabel": "Votre e-mail",
     "messageLabel": "Votre message",
@@ -108,7 +112,7 @@
     "calculate": "📊 Calculer la régression",
     "clear": "🔄 Réinitialiser la calculatrice",
     "result": "Résultats de régression",
-    "resultHint": "Les résultats de votre analyse de régression apparaissent ci-dessous. These calculations follow international statistical standards.",
+    "resultHint": "Les résultats de votre analyse de régression apparaissent ci-dessous. Ces calculs suivent les normes statistiques internationales.",
     "equation": "Équation de régression",
     "slope": "Pente (m)",
     "intercept": "Interception (b)",
@@ -142,7 +146,10 @@
     "noPrediction": "—",
     "modelYear": "Année modèle",
     "modelYearHint": "Exemple : 2024, 2025, 2026 ou toute année personnalisée",
-    "noteText": "Résultats calculés à l’aide des normes statistiques internationales applicables aux États-Unis, en Europe, en Asie et dans le monde."
+    "noteText": "Résultats calculés à l’aide des normes statistiques internationales applicables aux États-Unis, en Europe, en Asie et dans le monde.",
+    "dataPoints": "Points de données (X, Y)",
+    "step": "Étape",
+    "means": "Moyens"
   },
   "pearson": {
     "title": "Calculateur de corrélation de Pearson",
@@ -1071,7 +1078,7 @@
     "howCalcSteps": [
       "<strong>Calculer signifie :</strong> Calculer x̄ = Σxᵢ/n et ȳ = Σyᵢ/n. Ce sont les centroïdes de vos données et la droite de régression passe toujours par le point (x̄, ȳ).",
       "<strong>Calculer les écarts :</strong> Pour chaque point de données, recherchez (xᵢ − x̄) et (yᵢ − ȳ). Ces écarts mesurent la distance entre chaque point et le centre des données.",
-      "<strong>Calculez SSxy et SSxx :</strong> Additionnez les produits croisés SSxy = Σ(xᵢ − x̄)(yᵢ − ȳ) et les carrés des écarts x SSxx = Σ(xᵢ − x̄)². Ce sont les éléments constitutifs de la formule de la pente.",
+      "<strong>Calculez SSxy et SSxx :</strong> Additionnez les produits vectoriels SSxy = Σ(xᵢ − x̄)(yᵢ − ȳ) et les carrés des écarts x SSxx = Σ(xᵢ − x̄)². Ce sont les éléments constitutifs de la formule de la pente.",
       "<strong>Trouver la pente et l'origine :</strong> Calculez m = SSxy / SSxx et b = ȳ − m·x̄. Ces deux valeurs définissent complètement la droite de régression ŷ = mx + b.",
       "<strong>Évaluez l'ajustement :</strong> Calculez R² = 1 − SSres/SStot et examinez les tracés résiduels. Un R² élevé et un motif résiduel aléatoire indiquent un modèle bien ajusté."
     ],
@@ -2042,5 +2049,21 @@
   "sitemap": {
     "title": "Plan du site",
     "description": "Explorez le plan du site complet du calculateur d'équation de régression. Retrouvez tous nos outils statistiques, calculatrices, articles de blog et ressources en mathématiques pédagogiques."
+  },
+  "common": {
+    "menu": "Menu",
+    "close": "Fermer",
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "selectLanguage": "Sélectionnez la langue",
+    "availableLanguages": "Langues disponibles"
+  },
+  "footer": {
+    "description": "Calculateur d'équation de régression en ligne gratuit. Calculez instantanément des équations de régression linéaire, polynomiale et multiple avec des solutions étape par étape.",
+    "toolsTitle": "Outils et pages",
+    "companyTitle": "Entreprise",
+    "connectTitle": "Connecter",
+    "languageTitle": "Langue",
+    "copyright": "Tous droits réservés."
   }
 }

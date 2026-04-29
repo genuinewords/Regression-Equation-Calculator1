@@ -23,13 +23,17 @@
       "Forecasting temperature changes over time",
       "Evaluating the relationship between dosage and response"
     ],
-    "howItWorksTitle": "How Regression Equation Calculator Works",
-    "howItWorksStep1Title": "Enter Data",
-    "howItWorksStep1": "Enter your x and y data points in the table below",
-    "howItWorksStep2Title": "Calculate",
-    "howItWorksStep2": "Click Calculate to compute the regression equation",
-    "howItWorksStep3Title": "View Results",
-    "howItWorksStep3": "View your results including equation, slope, intercept, and R² value",
+    "howItWorksTitle": "How It Works",
+    "howItWorksStep1Title": "Choose Regression Model",
+    "howItWorksStep1": "Select from Linear, Polynomial, Exponential, or Logarithmic regression to match your data's relationship pattern.",
+    "howItWorksStep2Title": "Enter Data Points",
+    "howItWorksStep2": "Add your X and Y data pairs in the table. Set your confidence level (%) and optionally enter a prediction X value for forecasting.",
+    "howItWorksStep3Title": "Calculate & Visualize",
+    "howItWorksStep3": "Click Calculate to instantly generate the regression equation, R-squared value, and an interactive scatter plot with the fitted regression line.",
+    "howItWorksStep4Title": "Review Diagnostics",
+    "howItWorksStep4": "Examine the regression statistics table — standard error, sample size, degrees of freedom, and confidence level — to evaluate model reliability.",
+    "howItWorksStep5Title": "Predict & Forecast",
+    "howItWorksStep5": "Use the prediction X input to estimate Y at any point, with confidence intervals based on your chosen confidence level.",
     "tableTitle": "Regression Statistics Reference",
     "tableDescription": "Common regression statistics and their interpretations",
     "tableStat": "Statistic",
@@ -53,7 +57,17 @@
     "tablePValue": "P-value",
     "tablePValueSym": "p",
     "tablePValueInt": "Statistical significance",
-    "faqTitle": "Frequently Asked Questions"
+    "faqTitle": "Frequently Asked Questions",
+    "understandingTitle": "Understanding Regression Analysis",
+    "linearTitle": "Linear Regression",
+    "linearDesc": "Models a straight-line relationship between variables using the equation y = a + bx.",
+    "polyTitle": "Polynomial Regression",
+    "polyDesc": "Fits a curved relationship using y = a + bx + cx². Perfect for complex physical systems.",
+    "expTitle": "Exponential Regression",
+    "expDesc": "Models rapid growth or decay with y = ae^bx. Ideal for bacterial growth and decay analysis.",
+    "logTitle": "Logarithmic Regression",
+    "logDesc": "Fits diminishing-returns patterns with y = a + b·ln(x). Great for economic saturation.",
+    "toolsTitle": "Our Regression & Statistics Tools"
   },
   "about": {
     "title": "About Us – View Our Mission!",
@@ -79,7 +93,8 @@
     "apiError": "Something went wrong. Please try again.",
     "networkError": "Network error. Please check your connection.",
     "fallbackText": "You can also reach us directly at",
-    "fallbackEmail": "contact@regressionequationcalculator.com"
+    "fallbackEmail": "contact@regressionequationcalculator.com",
+    "emailSupport": "Email Support"
   },
   "terms": {
     "title": "Terms of Service – Our Rules",
@@ -95,7 +110,8 @@
     "title": "Statistics & Math Guide Blog",
     "description": "Read our Statistics & Math Guide Blog for comprehensive articles about regression analysis, statistics, data modeling, and practical math applications.",
     "readMore": "Read More",
-    "resultsMeta": "Showing {start}-{end} of {total} articles"
+    "resultsMeta": "Showing {start}-{end} of {total} articles",
+    "articles": "articles"
   },
   "calculator": {
     "title": "Linear Regression Calculator",
@@ -142,7 +158,10 @@
     "noPrediction": "—",
     "modelYear": "Model Year",
     "modelYearHint": "Example: 2024, 2025, 2026 or any custom year",
-    "noteText": "Results calculated using international statistical standards applicable in USA, Europe, Asia, and worldwide."
+    "noteText": "Results calculated using international statistical standards applicable in USA, Europe, Asia, and worldwide.",
+    "dataPoints": "Data Points (X, Y)",
+    "step": "Step",
+    "means": "Means"
   },
   "pearson": {
     "title": "Pearson Correlation Calculator",
@@ -2042,5 +2061,36 @@
   "sitemap": {
     "title": "Sitemap",
     "description": "Explore the complete Regression Equation Calculator sitemap. Find all our statistical tools, calculators, blog posts, and educational mathematics resources."
+  },
+  "common": {
+    "menu": "Menu",
+    "close": "Close",
+    "loading": "Loading...",
+    "error": "Error",
+    "selectLanguage": "Select language",
+    "availableLanguages": "Available languages",
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page",
+    "total": "Total",
+    "showing": "Showing",
+    "of": "of",
+    "exploreTools": "Explore Tools",
+    "mainToolsTitle": "Main Tools & Pages",
+    "languagesTitle": "Languages",
+    "calculateNow": "Calculate Now",
+    "exploreFeatures": "Explore Features",
+    "howToUse": "How to Use This",
+    "modelTitle": "Growth & Decay",
+    "dataTitle": "Input Data",
+    "statsTitle": "Statistical Output"
+  },
+  "footer": {
+    "description": "Free online regression equation calculator. Compute linear, polynomial, and multiple regression equations instantly with step-by-step solutions.",
+    "toolsTitle": "Tools & Pages",
+    "companyTitle": "Company",
+    "connectTitle": "Connect",
+    "languageTitle": "Language",
+    "copyright": "All rights reserved."
   }
 }

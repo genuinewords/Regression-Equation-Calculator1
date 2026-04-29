@@ -2,63 +2,51 @@
   "faqs": [
     {
       "question": "Vad är en regressionsekvation?",
-      "answer": "En regressionsekvation är en matematisk formel som beskriver sambandet mellan en beroende variabel och en eller flera oberoende variabler. Vid enkel linjär regression antar den formen y = mx + b, där m är lutningen (förändringstakt) och b är y-skärningen (värdet när x = 0). Ekvationen låter dig förutsäga värdet på den beroende variabeln baserat på kända värden på den oberoende variabeln.",
-      "display": true
+      "answer": "En regressionsekvation är en matematisk formel som beskriver sambandet mellan en beroende variabel och en eller flera oberoende variabler. I enkel linjär regression tar den formen y = mx + b, där m är lutningen (förändringshastigheten) och b är y-skärningen (värde när x = 0). Ekvationen låter dig förutsäga värdet på den beroende variabeln baserat på kända värden för den eller de oberoende variabeln."
     },
     {
-      "question": "Hur beräknar man en regressionsekvation?",
-      "answer": "För att beräkna en linjär regressionsekvation behöver du: 1) Beräkna medelvärdena för dina x- och y-datapunkter, 2) Beräkna lutningen med formeln m = Σ(xi - x̄)(yi - ȳ) / Σ(xi - x̄)², 3) Beräkna skärningspunkten med b = ȳ - m·x̄. Vår kalkylator utför alla dessa steg automatiskt och visar dig den detaljerade uträkningen.",
-      "display": true
+      "question": "Hur räknar man ut en regressionsekvation?",
+      "answer": "För att beräkna en linjär regressionsekvation måste du: 1) Beräkna medelvärdena (medelvärdena) av dina x- och y-datapunkter, 2) Beräkna lutningen med formeln m = Σ(xi - x̄)(yi - ȳ) / Σ(xi - x̄)̄)², 3) Beräkna skärningspunkten med b =· Ȅ -·x. Vår kalkylator utför alla dessa steg automatiskt och visar dig det detaljerade arbetet."
     },
     {
       "question": "Vad är R-kvadrat och hur tolkar jag det?",
-      "answer": "R-kvadrat (R²) är ett statistiskt mått som representerar andelen av variansen i den beroende variabeln som kan förklaras av den oberoende variabeln. Det sträcker sig från 0 till 1: R² = 0 betyder att modellen inte förklarar någon variabilitet; R² = 1 betyder en perfekt passning. I allmänhet indikerar R² över 0.7 ett starkt samband, 0.3–0.7 är måttligt, och under 0.3 är svagt.",
-      "display": true
+      "answer": "R-kvadrat (R²) är ett statistiskt mått som representerar andelen varians i den beroende variabeln som kan förklaras av den oberoende variabeln. Det sträcker sig från 0 till 1: R² = 0 betyder att modellen inte förklarar någon av variabiliteten; R² = 1 betyder perfekt passform. I allmänhet indikerar R² över 0,7 ett starkt samband, 0,3–0,7 är måttligt och under 0,3 är svagt."
     },
     {
       "question": "Vad är korrelationskoefficienten?",
-      "answer": "Korrelationskoefficienten (r) mäter styrkan och riktningen på det linjära sambandet mellan två variabler. Den sträcker sig från -1 till +1: r = +1 betyder ett perfekt positivt samband, r = -1 betyder ett perfekt negativt samband, och r = 0 betyder inget linjärt samband. Ju närmare r är ±1, desto starkare är det linjära sambandet.",
-      "display": true
+      "answer": "Korrelationskoefficienten (r) mäter styrkan och riktningen för det linjära sambandet mellan två variabler. Det sträcker sig från -1 till +1: r = +1 betyder ett perfekt positivt samband, r = -1 betyder ett perfekt negativt samband och r = 0 betyder inget linjärt samband. Ju närmare r är ±1, desto starkare är den linjära associationen."
     },
     {
-      "question": "Vad är skillnaden mellan lutning och skärningspunkt?",
-      "answer": "I regressionsekvationen y = mx + b berättar lutningen (m) hur mycket y ändras för varje enhets ökning av x. En positiv lutning betyder att y ökar när x ökar; en negativ lutning betyder att y minskar. Skärningspunkten (b) är det förväntade värdet av y när x är lika med noll — det är punkten där regressionslinjen korsar y-axeln.",
-      "display": true
+      "question": "Vad är skillnaden mellan lutning och intercept?",
+      "answer": "I regressionsekvationen y = mx + b, talar lutningen (m) om hur mycket y ändras för varje enhetsökning i x. En positiv lutning betyder att y ökar när x ökar; en negativ lutning betyder att y minskar. Skärningen (b) är det förutsagda värdet av y när x är lika med noll - det är punkten där regressionslinjen korsar y-axeln."
     },
     {
       "question": "Hur många datapunkter behöver jag för en regression?",
-      "answer": "Som minimum behöver du minst 2 datapunkter för att beräkna en enkel linjär regressionsekvation. För meningsfulla och tillförlitliga resultat rekommenderas det dock att ha minst 10–15 datapunkter. Ju fler datapunkter du har, desto mer tillförlitlig och statistiskt signifikant blir din regressionsmodell.",
-      "display": true
+      "answer": "Som ett minimum behöver du minst 2 datapunkter för att beräkna en enkel linjär regressionsekvation. Men för meningsfulla och tillförlitliga resultat rekommenderas det att ha minst 10–15 datapunkter. Ju fler datapunkter du har, desto mer tillförlitlig och statistiskt signifikant blir din regressionsmodell."
     },
     {
       "question": "Vad är standardfelet för regressionen?",
-      "answer": "Standardfelet (SE) för regressionen mäter det genomsnittliga avståndet som de observerade datapunkterna faller från regressionslinjen. Ett mindre SE indikerar att datapunkterna ligger närmare den anpassade linjen, vilket innebär att modellens förutsägelser är mer exakta. Det är i grunden ett mått på modellens precision.",
-      "display": true
+      "answer": "Standardfelet (SE) för regressionen mäter det genomsnittliga avståndet som de observerade datapunkterna faller från regressionslinjen. En mindre SE indikerar att datapunkterna är närmare den inpassade linjen, vilket betyder att modellförutsägelserna är mer exakta. Det är i huvudsak ett mått på modellens precision."
     },
     {
       "question": "När ska jag använda linjär regression?",
-      "answer": "Använd linjär regression när du vill modellera sambandet mellan en kontinuerlig beroende variabel och en eller flera oberoende variabler, och när sambandet verkar vara ungefärt linjärt. Vanliga tillämpningar inkluderar att förutsäga försäljning från annonsutgifter, uppskatta huspriser från kvadratmeter eller analysera effekten av studiedtid på provresultat.",
-      "display": true
+      "answer": "Använd linjär regression när du vill modellera sambandet mellan en kontinuerlig beroende variabel och en eller flera oberoende variabler, och när sambandet ser ut att vara ungefär linjärt. Vanliga tillämpningar inkluderar att förutsäga försäljning från reklamutgifter, uppskatta huspriser från kvadratmeter eller analysera effekten av studietid på testresultat."
     },
     {
-      "question": "Vilka antaganden gör linjär regression?",
-      "answer": "Linjär regression antar: 1) Linearitet — sambandet mellan variablerna är linjärt, 2) Oberoende — observationer är oberoende av varandra, 3) Homoskedasticitet — residualer har konstant varians, 4) Normalitet — residualer är normalfördelade, 5) Ingen multikollinearitet — oberoende variabler är inte högt korrelerade (för multipel regression). Att bryta mot dessa antaganden kan leda till otillförlitliga resultat.",
-      "display": true
+      "question": "Vilka är antagandena om linjär regression?",
+      "answer": "Linjär regression förutsätter: 1) Linjäritet — förhållandet mellan variabler är linjärt, 2) Oberoende — observationer är oberoende av varandra, 3) Homoskedasticitet — residualer har konstant varians, 4) Normalitet — residualer är normalfördelade, 5) Ingen multikollinearitet — oberoende variabler är inte starkt korrelerade (för multipel regression). Att bryta mot dessa antaganden kan leda till otillförlitliga resultat."
     },
     {
       "question": "Vad är skillnaden mellan korrelation och regression?",
-      "answer": "Korrelation mäter styrkan och riktningen på sambandet mellan två variabler (mellan -1 och +1) utan att antyda orsakssamband. Regression går längre genom att anpassa en linje till data och tillhandahålla en ekvation (y = mx + b) som kan förutsäga en variabel från en annan. Medan korrelation är symmetrisk (r_xy = r_yx), är regression det inte — att förutsäga y från x ger andra resultat än att förutsäga x från y.",
-      "display": true
+      "answer": "Korrelation mäter styrkan och riktningen av sambandet mellan två variabler (från -1 till +1) utan att antyda orsakssamband. Regression går längre genom att anpassa en linje till data och tillhandahålla en ekvation (y = mx + b) som kan förutsäga en variabel från en annan. Även om korrelationen är symmetrisk (r_xy = r_yx), är det inte regression — att förutsäga y från x ger andra resultat än att förutsäga x från y."
     },
     {
       "question": "Vilka typer av regression finns det?",
-      "answer": "Vanliga typer inkluderar: Linjär regression (en prediktor), Multipel regression (flera prediktorer), Polynomisk regression (krökta samband), Logistisk regression (binära utfall), Ridge-regression (med regularisering för att förhindra överanpassning) och Lasso-regression (variabelval via regularisering). Varje typ passar olika datamönster och forskningsfrågor.",
-      "display": true
+      "answer": "Vanliga typer inkluderar: linjär regression (en prediktor), multipel regression (flera prediktorer), polynomregression (krökta relationer), logistisk regression (binära utfall), åsregression (med regularisering för att förhindra överanpassning) och lassoregression (funktionsval via regularisering). Varje typ passar olika datamönster och forskningsfrågor."
     },
     {
-      "question": "Kan jag använda denna kalkylator för multipel regression?",
-      "answer": "För närvarande stöder denna kalkylator enkel linjär regression med en oberoende variabel (x) och en beroende variabel (y). För multipel regression med flera prediktorer behöver du använda specialiserad statistisk programvara som R, Python (statsmodels) eller SPSS. Vi kan komma att lägga till stöd för multipel regression i en framtida uppdatering.",
-      "display": false
+      "question": "Kan jag använda den här kalkylatorn för multipel regression?",
+      "answer": "För närvarande stöder denna kalkylator enkel linjär regression med en oberoende variabel (x) och en beroende variabel (y). För multipel regression med flera prediktorer skulle du behöva använda specialiserad statistisk programvara som R, Python (statsmodeller) eller SPSS. Vi kan lägga till stöd för flera regression i en framtida uppdatering."
     }
   ]
 }

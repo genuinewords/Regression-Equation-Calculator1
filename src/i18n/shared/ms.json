@@ -1,25 +1,25 @@
 {
   "nav": {
-    "home": "Utama",
-    "tools": "Alat",
+    "home": "Rumah",
+    "tools": "Alatan",
+    "expCalc": "Regresi Eksponen",
+    "lsrlCalc": "Garisan Kuasa Dua Terkecil",
+    "rcCalc": "Keluk Regresi",
+    "quadCalc": "Regresi Kuadratik",
+    "multiCalc": "Regresi Berganda",
+    "pearsonCorrelation": "Pearson r Kalkulator",
+    "grubbsTest": "Ujian Grubbs",
+    "assumptionsChecker": "Pemeriksa Andaian",
     "aboutUs": "Tentang Kami",
     "blog": "Blog",
     "contactUs": "Hubungi Kami",
-    "terms": "Terma",
+    "terms": "Syarat",
     "privacy": "Privasi",
-    "sitemap": "Peta Laman",
-    "pearsonCorrelation": "Kalkulator Pearson r",
-    "grubbsTest": "Ujian Grubbs",
-    "assumptionsChecker": "Pemeriksa anggapan",
-    "expCalc": "Exponential Regression",
-    "lsrlCalc": "Least Squares Line",
-    "rcCalc": "Regression Curve",
-    "quadCalc": "Kalkulator kuadratik",
-    "multiCalc": "Kalkulator berbilang"
+    "sitemap": "Peta laman"
   },
   "footer": {
     "description": "Kalkulator persamaan regresi dalam talian percuma dengan penyelesaian langkah demi langkah untuk pelajar, penyelidik dan profesional.",
-    "copyright": "Hak cipta terpelihara."
+    "copyright": "Semua hak terpelihara."
   },
   "common": {
     "learnMore": "Ketahui Lebih Lanjut",

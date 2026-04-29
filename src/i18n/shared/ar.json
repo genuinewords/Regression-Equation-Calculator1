@@ -1,29 +1,29 @@
 {
   "nav": {
-    "home": "الرئيسية",
+    "home": "بيت",
     "tools": "أدوات",
-    "aboutUs": "من نحن",
-    "blog": "المدونة",
-    "contactUs": "اتصل بنا",
-    "terms": "الشروط",
-    "privacy": "الخصوصية",
-    "sitemap": "خريطة الموقع",
-    "pearsonCorrelation": "حاسبة بيرسون r",
-    "grubbsTest": "اختبار غروبز",
+    "expCalc": "الانحدار الأسي",
+    "lsrlCalc": "خط المربعات الصغرى",
+    "rcCalc": "منحنى الانحدار",
+    "quadCalc": "الانحدار التربيعي",
+    "multiCalc": "الانحدار المتعدد",
+    "pearsonCorrelation": "حاسبة بيرسون ص",
+    "grubbsTest": "اختبار جربس",
     "assumptionsChecker": "مدقق الافتراضات",
-    "expCalc": "Exponential Regression",
-    "lsrlCalc": "Least Squares Line",
-    "rcCalc": "Regression Curve",
-    "quadCalc": "حاسبة تربيعية",
-    "multiCalc": "حاسبة متعددة"
+    "aboutUs": "معلومات عنا",
+    "blog": "مدونة",
+    "contactUs": "اتصل بنا",
+    "terms": "شروط",
+    "privacy": "خصوصية",
+    "sitemap": "خريطة الموقع"
   },
   "footer": {
-    "description": "حاسبة مجانية عبر الإنترنت لمعادلة الانحدار مع حلول خطوة بخطوة للطلاب والباحثين والمحترفين.",
+    "description": "حاسبة معادلة الانحدار مجانية عبر الإنترنت مع حلول خطوة بخطوة للطلاب والباحثين والمهنيين.",
     "copyright": "جميع الحقوق محفوظة."
   },
   "common": {
-    "learnMore": "اعرف المزيد",
-    "previous": "السابق",
+    "learnMore": "يتعلم أكثر",
+    "previous": "سابق",
     "next": "التالي"
   }
 }

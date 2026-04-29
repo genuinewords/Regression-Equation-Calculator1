@@ -9,7 +9,7 @@ const { translations } = Astro.props;
 const calc = translations.calculator;
 ---
 
-<section class="py-8" id="calculator" data-x-label={calc.xLabel} data-y-label={calc.yLabel} data-invalid-data={calc.invalidData}>
+<section class="py-8" id="calculator" data-x-label={calc.xLabel} data-y-label={calc.yLabel} data-invalid-data={calc.invalidData} data-step-label={calc.step} data-means-label={calc.means}>
   <div class="mx-auto max-w-3xl">
     <div class="rounded-2xl shadow-lg dark:shadow-surface-950/40 shadow-primary-900/5 border border-surface-200/80 dark:border-surface-700/60 overflow-hidden bg-white dark:bg-surface-800/80 backdrop-blur-sm transition-colors duration-300">
       <div class="bg-gradient-to-r from-primary-600 to-accent-600 px-6 py-5">
@@ -48,7 +48,7 @@ const calc = translations.calculator;
 
         <!-- Data Points Table -->
         <div class="mb-5">
-          <h3 class="text-sm font-semibold text-surface-700 dark:text-surface-300 mb-3">Data Points (X, Y)</h3>
+          <h3 class="text-sm font-semibold text-surface-700 dark:text-surface-300 mb-3">{calc.dataPoints}</h3>
           <div class="overflow-x-auto rounded-lg border border-surface-200 dark:border-surface-600">
             <table class="w-full" id="data-table">
               <thead>
@@ -216,6 +216,8 @@ const calc = translations.calculator;
     const xLabel = calcEl.getAttribute('data-x-label') || 'X';
     const yLabel = calcEl.getAttribute('data-y-label') || 'Y';
     const invalidData = calcEl.getAttribute('data-invalid-data') || 'Please enter at least 2 valid data points';
+    const stepLabel = calcEl.getAttribute('data-step-label') || 'Step';
+    const meansLabel = calcEl.getAttribute('data-means-label') || 'Means';
     let rowCounter = 0;
     let currentType = 'linear';
 
@@ -398,8 +400,8 @@ const calc = translations.calculator;
         const r = ssYY===0 ? 1 : ssXY/Math.sqrt(ssXX*ssYY);
         const se = Math.sqrt(ssRes/(n-2));
         result = { equation: `y = ${m.toFixed(4)}x + ${b.toFixed(4)}`, rSquared, r, se, n, df: n-2, predict: (x) => m*x+b, steps: [
-          `<strong>Step 1:</strong> Means → x̄ = ${meanX.toFixed(4)}, ȳ = ${meanY.toFixed(4)}`,
-          `<strong>Step 2:</strong> R² = ${rSquared.toFixed(4)}, r = ${r.toFixed(4)}, SE = ${se.toFixed(4)}`
+          `<strong>${stepLabel} 1:</strong> ${meansLabel} → x̄ = ${meanX.toFixed(4)}, ȳ = ${meanY.toFixed(4)}`,
+          `<strong>${stepLabel} 2:</strong> R² = ${rSquared.toFixed(4)}, r = ${r.toFixed(4)}, SE = ${se.toFixed(4)}`
         ]};
       } else if (currentType === 'polynomial') {
         const n = points.length; if (n < 3) return;

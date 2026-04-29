@@ -23,13 +23,17 @@
       "Förutsäga temperaturförändringar över tiden",
       "Utvärdera sambandet mellan dosering och respons"
     ],
-    "howItWorksTitle": "Hur Regressionsekvationsberäknaren fungerar",
-    "howItWorksStep1Title": "Ange data",
-    "howItWorksStep1": "Ange dina x- och y-datapunkter i tabellen nedan",
-    "howItWorksStep2Title": "Kalkylera",
-    "howItWorksStep2": "Klicka på Beräkna för att beräkna regressionsekvationen",
-    "howItWorksStep3Title": "Visa resultat",
-    "howItWorksStep3": "Visa dina resultat inklusive ekvation, lutning, skärning och R²-värde",
+    "howItWorksTitle": "Hur det fungerar",
+    "howItWorksStep1Title": "Välj Regressionsmodell",
+    "howItWorksStep1": "Välj mellan linjär, polynom, exponentiell eller logaritmisk regression för att matcha dina datas relationsmönster.",
+    "howItWorksStep2Title": "Ange datapunkter",
+    "howItWorksStep2": "Lägg till dina X- och Y-datapar i tabellen. Ställ in din konfidensnivå (%) och ange eventuellt ett förutsägande X-värde för prognos.",
+    "howItWorksStep3Title": "Beräkna och visualisera",
+    "howItWorksStep3": "Klicka på Beräkna för att omedelbart generera regressionsekvationen, R-kvadratvärde och ett interaktivt spridningsdiagram med den anpassade regressionslinjen.",
+    "howItWorksStep4Title": "Granska diagnostik",
+    "howItWorksStep4": "Granska tabellen med regressionsstatistik – standardfel, urvalsstorlek, frihetsgrader och konfidensnivå – för att utvärdera modellens tillförlitlighet.",
+    "howItWorksStep5Title": "Förutsäga och prognostisera",
+    "howItWorksStep5": "Använd indata för förutsägelse X för att uppskatta Y när som helst, med konfidensintervall baserat på din valda konfidensnivå.",
     "tableTitle": "Regressionsstatistik referens",
     "tableDescription": "Vanlig regressionsstatistik och dess tolkningar",
     "tableStat": "Statistisk",
@@ -142,7 +146,10 @@
     "noPrediction": "—",
     "modelYear": "Årsmodell",
     "modelYearHint": "Exempel: 2024, 2025, 2026 eller något anpassat år",
-    "noteText": "Resultaten beräknas med hjälp av internationella statistiska standarder som är tillämpliga i USA, Europa, Asien och världen över."
+    "noteText": "Resultaten beräknas med hjälp av internationella statistiska standarder som är tillämpliga i USA, Europa, Asien och världen över.",
+    "dataPoints": "Datapunkter (X, Y)",
+    "step": "Steg",
+    "means": "Medel"
   },
   "pearson": {
     "title": "Pearson korrelationsräknare",
@@ -1418,7 +1425,7 @@
       },
       {
         "q": "Vad används logaritmisk regression till?",
-        "a": "<p>🔬 Logaritmisk regression används för att modellera <strong>minskande avkastning</strong> — situationer där förändringstakten minskar när den oberoende variabeln ökar. Kurvan stiger till en början brant för att sedan plana ut. Vanliga tillämpningar inkluderar förhållandet mellan studietid och testresultat (stora vinster tidigt, mindre vinster senare), reklamutgifter och omvandlingar (initialutgifter är mest effektiva), övnings- och färdighetsnivå och många naturliga mättnadsprocesser. Logaritmisk regression kräver att alla X-värden är positiva.</p>"
+        "a": "<p>🔬 Logaritmisk regression används för att modellera <strong>minskande avkastning</strong> — situationer där förändringstakten minskar när den oberoende variabeln ökar. Kurvan stiger till en början brant för att sedan plana ut. Common applications include the relationship between study time and test scores (big gains early, smaller gains later), advertising spend and conversions (initial spend is most effective), practice and skill level, and many natural saturation processes. Logaritmisk regression kräver att alla X-värden är positiva.</p>"
       },
       {
         "q": "Hur många datapunkter behöver jag för analys av regressionskurvan?",
@@ -1434,7 +1441,7 @@
       },
       {
         "q": "Hur exakta är regressionskurvans förutsägelser?",
-        "a": "<p>📊 Noggrannheten i regressionsförutsägelser beror på flera faktorer: modellens R² (högre R² betyder mer exakta förutsägelser), avståndet från förutsägelsepunkten till mitten av datan (förutsägelser nära medelvärdet av X är mer tillförlitliga) och om du interpolerar eller extrapolerar. <strong>Interpolerade förutsägelser</strong> (inom det observerade X-intervallet) med R² över 0,90 är vanligtvis ganska exakta. Extrapolerade förutsägelser bör behandlas med försiktighet oavsett R².</p>"
+        "a": "<p>📊 The accuracy of regression predictions depends on several factors: the R² of the model (higher R² means more accurate predictions), the distance from the prediction point to the center of the data (predictions near the mean of X are more reliable), and whether you are interpolating or extrapolating. <strong>Interpolerade förutsägelser</strong> (inom det observerade X-intervallet) med R² över 0,90 är vanligtvis ganska exakta. Extrapolerade förutsägelser bör behandlas med försiktighet oavsett R².</p>"
       },
       {
         "q": "Vilken är den bästa regressionsmodellen för tillväxtdata?",
@@ -1446,7 +1453,7 @@
       },
       {
         "q": "Kan jag använda den här kalkylatorn för polynomregression?",
-        "a": "<p>💻 Den här kalkylatorn inkluderar <strong>kvadratisk regression</strong> (y = ax² + bx + c), vilket är ett polynom på 2 grader. Det stöder för närvarande inte kubisk (grad 3) eller högre ordningens polynomregression. För de flesta praktiska tillämpningar täcker de fyra modellerna som jämförs här - linjär, kvadratisk, exponentiell och logaritmisk - de vanliga funktionella formerna. Om du specifikt behöver polynomregression av grad 2, använd <a href=\"/quadratic-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 hover:underline\">kvadratisk regressionskalkylator</a> för dedikerad polynomutdata med vertex och symmetriaxel.</p>"
+        "a": "<p>💻 Den här kalkylatorn inkluderar <strong>kvadratisk regression</strong> (y = ax² + bx + c), vilket är ett polynom på 2 grader. Det stöder för närvarande inte kubisk (grad 3) eller högre ordningens polynomregression. För de flesta praktiska tillämpningar täcker de fyra modellerna som jämförs här - linjär, kvadratisk, exponentiell och logaritmisk - de vanliga funktionella formerna. If you specifically need polynomial regression of degree 2, use the <a href=\"/quadratic-regression-calculator/\" class=\"text-primary-600 dark:text-primary-400 hover:underline\">quadratic regression calculator</a> for dedicated polynomial output with vertex and axis of symmetry.</p>"
       },
       {
         "q": "Vad är skillnaden mellan korrelation och regression?",
@@ -1478,7 +1485,7 @@
       },
       {
         "q": "Vad är rester i regressionsanalys?",
-        "a": "<p>📊 Rester är <strong>skillnaderna mellan observerade Y-värden och de värden som förutsägs av regressionsmodellen</strong> (eᵢ = yᵢ − ŷᵢ). De representerar den del av varje datapunkt som modellen inte lyckas fånga.</p><p>📊 Analys av residualer är avgörande för att validera modellanpassning: en bra modell producerar residualer som är slumpmässigt utspridda runt noll utan något systematiskt mönster. Om rester visar ett krökt mönster valdes fel modell. Om de fläktar ut (trattform) har data heteroskedasticitet. Inspektera alltid rester innan du litar på regressionsresultat.</p>"
+        "a": "<p>📊 Residuals are the <strong>differences between observed Y values and the values predicted by the regression model</strong> (eᵢ = yᵢ − ŷᵢ). De representerar den del av varje datapunkt som modellen inte lyckas fånga.</p><p>📊 Analys av residualer är avgörande för att validera modellanpassning: en bra modell producerar residualer som är slumpmässigt utspridda runt noll utan något systematiskt mönster. Om rester visar ett krökt mönster valdes fel modell. Om de fläktar ut (trattform) har data heteroskedasticitet. Inspektera alltid rester innan du litar på regressionsresultat.</p>"
       },
       {
         "q": "Hur citerar jag denna regressionskurvkalkylator i min forskning?",
@@ -2042,5 +2049,21 @@
   "sitemap": {
     "title": "Webbplatskarta",
     "description": "Utforska hela webbplatskartan för Regression Equation Calculator. Hitta alla våra statistiska verktyg, miniräknare, blogginlägg och pedagogiska matematikresurser."
+  },
+  "common": {
+    "menu": "Meny",
+    "close": "Nära",
+    "loading": "Belastning...",
+    "error": "Fel",
+    "selectLanguage": "Välj språk",
+    "availableLanguages": "Tillgängliga språk"
+  },
+  "footer": {
+    "description": "Gratis kalkylator för regressionsekvationer online. Beräkna linjära, polynomiska och multipla regressionsekvationer direkt med steg-för-steg-lösningar.",
+    "toolsTitle": "Verktyg och sidor",
+    "companyTitle": "Företag",
+    "connectTitle": "Ansluta",
+    "languageTitle": "Språk",
+    "copyright": "Alla rättigheter reserverade."
   }
 }

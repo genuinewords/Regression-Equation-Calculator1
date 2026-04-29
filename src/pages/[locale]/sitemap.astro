@@ -63,7 +63,7 @@ const canonicalUrl = new URL(`${prefix}/sitemap/`, siteConfig.siteUrl).href;
         <div class="reveal-on-scroll">
           <h2 class="text-2xl font-bold text-surface-900 dark:text-surface-50 mb-8 flex items-center gap-3">
             <span class="w-1.5 h-6 bg-primary-600 rounded-full"></span>
-            {translations.common?.mainToolsTitle || 'Main Tools & Pages'}
+            {translations.common?.mainToolsTitle ?? 'Main Tools & Pages'}
           </h2>
           <div class="grid gap-4 sm:grid-cols-2">
             {staticPages.map((page) => (
@@ -84,7 +84,7 @@ const canonicalUrl = new URL(`${prefix}/sitemap/`, siteConfig.siteUrl).href;
         <div class="reveal-on-scroll">
           <h2 class="text-2xl font-bold text-surface-900 dark:text-surface-50 mb-8 flex items-center gap-3">
             <span class="w-1.5 h-6 bg-accent-600 rounded-full"></span>
-            {translations.common?.languagesTitle || 'Languages'}
+            {translations.common?.languagesTitle ?? 'Languages'}
           </h2>
           <div class="grid gap-4 sm:grid-cols-3 lg:grid-cols-4">
             {LOCALES.map((loc) => (

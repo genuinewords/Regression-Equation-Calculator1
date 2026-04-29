@@ -44,7 +44,7 @@ const canonicalUrl = new URL(getLocalizedUrl('/about-us/', currentLocale), siteC
               {about.mission || 'Our Mission'}
             </a>
             <a href={getLocalizedUrl('/exponential-regression-calculator/', currentLocale)} class="px-8 py-3 rounded-xl bg-white dark:bg-surface-800 text-surface-700 dark:text-surface-200 font-semibold border border-surface-200 dark:border-surface-700 hover:border-primary-300 dark:hover:border-primary-600 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              {translations.common?.exploreTools || 'Explore Tools'}
+              {translations.common?.exploreTools ?? 'Explore Tools'}
             </a>
           </div>
         </div>
@@ -54,7 +54,7 @@ const canonicalUrl = new URL(getLocalizedUrl('/about-us/', currentLocale), siteC
             <div class="relative overflow-hidden rounded-3xl border border-white/20 shadow-2xl">
               <img
                 src="/images/about-hero.png"
-                alt="About Us Illustration"
+                alt={about.title}
                 class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
                 width="600"
                 height="400"

@@ -23,13 +23,17 @@
       "Vorhersage von Temperaturänderungen im Laufe der Zeit",
       "Bewertung der Beziehung zwischen Dosierung und Reaktion"
     ],
-    "howItWorksTitle": "So funktioniert der Regressionsgleichungsrechner",
-    "howItWorksStep1Title": "Geben Sie Daten ein",
-    "howItWorksStep1": "Geben Sie Ihre x- und y-Datenpunkte in die Tabelle unten ein",
-    "howItWorksStep2Title": "Berechnen",
-    "howItWorksStep2": "Klicken Sie auf Berechnen, um die Regressionsgleichung zu berechnen",
-    "howItWorksStep3Title": "Ergebnisse anzeigen",
-    "howItWorksStep3": "Sehen Sie sich Ihre Ergebnisse an, einschließlich Gleichung, Steigung, Achsenabschnitt und R²-Wert",
+    "howItWorksTitle": "Wie es funktioniert",
+    "howItWorksStep1Title": "Wählen Sie Regressionsmodell",
+    "howItWorksStep1": "Wählen Sie je nach Beziehungsmuster Ihrer Daten zwischen linearer, polynomialer, exponentieller oder logarithmischer Regression.",
+    "howItWorksStep2Title": "Geben Sie Datenpunkte ein",
+    "howItWorksStep2": "Fügen Sie Ihre X- und Y-Datenpaare in die Tabelle ein. Legen Sie Ihr Konfidenzniveau (%) fest und geben Sie optional einen Vorhersage-X-Wert für die Prognose ein.",
+    "howItWorksStep3Title": "Berechnen und visualisieren",
+    "howItWorksStep3": "Klicken Sie auf „Berechnen“, um sofort die Regressionsgleichung, den R-Quadrat-Wert und ein interaktives Streudiagramm mit der angepassten Regressionslinie zu generieren.",
+    "howItWorksStep4Title": "Überprüfen Sie die Diagnose",
+    "howItWorksStep4": "Untersuchen Sie die Regressionsstatistiktabelle – Standardfehler, Stichprobengröße, Freiheitsgrade und Konfidenzniveau –, um die Modellzuverlässigkeit zu bewerten.",
+    "howItWorksStep5Title": "Vorhersagen und Prognosen",
+    "howItWorksStep5": "Verwenden Sie die Vorhersage-X-Eingabe, um Y zu jedem Zeitpunkt zu schätzen, wobei die Konfidenzintervalle auf dem von Ihnen gewählten Konfidenzniveau basieren.",
     "tableTitle": "Referenz zur Regressionsstatistik",
     "tableDescription": "Allgemeine Regressionsstatistiken und ihre Interpretationen",
     "tableStat": "Statistik",
@@ -142,7 +146,10 @@
     "noPrediction": "—",
     "modelYear": "Modelljahr",
     "modelYearHint": "Beispiel: 2024, 2025, 2026 oder ein beliebiges benutzerdefiniertes Jahr",
-    "noteText": "Die Ergebnisse wurden anhand internationaler statistischer Standards berechnet, die in den USA, Europa, Asien und weltweit gelten."
+    "noteText": "Die Ergebnisse wurden anhand internationaler statistischer Standards berechnet, die in den USA, Europa, Asien und weltweit gelten.",
+    "dataPoints": "Datenpunkte (X, Y)",
+    "step": "Schritt",
+    "means": "Bedeutet"
   },
   "pearson": {
     "title": "Pearson-Korrelationsrechner",
@@ -1577,7 +1584,7 @@
       "<strong>Klicken Sie zum Verarbeiten auf „Berechnen“.</strong> Klicken Sie auf die Schaltfläche „Berechnen“, um die Regressionsberechnung auszulösen. Der Rechner berechnet alle erforderlichen Summen, stellt die Normalgleichungen zusammen, löst das 3×3-System und bestimmt automatisch a, b, c, den Scheitelpunkt und R².",
       "<strong>Sehen Sie sich die quadratische Gleichung an.</strong> Die Ausgabe zeigt die Gleichung ŷ = ax² + bx + c mit berechneten Koeffizientenwerten. Untersuchen Sie das Vorzeichen von a, um sicherzustellen, dass die Kurvenrichtung sinnvoll ist: a> 0 bedeutet U-förmig, a <0 bedeutet umgekehrtes U, passend zu Ihrem Datenmuster.",
       "<strong>Bewerten Sie die Anpassungsgüte mit R².</strong> Der R²-Wert sagt Ihnen, welcher Anteil der Varianz in Y durch das quadratische Modell erklärt wird. Werte über 0,7 deuten auf eine gute Anpassung hin, über 0,9 auf eine ausgezeichnete Anpassung und Werte unter 0,5 können darauf hinweisen, dass das quadratische Modell ungeeignet ist oder die Daten zu verrauscht sind.",
-      "<strong>Interpretieren Sie den Scheitelpunkt.</strong> Der Scheitelpunkt stellt die Spitze (wenn a <0) oder das Tal (wenn a> 0) der angepassten Parabel dar. Die x-Koordinate des Scheitelpunkts ist −b/(2a), was den Wert von X angibt, bei dem Y maximiert oder minimiert ist. Dies ist oft der praktisch wichtigste Output.",
+      "<strong>Interpretieren Sie den Scheitelpunkt.</strong> Der Scheitelpunkt stellt die Spitze (wenn a <0) oder das Tal (wenn a> 0) der angepassten Parabel dar. Die x-Koordinate des Scheitelpunkts ist −b/(2a), was den Wert von X angibt, bei dem Y maximiert oder minimiert ist. Dies ist oft die praktisch wichtigste Ausgabe.",
       "<strong>Machen Sie Vorhersagen.</strong> Geben Sie einen X-Wert in das Vorhersagefeld ein, um den entsprechenden Y-Wert mithilfe der angepassten quadratischen Gleichung vorherzusagen. Der Rechner berechnet sofort ŷ = aX² + bX + c und zeigt das Ergebnis neben der Regressionskurve im Diagramm an.",
       "<strong>Sehen Sie sich die Schritt-für-Schritt-Lösung an.</strong> Erweitern Sie den Schritt-für-Schritt-Abschnitt, um alle Zwischenberechnungen anzuzeigen, einschließlich aller Summen, der Normalgleichungen, des Eliminierungsprozesses und der endgültigen Koeffizientenwerte. Dies ist für das Lernen und die Überprüfung von Ergebnissen bei Hausaufgaben oder Recherchen von unschätzbarem Wert.",
       "<strong>Ergebnisse exportieren und anwenden.</strong> Verwenden Sie die Rechnerausgabe in Berichten, Hausaufgaben oder Präsentationen. Kopieren Sie die Gleichung und die Statistiken oder machen Sie einen Screenshot des Diagramms mit der überlagerten Regressionskurve und den Datenpunkten, um Ihre Analyse visuell zu dokumentieren."
@@ -2042,5 +2049,21 @@
   "sitemap": {
     "title": "Sitemap",
     "description": "Entdecken Sie die vollständige Sitemap des Regressionsgleichungsrechners. Hier finden Sie alle unsere statistischen Tools, Taschenrechner, Blogbeiträge und Ressourcen für pädagogische Mathematik."
+  },
+  "common": {
+    "menu": "Speisekarte",
+    "close": "Schließen",
+    "loading": "Laden...",
+    "error": "Fehler",
+    "selectLanguage": "Sprache auswählen",
+    "availableLanguages": "Verfügbare Sprachen"
+  },
+  "footer": {
+    "description": "Kostenloser Online-Regressionsgleichungsrechner. Berechnen Sie lineare, polynomiale und multiple Regressionsgleichungen sofort mit Schritt-für-Schritt-Lösungen.",
+    "toolsTitle": "Tools und Seiten",
+    "companyTitle": "Unternehmen",
+    "connectTitle": "Verbinden",
+    "languageTitle": "Sprache",
+    "copyright": "Alle Rechte vorbehalten."
   }
 }

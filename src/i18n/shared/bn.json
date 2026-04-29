@@ -1,29 +1,29 @@
 {
   "nav": {
-    "home": "হোম",
-    "tools": "সরঞ্জাম",
+    "home": "বাড়ি",
+    "tools": "টুলস",
+    "expCalc": "সূচকীয় রিগ্রেশন",
+    "lsrlCalc": "সর্বনিম্ন স্কোয়ার লাইন",
+    "rcCalc": "রিগ্রেশন কার্ভ",
+    "quadCalc": "চতুর্মুখী রিগ্রেশন",
+    "multiCalc": "একাধিক রিগ্রেশন",
+    "pearsonCorrelation": "পিয়ারসন আর ক্যালকুলেটর",
+    "grubbsTest": "গ্রাবসের পরীক্ষা",
+    "assumptionsChecker": "অনুমান পরীক্ষক",
     "aboutUs": "আমাদের সম্পর্কে",
     "blog": "ব্লগ",
-    "contactUs": "যোগাযোগ",
+    "contactUs": "আমাদের সাথে যোগাযোগ করুন",
     "terms": "শর্তাবলী",
     "privacy": "গোপনীয়তা",
-    "sitemap": "সাইটম্যাপ",
-    "pearsonCorrelation": "পিয়ারসন r ক্যালকুলেটর",
-    "grubbsTest": "গ্রাবস পরীক্ষা",
-    "assumptionsChecker": "অনুমান পরীক্ষক",
-    "expCalc": "Exponential Regression",
-    "lsrlCalc": "Least Squares Line",
-    "rcCalc": "Regression Curve",
-    "quadCalc": "দ্বিঘাত ক্যালকুলেটর",
-    "multiCalc": "বহু ক্যালকুলেটর"
+    "sitemap": "সাইটম্যাপ"
   },
   "footer": {
-    "description": "শিক্ষার্থী, গবেষক এবং পেশাদারদের জন্য ধাপে ধাপে সমাধানের সাথে বিনামূল্যে অনলাইন রিগ্রেশন সমীকরণ ক্যালকুলেটর।",
-    "copyright": "সর্বস্বত্ব সংরক্ষিত।"
+    "description": "শিক্ষার্থী, গবেষক এবং পেশাদারদের জন্য ধাপে ধাপে সমাধান সহ বিনামূল্যে অনলাইন রিগ্রেশন সমীকরণ ক্যালকুলেটর।",
+    "copyright": "সর্বস্বত্ব সংরক্ষিত"
   },
   "common": {
     "learnMore": "আরও জানুন",
     "previous": "আগের",
-    "next": "পরের"
+    "next": "পরবর্তী"
   }
 }

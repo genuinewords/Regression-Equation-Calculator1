@@ -1,29 +1,29 @@
 {
   "nav": {
-    "home": "홈",
+    "home": "집",
     "tools": "도구",
-    "aboutUs": "소개",
+    "expCalc": "지수 회귀",
+    "lsrlCalc": "최소제곱선",
+    "rcCalc": "회귀 곡선",
+    "quadCalc": "2차 회귀",
+    "multiCalc": "다중 회귀",
+    "pearsonCorrelation": "피어슨 r 계산기",
+    "grubbsTest": "그럽스 테스트",
+    "assumptionsChecker": "가정 검사기",
+    "aboutUs": "회사 소개",
     "blog": "블로그",
     "contactUs": "문의하기",
-    "terms": "이용약관",
-    "privacy": "개인정보",
-    "sitemap": "사이트맵",
-    "pearsonCorrelation": "피어슨 r 계산기",
-    "grubbsTest": "그럽스 검정",
-    "assumptionsChecker": "가정 검정",
-    "expCalc": "Exponential Regression",
-    "lsrlCalc": "Least Squares Line",
-    "rcCalc": "Regression Curve",
-    "quadCalc": "이차 계산기",
-    "multiCalc": "다중 계산기"
+    "terms": "자귀",
+    "privacy": "은둔",
+    "sitemap": "사이트맵"
   },
   "footer": {
-    "description": "학생, 연구자 및 전문가를 위한 단계별 해법이 포함된 무료 온라인 회귀 방정식 계산기.",
+    "description": "학생, 연구원 및 전문가를 위한 단계별 솔루션을 갖춘 무료 온라인 회귀 방정식 계산기입니다.",
     "copyright": "모든 권리 보유."
   },
   "common": {
-    "learnMore": "자세히 보기",
-    "previous": "이전",
+    "learnMore": "자세히 알아보기",
+    "previous": "이전의",
     "next": "다음"
   }
 }

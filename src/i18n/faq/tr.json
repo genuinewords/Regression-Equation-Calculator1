@@ -2,63 +2,51 @@
   "faqs": [
     {
       "question": "Regresyon denklemi nedir?",
-      "answer": "Regresyon denklemi, bağımlı bir değişken ile bir veya daha fazla bağımsız değişken arasındaki ilişkiyi tanımlayan matematiksel bir formüldür. Basit doğrusal regresyonda, y = mx + b formunu alır; burada m eğim (değişim hızı) ve b y-kesişim noktasıdır (x = 0 olduğundaki değer). Denklem, bağımsız değişkenin bilinen değerlerine dayanarak bağımlı değişkenin değerini tahmin etmenizi sağlar.",
-      "display": true
+      "answer": "Regresyon denklemi, bağımlı bir değişken ile bir veya daha fazla bağımsız değişken arasındaki ilişkiyi tanımlayan matematiksel bir formüldür. Basit doğrusal regresyonda, y = mx + b formunu alır; burada m, eğimdir (değişim oranı) ve b, y-kesişim noktasıdır (x = 0 olduğunda değer). Denklem, bağımsız değişkenin/değişkenlerin bilinen değerlerine dayanarak bağımlı değişkenin değerini tahmin etmenizi sağlar."
     },
     {
-      "question": "Regresyon denklemi nasıl hesaplanır?",
-      "answer": "Doğrusal regresyon denklemini hesaplamak için şunları yapmalısınız: 1) x ve y veri noktalarınızın ortalamalarını hesaplayın, 2) Eğimi m = Σ(xi - x̄)(yi - ȳ) / Σ(xi - x̄)² formülüyle hesaplayın, 3) Kesişimi b = ȳ - m·x̄ ile hesaplayın. Hesaplayıcımız tüm bu adımları otomatik olarak gerçekleştirir ve size ayrıntılı hesaplamayı gösterir.",
-      "display": true
+      "question": "Bir regresyon denklemini nasıl hesaplarsınız?",
+      "answer": "Doğrusal bir regresyon denklemi hesaplamak için şunları yapmanız gerekir: 1) x ve y veri noktalarınızın ortalamalarını (ortalamalarını) hesaplamak, 2) m = Σ(xi - x̄)(yi - ȳ) / Σ(xi - x̄)² formülünü kullanarak eğimi hesaplamak, 3) b = ȳ - m·x̄ kullanarak kesişmeyi hesaplamak. Hesap makinemiz tüm bu adımları otomatik olarak gerçekleştirir ve size detaylı çalışmayı gösterir."
     },
     {
-      "question": "R-kare nedir ve nasıl yorumlanır?",
-      "answer": "R-kare (R²), bağımlı değişkendeki varyansın bağımsız değişken tarafından açıklanabilen oranını temsil eden istatistiksel bir ölçüdür. 0 ile 1 arasında değişir: R² = 0, modelin hiçbir değişkenliği açıklamadığı anlamına gelir; R² = 1, mükemmel bir uyum anlamına gelir. Genellikle, 0.7 üzerindeki R² güçlü bir ilişkiyi, 0.3–0.7 orta düzey bir ilişkiyi ve 0.3 altı zayıf bir ilişkiyi gösterir.",
-      "display": true
+      "question": "R-kare nedir ve nasıl yorumlayabilirim?",
+      "answer": "R-kare (R²), bağımlı değişkendeki bağımsız değişken tarafından açıklanabilen varyansın oranını temsil eden istatistiksel bir ölçüdür. 0 ile 1 arasında değişir: R² = 0, modelin değişkenliğin hiçbirini açıklamadığı anlamına gelir; R² = 1 mükemmel uyum anlamına gelir. Genel olarak R²'nin 0,7'nin üzerinde olması güçlü bir ilişkiyi, 0,3-0,7 arası orta düzeyde ve 0,3'ün altı zayıf bir ilişkiyi belirtir."
     },
     {
       "question": "Korelasyon katsayısı nedir?",
-      "answer": "Korelasyon katsayısı (r), iki değişken arasındaki doğrusal ilişkinin gücünü ve yönünü ölçer. -1 ile +1 arasında değişir: r = +1 mükemmel pozitif ilişki, r = -1 mükemmel negatif ilişki ve r = 0 doğrusal ilişki yok anlamına gelir. r ±1'e ne kadar yakınsa, doğrusal ilişki o kadar güçlüdür.",
-      "display": true
+      "answer": "Korelasyon katsayısı (r), iki değişken arasındaki doğrusal ilişkinin gücünü ve yönünü ölçer. -1 ile +1 arasında değişir: r = +1 mükemmel bir pozitif ilişki anlamına gelir, r = -1 mükemmel bir negatif ilişki anlamına gelir ve r = 0 doğrusal bir ilişki yoktur anlamına gelir. r ±1'e ne kadar yakınsa doğrusal ilişki o kadar güçlüdür."
     },
     {
-      "question": "Eğim ve kesişim arasındaki fark nedir?",
-      "answer": "Regresyon denklemi y = mx + b'de, eğim (m) x'teki her birim artış için y'nin ne kadar değiştiğini söyler. Pozitif eğim, y'nin x arttıkça arttığı anlamına gelir; negatif eğim, y'nin azaldığı anlamına gelir. Kesişim (b), x sıfıra eşit olduğunda y'nin tahmin edilen değeridir — regresyon doğrusunun y-eksenini kestiği noktadır.",
-      "display": true
+      "question": "Eğim ve kesişme arasındaki fark nedir?",
+      "answer": "Y = mx + b regresyon denkleminde eğim (m), x'teki her birim artış için y'nin ne kadar değiştiğini gösterir. Pozitif bir eğim, x arttıkça y'nin de arttığı anlamına gelir; negatif bir eğim y'nin azaldığı anlamına gelir. Kesişme noktası (b), x sıfıra eşit olduğunda y'nin tahmin edilen değeridir; regresyon çizgisinin y eksenini kestiği noktadır."
     },
     {
       "question": "Regresyon için kaç veri noktasına ihtiyacım var?",
-      "answer": "En azından, basit doğrusal regresyon denklemi hesaplamak için en az 2 veri noktasına ihtiyacınız vardır. Ancak anlamlı ve güvenilir sonuçlar için en az 10–15 veri noktasına sahip olmanız önerilir. Ne kadar çok veri noktanız varsa, regresyon modeliniz o kadar güvenilir ve istatistiksel olarak anlamlı hale gelir.",
-      "display": true
+      "answer": "Basit bir doğrusal regresyon denklemini hesaplamak için en azından en az 2 veri noktasına ihtiyacınız vardır. Ancak anlamlı ve güvenilir sonuçlar için en az 10-15 veri noktasına sahip olunması önerilir. Ne kadar çok veri noktasına sahipseniz, regresyon modeliniz o kadar güvenilir ve istatistiksel olarak anlamlı olur."
     },
     {
       "question": "Regresyonun standart hatası nedir?",
-      "answer": "Regresyonun standart hatası (SE), gözlemlenen veri noktalarının regresyon doğrusundan ortalama uzaklığını ölçer. Daha küçük bir SE, veri noktalarının uyum doğrusuna daha yakın olduğunu, yani model tahminlerinin daha doğru olduğunu gösterir. Bu esas olarak modelin kesinliğinin bir ölçüsüdür.",
-      "display": true
+      "answer": "Regresyonun standart hatası (SE), gözlemlenen veri noktalarının regresyon çizgisinden düştüğü ortalama mesafeyi ölçer. Daha küçük bir SE, veri noktalarının takılan çizgiye daha yakın olduğunu, yani model tahminlerinin daha doğru olduğunu gösterir. Bu aslında modelin kesinliğinin bir ölçüsüdür."
     },
     {
-      "question": "Doğrusal regresyon ne zaman kullanılmalıdır?",
-      "answer": "Sürekli bir bağımlı değişken ile bir veya daha fazla bağımsız değişken arasındaki ilişkiyi modellemek istediğinizde ve ilişki yaklaşık olarak doğrusal göründüğünde doğrusal regresyon kullanın. Yaygın uygulamalar arasında reklam harcamalarından satış tahmini, metrekareden ev fiyatı tahmini veya çalışma süresinin sınav puanları üzerindeki etkisinin analizi yer alır.",
-      "display": true
+      "question": "Doğrusal regresyonu ne zaman kullanmalıyım?",
+      "answer": "Sürekli bir bağımlı değişken ile bir veya daha fazla bağımsız değişken arasındaki ilişkiyi modellemek istediğinizde ve ilişki yaklaşık olarak doğrusal göründüğünde doğrusal regresyonu kullanın. Yaygın uygulamalar arasında reklam harcamalarından satışların tahmin edilmesi, metrekareden ev fiyatlarının tahmin edilmesi veya çalışma süresinin test puanları üzerindeki etkisinin analiz edilmesi yer alır."
     },
     {
       "question": "Doğrusal regresyonun varsayımları nelerdir?",
-      "answer": "Doğrusal regresyon şu varsayımlarda bulunur: 1) Doğrusallık — değişkenler arasındaki ilişki doğrusaldır, 2) Bağımsızlık — gözlemler birbirinden bağımsızdır, 3) Homoskedastisite — artıklar sabit varyansa sahiptir, 4) Normallik — artıklar normal dağılıma sahiptir, 5) Çoklu doğrusallık yok — bağımsız değişkenler yüksek düzeyde ilişkili değildir (çoklu regresyon için). Bu varsayımların ihlali güvenilir olmayan sonuçlara yol açabilir.",
-      "display": true
+      "answer": "Doğrusal regresyon şunları varsayar: 1) Doğrusallık — değişkenler arasındaki ilişki doğrusaldır, 2) Bağımsızlık — gözlemler birbirinden bağımsızdır, 3) Homoscedasticity — artıklar sabit varyansa sahiptir, 4) Normallik — artıklar normal şekilde dağılır, 5) Çoklu doğrusallık yoktur — bağımsız değişkenler yüksek düzeyde korelasyona sahip değildir (çoklu regresyon için). Bu varsayımların ihlal edilmesi güvenilmez sonuçlara yol açabilir."
     },
     {
       "question": "Korelasyon ve regresyon arasındaki fark nedir?",
-      "answer": "Korelasyon, iki değişken arasındaki ilişkinin gücünü ve yönünü (-1 ile +1 arasında) neden-sonuç ima etmeden ölçer. Regresyon daha ileri giderek verilere bir doğru uydurur ve bir değişkeni diğerinden tahmin edebilen bir denklem (y = mx + b) sağlar. Korelasyon simetrik iken (r_xy = r_yx), regresyon simetrik değildir — y'yi x'ten tahmin etmek, x'i y'den tahmin etmekten farklı sonuçlar verir.",
-      "display": true
+      "answer": "Korelasyon, iki değişken arasındaki (-1'den +1'e kadar) ilişkinin gücünü ve yönünü, nedensellik ima etmeden ölçer. Regresyon, verilere bir çizgi uydurarak ve bir değişkeni diğerinden tahmin edebilen bir denklem (y = mx + b) sağlayarak daha da ileri gider. Korelasyon simetrik olsa da (r_xy = r_yx), regresyon simetrik değildir; x'ten y'yi tahmin etmek, x'i y'den tahmin etmekten farklı sonuçlar verir."
     },
     {
-      "question": "Hangi regresyon türleri vardır?",
-      "answer": "Yaygın türler şunları içerir: Doğrusal Regresyon (bir tahmin değişkeni), Çoklu Regresyon (birden fazla tahmin değişkeni), Polinom Regresyon (eğri ilişkiler), Lojistik Regresyon (ikili sonuçlar), Ridge Regresyonu (aşırı uyumu önlemek için düzenlileştirme ile) ve Lasso Regresyonu (düzenlileştirme yoluyla özellik seçimi). Her tür farklı veri kalıplarına ve araştırma sorularına uygundur.",
-      "display": true
+      "question": "Ne tür regresyon vardır?",
+      "answer": "Yaygın türler şunları içerir: Doğrusal Regresyon (bir öngörücü), Çoklu Regresyon (çoklu yordayıcı), Polinom Regresyon (eğri ilişkiler), Lojistik Regresyon (ikili sonuçlar), Ridge Regresyon (fazla uyumu önlemek için düzenlileştirme ile) ve Kement Regresyon (düzenleme yoluyla özellik seçimi). Her tür farklı veri modellerine ve araştırma sorularına uygundur."
     },
     {
       "question": "Bu hesaplayıcıyı çoklu regresyon için kullanabilir miyim?",
-      "answer": "Şu anda bu hesaplayıcı, bir bağımsız değişken (x) ve bir bağımlı değişken (y) ile basit doğrusal regresyonu desteklemektedir. Birden fazla tahmin değişkeniyle çoklu regresyon için R, Python (statsmodels) veya SPSS gibi uzmanlaşmış istatistiksel yazılımlar kullanmanız gerekir. Gelecekteki bir güncellemede çoklu regresyon desteği ekleyebiliriz.",
-      "display": false
+      "answer": "Şu anda bu hesaplayıcı, bir bağımsız değişken (x) ve bir bağımlı değişken (y) içeren basit doğrusal regresyonu desteklemektedir. Çeşitli tahmincilere sahip çoklu regresyon için R, Python (istatistik modelleri) veya SPSS gibi özel istatistiksel yazılımları kullanmanız gerekir. Gelecekteki bir güncellemede birden fazla regresyon desteği ekleyebiliriz."
     }
   ]
 }

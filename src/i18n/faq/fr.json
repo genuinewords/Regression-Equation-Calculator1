@@ -2,63 +2,51 @@
   "faqs": [
     {
       "question": "Qu'est-ce qu'une équation de régression ?",
-      "answer": "Une équation de régression est une formule mathématique qui décrit la relation entre une variable dépendante et une ou plusieurs variables indépendantes. En régression linéaire simple, elle prend la forme y = mx + b, où m est la pente (taux de variation) et b est l'ordonnée à l'origine (valeur lorsque x = 0). L'équation permet de prédire la valeur de la variable dépendante à partir des valeurs connues de la ou des variable(s) indépendante(s).",
-      "display": true
+      "answer": "Une équation de régression est une formule mathématique qui décrit la relation entre une variable dépendante et une ou plusieurs variables indépendantes. Dans la régression linéaire simple, cela prend la forme y = mx + b, où m est la pente (taux de changement) et b est l'ordonnée à l'origine (valeur lorsque x = 0). L'équation vous permet de prédire la valeur de la variable dépendante sur la base des valeurs connues de la ou des variables indépendantes."
     },
     {
-      "question": "Comment calcule-t-on une équation de régression ?",
-      "answer": "Pour calculer une équation de régression linéaire, vous devez : 1) Calculer les moyennes de vos points de données x et y, 2) Calculer la pente à l'aide de la formule m = Σ(xi - x̄)(yi - ȳ) / Σ(xi - x̄)², 3) Calculer l'ordonnée à l'origine à l'aide de b = ȳ - m·x̄. Notre calculateur effectue automatiquement toutes ces étapes et vous montre les calculs détaillés.",
-      "display": true
+      "question": "Comment calculer une équation de régression ?",
+      "answer": "Pour calculer une équation de régression linéaire, vous devez : 1) Calculer les moyennes (moyennes) de vos points de données x et y, 2) Calculer la pente en utilisant la formule m = Σ(xi - x̄)(yi - ȳ) / Σ(xi - x̄)², 3) Calculer l'origine en utilisant b = ȳ - m·x̄. Notre calculateur effectue toutes ces étapes automatiquement et vous montre le fonctionnement détaillé."
     },
     {
-      "question": "Qu'est-ce que le R-carré et comment l'interpréter ?",
-      "answer": "Le R-carré (R²) est une mesure statistique qui représente la proportion de la variance de la variable dépendante pouvant être expliquée par la variable indépendante. Il varie de 0 à 1 : R² = 0 signifie que le modèle n'explique aucune variabilité ; R² = 1 signifie un ajustement parfait. En général, un R² supérieur à 0,7 indique une relation forte, entre 0,3 et 0,7 une relation modérée, et inférieur à 0,3 une relation faible.",
-      "display": true
+      "question": "Qu’est-ce que le R au carré et comment puis-je l’interpréter ?",
+      "answer": "R-carré (R²) est une mesure statistique qui représente la proportion de variance de la variable dépendante qui peut être expliquée par la variable indépendante. Il va de 0 à 1 : R² = 0 signifie que le modèle n'explique aucune variabilité ; R² = 1 signifie un ajustement parfait. Généralement, un R² supérieur à 0,7 indique une relation forte, 0,3 à 0,7 est modéré et inférieur à 0,3, une relation faible."
     },
     {
-      "question": "Qu'est-ce que le coefficient de corrélation ?",
-      "answer": "Le coefficient de corrélation (r) mesure la force et la direction de la relation linéaire entre deux variables. Il varie de -1 à +1 : r = +1 signifie une relation positive parfaite, r = -1 signifie une relation négative parfaite, et r = 0 signifie aucune relation linéaire. Plus r est proche de ±1, plus l'association linéaire est forte.",
-      "display": true
+      "question": "Quel est le coefficient de corrélation ?",
+      "answer": "Le coefficient de corrélation (r) mesure la force et la direction de la relation linéaire entre deux variables. Il va de -1 à +1 : r = +1 signifie une relation positive parfaite, r = -1 signifie une relation négative parfaite et r = 0 signifie aucune relation linéaire. Plus r est proche de ±1, plus l’association linéaire est forte."
     },
     {
-      "question": "Quelle est la différence entre la pente et l'ordonnée à l'origine ?",
-      "answer": "Dans l'équation de régression y = mx + b, la pente (m) indique de combien y varie pour chaque augmentation unitaire de x. Une pente positive signifie que y augmente lorsque x augmente ; une pente négative signifie que y diminue. L'ordonnée à l'origine (b) est la valeur prédite de y lorsque x est égal à zéro — c'est le point où la droite de régression croise l'axe des y.",
-      "display": true
+      "question": "Quelle est la différence entre la pente et l'interception ?",
+      "answer": "Dans l'équation de régression y = mx + b, la pente (m) vous indique de combien y change pour chaque augmentation d'unité de x. Une pente positive signifie que y augmente à mesure que x augmente ; une pente négative signifie que y diminue. L'ordonnée à l'origine (b) est la valeur prédite de y lorsque x est égal à zéro — c'est le point où la ligne de régression croise l'axe des y."
     },
     {
-      "question": "Combien de points de données faut-il pour une régression ?",
-      "answer": "Au minimum, il faut au moins 2 points de données pour calculer une équation de régression linéaire simple. Cependant, pour des résultats significatifs et fiables, il est recommandé d'avoir au moins 10 à 15 points de données. Plus vous avez de points de données, plus votre modèle de régression devient fiable et statistiquement significatif.",
-      "display": true
+      "question": "De combien de points de données ai-je besoin pour une régression ?",
+      "answer": "Au minimum, vous avez besoin d'au moins 2 points de données pour calculer une équation de régression linéaire simple. Cependant, pour obtenir des résultats significatifs et fiables, il est recommandé de disposer d’au moins 10 à 15 points de données. Plus vous disposez de points de données, plus votre modèle de régression devient fiable et statistiquement significatif."
     },
     {
-      "question": "Qu'est-ce que l'erreur standard de la régression ?",
-      "answer": "L'erreur standard (SE) de la régression mesure la distance moyenne à laquelle les points de données observés s'écartent de la droite de régression. Une SE plus petite indique que les points de données sont plus proches de la droite ajustée, ce qui signifie que les prédictions du modèle sont plus précises. C'est essentiellement une mesure de la précision du modèle.",
-      "display": true
+      "question": "Quelle est l’erreur type de la régression ?",
+      "answer": "L'erreur standard (SE) de la régression mesure la distance moyenne entre les points de données observés et la ligne de régression. Un SE plus petit indique que les points de données sont plus proches de la ligne ajustée, ce qui signifie que les prédictions du modèle sont plus précises. Il s'agit essentiellement d'une mesure de la précision du modèle."
     },
     {
       "question": "Quand dois-je utiliser la régression linéaire ?",
-      "answer": "Utilisez la régression linéaire lorsque vous souhaitez modéliser la relation entre une variable dépendante continue et une ou plusieurs variables indépendantes, et lorsque la relation semble être approximativement linéaire. Les applications courantes incluent la prédiction des ventes à partir des dépenses publicitaires, l'estimation des prix immobiliers à partir de la superficie, ou l'analyse de l'effet du temps d'étude sur les résultats aux examens.",
-      "display": true
+      "answer": "Utilisez la régression linéaire lorsque vous souhaitez modéliser la relation entre une variable dépendante continue et une ou plusieurs variables indépendantes, et lorsque la relation semble être approximativement linéaire. Les applications courantes incluent la prévision des ventes à partir des dépenses publicitaires, l'estimation des prix des logements à partir de la superficie en pieds carrés ou l'analyse de l'effet du temps d'étude sur les résultats des tests."
     },
     {
       "question": "Quelles sont les hypothèses de la régression linéaire ?",
-      "answer": "La régression linéaire suppose : 1) La linéarité — la relation entre les variables est linéaire, 2) L'indépendance — les observations sont indépendantes les unes des autres, 3) L'homoscédasticité — les résidus ont une variance constante, 4) La normalité — les résidus sont normalement distribués, 5) L'absence de multicolinéarité — les variables indépendantes ne sont pas fortement corrélées (pour la régression multiple). La violation de ces hypothèses peut conduire à des résultats non fiables.",
-      "display": true
+      "answer": "La régression linéaire suppose : 1) Linéarité — la relation entre les variables est linéaire, 2) Indépendance — les observations sont indépendantes les unes des autres, 3) Homoscédasticité — les résidus ont une variance constante, 4) Normalité — les résidus sont normalement distribués, 5) Pas de multicolinéarité — les variables indépendantes ne sont pas fortement corrélées (pour la régression multiple). La violation de ces hypothèses peut conduire à des résultats peu fiables."
     },
     {
       "question": "Quelle est la différence entre corrélation et régression ?",
-      "answer": "La corrélation mesure la force et la direction de la relation entre deux variables (variant de -1 à +1) sans impliquer de causalité. La régression va plus loin en ajustant une droite aux données et en fournissant une équation (y = mx + b) qui permet de prédire une variable à partir de l'autre. Alors que la corrélation est symétrique (r_xy = r_yx), la régression ne l'est pas — prédire y à partir de x donne des résultats différents de la prédiction de x à partir de y.",
-      "display": true
+      "answer": "La corrélation mesure la force et la direction de la relation entre deux variables (allant de -1 à +1) sans impliquer de lien de causalité. La régression va plus loin en ajustant une droite aux données et en fournissant une équation (y = mx + b) qui peut prédire une variable à partir d'une autre. Bien que la corrélation soit symétrique (r_xy = r_yx), la régression ne l'est pas : prédire y à partir de x donne des résultats différents de la prédiction de x à partir de y."
     },
     {
       "question": "Quels types de régression existe-t-il ?",
-      "answer": "Les types courants incluent : la régression linéaire (un prédicteur), la régression multiple (plusieurs prédicteurs), la régression polynomiale (relations curvilignes), la régression logistique (résultats binaires), la régression ridge (avec régularisation pour éviter le surapprentissage) et la régression Lasso (sélection de variables via la régularisation). Chaque type convient à différents modèles de données et questions de recherche.",
-      "display": true
+      "answer": "Les types courants incluent : la régression linéaire (un prédicteur), la régression multiple (plusieurs prédicteurs), la régression polynomiale (relations courbes), la régression logistique (résultats binaires), la régression Ridge (avec régularisation pour éviter le surajustement) et la régression Lasso (sélection de fonctionnalités via régularisation). Chaque type convient à différents modèles de données et questions de recherche."
     },
     {
-      "question": "Puis-je utiliser ce calculateur pour la régression multiple ?",
-      "answer": "Actuellement, ce calculateur prend en charge la régression linéaire simple avec une variable indépendante (x) et une variable dépendante (y). Pour la régression multiple avec plusieurs prédicteurs, vous devrez utiliser un logiciel statistique spécialisé comme R, Python (statsmodels) ou SPSS. Nous pourrions ajouter la prise en charge de la régression multiple dans une prochaine mise à jour.",
-      "display": false
+      "question": "Puis-je utiliser cette calculatrice pour une régression multiple ?",
+      "answer": "Actuellement, cette calculatrice prend en charge la régression linéaire simple avec une variable indépendante (x) et une variable dépendante (y). Pour une régression multiple avec plusieurs prédicteurs, vous devrez utiliser un logiciel statistique spécialisé comme R, Python (statsmodels) ou SPSS. Nous pourrons ajouter la prise en charge de plusieurs régressions dans une future mise à jour."
     }
   ]
 }

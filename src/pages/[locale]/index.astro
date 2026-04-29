@@ -46,6 +46,8 @@ const whatIsText: string = (home as any).whatIsText ?? '';
 const whyUseTitle: string = (home as any).whyUseTitle ?? 'Why Use Our Calculator?';
 const useCasesTitle: string = (home as any).useCasesTitle ?? 'Common Use Cases';
 const faqTitle: string = (home as any).faqTitle ?? 'Frequently Asked Questions';
+const understandingTitle: string = (home as any).understandingTitle ?? 'Understanding Regression Analysis';
+const toolsTitle: string = (home as any).toolsTitle ?? 'Our Regression & Statistics Tools';
 ---
 
 <BaseLayout
@@ -76,10 +78,10 @@ const faqTitle: string = (home as any).faqTitle ?? 'Frequently Asked Questions';
           </p>
           <div class="flex flex-wrap justify-center lg:justify-start gap-4">
             <a href="#calculator-main" class="px-8 py-4 rounded-2xl bg-primary-600 text-white font-bold shadow-xl shadow-primary-600/20 hover:bg-primary-700 hover:shadow-2xl hover:shadow-primary-600/30 transition-all duration-300 hover:-translate-y-1">
-              {translations.common?.calculateNow || 'Calculate Now'}
+              {translations.common?.calculateNow ?? 'Calculate Now'}
             </a>
             <a href="#features" class="px-8 py-4 rounded-2xl bg-white dark:bg-surface-800 text-surface-700 dark:text-surface-200 font-bold border border-surface-200 dark:border-surface-700 hover:border-primary-300 transition-all duration-300 hover:-translate-y-1">
-              {translations.common?.exploreFeatures || 'Explore Features'}
+              {translations.common?.exploreFeatures ?? 'Explore Features'}
             </a>
           </div>
         </div>
@@ -113,30 +115,30 @@ const faqTitle: string = (home as any).faqTitle ?? 'Frequently Asked Questions';
   <div class="max-w-5xl mx-auto px-4 sm:px-6 space-y-24 py-24">
     <!-- Understanding Regression Analysis -->
     <section class="reveal-on-scroll">
-      <h2 class="text-3xl md:text-4xl font-bold text-surface-900 dark:text-surface-50 text-center mb-12">{translations.home?.understandingTitle || 'Understanding Regression Analysis'}</h2>
+      <h2 class="text-3xl md:text-4xl font-bold text-surface-900 dark:text-surface-50 text-center mb-12">{understandingTitle}</h2>
       <div class="grid sm:grid-cols-2 gap-8">
         {[
           {
-            title: translations.home?.linearTitle || "Linear Regression",
-            desc: translations.home?.linearDesc || "Models a straight-line relationship between variables using the equation y = a + bx.",
+            title: (home as any).linearTitle ?? "Linear Regression",
+            desc: (home as any).linearDesc ?? "Models a straight-line relationship between variables using the equation y = a + bx.",
             icon: "📈",
             accent: "primary"
           },
           {
-            title: translations.home?.polyTitle || "Polynomial Regression",
-            desc: translations.home?.polyDesc || "Fits a curved relationship using y = a + bx + cx². Perfect for complex physical systems.",
+            title: (home as any).polyTitle ?? "Polynomial Regression",
+            desc: (home as any).polyDesc ?? "Fits a curved relationship using y = a + bx + cx². Perfect for complex physical systems.",
             icon: "📐",
             accent: "accent"
           },
           {
-            title: translations.home?.expTitle || "Exponential Regression",
-            desc: translations.home?.expDesc || "Models rapid growth or decay with y = ae^bx. Ideal for bacterial growth and decay analysis.",
+            title: (home as any).expTitle ?? "Exponential Regression",
+            desc: (home as any).expDesc ?? "Models rapid growth or decay with y = ae^bx. Ideal for bacterial growth and decay analysis.",
             icon: "🧬",
             accent: "emerald"
           },
           {
-            title: translations.home?.logTitle || "Logarithmic Regression",
-            desc: translations.home?.logDesc || "Fits diminishing-returns patterns with y = a + b·ln(x). Great for economic saturation.",
+            title: (home as any).logTitle ?? "Logarithmic Regression",
+            desc: (home as any).logDesc ?? "Fits diminishing-returns patterns with y = a + b·ln(x). Great for economic saturation.",
             icon: "🔬",
             accent: "amber"
           }
@@ -168,7 +170,7 @@ const faqTitle: string = (home as any).faqTitle ?? 'Frequently Asked Questions';
               <div class="absolute -inset-4 bg-primary-500/20 rounded-3xl blur-2xl opacity-40"></div>
               <Image
                 src={whatIsImage}
-                alt="Regression Analysis Visual"
+                alt={whatIsTitle}
                 class="relative rounded-2xl shadow-2xl border border-white/20 w-full h-auto object-cover"
                 loading="lazy"
                 width={400}
@@ -234,7 +236,7 @@ const faqTitle: string = (home as any).faqTitle ?? 'Frequently Asked Questions';
 
     <!-- Tool Grid -->
     <section class="reveal-on-scroll">
-      <h2 class="text-3xl font-bold text-surface-900 dark:text-surface-50 text-center mb-12">{translations.home?.toolsTitle || 'Our Regression & Statistics Tools'}</h2>
+      <h2 class="text-3xl font-bold text-surface-900 dark:text-surface-50 text-center mb-12">{toolsTitle}</h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
           { href: getLocalizedUrl('/exponential-regression-calculator/', currentLocale), title: translations.expCalc?.title || "Exponential Regression", desc: translations.expCalc?.description || "Model growth & decay", icon: "📈", accent: "primary" },

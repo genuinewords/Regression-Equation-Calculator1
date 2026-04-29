@@ -22,9 +22,10 @@ interface Props {
   toolName: string;
   keyPoints: KeyPoint[];
   highlightTip: string;
+  translations: any;
 }
 
-const { toolName, keyPoints, highlightTip } = Astro.props;
+const { toolName, keyPoints, highlightTip, translations } = Astro.props;
 ---
 
 <section class="tool-info-section py-8 md:py-12" id="tool-info-box">
@@ -32,7 +33,7 @@ const { toolName, keyPoints, highlightTip } = Astro.props;
 
     <!-- Headline -->
     <h2 class="tool-info-box__headline">
-      How to Use This {toolName}
+      {translations.common?.howToUse ?? 'How to Use This'} {toolName}
     </h2>
 
     <!-- Key Points Grid -->

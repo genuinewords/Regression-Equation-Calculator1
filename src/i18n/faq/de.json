@@ -2,63 +2,51 @@
   "faqs": [
     {
       "question": "Was ist eine Regressionsgleichung?",
-      "answer": "Eine Regressionsgleichung ist eine mathematische Formel, die die Beziehung zwischen einer abhängigen Variable und einer oder mehreren unabhängigen Variablen beschreibt. In der einfachen linearen Regression hat sie die Form y = mx + b, wobei m die Steigung (Änderungsrate) und b der y-Achsenabschnitt (Wert bei x = 0) ist. Die Gleichung ermöglicht es, den Wert der abhängigen Variable auf Grundlage bekannter Werte der unabhängigen Variable(n) vorherzusagen.",
-      "display": true
+      "answer": "Eine Regressionsgleichung ist eine mathematische Formel, die die Beziehung zwischen einer abhängigen Variablen und einer oder mehreren unabhängigen Variablen beschreibt. Bei einer einfachen linearen Regression hat sie die Form y = mx + b, wobei m die Steigung (Änderungsrate) und b der y-Achsenabschnitt (Wert bei x = 0) ist. Mit der Gleichung können Sie den Wert der abhängigen Variablen basierend auf bekannten Werten der unabhängigen Variablen vorhersagen."
     },
     {
       "question": "Wie berechnet man eine Regressionsgleichung?",
-      "answer": "Um eine lineare Regressionsgleichung zu berechnen, müssen Sie: 1) Die Mittelwerte Ihrer x- und y-Datenpunkte berechnen, 2) Die Steigung mit der Formel m = Σ(xi - x̄)(yi - ȳ) / Σ(xi - x̄)² berechnen, 3) Den Achsenabschnitt mit b = ȳ - m·x̄ berechnen. Unser Rechner führt all diese Schritte automatisch durch und zeigt Ihnen die detaillierte Rechnung.",
-      "display": true
+      "answer": "Um eine lineare Regressionsgleichung zu berechnen, müssen Sie: 1) die Mittelwerte (Durchschnitte) Ihrer x- und y-Datenpunkte berechnen, 2) die Steigung mit der Formel m = Σ(xi - x̄)(yi - ȳ) / Σ(xi - x̄)² berechnen, 3) den Achsenabschnitt mit b = ȳ - m·x̄ berechnen. Unser Rechner führt alle diese Schritte automatisch durch und zeigt Ihnen die detaillierte Arbeitsweise."
     },
     {
       "question": "Was ist R-Quadrat und wie interpretiere ich es?",
-      "answer": "R-Quadrat (R²) ist ein statistisches Maß, das den Anteil der Varianz in der abhängigen Variable darstellt, der durch die unabhängige Variable erklärt werden kann. Es reicht von 0 bis 1: R² = 0 bedeutet, dass das Modell keine der Variabilität erklärt; R² = 1 bedeutet eine perfekte Anpassung. Im Allgemeinen deutet ein R² über 0,7 auf eine starke Beziehung hin, 0,3–0,7 ist moderat und unter 0,3 ist schwach.",
-      "display": true
+      "answer": "Das R-Quadrat (R²) ist ein statistisches Maß, das den Anteil der Varianz in der abhängigen Variablen darstellt, der durch die unabhängige Variable erklärt werden kann. Er reicht von 0 bis 1: R² = 0 bedeutet, dass das Modell keine der Variabilität erklärt; R² = 1 bedeutet eine perfekte Passform. Im Allgemeinen weist R² über 0,7 auf eine starke Beziehung hin, 0,3–0,7 auf eine mäßige und unter 0,3 auf eine schwache."
     },
     {
       "question": "Was ist der Korrelationskoeffizient?",
-      "answer": "Der Korrelationskoeffizient (r) misst die Stärke und Richtung der linearen Beziehung zwischen zwei Variablen. Er reicht von -1 bis +1: r = +1 bedeutet eine perfekte positive Beziehung, r = -1 bedeutet eine perfekte negative Beziehung und r = 0 bedeutet keine lineare Beziehung. Je näher r an ±1 liegt, desto stärker ist der lineare Zusammenhang.",
-      "display": true
+      "answer": "Der Korrelationskoeffizient (r) misst die Stärke und Richtung der linearen Beziehung zwischen zwei Variablen. Er reicht von -1 bis +1: r = +1 bedeutet eine perfekte positive Beziehung, r = -1 bedeutet eine perfekte negative Beziehung und r = 0 bedeutet keine lineare Beziehung. Je näher r an ±1 liegt, desto stärker ist der lineare Zusammenhang."
     },
     {
       "question": "Was ist der Unterschied zwischen Steigung und Achsenabschnitt?",
-      "answer": "In der Regressionsgleichung y = mx + b gibt die Steigung (m) an, wie stark sich y ändert, wenn x um eine Einheit zunimmt. Eine positive Steigung bedeutet, dass y zunimmt, wenn x zunimmt; eine negative Steigung bedeutet, dass y abnimmt. Der Achsenabschnitt (b) ist der vorhergesagte Wert von y, wenn x gleich null ist — es ist der Punkt, an dem die Regressionsgerade die y-Achse schneidet.",
-      "display": true
+      "answer": "In der Regressionsgleichung y = mx + b gibt die Steigung (m) an, um wie viel sich y mit jeder Erhöhung von x um eine Einheit ändert. Eine positive Steigung bedeutet, dass y mit zunehmendem x zunimmt; Eine negative Steigung bedeutet, dass y abnimmt. Der Achsenabschnitt (b) ist der vorhergesagte Wert von y, wenn x gleich Null ist – es ist der Punkt, an dem die Regressionsgerade die y-Achse schneidet."
     },
     {
       "question": "Wie viele Datenpunkte benötige ich für eine Regression?",
-      "answer": "Mindestens 2 Datenpunkte sind erforderlich, um eine einfache lineare Regressionsgleichung zu berechnen. Für aussagekräftige und zuverlässige Ergebnisse wird jedoch empfohlen, mindestens 10–15 Datenpunkte zu verwenden. Je mehr Datenpunkte vorhanden sind, desto zuverlässiger und statistisch signifikanter wird Ihr Regressionsmodell.",
-      "display": true
+      "answer": "Sie benötigen mindestens zwei Datenpunkte, um eine einfache lineare Regressionsgleichung zu berechnen. Für aussagekräftige und zuverlässige Ergebnisse wird jedoch empfohlen, über mindestens 10–15 Datenpunkte zu verfügen. Je mehr Datenpunkte Sie haben, desto zuverlässiger und statistisch aussagekräftiger wird Ihr Regressionsmodell."
     },
     {
       "question": "Was ist der Standardfehler der Regression?",
-      "answer": "Der Standardfehler (SE) der Regression misst die durchschnittliche Entfernung, die die beobachteten Datenpunkte von der Regressionsgeraden abweichen. Ein kleinerer SE zeigt, dass die Datenpunkte näher an der angepassten Geraden liegen, was bedeutet, dass die Modellvorhersagen genauer sind. Es ist im Wesentlichen ein Maß für die Genauigkeit des Modells.",
-      "display": true
+      "answer": "Der Standardfehler (SE) der Regression misst den durchschnittlichen Abstand, um den die beobachteten Datenpunkte von der Regressionslinie abweichen. Eine kleinere SE zeigt an, dass die Datenpunkte näher an der Anpassungslinie liegen, was bedeutet, dass die Modellvorhersagen genauer sind. Es ist im Wesentlichen ein Maß für die Präzision des Modells."
     },
     {
-      "question": "Wann sollte ich lineare Regression verwenden?",
-      "answer": "Verwenden Sie lineare Regression, wenn Sie die Beziehung zwischen einer kontinuierlichen abhängigen Variable und einer oder mehreren unabhängigen Variablen modellieren möchten und die Beziehung annähernd linear zu sein scheint. Typische Anwendungen sind die Vorhersage von Umsätzen anhand von Werbeausgaben, die Schätzung von Hauspreisen anhand der Wohnfläche oder die Analyse des Einflusses von Lernzeit auf Prüfungsergebnisse.",
-      "display": true
+      "question": "Wann sollte ich die lineare Regression verwenden?",
+      "answer": "Verwenden Sie die lineare Regression, wenn Sie die Beziehung zwischen einer kontinuierlichen abhängigen Variablen und einer oder mehreren unabhängigen Variablen modellieren möchten und die Beziehung annähernd linear zu sein scheint. Zu den gängigen Anwendungen gehören die Vorhersage von Umsätzen anhand von Werbeausgaben, die Schätzung von Immobilienpreisen anhand der Quadratmeterzahl oder die Analyse der Auswirkung der Lernzeit auf Testergebnisse."
     },
     {
-      "question": "Was sind die Voraussetzungen der linearen Regression?",
-      "answer": "Die lineare Regression setzt voraus: 1) Linearität — die Beziehung zwischen den Variablen ist linear, 2) Unabhängigkeit — die Beobachtungen sind unabhängig voneinander, 3) Homoskedastizität — die Residuen haben eine konstante Varianz, 4) Normalität — die Residuen sind normalverteilt, 5) Keine Multikollinearität — die unabhängigen Variablen sind nicht stark korreliert (bei multipler Regression). Eine Verletzung dieser Voraussetzungen kann zu unzuverlässigen Ergebnissen führen.",
-      "display": true
+      "question": "Was sind die Annahmen der linearen Regression?",
+      "answer": "Die lineare Regression setzt Folgendes voraus: 1) Linearität – die Beziehung zwischen Variablen ist linear, 2) Unabhängigkeit – Beobachtungen sind unabhängig voneinander, 3) Homoskedastizität – Residuen haben eine konstante Varianz, 4) Normalität – Residuen sind normalverteilt, 5) Keine Multikollinearität – unabhängige Variablen sind nicht stark korreliert (für multiple Regression). Ein Verstoß gegen diese Annahmen kann zu unzuverlässigen Ergebnissen führen."
     },
     {
       "question": "Was ist der Unterschied zwischen Korrelation und Regression?",
-      "answer": "Korrelation misst die Stärke und Richtung der Beziehung zwischen zwei Variablen (im Bereich von -1 bis +1), ohne eine Kausalität zu implizieren. Regression geht darüber hinaus, indem sie eine Gerade an die Daten anpasst und eine Gleichung (y = mx + b) liefert, mit der eine Variable aus der anderen vorhergesagt werden kann. Während die Korrelation symmetrisch ist (r_xy = r_yx), ist die Regression es nicht — die Vorhersage von y aus x führt zu anderen Ergebnissen als die Vorhersage von x aus y.",
-      "display": true
+      "answer": "Die Korrelation misst die Stärke und Richtung der Beziehung zwischen zwei Variablen (im Bereich von -1 bis +1), ohne dass eine Kausalität impliziert wird. Die Regression geht noch weiter, indem sie eine Linie an die Daten anpasst und eine Gleichung (y = mx + b) bereitstellt, die eine Variable aus einer anderen vorhersagen kann. Während die Korrelation symmetrisch ist (r_xy = r_yx), ist dies bei der Regression nicht der Fall – die Vorhersage von y aus x liefert andere Ergebnisse als die Vorhersage von x aus y."
     },
     {
-      "question": "Welche Arten von Regression gibt es?",
-      "answer": "Gängige Arten sind: Lineare Regression (ein Prädiktor), Multiple Regression (mehrere Prädiktoren), Polynomiale Regression (gekrümmte Beziehungen), Logistische Regression (binäre Ergebnisse), Ridge-Regression (mit Regularisierung zur Vermeidung von Überanpassung) und Lasso-Regression (Merkmalssauswahl durch Regularisierung). Jede Art eignet sich für unterschiedliche Datenmuster und Forschungsfragen.",
-      "display": true
+      "question": "Welche Arten von Regressionen gibt es?",
+      "answer": "Zu den gängigen Typen gehören: lineare Regression (ein Prädiktor), multiple Regression (mehrere Prädiktoren), polynomiale Regression (gekrümmte Beziehungen), logistische Regression (binäre Ergebnisse), Ridge-Regression (mit Regularisierung zur Vermeidung von Überanpassung) und Lasso-Regression (Merkmalsauswahl durch Regularisierung). Jeder Typ eignet sich für unterschiedliche Datenmuster und Forschungsfragen."
     },
     {
       "question": "Kann ich diesen Rechner für multiple Regression verwenden?",
-      "answer": "Derzeit unterstützt dieser Rechner nur die einfache lineare Regression mit einer unabhängigen Variable (x) und einer abhängigen Variable (y). Für multiple Regression mit mehreren Prädiktoren benötigen Sie spezialisierte Statistiksoftware wie R, Python (statsmodels) oder SPSS. Möglicherweise werden wir in einem zukünftigen Update die Unterstützung für multiple Regression hinzufügen.",
-      "display": false
+      "answer": "Derzeit unterstützt dieser Rechner eine einfache lineare Regression mit einer unabhängigen Variablen (x) und einer abhängigen Variablen (y). Für eine multiple Regression mit mehreren Prädiktoren müssten Sie spezielle Statistiksoftware wie R, Python (statsmodels) oder SPSS verwenden. Möglicherweise fügen wir in einem zukünftigen Update Unterstützung für mehrere Regressionen hinzu."
     }
   ]
 }

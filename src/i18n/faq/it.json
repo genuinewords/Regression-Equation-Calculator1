@@ -2,63 +2,51 @@
   "faqs": [
     {
       "question": "Cos'è un'equazione di regressione?",
-      "answer": "Un'equazione di regressione è una formula matematica che descrive la relazione tra una variabile dipendente e una o più variabili indipendenti. Nella regressione lineare semplice, assume la forma y = mx + b, dove m è la pendenza (tasso di variazione) e b è l'intercetta y (valore quando x = 0). L'equazione permette di prevedere il valore della variabile dipendente sulla base dei valori noti della variabile o delle variabili indipendenti.",
-      "display": true
+      "answer": "Un'equazione di regressione è una formula matematica che descrive la relazione tra una variabile dipendente e una o più variabili indipendenti. Nella regressione lineare semplice, assume la forma y = mx + b, dove m è la pendenza (tasso di variazione) e b è l'intercetta y (valore quando x = 0). L'equazione consente di prevedere il valore della variabile dipendente in base ai valori noti delle variabili indipendenti."
     },
     {
       "question": "Come si calcola un'equazione di regressione?",
-      "answer": "Per calcolare un'equazione di regressione lineare, è necessario: 1) Calcolare le medie dei punti dati x e y, 2) Calcolare la pendenza usando la formula m = Σ(xi - x̄)(yi - ȳ) / Σ(xi - x̄)², 3) Calcolare l'intercetta usando b = ȳ - m·x̄. Il nostro calcolatore esegue automaticamente tutti questi passaggi e mostra il lavoro dettagliato.",
-      "display": true
+      "answer": "Per calcolare un'equazione di regressione lineare, devi: 1) Calcolare le medie dei punti dati xey, 2) Calcolare la pendenza utilizzando la formula m = Σ(xi - x̄)(yi - ȳ) / Σ(xi - x̄)², 3) Calcolare l'intercetta utilizzando b = ȳ - m·x̄. Il nostro calcolatore esegue automaticamente tutti questi passaggi e mostra il funzionamento dettagliato."
     },
     {
-      "question": "Cos'è R-quadrato e come si interpreta?",
-      "answer": "R-quadrato (R²) è una misura statistica che rappresenta la proporzione di varianza nella variabile dipendente che può essere spiegata dalla variabile indipendente. Varia da 0 a 1: R² = 0 significa che il modello non spiega alcuna variabilità; R² = 1 significa un adattamento perfetto. In generale, un R² superiore a 0,7 indica una relazione forte, tra 0,3 e 0,7 è moderata, e inferiore a 0,3 è debole.",
-      "display": true
+      "question": "Cos'è l'R quadrato e come lo interpreto?",
+      "answer": "R quadrato (R²) è una misura statistica che rappresenta la proporzione della varianza nella variabile dipendente che può essere spiegata dalla variabile indipendente. Varia da 0 a 1: R² = 0 significa che il modello non spiega alcuna variabilità; R² = 1 significa una vestibilità perfetta. In generale, R² superiore a 0,7 indica una relazione forte, 0,3–0,7 è moderata e inferiore a 0,3 è debole."
     },
     {
       "question": "Qual è il coefficiente di correlazione?",
-      "answer": "Il coefficiente di correlazione (r) misura la forza e la direzione della relazione lineare tra due variabili. Varia da -1 a +1: r = +1 indica una relazione positiva perfetta, r = -1 indica una relazione negativa perfetta, e r = 0 indica nessuna relazione lineare. Più r è vicino a ±1, più forte è l'associazione lineare.",
-      "display": true
+      "answer": "Il coefficiente di correlazione (r) misura la forza e la direzione della relazione lineare tra due variabili. Va da -1 a +1: r = +1 significa una relazione positiva perfetta, r = -1 significa una relazione negativa perfetta e r = 0 significa nessuna relazione lineare. Quanto più r è vicino a ±1, tanto più forte è l'associazione lineare."
     },
     {
       "question": "Qual è la differenza tra pendenza e intercetta?",
-      "answer": "Nell'equazione di regressione y = mx + b, la pendenza (m) indica di quanto varia y per ogni unità di aumento di x. Una pendenza positiva significa che y aumenta all'aumentare di x; una pendenza negativa significa che y diminuisce. L'intercetta (b) è il valore previsto di y quando x è uguale a zero — è il punto in cui la retta di regressione attraversa l'asse y.",
-      "display": true
+      "answer": "Nell'equazione di regressione y = mx + b, la pendenza (m) indica quanto cambia y per ogni aumento unitario di x. Una pendenza positiva significa che y aumenta all'aumentare di x; una pendenza negativa significa che y diminuisce. L'intercetta (b) è il valore previsto di y quando x è uguale a zero: è il punto in cui la linea di regressione incrocia l'asse y."
     },
     {
-      "question": "Quanti punti dati sono necessari per una regressione?",
-      "answer": "Come minimo, servono almeno 2 punti dati per calcolare un'equazione di regressione lineare semplice. Tuttavia, per risultati significativi e affidabili, si consiglia di avere almeno 10–15 punti dati. Più punti dati si hanno, più il modello di regressione diventa affidabile e statisticamente significativo.",
-      "display": true
+      "question": "Di quanti dati ho bisogno per una regressione?",
+      "answer": "Come minimo, sono necessari almeno 2 punti dati per calcolare una semplice equazione di regressione lineare. Tuttavia, per ottenere risultati significativi e affidabili, si consiglia di disporre di almeno 10-15 punti dati. Più dati hai, più affidabile e statisticamente significativo diventa il tuo modello di regressione."
     },
     {
       "question": "Qual è l'errore standard della regressione?",
-      "answer": "L'errore standard (SE) della regressione misura la distanza media a cui i punti dati osservati si trovano dalla retta di regressione. Un SE più piccolo indica che i punti dati sono più vicini alla retta adattata, il che significa che le previsioni del modello sono più accurate. È essenzialmente una misura della precisione del modello.",
-      "display": true
+      "answer": "L'errore standard (SE) della regressione misura la distanza media alla quale i punti dati osservati cadono dalla linea di regressione. Un SE più piccolo indica che i punti dati sono più vicini alla linea adattata, il che significa che le previsioni del modello sono più accurate. È essenzialmente una misura della precisione del modello."
     },
     {
-      "question": "Quando dovrei usare la regressione lineare?",
-      "answer": "Usare la regressione lineare quando si desidera modellare la relazione tra una variabile dipendente continua e una o più variabili indipendenti, e quando la relazione sembra essere approssimativamente lineare. Applicazioni comuni includono la previsione delle vendite dalla spesa pubblicitaria, la stima dei prezzi delle case dalla metratura, o l'analisi dell'effetto del tempo di studio sui punteggi dei test.",
-      "display": true
+      "question": "Quando dovrei utilizzare la regressione lineare?",
+      "answer": "Utilizzare la regressione lineare quando si desidera modellare la relazione tra una variabile dipendente continua e una o più variabili indipendenti e quando la relazione sembra essere approssimativamente lineare. Le applicazioni comuni includono la previsione delle vendite dalla spesa pubblicitaria, la stima dei prezzi delle case dalla metratura o l'analisi dell'effetto del tempo di studio sui punteggi dei test."
     },
     {
-      "question": "Quali sono le assunzioni della regressione lineare?",
-      "answer": "La regressione lineare assume: 1) Linearità — la relazione tra le variabili è lineare, 2) Indipendenza — le osservazioni sono indipendenti tra loro, 3) Omoschedasticità — i residui hanno varianza costante, 4) Normalità — i residui sono distribuiti normalmente, 5) Assenza di multicollinearità — le variabili indipendenti non sono altamente correlate (per la regressione multipla). La violazione di queste assunzioni può portare a risultati inaffidabili.",
-      "display": true
+      "question": "Quali sono le ipotesi della regressione lineare?",
+      "answer": "La regressione lineare presuppone: 1) Linearità — la relazione tra le variabili è lineare, 2) Indipendenza — le osservazioni sono indipendenti l'una dall'altra, 3) Omoschedasticità — i residui hanno una varianza costante, 4) Normalità — i residui sono normalmente distribuiti, 5) Nessuna multicollinearità — le variabili indipendenti non sono altamente correlate (per la regressione multipla). La violazione di questi presupposti può portare a risultati inaffidabili."
     },
     {
       "question": "Qual è la differenza tra correlazione e regressione?",
-      "answer": "La correlazione misura la forza e la direzione della relazione tra due variabili (variando da -1 a +1) senza implicare causalità. La regressione va oltre adattando una retta ai dati e fornendo un'equazione (y = mx + b) che può prevedere una variabile dall'altra. Mentre la correlazione è simmetrica (r_xy = r_yx), la regressione non lo è — prevedere y da x dà risultati diversi rispetto a prevedere x da y.",
-      "display": true
+      "answer": "La correlazione misura la forza e la direzione della relazione tra due variabili (da -1 a +1) senza implicare causalità. La regressione va oltre adattando una linea ai dati e fornendo un'equazione (y = mx + b) in grado di prevedere una variabile da un'altra. Mentre la correlazione è simmetrica (r_xy = r_yx), la regressione non lo è: prevedere y da x dà risultati diversi rispetto a prevedere x da y."
     },
     {
       "question": "Quali tipi di regressione esistono?",
-      "answer": "I tipi comuni includono: Regressione Lineare (un predittore), Regressione Multipla (predittori multipli), Regressione Polinomiale (relazioni curve), Regressione Logistica (risultati binari), Regressione Ridge (con regolarizzazione per prevenire l'overfitting), e Regressione Lasso (selezione delle variabili tramite regolarizzazione). Ogni tipo è adatto a diversi modelli di dati e domande di ricerca.",
-      "display": true
+      "answer": "I tipi comuni includono: regressione lineare (un predittore), regressione multipla (più predittori), regressione polinomiale (relazioni curve), regressione logistica (risultati binari), regressione Ridge (con regolarizzazione per evitare un adattamento eccessivo) e regressione lazo (selezione delle funzionalità tramite regolarizzazione). Ciascun tipo si adatta a modelli di dati e domande di ricerca diversi."
     },
     {
-      "question": "Posso usare questo calcolatore per la regressione multipla?",
-      "answer": "Attualmente, questo calcolatore supporta la regressione lineare semplice con una variabile indipendente (x) e una variabile dipendente (y). Per la regressione multipla con diversi predittori, sarebbe necessario utilizzare software statistico specializzato come R, Python (statsmodels), o SPSS. Potremmo aggiungere il supporto per la regressione multipla in un aggiornamento futuro.",
-      "display": false
+      "question": "Posso utilizzare questa calcolatrice per la regressione multipla?",
+      "answer": "Attualmente, questa calcolatrice supporta la regressione lineare semplice con una variabile indipendente (x) e una variabile dipendente (y). Per la regressione multipla con diversi predittori, sarebbe necessario utilizzare software statistico specializzato come R, Python (statsmodels) o SPSS. Potremmo aggiungere il supporto di regressione multipla in un aggiornamento futuro."
     }
   ]
 }

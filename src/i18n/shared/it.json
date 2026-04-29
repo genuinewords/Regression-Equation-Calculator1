@@ -1,29 +1,29 @@
 {
   "nav": {
-    "home": "Home",
-    "tools": "Strumenti",
-    "aboutUs": "Chi Siamo",
+    "home": "Casa",
+    "tools": "Utensili",
+    "expCalc": "Regressione esponenziale",
+    "lsrlCalc": "Linea dei minimi quadrati",
+    "rcCalc": "Curva di regressione",
+    "quadCalc": "Regressione quadratica",
+    "multiCalc": "Regressione multipla",
+    "pearsonCorrelation": "Calcolatrice Pearson r",
+    "grubbsTest": "Test di Grubbs",
+    "assumptionsChecker": "Controllo delle ipotesi",
+    "aboutUs": "Chi siamo",
     "blog": "Blog",
     "contactUs": "Contattaci",
     "terms": "Termini",
     "privacy": "Privacy",
-    "sitemap": "Mappa del Sito",
-    "pearsonCorrelation": "Calcolatore di Pearson r",
-    "grubbsTest": "Test di Grubbs",
-    "assumptionsChecker": "Verifica assunzioni",
-    "expCalc": "Exponential Regression",
-    "lsrlCalc": "Least Squares Line",
-    "rcCalc": "Regression Curve",
-    "quadCalc": "Calcolatore quadratico",
-    "multiCalc": "Calcolatore multiplo"
+    "sitemap": "Mappa del sito"
   },
   "footer": {
-    "description": "Calcolatore gratuito online di equazione di regressione con soluzioni passo dopo passo per studenti, ricercatori e professionisti.",
+    "description": "Calcolatore online gratuito di equazioni di regressione con soluzioni dettagliate per studenti, ricercatori e professionisti.",
     "copyright": "Tutti i diritti riservati."
   },
   "common": {
-    "learnMore": "Scopri di Più",
+    "learnMore": "Saperne di più",
     "previous": "Precedente",
-    "next": "Successivo"
+    "next": "Prossima"
   }
 }

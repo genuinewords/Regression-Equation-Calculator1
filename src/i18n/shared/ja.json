@@ -1,29 +1,29 @@
 {
   "nav": {
-    "home": "ホーム",
+    "home": "家",
     "tools": "ツール",
+    "expCalc": "指数回帰",
+    "lsrlCalc": "最小二乗線",
+    "rcCalc": "回帰曲線",
+    "quadCalc": "二次回帰",
+    "multiCalc": "重回帰",
+    "pearsonCorrelation": "ピアソンr計算機",
+    "grubbsTest": "グラブスのテスト",
+    "assumptionsChecker": "仮定チェッカー",
     "aboutUs": "私たちについて",
     "blog": "ブログ",
     "contactUs": "お問い合わせ",
-    "terms": "利用規約",
+    "terms": "条項",
     "privacy": "プライバシー",
-    "sitemap": "サイトマップ",
-    "pearsonCorrelation": "ピアソンのr計算機",
-    "grubbsTest": "グラブス検定",
-    "assumptionsChecker": "前提チェック",
-    "expCalc": "Exponential Regression",
-    "lsrlCalc": "Least Squares Line",
-    "rcCalc": "Regression Curve",
-    "quadCalc": "二次計算機",
-    "multiCalc": "重回帰計算機"
+    "sitemap": "サイトマップ"
   },
   "footer": {
-    "description": "学生、研究者、専門家のためのステップバイステップ解法付き無料オンライン回帰方程式計算機。",
-    "copyright": "全著作権所有。"
+    "description": "学生、研究者、専門家向けの段階的なソリューションを備えた無料のオンライン回帰方程式計算ツール。",
+    "copyright": "無断転載を禁じます。"
   },
   "common": {
-    "learnMore": "詳しく見る",
-    "previous": "前へ",
-    "next": "次へ"
+    "learnMore": "もっと詳しく知る",
+    "previous": "前の",
+    "next": "次"
   }
 }

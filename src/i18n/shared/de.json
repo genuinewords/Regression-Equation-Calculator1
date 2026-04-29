@@ -1,29 +1,29 @@
 {
   "nav": {
-    "home": "Startseite",
+    "home": "Heim",
     "tools": "Werkzeuge",
-    "aboutUs": "Über Uns",
-    "blog": "Blog",
-    "contactUs": "Kontakt",
-    "terms": "Bedingungen",
-    "privacy": "Datenschutz",
-    "sitemap": "Seitenübersicht",
-    "pearsonCorrelation": "Pearson-r-Rechner",
+    "expCalc": "Exponentielle Regression",
+    "lsrlCalc": "Linie der kleinsten Quadrate",
+    "rcCalc": "Regressionskurve",
+    "quadCalc": "Quadratische Regression",
+    "multiCalc": "Multiple Regression",
+    "pearsonCorrelation": "Pearson r-Rechner",
     "grubbsTest": "Grubbs-Test",
-    "assumptionsChecker": "Annahmenprüfung",
-    "expCalc": "Exponential Regression",
-    "lsrlCalc": "Least Squares Line",
-    "rcCalc": "Regression Curve",
-    "quadCalc": "Quadratischer Rechner",
-    "multiCalc": "Mehrfacher Rechner"
+    "assumptionsChecker": "Annahmen-Checker",
+    "aboutUs": "Über uns",
+    "blog": "Blog",
+    "contactUs": "Kontaktieren Sie uns",
+    "terms": "Bedingungen",
+    "privacy": "Privatsphäre",
+    "sitemap": "Sitemap"
   },
   "footer": {
     "description": "Kostenloser Online-Regressionsgleichungsrechner mit Schritt-für-Schritt-Lösungen für Studenten, Forscher und Fachleute.",
     "copyright": "Alle Rechte vorbehalten."
   },
   "common": {
-    "learnMore": "Mehr erfahren",
-    "previous": "Zurück",
-    "next": "Weiter"
+    "learnMore": "Erfahren Sie mehr",
+    "previous": "Vorherige",
+    "next": "Nächste"
   }
 }

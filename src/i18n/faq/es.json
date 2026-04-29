@@ -2,63 +2,51 @@
   "faqs": [
     {
       "question": "¿Qué es una ecuación de regresión?",
-      "answer": "Una ecuación de regresión es una fórmula matemática que describe la relación entre una variable dependiente y una o más variables independientes. En la regresión lineal simple, toma la forma y = mx + b, donde m es la pendiente (tasa de cambio) y b es la intersección con el eje y (valor cuando x = 0). La ecuación permite predecir el valor de la variable dependiente a partir de valores conocidos de la(s) variable(s) independiente(s).",
-      "display": true
+      "answer": "Una ecuación de regresión es una fórmula matemática que describe la relación entre una variable dependiente y una o más variables independientes. En regresión lineal simple, toma la forma y = mx + b, donde m es la pendiente (tasa de cambio) y b es la intersección con el eje y (valor cuando x = 0). La ecuación le permite predecir el valor de la variable dependiente basándose en valores conocidos de las variables independientes."
     },
     {
       "question": "¿Cómo se calcula una ecuación de regresión?",
-      "answer": "Para calcular una ecuación de regresión lineal, necesita: 1) Calcular las medias (promedios) de sus puntos de datos x e y, 2) Calcular la pendiente usando la fórmula m = Σ(xi - x̄)(yi - ȳ) / Σ(xi - x̄)², 3) Calcular la intersección usando b = ȳ - m·x̄. Nuestra calculadora realiza todos estos pasos automáticamente y le muestra el desarrollo detallado.",
-      "display": true
+      "answer": "Para calcular una ecuación de regresión lineal, necesita: 1) Calcular las medias (promedios) de los puntos de datos x e y, 2) Calcular la pendiente usando la fórmula m = Σ(xi - x̄)(yi - ȳ) / Σ(xi - x̄)², 3) Calcular la intersección usando b = ȳ - m·x̄. Nuestra calculadora realiza todos estos pasos automáticamente y le muestra el funcionamiento detallado."
     },
     {
-      "question": "¿Qué es R-cuadrado y cómo se interpreta?",
-      "answer": "R-cuadrado (R²) es una medida estadística que representa la proporción de la varianza en la variable dependiente que puede ser explicada por la variable independiente. Oscila entre 0 y 1: R² = 0 significa que el modelo no explica ninguna variabilidad; R² = 1 significa un ajuste perfecto. Generalmente, un R² superior a 0,7 indica una relación fuerte, entre 0,3 y 0,7 es moderada, e inferior a 0,3 es débil.",
-      "display": true
+      "question": "¿Qué es R cuadrado y cómo lo interpreto?",
+      "answer": "R cuadrado (R²) es una medida estadística que representa la proporción de varianza en la variable dependiente que puede explicarse por la variable independiente. Varía de 0 a 1: R² = 0 significa que el modelo no explica nada de la variabilidad; R² = 1 significa un ajuste perfecto. En general, un R² superior a 0,7 indica una relación fuerte, entre 0,3 y 0,7 es moderada y por debajo de 0,3 es débil."
     },
     {
-      "question": "¿Qué es el coeficiente de correlación?",
-      "answer": "El coeficiente de correlación (r) mide la fuerza y dirección de la relación lineal entre dos variables. Oscila entre -1 y +1: r = +1 significa una relación positiva perfecta, r = -1 significa una relación negativa perfecta, y r = 0 significa que no hay relación lineal. Cuanto más cerca esté r de ±1, más fuerte será la asociación lineal.",
-      "display": true
+      "question": "¿Cuál es el coeficiente de correlación?",
+      "answer": "El coeficiente de correlación (r) mide la fuerza y ​​la dirección de la relación lineal entre dos variables. Varía de -1 a +1: r = +1 significa una relación positiva perfecta, r = -1 significa una relación negativa perfecta y r = 0 significa que no hay relación lineal. Cuanto más cerca esté r de ±1, más fuerte será la asociación lineal."
     },
     {
       "question": "¿Cuál es la diferencia entre pendiente e intersección?",
-      "answer": "En la ecuación de regresión y = mx + b, la pendiente (m) indica cuánto cambia y por cada unidad de aumento en x. Una pendiente positiva significa que y aumenta a medida que x aumenta; una pendiente negativa significa que y disminuye. La intersección (b) es el valor predicho de y cuando x es igual a cero — es el punto donde la línea de regresión cruza el eje y.",
-      "display": true
+      "answer": "En la ecuación de regresión y = mx + b, la pendiente (m) indica cuánto cambia y por cada aumento unitario en x. Una pendiente positiva significa que y aumenta a medida que aumenta x; una pendiente negativa significa que y disminuye. La intersección (b) es el valor predicho de y cuando x es igual a cero; es el punto donde la línea de regresión cruza el eje y."
     },
     {
       "question": "¿Cuántos puntos de datos necesito para una regresión?",
-      "answer": "Como mínimo, necesita al menos 2 puntos de datos para calcular una ecuación de regresión lineal simple. Sin embargo, para obtener resultados significativos y confiables, se recomienda tener al menos 10–15 puntos de datos. Cuantos más puntos de datos tenga, más confiable y estadísticamente significativo será su modelo de regresión.",
-      "display": true
+      "answer": "Como mínimo, necesita al menos 2 puntos de datos para calcular una ecuación de regresión lineal simple. Sin embargo, para obtener resultados significativos y confiables, se recomienda tener al menos entre 10 y 15 puntos de datos. Cuantos más puntos de datos tenga, más confiable y estadísticamente significativo será su modelo de regresión."
     },
     {
-      "question": "¿Qué es el error estándar de la regresión?",
-      "answer": "El error estándar (EE) de la regresión mide la distancia promedio a la que los puntos de datos observados se encuentran respecto a la línea de regresión. Un EE menor indica que los puntos de datos están más cerca de la línea ajustada, lo que significa que las predicciones del modelo son más precisas. Es esencialmente una medida de la precisión del modelo.",
-      "display": true
+      "question": "¿Cuál es el error estándar de la regresión?",
+      "answer": "El error estándar (SE) de la regresión mide la distancia promedio a la que caen los puntos de datos observados desde la línea de regresión. Un SE más pequeño indica que los puntos de datos están más cerca de la línea ajustada, lo que significa que las predicciones del modelo son más precisas. Es esencialmente una medida de la precisión del modelo."
     },
     {
-      "question": "¿Cuándo debo usar regresión lineal?",
-      "answer": "Use regresión lineal cuando desee modelar la relación entre una variable dependiente continua y una o más variables independientes, y cuando la relación parezca ser aproximadamente lineal. Aplicaciones comunes incluyen predecir ventas a partir del gasto en publicidad, estimar precios de viviendas a partir de los metros cuadrados, o analizar el efecto del tiempo de estudio en las calificaciones de los exámenes.",
-      "display": true
+      "question": "¿Cuándo debo utilizar la regresión lineal?",
+      "answer": "Utilice la regresión lineal cuando desee modelar la relación entre una variable dependiente continua y una o más variables independientes, y cuando la relación parezca aproximadamente lineal. Las aplicaciones comunes incluyen predecir las ventas a partir del gasto en publicidad, estimar los precios de la vivienda a partir de metros cuadrados o analizar el efecto del tiempo de estudio en los puntajes de las pruebas."
     },
     {
       "question": "¿Cuáles son los supuestos de la regresión lineal?",
-      "answer": "La regresión lineal supone: 1) Linealidad — la relación entre las variables es lineal, 2) Independencia — las observaciones son independientes entre sí, 3) Homocedasticidad — los residuos tienen varianza constante, 4) Normalidad — los residuos se distribuyen normalmente, 5) No multicolinealidad — las variables independientes no están altamente correlacionadas (para regresión múltiple). Violar estos supuestos puede llevar a resultados poco confiables.",
-      "display": true
+      "answer": "La regresión lineal supone: 1) Linealidad: la relación entre variables es lineal, 2) Independencia: las observaciones son independientes entre sí, 3) Homoscedasticidad: los residuos tienen una varianza constante, 4) Normalidad: los residuos se distribuyen normalmente, 5) Sin multicolinealidad: las variables independientes no están altamente correlacionadas (para regresión múltiple). La violación de estos supuestos puede conducir a resultados poco fiables."
     },
     {
       "question": "¿Cuál es la diferencia entre correlación y regresión?",
-      "answer": "La correlación mide la fuerza y dirección de la relación entre dos variables (oscila entre -1 y +1) sin implicar causalidad. La regresión va más allá ajustando una línea a los datos y proporcionando una ecuación (y = mx + b) que puede predecir una variable a partir de otra. Mientras que la correlación es simétrica (r_xy = r_yx), la regresión no lo es — predecir y a partir de x da resultados diferentes a predecir x a partir de y.",
-      "display": true
+      "answer": "La correlación mide la fuerza y ​​la dirección de la relación entre dos variables (que van de -1 a +1) sin implicar causalidad. La regresión va más allá al ajustar una línea a los datos y proporcionar una ecuación (y = mx + b) que puede predecir una variable a partir de otra. Si bien la correlación es simétrica (r_xy = r_yx), la regresión no lo es: predecir y a partir de x da resultados diferentes que predecir x a partir de y."
     },
     {
       "question": "¿Qué tipos de regresión existen?",
-      "answer": "Los tipos comunes incluyen: Regresión lineal (un predictor), Regresión múltiple (múltiples predictores), Regresión polinómica (relaciones curvas), Regresión logística (resultados binarios), Regresión ridge (con regularización para evitar el sobreajuste) y Regresión lasso (selección de variables mediante regularización). Cada tipo se adapta a diferentes patrones de datos y preguntas de investigación.",
-      "display": true
+      "answer": "Los tipos comunes incluyen: regresión lineal (un predictor), regresión múltiple (múltiples predictores), regresión polinómica (relaciones curvas), regresión logística (resultados binarios), regresión de cresta (con regularización para evitar el sobreajuste) y regresión de lazo (selección de funciones mediante regularización). Cada tipo se adapta a diferentes patrones de datos y preguntas de investigación."
     },
     {
       "question": "¿Puedo usar esta calculadora para regresión múltiple?",
-      "answer": "Actualmente, esta calculadora solo admite regresión lineal simple con una variable independiente (x) y una variable dependiente (y). Para regresión múltiple con varios predictores, necesitaría usar software estadístico especializado como R, Python (statsmodels) o SPSS. Podríamos agregar soporte para regresión múltiple en una futura actualización.",
-      "display": false
+      "answer": "Actualmente, esta calculadora admite regresión lineal simple con una variable independiente (x) y una variable dependiente (y). Para una regresión múltiple con varios predictores, necesitará utilizar software estadístico especializado como R, Python (statsmodels) o SPSS. Es posible que agreguemos soporte de regresión múltiple en una actualización futura."
     }
   ]
 }

@@ -1,29 +1,29 @@
 {
   "nav": {
-    "home": "Strona Główna",
+    "home": "Dom",
     "tools": "Narzędzia",
-    "aboutUs": "O Nas",
-    "blog": "Blog",
-    "contactUs": "Kontakt",
+    "expCalc": "Regresja wykładnicza",
+    "lsrlCalc": "Linia najmniejszych kwadratów",
+    "rcCalc": "Krzywa regresji",
+    "quadCalc": "Regresja kwadratowa",
+    "multiCalc": "Regresja wielokrotna",
+    "pearsonCorrelation": "Kalkulator Pearsona",
+    "grubbsTest": "Próba Grubbsa",
+    "assumptionsChecker": "Kontroler założeń",
+    "aboutUs": "O nas",
+    "blog": "Bloga",
+    "contactUs": "Skontaktuj się z nami",
     "terms": "Warunki",
     "privacy": "Prywatność",
-    "sitemap": "Mapa Strony",
-    "pearsonCorrelation": "Kalkulator Pearsona r",
-    "grubbsTest": "Test Grubbsa",
-    "assumptionsChecker": "Sprawdzanie założeń",
-    "expCalc": "Exponential Regression",
-    "lsrlCalc": "Least Squares Line",
-    "rcCalc": "Regression Curve",
-    "quadCalc": "Kalkulator kwadratowy",
-    "multiCalc": "Kalkulator wielokrotny"
+    "sitemap": "Mapa witryny"
   },
   "footer": {
-    "description": "Darmowy kalkulator równania regresji online z rozwiązaniami krok po kroku dla studentów, badaczy i profesjonalistów.",
+    "description": "Bezpłatny kalkulator równań regresji online zawierający rozwiązania krok po kroku dla studentów, badaczy i profesjonalistów.",
     "copyright": "Wszelkie prawa zastrzeżone."
   },
   "common": {
-    "learnMore": "Dowiedz się Więcej",
-    "previous": "Poprzednia",
-    "next": "Następna"
+    "learnMore": "Dowiedz się więcej",
+    "previous": "Poprzedni",
+    "next": "Następny"
   }
 }

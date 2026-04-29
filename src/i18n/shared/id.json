@@ -1,29 +1,29 @@
 {
   "nav": {
-    "home": "Beranda",
-    "tools": "Alat",
-    "aboutUs": "Tentang Kami",
-    "blog": "Blog",
-    "contactUs": "Hubungi Kami",
-    "terms": "Ketentuan",
-    "privacy": "Privasi",
-    "sitemap": "Peta Situs",
+    "home": "Rumah",
+    "tools": "Peralatan",
+    "expCalc": "Regresi Eksponensial",
+    "lsrlCalc": "Garis Kuadrat Terkecil",
+    "rcCalc": "Kurva Regresi",
+    "quadCalc": "Regresi Kuadrat",
+    "multiCalc": "Regresi Berganda",
     "pearsonCorrelation": "Kalkulator Pearson r",
-    "grubbsTest": "Uji Grubbs",
-    "assumptionsChecker": "Pemeriksa asumsi",
-    "expCalc": "Exponential Regression",
-    "lsrlCalc": "Least Squares Line",
-    "rcCalc": "Regression Curve",
-    "quadCalc": "Kalkulator kuadratik",
-    "multiCalc": "Kalkulator berganda"
+    "grubbsTest": "Tes Grubbs",
+    "assumptionsChecker": "Pemeriksa Asumsi",
+    "aboutUs": "Tentang Kami",
+    "blog": "blog",
+    "contactUs": "Hubungi kami",
+    "terms": "Ketentuan",
+    "privacy": "Pribadi",
+    "sitemap": "Peta Situs"
   },
   "footer": {
     "description": "Kalkulator persamaan regresi online gratis dengan solusi langkah demi langkah untuk pelajar, peneliti, dan profesional.",
-    "copyright": "Hak cipta dilindungi."
+    "copyright": "Semua hak dilindungi undang-undang."
   },
   "common": {
     "learnMore": "Pelajari Lebih Lanjut",
     "previous": "Sebelumnya",
-    "next": "Selanjutnya"
+    "next": "Berikutnya"
   }
 }

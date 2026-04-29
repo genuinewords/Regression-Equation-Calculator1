@@ -23,13 +23,17 @@
       "Meramalkan perubahan suhu dari semasa ke semasa",
       "Menilai hubungan antara dos dan tindak balas"
     ],
-    "howItWorksTitle": "Cara Kalkulator Persamaan Regresi Berfungsi",
-    "howItWorksStep1Title": "Masukkan Data",
-    "howItWorksStep1": "Masukkan titik data x dan y anda dalam jadual di bawah",
-    "howItWorksStep2Title": "Kira",
-    "howItWorksStep2": "Klik Kira untuk mengira persamaan regresi",
-    "howItWorksStep3Title": "Lihat Keputusan",
-    "howItWorksStep3": "Lihat hasil anda termasuk persamaan, cerun, pintasan dan nilai R²",
+    "howItWorksTitle": "Bagaimana Ia Berfungsi",
+    "howItWorksStep1Title": "Pilih Model Regresi",
+    "howItWorksStep1": "Pilih daripada regresi Linear, Polinomial, Eksponen atau Logaritma untuk memadankan corak perhubungan data anda.",
+    "howItWorksStep2Title": "Masukkan Mata Data",
+    "howItWorksStep2": "Tambahkan pasangan data X dan Y anda dalam jadual. Tetapkan tahap keyakinan anda (%) dan secara pilihan masukkan nilai ramalan X untuk ramalan.",
+    "howItWorksStep3Title": "Kira & Visualisasikan",
+    "howItWorksStep3": "Klik Kira untuk menjana segera persamaan regresi, nilai kuasa dua R dan plot serakan interaktif dengan garis regresi yang dipasang.",
+    "howItWorksStep4Title": "Semak Diagnostik",
+    "howItWorksStep4": "Periksa jadual statistik regresi — ralat piawai, saiz sampel, darjah kebebasan dan tahap keyakinan — untuk menilai kebolehpercayaan model.",
+    "howItWorksStep5Title": "Ramal & Ramalan",
+    "howItWorksStep5": "Gunakan input ramalan X untuk menganggarkan Y pada sebarang titik, dengan selang keyakinan berdasarkan tahap keyakinan pilihan anda.",
     "tableTitle": "Rujukan Statistik Regresi",
     "tableDescription": "Statistik regresi biasa dan tafsirannya",
     "tableStat": "Statistik",
@@ -64,7 +68,7 @@
     "values": "Nilai Kami",
     "valuesText": "Privasi dahulu — semua pengiraan dijalankan dalam penyemak imbas anda, tiada apa-apa dihantar ke mana-mana pelayan. Pendidikan tertumpu — setiap keputusan termasuk penjelasan langkah demi langkah supaya anda mempelajari matematik, bukan hanya jawapannya. Sentiasa percuma — tiada pendaftaran, tiada paywall, tiada had.",
     "team": "Pasukan Kami",
-    "teamText": "Kami adalah sekumpulan kecil ahli perangkaan, pendidik dan pembangun yang bersemangat untuk membuat analisis data dapat difahami. Jika anda mempunyai cadangan atau ingin menyumbang, hubungi kami melalui halaman hubungan kami."
+    "teamText": "Kami adalah sekumpulan kecil ahli perangkaan, pendidik dan pembangun yang bersemangat untuk membuat analisis data dapat difahami. Jika anda mempunyai cadangan atau ingin menyumbang, hubungi melalui halaman hubungan kami."
   },
   "contact": {
     "title": "Hubungi Kami – Dapatkan Sokongan Sekarang",
@@ -132,7 +136,7 @@
     "value": "Nilai",
     "interpretation": "Tafsiran",
     "standardError": "Ralat Standard",
-    "standardErrorInt": "Lebih rendah adalah lebih baik",
+    "standardErrorInt": "Lebih rendah lebih baik",
     "sampleSize": "Saiz Sampel",
     "sampleSizeInt": "Bilangan titik data",
     "degreesOfFreedom": "Darjah Kebebasan",
@@ -142,7 +146,10 @@
     "noPrediction": "—",
     "modelYear": "Tahun Model",
     "modelYearHint": "Contoh: 2024, 2025, 2026 atau mana-mana tahun tersuai",
-    "noteText": "Keputusan dikira menggunakan piawaian statistik antarabangsa yang digunakan di Amerika Syarikat, Eropah, Asia dan seluruh dunia."
+    "noteText": "Keputusan dikira menggunakan piawaian statistik antarabangsa yang digunakan di Amerika Syarikat, Eropah, Asia dan seluruh dunia.",
+    "dataPoints": "Titik Data (X, Y)",
+    "step": "Langkah",
+    "means": "Bermakna"
   },
   "pearson": {
     "title": "Kalkulator Korelasi Pearson",
@@ -390,7 +397,7 @@
     "assumptionsPoints": [
       "Data datang daripada populasi taburan normal",
       "Hanya satu outlier mungkin hadir (uji satu demi satu)",
-      "Ujian digunakan pada pembolehubah tunggal (univariate)",
+      "Ujian digunakan untuk pembolehubah tunggal (univariate)",
       "Saiz sampel hendaklah sekurang-kurangnya 3"
     ],
     "formulaTitle": "Kalkulator Formula Ujian Grubbs Menjelaskan",
@@ -411,7 +418,7 @@
       "<strong>Hitung sisihan piawai sampel:</strong> Kira s = √[Σ(xᵢ − x̄)² / (n − 1)], menggunakan n − 1 sebagai pembahagi (pembetulan Bessel) untuk mendapatkan anggaran tidak berat sebelah bagi sisihan piawai populasi. Seperti min, s juga dinaikkan dengan kehadiran outlier, yang menjadikan ujian agak konservatif.",
       "<strong>Cari sisihan mutlak terbesar:</strong> Kenal pasti maks|xᵢ − x̄| — titik data yang jarak mutlaknya dari min adalah paling besar. Perkara ini adalah outlier yang disyaki. Dalam ujian dua hujung, ia boleh sama ada nilai maksimum atau minimum dalam set data.",
       "<strong>Kira statistik G:</strong> Bahagikan sisihan mutlak terbesar dengan sisihan piawai: G = max|xᵢ − x̄| / s. G yang lebih besar menunjukkan pemerhatian yang lebih melampau berbanding sebaran keseluruhan data.",
-      "<strong>Bandingkan dengan nilai kritikal dan putuskan:</strong> Cari atau kira nilai kritikal G<sub>crit</sub> berdasarkan n dan α. Jika G> G<sub>crit</sub>, tolak H₀ dan isytiharkan titik ekstrem sebagai outlier statistik. Jika G ≤ G<sub>crit</sub>, tiada bukti yang mencukupi untuk membuat kesimpulan bahawa outlier wujud pada aras keertian yang dipilih."
+      "<strong>Bandingkan dengan nilai kritikal dan putuskan:</strong> Cari atau kira nilai kritikal G<sub>crit</sub> berdasarkan n dan α. Jika G> G<sub>crit</sub>, tolak H₀ dan isytiharkan titik ekstrem sebagai outlier statistik. Jika G ≤ G<sub>crit</sub>, tiada bukti yang mencukupi untuk membuat kesimpulan bahawa outlier wujud pada tahap kepentingan yang dipilih."
     ],
     "calcStepsTitle": "Langkah Kalkulator Ujian Grubbs",
     "calcStepsIntro": "Menggunakan kalkulator ujian Grubbs kami melibatkan langkah terperinci ini untuk memastikan pengesanan outlier yang tepat dan bermakna:",
@@ -635,7 +642,7 @@
     "faqs": [
       {
         "q": "Apakah andaian OLS untuk regresi linear?",
-        "a": "<p>📊 Empat andaian OLS (Ordinary Least Squares), juga dipanggil <strong>syarat Gauss-Markov</strong>, ialah: (1) <strong>Kelinearan</strong> — hubungan antara X dan Y adalah linear; (2) <strong>Kemerdekaan</strong> — sisa tidak berkorelasi antara satu sama lain; (3) <strong>Homoskedastisitas</strong> — varians sisa adalah malar merentas semua nilai yang dipasang; (4) <strong>Kenormalan</strong> — sisa mengikut taburan normal. Apabila keempat-empatnya berpuas hati, penganggar OLS ialah penganggar tidak bias linear terbaik (BIRU), bermakna ia mempunyai varians terkecil antara semua penganggar linear tidak berat sebelah.</p>"
+        "a": "<p>📊 Empat andaian OLS (Ordinary Least Squares), juga dipanggil <strong>syarat Gauss-Markov</strong>, ialah: (1) <strong>Kelinearan</strong> — hubungan antara X dan Y adalah linear; (2) <strong>Kemerdekaan</strong> — sisa tidak berkorelasi antara satu sama lain; (3) <strong>Homoskedastisitas</strong> — varians baki adalah malar merentas semua nilai yang dipasang; (4) <strong>Kenormalan</strong> — sisa mengikut taburan normal. Apabila keempat-empatnya berpuas hati, penganggar OLS ialah penganggar tidak bias linear terbaik (BIRU), bermakna ia mempunyai varians terkecil antara semua penganggar linear tidak berat sebelah.</p>"
       },
       {
         "q": "Apakah yang berlaku jika saya mengabaikan pelanggaran andaian?",
@@ -1226,7 +1233,7 @@
         "a": "<p>📊 Ralat piawai baki (juga dikenali sebagai <strong>ralat piawai anggaran</strong> atau <strong>ralat min kuasa dua akar</strong>) mengukur jarak purata nilai yang diperhatikan jatuh daripada garis regresi.</p><p>📊 Ia dikira sebagai <strong>s = √(SSres / (n − 2)) kuasa dua. − 2 ialah darjah kebebasan. Ralat standard baki yang lebih kecil menunjukkan kesesuaian yang lebih ketat. Kira-kira 95% daripada titik data harus berada dalam ±2s daripada garis regresi jika sisa diedarkan secara normal.</p>"
       },
       {
-        "q": "Bagaimanakah saya mentafsirkan cerun?",
+        "q": "Bagaimanakah saya mentafsir cerun?",
         "a": "<p>📐 Cerun <strong>m</strong> memberitahu anda <strong>perubahan yang dijangkakan dalam Y untuk peningkatan satu unit dalam X</strong>. Contohnya, jika m = 2.5, maka Y diramalkan meningkat sebanyak 2.5 unit setiap kali X naik sebanyak 1.</p><p>📐 <strong>cerun positif</strong> menunjukkan arah aliran meningkat, <strong>cerun negatif</strong> menunjukkan arah aliran menurun dan cerun berhampiran sifar menunjukkan tiada hubungan linear. Sentiasa pertimbangkan konteks: cerun 0.01 dalam dolar mungkin remeh, tetapi cerun 0.01 dalam kadar jangkitan mungkin penting.</p>"
       },
       {
@@ -1385,7 +1392,7 @@
     "faqTitle": "Soalan Lazim",
     "faqs": [
       {
-        "q": "Apakah Kalkulator Keluk Regresi?",
+        "q": "Apakah Kalkulator Lengkung Regresi?",
         "a": "<p>📐 Kalkulator lengkung regresi ialah alat yang sesuai dengan <strong>model regresi berbilang</strong> pada data anda secara serentak dan membandingkan kebaikan kesesuaiannya menggunakan R². Tidak seperti kalkulator model tunggal yang hanya mengira satu jenis persamaan, kalkulator lengkung regresi menjalankan regresi linear, kuadratik, eksponen dan logaritma pada masa yang sama dan menyusun keputusan supaya anda boleh mengenal pasti lengkung paling sesuai dengan segera. Ini menghapuskan keperluan untuk menguji setiap model secara berasingan dan mengalih keluar tekaan daripada pemilihan model.</p>"
       },
       {
@@ -2042,5 +2049,21 @@
   "sitemap": {
     "title": "Peta laman",
     "description": "Terokai peta tapak Kalkulator Persamaan Regresi yang lengkap. Cari semua alatan statistik, kalkulator, catatan blog dan sumber matematik pendidikan kami."
+  },
+  "common": {
+    "menu": "Menu",
+    "close": "tutup",
+    "loading": "Memuatkan...",
+    "error": "ralat",
+    "selectLanguage": "Pilih bahasa",
+    "availableLanguages": "Bahasa yang tersedia"
+  },
+  "footer": {
+    "description": "Kalkulator persamaan regresi dalam talian percuma. Kira persamaan linear, polinomial dan regresi berbilang serta-merta dengan penyelesaian langkah demi langkah.",
+    "toolsTitle": "Alat & Halaman",
+    "companyTitle": "Syarikat",
+    "connectTitle": "Sambung",
+    "languageTitle": "Bahasa",
+    "copyright": "Semua hak terpelihara."
   }
 }

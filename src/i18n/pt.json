@@ -23,13 +23,17 @@
       "Previsão de mudanças de temperatura ao longo do tempo",
       "Avaliando a relação entre dosagem e resposta"
     ],
-    "howItWorksTitle": "Como funciona a calculadora de equações de regressão",
-    "howItWorksStep1Title": "Insira os dados",
-    "howItWorksStep1": "Insira seus pontos de dados x e y na tabela abaixo",
-    "howItWorksStep2Title": "Calcular",
-    "howItWorksStep2": "Clique em Calcular para calcular a equação de regressão",
-    "howItWorksStep3Title": "Ver resultados",
-    "howItWorksStep3": "Veja seus resultados, incluindo equação, inclinação, interceptação e valor R²",
+    "howItWorksTitle": "Como funciona",
+    "howItWorksStep1Title": "Escolha o modelo de regressão",
+    "howItWorksStep1": "Selecione entre regressão linear, polinomial, exponencial ou logarítmica para corresponder ao padrão de relacionamento dos seus dados.",
+    "howItWorksStep2Title": "Insira pontos de dados",
+    "howItWorksStep2": "Adicione seus pares de dados X e Y na tabela. Defina seu nível de confiança (%) e, opcionalmente, insira um valor X de previsão para previsão.",
+    "howItWorksStep3Title": "Calcular e visualizar",
+    "howItWorksStep3": "Clique em Calcular para gerar instantaneamente a equação de regressão, o valor de R ao quadrado e um gráfico de dispersão interativo com a linha de regressão ajustada.",
+    "howItWorksStep4Title": "Revise o diagnóstico",
+    "howItWorksStep4": "Examine a tabela de estatísticas de regressão — erro padrão, tamanho da amostra, graus de liberdade e nível de confiança — para avaliar a confiabilidade do modelo.",
+    "howItWorksStep5Title": "Prever e prever",
+    "howItWorksStep5": "Use a entrada de previsão X para estimar Y em qualquer ponto, com intervalos de confiança baseados no nível de confiança escolhido.",
     "tableTitle": "Referência de estatísticas de regressão",
     "tableDescription": "Estatísticas de regressão comuns e suas interpretações",
     "tableStat": "Estatística",
@@ -61,7 +65,7 @@
     "content": "A Calculadora de Equações de Regressão é uma ferramenta online gratuita projetada para ajudar estudantes, pesquisadores e profissionais a calcular equações de regressão com rapidez e precisão. Nossa calculadora suporta regressão linear e fornece soluções detalhadas passo a passo para ajudá-lo a compreender o processo matemático por trás dos resultados. Esteja você estudando estatística, analisando dados ou trabalhando em pesquisas, nossa ferramenta torna a análise de regressão acessível a todos.",
     "mission": "Nossa Missão",
     "missionText": "Tornar a análise de regressão acessível a todos — desde estudantes que estão aprendendo estatística pela primeira vez até profissionais que precisam de resultados rápidos e confiáveis. Acreditamos que ferramentas estatísticas poderosas devem ser gratuitas, privadas e fáceis de usar.",
-    "values": "Nossos Valores",
+    "values": "Nossos valores",
     "valuesText": "Privacidade em primeiro lugar – todos os cálculos são executados no seu navegador, nada é enviado para nenhum servidor. Focado na educação — cada resultado inclui explicações passo a passo para que você aprenda a matemática, não apenas a resposta. Sempre gratuito – sem inscrição, sem acesso pago, sem limites.",
     "team": "Nossa equipe",
     "teamText": "Somos uma pequena equipe de estatísticos, educadores e desenvolvedores apaixonados por tornar a análise de dados compreensível. Se você tiver sugestões ou quiser contribuir, entre em contato através da nossa página de contato."
@@ -142,7 +146,10 @@
     "noPrediction": "-",
     "modelYear": "Ano modelo",
     "modelYearHint": "Exemplo: 2024, 2025, 2026 ou qualquer ano personalizado",
-    "noteText": "Resultados calculados utilizando padrões estatísticos internacionais aplicáveis ​​nos EUA, Europa, Ásia e em todo o mundo."
+    "noteText": "Resultados calculados utilizando padrões estatísticos internacionais aplicáveis ​​nos EUA, Europa, Ásia e em todo o mundo.",
+    "dataPoints": "Pontos de dados (X, Y)",
+    "step": "Etapa",
+    "means": "Significa"
   },
   "pearson": {
     "title": "Calculadora de Correlação de Pearson",
@@ -290,7 +297,7 @@
       },
       {
         "q": "Qual é a diferença entre correlação e regressão?",
-        "a": "<p>📐 <strong>Correlação</strong> mede a força e a direção da <em>associação</em> linear entre duas variáveis, produzindo um único número r entre −1 e +1. <strong>A regressão</strong> vai além ao ajustar uma <em>equação preditiva</em> ŷ = mx + b que permite estimar Y a partir de X. A correlação é simétrica (r(X,Y) = r(Y,X)), enquanto a regressão não o é (regredir Y sobre X fornece resultados diferentes da regressão de X sobre Y, a menos que r = 1).</p><p>📐 A inclinação da linha de regressão está relacionada a r pela fórmula <strong>m = r · (sy / sx)</strong>. Use <a href=\"/pearson-correlation-calculator/\">nossa calculadora Pearson</a> quando precisar apenas medir a associação; use uma <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 hover:underline\">calculadora de regressão</a> quando precisar prever Y a partir de X. Na prática, as duas análises se complementam – calcule r primeiro para verificar se existe uma associação linear significativa e, em seguida, crie um modelo de regressão se a previsão for seu objetivo.</p>"
+        "a": "<p>📐 <strong>Correlação</strong> mede a força e a direção da <em>associação</em> linear entre duas variáveis, produzindo um único número r entre −1 e +1. <strong>A regressão</strong> vai além ao ajustar uma <em>equação preditiva</em> ŷ = mx + b que permite estimar Y a partir de X. A correlação é simétrica (r(X,Y) = r(Y,X)), enquanto a regressão não o é (regredir Y sobre X fornece resultados diferentes da regressão de X sobre Y, a menos que r = 1).</p><p>📐 A inclinação da linha de regressão está relacionada a r pela fórmula <strong>m = r · (sy / sx)</strong>. Use <a href=\"/pearson-correlation-calculator/\">nossa calculadora Pearson</a> quando precisar apenas medir associação; use uma <a href=\"/least-squares-regression-line-calculator/\" class=\"text-primary-600 dark:text-primary-400 hover:underline\">calculadora de regressão</a> quando precisar prever Y a partir de X. Na prática, as duas análises se complementam – calcule r primeiro para verificar se existe uma associação linear significativa e, em seguida, crie um modelo de regressão se a previsão for seu objetivo.</p>"
       },
       {
         "q": "Como faço para relatar os resultados da correlação de Pearson?",
@@ -2042,5 +2049,21 @@
   "sitemap": {
     "title": "Mapa do site",
     "description": "Explore o mapa completo do site da Calculadora de Equações de Regressão. Encontre todas as nossas ferramentas estatísticas, calculadoras, postagens em blogs e recursos educacionais de matemática."
+  },
+  "common": {
+    "menu": "Menu",
+    "close": "Fechar",
+    "loading": "Carregando...",
+    "error": "Erro",
+    "selectLanguage": "Selecione o idioma",
+    "availableLanguages": "Idiomas disponíveis"
+  },
+  "footer": {
+    "description": "Calculadora de equação de regressão online gratuita. Calcule equações de regressão linear, polinomial e múltipla instantaneamente com soluções passo a passo.",
+    "toolsTitle": "Ferramentas e páginas",
+    "companyTitle": "Empresa",
+    "connectTitle": "Conectar",
+    "languageTitle": "Linguagem",
+    "copyright": "Todos os direitos reservados."
   }
 }

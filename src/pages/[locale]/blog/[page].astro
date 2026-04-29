@@ -41,7 +41,7 @@ const resultsMeta = translations.blog?.resultsMeta
   ?.replace('{start}', String(startIndex))
   .replace('{end}', String(endIndex))
   .replace('{total}', String(totalItems))
-  ?? `Showing ${startIndex}-${endIndex} of ${totalItems} articles`;
+  ?? `${translations.common.showing} ${startIndex}-${endIndex} ${translations.common.of} ${totalItems} ${translations.blog.articles}`;
 
 const blogSchema = {
   '@context': 'https://schema.org',
@@ -65,7 +65,7 @@ const itemListSchema = {
   }),
 };
 
-const pageTitle = page.currentPage > 1 ? `${translations.blog?.title ?? 'Blog'} — Page ${page.currentPage} (${locale.toUpperCase()})` : `${translations.blog?.title ?? 'Blog'} (${locale.toUpperCase()})`;
+const pageTitle = page.currentPage > 1 ? `${translations.blog?.title ?? 'Blog'} — ${translations.common.page} ${page.currentPage} (${locale.toUpperCase()})` : `${translations.blog?.title ?? 'Blog'} (${locale.toUpperCase()})`;
 ---
 
 <BaseLayout
@@ -107,6 +107,7 @@ const pageTitle = page.currentPage > 1 ? `${translations.blog?.title ?? 'Blog'} 
             basePath={`/${locale}/blog/`}
             prevLabel={translations.common?.previous ?? 'Previous'}
             nextLabel={translations.common?.next ?? 'Next'}
+            pageLabel={translations.common?.page ?? 'Page'}
           />
         </div>
       )}

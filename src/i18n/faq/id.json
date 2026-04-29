@@ -2,63 +2,51 @@
   "faqs": [
     {
       "question": "Apa itu persamaan regresi?",
-      "answer": "Persamaan regresi adalah rumus matematika yang menggambarkan hubungan antara variabel dependen dan satu atau lebih variabel independen. Dalam regresi linear sederhana, rumusnya berbentuk y = mx + b, di mana m adalah kemiringan (laju perubahan) dan b adalah intersep-y (nilai ketika x = 0). Persamaan ini memungkinkan Anda memprediksi nilai variabel dependen berdasarkan nilai variabel independen yang diketahui.",
-      "display": true
+      "answer": "Persamaan regresi adalah rumus matematika yang menggambarkan hubungan antara suatu variabel terikat dengan satu atau lebih variabel bebas. Dalam regresi linier sederhana berbentuk y = mx + b, dengan m adalah kemiringan (laju perubahan) dan b adalah titik potong y (nilai ketika x = 0). Persamaan ini memungkinkan Anda memprediksi nilai variabel terikat berdasarkan nilai variabel bebas yang diketahui."
     },
     {
       "question": "Bagaimana cara menghitung persamaan regresi?",
-      "answer": "Untuk menghitung persamaan regresi linear, Anda perlu: 1) Menghitung rata-rata (mean) titik data x dan y Anda, 2) Menghitung kemiringan menggunakan rumus m = Σ(xi - x̄)(yi - ȳ) / Σ(xi - x̄)², 3) Menghitung intersep menggunakan b = ȳ - m·x̄. Kalkulator kami melakukan semua langkah ini secara otomatis dan menunjukkan perhitungan rinci kepada Anda.",
-      "display": true
+      "answer": "Untuk menghitung persamaan regresi linier, Anda perlu: 1) Menghitung rata-rata (rata-rata) titik data x dan y, 2) Menghitung kemiringan menggunakan rumus m = Σ(xi - x̄)(yi - ȳ) / Σ(xi - x̄)², 3) Menghitung titik potong menggunakan b = ȳ - m·x̄. Kalkulator kami melakukan semua langkah ini secara otomatis dan menunjukkan detail kerjanya."
     },
     {
-      "question": "Apa itu R-kuadrat dan bagaimana cara menginterpretasikannya?",
-      "answer": "R-kuadrat (R²) adalah ukuran statistik yang merepresentasikan proporsi varians dalam variabel dependen yang dapat dijelaskan oleh variabel independen. Rentangnya dari 0 hingga 1: R² = 0 berarti model tidak menjelaskan variabilitas apa pun; R² = 1 berarti kesesuaian sempurna. Umumnya, R² di atas 0,7 menunjukkan hubungan yang kuat, 0,3–0,7 sedang, dan di bawah 0,3 lemah.",
-      "display": true
+      "question": "Apa itu R-squared dan bagaimana cara menafsirkannya?",
+      "answer": "R-squared (R²) merupakan ukuran statistik yang merepresentasikan proporsi varians variabel dependen yang dapat dijelaskan oleh variabel independen. Berkisar dari 0 hingga 1: R² = 0 berarti model tidak menjelaskan variabilitas apa pun; R² = 1 berarti sangat cocok. Secara umum, R² di atas 0,7 menunjukkan hubungan yang kuat, 0,3–0,7 berarti sedang, dan di bawah 0,3 berarti lemah."
     },
     {
-      "question": "Apa itu koefisien korelasi?",
-      "answer": "Koefisien korelasi (r) mengukur kekuatan dan arah hubungan linear antara dua variabel. Rentangnya dari -1 hingga +1: r = +1 berarti hubungan positif sempurna, r = -1 berarti hubungan negatif sempurna, dan r = 0 berarti tidak ada hubungan linear. Semakin dekat r dengan ±1, semakin kuat asosiasi linear tersebut.",
-      "display": true
+      "question": "Berapa koefisien korelasinya?",
+      "answer": "Koefisien korelasi (r) mengukur kekuatan dan arah hubungan linier antara dua variabel. Berkisar antara -1 hingga +1: r = +1 berarti hubungan positif sempurna, r = -1 berarti hubungan negatif sempurna, dan r = 0 berarti tidak ada hubungan linier. Semakin dekat r ke ±1, semakin kuat hubungan liniernya."
     },
     {
-      "question": "Apa perbedaan antara kemiringan dan intersep?",
-      "answer": "Dalam persamaan regresi y = mx + b, kemiringan (m) memberi tahu Anda berapa banyak perubahan y untuk setiap kenaikan satu unit x. Kemiringan positif berarti y meningkat saat x meningkat; kemiringan negatif berarti y menurun. Intersep (b) adalah nilai prediksi y ketika x sama dengan nol — yaitu titik di mana garis regresi memotong sumbu-y.",
-      "display": true
+      "question": "Apa perbedaan antara kemiringan dan titik potong?",
+      "answer": "Dalam persamaan regresi y = mx + b, kemiringan (m) menunjukkan berapa banyak perubahan y untuk setiap kenaikan satuan x. Kemiringan positif berarti y meningkat seiring bertambahnya x; kemiringan negatif berarti y berkurang. Perpotongan (b) adalah nilai prediksi y ketika x sama dengan nol — ini adalah titik di mana garis regresi memotong sumbu y."
     },
     {
-      "question": "Berapa banyak titik data yang saya butuhkan untuk regresi?",
-      "answer": "Minimal, Anda membutuhkan setidaknya 2 titik data untuk menghitung persamaan regresi linear sederhana. Namun, untuk hasil yang bermakna dan andal, disarankan memiliki setidaknya 10–15 titik data. Semakin banyak titik data yang Anda miliki, semakin andal dan signifikan secara statistik model regresi Anda menjadi.",
-      "display": true
+      "question": "Berapa banyak titik data yang saya perlukan untuk regresi?",
+      "answer": "Minimal, Anda memerlukan minimal 2 titik data untuk menghitung persamaan regresi linier sederhana. Namun, untuk hasil yang bermakna dan dapat diandalkan, disarankan untuk memiliki setidaknya 10–15 titik data. Semakin banyak titik data yang Anda miliki, semakin andal dan signifikan model regresi Anda secara statistik."
     },
     {
-      "question": "Apa itu galat baku regresi?",
-      "answer": "Galat baku (SE) regresi mengukur jarak rata-rata titik data yang diamati dari garis regresi. SE yang lebih kecil menunjukkan bahwa titik data lebih dekat ke garis yang disesuaikan, berarti prediksi model lebih akurat. Pada dasarnya, ini adalah ukuran presisi model.",
-      "display": true
+      "question": "Berapa kesalahan standar regresi?",
+      "answer": "Kesalahan standar (SE) regresi mengukur jarak rata-rata jatuhnya titik data yang diamati dari garis regresi. SE yang lebih kecil menunjukkan bahwa titik data lebih dekat ke garis yang dipasang, yang berarti prediksi model lebih akurat. Ini pada dasarnya adalah ukuran presisi model."
     },
     {
-      "question": "Kapan saya harus menggunakan regresi linear?",
-      "answer": "Gunakan regresi linear ketika Anda ingin memodelkan hubungan antara variabel dependen kontinu dan satu atau lebih variabel independen, serta ketika hubungan tersebut tampak kurang lebih linear. Aplikasi umum termasuk memprediksi penjualan dari belanja iklan, mengestimasi harga rumah dari luas persegi, atau menganalisis pengaruh waktu belajar terhadap skor ujian.",
-      "display": true
+      "question": "Kapan saya harus menggunakan regresi linier?",
+      "answer": "Gunakan regresi linier ketika Anda ingin memodelkan hubungan antara variabel terikat kontinu dan satu atau lebih variabel bebas, dan ketika hubungan tampak mendekati linier. Penerapan umum mencakup memprediksi penjualan dari pengeluaran iklan, memperkirakan harga rumah dari ukuran luas, atau menganalisis pengaruh waktu belajar terhadap nilai ujian."
     },
     {
-      "question": "Apa saja asumsi regresi linear?",
-      "answer": "Regresi linear mengasumsikan: 1) Linearitas — hubungan antar variabel bersifat linear, 2) Independensi — pengamatan saling independen, 3) Homoskedastisitas — residual memiliki varians konstan, 4) Normalitas — residual berdistribusi normal, 5) Tidak ada multikolinearitas — variabel independen tidak berkorelasi tinggi (untuk regresi berganda). Pelanggaran asumsi-asumsi ini dapat menghasilkan hasil yang tidak dapat diandalkan.",
-      "display": true
+      "question": "Apa asumsi regresi linier?",
+      "answer": "Regresi linier mengasumsikan: 1) Linearitas — hubungan antar variabel linier, 2) Independensi — pengamatan tidak bergantung satu sama lain, 3) Homoskedastisitas — residu memiliki varian yang konstan, 4) Normalitas — residu berdistribusi normal, 5) Tidak ada multikolinearitas — variabel independen tidak berkorelasi tinggi (untuk regresi berganda). Melanggar asumsi-asumsi ini dapat mengakibatkan hasil yang tidak dapat diandalkan."
     },
     {
       "question": "Apa perbedaan antara korelasi dan regresi?",
-      "answer": "Korelasi mengukur kekuatan dan arah hubungan antara dua variabel (rentang -1 hingga +1) tanpa menyiratkan kausalitas. Regresi melangkah lebih jauh dengan menyesuaikan garis pada data dan menyediakan persamaan (y = mx + b) yang dapat memprediksi satu variabel dari variabel lainnya. Meskipun korelasi bersifat simetris (r_xy = r_yx), regresi tidak — memprediksi y dari x memberikan hasil yang berbeda dari memprediksi x dari y.",
-      "display": true
+      "answer": "Korelasi mengukur kekuatan dan arah hubungan antara dua variabel (mulai dari -1 hingga +1) tanpa menyiratkan sebab akibat. Regresi melangkah lebih jauh dengan memasangkan garis pada data dan memberikan persamaan (y = mx + b) yang dapat memprediksi satu variabel dari variabel lainnya. Meskipun korelasinya simetris (r_xy = r_yx), regresinya tidak — memprediksi y dari x memberikan hasil yang berbeda dibandingkan memprediksi x dari y."
     },
     {
-      "question": "Apa saja jenis-jenis regresi?",
-      "answer": "Jenis umum meliputi: Regresi Linear (satu prediktor), Regresi Berganda (beberapa prediktor), Regresi Polinomial (hubungan melengkung), Regresi Logistik (hasil biner), Regresi Ridge (dengan regularisasi untuk mencegah overfitting), dan Regresi Lasso (pemilihan fitur melalui regularisasi). Setiap jenis cocok untuk pola data dan pertanyaan penelitian yang berbeda.",
-      "display": true
+      "question": "Jenis regresi apa yang ada?",
+      "answer": "Jenis yang umum meliputi: Regresi Linier (satu prediktor), Regresi Berganda (beberapa prediktor), Regresi Polinomial (hubungan melengkung), Regresi Logistik (hasil biner), Regresi Ridge (dengan regularisasi untuk mencegah overfitting), dan Regresi Lasso (pemilihan fitur melalui regularisasi). Setiap jenis sesuai dengan pola data dan pertanyaan penelitian yang berbeda."
     },
     {
       "question": "Bisakah saya menggunakan kalkulator ini untuk regresi berganda?",
-      "answer": "Saat ini, kalkulator ini mendukung regresi linear sederhana dengan satu variabel independen (x) dan satu variabel dependen (y). Untuk regresi berganda dengan beberapa prediktor, Anda perlu menggunakan perangkat lunak statistik khusus seperti R, Python (statsmodels), atau SPSS. Kami mungkin menambahkan dukungan regresi berganda dalam pembaruan mendatang.",
-      "display": false
+      "answer": "Saat ini kalkulator ini mendukung regresi linier sederhana dengan satu variabel bebas (x) dan satu variabel terikat (y). Untuk regresi berganda dengan beberapa prediktor, Anda perlu menggunakan perangkat lunak statistik khusus seperti R, Python (statsmodels), atau SPSS. Kami dapat menambahkan dukungan regresi berganda di pembaruan mendatang."
     }
   ]
 }

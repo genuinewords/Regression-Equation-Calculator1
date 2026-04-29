@@ -39,6 +39,7 @@ export interface ContactTranslations {
   send: string;
   success: string;
   error: string;
+  emailSupport: string;
 }
 
 export interface TermsTranslations {
@@ -61,6 +62,7 @@ export interface BlogTranslations {
   readMore: string;
   recentPosts: string;
   allPosts: string;
+  articles: string;
 }
 
 export interface CalculatorTranslations {
@@ -94,6 +96,8 @@ export interface CalculatorTranslations {
   invalidData: string;
   insufficientData: string;
   calculationError: string;
+  step: string;
+  means: string;
 }
 
 export interface NotFoundTranslations {
@@ -152,6 +156,10 @@ export interface FooterLabels {
   privacyPolicy: string;
   termsOfService: string;
   contactUs: string;
+  toolsTitle: string;
+  companyTitle: string;
+  connectTitle: string;
+  languageTitle: string;
 }
 
 export interface CommonLabels {
@@ -171,6 +179,13 @@ export interface CommonLabels {
   system: string;
   skipToContent: string;
   scrollToTop: string;
+  selectLanguage: string;
+  availableLanguages: string;
+  showing: string;
+  of: string;
+  exploreTools: string;
+  mainToolsTitle: string;
+  languagesTitle: string;
 }
 
 export interface SharedLabels {

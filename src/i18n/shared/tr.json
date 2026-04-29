@@ -1,29 +1,29 @@
 {
   "nav": {
-    "home": "Ana Sayfa",
-    "tools": "Araçlar",
+    "home": "Ev",
+    "tools": "Aletler",
+    "expCalc": "Üstel Regresyon",
+    "lsrlCalc": "En Küçük Kareler Çizgisi",
+    "rcCalc": "Regresyon Eğrisi",
+    "quadCalc": "İkinci Dereceden Regresyon",
+    "multiCalc": "Çoklu Regresyon",
+    "pearsonCorrelation": "Pearson Hesap Makinesi",
+    "grubbsTest": "Grubbs Testi",
+    "assumptionsChecker": "Varsayımlar Denetleyicisi",
     "aboutUs": "Hakkımızda",
     "blog": "Blog",
-    "contactUs": "İletişim",
-    "terms": "Koşullar",
-    "privacy": "Gizlilik",
-    "sitemap": "Site Haritası",
-    "pearsonCorrelation": "Pearson r Hesaplayıcı",
-    "grubbsTest": "Grubbs Testi",
-    "assumptionsChecker": "Varsayım Kontrolü",
-    "expCalc": "Exponential Regression",
-    "lsrlCalc": "Least Squares Line",
-    "rcCalc": "Regression Curve",
-    "quadCalc": "Karesel Hesaplayıcı",
-    "multiCalc": "Çoklu Hesaplayıcı"
+    "contactUs": "Bize Ulaşın",
+    "terms": "Şartlar",
+    "privacy": "Mahremiyet",
+    "sitemap": "Site haritası"
   },
   "footer": {
-    "description": "Öğrenciler, araştırmacılar ve profesyoneller için adım adım çözümlerle ücretsiz çevrimiçi regresyon denklemi hesaplayıcısı.",
-    "copyright": "Tüm hakları saklıdır."
+    "description": "Öğrenciler, araştırmacılar ve profesyoneller için adım adım çözümler sunan ücretsiz çevrimiçi regresyon denklemi hesaplayıcı.",
+    "copyright": "Her hakkı saklıdır."
   },
   "common": {
-    "learnMore": "Daha Fazla Bilgi",
-    "previous": "Önceki",
+    "learnMore": "Daha fazla bilgi edin",
+    "previous": "Öncesi",
     "next": "Sonraki"
   }
 }

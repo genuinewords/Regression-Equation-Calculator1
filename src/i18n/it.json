@@ -23,13 +23,17 @@
       "Previsione delle variazioni di temperatura nel tempo",
       "Valutazione della relazione tra dosaggio e risposta"
     ],
-    "howItWorksTitle": "Come funziona il calcolatore delle equazioni di regressione",
-    "howItWorksStep1Title": "Inserisci i dati",
-    "howItWorksStep1": "Inserisci i tuoi punti dati xey nella tabella seguente",
-    "howItWorksStep2Title": "Calcolare",
-    "howItWorksStep2": "Fare clic su Calcola per calcolare l'equazione di regressione",
-    "howItWorksStep3Title": "Visualizza risultati",
-    "howItWorksStep3": "Visualizza i risultati inclusi equazione, pendenza, intercetta e valore R²",
+    "howItWorksTitle": "Come funziona",
+    "howItWorksStep1Title": "Scegli Modello di regressione",
+    "howItWorksStep1": "Seleziona tra regressione lineare, polinomiale, esponenziale o logaritmica per abbinare il modello di relazione dei tuoi dati.",
+    "howItWorksStep2Title": "Inserisci i punti dati",
+    "howItWorksStep2": "Aggiungi le coppie di dati X e Y nella tabella. Imposta il tuo livello di confidenza (%) e facoltativamente inserisci un valore X di previsione per la previsione.",
+    "howItWorksStep3Title": "Calcola e visualizza",
+    "howItWorksStep3": "Fare clic su Calcola per generare immediatamente l'equazione di regressione, il valore R quadrato e un grafico a dispersione interattivo con la linea di regressione adattata.",
+    "howItWorksStep4Title": "Revisione della diagnostica",
+    "howItWorksStep4": "Esaminare la tabella delle statistiche di regressione (errore standard, dimensione del campione, gradi di libertà e livello di confidenza) per valutare l'affidabilità del modello.",
+    "howItWorksStep5Title": "Prevedere e prevedere",
+    "howItWorksStep5": "Utilizza l'input X della previsione per stimare Y in qualsiasi momento, con intervalli di confidenza basati sul livello di confidenza scelto.",
     "tableTitle": "Riferimento alle statistiche di regressione",
     "tableDescription": "Statistiche comuni di regressione e loro interpretazioni",
     "tableStat": "Statistica",
@@ -142,7 +146,10 @@
     "noPrediction": "—",
     "modelYear": "Anno del modello",
     "modelYearHint": "Esempio: 2024, 2025, 2026 o qualsiasi anno personalizzato",
-    "noteText": "Risultati calcolati utilizzando standard statistici internazionali applicabili negli Stati Uniti, in Europa, in Asia e nel mondo."
+    "noteText": "Risultati calcolati utilizzando standard statistici internazionali applicabili negli Stati Uniti, in Europa, in Asia e nel mondo.",
+    "dataPoints": "Punti dati (X, Y)",
+    "step": "Fare un passo",
+    "means": "Significa"
   },
   "pearson": {
     "title": "Calcolatore di correlazione di Pearson",
@@ -847,7 +854,7 @@
     "graphCalcTitle": "Regressione esponenziale sulla calcolatrice grafica (TI-84, TI-83, Casio)",
     "graphCalcIntro": "Rappresentare graficamente i risultati della regressione esponenziale su una calcolatrice fisica ti consente di visualizzare quanto bene la curva adattata corrisponde ai tuoi punti dati effettivi. Questo è un passaggio cruciale per convalidare il tuo modello: un controllo visivo può rivelare modelli che le statistiche da sole potrebbero non cogliere, come deviazioni sistematiche in determinati intervalli x. Di seguito sono riportate le istruzioni grafiche dettagliate per ciascuna delle principali marche di calcolatrici, che coprono l'intero processo dall'immissione dei dati alla visualizzazione del grafico a dispersione con la curva esponenziale sovrapposta. La chiave per un buon grafico è scegliere una finestra appropriata: X-min e X-max dovrebbero coprire l'intervallo di dati con una certa imbottitura e Y-min e Y-max dovrebbero adattarsi alla rapida crescita della curva esponenziale. La funzione ZoomStat sulle calcolatrici TI imposta automaticamente la finestra per adattarla ai tuoi dati, che spesso è il punto di partenza più semplice prima delle regolazioni manuali.",
     "graphCalcSteps": [
-      "<strong>Immettere i dati (tutti i modelli):</strong> Sulla TI-84, premere STAT → Modifica e immettere valori X in L1, valori Y in L2. Sulla TI-83, premere STAT → 1:Edit e immettere i dati nello stesso modo. Su Casio fx-CG50, vai su MENU → STAT → inserisci i dati nell'Elenco 1 e nell'Elenco 2. Assicurati che tutti i valori Y siano positivi.",
+      "<strong>Immettere i dati (tutti i modelli):</strong> Sulla TI-84, premere STAT → Modifica e immettere valori X in L1, valori Y in L2. Sulla TI-83, premere STAT → 1:Edit e immettere i dati allo stesso modo. Su Casio fx-CG50, vai su MENU → STAT → inserisci i dati nell'Elenco 1 e nell'Elenco 2. Assicurati che tutti i valori Y siano positivi.",
       "<strong>Esegui ExpReg (TI-84):</strong> premi STAT → CALC → scorri fino a <code>ExpReg</code> (opzione 14 su TI-84 Plus CE). Per memorizzare l'equazione per la rappresentazione grafica, aggiungere <code>Y1</code> dopo ExpReg: premere VARS → Y-VARS → Funzione → Y1. Premere due volte INVIO per calcolare e memorizzare.",
       "<strong>Esegui ExpReg (TI-83):</strong> premi STAT → freccia destra su CALC → seleziona <strong>0:ExpReg</strong>. Per memorizzare per la grafica, premere VARS → Y-VARS → 1:Funzione → 1:Y1, quindi premere ENTER. L'equazione appare come y = a·b<sup>x</sup> con a, b e r² visualizzati.",
       "<strong>Esegui la regressione (Casio):</strong> Premi CALC (F2) → seleziona EXP (F6 o scorri) → premi EXE per calcolare. Su fx-CG50, puoi rappresentare graficamente direttamente: dopo il calcolo, premi DRAW (F6) per vedere il grafico a dispersione con la curva esponenziale sovrapposta.",
@@ -2042,5 +2049,21 @@
   "sitemap": {
     "title": "Mappa del sito",
     "description": "Esplora la mappa del sito completa del calcolatore delle equazioni di regressione. Trova tutti i nostri strumenti statistici, calcolatori, post di blog e risorse didattiche di matematica."
+  },
+  "common": {
+    "menu": "Menu",
+    "close": "Vicina",
+    "loading": "Caricamento...",
+    "error": "Errore",
+    "selectLanguage": "Seleziona la lingua",
+    "availableLanguages": "Lingue disponibili"
+  },
+  "footer": {
+    "description": "Calcolatore online gratuito di equazioni di regressione. Calcola istantaneamente equazioni di regressione lineare, polinomiale e multipla con soluzioni dettagliate.",
+    "toolsTitle": "Strumenti e pagine",
+    "companyTitle": "Azienda",
+    "connectTitle": "Collegare",
+    "languageTitle": "Lingua",
+    "copyright": "Tutti i diritti riservati."
   }
 }

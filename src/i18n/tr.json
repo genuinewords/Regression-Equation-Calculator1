@@ -23,13 +23,17 @@
       "Zaman içindeki sıcaklık değişikliklerini tahmin etme",
       "Dozaj ve yanıt arasındaki ilişkinin değerlendirilmesi"
     ],
-    "howItWorksTitle": "Regresyon Denklemi Hesaplayıcısı Nasıl Çalışır?",
-    "howItWorksStep1Title": "Veri Girin",
-    "howItWorksStep1": "Aşağıdaki tabloya x ve y veri noktalarınızı girin",
-    "howItWorksStep2Title": "Hesaplamak",
-    "howItWorksStep2": "Regresyon denklemini hesaplamak için Hesapla'yı tıklayın",
-    "howItWorksStep3Title": "Sonuçları Görüntüle",
-    "howItWorksStep3": "Denklem, eğim, kesişim noktası ve R² değeri dahil sonuçlarınızı görüntüleyin",
+    "howItWorksTitle": "Nasıl Çalışır?",
+    "howItWorksStep1Title": "Regresyon Modelini Seçin",
+    "howItWorksStep1": "Verilerinizin ilişki düzenine uyacak şekilde Doğrusal, Polinom, Üstel veya Logaritmik regresyon arasından seçim yapın.",
+    "howItWorksStep2Title": "Veri Noktalarını Girin",
+    "howItWorksStep2": "X ve Y veri çiftlerinizi tabloya ekleyin. Güven düzeyinizi (%) ayarlayın ve isteğe bağlı olarak tahmin için bir tahmin X değeri girin.",
+    "howItWorksStep3Title": "Hesapla ve Görselleştir",
+    "howItWorksStep3": "Regresyon denklemini, R-kare değerini ve uygun regresyon çizgisiyle etkileşimli bir dağılım grafiğini anında oluşturmak için Hesapla'ya tıklayın.",
+    "howItWorksStep4Title": "Teşhisi İnceleyin",
+    "howItWorksStep4": "Modelin güvenilirliğini değerlendirmek için regresyon istatistik tablosunu (standart hata, örneklem büyüklüğü, serbestlik derecesi ve güven düzeyi) inceleyin.",
+    "howItWorksStep5Title": "Tahmin ve Tahmin",
+    "howItWorksStep5": "Seçtiğiniz güven düzeyine dayalı güven aralıklarıyla herhangi bir noktada Y'yi tahmin etmek için tahmin X girişini kullanın.",
     "tableTitle": "Regresyon İstatistikleri Referansı",
     "tableDescription": "Ortak regresyon istatistikleri ve yorumları",
     "tableStat": "İstatistik",
@@ -142,7 +146,10 @@
     "noPrediction": "—",
     "modelYear": "Model Yılı",
     "modelYearHint": "Örnek: 2024, 2025, 2026 veya herhangi bir özel yıl",
-    "noteText": "Sonuçlar ABD, Avrupa, Asya ve dünya çapında geçerli uluslararası istatistiksel standartlar kullanılarak hesaplanmıştır."
+    "noteText": "Sonuçlar ABD, Avrupa, Asya ve dünya çapında geçerli uluslararası istatistiksel standartlar kullanılarak hesaplanmıştır.",
+    "dataPoints": "Veri Noktaları (X, Y)",
+    "step": "Adım",
+    "means": "Araç"
   },
   "pearson": {
     "title": "Pearson Korelasyon Hesaplayıcısı",
@@ -1160,7 +1167,7 @@
       "<strong>Değerleri tahmin edin (tüm modeller):</strong> TI-84/83'te 2. → CALC → Değer'e basın, bir X değeri girin ve eğriden karşılık gelen ŷ değerini okuyun. Casio'da grafik çizdikten sonra CALC → Değer işlevini kullanın. TI-Nspire'da regresyon çizgisine tıklayın ve istenen X değerine kadar izleyin."
     ],
     "assumptionsTitle": "En Küçük Kareler Regresyonunun Varsayımları",
-    "assumptionsText": "<p>📐 En küçük kareler regresyon çizgisi, <strong>Gauss-Markov koşulları</strong> olarak bilinen dört temel varsayım karşılandığında, gerçek popülasyon regresyon çizgisinin <strong>en iyi doğrusal tarafsız tahmincisidir (MAVİ)</strong>. Bu varsayımların ihlali, taraflı katsayılara, güvenilmez standart hatalara ve geçersiz hipotez testlerine yol açabilir; bu da tüm analizinizin güvenilirliğini zayıflatır ve yanlış sonuçlara yol açabilir. Dört varsayım şunlardır: (1) <strong>Doğrusallık</strong> — X ve Y arasındaki ilişki gerçekten doğrusaldır; eğer gerçek ilişki kavisli ise LSRL sistematik olarak verileri yanlış sunacaktır ve hem eğim hem de kesişim taraflı olacaktır.</p><p>📊 (2) <strong>Bağımsızlık</strong> — artıklar birbirinden bağımsızdır; otokorelasyon (zaman serisi verilerinde yaygındır) bunu ihlal eder ve görünürdeki önemi şişirerek ilişkilerin gerçekte olduğundan daha güçlü olduğunu düşünmenize neden olur.</p><p>📊 (3) <strong>Eşdeğişkenlik</strong> — artıkların varyansı X'in tüm seviyelerinde sabittir; Değişen varyans (sabit olmayan varyans), standart hataları güvenilmez hale getirir, bu da güven aralıklarını ve hipotez testlerini etkiler.</p><p>💻 (4) <strong>Normallik</strong> — artıklar normal şekilde dağıtılır; bu, özellikle küçük örneklerde geçerli p değerleri ve güven aralıkları için gereklidir, ancak merkezi limit teoremi büyük örneklerde (n> 30) bir miktar koruma sağlar. Bu varsayımları, sırasıyla Durbin-Watson testini, Breusch-Pagan testini ve Jarque-Bera testini kullanarak artık grafiklerini kullanarak kontrol edebilirsiniz. Dört varsayımın tamamının kapsamlı bir otomatik kontrolü için, her varsayımı resmi olarak test eden ve ihlaller tespit edildiğinde düzeltme önerileri sunan <a href=\"/regression-assumptions-checker/\" class=\"text-primary-600 dark:text-primary-400 hover:underline\">Regresyon Varsayımları Denetleyicisi</a> aracımızı kullanın.</p>",
+    "assumptionsText": "<p>📐 En küçük kareler regresyon çizgisi, <strong>Gauss-Markov koşulları</strong> olarak bilinen dört temel varsayım karşılandığında, gerçek popülasyon regresyon çizgisinin <strong>en iyi doğrusal tarafsız tahmincisidir (MAVİ)</strong>. Bu varsayımların ihlali, taraflı katsayılara, güvenilmez standart hatalara ve geçersiz hipotez testlerine yol açabilir; bu da tüm analizinizin güvenilirliğini zayıflatır ve yanlış sonuçlara yol açabilir. Dört varsayım şunlardır: (1) <strong>Doğrusallık</strong> — X ve Y arasındaki ilişki gerçekten doğrusaldır; eğer gerçek ilişki kavisli ise LSRL sistematik olarak verileri yanlış sunacaktır ve hem eğim hem de kesişim taraflı olacaktır.</p><p>📊 (2) <strong>Bağımsızlık</strong> — artıklar birbirinden bağımsızdır; otokorelasyon (zaman serisi verilerinde yaygındır) bunu ihlal eder ve görünürdeki önemi şişirerek ilişkilerin gerçekte olduğundan daha güçlü olduğunu düşünmenize neden olur.</p><p>📊 (3) <strong>Eşdeğişkenlik</strong> — artıkların varyansı X'in tüm seviyelerinde sabittir; Değişen varyans (sabit olmayan varyans), standart hataları güvenilmez hale getirir, bu da güven aralıklarını ve hipotez testlerini etkiler.</p><p>💻 (4) <strong>Normallik</strong> — artıklar normal şekilde dağıtılır; bu, özellikle küçük örneklerde geçerli p değerleri ve güven aralıkları için gereklidir, ancak merkezi limit teoremi büyük örneklerde (n> 30) bir miktar koruma sağlar. Bu varsayımları, sırasıyla Durbin-Watson testi, Breusch-Pagan testi ve Jarque-Bera testini kullanarak artık grafiklerini kullanarak kontrol edebilirsiniz. Dört varsayımın tamamının kapsamlı bir otomatik kontrolü için, her varsayımı resmi olarak test eden ve ihlaller tespit edildiğinde düzeltme önerileri sunan <a href=\"/regression-assumptions-checker/\" class=\"text-primary-600 dark:text-primary-400 hover:underline\">Regresyon Varsayımları Denetleyicisi</a> aracımızı kullanın.</p>",
     "assumptionsPoints": [
       "1. <strong>Doğrusallık:</strong> X ve Y arasındaki ilişki doğrusal olmalıdır. Y'ye karşı X'in dağılım grafiğini ve artıkların ve tahmin edilen değerlerin artık grafiğini kullanarak kontrol edin. Her iki grafikte de kavisli bir model doğrusal olmadığı anlamına gelir.",
       "2. <strong>Bağımsızlık:</strong> Artıklar bağımsız olmalıdır; otokorelasyon olmamalıdır. Durbin-Watson testiyle kontrol edin (d ≈ 2, otokorelasyonun olmadığı anlamına gelir). Zaman serisi verileri sıklıkla bu varsayımı ihlal etmektedir.",
@@ -1831,7 +1838,7 @@
       "<strong>Normal denklemleri kurun:</strong> Kareleri alınmış artıkların toplamının en aza indirilmesinden elde edilen (p+1)×(p+1) doğrusal denklem sistemini yazın. İki tahminci için bu, b₀ kesimini, b₁ katsayısını ve b₂ katsayısını içeren 3x3'lük bir sistemdir.",
       "<strong>Sistemi çözün:</strong> Sistemi tüm regresyon katsayıları için çözmek için Gauss eliminasyonunu, Cramer kuralını veya matris ters çevirmeyi kullanın. Bu, otomasyondan en çok fayda sağlayan, hesaplama açısından yoğun adımdır.",
       "<strong>Denkemi yazın:</strong> Katsayıları regresyon denkleminde birleştirin: ŷ = b₀ + b₁x₁ + b₂x₂. Uygulamanız için anlamlı olduklarını doğrulamak amacıyla her katsayının işaretlerini ve büyüklüklerini kontrol edin.",
-      "<strong>Modeli değerlendirin:</strong> R²'yi, düzeltilmiş R²'yi, F istatistiğini ve standart hatayı hesaplayın. Yüksek ayarlanmış R² ve anlamlı bir F testi, iyi uyum sağlayan bir modele işaret eder. Farklı tahmin sayılarına sahip modelleri değerlendirirken daima R² yerine ayarlanmış R²'yi karşılaştırın."
+      "<strong>Modeli değerlendirin:</strong> R²'yi, düzeltilmiş R²'yi, F istatistiğini ve standart hatayı hesaplayın. Yüksek düzeyde ayarlanmış bir R² ve anlamlı bir F testi, iyi uyum sağlayan bir modele işaret eder. Farklı tahmin sayılarına sahip modelleri değerlendirirken daima R² yerine ayarlanmış R²'yi karşılaştırın."
     ],
     "calcStepsTitle": "Çoklu Regresyon Hesaplayıcı Adımları",
     "calcStepsIntro": "Çoklu regresyon hesaplayıcımızı kullanmak, doğru ve anlamlı sonuçlar elde etmek için şu ayrıntılı adımları içerir:",
@@ -1862,7 +1869,7 @@
     "coefficientsPoints": [
       "1. <strong>Kısmi katsayılar:</strong> Her bᵢ, modeldeki diğer tüm tahmin edicileri kontrol ederek xᵢ'nin y üzerindeki benzersiz etkisini ölçer. Bu, her bir değişkenin katkısını diğerlerinin kafa karıştırıcı etkisinden izole eder.",
       "2. <strong>Birimler önemlidir:</strong> bᵢ'nin büyüklüğü xᵢ'nin ölçeğine bağlıdır. Eğer x₁ fit cinsinden ve x₂ mil cinsinden ölçülürse, her iki tahmin edicinin de benzer pratik önemi olsa bile x₁ katsayısı sayısal olarak çok daha küçük olacaktır. Değişkenlerin standartlaştırılması (z-puanları), göreceli önemin doğrudan karşılaştırılmasına olanak tanır.",
-      "3. <strong>Kesme yorumu:</strong> b₀, tüm xᵢ = 0 olduğunda tahmin edilen y'dir. Bu, yalnızca sıfırın her tahmincinin gözlemlenen aralığı içinde veya yakınında olması durumunda anlamlıdır. Aksi takdirde, regresyon hiperdüzlemini doğru şekilde konumlandıran yalnızca matematiksel bir çapadır.",
+      "3. <strong>Kesme yorumu:</strong> b₀, tüm xᵢ = 0 olduğunda tahmin edilen y'dir. Bu, yalnızca sıfırın her tahmin edicinin gözlemlenen aralığı içinde veya yakınında olması durumunda anlamlıdır. Aksi takdirde, regresyon hiperdüzlemini doğru şekilde konumlandıran yalnızca matematiksel bir çapadır.",
       "4. <strong>Çoklu doğrusallık uyarısı:</strong> Tahminciler yüksek korelasyona sahip olduğunda (r> 0,8), bireysel katsayıları kararsız hale gelir; verilerdeki küçük değişiklikler katsayılarda büyük dalgalanmalara neden olabilir. Çoklu doğrusallığı tespit etmek için varyans enflasyon faktörlerini (VIF) kullanın; VIF> 5 potansiyel bir sorunu gösterir."
     ],
     "howDoTitle": "Hesap Makinesinde Çoklu Regresyon Nasıl Yapılır",
@@ -2041,6 +2048,22 @@
   },
   "sitemap": {
     "title": "Site haritası",
-    "description": "Regresyon Denklemi Hesaplayıcı site haritasının tamamını keşfedin. Tüm istatistiksel araçlarımızı, hesap makinelerimizi, blog yazılarımızı ve eğitimsel matematik kaynaklarımızı bulun."
+    "description": "Regresyon Denklemi Hesaplayıcı site haritasının tamamını keşfedin. Tüm istatistiksel araçlarımızı, hesap makinelerimizi, blog gönderilerimizi ve eğitimsel matematik kaynaklarımızı bulun."
+  },
+  "common": {
+    "menu": "Menü",
+    "close": "Kapalı",
+    "loading": "Yükleniyor...",
+    "error": "Hata",
+    "selectLanguage": "Dil seçin",
+    "availableLanguages": "Mevcut diller"
+  },
+  "footer": {
+    "description": "Ücretsiz çevrimiçi regresyon denklemi hesaplayıcı. Adım adım çözümlerle doğrusal, polinom ve çoklu regresyon denklemlerini anında hesaplayın.",
+    "toolsTitle": "Araçlar ve Sayfalar",
+    "companyTitle": "Şirket",
+    "connectTitle": "Bağlamak",
+    "languageTitle": "Dil",
+    "copyright": "Her hakkı saklıdır."
   }
 }

@@ -25,7 +25,7 @@ const companyNav = navConfig.footerNav.filter(item => ['aboutUs', 'contactUs', '
     <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
       <div class="sm:col-span-2 lg:col-span-1">
         <a href={getLocalizedUrl('/', locale)} class="flex items-center gap-2.5 mb-4">
-          <Logo class="h-8 w-8 rounded-lg" width="32" height="32" />
+          <Logo class="h-8 w-8 rounded-lg" width="32" height="32" alt={translations.siteTitle} />
           <span class="text-lg font-bold text-white">{translations.siteTitle}</span>
         </a>
         <p class="text-sm leading-relaxed text-surface-400 max-w-xs">
@@ -34,7 +34,7 @@ const companyNav = navConfig.footerNav.filter(item => ['aboutUs', 'contactUs', '
       </div>
 
       <div>
-        <h2 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Tools & Pages</h2>
+        <h2 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">{translations.footer?.toolsTitle ?? 'Tools & Pages'}</h2>
         <ul class="space-y-2.5">
           {toolsNav.map((item) => {
             const label = translations.nav?.[item.label as keyof typeof translations.nav] ?? item.label;
@@ -51,7 +51,7 @@ const companyNav = navConfig.footerNav.filter(item => ['aboutUs', 'contactUs', '
       </div>
 
       <div>
-        <h2 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Company</h2>
+        <h2 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">{translations.footer?.companyTitle ?? 'Company'}</h2>
         <ul class="space-y-2.5">
           {companyNav.map((item) => {
             const label = translations.nav?.[item.label as keyof typeof translations.nav] ?? item.label;
@@ -70,7 +70,7 @@ const companyNav = navConfig.footerNav.filter(item => ['aboutUs', 'contactUs', '
       <div>
         {hasSocial && (
           <>
-            <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Connect</h3>
+            <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">{translations.footer?.connectTitle ?? 'Connect'}</h3>
             <div class="flex items-center gap-3">
               {socialConfig.facebook && (
                 <a href={socialConfig.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="flex items-center justify-center w-10 h-10 rounded-xl bg-surface-800 text-surface-400 transition-all duration-200 hover:bg-primary-600 hover:text-white">
@@ -108,8 +108,8 @@ const companyNav = navConfig.footerNav.filter(item => ['aboutUs', 'contactUs', '
       </div>
 
       <div>
-        <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Language</h3>
-        <LanguageSwitcher locale={locale} />
+        <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">{translations.footer?.languageTitle ?? 'Language'}</h3>
+        <LanguageSwitcher locale={locale} translations={translations} />
       </div>
     </div>
 

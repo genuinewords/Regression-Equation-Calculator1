@@ -48,7 +48,7 @@ const canonicalUrl = new URL(getLocalizedUrl('/contact-us/', currentLocale), sit
                 📧
               </div>
               <div>
-                <h3 class="text-sm font-bold text-surface-900 dark:text-surface-50 uppercase tracking-wider mb-1">Email Support</h3>
+                <h3 class="text-sm font-bold text-surface-900 dark:text-surface-50 uppercase tracking-wider mb-1">{contact.emailSupport ?? 'Email Support'}</h3>
                 <a href={`mailto:${contact.fallbackEmail}`} class="text-lg text-primary-600 dark:text-primary-400 hover:text-primary-700 transition-colors">
                   {contact.fallbackEmail}
                 </a>

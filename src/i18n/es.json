@@ -23,13 +23,17 @@
       "Previsión de cambios de temperatura a lo largo del tiempo.",
       "Evaluación de la relación entre dosis y respuesta."
     ],
-    "howItWorksTitle": "Cómo funciona la calculadora de ecuaciones de regresión",
-    "howItWorksStep1Title": "Introducir datos",
-    "howItWorksStep1": "Ingrese sus puntos de datos x e y en la siguiente tabla",
-    "howItWorksStep2Title": "Calcular",
-    "howItWorksStep2": "Haga clic en Calcular para calcular la ecuación de regresión.",
-    "howItWorksStep3Title": "Ver resultados",
-    "howItWorksStep3": "Vea sus resultados, incluida la ecuación, la pendiente, la intersección y el valor R²",
+    "howItWorksTitle": "Cómo funciona",
+    "howItWorksStep1Title": "Elija el modelo de regresión",
+    "howItWorksStep1": "Seleccione entre regresión lineal, polinómica, exponencial o logarítmica para que coincida con el patrón de relación de sus datos.",
+    "howItWorksStep2Title": "Ingresar puntos de datos",
+    "howItWorksStep2": "Agregue sus pares de datos X e Y en la tabla. Establezca su nivel de confianza (%) y, opcionalmente, ingrese un valor X de predicción para realizar pronósticos.",
+    "howItWorksStep3Title": "Calcular y visualizar",
+    "howItWorksStep3": "Haga clic en Calcular para generar instantáneamente la ecuación de regresión, el valor de R cuadrado y un diagrama de dispersión interactivo con la línea de regresión ajustada.",
+    "howItWorksStep4Title": "Revisar diagnóstico",
+    "howItWorksStep4": "Examine la tabla de estadísticas de regresión (error estándar, tamaño de muestra, grados de libertad y nivel de confianza) para evaluar la confiabilidad del modelo.",
+    "howItWorksStep5Title": "Predecir y pronosticar",
+    "howItWorksStep5": "Utilice la entrada de predicción X para estimar Y en cualquier punto, con intervalos de confianza basados ​​en el nivel de confianza elegido.",
     "tableTitle": "Referencia de estadísticas de regresión",
     "tableDescription": "Estadísticas de regresión comunes y sus interpretaciones.",
     "tableStat": "Estadística",
@@ -142,7 +146,10 @@
     "noPrediction": "—",
     "modelYear": "Año del modelo",
     "modelYearHint": "Ejemplo: 2024, 2025, 2026 o cualquier año personalizado",
-    "noteText": "Resultados calculados utilizando estándares estadísticos internacionales aplicables en EE. UU., Europa, Asia y todo el mundo."
+    "noteText": "Resultados calculados utilizando estándares estadísticos internacionales aplicables en EE. UU., Europa, Asia y todo el mundo.",
+    "dataPoints": "Puntos de datos (X, Y)",
+    "step": "Paso",
+    "means": "Medio"
   },
   "pearson": {
     "title": "Calculadora de correlación de Pearson",
@@ -1466,7 +1473,7 @@
       },
       {
         "q": "¿Esta calculadora de curvas de regresión es de uso gratuito?",
-        "a": "<p>📊 Sí, esta calculadora de curva de regresión es <strong>completamente gratuita</strong>, sin registro, sin muro de pago y sin límites en la cantidad de cálculos o puntos de datos. Todos los cálculos se ejecutan localmente en su navegador: sus datos nunca se envían a ningún servidor, lo que garantiza una privacidad total. No hay tarifas ocultas, ni niveles premium ni restricciones en las funciones.</p>"
+        "a": "<p>📊 Sí, esta calculadora de curva de regresión es <strong>completamente gratuita</strong>, sin registro, sin muro de pago y sin límites en la cantidad de cálculos o puntos de datos. Todos los cálculos se ejecutan localmente en su navegador; sus datos nunca se envían a ningún servidor, lo que garantiza una privacidad total. No hay tarifas ocultas, ni niveles premium ni restricciones en las funciones.</p>"
       },
       {
         "q": "¿Cómo se compara esto con las herramientas de regresión de Excel?",
@@ -1946,7 +1953,7 @@
       },
       {
         "q": "¿Cuántos puntos de datos necesito para la regresión múltiple?",
-        "a": "<p>📊 El mínimo matemático es <strong>n> p + 1</strong> (más observaciones que coeficientes a estimar). Sin embargo, para obtener resultados fiables, la mayoría de los estadísticos recomiendan al menos <strong>de 10 a 20 observaciones por predictor</strong>. Por ejemplo, lo ideal es que un modelo con tres predictores tenga entre 30 y 60 puntos de datos. Con muy pocas observaciones, el modelo sobreajustará los datos de la muestra, R² se inflará artificialmente y los coeficientes de regresión serán muy inestables: pequeños cambios en los datos pueden producir resultados dramáticamente diferentes.</p>"
+        "a": "<p>📊 El mínimo matemático es <strong>n> p + 1</strong> (más observaciones que coeficientes a estimar). Sin embargo, para obtener resultados confiables, la mayoría de los estadísticos recomiendan al menos <strong>de 10 a 20 observaciones por predictor</strong>. Por ejemplo, lo ideal es que un modelo con tres predictores tenga entre 30 y 60 puntos de datos. Con muy pocas observaciones, el modelo sobreajustará los datos de la muestra, R² se inflará artificialmente y los coeficientes de regresión serán muy inestables: pequeños cambios en los datos pueden producir resultados dramáticamente diferentes.</p>"
       },
       {
         "q": "¿Qué es el sobreajuste en regresión múltiple?",
@@ -2042,5 +2049,21 @@
   "sitemap": {
     "title": "Mapa del sitio",
     "description": "Explore el mapa del sitio completo de la Calculadora de ecuaciones de regresión. Encuentre todas nuestras herramientas estadísticas, calculadoras, publicaciones de blog y recursos matemáticos educativos."
+  },
+  "common": {
+    "menu": "Menú",
+    "close": "Cerca",
+    "loading": "Cargando...",
+    "error": "Error",
+    "selectLanguage": "Seleccionar idioma",
+    "availableLanguages": "Idiomas disponibles"
+  },
+  "footer": {
+    "description": "Calculadora de ecuaciones de regresión online gratuita. Calcule ecuaciones de regresión lineal, polinómica y múltiple al instante con soluciones paso a paso.",
+    "toolsTitle": "Herramientas y páginas",
+    "companyTitle": "Compañía",
+    "connectTitle": "Conectar",
+    "languageTitle": "Idioma",
+    "copyright": "Reservados todos los derechos."
   }
 }

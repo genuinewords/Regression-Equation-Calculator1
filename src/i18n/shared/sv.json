@@ -1,29 +1,29 @@
 {
   "nav": {
-    "home": "Startsida",
+    "home": "Hem",
     "tools": "Verktyg",
-    "aboutUs": "Om Oss",
-    "blog": "Blogg",
-    "contactUs": "Kontakta Oss",
-    "terms": "Villkor",
-    "privacy": "Integritet",
-    "sitemap": "Webbplatskarta",
-    "pearsonCorrelation": "Pearson r-beräkning",
+    "expCalc": "Exponentiell regression",
+    "lsrlCalc": "Minsta kvadratlinjen",
+    "rcCalc": "Regressionskurva",
+    "quadCalc": "Kvadratisk regression",
+    "multiCalc": "Multipel regression",
+    "pearsonCorrelation": "Pearson r miniräknare",
     "grubbsTest": "Grubbs test",
-    "assumptionsChecker": "Antagandekontroll",
-    "expCalc": "Exponential Regression",
-    "lsrlCalc": "Least Squares Line",
-    "rcCalc": "Regression Curve",
-    "quadCalc": "Kvadratisk kalkylator",
-    "multiCalc": "Multipel kalkylator"
+    "assumptionsChecker": "Antaganden Checker",
+    "aboutUs": "Om oss",
+    "blog": "Blogg",
+    "contactUs": "Kontakta oss",
+    "terms": "Villkor",
+    "privacy": "Privatliv",
+    "sitemap": "Webbplatskarta"
   },
   "footer": {
-    "description": "Gratis online regressionsekvationskalkylator med steg-för-steg-lösningar för studenter, forskare och professionella.",
-    "copyright": "Alla rättigheter förbehållna."
+    "description": "Gratis online-regressionsekvationsräknare med steg-för-steg-lösningar för studenter, forskare och proffs.",
+    "copyright": "Alla rättigheter reserverade."
   },
   "common": {
-    "learnMore": "Läs Mer",
-    "previous": "Föregående",
+    "learnMore": "Läs mer",
+    "previous": "Tidigare",
     "next": "Nästa"
   }
 }
