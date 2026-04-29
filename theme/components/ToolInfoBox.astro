@@ -1,4 +1,6 @@
 ---
+import type { MergedTranslations } from 'theme/i18n/types';
+
 /**
  * ToolInfoBox – Reusable "How to Use This Tool" section
  *
@@ -22,7 +24,7 @@ interface Props {
   toolName: string;
   keyPoints: KeyPoint[];
   highlightTip: string;
-  translations: any;
+  translations: MergedTranslations;
 }
 
 const { toolName, keyPoints, highlightTip, translations } = Astro.props;
@@ -33,7 +35,7 @@ const { toolName, keyPoints, highlightTip, translations } = Astro.props;
 
     <!-- Headline -->
     <h2 class="tool-info-box__headline">
-      {translations.common?.howToUse ?? 'How to Use This'} {toolName}
+      {translations?.common?.howToUse ?? 'How to Use This'} {toolName}
     </h2>
 
     <!-- Key Points Grid -->
