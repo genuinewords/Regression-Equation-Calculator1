@@ -3,7 +3,7 @@
   "siteDescription": "Calcolatore online gratuito di equazioni di regressione. Calcola istantaneamente equazioni di regressione lineare, polinomiale e multipla con soluzioni dettagliate.",
   "home": {
     "title": "Strumento di regressione online gratuito",
-    "description": "Calcola le equazioni di regressione in secondi. Il nostro calcolatore gratuito trova modelli di regressione lineare, quadratica ed esponenziale. Perfetto per l'analisi dei dati.",
+    "description": "Calcola le equazioni di regressione in secondi. Il nostro calcolatore gratuito trova modelli di regressione lineare, quadratica ed esponenziale. Perfetto...",
     "intro": "Inserisci i tuoi punti dati e ottieni l'equazione di regressione, la pendenza, l'intercetta, il valore R quadrato e i calcoli passo passo in pochi secondi.",
     "whatIsTitle": "Cos'è un'equazione di regressione?",
     "whatIsText": "Un'equazione di regressione modella la relazione tra le variabili, consentendo di prevedere i risultati in base ai dati di input. Nella sua forma più semplice, ovvero la regressione lineare semplice, l'equazione è <strong>y = mx + b</strong>, dove <strong>m</strong> è la pendenza e <strong>b</strong> è l'intercetta y. Questo potente strumento statistico viene utilizzato in ambito scientifico, aziendale e ingegneristico per scoprire tendenze, fare previsioni e quantificare le relazioni tra le variabili.",
@@ -145,7 +145,7 @@
   },
   "about": {
     "title": "Chi siamo – Visualizza la nostra missione!",
-    "description": "Scopri di più sul calcolatore delle equazioni di regressione. Forniamo uno strumento online gratuito per calcolare rapidamente le equazioni di regressione con soluzioni matematiche dettagliate.",
+    "description": "Scopri di più sul calcolatore delle equazioni di regressione. Forniamo uno strumento online gratuito per calcolare rapidamente le equazioni di regressione...",
     "content": "Il calcolatore delle equazioni di regressione è uno strumento online gratuito progettato per aiutare studenti, ricercatori e professionisti a calcolare le equazioni di regressione in modo rapido e accurato. Il nostro calcolatore supporta la regressione lineare e fornisce soluzioni dettagliate passo dopo passo per aiutarti a comprendere il processo matematico alla base dei risultati. Che tu stia studiando statistiche, analizzando dati o lavorando sulla ricerca, il nostro strumento rende l'analisi di regressione accessibile a tutti.",
     "mission": "La nostra missione",
     "missionText": "Rendere l'analisi di regressione accessibile a tutti, dagli studenti che imparano le statistiche per la prima volta ai professionisti che necessitano di risultati rapidi e affidabili. Crediamo che potenti strumenti statistici dovrebbero essere gratuiti, privati ​​e facili da usare.",
@@ -156,7 +156,7 @@
   },
   "contact": {
     "title": "Contattaci: ottieni supporto ora",
-    "description": "Mettiti in contatto con il team del calcolatore delle equazioni di regressione. Compila il nostro modulo di contatto per domande, feedback o supporto riguardante il nostro strumento statistico.",
+    "description": "Mettiti in contatto con il team del calcolatore delle equazioni di regressione. Compila il nostro modulo di contatto per domande, feedback o supporto...",
     "helperText": "Hai una domanda o un feedback? Ci piacerebbe sentire la tua opinione. Compila il modulo sottostante e ti risponderemo il prima possibile.",
     "nameLabel": "Il tuo nome",
     "emailLabel": "La tua e-mail",
@@ -171,23 +171,23 @@
   },
   "terms": {
     "title": "Termini di servizio – Le nostre regole",
-    "description": "Consulta i Termini di servizio per l'utilizzo del calcolatore di equazioni di regressione. Comprendere le nostre regole, le politiche di utilizzo dei dati e le linee guida dei servizi didattici.",
+    "description": "Consulta i Termini di servizio per l'utilizzo del calcolatore di equazioni di regressione. Comprendere le nostre regole, le politiche di utilizzo dei dati...",
     "content": "Accedendo e utilizzando il sito web del Calcolatore delle equazioni di regressione, l'utente accetta di essere vincolato da questi termini. Il nostro strumento è fornito per scopi didattici e analitici. I risultati dovrebbero essere verificati per le applicazioni critiche. Ci riserviamo il diritto di modificare questi termini in qualsiasi momento. L'uso della calcolatrice è gratuito e non garantiamo l'accuratezza dei risultati per scopi professionali o commerciali."
   },
   "privacy": {
     "title": "Informativa sulla privacy – Sicurezza dei dati",
-    "description": "Leggi la nostra Privacy Policy per capire come gestiamo i tuoi dati. Il calcolatore delle equazioni di regressione viene eseguito localmente nel tuo browser per garantire la completa privacy.",
+    "description": "Leggi la nostra Privacy Policy per capire come gestiamo i tuoi dati. Il calcolatore delle equazioni di regressione viene eseguito localmente nel tuo...",
     "content": "Apprezziamo la tua privacy. Il calcolatore delle equazioni di regressione non raccoglie, memorizza o condivide i dati personali immessi nel calcolatore. Tutti i calcoli vengono eseguiti localmente nel tuo browser. Possiamo utilizzare analisi per comprendere i modelli di utilizzo del sito, ma non vengono raccolte informazioni di identificazione personale. Gli invii dei moduli di contatto vengono elaborati in modo sicuro e non vengono condivisi con terze parti."
   },
   "blog": {
     "title": "Blog di guida su statistiche e matematica",
-    "description": "Leggi il nostro blog sulla guida statistica e matematica per articoli completi su analisi di regressione, statistiche, modellazione dei dati e applicazioni pratiche di matematica.",
+    "description": "Leggi il nostro blog sulla guida statistica e matematica per articoli completi su analisi di regressione, statistiche, modellazione dei dati e applicazioni...",
     "readMore": "Per saperne di più",
     "resultsMeta": "Visualizzazione di {inizio}-{fine} di {totale} articoli"
   },
   "calculator": {
     "title": "Calcolatore di regressione lineare",
-    "description": "Inserisci i tuoi punti dati per calcolare l'equazione di regressione. Il nostro strumento fornisce risultati di regressione lineare, polinomiale ed esponenziale con statistiche complete.",
+    "description": "Inserisci i tuoi punti dati per calcolare l'equazione di regressione. Il nostro strumento fornisce risultati di regressione lineare, polinomiale ed...",
     "enterData": "Immissione dei dati di regressione",
     "enterDataHint": "Inserisci i tuoi punti dati qui sotto. Per un'analisi di regressione accurata, includere almeno 10 punti dati che coprano un intervallo ragionevole.",
     "xLabel": "Valori X",
@@ -238,7 +238,7 @@
   },
   "pearson": {
     "title": "Calcolatore di correlazione di Pearson",
-    "description": "Inserisci i tuoi punti dati per calcolare il coefficiente di correlazione di Pearson. Ottieni immediatamente r, r quadrato, valori p e soluzioni dettagliate nel tuo browser.",
+    "description": "Inserisci i tuoi punti dati per calcolare il coefficiente di correlazione di Pearson. Ottieni immediatamente r, r quadrato, valori p e soluzioni...",
     "enterData": "Inserisci i tuoi punti dati",
     "xLabel": "Valori X",
     "yLabel": "Valori Y",
@@ -449,7 +449,7 @@
   },
   "grubbs": {
     "title": "Calcolatore del test di Grubbs: veloce",
-    "description": "Rileva valori anomali nel tuo set di dati utilizzando il test di Grubbs. Il nostro calcolatore fornisce la statistica G, il valore critico e calcoli matematici passo passo.",
+    "description": "Rileva valori anomali nel tuo set di dati utilizzando il test di Grubbs. Il nostro calcolatore fornisce la statistica G, il valore critico e calcoli...",
     "enterData": "Inserisci i tuoi punti dati",
     "valueLabel": "Valore",
     "significanceLevel": "Livello di significatività (α)",
@@ -635,7 +635,7 @@
   },
   "assumptionsChecker": {
     "title": "Controllo delle ipotesi di regressione",
-    "description": "Controlla tutte e quattro le ipotesi di regressione lineare per i tuoi dati. Test di linearità, indipendenza, omoschedasticità e normalità con diagnostica dettagliata.",
+    "description": "Controlla tutte e quattro le ipotesi di regressione lineare per i tuoi dati. Test di linearità, indipendenza, omoschedasticità e normalità con diagnostica...",
     "enterData": "Inserisci i tuoi punti dati",
     "xLabel": "Valori X",
     "yLabel": "Valori Y",
@@ -822,12 +822,12 @@
   },
   "notFound": {
     "title": "Errore 404 - Pagina non trovata!",
-    "description": "La pagina che stai cercando non esiste. Torna alla home page del calcolatore delle equazioni di regressione per accedere ai nostri strumenti gratuiti di analisi statistica.",
+    "description": "La pagina che stai cercando non esiste. Torna alla home page del calcolatore delle equazioni di regressione per accedere ai nostri strumenti gratuiti di...",
     "backHome": "Ritorno a casa"
   },
   "expCalc": {
     "title": "Risolutori di regressione esponenziale",
-    "description": "Calcola le equazioni di regressione esponenziale con il nostro strumento online gratuito. Inserisci i tuoi dati per trovare l'equazione y = a*e^(bx) con la matematica completa passo dopo passo.",
+    "description": "Calcola le equazioni di regressione esponenziale con il nostro strumento online gratuito. Inserisci i tuoi dati per trovare l'equazione y = a*e^(bx) con la...",
     "xLabel": "X",
     "yLabel": "Y",
     "invalidData": "Inserisci almeno 2 punti dati validi con valori Y positivi",
@@ -1117,7 +1117,7 @@
   },
   "lsrlCalc": {
     "title": "Retta di regressione dei minimi quadrati",
-    "description": "Calcola istantaneamente la retta di regressione dei minimi quadrati. Inserisci i tuoi dati per trovare l'equazione della linea OLS più adatta y = mx + b con soluzioni matematiche complete.",
+    "description": "Calcola istantaneamente la retta di regressione dei minimi quadrati. Inserisci i tuoi dati per trovare l'equazione della linea OLS più adatta y = mx + b...",
     "xLabel": "X",
     "yLabel": "Y",
     "invalidData": "Inserisci almeno 2 punti dati validi",
@@ -1398,7 +1398,7 @@
   },
   "rcCalc": {
     "title": "Calcolatore della curva di regressione",
-    "description": "Confronta modelli di regressione lineare, quadratica, esponenziale e logaritmica fianco a fianco. Trova la curva più adatta ai tuoi dati con il nostro strumento online gratuito.",
+    "description": "Confronta modelli di regressione lineare, quadratica, esponenziale e logaritmica fianco a fianco. Trova la curva più adatta ai tuoi dati con il nostro...",
     "xLabel": "X",
     "yLabel": "Y",
     "invalidData": "Inserisci almeno 2 punti dati validi",
@@ -1618,7 +1618,7 @@
   },
   "quadCalc": {
     "title": "Calcolatore di regressione quadratica",
-    "description": "Calcola istantaneamente le equazioni di regressione quadratica (y = ax² + bx + c). Inserisci i tuoi punti dati per una suddivisione e un'analisi matematica gratuita e passo passo.",
+    "description": "Calcola istantaneamente le equazioni di regressione quadratica (y = ax² + bx + c). Inserisci i tuoi punti dati per una suddivisione e un'analisi matematica...",
     "enterData": "Inserisci i tuoi punti dati",
     "xLabel": "Valori X",
     "yLabel": "Valori Y",
@@ -1887,7 +1887,7 @@
   },
   "multiCalc": {
     "title": "Calcolatore di regressione multipla",
-    "description": "Calcolare equazioni di regressione multipla con due o più predittori. Trova il modello migliore per i tuoi dati utilizzando il nostro strumento di analisi statistica online gratuito.",
+    "description": "Calcolare equazioni di regressione multipla con due o più predittori. Trova il modello migliore per i tuoi dati utilizzando il nostro strumento di analisi...",
     "enterData": "Inserisci i tuoi punti dati",
     "predictors": "Numero di predittori",
     "addRow": "Aggiungi riga",
@@ -2133,7 +2133,7 @@
   },
   "sitemap": {
     "title": "Mappa del sito",
-    "description": "Esplora la mappa del sito completa del calcolatore delle equazioni di regressione. Trova tutti i nostri strumenti statistici, calcolatori, post di blog e risorse didattiche di matematica."
+    "description": "Esplora la mappa del sito completa del calcolatore delle equazioni di regressione. Trova tutti i nostri strumenti statistici, calcolatori, post di blog e..."
   },
   "common": {
     "menu": "Menu",
@@ -2159,7 +2159,7 @@
     "statsTitle": "Output statistico"
   },
   "footer": {
-    "description": "Calcolatore online gratuito di equazioni di regressione. Calcola istantaneamente equazioni di regressione lineare, polinomiale e multipla con soluzioni dettagliate.",
+    "description": "Calcolatore online gratuito di equazioni di regressione. Calcola istantaneamente equazioni di regressione lineare, polinomiale e multipla con soluzioni...",
     "toolsTitle": "Strumenti e pagine",
     "companyTitle": "Azienda",
     "connectTitle": "Collegare",

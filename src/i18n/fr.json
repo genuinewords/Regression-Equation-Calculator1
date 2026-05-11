@@ -3,7 +3,7 @@
   "siteDescription": "Calculateur d'équation de régression en ligne gratuit. Calculez instantanément des équations de régression linéaire, polynomiale et multiple avec des solutions étape par étape.",
   "home": {
     "title": "Outil de régression gratuit en ligne",
-    "description": "Calculez les équations de régression en secondes. Notre calculateur gratuit trouve des modèles de régression linéaire, quadratique et exponentielle. Parfait pour l'analyse des données.",
+    "description": "Calculez les équations de régression en secondes. Notre calculateur gratuit trouve des modèles de régression linéaire, quadratique et exponentielle....",
     "intro": "Entrez vos points de données et obtenez l'équation de régression, la pente, l'origine, la valeur R au carré et les calculs étape par étape en quelques secondes.",
     "whatIsTitle": "Qu'est-ce qu'une équation de régression ?",
     "whatIsText": "Une équation de régression modélise la relation entre les variables, vous permettant de prédire les résultats en fonction des données d'entrée. Dans sa forme la plus simple – régression linéaire simple – l'équation est <strong>y = mx + b</strong>, où <strong>m</strong> est la pente et <strong>b</strong> est l'ordonnée à l'origine. Ce puissant outil statistique est utilisé dans les domaines scientifique, commercial et technique pour découvrir des tendances, établir des prévisions et quantifier les relations entre les variables.",
@@ -145,7 +145,7 @@
   },
   "about": {
     "title": "À propos de nous – Consultez notre mission !",
-    "description": "Découvrez le calculateur d’équation de régression. Nous fournissons un outil en ligne gratuit pour calculer rapidement des équations de régression avec des solutions mathématiques étape par étape.",
+    "description": "Découvrez le calculateur d’équation de régression. Nous fournissons un outil en ligne gratuit pour calculer rapidement des équations de régression avec des...",
     "content": "Le calculateur d'équations de régression est un outil en ligne gratuit conçu pour aider les étudiants, les chercheurs et les professionnels à calculer des équations de régression rapidement et avec précision. Notre calculateur prend en charge la régression linéaire et fournit des solutions détaillées étape par étape pour vous aider à comprendre le processus mathématique derrière les résultats. Que vous étudiiez des statistiques, analysiez des données ou travailliez sur des recherches, notre outil rend l'analyse de régression accessible à tous.",
     "mission": "Notre mission",
     "missionText": "Rendre l'analyse de régression accessible à tous, des étudiants qui apprennent les statistiques pour la première fois aux professionnels qui ont besoin de résultats rapides et fiables. Nous pensons que les outils statistiques puissants doivent être gratuits, privés et faciles à utiliser.",
@@ -156,7 +156,7 @@
   },
   "contact": {
     "title": "Contactez-nous – Obtenez de l'aide maintenant",
-    "description": "Contactez l’équipe du calculateur d’équation de régression. Remplissez notre formulaire de contact pour toute question, commentaire ou assistance concernant notre outil statistique.",
+    "description": "Contactez l’équipe du calculateur d’équation de régression. Remplissez notre formulaire de contact pour toute question, commentaire ou assistance...",
     "helperText": "Vous avez une question ou un commentaire ? Nous aimerions avoir de vos nouvelles. Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.",
     "nameLabel": "Votre nom",
     "emailLabel": "Votre e-mail",
@@ -171,23 +171,23 @@
   },
   "terms": {
     "title": "Conditions d'utilisation – Nos règles",
-    "description": "Consultez les conditions d'utilisation du calculateur d'équation de régression. Comprenez nos règles, nos politiques d'utilisation des données et nos directives en matière de services éducatifs.",
+    "description": "Consultez les conditions d'utilisation du calculateur d'équation de régression. Comprenez nos règles, nos politiques d'utilisation des données et nos...",
     "content": "En accédant et en utilisant le site Web du calculateur d'équation de régression, vous acceptez d'être lié par ces conditions. Notre outil est fourni à des fins pédagogiques et analytiques. Les résultats doivent être vérifiés pour les applications critiques. Nous nous réservons le droit de modifier ces conditions à tout moment. L'utilisation du calculateur est gratuite et nous ne garantissons pas l'exactitude des résultats à des fins professionnelles ou commerciales."
   },
   "privacy": {
     "title": "Politique de confidentialité – Sécurité des données",
-    "description": "Lisez notre politique de confidentialité pour comprendre comment nous traitons vos données. Le calculateur d'équation de régression s'exécute localement dans votre navigateur pour garantir une confidentialité totale.",
+    "description": "Lisez notre politique de confidentialité pour comprendre comment nous traitons vos données. Le calculateur d'équation de régression s'exécute localement...",
     "content": "Nous apprécions votre vie privée. Le calculateur d'équation de régression ne collecte, ne stocke ni ne partage aucune donnée personnelle saisie dans le calculateur. Tous les calculs sont effectués localement dans votre navigateur. Nous pouvons utiliser des analyses pour comprendre les modèles d'utilisation du site, mais aucune information personnelle identifiable n'est collectée. Les soumissions par formulaire de contact sont traitées de manière sécurisée et ne sont pas partagées avec des tiers."
   },
   "blog": {
     "title": "Blog du guide des statistiques et des mathématiques",
-    "description": "Lisez notre blog Statistics & Math Guide pour des articles complets sur l'analyse de régression, les statistiques, la modélisation des données et les applications mathématiques pratiques.",
+    "description": "Lisez notre blog Statistics & Math Guide pour des articles complets sur l'analyse de régression, les statistiques, la modélisation des données et les...",
     "readMore": "En savoir plus",
     "resultsMeta": "Affichage de {start} à {end} sur {total} articles"
   },
   "calculator": {
     "title": "Calculateur de régression linéaire",
-    "description": "Entrez vos points de données pour calculer l'équation de régression. Notre outil fournit des résultats de régression linéaire, polynomiale et exponentielle avec des statistiques complètes.",
+    "description": "Entrez vos points de données pour calculer l'équation de régression. Notre outil fournit des résultats de régression linéaire, polynomiale et exponentielle...",
     "enterData": "Entrée de données de régression",
     "enterDataHint": "Entrez vos points de données ci-dessous. Pour une analyse de régression précise, incluez au moins 10 points de données couvrant une plage raisonnable.",
     "xLabel": "Valeurs X",
@@ -238,7 +238,7 @@
   },
   "pearson": {
     "title": "Calculateur de corrélation de Pearson",
-    "description": "Entrez vos points de données pour calculer le coefficient de corrélation de Pearson. Obtenez instantanément des solutions r, r au carré, valeurs p et étape par étape dans votre navigateur.",
+    "description": "Entrez vos points de données pour calculer le coefficient de corrélation de Pearson. Obtenez instantanément des solutions r, r au carré, valeurs p et étape...",
     "enterData": "Entrez vos points de données",
     "xLabel": "Valeurs X",
     "yLabel": "Valeurs Y",
@@ -449,7 +449,7 @@
   },
   "grubbs": {
     "title": "Calculateur de test de Grubbs : rapide",
-    "description": "Détectez les valeurs aberrantes dans votre ensemble de données à l'aide du test de Grubbs. Notre calculatrice fournit la statistique G, la valeur critique et des calculs mathématiques étape par étape.",
+    "description": "Détectez les valeurs aberrantes dans votre ensemble de données à l'aide du test de Grubbs. Notre calculatrice fournit la statistique G, la valeur critique...",
     "enterData": "Entrez vos points de données",
     "valueLabel": "Valeur",
     "significanceLevel": "Niveau de signification (α)",
@@ -635,7 +635,7 @@
   },
   "assumptionsChecker": {
     "title": "Vérificateur d'hypothèses de régression",
-    "description": "Vérifiez les quatre hypothèses de régression linéaire pour vos données. Testez la linéarité, l’indépendance, l’homoscédasticité et la normalité avec des diagnostics détaillés.",
+    "description": "Vérifiez les quatre hypothèses de régression linéaire pour vos données. Testez la linéarité, l’indépendance, l’homoscédasticité et la normalité avec des...",
     "enterData": "Entrez vos points de données",
     "xLabel": "Valeurs X",
     "yLabel": "Valeurs Y",
@@ -822,12 +822,12 @@
   },
   "notFound": {
     "title": "Erreur 404 – Page introuvable !",
-    "description": "La page que vous recherchez n'existe pas. Revenez à la page d'accueil du calculateur d'équation de régression pour accéder à nos outils d'analyse statistique gratuits.",
+    "description": "La page que vous recherchez n'existe pas. Revenez à la page d'accueil du calculateur d'équation de régression pour accéder à nos outils d'analyse...",
     "backHome": "Retour à la maison"
   },
   "expCalc": {
     "title": "Solveurs de régression exponentielle",
-    "description": "Calculez des équations de régression exponentielle avec notre outil en ligne gratuit. Entrez vos points de données pour trouver l'équation y = a*e^(bx) avec des calculs complets étape par étape.",
+    "description": "Calculez des équations de régression exponentielle avec notre outil en ligne gratuit. Entrez vos points de données pour trouver l'équation y = a*e^(bx)...",
     "xLabel": "X",
     "yLabel": "Oui",
     "invalidData": "Veuillez saisir au moins 2 points de données valides avec des valeurs Y positives",
@@ -1117,7 +1117,7 @@
   },
   "lsrlCalc": {
     "title": "Ligne de régression des moindres carrés",
-    "description": "Calculez instantanément la droite de régression des moindres carrés. Entrez vos données pour trouver l'équation linéaire la mieux ajustée OLS y = mx + b avec des solutions mathématiques complètes.",
+    "description": "Calculez instantanément la droite de régression des moindres carrés. Entrez vos données pour trouver l'équation linéaire la mieux ajustée OLS y = mx + b...",
     "xLabel": "X",
     "yLabel": "Oui",
     "invalidData": "Veuillez saisir au moins 2 points de données valides",
@@ -1398,7 +1398,7 @@
   },
   "rcCalc": {
     "title": "Calculateur de courbe de régression",
-    "description": "Comparez côte à côte les modèles de régression linéaire, quadratique, exponentielle et logarithmique. Trouvez la courbe d'ajustement la mieux adaptée à vos données grâce à notre outil en ligne gratuit.",
+    "description": "Comparez côte à côte les modèles de régression linéaire, quadratique, exponentielle et logarithmique. Trouvez la courbe d'ajustement la mieux adaptée à vos...",
     "xLabel": "X",
     "yLabel": "Oui",
     "invalidData": "Veuillez saisir au moins 2 points de données valides",
@@ -1618,7 +1618,7 @@
   },
   "quadCalc": {
     "title": "Calculateur de régression quadratique",
-    "description": "Calculez instantanément les équations de régression quadratique (y = ax² + bx + c). Entrez vos points de données pour une analyse et une analyse mathématiques gratuites, étape par étape.",
+    "description": "Calculez instantanément les équations de régression quadratique (y = ax² + bx + c). Entrez vos points de données pour une analyse et une analyse...",
     "enterData": "Entrez vos points de données",
     "xLabel": "Valeurs X",
     "yLabel": "Valeurs Y",
@@ -1887,7 +1887,7 @@
   },
   "multiCalc": {
     "title": "Calculateur de régression multiple",
-    "description": "Calculez plusieurs équations de régression avec deux prédicteurs ou plus. Trouvez le meilleur modèle pour vos données à l’aide de notre outil d’analyse statistique en ligne gratuit.",
+    "description": "Calculez plusieurs équations de régression avec deux prédicteurs ou plus. Trouvez le meilleur modèle pour vos données à l’aide de notre outil d’analyse...",
     "enterData": "Entrez vos points de données",
     "predictors": "Nombre de prédicteurs",
     "addRow": "Ajouter une ligne",
@@ -2133,7 +2133,7 @@
   },
   "sitemap": {
     "title": "Plan du site",
-    "description": "Explorez le plan du site complet du calculateur d'équation de régression. Retrouvez tous nos outils statistiques, calculatrices, articles de blog et ressources en mathématiques pédagogiques."
+    "description": "Explorez le plan du site complet du calculateur d'équation de régression. Retrouvez tous nos outils statistiques, calculatrices, articles de blog et..."
   },
   "common": {
     "menu": "Menu",
@@ -2159,7 +2159,7 @@
     "statsTitle": "Résultats statistiques"
   },
   "footer": {
-    "description": "Calculateur d'équation de régression en ligne gratuit. Calculez instantanément des équations de régression linéaire, polynomiale et multiple avec des solutions étape par étape.",
+    "description": "Calculateur d'équation de régression en ligne gratuit. Calculez instantanément des équations de régression linéaire, polynomiale et multiple avec des...",
     "toolsTitle": "Outils et pages",
     "companyTitle": "Entreprise",
     "connectTitle": "Connecter",

@@ -3,7 +3,7 @@
   "siteDescription": "Kalkulator persamaan regresi online gratis. Hitung persamaan regresi linier, polinomial, dan berganda secara instan dengan solusi langkah demi langkah.",
   "home": {
     "title": "Alat Regresi Online Gratis",
-    "description": "Hitung persamaan regresi dalam hitungan detik. Kalkulator gratis kami menemukan model regresi linier, kuadrat, dan eksponensial. Sempurna untuk analisis data.",
+    "description": "Hitung persamaan regresi dalam hitungan detik. Kalkulator gratis kami menemukan model regresi linier, kuadrat, dan eksponensial. Sempurna untuk analisis...",
     "intro": "Masukkan titik data Anda dan dapatkan persamaan regresi, kemiringan, intersep, nilai R-kuadrat, dan penghitungan langkah demi langkah dalam hitungan detik.",
     "whatIsTitle": "Apa Itu Persamaan Regresi?",
     "whatIsText": "Persamaan regresi memodelkan hubungan antar variabel, memungkinkan Anda memprediksi hasil berdasarkan data masukan. Dalam bentuk paling sederhana — regresi linier sederhana — persamaannya adalah <strong>y = mx + b</strong>, dengan <strong>m</strong> adalah kemiringan dan <strong>b</strong> adalah titik potong y. Alat statistik canggih ini digunakan di bidang sains, bisnis, dan teknik untuk mengungkap tren, membuat perkiraan, dan mengukur hubungan antar variabel.",
@@ -145,7 +145,7 @@
   },
   "about": {
     "title": "Tentang Kami – Lihat Misi Kami!",
-    "description": "Pelajari tentang Kalkulator Persamaan Regresi. Kami menyediakan alat online gratis untuk menghitung persamaan regresi dengan cepat menggunakan solusi matematika langkah demi langkah.",
+    "description": "Pelajari tentang Kalkulator Persamaan Regresi. Kami menyediakan alat online gratis untuk menghitung persamaan regresi dengan cepat menggunakan solusi...",
     "content": "Kalkulator Persamaan Regresi adalah alat online gratis yang dirancang untuk membantu pelajar, peneliti, dan profesional menghitung persamaan regresi dengan cepat dan akurat. Kalkulator kami mendukung regresi linier dan memberikan solusi langkah demi langkah yang terperinci untuk membantu Anda memahami proses matematika di balik hasilnya. Baik Anda mempelajari statistik, menganalisis data, atau mengerjakan penelitian, alat kami membuat analisis regresi dapat diakses oleh semua orang.",
     "mission": "Misi kami",
     "missionText": "Untuk membuat analisis regresi dapat diakses oleh semua orang — mulai dari pelajar yang mempelajari statistik untuk pertama kalinya hingga profesional yang membutuhkan hasil yang cepat dan andal. Kami percaya bahwa alat statistik yang canggih harus gratis, pribadi, dan mudah digunakan.",
@@ -171,23 +171,23 @@
   },
   "terms": {
     "title": "Ketentuan Layanan – Peraturan Kami",
-    "description": "Tinjau Persyaratan Layanan untuk menggunakan Kalkulator Persamaan Regresi. Pahami peraturan kami, kebijakan penggunaan data, dan pedoman layanan pendidikan.",
+    "description": "Tinjau Persyaratan Layanan untuk menggunakan Kalkulator Persamaan Regresi. Pahami peraturan kami, kebijakan penggunaan data, dan pedoman layanan pendidikan...",
     "content": "Dengan mengakses dan menggunakan situs Kalkulator Persamaan Regresi, Anda setuju untuk terikat dengan ketentuan ini. Alat kami disediakan untuk tujuan pendidikan dan analitis. Hasil harus diverifikasi untuk aplikasi penting. Kami berhak mengubah ketentuan ini kapan saja. Penggunaan kalkulator ini gratis dan kami tidak menjamin keakuratan hasil untuk tujuan profesional atau komersial."
   },
   "privacy": {
     "title": "Kebijakan Privasi – Keamanan Data",
-    "description": "Baca Kebijakan Privasi kami untuk memahami cara kami menangani data Anda. Kalkulator Persamaan Regresi berjalan secara lokal di browser Anda untuk memastikan privasi penuh.",
+    "description": "Baca Kebijakan Privasi kami untuk memahami cara kami menangani data Anda. Kalkulator Persamaan Regresi berjalan secara lokal di browser Anda untuk...",
     "content": "Kami menghargai privasi Anda. Kalkulator Persamaan Regresi tidak mengumpulkan, menyimpan, atau membagikan data pribadi apa pun yang dimasukkan ke dalam kalkulator. Semua penghitungan dilakukan secara lokal di browser Anda. Kami mungkin menggunakan analitik untuk memahami pola penggunaan situs, namun tidak ada informasi identitas pribadi yang dikumpulkan. Pengiriman formulir kontak diproses dengan aman dan tidak dibagikan kepada pihak ketiga."
   },
   "blog": {
     "title": "Blog Statistik & Panduan Matematika",
-    "description": "Baca Blog Statistik & Panduan Matematika kami untuk artikel komprehensif tentang analisis regresi, statistik, pemodelan data, dan aplikasi matematika praktis.",
+    "description": "Baca Blog Statistik & Panduan Matematika kami untuk artikel komprehensif tentang analisis regresi, statistik, pemodelan data, dan aplikasi matematika...",
     "readMore": "Baca selengkapnya",
     "resultsMeta": "Menampilkan {start}-{end} dari {total} artikel"
   },
   "calculator": {
     "title": "Kalkulator Regresi Linier",
-    "description": "Masukkan poin data Anda untuk menghitung persamaan regresi. Alat kami memberikan hasil regresi linier, polinomial, dan eksponensial dengan statistik lengkap.",
+    "description": "Masukkan poin data Anda untuk menghitung persamaan regresi. Alat kami memberikan hasil regresi linier, polinomial, dan eksponensial dengan statistik...",
     "enterData": "Masukan Data Regresi",
     "enterDataHint": "Masukkan poin data Anda di bawah. Untuk analisis regresi yang akurat, sertakan setidaknya 10 titik data yang mencakup rentang yang wajar.",
     "xLabel": "Nilai X",
@@ -238,7 +238,7 @@
   },
   "pearson": {
     "title": "Kalkulator Korelasi Pearson",
-    "description": "Masukkan poin data Anda untuk menghitung koefisien korelasi Pearson. Dapatkan solusi r, r-kuadrat, nilai-p, dan langkah demi langkah secara instan di browser Anda.",
+    "description": "Masukkan poin data Anda untuk menghitung koefisien korelasi Pearson. Dapatkan solusi r, r-kuadrat, nilai-p, dan langkah demi langkah secara instan di...",
     "enterData": "Masukkan poin data Anda",
     "xLabel": "Nilai X",
     "yLabel": "Nilai Y",
@@ -449,7 +449,7 @@
   },
   "grubbs": {
     "title": "Kalkulator Tes Grubbs: Cepat",
-    "description": "Deteksi outlier dalam kumpulan data Anda menggunakan uji Grubbs. Kalkulator kami menyediakan statistik G, nilai kritis, dan perhitungan matematis langkah demi langkah.",
+    "description": "Deteksi outlier dalam kumpulan data Anda menggunakan uji Grubbs. Kalkulator kami menyediakan statistik G, nilai kritis, dan perhitungan matematis langkah...",
     "enterData": "Masukkan poin data Anda",
     "valueLabel": "Nilai",
     "significanceLevel": "Tingkat Signifikansi (α)",
@@ -827,7 +827,7 @@
   },
   "expCalc": {
     "title": "Pemecah Regresi Eksponensial",
-    "description": "Hitung persamaan regresi eksponensial dengan alat online gratis kami. Masukkan titik data Anda untuk mencari persamaan y = a*e^(bx) dengan matematika langkah demi langkah lengkap.",
+    "description": "Hitung persamaan regresi eksponensial dengan alat online gratis kami. Masukkan titik data Anda untuk mencari persamaan y = a*e^(bx) dengan matematika...",
     "xLabel": "X",
     "yLabel": "Y",
     "invalidData": "Harap masukkan setidaknya 2 titik data valid dengan nilai Y positif",
@@ -1117,7 +1117,7 @@
   },
   "lsrlCalc": {
     "title": "Garis Regresi Kuadrat Terkecil",
-    "description": "Hitung garis regresi kuadrat terkecil secara instan. Masukkan data Anda untuk menemukan persamaan garis OLS yang paling sesuai y = mx + b dengan solusi matematika komprehensif.",
+    "description": "Hitung garis regresi kuadrat terkecil secara instan. Masukkan data Anda untuk menemukan persamaan garis OLS yang paling sesuai y = mx + b dengan solusi...",
     "xLabel": "X",
     "yLabel": "Y",
     "invalidData": "Silakan masukkan setidaknya 2 poin data yang valid",
@@ -1398,7 +1398,7 @@
   },
   "rcCalc": {
     "title": "Kalkulator Kurva Regresi",
-    "description": "Bandingkan model regresi linier, kuadrat, eksponensial, dan logaritma secara berdampingan. Temukan kurva yang paling sesuai untuk data Anda dengan alat online gratis kami.",
+    "description": "Bandingkan model regresi linier, kuadrat, eksponensial, dan logaritma secara berdampingan. Temukan kurva yang paling sesuai untuk data Anda dengan alat...",
     "xLabel": "X",
     "yLabel": "Y",
     "invalidData": "Silakan masukkan setidaknya 2 poin data yang valid",
@@ -1618,7 +1618,7 @@
   },
   "quadCalc": {
     "title": "Kalkulator Regresi Kuadrat",
-    "description": "Hitung persamaan regresi kuadrat (y = ax² + bx + c) secara instan. Masukkan poin data Anda untuk mendapatkan rincian dan analisis matematika langkah demi langkah secara gratis.",
+    "description": "Hitung persamaan regresi kuadrat (y = ax² + bx + c) secara instan. Masukkan poin data Anda untuk mendapatkan rincian dan analisis matematika langkah demi...",
     "enterData": "Masukkan poin data Anda",
     "xLabel": "Nilai X",
     "yLabel": "Nilai Y",
@@ -1887,7 +1887,7 @@
   },
   "multiCalc": {
     "title": "Kalkulator Regresi Berganda",
-    "description": "Hitung persamaan regresi berganda dengan dua atau lebih prediktor. Temukan model terbaik untuk data Anda menggunakan alat analisis statistik online gratis kami.",
+    "description": "Hitung persamaan regresi berganda dengan dua atau lebih prediktor. Temukan model terbaik untuk data Anda menggunakan alat analisis statistik online gratis...",
     "enterData": "Masukkan poin data Anda",
     "predictors": "Jumlah Prediktor",
     "addRow": "Tambahkan Baris",
@@ -2133,7 +2133,7 @@
   },
   "sitemap": {
     "title": "Peta Situs",
-    "description": "Jelajahi peta situs Kalkulator Persamaan Regresi yang lengkap. Temukan semua alat statistik, kalkulator, postingan blog, dan sumber daya matematika pendidikan kami."
+    "description": "Jelajahi peta situs Kalkulator Persamaan Regresi yang lengkap. Temukan semua alat statistik, kalkulator, postingan blog, dan sumber daya matematika..."
   },
   "common": {
     "menu": "Menu",

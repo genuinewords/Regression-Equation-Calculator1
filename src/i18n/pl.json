@@ -3,7 +3,7 @@
   "siteDescription": "Darmowy kalkulator równań regresji online. Błyskawicznie obliczaj równania regresji liniowej, wielomianowej i wielokrotnej, korzystając z rozwiązań krok po kroku.",
   "home": {
     "title": "Bezpłatne narzędzie do regresji online",
-    "description": "Oblicz równania regresji w ciągu kilku sekund. Nasz darmowy kalkulator znajduje modele regresji liniowej, kwadratowej i wykładniczej. Idealny do analizy danych.",
+    "description": "Oblicz równania regresji w ciągu kilku sekund. Nasz darmowy kalkulator znajduje modele regresji liniowej, kwadratowej i wykładniczej. Idealny do analizy...",
     "intro": "Wprowadź swoje punkty danych i uzyskaj równanie regresji, nachylenie, punkt przecięcia, wartość R-kwadrat i obliczenia krok po kroku w ciągu kilku sekund.",
     "whatIsTitle": "Co to jest równanie regresji?",
     "whatIsText": "Równanie regresji modeluje relację między zmiennymi, umożliwiając przewidywanie wyników na podstawie danych wejściowych. W najprostszej formie — prostej regresji liniowej — równanie ma postać <strong>y = mx + b</strong>, gdzie <strong>m</strong> to nachylenie, a <strong>b</strong> to punkt przecięcia z osią y. To potężne narzędzie statystyczne jest wykorzystywane w nauce, biznesie i inżynierii do odkrywania trendów, tworzenia prognoz i ilościowego określania zależności między zmiennymi.",
@@ -145,7 +145,7 @@
   },
   "about": {
     "title": "O nas – Zobacz naszą misję!",
-    "description": "Dowiedz się więcej o kalkulatorze równań regresji. Udostępniamy bezpłatne narzędzie online umożliwiające szybkie obliczanie równań regresji za pomocą rozwiązań matematycznych krok po kroku.",
+    "description": "Dowiedz się więcej o kalkulatorze równań regresji. Udostępniamy bezpłatne narzędzie online umożliwiające szybkie obliczanie równań regresji za pomocą...",
     "content": "Kalkulator równań regresji to bezpłatne narzędzie internetowe zaprojektowane, aby pomóc studentom, badaczom i profesjonalistom w szybkim i dokładnym obliczaniu równań regresji. Nasz kalkulator obsługuje regresję liniową i zapewnia szczegółowe rozwiązania krok po kroku, które pomogą Ci zrozumieć proces matematyczny leżący u podstaw wyników. Niezależnie od tego, czy studiujesz statystyki, analizujesz dane, czy pracujesz nad badaniami, dzięki naszemu narzędziu analiza regresji jest dostępna dla każdego.",
     "mission": "Nasza misja",
     "missionText": "Aby analiza regresji była dostępna dla każdego — od studentów uczących się statystyki po raz pierwszy po profesjonalistów, którzy potrzebują szybkich i wiarygodnych wyników. Wierzymy, że potężne narzędzia statystyczne powinny być bezpłatne, prywatne i łatwe w użyciu.",
@@ -156,7 +156,7 @@
   },
   "contact": {
     "title": "Skontaktuj się z nami — uzyskaj wsparcie już teraz",
-    "description": "Skontaktuj się z zespołem Kalkulatora Równań Regresji. Wypełnij nasz formularz kontaktowy, aby uzyskać pytania, opinie lub wsparcie dotyczące naszego narzędzia statystycznego.",
+    "description": "Skontaktuj się z zespołem Kalkulatora Równań Regresji. Wypełnij nasz formularz kontaktowy, aby uzyskać pytania, opinie lub wsparcie dotyczące naszego...",
     "helperText": "Masz pytanie lub opinię? Chcielibyśmy usłyszeć od ciebie. Wypełnij poniższy formularz, a my skontaktujemy się z Tobą tak szybko, jak to możliwe.",
     "nameLabel": "Twoje imię",
     "emailLabel": "Twój e-mail",
@@ -171,23 +171,23 @@
   },
   "terms": {
     "title": "Regulamin świadczenia usług – nasz regulamin",
-    "description": "Przejrzyj Warunki korzystania z usługi Kalkulator równań regresji. Zapoznaj się z naszymi zasadami, polityką wykorzystania danych i wytycznymi dotyczącymi usług edukacyjnych.",
+    "description": "Przejrzyj Warunki korzystania z usługi Kalkulator równań regresji. Zapoznaj się z naszymi zasadami, polityką wykorzystania danych i wytycznymi dotyczącymi...",
     "content": "Wchodząc na stronę internetową Kalkulatora równań regresji i korzystając z niej, wyrażasz zgodę na przestrzeganie niniejszych warunków. Nasze narzędzie służy celom edukacyjnym i analitycznym. Wyniki należy zweryfikować pod kątem zastosowań krytycznych. Zastrzegamy sobie prawo do zmiany niniejszych warunków w dowolnym momencie. Korzystanie z kalkulatora jest bezpłatne i nie gwarantujemy dokładności wyników w celach zawodowych lub komercyjnych."
   },
   "privacy": {
     "title": "Polityka prywatności – Bezpieczeństwo danych",
-    "description": "Przeczytaj naszą Politykę prywatności, aby zrozumieć, w jaki sposób obchodzimy się z Twoimi danymi. Kalkulator równań regresji działa lokalnie w przeglądarce, aby zapewnić całkowitą prywatność.",
+    "description": "Przeczytaj naszą Politykę prywatności, aby zrozumieć, w jaki sposób obchodzimy się z Twoimi danymi. Kalkulator równań regresji działa lokalnie w...",
     "content": "Cenimy Twoją prywatność. Kalkulator równań regresji nie gromadzi, nie przechowuje ani nie udostępnia żadnych danych osobowych wprowadzonych do kalkulatora. Wszystkie obliczenia wykonywane są lokalnie w Twojej przeglądarce. Możemy korzystać z analiz w celu zrozumienia wzorców korzystania z witryny, ale nie są gromadzone żadne dane osobowe. Przesłane formularze kontaktowe są przetwarzane w sposób bezpieczny i nie są udostępniane osobom trzecim."
   },
   "blog": {
     "title": "Blog dotyczący statystyk i matematyki",
-    "description": "Przeczytaj nasz blog z przewodnikami po statystykach i matematyce, w którym znajdziesz obszerne artykuły na temat analizy regresji, statystyki, modelowania danych i praktycznych zastosowań matematyki.",
+    "description": "Przeczytaj nasz blog z przewodnikami po statystykach i matematyce, w którym znajdziesz obszerne artykuły na temat analizy regresji, statystyki, modelowania...",
     "readMore": "Przeczytaj więcej",
     "resultsMeta": "Wyświetlanie {start}-{end} z {total} artykułów"
   },
   "calculator": {
     "title": "Kalkulator regresji liniowej",
-    "description": "Wprowadź punkty danych, aby obliczyć równanie regresji. Nasze narzędzie zapewnia wyniki regresji liniowej, wielomianowej i wykładniczej wraz z pełnymi statystykami.",
+    "description": "Wprowadź punkty danych, aby obliczyć równanie regresji. Nasze narzędzie zapewnia wyniki regresji liniowej, wielomianowej i wykładniczej wraz z pełnymi...",
     "enterData": "Wprowadzanie danych regresyjnych",
     "enterDataHint": "Wpisz poniżej swoje punkty danych. Aby uzyskać dokładną analizę regresji, należy uwzględnić co najmniej 10 punktów danych obejmujących rozsądny zakres.",
     "xLabel": "Wartości X",
@@ -238,7 +238,7 @@
   },
   "pearson": {
     "title": "Kalkulator korelacji Pearsona",
-    "description": "Wprowadź swoje punkty danych, aby obliczyć współczynnik korelacji Pearsona. Uzyskaj natychmiastowe r, r-kwadrat, wartości p i rozwiązania krok po kroku w swojej przeglądarce.",
+    "description": "Wprowadź swoje punkty danych, aby obliczyć współczynnik korelacji Pearsona. Uzyskaj natychmiastowe r, r-kwadrat, wartości p i rozwiązania krok po kroku w...",
     "enterData": "Wprowadź swoje punkty danych",
     "xLabel": "Wartości X",
     "yLabel": "Wartości Y",
@@ -449,7 +449,7 @@
   },
   "grubbs": {
     "title": "Kalkulator testu Grubbsa: szybki",
-    "description": "Wykryj wartości odstające w swoim zbiorze danych za pomocą testu Grubbsa. Nasz kalkulator zapewnia statystykę G, wartość krytyczną i szczegółowe obliczenia matematyczne.",
+    "description": "Wykryj wartości odstające w swoim zbiorze danych za pomocą testu Grubbsa. Nasz kalkulator zapewnia statystykę G, wartość krytyczną i szczegółowe obliczenia...",
     "enterData": "Wprowadź swoje punkty danych",
     "valueLabel": "Wartość",
     "significanceLevel": "Poziom istotności (α)",
@@ -635,7 +635,7 @@
   },
   "assumptionsChecker": {
     "title": "Sprawdzanie założeń regresji",
-    "description": "Sprawdź wszystkie cztery założenia regresji liniowej dla swoich danych. Testuj liniowość, niezależność, homoskedastyczność i normalność za pomocą szczegółowej diagnostyki.",
+    "description": "Sprawdź wszystkie cztery założenia regresji liniowej dla swoich danych. Testuj liniowość, niezależność, homoskedastyczność i normalność za pomocą...",
     "enterData": "Wprowadź swoje punkty danych",
     "xLabel": "Wartości X",
     "yLabel": "Wartości Y",
@@ -822,12 +822,12 @@
   },
   "notFound": {
     "title": "Błąd 404 — nie znaleziono strony!",
-    "description": "Strona, której szukasz nie istnieje. Przejdź z powrotem do strony głównej Kalkulatora równań regresji, aby uzyskać dostęp do naszych bezpłatnych narzędzi do analizy statystycznej.",
+    "description": "Strona, której szukasz nie istnieje. Przejdź z powrotem do strony głównej Kalkulatora równań regresji, aby uzyskać dostęp do naszych bezpłatnych narzędzi...",
     "backHome": "Powrót do domu"
   },
   "expCalc": {
     "title": "Rozwiązania regresji wykładniczej",
-    "description": "Oblicz równania regresji wykładniczej za pomocą naszego bezpłatnego narzędzia online. Wprowadź swoje punkty danych, aby znaleźć równanie y = a*e^(bx) z pełną matematyką krok po kroku.",
+    "description": "Oblicz równania regresji wykładniczej za pomocą naszego bezpłatnego narzędzia online. Wprowadź swoje punkty danych, aby znaleźć równanie y = a*e^(bx) z...",
     "xLabel": "X",
     "yLabel": "Y",
     "invalidData": "Proszę wprowadzić co najmniej 2 prawidłowe punkty danych z dodatnimi wartościami Y",
@@ -1117,7 +1117,7 @@
   },
   "lsrlCalc": {
     "title": "Linia regresji metodą najmniejszych kwadratów",
-    "description": "Natychmiast oblicz linię regresji metodą najmniejszych kwadratów. Wprowadź swoje dane, aby znaleźć najlepiej dopasowane równanie liniowe OLS y = mx + b z kompleksowymi rozwiązaniami matematycznymi.",
+    "description": "Natychmiast oblicz linię regresji metodą najmniejszych kwadratów. Wprowadź swoje dane, aby znaleźć najlepiej dopasowane równanie liniowe OLS y = mx + b z...",
     "xLabel": "X",
     "yLabel": "Y",
     "invalidData": "Proszę wprowadzić co najmniej 2 prawidłowe punkty danych",
@@ -1398,7 +1398,7 @@
   },
   "rcCalc": {
     "title": "Kalkulator krzywej regresji",
-    "description": "Porównuj modele regresji liniowej, kwadratowej, wykładniczej i logarytmicznej obok siebie. Znajdź najlepszą krzywą dopasowania do swoich danych za pomocą naszego bezpłatnego narzędzia online.",
+    "description": "Porównuj modele regresji liniowej, kwadratowej, wykładniczej i logarytmicznej obok siebie. Znajdź najlepszą krzywą dopasowania do swoich danych za pomocą...",
     "xLabel": "X",
     "yLabel": "Y",
     "invalidData": "Proszę wprowadzić co najmniej 2 prawidłowe punkty danych",
@@ -1618,7 +1618,7 @@
   },
   "quadCalc": {
     "title": "Kalkulator regresji kwadratowej",
-    "description": "Natychmiast oblicz równania regresji kwadratowej (y = ax² + bx + c). Wprowadź swoje punkty danych, aby uzyskać bezpłatny, szczegółowy podział matematyczny i analizę.",
+    "description": "Natychmiast oblicz równania regresji kwadratowej (y = ax² + bx + c). Wprowadź swoje punkty danych, aby uzyskać bezpłatny, szczegółowy podział matematyczny...",
     "enterData": "Wprowadź swoje punkty danych",
     "xLabel": "Wartości X",
     "yLabel": "Wartości Y",
@@ -1887,7 +1887,7 @@
   },
   "multiCalc": {
     "title": "Kalkulator regresji wielokrotnej",
-    "description": "Oblicz równania regresji wielokrotnej z dwoma lub większą liczbą predyktorów. Znajdź najlepszy model dla swoich danych, korzystając z naszego bezpłatnego narzędzia do analizy statystycznej online.",
+    "description": "Oblicz równania regresji wielokrotnej z dwoma lub większą liczbą predyktorów. Znajdź najlepszy model dla swoich danych, korzystając z naszego bezpłatnego...",
     "enterData": "Wprowadź swoje punkty danych",
     "predictors": "Liczba predyktorów",
     "addRow": "Dodaj wiersz",
@@ -2133,7 +2133,7 @@
   },
   "sitemap": {
     "title": "Mapa witryny",
-    "description": "Zapoznaj się z pełną mapą witryny Kalkulatora równań regresji. Znajdź wszystkie nasze narzędzia statystyczne, kalkulatory, wpisy na blogu i edukacyjne zasoby matematyczne."
+    "description": "Zapoznaj się z pełną mapą witryny Kalkulatora równań regresji. Znajdź wszystkie nasze narzędzia statystyczne, kalkulatory, wpisy na blogu i edukacyjne..."
   },
   "common": {
     "menu": "Menu",
@@ -2159,7 +2159,7 @@
     "statsTitle": "Wyniki statystyczne"
   },
   "footer": {
-    "description": "Darmowy kalkulator równań regresji online. Błyskawicznie obliczaj równania regresji liniowej, wielomianowej i wielokrotnej, korzystając z rozwiązań krok po kroku.",
+    "description": "Darmowy kalkulator równań regresji online. Błyskawicznie obliczaj równania regresji liniowej, wielomianowej i wielokrotnej, korzystając z rozwiązań krok po...",
     "toolsTitle": "Narzędzia i strony",
     "companyTitle": "Firma",
     "connectTitle": "Łączyć",

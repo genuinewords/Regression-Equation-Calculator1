@@ -145,7 +145,7 @@
   },
   "about": {
     "title": "Mengenai Kami – Lihat Misi Kami!",
-    "description": "Ketahui tentang Kalkulator Persamaan Regresi. Kami menyediakan alat dalam talian percuma untuk mengira persamaan regresi dengan cepat dengan penyelesaian matematik langkah demi langkah.",
+    "description": "Ketahui tentang Kalkulator Persamaan Regresi. Kami menyediakan alat dalam talian percuma untuk mengira persamaan regresi dengan cepat dengan penyelesaian...",
     "content": "Kalkulator Persamaan Regresi ialah alat dalam talian percuma yang direka untuk membantu pelajar, penyelidik dan profesional mengira persamaan regresi dengan cepat dan tepat. Kalkulator kami menyokong regresi linear dan menyediakan penyelesaian langkah demi langkah terperinci untuk membantu anda memahami proses matematik di sebalik keputusan. Sama ada anda sedang mengkaji statistik, menganalisis data atau menjalankan penyelidikan, alat kami menjadikan analisis regresi boleh diakses oleh semua orang.",
     "mission": "Misi Kami",
     "missionText": "Untuk menjadikan analisis regresi boleh diakses oleh semua orang — daripada pelajar mempelajari statistik buat kali pertama kepada profesional yang memerlukan hasil yang cepat dan boleh dipercayai. Kami percaya bahawa alat statistik yang berkuasa haruslah percuma, peribadi dan mudah digunakan.",
@@ -171,17 +171,17 @@
   },
   "terms": {
     "title": "Syarat Perkhidmatan – Peraturan Kami",
-    "description": "Semak Syarat Perkhidmatan untuk menggunakan Kalkulator Persamaan Regresi. Fahami peraturan kami, dasar penggunaan data dan garis panduan perkhidmatan pendidikan.",
+    "description": "Semak Syarat Perkhidmatan untuk menggunakan Kalkulator Persamaan Regresi. Fahami peraturan kami, dasar penggunaan data dan garis panduan perkhidmatan...",
     "content": "Dengan mengakses dan menggunakan laman web Regression Equation Calculator, anda bersetuju untuk terikat dengan syarat ini. Alat kami disediakan untuk tujuan pendidikan dan analisis. Keputusan harus disahkan untuk aplikasi kritikal. Kami berhak untuk mengubah suai syarat ini pada bila-bila masa. Penggunaan kalkulator adalah percuma dan kami tidak menjamin ketepatan keputusan untuk tujuan profesional atau komersial."
   },
   "privacy": {
     "title": "Dasar Privasi – Keselamatan Data",
-    "description": "Baca Dasar Privasi kami untuk memahami cara kami mengendalikan data anda. Kalkulator Persamaan Regresi berjalan secara setempat dalam penyemak imbas anda untuk memastikan privasi lengkap.",
+    "description": "Baca Dasar Privasi kami untuk memahami cara kami mengendalikan data anda. Kalkulator Persamaan Regresi berjalan secara setempat dalam penyemak imbas anda...",
     "content": "Kami menghargai privasi anda. Kalkulator Persamaan Regresi tidak mengumpul, menyimpan atau berkongsi sebarang data peribadi yang dimasukkan ke dalam kalkulator. Semua pengiraan dilakukan secara setempat dalam penyemak imbas anda. Kami mungkin menggunakan analitis untuk memahami corak penggunaan tapak, tetapi tiada maklumat yang boleh dikenal pasti secara peribadi dikumpulkan. Penyerahan borang hubungan diproses dengan selamat dan tidak dikongsi dengan pihak ketiga."
   },
   "blog": {
     "title": "Blog Statistik & Panduan Matematik",
-    "description": "Baca Blog Panduan Statistik & Matematik kami untuk artikel komprehensif tentang analisis regresi, statistik, pemodelan data dan aplikasi matematik praktikal.",
+    "description": "Baca Blog Panduan Statistik & Matematik kami untuk artikel komprehensif tentang analisis regresi, statistik, pemodelan data dan aplikasi matematik...",
     "readMore": "Baca Lagi",
     "resultsMeta": "Menunjukkan {start}-{end} daripada {total} artikel"
   },
@@ -238,7 +238,7 @@
   },
   "pearson": {
     "title": "Kalkulator Korelasi Pearson",
-    "description": "Masukkan titik data anda untuk mengira pekali korelasi Pearson. Dapatkan penyelesaian r, r-kuadrat, p-nilai dan langkah demi langkah dalam penyemak imbas anda.",
+    "description": "Masukkan titik data anda untuk mengira pekali korelasi Pearson. Dapatkan penyelesaian r, r-kuadrat, p-nilai dan langkah demi langkah dalam penyemak imbas...",
     "enterData": "Masukkan titik data anda",
     "xLabel": "Nilai X",
     "yLabel": "Nilai Y",
@@ -449,7 +449,7 @@
   },
   "grubbs": {
     "title": "Kalkulator Ujian Grubbs: Cepat",
-    "description": "Kesan outlier dalam set data anda menggunakan ujian Grubbs. Kalkulator kami menyediakan statistik G, nilai kritikal dan pengiraan matematik langkah demi langkah.",
+    "description": "Kesan outlier dalam set data anda menggunakan ujian Grubbs. Kalkulator kami menyediakan statistik G, nilai kritikal dan pengiraan matematik langkah demi...",
     "enterData": "Masukkan titik data anda",
     "valueLabel": "Nilai",
     "significanceLevel": "Tahap Keertian (α)",
@@ -827,7 +827,7 @@
   },
   "expCalc": {
     "title": "Penyelesai Regresi Eksponen",
-    "description": "Kira persamaan regresi eksponen dengan alat dalam talian percuma kami. Masukkan titik data anda untuk mencari persamaan y = a*e^(bx) dengan matematik langkah demi langkah penuh.",
+    "description": "Kira persamaan regresi eksponen dengan alat dalam talian percuma kami. Masukkan titik data anda untuk mencari persamaan y = a*e^(bx) dengan matematik...",
     "xLabel": "X",
     "yLabel": "Y",
     "invalidData": "Sila masukkan sekurang-kurangnya 2 titik data yang sah dengan nilai Y positif",
@@ -1117,7 +1117,7 @@
   },
   "lsrlCalc": {
     "title": "Garis Regresi Kuasa Dua Terkecil",
-    "description": "Kira garis regresi kuasa dua terkecil serta-merta. Masukkan data anda untuk mencari persamaan garis paling sesuai OLS y = mx + b dengan penyelesaian matematik yang komprehensif.",
+    "description": "Kira garis regresi kuasa dua terkecil serta-merta. Masukkan data anda untuk mencari persamaan garis paling sesuai OLS y = mx + b dengan penyelesaian...",
     "xLabel": "X",
     "yLabel": "Y",
     "invalidData": "Sila masukkan sekurang-kurangnya 2 titik data yang sah",
@@ -1398,7 +1398,7 @@
   },
   "rcCalc": {
     "title": "Kalkulator Lengkung Regresi",
-    "description": "Bandingkan model regresi linear, kuadratik, eksponen dan logaritma bersebelahan. Cari keluk muat terbaik untuk data anda dengan alat dalam talian percuma kami.",
+    "description": "Bandingkan model regresi linear, kuadratik, eksponen dan logaritma bersebelahan. Cari keluk muat terbaik untuk data anda dengan alat dalam talian percuma...",
     "xLabel": "X",
     "yLabel": "Y",
     "invalidData": "Sila masukkan sekurang-kurangnya 2 titik data yang sah",
@@ -1618,7 +1618,7 @@
   },
   "quadCalc": {
     "title": "Kalkulator Regresi Kuadratik",
-    "description": "Kira persamaan regresi kuadratik (y = ax² + bx + c) serta-merta. Masukkan titik data anda untuk pecahan dan analisis matematik langkah demi langkah percuma.",
+    "description": "Kira persamaan regresi kuadratik (y = ax² + bx + c) serta-merta. Masukkan titik data anda untuk pecahan dan analisis matematik langkah demi langkah percuma...",
     "enterData": "Masukkan titik data anda",
     "xLabel": "Nilai X",
     "yLabel": "Nilai Y",
@@ -1887,7 +1887,7 @@
   },
   "multiCalc": {
     "title": "Kalkulator Regresi Berbilang",
-    "description": "Kira persamaan regresi berbilang dengan dua atau lebih peramal. Cari model terbaik untuk data anda menggunakan alat analisis statistik dalam talian percuma kami.",
+    "description": "Kira persamaan regresi berbilang dengan dua atau lebih peramal. Cari model terbaik untuk data anda menggunakan alat analisis statistik dalam talian percuma...",
     "enterData": "Masukkan titik data anda",
     "predictors": "Bilangan Peramal",
     "addRow": "Tambah Baris",
@@ -2159,7 +2159,7 @@
     "statsTitle": "Output Statistik"
   },
   "footer": {
-    "description": "Kalkulator persamaan regresi dalam talian percuma. Kira persamaan linear, polinomial dan regresi berbilang serta-merta dengan penyelesaian langkah demi langkah.",
+    "description": "Kalkulator persamaan regresi dalam talian percuma. Kira persamaan linear, polinomial dan regresi berbilang serta-merta dengan penyelesaian langkah demi...",
     "toolsTitle": "Alat & Halaman",
     "companyTitle": "Syarikat",
     "connectTitle": "Sambung",
