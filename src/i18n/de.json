@@ -2165,5 +2165,19 @@
     "connectTitle": "Verbinden",
     "languageTitle": "Sprache",
     "copyright": "Alle Rechte vorbehalten."
+  },
+  "blogPosts": {
+    "linear-regression-basics": {
+      "title": "Lineare Regression Verstehen: Ein Vollständiger Leitfaden",
+      "description": "Vollständiger Leitfaden zur linearen Regression. Lernen Sie Gleichung, Methode der kleinsten Quadrate, Annahmen und Anwendungen mit Beispielen."
+    },
+    "multiple-regression-explained": {
+      "title": "Multiple Regression: Wenn Ein Prädiktor Nicht Genügt",
+      "description": "Meistern Sie die multiple Regressionsanalyse. Lernen Sie Gleichung, Annahmen, Multikollinearität und Interpretation partieller Koeffizienten."
+    },
+    "simple-linear-regression-step-by-step": {
+      "title": "Einfache Lineare Regression: Schritt-für-Schritt-Durchgang",
+      "description": "Meistern Sie die einfache lineare Regression Schritt für Schritt. Berechnen Sie Steigung, Achsenabschnitt, R² und Korrelation mit Beispielen."
+    }
   }
 }

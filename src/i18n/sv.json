@@ -2165,5 +2165,19 @@
     "connectTitle": "Ansluta",
     "languageTitle": "Språk",
     "copyright": "Alla rättigheter reserverade."
+  },
+  "blogPosts": {
+    "linear-regression-basics": {
+      "title": "Förstå Linjär Regression: En Komplett Guide",
+      "description": "Komplett guide till linjär regression. Lär dig ekvationen, minsta-kvadrat-metoden, antaganden och tillämpningar med steg-för-steg-exempel."
+    },
+    "multiple-regression-explained": {
+      "title": "Multipel Regression: När En Prediktor Inte Räcker",
+      "description": "Bemästra multipel regressionsanalys. Lär dig ekvationen, viktiga antaganden, multikollinearitet och tolkning av partiella koefficienter."
+    },
+    "simple-linear-regression-step-by-step": {
+      "title": "Enkel Linjär Regression: Steg-för-Steg Matematisk Genomgång",
+      "description": "Bemästra enkel linjär regression steg för steg. Beräkna lutning, intercept, R² och korrelation manuellt med praktiska exempel."
+    }
   }
 }

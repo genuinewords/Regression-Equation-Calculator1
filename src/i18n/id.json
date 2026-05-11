@@ -2165,5 +2165,19 @@
     "connectTitle": "Menghubungkan",
     "languageTitle": "Bahasa",
     "copyright": "Semua hak dilindungi undang-undang."
+  },
+  "blogPosts": {
+    "linear-regression-basics": {
+      "title": "Memahami Regresi Linear: Panduan Lengkap",
+      "description": "Panduan lengkap regresi linear. Pelajari persamaan, metode kuadrat terkecil, asumsi, dan penerapan dengan contoh langkah demi langkah."
+    },
+    "multiple-regression-explained": {
+      "title": "Regresi Berganda: Saat Satu Prediktor Tak Cukup",
+      "description": "Kuasai analisis regresi berganda. Pelajari persamaan, asumsi utama, multikolinearitas dan interpretasi koefisien parsial langkah demi langkah."
+    },
+    "simple-linear-regression-step-by-step": {
+      "title": "Regresi Linear Sederhana: Uraian Matematika Langkah demi Langkah",
+      "description": "Kuasai regresi linear sederhana langkah demi langkah. Hitung kemiringan, intercept, R² dan korelasi dengan contoh praktis."
+    }
   }
 }

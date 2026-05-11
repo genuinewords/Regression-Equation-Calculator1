@@ -2165,5 +2165,19 @@
     "connectTitle": "Collegare",
     "languageTitle": "Lingua",
     "copyright": "Tutti i diritti riservati."
+  },
+  "blogPosts": {
+    "linear-regression-basics": {
+      "title": "Regressione Lineare: Una Guida Completa e Pratica",
+      "description": "Guida completa alla regressione lineare. Impara l'equazione, il metodo dei minimi quadrati, le assunzioni e le applicazioni con esempi pratici."
+    },
+    "multiple-regression-explained": {
+      "title": "Regressione Multipla: Quando Un Predittore Non Basta",
+      "description": "Padroneggia l'analisi di regressione multipla. Impara l'equazione, le assunzioni chiave, la multicollinearità e l'interpretazione dei coefficienti."
+    },
+    "simple-linear-regression-step-by-step": {
+      "title": "Regressione Lineare Semplice: Procedimento Matematico Passo-Passo",
+      "description": "Padroneggia la regressione lineare semplice passo a passo. Calcola pendenza, intercetta, R² e correlazione a mano con esempi pratici."
+    }
   }
 }

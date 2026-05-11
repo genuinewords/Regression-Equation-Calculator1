@@ -1,0 +1,158 @@
+---
+title: "Régression Linéaire Simple : Un Guide Mathématique Étape par Étape"
+description: "Maîtrisez la régression linéaire simple étape par étape. Apprenez à calculer pente, ordonnée, R² et corrélation à la main avec des exemples concrets."
+image: "/blog/linear-regression-steps.svg"
+date: 2025-03-20
+author: "Calculateur d'Équations de Régression"
+category: "Statistiques"
+---
+
+import Callout from '../../../theme/components/Callout.astro';
+
+Tout voyage statistique commence par une seule ligne. La régression linéaire simple est cette ligne — le modèle prédictif le plus fondamental en science des données, et la base sur laquelle repose chaque technique de régression avancée.
+
+Si vous souhaitez prédire une variable dépendante à partir d'une seule variable indépendante, notre [Calculateur de Régression Linéaire](/) vous donnera la réponse en quelques secondes. Cependant, comprendre *comment* cette réponse est obtenue est ce qui distingue un praticien des données de quelqu'un qui appuie simplement sur des boutons.
+
+Ce guide vous accompagne dans la régression linéaire simple depuis les premiers principes. Nous prendrons un petit jeu de données, calculerons chaque valeur intermédiaire à la main et parviendrons ensemble à l'équation finale. Pour une excellente introduction visuelle, consultez le [guide des Lignes de Tendance de Khan Academy](https://www.khanacademy.org/math/statistics-probability/describing-relationships-quantitative-data/introduction-to-trend-lines/v/fitting-a-line-to-data).
+
+<Callout type="conceptual" title="Ce Que Vous Apprendrez">
+À la fin de cet article, vous serez capable de calculer l'équation de régression **y = mx + b** à partir de données brutes, d'interpréter les résultats et de vérifier que vos données satisfont les hypothèses requises.
+</Callout>
+
+---
+
+## Qu'Est-ce Que la Régression Linéaire Simple ?
+
+La régression linéaire simple modélise la relation entre **une variable indépendante (x)** et **une variable dépendante (y)** en ajustant une droite à travers les données.
+
+Le mot « simple » la distingue de la [régression multiple](/multiple-regression-calculator/), qui utilise deux prédicteurs ou plus. La droite ajustée est choisie pour minimiser la somme des distances verticales au carré — une méthode appelée **moindres carrés ordinaires (OLS)**.
+
+### Quand L'utiliser (et Quand L'éviter)
+
+**Utilisez-la lorsque :**
+- Vous avez un prédicteur continu et un résultat continu.
+- Votre nuage de points montre un **motif approximativement linéaire**.
+- Vous souhaitez quantifier de combien y change par unité de x.
+
+**Évitez-la lorsque :**
+- Le nuage de points montre une **courbe évidente** — essayez notre [calculateur de régression quadratique](/quadratic-regression-calculator/) à la place.
+- Vous avez **plusieurs prédicteurs** — utilisez la [régression linéaire multiple](/multiple-regression-calculator/).
+- Vos données contiennent des **valeurs aberrantes extrêmes** qui pourraient fausser l'ensemble du modèle.
+
+---
+
+## Le Jeu de Données
+
+Supposons qu'une entreprise de tutorat enregistre les heures d'étude (x) et les scores de test résultants (y) :
+
+| Étudiant | Heures d'Étude (x) | Score au Test (y) |
+|----------|---------------------|-------------------|
+| 1        | 2                   | 65                |
+| 2        | 4                   | 75                |
+| 3        | 6                   | 80                |
+| 4        | 8                   | 90                |
+| 5        | 10                  | 95                |
+
+---
+
+## Étape 1 : Calculer les Moyennes
+
+La première étape consiste à calculer la moyenne arithmétique des deux variables.
+
+**Moyenne de x (x̄) :** (2 + 4 + 6 + 8 + 10) / 5 = **6.0**
+**Moyenne de y (ȳ) :** (65 + 75 + 80 + 90 + 95) / 5 = **81.0**
+
+La droite de régression passera toujours par le point (**6.0, 81.0**).
+
+---
+
+## Étape 2 : Calculer les Écarts et les Produits
+
+Ensuite, nous calculons la distance de chaque point par rapport à la moyenne et multiplions les résultats.
+
+| Étudiant | x − x̄ | y − ȳ | (x − x̄)(y − ȳ) | (x − x̄)² |
+|----------|--------|--------|-----------------|----------|
+| 1        | −4     | −16    | 64              | 16       |
+| 2        | −2     | −6     | 12              | 4        |
+| 3        | 0      | −1     | 0               | 0        |
+| 4        | 2      | 9      | 18              | 4        |
+| 5        | 4      | 14     | 56              | 16       |
+| **Somme** |       |        | **150**         | **40**   |
+
+---
+
+## Étape 3 : Calculer la Pente (b₁)
+
+La pente indique de combien y change pour chaque augmentation d'une unité de x.
+
+**b₁ = Σ(x − x̄)(y − ȳ) / Σ(x − x̄)²**
+**b₁ = 150 / 40 = 3.75**
+
+**Interprétation** : Pour chaque heure supplémentaire d'étude, le score prédit au test augmente de **3.75 points**.
+
+---
+
+## Étape 4 : Calculer l'Ordonnée à l'Origine (b₀)
+
+L'ordonnée à l'origine est la valeur prédite de y lorsque x = 0.
+
+**b₀ = ȳ − b₁ × x̄**
+**b₀ = 81.0 − 3.75 × 6.0 = 58.5**
+
+**Interprétation** : Un étudiant qui étudie zéro heure obtiendrait un score prédit de **58.5**.
+
+---
+
+## Étape 5 : Écrire l'Équation Finale
+
+En combinant les deux :
+**y = 58.5 + 3.75x**
+
+Ce modèle vous permet de faire des prédictions. Par exemple, étudier **7 heures** donne :
+58.5 + 3.75(7) = **84.75**.
+
+<Callout type="warning" title="Danger d'Extrapolation">
+Prédire en dehors de la plage de vos données (par exemple, étudier 50 heures) s'appelle **l'extrapolation**. Cela donne souvent des résultats absurdes et doit être évité.
+</Callout>
+
+---
+
+## Étape 6 : Mesurer l'Ajustement (R² et r)
+
+**R²** mesure quelle part de la variation de y est expliquée par le modèle.
+**r** (corrélation de Pearson) mesure la force et la direction de la relation linéaire.
+
+Pour ce jeu de données, notre [calculateur de corrélation de Pearson](/pearson-correlation-calculator/) donnerait un **r de 0.9934**, ce qui indique une relation positive très forte. En savoir plus sur le [Coefficient de Corrélation de Pearson sur Statology](https://www.statology.org/pearson-correlation-coefficient/).
+
+---
+
+## Étape 7 : Vérifier les Hypothèses
+
+Avant de faire confiance à vos résultats, vous devez satisfaire les quatre hypothèses OLS. Notre [vérificateur d'hypothèses de régression](/regression-assumptions-checker/) peut vous aider à automatiser cela :
+
+1. **Linéarité** : La relation suit un motif en ligne droite.
+2. **Indépendance** : Les observations ne dépendent pas les unes des autres.
+3. **Homoscédasticité** : Les résidus (erreurs) ont une variance constante.
+4. **Normalité** : Les résidus sont approximativement distribués normalement.
+
+---
+
+## Au-delà de la Régression Simple
+
+Une fois les bases maîtrisées, vous pourriez avoir besoin d'outils plus avancés :
+
+- **Plusieurs Prédicteurs** : Utilisez la [régression linéaire multiple](/multiple-regression-calculator/) pour des scénarios complexes.
+- **Motifs Courbés** : Utilisez notre [calculateur de régression quadratique](/quadratic-regression-calculator/).
+- **Modèles de Croissance** : Explorez le [calculateur de régression exponentielle](/exponential-regression-calculator/).
+
+---
+
+## Points Clés à Retenir
+
+1. **La Pente** représente le taux de changement.
+2. **L'Ordonnée à l'Origine** fournit la valeur de référence à x=0.
+3. **R²** définit le pouvoir explicatif du modèle.
+4. **L'Extrapolation** est risquée — restez dans la plage de vos données.
+5. **Corrélation n'est pas causalité** — les statistiques montrent une association, pas nécessairement une cause à effet.
+
+Prêt à tester vos propres données ? Rendez-vous sur notre [calculateur de régression gratuit](/) et commencez dès aujourd'hui !

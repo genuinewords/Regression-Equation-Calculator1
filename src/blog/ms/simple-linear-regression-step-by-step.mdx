@@ -1,0 +1,158 @@
+---
+title: "Regresi Linear Ringkas: Panduan Matematik Langkah Demi Langkah"
+description: "Kuasai regresi linear ringkas langkah demi langkah. Belajar mengira kecerunan, pintasan, R² dan korelasi (r) secara manual dengan contoh sebenar."
+image: "/blog/linear-regression-steps.svg"
+date: 2025-03-20
+author: "Kalkulator Persamaan Regresi"
+category: "Statistik"
+---
+
+import Callout from '../../../theme/components/Callout.astro';
+
+Setiap perjalanan statistik bermula dengan satu garis. Regresi linear ringkas ialah garis tersebut — model ramalan paling asas dalam sains data, dan asas yang membina setiap teknik regresi lanjutan.
+
+Jika anda ingin meramal pembolehubah bersandar daripada satu pembolehubah bebas, [Kalkulator Regresi Linear](/) kami akan memberikan jawapan dalam beberapa saat. Walau bagaimanapun, memahami *bagaimana* jawapan itu diperoleh membezakan pengamal data daripada seseorang yang hanya menekan butang.
+
+Panduan ini membawa anda melalui regresi linear ringkas dari prinsip asas. Kami akan mengambil set data kecil, mengira setiap nilai perantara secara manual, dan tiba pada persamaan akhir bersama-sama. Untuk pengenalan visual yang baik, layari [panduan Garis Trend Khan Academy](https://www.khanacademy.org/math/statistics-probability/describing-relationships-quantitative-data/introduction-to-trend-lines/v/fitting-a-line-to-data).
+
+<Callout type="conceptual" title="Apa yang Akan Anda Pelajari">
+Menjelang akhir artikel ini, anda akan dapat mengira persamaan regresi **y = mx + b** daripada data mentah, mentafsir keputusan, dan mengesahkan bahawa data anda memenuhi anggapan yang diperlukan.
+</Callout>
+
+---
+
+## Apa Itu Regresi Linear Ringkas?
+
+Regresi linear ringkas memodelkan hubungan antara **satu pembolehubah bebas (x)** dan **satu pembolehubah bersandar (y)** dengan memasang garis lurus melalui data.
+
+Perkataan "ringkas" membezakannya daripada [regresi berganda](/multiple-regression-calculator/), yang menggunakan dua atau lebih peramal. Garis yang dipasang dipilih untuk meminimumkan jumlah jarak menegak kuasa dua — kaedah yang dipanggil **kuasa dua terkecil biasa (OLS)**.
+
+### Bila Menggunakannya (dan Bila Mengelaknya)
+
+**Gunakannya apabila:**
+- Anda mempunyai satu peramal berterusan dan satu hasil berterusan.
+- Plot serakan menunjukkan **corak lebih kurang linear**.
+- Anda ingin mengukur berapa banyak y berubah per unit x.
+
+**Elakkan apabila:**
+- Plot serakan menunjukkan **lengkungan jelas** — cuba [kalkulator regresi kuadratik](/quadratic-regression-calculator/) kami sebaliknya.
+- Anda mempunyai **berbilang peramal** — gunakan [regresi linear berganda](/multiple-regression-calculator/).
+- Data anda mengandungi **pencilan ekstrem** yang boleh memesongkan seluruh model.
+
+---
+
+## Set Data
+
+Katakan sebuah syarikat tuisyen mengesan jam belajar (x) dan skor ujian yang dihasilkan (y):
+
+| Pelajar | Jam Belajar (x) | Skor Ujian (y) |
+|---------|------------------|-----------------|
+| 1       | 2                | 65              |
+| 2       | 4                | 75              |
+| 3       | 6                | 80              |
+| 4       | 8                | 90              |
+| 5       | 10               | 95              |
+
+---
+
+## Langkah 1: Kira Min
+
+Langkah pertama ialah mengira min aritmetik kedua-dua pembolehubah.
+
+**Min x (x̄):** (2 + 4 + 6 + 8 + 10) / 5 = **6.0**
+**Min y (ȳ):** (65 + 75 + 80 + 90 + 95) / 5 = **81.0**
+
+Garis regresi akan sentiasa melalui titik (**6.0, 81.0**).
+
+---
+
+## Langkah 2: Kirakan Sisihan dan Hasil Darab
+
+Seterusnya, kami mengira sejauh mana setiap titik daripada min dan mendarab keputusan tersebut.
+
+| Pelajar | x − x̄ | y − ȳ | (x − x̄)(y − ȳ) | (x − x̄)² |
+|---------|--------|--------|-----------------|----------|
+| 1       | −4     | −16    | 64              | 16       |
+| 2       | −2     | −6     | 12              | 4        |
+| 3       | 0      | −1     | 0               | 0        |
+| 4       | 2      | 9      | 18              | 4        |
+| 5       | 4      | 14     | 56              | 16       |
+| **Jumlah** | | | **150** | **40** |
+
+---
+
+## Langkah 3: Kira Kecerunan (b₁)
+
+Kecerunan memberitahu anda berapa banyak y berubah bagi setiap peningkatan satu unit dalam x.
+
+**b₁ = Σ(x − x̄)(y − ȳ) / Σ(x − x̄)²**
+**b₁ = 150 / 40 = 3.75**
+
+**Tafsiran**: Setiap jam belajar tambahan, skor ujian ramalan meningkat sebanyak **3.75 mata**.
+
+---
+
+## Langkah 4: Kira Pintasan (b₀)
+
+Pintasan ialah y yang diramal apabila x = 0.
+
+**b₀ = ȳ − b₁ × x̄**
+**b₀ = 81.0 − 3.75 × 6.0 = 58.5**
+
+**Tafsiran**: Pelajar yang belajar sifar jam diramal mendapat skor **58.5**.
+
+---
+
+## Langkah 5: Tulis Persamaan Akhir
+
+Menggabungkan kedua-duanya:
+**y = 58.5 + 3.75x**
+
+Model ini membolehkan anda membuat ramalan. Contohnya, belajar selama **7 jam** menghasilkan:
+58.5 + 3.75(7) = **84.75**.
+
+<Callout type="warning" title="Bahaya Ekstrapolasi">
+Meramal di luar julat data anda (contohnya, belajar 50 jam) dipanggil **ekstrapolasi**. Ia sering menghasilkan keputusan yang tidak masuk akal dan harus dielakkan.
+</Callout>
+
+---
+
+## Langkah 6: Ukur Kesesuaian (R² dan r)
+
+**R²** mengukur berapa banyak variasi dalam diterangkan oleh model.
+**r** (korelasi Pearson) mengukur kekuatan dan arah hubungan linear.
+
+Untuk set data ini, [kalkulator korelasi Pearson](/pearson-correlation-calculator/) kami akan menghasilkan **r sebanyak 0.9934**, menunjukkan hubungan positif yang sangat kuat. Ketahui lebih lanjut tentang [Pekali Korelasi Pearson di Statology](https://www.statology.org/pearson-correlation-coefficient/).
+
+---
+
+## Langkah 7: Sahkan Anggapan
+
+Sebelum mempercayai keputusan anda, anda mesti memenuhi empat anggapan OLS. [Pemeriksa anggapan regresi](/regression-assumptions-checker/) kami boleh membantu mengautomasikan ini:
+
+1. **Kelinearan**: Hubungan mengikut corak garis lurus.
+2. **Kemandirian**: Pemerhatian tidak bergantung antara satu sama lain.
+3. **Homoskedastisiti**: Residual (ralat) mempunyai varians malar.
+4. **Kenormalan**: Residual adalah lebih kurang bertaburan normal.
+
+---
+
+## Melangkah Melebihi Regresi Ringkas
+
+Sebaik sahaja anda menguasai asas, anda mungkin memerlukan alat yang lebih lanjut:
+
+- **Berbilang Peramal**: Gunakan [regresi linear berganda](/multiple-regression-calculator/) untuk senario kompleks.
+- **Corak Melengkung**: Gunakan [kalkulator regresi kuadratik](/quadratic-regression-calculator/) kami.
+- **Model Pertumbuhan**: Terokai [kalkulator regresi eksponen](/exponential-regression-calculator/).
+
+---
+
+## Ringkasan Utama
+
+1. **Kecerunan** mewakili kadar perubahan.
+2. **Pintasan** menyediakan nilai asas pada x=0.
+3. **R²** mentakrifkan kuasa penjelasan model.
+4. **Ekstrapolasi** berisiko — kekal dalam julat data anda.
+5. **Korelasi bukan kausaliti** — statistik menunjukkan perkaitan, bukan semestinya sebab-akibat.
+
+Sedia menguji data anda sendiri? Pergi ke [kalkulator regresi percuma](/) kami dan mulakan hari ini!

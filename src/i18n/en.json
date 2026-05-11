@@ -2167,5 +2167,19 @@
     "connectTitle": "Connect",
     "languageTitle": "Language",
     "copyright": "All rights reserved."
+  },
+  "blogPosts": {
+    "linear-regression-basics": {
+      "title": "Understanding Linear Regression: A Complete Guide",
+      "description": "A comprehensive guide to linear regression. Learn the equation, least squares method, assumptions, and real-world applications with step-by-step examples."
+    },
+    "multiple-regression-explained": {
+      "title": "Multiple Regression Analysis: When One Predictor Is Not Enough",
+      "description": "Master multiple regression analysis. Learn the equation, key assumptions, multicollinearity, real-world applications, and interpreting partial coefficients."
+    },
+    "simple-linear-regression-step-by-step": {
+      "title": "Simple Linear Regression: A Step-by-Step Mathematical Walkthrough",
+      "description": "Master simple linear regression step-by-step. Learn to calculate slope, intercept, R², and correlation (r) by hand with real-world worked examples."
+    }
   }
 }

@@ -2165,5 +2165,19 @@
     "connectTitle": "연결하다",
     "languageTitle": "언어",
     "copyright": "모든 권리 보유."
+  },
+  "blogPosts": {
+    "linear-regression-basics": {
+      "title": "선형 회귀 이해하기: 완전 가이드",
+      "description": "선형 회귀 완전 가이드. 방정식, 최소제곱법, 가정 및 실제 응용을 단계별 예제로 배우세요."
+    },
+    "multiple-regression-explained": {
+      "title": "다중 회귀 분석: 하나의 예측변수로 부족할 때",
+      "description": "다중 회귀 분석을 마스터하세요. 방정식, 주요 가정, 다중공선성 및 편회귀계수 해석을 단계별로 배우세요."
+    },
+    "simple-linear-regression-step-by-step": {
+      "title": "단순 선형 회귀: 단계별 수학적 해설",
+      "description": "단순 선형 회귀를 단계별로 마스터하세요. 기울기, 절편, R²와 상관관계를 실전 예제로 직접 계산해 보세요."
+    }
   }
 }

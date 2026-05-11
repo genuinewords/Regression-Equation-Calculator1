@@ -40,13 +40,18 @@ const { Content } = await render(post);
 const locale = extractLocaleFromParams(Astro.params);
 const translations = await mergeTranslations(locale);
 
-const canonicalUrl = new URL(`/${locale}/blog/${slug.replace(/\.(md|mdx)$/, '')}/`, siteConfig.siteUrl).href;
+const blogSlug = slug.replace(/\.(md|mdx)$/, '');
+const blogMeta = (translations as any).blogPosts?.[blogSlug];
+const metaTitle = blogMeta?.title || post.data.title;
+const metaDescription = blogMeta?.description || post.data.description;
+
+const canonicalUrl = new URL(`/${locale}/blog/${blogSlug}/`, siteConfig.siteUrl).href;
 
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: post.data.title,
-  description: post.data.description,
+  headline: metaTitle,
+  description: metaDescription,
   image: new URL(post.data.image, siteConfig.siteUrl).href,
   datePublished: post.data.date.toISOString(),
   author: {
@@ -86,19 +91,19 @@ const breadcrumbSchema = {
     {
       '@type': 'ListItem',
       position: 3,
-      name: post.data.title,
+      name: metaTitle,
       item: canonicalUrl,
     },
   ],
 };
 
-const pageTitle = `${post.data.title} - ${translations.blog?.title ?? 'Blog'} (${locale.toUpperCase()})`;
+const pageTitle = metaTitle;
 
 ---
 
 <BaseLayout
   title={pageTitle}
-  description={post.data.description}
+  description={metaDescription}
   locale={locale}
   canonicalUrl={canonicalUrl}
 >

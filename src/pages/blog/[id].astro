@@ -22,13 +22,17 @@ const { Content } = await render(post);
 const locale = 'en';
 const translations = await mergeTranslations(locale);
 
+const blogMeta = (translations as any).blogPosts?.[slug];
+const metaTitle = blogMeta?.title || post.data.title;
+const metaDescription = blogMeta?.description || post.data.description;
+
 const canonicalUrl = new URL(`/blog/${slug}/`, siteConfig.siteUrl).href;
 
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: post.data.title,
-  description: post.data.description,
+  headline: metaTitle,
+  description: metaDescription,
   image: new URL(post.data.image, siteConfig.siteUrl).href,
   datePublished: post.data.date.toISOString(),
   author: {
@@ -76,8 +80,8 @@ const breadcrumbSchema = {
 ---
 
 <BaseLayout
-  title={post.data.title}
-  description={post.data.description}
+  title={metaTitle}
+  description={metaDescription}
   locale={locale}
   canonicalUrl={canonicalUrl}
 >

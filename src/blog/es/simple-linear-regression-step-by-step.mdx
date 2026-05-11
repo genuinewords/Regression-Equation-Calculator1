@@ -1,0 +1,158 @@
+---
+title: "Regresión Lineal Simple: Una Guía Matemática Paso a Paso"
+description: "Domina la regresión lineal simple paso a paso. Aprende a calcular pendiente, intercepto, R² y correlación a mano con ejemplos reales."
+image: "/blog/linear-regression-steps.svg"
+date: 2025-03-20
+author: "Calculadora de Ecuaciones de Regresión"
+category: "Estadística"
+---
+
+import Callout from '../../../theme/components/Callout.astro';
+
+Todo viaje estadístico comienza con una sola línea. La regresión lineal simple es esa línea — el modelo predictivo más fundamental en la ciencia de datos, y la base sobre la que se construye cada técnica de regresión avanzada.
+
+Si deseas predecir una variable dependiente a partir de una sola variable independiente, nuestra [Calculadora de Regresión Lineal](/) te dará la respuesta en segundos. Sin embargo, comprender *cómo* se obtiene esa respuesta es lo que distingue a un profesional de datos de alguien que simplemente presiona botones.
+
+Esta guía te acompaña por la regresión lineal simple desde los primeros principios. Tomaremos un conjunto de datos pequeño, calcularemos cada valor intermedio a mano y llegaremos juntos a la ecuación final. Para una excelente introducción visual, consulta la [guía de Líneas de Tendencia de Khan Academy](https://www.khanacademy.org/math/statistics-probability/describing-relationships-quantitative-data/introduction-to-trend-lines/v/fitting-a-line-to-data).
+
+<Callout type="conceptual" title="Lo Que Aprenderás">
+Al finalizar este artículo, serás capaz de calcular la ecuación de regresión **y = mx + b** a partir de datos brutos, interpretar los resultados y verificar que tus datos cumplen con los supuestos requeridos.
+</Callout>
+
+---
+
+## ¿Qué Es la Regresión Lineal Simple?
+
+La regresión lineal simple modela la relación entre **una variable independiente (x)** y **una variable dependiente (y)** ajustando una línea recta a través de los datos.
+
+La palabra "simple" la distingue de la [regresión múltiple](/multiple-regression-calculator/), que utiliza dos o más predictores. La línea ajustada se elige para minimizar la suma de las distancias verticales al cuadrado — un método llamado **mínimos cuadrados ordinarios (OLS)**.
+
+### Cuándo Usarla (y Cuándo Evitarla)
+
+**Úsala cuando:**
+- Tienes un predictor continuo y un resultado continuo.
+- Tu diagrama de dispersión muestra un **patrón aproximadamente lineal**.
+- Deseas cuantificar cuánto cambia y por cada unidad de x.
+
+**Evítala cuando:**
+- El diagrama de dispersión muestra una **curva clara** — prueba nuestra [calculadora de regresión cuadrática](/quadratic-regression-calculator/) en su lugar.
+- Tienes **múltiples predictores** — usa [regresión lineal múltiple](/multiple-regression-calculator/).
+- Tus datos contienen **valores atípicos extremos** que podrían sesgar todo el modelo.
+
+---
+
+## El Conjunto de Datos
+
+Supongamos que una empresa de tutorías registra las horas de estudio (x) y las calificaciones de examen resultantes (y):
+
+| Estudiante | Horas de Estudio (x) | Calificación del Examen (y) |
+|------------|----------------------|-----------------------------|
+| 1          | 2                    | 65                          |
+| 2          | 4                    | 75                          |
+| 3          | 6                    | 80                          |
+| 4          | 8                    | 90                          |
+| 5          | 10                   | 95                          |
+
+---
+
+## Paso 1: Calcular las Medias
+
+El primer paso es calcular la media aritmética de ambas variables.
+
+**Media de x (x̄):** (2 + 4 + 6 + 8 + 10) / 5 = **6.0**
+**Media de y (ȳ):** (65 + 75 + 80 + 90 + 95) / 5 = **81.0**
+
+La línea de regresión siempre pasará por el punto (**6.0, 81.0**).
+
+---
+
+## Paso 2: Calcular Desviaciones y Productos
+
+A continuación, calculamos qué tan lejos está cada punto de la media y multiplicamos los resultados.
+
+| Estudiante | x − x̄ | y − ȳ | (x − x̄)(y − ȳ) | (x − x̄)² |
+|------------|--------|--------|-----------------|----------|
+| 1          | −4     | −16    | 64              | 16       |
+| 2          | −2     | −6     | 12              | 4        |
+| 3          | 0      | −1     | 0               | 0        |
+| 4          | 2      | 9      | 18              | 4        |
+| 5          | 4      | 14     | 56              | 16       |
+| **Suma**   |        |        | **150**         | **40**   |
+
+---
+
+## Paso 3: Calcular la Pendiente (b₁)
+
+La pendiente te dice cuánto cambia y por cada aumento de una unidad en x.
+
+**b₁ = Σ(x − x̄)(y − ȳ) / Σ(x − x̄)²**
+**b₁ = 150 / 40 = 3.75**
+
+**Interpretación**: Por cada hora adicional de estudio, la calificación predicha del examen aumenta en **3.75 puntos**.
+
+---
+
+## Paso 4: Calcular el Intercepto (b₀)
+
+El intercepto es el valor predicho de y cuando x = 0.
+
+**b₀ = ȳ − b₁ × x̄**
+**b₀ = 81.0 − 3.75 × 6.0 = 58.5**
+
+**Interpretación**: Un estudiante que estudia cero horas tiene una calificación predicha de **58.5**.
+
+---
+
+## Paso 5: Escribir la Ecuación Final
+
+Combinando ambos:
+**y = 58.5 + 3.75x**
+
+Este modelo te permite hacer predicciones. Por ejemplo, estudiar **7 horas** produce:
+58.5 + 3.75(7) = **84.75**.
+
+<Callout type="warning" title="Peligro de Extrapolación">
+Predecir fuera del rango de tus datos (por ejemplo, estudiar 50 horas) se llama **extrapolación**. A menudo produce resultados sin sentido y debe evitarse.
+</Callout>
+
+---
+
+## Paso 6: Medir el Ajuste (R² y r)
+
+**R²** mide cuánta de la variación en y es explicada por el modelo.
+**r** (correlación de Pearson) mide la fuerza y dirección de la relación lineal.
+
+Para este conjunto de datos, nuestra [calculadora de correlación de Pearson](/pearson-correlation-calculator/) arrojaría un **r de 0.9934**, lo que indica una relación positiva muy fuerte. Obtén más información sobre el [Coeficiente de Correlación de Pearson en Statology](https://www.statology.org/pearson-correlation-coefficient/).
+
+---
+
+## Paso 7: Verificar los Supuestos
+
+Antes de confiar en tus resultados, debes satisfacer los cuatro supuestos de OLS. Nuestro [verificador de supuestos de regresión](/regression-assumptions-checker/) puede ayudarte a automatizar esto:
+
+1. **Linealidad**: La relación sigue un patrón de línea recta.
+2. **Independencia**: Las observaciones no dependen unas de otras.
+3. **Homocedasticidad**: Los residuos (errores) tienen varianza constante.
+4. **Normalidad**: Los residuos están aproximadamente distribuidos de forma normal.
+
+---
+
+## Más Allá de la Regresión Simple
+
+Una vez que domines lo básico, podrías necesitar herramientas más avanzadas:
+
+- **Múltiples Predictores**: Usa [regresión lineal múltiple](/multiple-regression-calculator/) para escenarios complejos.
+- **Patrón Curvo**: Usa nuestra [calculadora de regresión cuadrática](/quadratic-regression-calculator/).
+- **Modelos de Crecimiento**: Explora la [calculadora de regresión exponencial](/exponential-regression-calculator/).
+
+---
+
+## Conclusiones Clave
+
+1. **La Pendiente** representa la tasa de cambio.
+2. **El Intercepto** proporciona el valor base cuando x=0.
+3. **R²** define el poder explicativo del modelo.
+4. **La Extrapolación** es riesgosa — mantente dentro del rango de tus datos.
+5. **Correlación no implica causalidad** — la estadística muestra asociación, no necesariamente causa y efecto.
+
+¿Listo para probar tus propios datos? Visita nuestra [calculadora de regresión gratuita](/) y comienza hoy mismo!

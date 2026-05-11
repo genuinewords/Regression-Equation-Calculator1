@@ -2165,5 +2165,19 @@
     "connectTitle": "Connecter",
     "languageTitle": "Langue",
     "copyright": "Tous droits réservés."
+  },
+  "blogPosts": {
+    "linear-regression-basics": {
+      "title": "Comprendre la Régression Linéaire : Guide Complet",
+      "description": "Guide complet de la régression linéaire. Apprenez l'équation, la méthode des moindres carrés, les hypothèses et applications avec des exemples."
+    },
+    "multiple-regression-explained": {
+      "title": "Régression Multiple : Quand Un Prédicteur Ne Suffit Pas",
+      "description": "Maîtrisez l'analyse de régression multiple. Apprenez l'équation, les hypothèses clés, la multicolinéarité et l'interprétation des coefficients."
+    },
+    "simple-linear-regression-step-by-step": {
+      "title": "Régression Linéaire Simple : Procédé Mathématique Étape par Étape",
+      "description": "Maîtrisez la régression linéaire simple étape par étape. Calculez pente, ordonnée, R² et corrélation à la main avec des exemples concrets."
+    }
   }
 }

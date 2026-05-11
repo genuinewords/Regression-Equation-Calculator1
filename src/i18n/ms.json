@@ -2165,5 +2165,19 @@
     "connectTitle": "Sambung",
     "languageTitle": "Bahasa",
     "copyright": "Semua hak terpelihara."
+  },
+  "blogPosts": {
+    "linear-regression-basics": {
+      "title": "Memahami Regresi Linear: Panduan Lengkap",
+      "description": "Panduan lengkap regresi linear. Pelajari persamaan, kaedah kuasa dua terkecil, anggapan dan aplikasi dengan contoh langkah demi langkah."
+    },
+    "multiple-regression-explained": {
+      "title": "Regresi Berganda: Bila Satu Peramal Tidak Mencukupi",
+      "description": "Kuasai analisis regresi berganda. Pelajari persamaan, anggapan utama, multikolineariti dan interpretasi pekali separa langkah demi langkah."
+    },
+    "simple-linear-regression-step-by-step": {
+      "title": "Regresi Linear Mudah: Penjelasan Matematik Langkah Demi Langkah",
+      "description": "Kuasai regresi linear mudah langkah demi langkah. Kira cerun, pintasan, R² dan korelasi secara manual dengan contoh praktikal."
+    }
   }
 }

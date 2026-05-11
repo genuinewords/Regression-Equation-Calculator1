@@ -2165,5 +2165,19 @@
     "connectTitle": "Bağlamak",
     "languageTitle": "Dil",
     "copyright": "Her hakkı saklıdır."
+  },
+  "blogPosts": {
+    "linear-regression-basics": {
+      "title": "Doğrusal Regresyonu Anlamak: Kapsamlı Bir Kılavuz",
+      "description": "Doğrusal regresyon kapsamlı kılavuzu. Denklemi, en küçük kareler yöntemini, varsayımları ve uygulamaları adım adım örneklerle öğrenin."
+    },
+    "multiple-regression-explained": {
+      "title": "Çoklu Regresyon: Tek Bir Yordayıcı Yeterli Değilse",
+      "description": "Çoklu regresyon analizinde ustalaşın. Denklemi, temel varsayımları, çoklu doğrusal bağlantıyı ve kısmi katsayıların yorumunu öğrenin."
+    },
+    "simple-linear-regression-step-by-step": {
+      "title": "Basit Doğrusal Regresyon: Adım Adım Matematiksel İnceleme",
+      "description": "Basit doğrusal regresyonu adım adım öğrenin. Eğim, kesit, R² ve korelasyonu gerçek örneklerle elle hesaplamayı pratik yapın."
+    }
   }
 }

@@ -2165,5 +2165,19 @@
     "connectTitle": "接続する",
     "languageTitle": "言語",
     "copyright": "無断転載を禁じます。"
+  },
+  "blogPosts": {
+    "linear-regression-basics": {
+      "title": "線形回帰を理解する：完全ガイド",
+      "description": "線形回帰の完全ガイド。方程式、最小二乗法、前提条件、そして実際の応用例をステップバイステップで学びましょう。"
+    },
+    "multiple-regression-explained": {
+      "title": "重回帰分析：一つの予測変数では不十分な場合",
+      "description": "重回帰分析をマスターしましょう。方程式、主要な前提、多重共線性、偏回帰係数の解釈をステップバイステップで学びます。"
+    },
+    "simple-linear-regression-step-by-step": {
+      "title": "単回帰分析：ステップバイステップの数学的解説",
+      "description": "単回帰分析をステップバイステップでマスター。傾き、切片、R²、相関を手計算で実例とともに学びましょう。"
+    }
   }
 }

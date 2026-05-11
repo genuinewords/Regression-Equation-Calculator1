@@ -2165,5 +2165,19 @@
     "connectTitle": "Łączyć",
     "languageTitle": "Język",
     "copyright": "Wszelkie prawa zastrzeżone."
+  },
+  "blogPosts": {
+    "linear-regression-basics": {
+      "title": "Zrozumieć Regresję Liniową: Kompletny Przewodnik",
+      "description": "Kompletny przewodnik po regresji liniowej. Poznaj równanie, metodę najmniejszych kwadratów, założenia i zastosowania z przykładami krok po kroku."
+    },
+    "multiple-regression-explained": {
+      "title": "Regresja Wieloraka: Gdy Jeden Predyktor Nie Wystarcza",
+      "description": "Opanuj analizę regresji wielorakiej. Poznaj równanie, kluczowe założenia, współliniowość i interpretację współczynników cząstkowych."
+    },
+    "simple-linear-regression-step-by-step": {
+      "title": "Prosta Regresja Liniowa: Krok po Kroku Omówienie Matematyczne",
+      "description": "Opanuj prostą regresję liniową krok po kroku. Oblicz nachylenie, wyraz wolny, R² i korelację ręcznie z praktycznymi przykładami."
+    }
   }
 }

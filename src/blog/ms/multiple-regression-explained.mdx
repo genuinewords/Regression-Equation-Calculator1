@@ -1,0 +1,156 @@
+---
+title: "Analisis Regresi Berganda: Apabila Satu Peramal Tidak Mencukupi"
+description: "Kuasai analisis regresi berganda. Pelajari persamaan, andaian utama, multikolineariti, aplikasi dunia sebenar dan mentafsir pekali separa."
+image: "/blog/multiple-regression.svg"
+date: 2025-02-10
+author: "Kalkulator Persamaan Regresi"
+category: "Statistik"
+---
+
+import MultiRegDemo from '../../../theme/components/MultiRegDemo.astro';
+import InteractiveImage from '../../../theme/components/InteractiveImage.astro';
+import MathFormula from '../../../theme/components/MathFormula.astro';
+import Callout from '../../../theme/components/Callout.astro';
+
+Bayangkan anda cuba meramal harga rumah. Kaki persegi sahaja memberikan anggaran kasar — tetapi bagaimana pula dengan bilangan bilik tidur, usia harta, atau kadar jenayah kejiranan?
+
+Apabila satu pemboleh ubah tak bebas tidak dapat menjelaskan variasi dalam pemboleh ubah bersubah anda dengan memadai, **analisis regresi berganda** memainkan peranannya.
+
+Berbeza dengan [regresi linear ringkas](/) yang memodelkan hubungan antara satu peramal dan satu hasil, regresi berganda membolehkan anda mengambil kira **dua atau lebih peramal secara serentak**. Hasilnya adalah model yang jauh lebih tepat, bernuansa, dan boleh dilaksanakan tentang apa yang sebenarnya memacu pemboleh ubah hasil anda.
+
+Dalam panduan ini, kami akan merangkumi semua yang perlu anda ketahui tentang regresi berganda: persamaan, cara mentafsir pekali, andaian utama, aplikasi dunia sebenar, dan kesilapan biasa. Untuk perspektif strategik peringkat tinggi, lihat [segar semula analisis regresi oleh Harvard Business Review](https://hbr.org/2015/11/a-refresher-on-regression-analysis).
+
+---
+
+## Apakah Analisis Regresi Berganda?
+
+Analisis regresi berganda ialah teknik statistik yang digunakan untuk memodelkan hubungan antara **satu pemboleh ubah bersubah (tindak balas)** dan **dua atau lebih pemboleh ubah tak bebas (peramal)**.
+
+Ia meluaskan regresi linear ringkas kepada situasi di mana pelbagai faktor secara bersama mempengaruhi hasil. Anda boleh menggunakan [kalkulator regresi berganda](/multiple-regression-calculator/) kami untuk menjalankan analisis ini dengan serta-merta.
+
+### Konsep Hipersatah
+
+Idea terasnya mudah: bukannya memuatkan garis melalui data dalam dua dimensi (x dan y), regresi berganda memuatkan **hipersatah** melalui data dalam tiga atau lebih dimensi.
+
+Setiap peramal mendapat pekali tersendiri, memberitahu anda berapa banyak hasil berubah per unit perubahan dalam peramal tersebut, **mengekalkan semua peramal lain secara malar**. Untuk butiran teknikal lanjut, semak [entri Regresi Linear Berganda di Wikipedia](https://en.wikipedia.org/wiki/Linear_regression#Multiple_linear_regression).
+
+### Mengapa "Mengekalkan Malar" Penting
+
+Sifat "mengekalkan malar" inilah yang menjadikan regresi berganda sangat berharga. Ia membolehkan anda mengasingkan kesan setiap pemboleh ubah individu — sesuatu yang anda tidak dapat lakukan dengan regresi ringkas berasingan.
+
+<InteractiveImage src="/blog/multiple-regression-3d.png" alt="Visualisasi 3D regresi berganda dengan pelbagai peramal" />
+
+---
+
+## Persamaan Regresi Berganda
+
+Persamaan regresi berganda meluaskan bentuk **y = mx + b** yang biasa:
+
+<MathFormula formula="y = b₀ + b₁x₁ + b₂x₂ + ... + bₙxₙ" description="Persamaan Regresi Berganda" />
+
+Di mana:
+- **y** ialah nilai ramalan pemboleh ubah bersubah.
+- **b₀** ialah pintasan-y (nilai ramalan apabila semua peramal adalah sifar).
+- **b₁, b₂, ..., bₙ** ialah **pekali regresi separa**.
+- **x₁, x₂, ..., xₙ** ialah pemboleh ubah tak bebas (peramal).
+
+### Mentafsir Pekali
+
+Setiap pekali **bᵢ** mewakili perubahan dalam y bagi peningkatan satu unit dalam **xᵢ**, dengan anggapan semua peramal lain kekal malar. Ini sering dipanggil **"kesan separa"**.
+
+**Model Contoh untuk Harga Rumah:**
+<MathFormula formula="Price = 50,000 + 150(SqFt) + 20,000(Beds) − 1,000(Age)" description="Model Praktikal Contoh" />
+
+- **150**: Setiap kaki persegi tambahan menambah $150 pada harga, mengekalkan bilik tidur dan usia malar.
+- **20,000**: Setiap bilik tidur tambahan menambah $20,000, mengekalkan saiz dan usia malar.
+- **−1,000**: Setiap tahun usia tambahan mengurangkan harga sebanyak $1,000, mengekalkan saiz dan bilik tidur malar.
+
+---
+
+## Regresi Berganda lwn. Regresi Ringkas
+
+Memahami perbezaannya adalah penting untuk memilih pendekatan yang betul:
+
+| Ciri | Regresi Linear Ringkas | Regresi Linear Berganda |
+|---|---|---|
+| **Peramal** | Tepat 1 | 2 atau lebih |
+| **Persamaan** | [y = mx + b](/) | y = b₀ + b₁x₁ + b₂x₂ + ... |
+| **Kesan** | Kesan jumlah x | Kesan separa (dikawal) |
+| **Risiko** | Pihang pemboleh ubah tertinggal tinggi | Pihang berkurangan (jika dinyatakan dengan baik) |
+| **Alat** | [Kalkulator Linear](/) | [Kalkulator Berganda](/multiple-regression-calculator/) |
+
+### R² Larasan: Metrik Yang Betul
+
+Menambah lebih banyak peramal kepada model akan **sentiasa** meningkatkan R² mentah. **R² larasan** membetulkan ini dengan mengenakan penalti atas penambahan peramal yang tidak benar-benar meningkatkan model. Sentiasa gunakan R² larasan apabila membandingkan model dengan bilangan peramal yang berbeza.
+
+---
+
+## Lima Andaian Utama
+
+Sebelum anda boleh mempercayai keputusan anda, anda mesti mengesahkan lima andaian kritikal. Anda boleh menggunakan [pemeriksa andaian regresi](/regression-assumptions-checker/) kami untuk mengesahkan data anda.
+
+### 1. Keberlinearan
+Hubungan antara setiap peramal dan hasil mesti lebih kurang linear.
+
+### 2. Kebebasan Ralat
+Residu mesti bebas antara satu sama lain (penting untuk data siri masa).
+
+### 3. Homoskedastisiti
+Varians residu hendaklah malar merentasi semua nilai ramalan.
+
+### 4. Kenormalan Residu
+Ralat (residu) hendaklah lebih kurang tertabur secara normal.
+
+### 5. Tiada Multikolineariti
+Peramal tidak boleh terlalu berkorelasi tingi antara satu sama lain. Jika ya, pekali individu menjadi tidak stabil. Anda boleh menyemak korelasi awal dengan [kalkulator korelasi Pearson](/pearson-correlation-calculator/) kami.
+
+---
+
+## Aplikasi Dunia Sebenar
+
+<InteractiveImage src="/blog/regression-applications.svg" alt="Aplikasi dunia sebenar analisis regresi berganda" />
+
+- **Hartanah**: Menganggar nilai rumah berdasarkan saiz, lokasi dan usia.
+- **Kewangan**: Menerangkan pulangan saham menggunakan risiko pasaran dan saiz syarikat.
+- **Pemasaran**: Mengukur kesan iklan TV, digital dan cetak ke atas jumlah jualan.
+- **Penjagaan Kesihatan**: Meramal masa pemulihan pesakit berdasarkan usia, dos dan komorbiditi.
+
+---
+
+## Kesilapan Biasa yang Perlu Dielakkan
+
+1. **Lampau padat**: Menambah terlalu banyak peramal berbanding saiz sampel anda.
+2. **Mengabaikan Multikolineariti**: Menggunakan dua pemboleh ubah yang sangat berkorelasi (seperti tinggi dalam inci dan tinggi dalam cm) dalam model yang sama.
+3. **Ekstrapolasi**: Meramal nilai jauh di luar julat data asal anda.
+4. **Mencampuradukkan Korelasi dengan Kausaliti**: Hanya kerana pemboleh ubah bergerak bersama tidak bermakna satu menyebabkan yang lain.
+
+---
+
+## Cuba Sendiri: Demo Interaktif
+
+Laraslah peluncur di bawah untuk melihat bagaimana faktor berbeza mempengaruhi harga rumah ramalan secara masa nyata:
+
+<MultiRegDemo />
+
+---
+
+## Sedia untuk Mengira?
+
+**Kalkulator Regresi Berganda** kami mengendalikan set data kompleks dan menyediakan persamaan lengkap, pekali separa dan tahap keertian.
+
+<a href="/multiple-regression-calculator/" class="not-prose my-8 flex items-center justify-center">
+  <span class="inline-flex items-center gap-2 px-8 py-3.5 text-base font-semibold text-white bg-gradient-to-r from-primary-600 to-accent-600 rounded-xl shadow-lg shadow-primary-600/25 hover:shadow-xl hover:shadow-primary-600/35 hover:brightness-110 hover:scale-[1.03] active:scale-[0.98] transition-all duration-200">
+    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+    Cuba Kalkulator Regresi Berganda
+  </span>
+</a>
+
+---
+
+## Pengambilan Utama
+
+1. **Regresi berganda** mengendalikan dua atau lebih peramal untuk menjelaskan satu hasil.
+2. **Pekali separa** mengasingkan kesan satu pemboleh ubah sambil mengekalkan yang lain malar.
+3. **R² larasan** ialah standard emas untuk perbandingan model.
+4. **Multikolineariti** ialah risiko unik dalam regresi berganda — sentiasa periksa peramal berlebihan.
+5. Gunakan **regresi ringkas** untuk membina intuition, kemudian tingkatkan kepada regresi berganda apabila soalan anda menjadi lebih kompleks.
