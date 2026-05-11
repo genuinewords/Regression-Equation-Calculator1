@@ -34,7 +34,9 @@ const ogLocale = getLocaleOgLocale(locale);
 const baseTitle = title;
 const brand = translations.siteTitle || "Regression Equation Calculator";
 
-let fullTitle = `${baseTitle} | ${brand}`;
+let fullTitle = locale !== 'en'
+  ? `${baseTitle} (${locale.toUpperCase()}) | ${brand}`
+  : `${baseTitle} | ${brand}`;
 
 // Optional trim safeguard
 if (fullTitle.length > 65) {
