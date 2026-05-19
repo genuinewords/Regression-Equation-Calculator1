@@ -72,3 +72,177 @@ const { toolName, keyPoints, highlightTip, translations } = Astro.props;
 
   </div>
 </section>
+
+<style is:global>
+  .tool-info-section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  @media (min-width: 768px) {
+    .tool-info-section {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+  }
+
+  .tool-info-box__headline {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    .tool-info-box__headline {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+  .dark .tool-info-box__headline {
+    color: #f8fafc;
+  }
+
+  .tool-info-box__grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 640px) {
+    .tool-info-box__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .tool-info-box__grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+  }
+
+  .tool-info-box__card {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.875rem;
+    padding: 1.25rem;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+    backdrop-filter: blur(12px);
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    animation: toolInfoFadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  .tool-info-box__card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -5px rgba(124, 58, 237, 0.15), 0 4px 10px -2px rgba(124, 58, 237, 0.1);
+    border-color: rgba(167, 139, 250, 0.4);
+  }
+  .dark .tool-info-box__card {
+    background: rgba(30, 41, 59, 0.6);
+    border-color: rgba(71, 85, 105, 0.5);
+  }
+  .dark .tool-info-box__card:hover {
+    box-shadow: 0 10px 25px -5px rgba(124, 58, 237, 0.25), 0 4px 10px -2px rgba(124, 58, 237, 0.15);
+    border-color: rgba(167, 139, 250, 0.5);
+  }
+
+  .tool-info-box__icon {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+    border-radius: 0.75rem;
+    background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
+    transition: transform 0.3s ease;
+  }
+  .tool-info-box__card:hover .tool-info-box__icon {
+    transform: scale(1.1);
+  }
+  .dark .tool-info-box__icon {
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.2) 0%, rgba(109, 40, 217, 0.25) 100%);
+  }
+
+  .tool-info-box__card-title {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.25rem;
+    line-height: 1.4;
+  }
+  .dark .tool-info-box__card-title {
+    color: #e2e8f0;
+  }
+
+  .tool-info-box__card-desc {
+    font-size: 0.8125rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin: 0;
+  }
+  .dark .tool-info-box__card-desc {
+    color: #94a3b8;
+  }
+
+  .tool-info-box__tip {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem;
+    border-radius: 0.875rem;
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.08) 0%, rgba(236, 72, 153, 0.06) 100%);
+    border: 1px solid rgba(124, 58, 237, 0.15);
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+  }
+  .tool-info-box__tip:hover {
+    border-color: rgba(124, 58, 237, 0.3);
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.1);
+  }
+  .dark .tool-info-box__tip {
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.12) 0%, rgba(236, 72, 153, 0.08) 100%);
+    border-color: rgba(124, 58, 237, 0.25);
+  }
+
+  .tool-info-box__tip-icon {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 9999px;
+    background: rgba(124, 58, 237, 0.12);
+    color: #7c3aed;
+    margin-top: 0.125rem;
+  }
+  .dark .tool-info-box__tip-icon {
+    background: rgba(167, 139, 250, 0.2);
+    color: #a78bfa;
+  }
+
+  .tool-info-box__tip-text {
+    font-size: 0.8125rem;
+    color: #4c1d95;
+    line-height: 1.6;
+    margin: 0;
+  }
+  .dark .tool-info-box__tip-text {
+    color: #ddd6fe;
+  }
+
+  @keyframes toolInfoFadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
