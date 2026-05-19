@@ -1,0 +1,488 @@
+---
+import type { MergedTranslations } from 'theme/i18n/types';
+
+interface Props {
+  translations: MergedTranslations;
+}
+
+const { translations } = Astro.props;
+const cc = (translations as any).cubicCalc;
+---
+
+<section class="py-8" id="cubic-regression-calculator" data-x-label={cc?.xLabel || 'X'} data-y-label={cc?.yLabel || 'Y'} data-invalid-data={cc?.invalidData || 'Please enter at least 4 valid data points'}>
+  <div class="mx-auto max-w-3xl">
+    <div class="rounded-2xl shadow-lg dark:shadow-surface-950/40 shadow-primary-900/5 border border-surface-200/80 dark:border-surface-700/60 overflow-hidden bg-white dark:bg-surface-800/80 backdrop-blur-sm transition-colors duration-300">
+      <div class="bg-gradient-to-r from-primary-600 to-accent-600 px-6 py-5">
+        <h2 class="text-xl font-bold text-white">{cc?.title || 'Cubic Regression Calculator'}</h2>
+        <p class="text-primary-100 text-sm mt-1">{cc?.description || 'Enter your data points to calculate the cubic regression equation (y = ax³ + bx² + cx + d)'}</p>
+      </div>
+
+      <div class="p-6 bg-surface-50/50 dark:bg-surface-800/50">
+        <div class="mb-4">
+          <h3 class="text-sm font-semibold text-surface-700 dark:text-surface-300 mb-3">{cc?.enterData || 'Enter your data points'}</h3>
+          <div class="overflow-x-auto rounded-lg border border-surface-200 dark:border-surface-600">
+            <table class="w-full" id="cubic-data-table">
+              <thead>
+                <tr class="bg-surface-100 dark:bg-surface-700/50 border-b border-surface-200 dark:border-surface-600">
+                  <th class="px-3 py-2 text-left text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider w-12">#</th>
+                  <th class="px-3 py-2 text-left text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider">{cc?.xLabel || 'X'}</th>
+                  <th class="px-3 py-2 text-left text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider">{cc?.yLabel || 'Y'}</th>
+                  <th class="px-3 py-2 w-10"></th>
+                </tr>
+              </thead>
+              <tbody id="cubic-data-rows">
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-3 mb-6">
+          <button
+            id="cubic-add-row-btn"
+            type="button"
+            class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/25 border border-primary-200 dark:border-primary-800/50 rounded-lg transition-all duration-200 hover:bg-primary-100 dark:hover:bg-primary-900/40 hover:border-primary-300 dark:hover:border-primary-700 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-primary-500/30"
+          >
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" /></svg>
+            {cc?.addRow || 'Add Row'}
+          </button>
+          <button
+            id="cubic-calculate-btn"
+            type="button"
+            class="inline-flex items-center gap-1.5 px-6 py-2 text-sm font-semibold text-white bg-gradient-to-r from-primary-600 to-accent-600 rounded-lg shadow-md shadow-primary-600/20 dark:shadow-primary-900/40 transition-all duration-200 hover:shadow-lg hover:shadow-primary-600/30 dark:hover:shadow-primary-900/50 hover:brightness-110 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-primary-500/30"
+          >
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+            {cc?.calculate || 'Calculate'}
+          </button>
+          <button
+            id="cubic-clear-btn"
+            type="button"
+            class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-surface-600 dark:text-surface-400 bg-surface-100 dark:bg-surface-700 border border-surface-200 dark:border-surface-600 rounded-lg transition-all duration-200 hover:bg-surface-200 dark:hover:bg-surface-600 hover:border-surface-300 dark:hover:border-surface-500 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-surface-400/30"
+          >
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
+            {cc?.clear || 'Clear'}
+          </button>
+          <button
+            id="cubic-example-btn"
+            type="button"
+            class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-accent-600 dark:text-accent-400 bg-accent-50 dark:bg-accent-900/25 border border-accent-200 dark:border-accent-800/50 rounded-lg transition-all duration-200 hover:bg-accent-100 dark:hover:bg-accent-900/40 hover:border-accent-300 dark:hover:border-accent-700 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-accent-500/30"
+          >
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+            {cc?.loadExample || 'Load Example'}
+          </button>
+        </div>
+
+        <div id="cubic-error-msg" class="hidden mb-4 p-3 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800/50 text-red-700 dark:text-red-400 text-sm"></div>
+
+        <div id="cubic-results-section" class="animate-[fadeIn_0.3s_ease-out]">
+          <div class="mb-6">
+            <h3 class="text-lg font-bold text-surface-800 dark:text-surface-200 mb-4">{cc?.result || 'Results'}</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="p-4 rounded-xl bg-gradient-to-br from-primary-50 dark:from-primary-900/30 to-accent-50 dark:to-accent-900/30 border border-primary-100 dark:border-primary-800/40 hover:shadow-md dark:hover:shadow-primary-900/20 transition-all duration-200 hover:scale-[1.01] sm:col-span-2">
+                <p class="text-xs font-semibold text-primary-500 dark:text-primary-400 uppercase tracking-wider mb-1">{cc?.equation || 'Equation'}</p>
+                <p id="cubic-result-equation" class="text-lg font-bold text-primary-800 dark:text-primary-200 font-mono"></p>
+              </div>
+              <div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 hover:shadow-md dark:hover:shadow-surface-950/30 transition-all duration-200 hover:scale-[1.01]">
+                <p class="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider mb-1">{cc?.aCoeff || 'a (x³)'}</p>
+                <p id="cubic-result-a" class="text-lg font-bold text-surface-800 dark:text-surface-200 font-mono"></p>
+              </div>
+              <div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 hover:shadow-md dark:hover:shadow-surface-950/30 transition-all duration-200 hover:scale-[1.01]">
+                <p class="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider mb-1">{cc?.bCoeff || 'b (x²)'}</p>
+                <p id="cubic-result-b" class="text-lg font-bold text-surface-800 dark:text-surface-200 font-mono"></p>
+              </div>
+              <div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 hover:shadow-md dark:hover:shadow-surface-950/30 transition-all duration-200 hover:scale-[1.01]">
+                <p class="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider mb-1">{cc?.cCoeff || 'c (x)'}</p>
+                <p id="cubic-result-c" class="text-lg font-bold text-surface-800 dark:text-surface-200 font-mono"></p>
+              </div>
+              <div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 hover:shadow-md dark:hover:shadow-surface-950/30 transition-all duration-200 hover:scale-[1.01]">
+                <p class="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider mb-1">{cc?.dCoeff || 'd (intercept)'}</p>
+                <p id="cubic-result-d" class="text-lg font-bold text-surface-800 dark:text-surface-200 font-mono"></p>
+              </div>
+              <div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 hover:shadow-md dark:hover:shadow-surface-950/30 transition-all duration-200 hover:scale-[1.01]">
+                <p class="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider mb-1">{cc?.rSquared || 'R²'}</p>
+                <p id="cubic-result-rsquared" class="text-lg font-bold text-surface-800 dark:text-surface-200 font-mono"></p>
+              </div>
+              <div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 hover:shadow-md dark:hover:shadow-surface-950/30 transition-all duration-200 hover:scale-[1.01] sm:col-span-2">
+                <p class="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider mb-1">{cc?.predictedY || 'Predicted Y'}</p>
+                <div class="flex items-center gap-3">
+                  <label class="text-sm text-surface-600 dark:text-surface-400">{cc?.forX || 'For X ='} </label>
+                  <input type="number" step="any" id="cubic-prediction-x" placeholder="e.g. 6" class="w-24 px-3 py-1.5 text-sm rounded-lg border border-surface-200 dark:border-surface-600 bg-white dark:bg-surface-700 dark:text-surface-200 dark:placeholder-surface-500 focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-300 dark:focus:border-primary-600 transition-all duration-150" />
+                  <span id="cubic-predicted-y-value" class="text-lg font-bold text-surface-800 dark:text-surface-200 font-mono">—</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <h4 class="text-sm font-semibold text-surface-700 dark:text-surface-300 mb-3">{cc?.statistics || 'Statistics'}</h4>
+            <div class="overflow-x-auto rounded-lg border border-surface-200 dark:border-surface-600">
+              <table class="w-full text-sm">
+                <thead>
+                  <tr class="bg-surface-100 dark:bg-surface-700/50">
+                    <th class="px-4 py-2.5 text-left font-semibold text-surface-600 dark:text-surface-400">{cc?.statistic || 'Statistic'}</th>
+                    <th class="px-4 py-2.5 text-left font-semibold text-surface-600 dark:text-surface-400">{cc?.value || 'Value'}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-t border-surface-200 dark:border-surface-600">
+                    <td class="px-4 py-2.5 text-surface-700 dark:text-surface-300">{cc?.standardError || 'Standard Error'}</td>
+                    <td id="cubic-stat-se" class="px-4 py-2.5 font-mono text-surface-800 dark:text-surface-200"></td>
+                  </tr>
+                  <tr class="border-t border-surface-200 dark:border-surface-600 bg-surface-50/50 dark:bg-surface-800/30">
+                    <td class="px-4 py-2.5 text-surface-700 dark:text-surface-300">{cc?.sampleSize || 'Sample Size (n)'}</td>
+                    <td id="cubic-stat-n" class="px-4 py-2.5 font-mono text-surface-800 dark:text-surface-200"></td>
+                  </tr>
+                  <tr class="border-t border-surface-200 dark:border-surface-600">
+                    <td class="px-4 py-2.5 text-surface-700 dark:text-surface-300">{cc?.degreesOfFreedom || 'Degrees of Freedom'}</td>
+                    <td id="cubic-stat-df" class="px-4 py-2.5 font-mono text-surface-800 dark:text-surface-200"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <h4 class="text-sm font-semibold text-surface-700 dark:text-surface-300 mb-3">{cc?.chart || 'Chart'}</h4>
+            <div class="rounded-xl border border-surface-200 dark:border-surface-600 bg-white dark:bg-surface-700/30 p-2 overflow-hidden">
+              <canvas id="cubic-regression-chart" width="640" height="360" class="w-full h-auto"></canvas>
+            </div>
+          </div>
+
+          <details class="group">
+            <summary class="flex items-center gap-2 cursor-pointer text-sm font-semibold text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors select-none">
+              <svg class="w-4 h-4 transition-transform duration-200 group-open:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+              {cc?.stepByStep || 'Step-by-Step Solution'}
+            </summary>
+            <div id="cubic-steps-content" class="mt-4 p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 text-sm text-surface-700 dark:text-surface-300 space-y-3 font-mono leading-relaxed"></div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('#cubic-regression-calculator').forEach((calcEl) => {
+    const tbody = calcEl.querySelector('#cubic-data-rows');
+    const addBtn = calcEl.querySelector('#cubic-add-row-btn');
+    const calcBtn = calcEl.querySelector('#cubic-calculate-btn');
+    const clearBtn = calcEl.querySelector('#cubic-clear-btn');
+    const exampleBtn = calcEl.querySelector('#cubic-example-btn');
+    const errorEl = calcEl.querySelector('#cubic-error-msg');
+    const resultsSection = calcEl.querySelector('#cubic-results-section');
+    const canvas = calcEl.querySelector('#cubic-regression-chart');
+    const predictionXInput = calcEl.querySelector('#cubic-prediction-x');
+    const xLabel = calcEl.getAttribute('data-x-label') || 'X';
+    const yLabel = calcEl.getAttribute('data-y-label') || 'Y';
+    const invalidData = calcEl.getAttribute('data-invalid-data') || 'Please enter at least 4 valid data points';
+    let rowCounter = 0;
+    let lastResult = null;
+
+    function createRow(xVal = '', yVal = '') {
+      rowCounter++;
+      const tr = document.createElement('tr');
+      tr.className = 'border-b border-surface-200 dark:border-surface-600 transition-colors duration-150 hover:bg-primary-50/30 dark:hover:bg-primary-900/10';
+      tr.innerHTML = `
+        <td class="px-3 py-2 text-xs text-surface-400 dark:text-surface-500 font-mono">${rowCounter}</td>
+        <td class="px-3 py-2"><input type="number" step="any" class="data-x w-full px-3 py-1.5 text-sm rounded-lg border border-surface-200 dark:border-surface-600 bg-white dark:bg-surface-700 dark:text-surface-200 dark:placeholder-surface-500 focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-300 dark:focus:border-primary-600 transition-all duration-150 hover:border-primary-300 dark:hover:border-primary-700" placeholder="${xLabel}" value="${xVal}" /></td>
+        <td class="px-3 py-2"><input type="number" step="any" class="data-y w-full px-3 py-1.5 text-sm rounded-lg border border-surface-200 dark:border-surface-600 bg-white dark:bg-surface-700 dark:text-surface-200 dark:placeholder-surface-500 focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-300 dark:focus:border-primary-600 transition-all duration-150 hover:border-primary-300 dark:hover:border-primary-700" placeholder="${yLabel}" value="${yVal}" /></td>
+        <td class="px-3 py-2"><button type="button" class="remove-row text-surface-300 dark:text-surface-600 hover:text-red-500 dark:hover:text-red-400 transition-colors duration-150" aria-label="Remove row"><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button></td>
+      `;
+      tr.querySelector('.remove-row')?.addEventListener('click', () => {
+        tr.style.opacity = '0';
+        tr.style.transform = 'translateX(10px)';
+        tr.style.transition = 'all 0.15s ease';
+        setTimeout(() => { tr.remove(); renumberRows(); }, 150);
+      });
+      tbody?.appendChild(tr);
+    }
+
+    function renumberRows() {
+      const rows = tbody?.querySelectorAll('tr') ?? [];
+      rows.forEach((row, i) => { row.querySelector('td')!.textContent = String(i + 1); });
+      rowCounter = rows.length;
+    }
+
+    function getData() {
+      const rows = tbody?.querySelectorAll('tr') ?? [];
+      const points = [];
+      for (const row of rows) {
+        const xInput = row.querySelector('.data-x');
+        const yInput = row.querySelector('.data-y');
+        const x = parseFloat(xInput?.value ?? '');
+        const y = parseFloat(yInput?.value ?? '');
+        if (!isNaN(x) && !isNaN(y)) points.push({ x, y });
+      }
+      return points;
+    }
+
+    function showError(msg) {
+      if (errorEl) { errorEl.textContent = msg; errorEl.classList.remove('hidden'); }
+      if (resultsSection) resultsSection.classList.add('hidden');
+    }
+
+    function hideError() {
+      if (errorEl) errorEl.classList.add('hidden');
+    }
+
+    function gaussianElimination(A, b) {
+      const n = A.length;
+      const M = A.map((row, i) => [...row, b[i]]);
+      for (let col = 0; col < n; col++) {
+        let maxRow = col;
+        for (let i = col + 1; i < n; i++) {
+          if (Math.abs(M[i][col]) > Math.abs(M[maxRow][col])) maxRow = i;
+        }
+        [M[col], M[maxRow]] = [M[maxRow], M[col]];
+        if (Math.abs(M[col][col]) < 1e-12) continue;
+        for (let i = col + 1; i < n; i++) {
+          const factor = M[i][col] / M[col][col];
+          for (let j = col; j <= n; j++) M[i][j] -= factor * M[col][j];
+        }
+      }
+      const x = new Array(n).fill(0);
+      for (let i = n - 1; i >= 0; i--) {
+        let sum = M[i][n];
+        for (let j = i + 1; j < n; j++) sum -= M[i][j] * x[j];
+        x[i] = Math.abs(M[i][i]) < 1e-12 ? 0 : sum / M[i][i];
+      }
+      return x;
+    }
+
+    function fitPolynomial(points, degree) {
+      const n = points.length;
+      const m = degree + 1;
+      if (n < m) return null;
+
+      const XtX = Array.from({length: m}, () => new Array(m).fill(0));
+      const Xty = new Array(m).fill(0);
+
+      for (const p of points) {
+        const powers = [];
+        let pow = 1;
+        for (let j = 0; j < m; j++) {
+          powers.push(pow);
+          pow *= p.x;
+        }
+        for (let i = 0; i < m; i++) {
+          Xty[i] += powers[i] * p.y;
+          for (let j = 0; j < m; j++) {
+            XtX[i][j] += powers[i] * powers[j];
+          }
+        }
+      }
+
+      return gaussianElimination(XtX, Xty);
+    }
+
+    function evalPolynomial(coeffs, x) {
+      let result = 0;
+      let pow = 1;
+      for (let i = 0; i < coeffs.length; i++) {
+        result += coeffs[i] * pow;
+        pow *= x;
+      }
+      return result;
+    }
+
+    function computeCubicRegression(points) {
+      const n = points.length;
+      if (n < 4) {
+        showError(invalidData);
+        return null;
+      }
+
+      const coeffs = fitPolynomial(points, 3);
+      if (!coeffs) {
+        showError('Unable to compute cubic regression. Please check your data.');
+        return null;
+      }
+
+      const meanY = points.reduce((s, p) => s + p.y, 0) / n;
+      let ssRes = 0, ssTot = 0;
+      for (const p of points) {
+        const pred = evalPolynomial(coeffs, p.x);
+        ssRes += (p.y - pred) ** 2;
+        ssTot += (p.y - meanY) ** 2;
+      }
+      const rSquared = ssTot === 0 ? 1 : 1 - ssRes / ssTot;
+      const se = Math.sqrt(ssRes / (n - 4));
+
+      const fmt = (v) => v.toFixed(4);
+      const [d, c, b, a] = coeffs;
+      const equation = `y = ${fmt(a)}x³ + ${fmt(b)}x² + ${fmt(c)}x + ${fmt(d)}`;
+
+      const steps = [
+        `<strong>Step 1:</strong> Gather ${n} data points`,
+        `<strong>Step 2:</strong> Build normal equations (XᵀX)·β = Xᵀy for degree 3`,
+        `<strong>Step 3:</strong> Solve the 4×4 system via Gaussian elimination`,
+        `&nbsp;&nbsp;a (x³) = ${fmt(a)}`,
+        `&nbsp;&nbsp;b (x²) = ${fmt(b)}`,
+        `&nbsp;&nbsp;c (x) = ${fmt(c)}`,
+        `&nbsp;&nbsp;d (intercept) = ${fmt(d)}`,
+        ``,
+        `<strong>Step 4:</strong> Compute R² on original scale`,
+        `&nbsp;&nbsp;SSres = ${fmt(ssRes)}`,
+        `&nbsp;&nbsp;SStot = ${fmt(ssTot)}`,
+        `&nbsp;&nbsp;R² = ${fmt(rSquared)}`,
+      ];
+
+      const predict = (x) => evalPolynomial(coeffs, x);
+
+      return { a, b, c, d, coeffs, rSquared, se, n, df: n - 4, equation, predict, steps };
+    }
+
+    function drawChart(points, predictFn) {
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return;
+      const dpr = window.devicePixelRatio || 1;
+      const w = canvas.clientWidth, h = canvas.clientHeight;
+      canvas.width = w * dpr; canvas.height = h * dpr;
+      ctx.scale(dpr, dpr);
+
+      const isDark = document.documentElement.classList.contains('dark');
+      const bg = isDark ? '#1e293b' : '#ffffff';
+      const gridColor = isDark ? '#334155' : '#e2e8f0';
+      const textColor = isDark ? '#94a3b8' : '#64748b';
+      const pointColor = isDark ? '#818cf8' : '#4f46e5';
+      const lineColor = isDark ? '#a78bfa' : '#7c3aed';
+
+      ctx.fillStyle = bg; ctx.fillRect(0, 0, w, h);
+      if (points.length === 0) return;
+
+      const xs = points.map(p => p.x);
+      const xMin = Math.min(...xs), xMax = Math.max(...xs);
+      const xPad = (xMax - xMin) * 0.15 || 1;
+      const dxMin = xMin - xPad, dxMax = xMax + xPad;
+
+      // Compute y range from sampled curve
+      let yMin = Infinity, yMax = -Infinity;
+      const steps = 200;
+      for (let i = 0; i <= steps; i++) {
+        const xv = dxMin + (dxMax - dxMin) * i / steps;
+        const yv = predictFn(xv);
+        if (!isNaN(yv) && isFinite(yv)) {
+          yMin = Math.min(yMin, yv);
+          yMax = Math.max(yMax, yv);
+        }
+      }
+      for (const p of points) {
+        yMin = Math.min(yMin, p.y);
+        yMax = Math.max(yMax, p.y);
+      }
+      const yPad = (yMax - yMin) * 0.1 || 1;
+      const dyMin = yMin - yPad, dyMax = yMax + yPad;
+
+      const margin = { top: 20, right: 20, bottom: 40, left: 55 };
+      const pw = w - margin.left - margin.right, ph = h - margin.top - margin.bottom;
+
+      function tx(x) { return margin.left + (x - dxMin) / (dxMax - dxMin) * pw; }
+      function ty(y) { return margin.top + ph - (y - dyMin) / (dyMax - dyMin) * ph; }
+
+      ctx.strokeStyle = gridColor; ctx.lineWidth = 0.5;
+      const xTicks = 6, yTicks = 5;
+      for (let i = 0; i <= xTicks; i++) {
+        const xv = dxMin + (dxMax - dxMin) * i / xTicks;
+        ctx.beginPath(); ctx.moveTo(tx(xv), margin.top); ctx.lineTo(tx(xv), margin.top + ph); ctx.stroke();
+        ctx.fillStyle = textColor; ctx.font = '11px sans-serif'; ctx.textAlign = 'center';
+        ctx.fillText(xv.toFixed(1), tx(xv), margin.top + ph + 18);
+      }
+      for (let i = 0; i <= yTicks; i++) {
+        const yv = dyMin + (dyMax - dyMin) * i / yTicks;
+        ctx.beginPath(); ctx.moveTo(margin.left, ty(yv)); ctx.lineTo(margin.left + pw, ty(yv)); ctx.stroke();
+        ctx.fillStyle = textColor; ctx.font = '11px sans-serif'; ctx.textAlign = 'right';
+        ctx.fillText(yv.toFixed(1), margin.left - 8, ty(yv) + 4);
+      }
+
+      ctx.strokeStyle = lineColor; ctx.lineWidth = 2.5; ctx.beginPath();
+      let first = true;
+      for (let i = 0; i <= steps; i++) {
+        const xv = dxMin + (dxMax - dxMin) * i / steps;
+        const yv = predictFn(xv);
+        if (isNaN(yv) || !isFinite(yv)) { first = true; continue; }
+        if (first) { ctx.moveTo(tx(xv), ty(yv)); first = false; }
+        else ctx.lineTo(tx(xv), ty(yv));
+      }
+      ctx.stroke();
+
+      for (const p of points) {
+        ctx.fillStyle = pointColor;
+        ctx.beginPath(); ctx.arc(tx(p.x), ty(p.y), 5, 0, Math.PI * 2); ctx.fill();
+        ctx.strokeStyle = isDark ? '#312e81' : '#e0e7ff'; ctx.lineWidth = 2;
+        ctx.beginPath(); ctx.arc(tx(p.x), ty(p.y), 5, 0, Math.PI * 2); ctx.stroke();
+      }
+    }
+
+    function updatePrediction() {
+      if (!lastResult) return;
+      const predX = parseFloat(predictionXInput?.value ?? '');
+      const predYEl = calcEl.querySelector('#cubic-predicted-y-value');
+      if (predYEl) {
+        if (isNaN(predX)) {
+          predYEl.textContent = '—';
+        } else {
+          const yVal = lastResult.predict(predX);
+          predYEl.textContent = isNaN(yVal) ? '—' : yVal.toFixed(4);
+        }
+      }
+    }
+
+    predictionXInput?.addEventListener('input', updatePrediction);
+
+    addBtn?.addEventListener('click', () => createRow());
+    for (let i = 0; i < 5; i++) createRow();
+
+    exampleBtn?.addEventListener('click', () => {
+      hideError();
+      if (resultsSection) resultsSection.classList.add('hidden');
+      if (tbody) tbody.innerHTML = '';
+      rowCounter = 0;
+      const exampleData = [[0, 1.2], [1, 3.5], [2, 8.1], [3, 15.2], [4, 25.8], [5, 41.3], [6, 62.5]];
+      exampleData.forEach(([x, y]) => createRow(String(x), String(y)));
+    });
+
+    calcBtn?.addEventListener('click', () => {
+      hideError();
+      const points = getData();
+      const result = computeCubicRegression(points);
+      if (!result) return;
+      lastResult = result;
+
+      calcEl.querySelector('#cubic-result-equation')!.textContent = result.equation;
+      calcEl.querySelector('#cubic-result-a')!.textContent = result.a.toFixed(4);
+      calcEl.querySelector('#cubic-result-b')!.textContent = result.b.toFixed(4);
+      calcEl.querySelector('#cubic-result-c')!.textContent = result.c.toFixed(4);
+      calcEl.querySelector('#cubic-result-d')!.textContent = result.d.toFixed(4);
+      calcEl.querySelector('#cubic-result-rsquared')!.textContent = result.rSquared.toFixed(4);
+      calcEl.querySelector('#cubic-stat-se')!.textContent = result.se.toFixed(4);
+      calcEl.querySelector('#cubic-stat-n')!.textContent = String(result.n);
+      calcEl.querySelector('#cubic-stat-df')!.textContent = String(result.df);
+
+      updatePrediction();
+
+      const stepsEl = calcEl.querySelector('#cubic-steps-content');
+      if (stepsEl) stepsEl.innerHTML = result.steps.map((s) => `<p>${s}</p>`).join('');
+
+      if (resultsSection) resultsSection.classList.remove('hidden');
+
+      requestAnimationFrame(() => drawChart(points, result.predict));
+      if (resultsSection) resultsSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+
+    clearBtn?.addEventListener('click', () => {
+      hideError();
+      if (resultsSection) resultsSection.classList.add('hidden');
+      if (tbody) tbody.innerHTML = '';
+      rowCounter = 0;
+      lastResult = null;
+      for (let i = 0; i < 5; i++) createRow();
+    });
+  });
+</script>

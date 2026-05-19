@@ -2181,5 +2181,421 @@
       "title": "Simple Linear Regression: A Step-by-Step Mathematical Walkthrough",
       "description": "Master simple linear regression step-by-step. Learn to calculate slope, intercept, R², and correlation (r) by hand with real-world worked examples."
     }
+  },
+  "powerCalc": {
+    "title": "Power Regression Calculator",
+    "description": "Free power regression calculator. Fit y = a·x^b with step-by-step solutions, R², graphs, and predictions. All calculations in your browser.",
+    "xLabel": "X",
+    "yLabel": "Y",
+    "invalidData": "Please enter at least 2 valid data points with positive X and Y values",
+    "enterData": "Enter your data points",
+    "addRow": "Add Row",
+    "calculate": "Calculate",
+    "clear": "Clear",
+    "loadExample": "Load Example",
+    "result": "Results",
+    "equation": "Equation",
+    "exponent": "Exponent (b)",
+    "coefficient": "Coefficient (a)",
+    "rSquared": "R²",
+    "predictedY": "Predicted Y",
+    "forX": "For X =",
+    "statistics": "Statistics",
+    "statistic": "Statistic",
+    "value": "Value",
+    "standardError": "Standard Error",
+    "sampleSize": "Sample Size (n)",
+    "degreesOfFreedom": "Degrees of Freedom",
+    "chart": "Chart",
+    "stepByStep": "Step-by-Step Solution",
+    "breadcrumb": "Back to Main Regression Calculator",
+    "whatIsTitle": "What Is Power Regression?",
+    "whatIsText": "<p>📐 <strong>Power regression</strong> models relationships where the dependent variable changes as a power of the independent variable. The general formula is <strong>y = a · x<sup>b</sup></strong>, where <strong>a</strong> is a scaling coefficient and <strong>b</strong> is the exponent that determines the curvature.</p><p>📊 Unlike linear regression, power regression captures proportional scaling laws found throughout science and engineering. Real-world examples include: (1) <strong>Physics</strong> — gravitational force falls with the square of distance (b = −2), (2) <strong>Biology</strong> — metabolic rate scales with body mass to the 3/4 power (Kleiber's law), (3) <strong>Engineering</strong> — pipe flow resistance scales with diameter to the −4.8 power, and (4) <strong>Economics</strong> — Cobb-Douglas production functions use power-law relationships.</p><p>📐 Power regression is a special case of nonlinear regression that can be linearized by taking the logarithm of both variables: ln(y) = ln(a) + b · ln(x). This transformation allows ordinary least squares to estimate the parameters efficiently.</p>",
+    "howWorksTitle": "How Power Regression Works",
+    "howWorksPoints": [
+      "<strong>Transform both variables:</strong> Take the natural logarithm of all X and Y values. This converts the power model y = a·x^b into a linear equation ln(y) = ln(a) + b·ln(x).",
+      "<strong>Perform linear regression:</strong> Apply ordinary least squares to the transformed pairs (ln(x), ln(y)). The slope equals the exponent b and the intercept equals ln(a).",
+      "<strong>Recover parameters:</strong> Exponentiate the intercept to obtain a = e^(intercept). The slope directly gives b.",
+      "<strong>Assess fit on original scale:</strong> Compute R² using the original (non-transformed) data to ensure the power curve actually fits the observations well.",
+      "<strong>Predict:</strong> For any new X value, calculate ŷ = a · X^b using the recovered parameters."
+    ],
+    "whenTitle": "When to Use Power Regression",
+    "whenPoints": [
+      "Data follows a scaling law or proportional relationship",
+      "Both variables are strictly positive (required for log transformation)",
+      "The relationship appears as a straight line on a log-log plot",
+      "You need to model allometric scaling, physics laws, or engineering power curves"
+    ],
+    "avoidTitle": "When to Avoid Power Regression",
+    "avoidPoints": [
+      "When X or Y values are zero or negative (log undefined)",
+      "When the relationship is approximately linear on regular axes",
+      "When data shows an S-curve or saturation pattern (use logistic instead)",
+      "When the relationship is exponential rather than power-law"
+    ],
+    "faqTitle": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "q": "What is power regression?",
+        "a": "<p>📐 Power regression fits the model <strong>y = a · x<sup>b</sup></strong> to your data by linearizing it through log transformation. It is ideal for modeling scaling laws and proportional relationships where both variables are positive.</p>"
+      },
+      {
+        "q": "How do I calculate power regression?",
+        "a": "<p>🧮 To calculate power regression manually: (1) take ln(x) and ln(y) for all points, (2) perform linear regression on (ln(x), ln(y)), (3) the slope is b and a = e^(intercept), (4) the final equation is y = a·x^b.</p><p>💻 Our calculator automates these steps instantly.</p>"
+      },
+      {
+        "q": "What is the difference between power and exponential regression?",
+        "a": "<p>📊 Power regression uses <strong>y = a · x<sup>b</sup></strong> where x is raised to a power. Exponential regression uses <strong>y = a · e<sup>bx</sup></strong> where the variable is in the exponent. Power regression requires log-transforming both variables; exponential regression only log-transforms y.</p>"
+      }
+    ],
+    "relatedTitle": "Related Regression Calculators",
+    "relatedItems": [
+      {
+        "name": "Exponential Regression Calculator",
+        "url": "/exponential-regression-calculator/",
+        "desc": "Model growth and decay with y = a·e^(bx)"
+      },
+      {
+        "name": "Quadratic Regression Calculator",
+        "url": "/quadratic-regression-calculator/",
+        "desc": "Model parabolic relationships with y = ax² + bx + c"
+      },
+      {
+        "name": "Multiple Regression Calculator",
+        "url": "/multiple-regression-calculator/",
+        "desc": "Use two or more predictors with y = b₀ + b₁x₁ + b₂x₂"
+      },
+      {
+        "name": "Pearson Correlation Calculator",
+        "url": "/pearson-correlation-calculator/",
+        "desc": "Measure the strength and direction of linear relationships"
+      },
+      {
+        "name": "Regression Curve Calculator",
+        "url": "/regression-curve-calculator/",
+        "desc": "Compare linear, quadratic, exponential, and logarithmic models"
+      },
+      {
+        "name": "Grubbs' Test Calculator",
+        "url": "/grubbs-test-calculator/",
+        "desc": "Detect a single outlier in normally distributed data"
+      }
+    ],
+    "seeAlsoTitle": "See Also"
+  },
+  "logisticCalc": {
+    "title": "Logistic Regression Calculator",
+    "description": "Free logistic curve calculator. Fit S-curve growth y = L/(1+e^(-k(x-x0))) with step-by-step solutions, R², and graphs. Private browser-based.",
+    "xLabel": "X",
+    "yLabel": "Y",
+    "invalidData": "Please enter at least 2 valid data points with 0 < Y < L",
+    "enterData": "Enter your data points",
+    "addRow": "Add Row",
+    "calculate": "Calculate",
+    "clear": "Clear",
+    "loadExample": "Load Example",
+    "result": "Results",
+    "equation": "Equation",
+    "growthRate": "Growth Rate (k)",
+    "midpoint": "Midpoint (x₀)",
+    "carryingCapacity": "Carrying Capacity (L)",
+    "lPlaceholder": "Auto from max(Y) × 1.05",
+    "lHint": "Leave blank to auto-estimate",
+    "rSquared": "R²",
+    "predictedY": "Predicted Y",
+    "forX": "For X =",
+    "statistics": "Statistics",
+    "statistic": "Statistic",
+    "value": "Value",
+    "standardError": "Standard Error",
+    "sampleSize": "Sample Size (n)",
+    "degreesOfFreedom": "Degrees of Freedom",
+    "chart": "Chart",
+    "stepByStep": "Step-by-Step Solution",
+    "breadcrumb": "Back to Main Regression Calculator",
+    "whatIsTitle": "What Is Logistic Curve Fitting?",
+    "whatIsText": "<p>📐 <strong>Logistic curve fitting</strong> models growth processes that start exponentially but eventually slow down as they approach a maximum limit called the <strong>carrying capacity (L)</strong>. The classic formula is <strong>y = L / (1 + e<sup>−k(x − x₀)</sup>)</strong>, where k controls the steepness of the curve and x₀ is the midpoint (the x-value where y reaches L/2).</p><p>📊 Real-world examples include: (1) <strong>Population biology</strong> — bacterial colonies that slow as nutrients run out, (2) <strong>Marketing</strong> — product adoption that saturates as market share fills, (3) <strong>Epidemiology</strong> — infection curves that flatten as herd immunity builds, and (4) <strong>Machine learning</strong> — training accuracy that plateaus as the model converges.</p><p>📐 Logistic curves are S-shaped (sigmoid). They are fundamentally different from exponential curves because they have an upper bound. This makes them essential whenever unlimited growth is physically impossible.</p>",
+    "howWorksTitle": "How Logistic Curve Fitting Works",
+    "howWorksPoints": [
+      "<strong>Determine L:</strong> Identify the carrying capacity — the maximum possible Y value. The calculator auto-estimates L as max(Y) × 1.05, but you can override it.",
+      "<strong>Linearize via logit:</strong> Transform each data point using z = ln(y / (L − y)). This converts the logistic model into a linear equation z = −k·x + k·x₀.",
+      "<strong>Perform linear regression:</strong> Apply ordinary least squares to (x, z). The slope equals −k and the intercept equals k·x₀.",
+      "<strong>Recover parameters:</strong> Compute k = −slope and x₀ = intercept / k. The final equation is y = L / (1 + e<sup>−k(x − x₀)</sup>).",
+      "<strong>Assess fit on original scale:</strong> Compute R² using the original (non-transformed) data to verify the S-curve actually fits the observations."
+    ],
+    "whenTitle": "When to Use Logistic Curve Fitting",
+    "whenPoints": [
+      "Growth has a natural upper limit or saturation point",
+      "Early data shows exponential-like growth that eventually slows",
+      "You need to estimate carrying capacity, midpoint, or growth rate",
+      "Modeling population dynamics, product adoption, or learning curves"
+    ],
+    "avoidTitle": "When to Avoid Logistic Curve Fitting",
+    "avoidPoints": [
+      "When Y values can exceed any reasonable upper bound",
+      "When growth is strictly exponential without any slowing",
+      "When data is monotonically decreasing without an asymptote",
+      "When you have fewer than 5 data points (unreliable parameter estimates)"
+    ],
+    "faqTitle": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "q": "What is logistic curve fitting?",
+        "a": "<p>📐 Logistic curve fitting estimates the S-shaped curve <strong>y = L / (1 + e<sup>−k(x − x₀)</sup>)</strong> from your data. It models growth that accelerates initially, then slows as it approaches a maximum limit L.</p>"
+      },
+      {
+        "q": "How is the carrying capacity L determined?",
+        "a": "<p>📊 The calculator auto-estimates L as <strong>max(Y) × 1.05</strong> — slightly above your highest observed value. You can also enter your own L if you know the theoretical limit from domain knowledge.</p>"
+      },
+      {
+        "q": "What is the difference between logistic and exponential regression?",
+        "a": "<p>📊 Exponential regression assumes unlimited growth (y = a·e<sup>bx</sup>). Logistic regression adds a carrying capacity L that growth cannot exceed. Use logistic when you expect saturation; use exponential when you do not.</p>"
+      }
+    ],
+    "relatedTitle": "Related Regression Calculators",
+    "relatedItems": [
+      {
+        "name": "Exponential Regression Calculator",
+        "url": "/exponential-regression-calculator/",
+        "desc": "Model unlimited growth and decay with y = a·e^(bx)"
+      },
+      {
+        "name": "Quadratic Regression Calculator",
+        "url": "/quadratic-regression-calculator/",
+        "desc": "Model parabolic relationships with y = ax² + bx + c"
+      },
+      {
+        "name": "Multiple Regression Calculator",
+        "url": "/multiple-regression-calculator/",
+        "desc": "Use two or more predictors with y = b₀ + b₁x₁ + b₂x₂"
+      },
+      {
+        "name": "Pearson Correlation Calculator",
+        "url": "/pearson-correlation-calculator/",
+        "desc": "Measure the strength and direction of linear relationships"
+      },
+      {
+        "name": "Regression Curve Calculator",
+        "url": "/regression-curve-calculator/",
+        "desc": "Compare linear, quadratic, exponential, and logarithmic models"
+      },
+      {
+        "name": "Grubbs' Test Calculator",
+        "url": "/grubbs-test-calculator/",
+        "desc": "Detect a single outlier in normally distributed data"
+      }
+    ],
+    "seeAlsoTitle": "See Also",
+    "modelPoint": "Model S-curve growth with carrying capacity L, growth rate k, and midpoint x₀.",
+    "dataPoint": "Enter paired X and Y values. Optionally set carrying capacity L or let the calculator auto-estimate it.",
+    "statsPoint": "Get growth rate k, midpoint x₀, carrying capacity L, R², and prediction diagnostics.",
+    "tip": "Logistic curve fitting requires 0 < Y < L. L is auto-estimated from max(Y) × 1.05 but can be overridden."
+  },
+  "cubicCalc": {
+    "title": "Cubic Regression Calculator",
+    "description": "Free cubic regression calculator. Fit y = ax³+bx²+cx+d with step-by-step solutions, R², and graphs. Browser-based privacy.",
+    "xLabel": "X",
+    "yLabel": "Y",
+    "invalidData": "Please enter at least 4 valid data points",
+    "enterData": "Enter your data points",
+    "addRow": "Add Row",
+    "calculate": "Calculate",
+    "clear": "Clear",
+    "loadExample": "Load Example",
+    "result": "Results",
+    "equation": "Equation",
+    "rSquared": "R²",
+    "predictedY": "Predicted Y",
+    "forX": "For X =",
+    "statistics": "Statistics",
+    "statistic": "Statistic",
+    "value": "Value",
+    "standardError": "Standard Error",
+    "sampleSize": "Sample Size (n)",
+    "degreesOfFreedom": "Degrees of Freedom",
+    "chart": "Chart",
+    "stepByStep": "Step-by-Step Solution",
+    "breadcrumb": "Back to Main Regression Calculator",
+    "whatIsTitle": "What Is Cubic Regression?",
+    "whatIsText": "<p>📐 <strong>Cubic regression</strong> fits a third-degree polynomial <strong>y = ax³ + bx² + cx + d</strong> to your data. Unlike quadratic curves (parabolas), cubic curves can have one <strong>inflection point</strong> where the curvature changes from concave to convex or vice versa.</p><p>📊 Common applications include: (1) <strong>Economics</strong> — cost functions that initially decrease then increase due to scale effects, (2) <strong>Engineering</strong> — material stress-strain curves with yield points, (3) <strong>Ecology</strong> — population growth that accelerates, then plateaus, then crashes, and (4) <strong>Psychology</strong> — learning curves that improve rapidly, then slow, then improve again.</p><p>📐 Cubic regression captures richer patterns than quadratic while remaining more interpretable than higher-degree polynomials. Use it when your data clearly changes direction once.</p>",
+    "howWorksTitle": "How Cubic Regression Works",
+    "howWorksPoints": [
+      "<strong>Enter data:</strong> Provide paired X and Y values. At least 4 points are required to fit 4 unknown coefficients.",
+      "<strong>Build normal equations:</strong> Construct the 4×4 symmetric matrix XᵀX and the vector Xᵀy using sums of powers of X from x⁰ up to x⁶.",
+      "<strong>Solve the linear system:</strong> Use Gaussian elimination with partial pivoting to solve (XᵀX)·β = Xᵀy for the coefficient vector β = [d, c, b, a]ᵀ.",
+      "<strong>Compute predictions and residuals:</strong> Calculate predicted ŷ = ax³ + bx² + cx + d and residuals e = y − ŷ for each data point.",
+      "<strong>Evaluate goodness-of-fit:</strong> Compute R² = 1 − SSE/SST, standard error = sqrt(SSE/(n−4)), and plot the fitted cubic curve against the scatter."
+    ],
+    "whenTitle": "When to Use Cubic Regression",
+    "whenPoints": [
+      "Your data changes direction exactly once (one inflection point)",
+      "A quadratic parabola is too simple but a 5th-degree polynomial would overfit",
+      "You suspect an S-shaped or N-shaped pattern in the data",
+      "You need to model behavior with both acceleration and deceleration phases"
+    ],
+    "avoidTitle": "When to Avoid Cubic Regression",
+    "avoidPoints": [
+      "When you have fewer than 4 data points (insufficient to fit 4 coefficients)",
+      "When a straight line or simple curve already explains the data well",
+      "When higher-order wiggles are not physically meaningful",
+      "When a simpler model (linear, quadratic, or exponential) achieves similar R²"
+    ],
+    "faqTitle": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "q": "What is cubic regression?",
+        "a": "<p>📐 Cubic regression fits a third-degree polynomial <strong>y = ax³ + bx² + cx + d</strong> to your data. It can model curves with one inflection point, making it more flexible than quadratic regression.</p>"
+      },
+      {
+        "q": "How many data points do I need?",
+        "a": "<p>📊 You need at least <strong>4</strong> data points to fit a cubic regression because there are 4 unknown coefficients (a, b, c, d). More data produces more reliable estimates.</p>"
+      },
+      {
+        "q": "When should I use cubic instead of quadratic regression?",
+        "a": "<p>📐 Use cubic regression when your data clearly changes curvature direction once (an inflection point). If the data only bends once like a parabola, quadratic is simpler and less prone to overfitting.</p>"
+      }
+    ],
+    "relatedTitle": "Related Regression Calculators",
+    "relatedItems": [
+      {
+        "name": "Polynomial Regression Calculator",
+        "url": "/polynomial-regression-calculator/",
+        "desc": "Fit any-degree polynomial curves (1-5) to your data"
+      },
+      {
+        "name": "Quadratic Regression Calculator",
+        "url": "/quadratic-regression-calculator/",
+        "desc": "Model parabolic relationships with y = ax² + bx + c"
+      },
+      {
+        "name": "Multiple Regression Calculator",
+        "url": "/multiple-regression-calculator/",
+        "desc": "Use two or more predictors with y = b₀ + b₁x₁ + b₂x₂"
+      },
+      {
+        "name": "Pearson Correlation Calculator",
+        "url": "/pearson-correlation-calculator/",
+        "desc": "Measure the strength and direction of linear relationships"
+      },
+      {
+        "name": "Regression Curve Calculator",
+        "url": "/regression-curve-calculator/",
+        "desc": "Compare linear, quadratic, exponential, and logarithmic models"
+      },
+      {
+        "name": "Grubbs' Test Calculator",
+        "url": "/grubbs-test-calculator/",
+        "desc": "Detect a single outlier in normally distributed data"
+      }
+    ],
+    "seeAlsoTitle": "See Also",
+    "modelPoint": "Fit cubic curves y = ax³ + bx² + cx + d to capture inflection-point patterns.",
+    "dataPoint": "Enter paired X and Y values. Minimum 4 points required.",
+    "statsPoint": "Get all four coefficients, R², standard error, and predictions.",
+    "tip": "Cubic regression captures one inflection point. Use quartic for two inflection points."
+  },
+  "polyCalc": {
+    "title": "Polynomial & Nonlinear Regression Calculator",
+    "description": "Free polynomial regression calculator. Fit curves of degree 1-5 with step-by-step solutions, R², and graphs. Browser-based privacy.",
+    "degreeLabel": "Polynomial Degree",
+    "xLabel": "X",
+    "yLabel": "Y",
+    "invalidData": "Please enter at least (degree + 1) valid data points",
+    "enterData": "Enter your data points",
+    "addRow": "Add Row",
+    "calculate": "Calculate",
+    "clear": "Clear",
+    "loadExample": "Load Example",
+    "result": "Results",
+    "equation": "Equation",
+    "rSquared": "R²",
+    "predictedY": "Predicted Y",
+    "forX": "For X =",
+    "statistics": "Statistics",
+    "statistic": "Statistic",
+    "value": "Value",
+    "standardError": "Standard Error",
+    "sampleSize": "Sample Size (n)",
+    "degreesOfFreedom": "Degrees of Freedom",
+    "chart": "Chart",
+    "stepByStep": "Step-by-Step Solution",
+    "breadcrumb": "Back to Main Regression Calculator",
+    "whatIsTitle": "What Is Polynomial Regression?",
+    "whatIsText": "<p>📐 <strong>Polynomial regression</strong> generalizes linear and quadratic regression to fit a polynomial of any chosen degree <strong>n</strong>: <strong>y = aₙxⁿ + ... + a₂x² + a₁x + a₀</strong>. By selecting the degree (1 through 5), you control how flexibly the curve can bend to match your data.</p><p>📊 Key applications include: (1) <strong>Physics</strong> — projectile trajectories and drag forces, (2) <strong>Finance</strong> — yield curves and option pricing models, (3) <strong>Biology</strong> — dose-response curves with multiple thresholds, and (4) <strong>Engineering</strong> — thermal expansion and vibration modes.</p><p>⚠️ Higher degrees increase flexibility but also risk <strong>overfitting</strong> — the curve may wiggle to fit noise rather than signal. Choose the <strong>lowest degree</strong> that captures the underlying pattern.</p>",
+    "howWorksTitle": "How Polynomial Regression Works",
+    "howWorksPoints": [
+      "<strong>Choose the degree:</strong> Select 1 (linear) through 5 (quintic). The degree determines how many bends the curve can have — degree n allows up to n−1 turning points.",
+      "<strong>Build the design matrix:</strong> Create matrix X where each row is [1, xᵢ, xᵢ², ..., xᵢⁿ] for each data point, and vector y of observed values.",
+      "<strong>Solve normal equations:</strong> Compute (XᵀX)·β = Xᵀy using Gaussian elimination with partial pivoting. The solution vector β contains coefficients [a₀, a₁, ..., aₙ].",
+      "<strong>Evaluate predictions and fit:</strong> Calculate predicted ŷ for every xᵢ, then compute residuals, SSE, SST, and R² = 1 − SSE/SST.",
+      "<strong>Assess model complexity:</strong> Compare R² across degrees, but favor simpler models. Standard error = sqrt(SSE/(n − degree − 1)) penalizes overfitting."
+    ],
+    "whenTitle": "When to Use Polynomial Regression",
+    "whenPoints": [
+      "Your data follows a curved but not strictly exponential or logistic pattern",
+      "You need to model multiple turning points (peaks, troughs, inflections)",
+      "You want to compare different complexity levels quickly (degree 1 vs 3 vs 5)",
+      "Domain knowledge suggests a polynomial relationship (physics, engineering)"
+    ],
+    "avoidTitle": "When to Avoid Polynomial Regression",
+    "avoidPoints": [
+      "When you have very few data points relative to the chosen degree",
+      "When the relationship is naturally exponential, logistic, or periodic",
+      "When higher-degree wiggles are not physically interpretable",
+      "When a simpler model (linear, quadratic, cubic) achieves nearly identical R²"
+    ],
+    "faqTitle": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "q": "What is polynomial regression?",
+        "a": "<p>📐 Polynomial regression fits a polynomial of chosen degree <strong>n</strong> to your data: <strong>y = aₙxⁿ + ... + a₁x + a₀</strong>. It generalizes linear (degree 1) and quadratic (degree 2) regression.</p>"
+      },
+      {
+        "q": "How do I choose the right degree?",
+        "a": "<p>📊 Start with degree 2 or 3. Increase only if R² improves substantially and the curve remains smooth. Use the lowest degree that captures the pattern — overfitting produces meaningless wiggles.</p>"
+      },
+      {
+        "q": "What is the minimum number of data points?",
+        "a": "<p>📐 You need at least <strong>degree + 1</strong> points. For a cubic (degree 3) you need 4 points; for degree 5 you need 6 points.</p>"
+      }
+    ],
+    "relatedTitle": "Related Regression Calculators",
+    "relatedItems": [
+      {
+        "name": "Cubic Regression Calculator",
+        "url": "/cubic-regression-calculator/",
+        "desc": "Fit cubic curves with one inflection point"
+      },
+      {
+        "name": "Quadratic Regression Calculator",
+        "url": "/quadratic-regression-calculator/",
+        "desc": "Model parabolic relationships with y = ax² + bx + c"
+      },
+      {
+        "name": "Multiple Regression Calculator",
+        "url": "/multiple-regression-calculator/",
+        "desc": "Use two or more predictors with y = b₀ + b₁x₁ + b₂x₂"
+      },
+      {
+        "name": "Pearson Correlation Calculator",
+        "url": "/pearson-correlation-calculator/",
+        "desc": "Measure the strength and direction of linear relationships"
+      },
+      {
+        "name": "Regression Curve Calculator",
+        "url": "/regression-curve-calculator/",
+        "desc": "Compare linear, quadratic, exponential, and logarithmic models"
+      },
+      {
+        "name": "Grubbs' Test Calculator",
+        "url": "/grubbs-test-calculator/",
+        "desc": "Detect a single outlier in normally distributed data"
+      }
+    ],
+    "seeAlsoTitle": "See Also",
+    "modelPoint": "Fit polynomial curves of degree 1 through 5 to match your data's complexity.",
+    "dataPoint": "Enter paired X and Y values. Minimum points = degree + 1.",
+    "statsPoint": "Get all coefficients, R², standard error, and prediction diagnostics.",
+    "tip": "Higher-degree polynomials can overfit with small datasets. Prefer the lowest degree that captures the pattern."
   }
 }

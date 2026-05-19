@@ -306,7 +306,11 @@ const faqTitle: string = (home as any).faqTitle ?? 'Frequently Asked Questions';
           { href: "/multiple-regression-calculator/", title: "Multiple Regression", desc: "Use 2+ predictors with b₀ + b₁x₁ + b₂x₂", icon: "📊", accent: "purple" },
           { href: "/pearson-correlation-calculator/", title: "Pearson Correlation", desc: "Measure relationship strength (r)", icon: "🧬", accent: "emerald" },
           { href: "/grubbs-test-calculator/", title: "Grubbs' Test", desc: "Identify statistical outliers with precision", icon: "⚠️", accent: "amber" },
-          { href: "/regression-assumptions-checker/", title: "Assumptions Checker", desc: "Verify OLS pillars for model validity", icon: "✅", accent: "rose" }
+          { href: "/regression-assumptions-checker/", title: "Assumptions Checker", desc: "Verify OLS pillars for model validity", icon: "✅", accent: "rose" },
+          { href: "/power-regression-calculator/", title: "Power Regression", desc: "Model scaling laws with y = a·x^b", icon: "⚡", accent: "cyan" },
+          { href: "/logistic-regression-calculator/", title: "Logistic Regression", desc: "Fit S-curve growth with carrying capacity", icon: "🌀", accent: "violet" },
+          { href: "/cubic-regression-calculator/", title: "Cubic Regression", desc: "Fit cubic curves y = ax³ + bx² + cx + d", icon: "📉", accent: "indigo" },
+          { href: "/polynomial-regression-calculator/", title: "Polynomial Regression", desc: "Fit any-degree polynomial (1-5)", icon: "📈", accent: "fuchsia" }
         ].map(tool => (
           <a href={tool.href} class="group p-6 rounded-3xl border border-surface-200 dark:border-surface-700 bg-white dark:bg-surface-800 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
             <div class={`w-12 h-12 rounded-xl bg-${tool.accent}-100 dark:bg-${tool.accent}-900/30 flex items-center justify-center mb-4 text-xl group-hover:scale-110 transition-transform`}>
