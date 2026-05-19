@@ -2646,7 +2646,7 @@
       "You need parameters with direct scientific meaning (e.g., Vmax, Km, carrying capacity)"
     ],
     "avoidTitle": "When to Avoid Nonlinear Regression",
-    "whenPoints": [
+    "avoidPoints": [
       "When a simple straight line or low-degree polynomial already explains the data well",
       "When the chosen model’s constraints are violated (e.g., x ≤ 0 for logarithmic, x = 0 for inverse)",
       "When data is sparse — nonlinear models can be unstable with few points",
