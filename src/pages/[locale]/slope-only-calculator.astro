@@ -1,0 +1,251 @@
+---
+import BaseLayout from 'theme/layouts/BaseLayout.astro';
+import SlopeOnlyCalculator from 'theme/components/SlopeOnlyCalculator.astro';
+import ToolInfoBox from 'theme/components/ToolInfoBox.astro';
+import { mergeTranslations, getLocalizedUrl, extractLocaleFromParams, getLocaleStaticPaths } from 'theme/i18n/utils';
+import siteConfig from 'src/data/site-config.json';
+import { Image } from 'astro:assets';
+import heroImage from '../../assets/images/slope-hero.png';
+
+export function getStaticPaths() {
+  return getLocaleStaticPaths();
+}
+
+const { locale } = Astro.params;
+const currentLocale = extractLocaleFromParams(Astro.params);
+const translations = await mergeTranslations(currentLocale);
+const sc = (translations as any).slopeCalc;
+
+const canonicalUrl = new URL(getLocalizedUrl('/slope-only-calculator/', currentLocale), siteConfig.siteUrl).href;
+
+const whatIsTitle = sc?.whatIsTitle || 'What Is Slope?';
+const whatIsText = sc?.whatIsText || '';
+const howWorksTitle = sc?.howWorksTitle || 'How to Calculate Slope';
+const howWorksPoints: string[] = sc?.howWorksPoints ?? [];
+const whenTitle = sc?.whenTitle || 'When to Use Slope';
+const whenPoints: string[] = sc?.whenPoints ?? [];
+const avoidTitle = sc?.avoidTitle || 'When Slope Is Undefined';
+const avoidPoints: string[] = sc?.avoidPoints ?? [];
+const seeAlsoTitle = sc?.seeAlsoTitle || 'See Also';
+const breadcrumb = sc?.breadcrumb || 'Back to Main Regression Calculator';
+
+const pageTitle = sc?.title || 'Slope Calculator';
+const pageDescription = sc?.description || 'Find the slope (m) between two points instantly. Rise over run formula with step-by-step solution.';
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  locale={currentLocale}
+  canonicalUrl={canonicalUrl}
+>
+  <!-- Hero Section -->
+  <section class="relative pt-12 pb-16 overflow-hidden">
+    <div class="absolute inset-0 -z-10 pointer-events-none">
+      <div class="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-primary-100/30 dark:bg-primary-900/10 blur-[100px] rounded-full animate-pulse"></div>
+      <div class="absolute bottom-1/4 left-1/3 w-[350px] h-[350px] bg-accent-100/30 dark:bg-accent-900/10 blur-[90px] rounded-full animate-pulse" style="animation-delay: 2s"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+        <div class="flex-1 text-center lg:text-left reveal-on-scroll">
+          <nav class="mb-6 text-sm font-medium flex items-center justify-center lg:justify-start gap-2">
+            <a href={getLocalizedUrl('/', currentLocale)} class="text-surface-500 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{breadcrumb}</a>
+          </nav>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-primary-700 via-primary-600 to-accent-600 dark:from-primary-400 dark:via-primary-500 dark:to-accent-400 bg-clip-text text-transparent leading-tight mb-6">
+            {pageTitle}
+          </h1>
+          <p class="text-lg text-surface-600 dark:text-surface-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8">
+            {pageDescription}
+          </p>
+          <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+            <a href="#calculator-tool" class="px-8 py-3 rounded-xl bg-primary-600 text-white font-semibold shadow-lg shadow-primary-600/20 hover:bg-primary-700 hover:shadow-xl hover:shadow-primary-600/30 transition-all duration-300 hover:-translate-y-1">
+              {translations.common?.calculateNow || 'Calculate Now'}
+            </a>
+          </div>
+        </div>
+        <div class="flex-1 w-full max-w-lg lg:max-w-none reveal-on-scroll" style="transition-delay: 200ms">
+          <div class="relative group" data-tilt>
+            <div class="absolute -inset-4 bg-gradient-to-r from-primary-500/20 to-accent-500/20 rounded-3xl blur-2xl opacity-40 group-hover:opacity-70 transition-opacity duration-500"></div>
+            <div class="relative overflow-hidden rounded-3xl border border-white/20 shadow-2xl">
+              <Image
+                src={heroImage}
+                alt="Slope Visualization"
+                class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
+                width={800}
+                densities={[1, 2]}
+                loading="eager"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-900/20 via-transparent to-transparent opacity-40"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculator Tool -->
+  <section id="calculator-tool" class="py-12 md:py-16 bg-surface-50/60 dark:bg-surface-800/40 rounded-t-[3rem] -mt-6">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <SlopeOnlyCalculator translations={translations} />
+    </div>
+  </section>
+
+  <!-- Tool Info Box -->
+  <ToolInfoBox
+    toolName={pageTitle}
+    keyPoints={[
+      {
+        icon: "📐",
+        title: sc?.pointTitle || "Two-Point Input",
+        description: sc?.pointDesc || "Enter any two (x, y) coordinate pairs."
+      },
+      {
+        icon: "📊",
+        title: sc?.outputTitle || "Instant Results",
+        description: sc?.outputDesc || "Get slope m, rise, run, angle, and line equation."
+      },
+      {
+        icon: "📝",
+        title: sc?.stepsTitle || "Step-by-Step",
+        description: sc?.stepsDesc || "See the Δy, Δx, and full formula breakdown."
+      }
+    ]}
+    highlightTip={sc?.tip || "Vertical lines have undefined slope. Horizontal lines have slope = 0."}
+    translations={translations}
+  />
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-12 py-16">
+    <!-- What Is -->
+    <section class="reveal-on-scroll">
+      <div class="content-box rounded-3xl border border-surface-200/60 dark:border-surface-700/40 bg-white dark:bg-surface-800/60 backdrop-blur-md p-8 md:p-10 shadow-xl relative overflow-hidden group">
+        <h2 class="text-2xl md:text-3xl font-bold text-surface-900 dark:text-surface-50 mb-6 flex items-center gap-3">
+          <span class="w-1.5 h-8 bg-primary-600 rounded-full"></span>
+          {whatIsTitle}
+        </h2>
+        <div class="prose prose-surface max-w-none text-surface-600 dark:text-surface-400 leading-relaxed text-lg" set:html={whatIsText} />
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="reveal-on-scroll">
+      <div class="content-box rounded-3xl border border-surface-200/60 dark:border-surface-700/40 bg-white dark:bg-surface-800/60 backdrop-blur-md p-8 md:p-10 shadow-xl relative overflow-hidden group">
+        <h2 class="text-2xl md:text-3xl font-bold text-surface-900 dark:text-surface-50 mb-6 flex items-center gap-3">
+          <span class="w-1.5 h-8 bg-accent-600 rounded-full"></span>
+          {howWorksTitle}
+        </h2>
+        <ul class="space-y-4">
+          {howWorksPoints.map((point, i) => (
+            <li class="flex items-start gap-4 p-4 rounded-xl bg-surface-50/50 dark:bg-surface-900/40 border border-surface-100 dark:border-surface-700/40 hover:border-accent-300 transition-all">
+              <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-accent-100 dark:bg-accent-900/30 flex items-center justify-center text-sm font-bold text-accent-700 dark:text-accent-400">{i + 1}</span>
+              <div class="text-sm text-surface-700 dark:text-surface-300 leading-relaxed pt-1" set:html={point} />
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <!-- When to Use / Avoid -->
+    <section class="reveal-on-scroll">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="p-8 rounded-3xl border border-surface-200 dark:border-surface-700 bg-white dark:bg-surface-800 shadow-lg">
+          <h2 class="text-xl font-bold text-surface-900 dark:text-surface-50 mb-6 flex items-center gap-3">
+            <span class="w-1.5 h-6 bg-emerald-600 rounded-full"></span>
+            {whenTitle}
+          </h2>
+          <ul class="space-y-3">
+            {whenPoints.map(point => (
+              <li class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400 flex-shrink-0 mt-0.5">
+                  <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <span class="text-sm text-surface-600 dark:text-surface-400 leading-relaxed" set:html={point} />
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="p-8 rounded-3xl border border-surface-200 dark:border-surface-700 bg-white dark:bg-surface-800 shadow-lg">
+          <h2 class="text-xl font-bold text-surface-900 dark:text-surface-50 mb-6 flex items-center gap-3">
+            <span class="w-1.5 h-6 bg-orange-600 rounded-full"></span>
+            {avoidTitle}
+          </h2>
+          <ul class="space-y-3">
+            {avoidPoints.map(point => (
+              <li class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center text-orange-600 dark:text-orange-400 flex-shrink-0 mt-0.5">
+                  <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M6 18L18 6M6 6l12 12"/></svg>
+                </div>
+                <span class="text-sm text-surface-600 dark:text-surface-400 leading-relaxed" set:html={point} />
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- See Also -->
+    <section class="reveal-on-scroll">
+      <h2 class="text-2xl font-bold text-surface-900 dark:text-surface-50 mb-8">{seeAlsoTitle}</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { href: getLocalizedUrl('/linear-regression-calculator/', currentLocale), title: translations.linearCalc?.title || 'Linear Regression', desc: translations.linearCalc?.description || 'Full regression with intercept' },
+          { href: getLocalizedUrl('/exponential-regression-calculator/', currentLocale), title: translations.expCalc?.title || 'Exponential Regression', desc: translations.expCalc?.description || 'Model growth and decay' },
+          { href: getLocalizedUrl('/pearson-correlation-calculator/', currentLocale), title: translations.pearson?.title || 'Pearson Correlation', desc: translations.pearson?.description || 'Measure linear relationship strength' }
+        ].map(item => (
+          <a href={item.href} class="group p-6 rounded-2xl border border-surface-200 dark:border-surface-700 bg-white dark:bg-surface-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+            <h3 class="text-base font-bold text-primary-700 dark:text-primary-400 mb-2 group-hover:text-primary-600 transition-colors">{item.title}</h3>
+            <p class="text-sm text-surface-500 dark:text-surface-400">{item.desc}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<script>
+  const revealElements = document.querySelectorAll('.reveal-on-scroll');
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+  );
+  revealElements.forEach((el) => revealObserver.observe(el));
+
+  const tiltElements = document.querySelectorAll<HTMLElement>('[data-tilt]');
+  tiltElements.forEach((el) => {
+    let rect: DOMRect | null = null;
+    el.addEventListener('mouseenter', () => { rect = el.getBoundingClientRect(); });
+    el.addEventListener('mousemove', (e: MouseEvent) => {
+      if (!rect) rect = el.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = ((y - centerY) / centerY) * -10;
+      const rotateY = ((x - centerX) / centerX) * 10;
+      el.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+    });
+    el.addEventListener('mouseleave', () => {
+      rect = null;
+      el.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+    });
+  });
+</script>
+
+<style>
+  .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .reveal-on-scroll.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>

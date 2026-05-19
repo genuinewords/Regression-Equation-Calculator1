@@ -1,0 +1,357 @@
+---
+import type { MergedTranslations } from 'theme/i18n/types';
+
+interface Props {
+  translations: MergedTranslations;
+}
+
+const { translations } = Astro.props;
+const sc = (translations as any).slopeCalc;
+---
+
+<section class="py-8" id="slope-only-calculator">
+  <div class="mx-auto max-w-3xl">
+    <div class="rounded-2xl shadow-lg dark:shadow-surface-950/40 shadow-primary-900/5 border border-surface-200/80 dark:border-surface-700/60 overflow-hidden bg-white dark:bg-surface-800/80 backdrop-blur-sm transition-colors duration-300">
+      <div class="bg-gradient-to-r from-primary-600 to-accent-600 px-6 py-5">
+        <h2 class="text-xl font-bold text-white">{sc?.title || 'Slope Calculator'}</h2>
+        <p class="text-primary-100 text-sm mt-1">{sc?.description || 'Enter two points to calculate the slope (m) of the line between them.'}</p>
+      </div>
+
+      <div class="p-6 bg-surface-50/50 dark:bg-surface-800/50">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+          <!-- Point 1 -->
+          <div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50">
+            <h3 class="text-sm font-bold text-surface-700 dark:text-surface-300 mb-3 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-xs font-bold text-primary-700 dark:text-primary-400">1</span>
+              {sc?.point1Label || 'Point 1'}
+            </h3>
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-medium text-surface-500 dark:text-surface-400 mb-1">{sc?.xLabel || 'X'}</label>
+                <input type="number" step="any" id="slope-x1" class="w-full px-3 py-2 text-sm rounded-lg border border-surface-200 dark:border-surface-600 bg-white dark:bg-surface-700 dark:text-surface-200 focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-300 dark:focus:border-primary-600 transition-all duration-150" placeholder="x₁" />
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-surface-500 dark:text-surface-400 mb-1">{sc?.yLabel || 'Y'}</label>
+                <input type="number" step="any" id="slope-y1" class="w-full px-3 py-2 text-sm rounded-lg border border-surface-200 dark:border-surface-600 bg-white dark:bg-surface-700 dark:text-surface-200 focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-300 dark:focus:border-primary-600 transition-all duration-150" placeholder="y₁" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Point 2 -->
+          <div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50">
+            <h3 class="text-sm font-bold text-surface-700 dark:text-surface-300 mb-3 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-accent-100 dark:bg-accent-900/30 flex items-center justify-center text-xs font-bold text-accent-700 dark:text-accent-400">2</span>
+              {sc?.point2Label || 'Point 2'}
+            </h3>
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-medium text-surface-500 dark:text-surface-400 mb-1">{sc?.xLabel || 'X'}</label>
+                <input type="number" step="any" id="slope-x2" class="w-full px-3 py-2 text-sm rounded-lg border border-surface-200 dark:border-surface-600 bg-white dark:bg-surface-700 dark:text-surface-200 focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-300 dark:focus:border-primary-600 transition-all duration-150" placeholder="x₂" />
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-surface-500 dark:text-surface-400 mb-1">{sc?.yLabel || 'Y'}</label>
+                <input type="number" step="any" id="slope-y2" class="w-full px-3 py-2 text-sm rounded-lg border border-surface-200 dark:border-surface-600 bg-white dark:bg-surface-700 dark:text-surface-200 focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-300 dark:focus:border-primary-600 transition-all duration-150" placeholder="y₂" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-3 mb-6">
+          <button
+            id="slope-calculate-btn"
+            type="button"
+            class="inline-flex items-center gap-1.5 px-6 py-2 text-sm font-semibold text-white bg-gradient-to-r from-primary-600 to-accent-600 rounded-lg shadow-md shadow-primary-600/20 dark:shadow-primary-900/40 transition-all duration-200 hover:shadow-lg hover:shadow-primary-600/30 dark:hover:shadow-primary-900/50 hover:brightness-110 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-primary-500/30"
+          >
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+            {sc?.calculate || 'Calculate'}
+          </button>
+          <button
+            id="slope-clear-btn"
+            type="button"
+            class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-surface-600 dark:text-surface-400 bg-surface-100 dark:bg-surface-700 border border-surface-200 dark:border-surface-600 rounded-lg transition-all duration-200 hover:bg-surface-200 dark:hover:bg-surface-600 hover:border-surface-300 dark:hover:border-surface-500 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-surface-400/30"
+          >
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
+            {sc?.clear || 'Clear'}
+          </button>
+          <button
+            id="slope-example-btn"
+            type="button"
+            class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-accent-600 dark:text-accent-400 bg-accent-50 dark:bg-accent-900/25 border border-accent-200 dark:border-accent-800/50 rounded-lg transition-all duration-200 hover:bg-accent-100 dark:hover:bg-accent-900/40 hover:border-accent-300 dark:hover:border-accent-700 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-accent-500/30"
+          >
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+            {sc?.loadExample || 'Load Example'}
+          </button>
+        </div>
+
+        <div id="slope-error-msg" class="hidden mb-4 p-3 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800/50 text-red-700 dark:text-red-400 text-sm"></div>
+
+        <div id="slope-results-section" class="animate-[fadeIn_0.3s_ease-out]">
+          <div class="mb-6">
+            <h3 class="text-lg font-bold text-surface-800 dark:text-surface-200 mb-4">{sc?.result || 'Results'}</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <!-- Slope -->
+              <div class="p-4 rounded-xl bg-gradient-to-br from-primary-50 dark:from-primary-900/30 to-accent-50 dark:to-accent-900/30 border border-primary-100 dark:border-primary-800/40 hover:shadow-md dark:hover:shadow-primary-900/20 transition-all duration-200 hover:scale-[1.01]">
+                <p class="text-xs font-semibold text-primary-500 dark:text-primary-400 uppercase tracking-wider mb-1">{sc?.slopeLabel || 'Slope (m)'}</p>
+                <p id="slope-result-m" class="text-2xl font-bold text-primary-800 dark:text-primary-200 font-mono"></p>
+              </div>
+              <!-- Rise -->
+              <div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 hover:shadow-md dark:hover:shadow-surface-950/30 transition-all duration-200 hover:scale-[1.01]">
+                <p class="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider mb-1">{sc?.riseLabel || 'Rise (Δy)'}</p>
+                <p id="slope-result-rise" class="text-lg font-bold text-surface-800 dark:text-surface-200 font-mono"></p>
+              </div>
+              <!-- Run -->
+              <div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 hover:shadow-md dark:hover:shadow-surface-950/30 transition-all duration-200 hover:scale-[1.01]">
+                <p class="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider mb-1">{sc?.runLabel || 'Run (Δx)'}</p>
+                <p id="slope-result-run" class="text-lg font-bold text-surface-800 dark:text-surface-200 font-mono"></p>
+              </div>
+              <!-- Equation -->
+              <div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 hover:shadow-md dark:hover:shadow-surface-950/30 transition-all duration-200 hover:scale-[1.01] sm:col-span-2">
+                <p class="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider mb-1">{sc?.equation || 'Line Equation'}</p>
+                <p id="slope-result-equation" class="text-lg font-bold text-surface-800 dark:text-surface-200 font-mono"></p>
+              </div>
+              <!-- Angle -->
+              <div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 hover:shadow-md dark:hover:shadow-surface-950/30 transition-all duration-200 hover:scale-[1.01]">
+                <p class="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider mb-1">{sc?.angleLabel || 'Angle (θ)'}</p>
+                <p id="slope-result-angle" class="text-lg font-bold text-surface-800 dark:text-surface-200 font-mono"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <h4 class="text-sm font-semibold text-surface-700 dark:text-surface-300 mb-3">{sc?.chart || 'Chart'}</h4>
+            <div class="rounded-xl border border-surface-200 dark:border-surface-600 bg-white dark:bg-surface-700/30 p-2 overflow-hidden">
+              <canvas id="slope-chart" width="640" height="360" class="w-full h-auto"></canvas>
+            </div>
+          </div>
+
+          <details class="group">
+            <summary class="flex items-center gap-2 cursor-pointer text-sm font-semibold text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors select-none">
+              <svg class="w-4 h-4 transition-transform duration-200 group-open:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+              {sc?.stepByStep || 'Step-by-Step Solution'}
+            </summary>
+            <div id="slope-steps-content" class="mt-4 p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 text-sm text-surface-700 dark:text-surface-300 space-y-3 font-mono leading-relaxed"></div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<script>
+  (function() {
+    const calcEl = document.getElementById('slope-only-calculator') || document;
+    const x1Input = document.getElementById('slope-x1');
+    const y1Input = document.getElementById('slope-y1');
+    const x2Input = document.getElementById('slope-x2');
+    const y2Input = document.getElementById('slope-y2');
+    const calcBtn = document.getElementById('slope-calculate-btn');
+    const clearBtn = document.getElementById('slope-clear-btn');
+    const exampleBtn = document.getElementById('slope-example-btn');
+    const errorEl = document.getElementById('slope-error-msg');
+    const resultsSection = document.getElementById('slope-results-section');
+    const canvas = document.getElementById('slope-chart');
+
+    function fmt(v) {
+      if (!isFinite(v)) return 'undefined';
+      if (Math.abs(v) < 1e-12) return '0';
+      if (Math.abs(v) > 1e6 || (Math.abs(v) < 1e-4 && v !== 0)) return v.toExponential(4);
+      return v.toFixed(4).replace(/\.?0+$/, '');
+    }
+
+    function showError(msg) {
+      if (errorEl) { errorEl.textContent = msg; errorEl.classList.remove('hidden'); }
+      if (resultsSection) resultsSection.classList.add('hidden');
+    }
+
+    function hideError() {
+      if (errorEl) errorEl.classList.add('hidden');
+    }
+
+    function getVal(el) {
+      const v = parseFloat((el as HTMLInputElement)?.value ?? '');
+      return isNaN(v) ? null : v;
+    }
+
+    function compute() {
+      hideError();
+      const x1 = getVal(x1Input);
+      const y1 = getVal(y1Input);
+      const x2 = getVal(x2Input);
+      const y2 = getVal(y2Input);
+
+      if (x1 === null || y1 === null || x2 === null || y2 === null) {
+        showError('Please enter valid numbers for both points.');
+        return;
+      }
+
+      const dx = x2 - x1;
+      const dy = y2 - y1;
+
+      const mEl = document.getElementById('slope-result-m');
+      const riseEl = document.getElementById('slope-result-rise');
+      const runEl = document.getElementById('slope-result-run');
+      const eqEl = document.getElementById('slope-result-equation');
+      const angleEl = document.getElementById('slope-result-angle');
+      const stepsEl = document.getElementById('slope-steps-content');
+
+      if (riseEl) riseEl.textContent = fmt(dy);
+      if (runEl) runEl.textContent = fmt(dx);
+
+      let m, angleDeg, b;
+      const steps = [];
+      steps.push(`<strong>Step 1:</strong> Identify the two points: P₁ = (${fmt(x1)}, ${fmt(y1)}) and P₂ = (${fmt(x2)}, ${fmt(y2)})`);
+      steps.push(`<strong>Step 2:</strong> Calculate Rise (Δy) = y₂ − y₁ = ${fmt(y2)} − ${fmt(y1)} = ${fmt(dy)}`);
+      steps.push(`<strong>Step 3:</strong> Calculate Run (Δx) = x₂ − x₁ = ${fmt(x2)} − ${fmt(x1)} = ${fmt(dx)}`);
+
+      if (dx === 0) {
+        if (mEl) mEl.textContent = 'undefined';
+        if (angleEl) angleEl.textContent = '90° (vertical)';
+        if (eqEl) eqEl.textContent = `x = ${fmt(x1)}`;
+        steps.push(`<strong>Step 4:</strong> Slope m = Δy / Δx = ${fmt(dy)} / 0 = <strong>undefined</strong> (vertical line)`);
+        steps.push(`<strong>Step 5:</strong> This is a vertical line with equation x = ${fmt(x1)}`);
+      } else {
+        m = dy / dx;
+        b = y1 - m * x1;
+        angleDeg = Math.atan(m) * (180 / Math.PI);
+        if (mEl) mEl.textContent = fmt(m);
+        if (angleEl) angleEl.textContent = fmt(angleDeg) + '°';
+        if (eqEl) {
+          const bSign = b >= 0 ? '+' : '−';
+          const bAbs = Math.abs(b);
+          const bStr = bAbs === 0 ? '' : ` ${bSign} ${fmt(bAbs)}`;
+          eqEl.textContent = `y = ${fmt(m)}x${bStr}`;
+        }
+        steps.push(`<strong>Step 4:</strong> Slope m = Δy / Δx = ${fmt(dy)} / ${fmt(dx)} = <strong>${fmt(m)}</strong>`);
+        steps.push(`<strong>Step 5:</strong> Find y-intercept: b = y₁ − m·x₁ = ${fmt(y1)} − ${fmt(m)}·${fmt(x1)} = ${fmt(b)}`);
+        steps.push(`<strong>Step 6:</strong> Line equation: y = ${fmt(m)}x + ${fmt(b)}`);
+        steps.push(`<strong>Step 7:</strong> Angle θ = arctan(m) = arctan(${fmt(m)}) = ${fmt(angleDeg)}°`);
+      }
+
+      if (stepsEl) stepsEl.innerHTML = steps.map(s => `<p>${s}</p>`).join('');
+      drawChart(x1, y1, x2, y2, m, dx);
+      if (resultsSection) resultsSection.classList.remove('hidden');
+    }
+
+    function drawChart(x1, y1, x2, y2, m, dx) {
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const dpr = window.devicePixelRatio || 1;
+      const width = canvas.clientWidth;
+      const height = canvas.clientHeight;
+      canvas.width = width * dpr;
+      canvas.height = height * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.clearRect(0, 0, width, height);
+
+      const padL = 48, padR = 20, padT = 20, padB = 40;
+      const chartW = width - padL - padR;
+      const chartH = height - padT - padB;
+
+      // Determine bounds with padding
+      const allX = [x1, x2];
+      const allY = [y1, y2];
+      let xMin = Math.min(...allX);
+      let xMax = Math.max(...allX);
+      let yMin = Math.min(...allY);
+      let yMax = Math.max(...allY);
+
+      // Extend bounds for line visualization
+      const xPad = (xMax - xMin) * 0.3 || 2;
+      const yPad = (yMax - yMin) * 0.3 || 2;
+      xMin -= xPad; xMax += xPad;
+      yMin -= yPad; yMax += yPad;
+
+      function sx(x) { return padL + (x - xMin) / (xMax - xMin) * chartW; }
+      function sy(y) { return padT + chartH - (y - yMin) / (yMax - yMin) * chartH; }
+
+      // Grid
+      ctx.strokeStyle = 'rgba(148,163,184,0.25)';
+      ctx.lineWidth = 1;
+      for (let i = 0; i <= 5; i++) {
+        const x = padL + (chartW * i) / 5;
+        const y = padT + (chartH * i) / 5;
+        ctx.beginPath(); ctx.moveTo(x, padT); ctx.lineTo(x, padT + chartH); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(padL, y); ctx.lineTo(padL + chartW, y); ctx.stroke();
+      }
+
+      // Axes
+      ctx.strokeStyle = 'rgba(100,116,139,0.5)';
+      ctx.lineWidth = 1.5;
+      ctx.beginPath(); ctx.moveTo(padL, padT); ctx.lineTo(padL, padT + chartH); ctx.lineTo(padL + chartW, padT + chartH); ctx.stroke();
+
+      // Draw line (if not vertical)
+      if (dx !== 0 && m !== undefined && isFinite(m)) {
+        ctx.strokeStyle = '#7c3aed';
+        ctx.lineWidth = 2.5;
+        ctx.beginPath();
+        const lx1 = xMin;
+        const ly1 = m * lx1 + (y1 - m * x1);
+        const lx2 = xMax;
+        const ly2 = m * lx2 + (y1 - m * x1);
+        ctx.moveTo(sx(lx1), sy(ly1));
+        ctx.lineTo(sx(lx2), sy(ly2));
+        ctx.stroke();
+      } else {
+        // Vertical line
+        ctx.strokeStyle = '#ef4444';
+        ctx.lineWidth = 2;
+        ctx.setLineDash([6, 4]);
+        ctx.beginPath();
+        ctx.moveTo(sx(x1), padT);
+        ctx.lineTo(sx(x1), padT + chartH);
+        ctx.stroke();
+        ctx.setLineDash([]);
+      }
+
+      // Points
+      ctx.fillStyle = '#0ea5e9';
+      for (const [x, y] of [[x1, y1], [x2, y2]]) {
+        ctx.beginPath();
+        ctx.arc(sx(x), sy(y), 6, 0, Math.PI * 2);
+        ctx.fill();
+        // Labels
+        ctx.fillStyle = '#1e293b';
+        ctx.font = 'bold 12px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(`(${fmt(x)}, ${fmt(y)})`, sx(x), sy(y) - 12);
+        ctx.fillStyle = '#0ea5e9';
+      }
+
+      // Axis labels
+      ctx.fillStyle = '#64748b';
+      ctx.font = '12px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('X', padL + chartW / 2, height - 8);
+      ctx.save();
+      ctx.translate(14, padT + chartH / 2);
+      ctx.rotate(-Math.PI / 2);
+      ctx.fillText('Y', 0, 0);
+      ctx.restore();
+    }
+
+    calcBtn?.addEventListener('click', compute);
+    clearBtn?.addEventListener('click', () => {
+      [x1Input, y1Input, x2Input, y2Input].forEach(el => { if (el) (el as HTMLInputElement).value = ''; });
+      if (resultsSection) resultsSection.classList.add('hidden');
+      hideError();
+      if (canvas) { const ctx = canvas.getContext('2d'); ctx.clearRect(0, 0, canvas.width, canvas.height); }
+    });
+    exampleBtn?.addEventListener('click', () => {
+      if (x1Input) (x1Input as HTMLInputElement).value = '1';
+      if (y1Input) (y1Input as HTMLInputElement).value = '2';
+      if (x2Input) (x2Input as HTMLInputElement).value = '5';
+      if (y2Input) (y2Input as HTMLInputElement).value = '10';
+      hideError();
+      compute();
+    });
+
+    if (resultsSection) resultsSection.classList.add('hidden');
+  })();
+</script>

@@ -2705,5 +2705,99 @@
     "dataPoint": "Enter paired X and Y values. Minimum 2 points required. Watch model constraints (e.g., x > 0 for log).",
     "statsPoint": "Get model parameters, R², standard error, predictions, and step-by-step transformations.",
     "tip": "Choose the simplest model that captures your data. Overly complex models overfit noise."
+  },
+  "slopeCalc": {
+    "title": "Slope Calculator",
+    "description": "Free slope calculator. Find the slope (m) between two points with rise-over-run formula, step-by-step solution, and line visualization. Browser-based privacy.",
+    "xLabel": "X",
+    "yLabel": "Y",
+    "point1Label": "Point 1",
+    "point2Label": "Point 2",
+    "calculate": "Calculate",
+    "clear": "Clear",
+    "loadExample": "Load Example",
+    "result": "Results",
+    "equation": "Line Equation",
+    "slopeLabel": "Slope (m)",
+    "riseLabel": "Rise (Δy)",
+    "runLabel": "Run (Δx)",
+    "angleLabel": "Angle (θ)",
+    "chart": "Chart",
+    "stepByStep": "Step-by-Step Solution",
+    "breadcrumb": "Back to Main Regression Calculator",
+    "whatIsTitle": "What Is Slope?",
+    "whatIsText": "<p>📐 <strong>Slope</strong> measures the steepness of a straight line. It is defined as the ratio of the vertical change (<strong>rise</strong>) to the horizontal change (<strong>run</strong>) between any two points on the line. The formula is <strong>m = (y₂ − y₁) / (x₂ − x₁)</strong>.</p><p>📊 Slope tells us the direction and rate of change:</p><ul class='list-disc pl-5 space-y-1'><li><strong>Positive slope</strong> — line goes up as you move right (increasing relationship)</li><li><strong>Negative slope</strong> — line goes down as you move right (decreasing relationship)</li><li><strong>Zero slope</strong> — horizontal line (no change in y)</li><li><strong>Undefined slope</strong> — vertical line (no change in x)</li></ul><p>📐 Slope is the cornerstone of linear equations, regression analysis, physics (velocity), economics (marginal cost), and engineering (gradients).</p>",
+    "howWorksTitle": "How to Calculate Slope",
+    "howWorksPoints": [
+      "<strong>Identify two points:</strong> Label your coordinates P₁ = (x₁, y₁) and P₂ = (x₂, y₂).",
+      "<strong>Calculate Rise (Δy):</strong> Subtract the y-coordinates: Δy = y₂ − y₁. This is the vertical distance between the two points.",
+      "<strong>Calculate Run (Δx):</strong> Subtract the x-coordinates: Δx = x₂ − x₁. This is the horizontal distance between the two points.",
+      "<strong>Divide Rise by Run:</strong> The slope m = Δy / Δx. If Δx = 0, the slope is <strong>undefined</strong> (vertical line).",
+      "<strong>Find the line equation:</strong> Using point-slope form y − y₁ = m(x − x₁), rearrange to y = mx + b where b = y₁ − m·x₁."
+    ],
+    "whenTitle": "When to Use Slope",
+    "whenPoints": [
+      "You need the rate of change between two known data points",
+      "You want to find the steepness of a line in geometry or physics",
+      "You need the angle of inclination: θ = arctan(m)",
+      "You want to write the equation of a line through two points"
+    ],
+    "avoidTitle": "When Slope Is Undefined",
+    "avoidPoints": [
+      "When x₁ = x₂ — the line is vertical and slope is undefined",
+      "When dealing with curved (nonlinear) relationships — use regression instead",
+      "When you have more than two points — use linear regression for a best-fit line"
+    ],
+    "faqTitle": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "q": "What is the slope formula?",
+        "a": "<p>📐 The slope formula is <strong>m = (y₂ − y₁) / (x₂ − x₁)</strong>. It measures how steep a line is by dividing the vertical change (rise) by the horizontal change (run).</p>"
+      },
+      {
+        "q": "What does undefined slope mean?",
+        "a": "<p>📊 An undefined slope occurs when the two points have the same x-coordinate (x₁ = x₂). This means Δx = 0, and division by zero is impossible. The line is <strong>vertical</strong>.</p>"
+      },
+      {
+        "q": "How do I find the angle of a line from its slope?",
+        "a": "<p>📐 Use the formula <strong>θ = arctan(m)</strong>, where θ is the angle in degrees between the line and the positive x-axis. For m = 1, θ = 45°. For a vertical line, θ = 90°.</p>"
+      }
+    ],
+    "relatedTitle": "Related Calculators",
+    "relatedItems": [
+      {
+        "name": "Linear Regression Calculator",
+        "url": "/linear-regression-calculator/",
+        "desc": "Fit the best straight line through many data points"
+      },
+      {
+        "name": "Exponential Regression Calculator",
+        "url": "/exponential-regression-calculator/",
+        "desc": "Model growth and decay with curved relationships"
+      },
+      {
+        "name": "Pearson Correlation Calculator",
+        "url": "/pearson-correlation-calculator/",
+        "desc": "Measure the strength of linear relationships"
+      },
+      {
+        "name": "Regression Curve Calculator",
+        "url": "/regression-curve-calculator/",
+        "desc": "Compare linear, quadratic, exponential, and logarithmic models"
+      },
+      {
+        "name": "Grubbs' Test Calculator",
+        "url": "/grubbs-test-calculator/",
+        "desc": "Detect a single outlier in normally distributed data"
+      }
+    ],
+    "seeAlsoTitle": "See Also",
+    "pointTitle": "Two-Point Input",
+    "pointDesc": "Enter any two (x, y) coordinate pairs.",
+    "outputTitle": "Instant Results",
+    "outputDesc": "Get slope m, rise, run, angle, and line equation.",
+    "stepsTitle": "Step-by-Step",
+    "stepsDesc": "See the Δy, Δx, and full formula breakdown.",
+    "tip": "Vertical lines have undefined slope. Horizontal lines have slope = 0."
   }
 }
