@@ -14,6 +14,7 @@
     "logisticCalc": "Logistic Regression",
     "cubicCalc": "Cubic Regression",
     "polyCalc": "Polynomial Regression",
+    "nonlinearCalc": "Nonlinear Regression",
     "aboutUs": "About Us",
     "blog": "Blog",
     "contactUs": "Contact Us",

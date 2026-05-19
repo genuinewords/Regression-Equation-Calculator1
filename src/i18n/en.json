@@ -2597,5 +2597,113 @@
     "dataPoint": "Enter paired X and Y values. Minimum points = degree + 1.",
     "statsPoint": "Get all coefficients, R², standard error, and prediction diagnostics.",
     "tip": "Higher-degree polynomials can overfit with small datasets. Prefer the lowest degree that captures the pattern."
+  },
+  "nonlinearCalc": {
+    "title": "Nonlinear Regression Calculator",
+    "description": "Free nonlinear regression calculator. Fit logarithmic, inverse, square-root, and Michaelis-Menten curves with step-by-step solutions, R², and graphs. Browser-based privacy.",
+    "modelLabel": "Model",
+    "logModel": "Logarithmic: y = a + b·ln(x)",
+    "invModel": "Inverse: y = a + b/x",
+    "sqrtModel": "Square Root: y = a + b·√x",
+    "mmModel": "Michaelis-Menten: y = Vmax·x / (Km + x)",
+    "xLabel": "X",
+    "yLabel": "Y",
+    "invalidData": "Please enter at least 2 valid data points",
+    "enterData": "Enter your data points",
+    "addRow": "Add Row",
+    "calculate": "Calculate",
+    "clear": "Clear",
+    "loadExample": "Load Example",
+    "result": "Results",
+    "equation": "Equation",
+    "rSquared": "R²",
+    "predictedY": "Predicted Y",
+    "forX": "For X =",
+    "statistics": "Statistics",
+    "statistic": "Statistic",
+    "value": "Value",
+    "standardError": "Standard Error",
+    "sampleSize": "Sample Size (n)",
+    "degreesOfFreedom": "Degrees of Freedom",
+    "chart": "Chart",
+    "stepByStep": "Step-by-Step Solution",
+    "breadcrumb": "Back to Main Regression Calculator",
+    "whatIsTitle": "What Is Nonlinear Regression?",
+    "whatIsText": "<p>📐 <strong>Nonlinear regression</strong> fits relationships where the effect of the predictor on the response follows a curved, bounded, or saturating pattern that a straight line cannot capture. Unlike polynomial regression — which bends freely — nonlinear models are chosen because they express known scientific laws.</p><p>📊 This calculator supports four common nonlinear models:</p><ul class='list-disc pl-5 space-y-1'><li><strong>Logarithmic</strong> — growth slows continuously (e.g., diminishing returns in marketing)</li><li><strong>Inverse</strong> — response decays with reciprocal distance (e.g., gravity, electrostatic force)</li><li><strong>Square Root</strong> — effect grows but at a decelerating rate (e.g., resource allocation)</li><li><strong>Michaelis-Menten</strong> — enzyme kinetics and saturating processes (e.g., reaction rates plateau as substrate concentration rises)</li></ul><p>📐 Each model is <strong>linearized</strong> mathematically so ordinary least squares can be applied, then parameters are transformed back to the original scale.</p>",
+    "howWorksTitle": "How Nonlinear Regression Works",
+    "howWorksPoints": [
+      "<strong>Select a model:</strong> Choose logarithmic, inverse, square-root, or Michaelis-Menten based on the expected shape of your data.",
+      "<strong>Transform the data:</strong> Apply a mathematical transformation that converts the nonlinear equation into a straight line. For example, logarithmic regression transforms X to ln(x) and then fits y = a + b·ln(x).",
+      "<strong>Fit ordinary least squares (OLS):</strong> Apply linear regression to the transformed variables. The slope and intercept give the parameters of the original nonlinear model.",
+      "<strong>Back-transform parameters:</strong> Convert regression coefficients into the natural parameters of the chosen model (e.g., Vmax and Km for Michaelis-Menten).",
+      "<strong>Evaluate on the original scale:</strong> Compute predicted values using the original (non-transformed) equation, then calculate R², standard error, and residuals to assess real-world fit."
+    ],
+    "whenTitle": "When to Use Nonlinear Regression",
+    "whenPoints": [
+      "The relationship follows a known physical, biological, or economic law (e.g., enzyme kinetics, inverse-square laws)",
+      "Polynomial curves wiggle unrealistically while a simpler nonlinear form captures the trend smoothly",
+      "The response naturally saturates, decays, or grows at a decelerating rate",
+      "You need parameters with direct scientific meaning (e.g., Vmax, Km, carrying capacity)"
+    ],
+    "avoidTitle": "When to Avoid Nonlinear Regression",
+    "whenPoints": [
+      "When a simple straight line or low-degree polynomial already explains the data well",
+      "When the chosen model’s constraints are violated (e.g., x ≤ 0 for logarithmic, x = 0 for inverse)",
+      "When data is sparse — nonlinear models can be unstable with few points",
+      "When the true relationship is periodic, oscillatory, or has multiple inflection points not covered by these models"
+    ],
+    "faqTitle": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "q": "What is nonlinear regression?",
+        "a": "<p>📐 Nonlinear regression fits curves where the relationship between X and Y is not a straight line. This calculator supports logarithmic, inverse, square-root, and Michaelis-Menten models — all linearized so they can be solved with ordinary least squares.</p>"
+      },
+      {
+        "q": "How does the Michaelis-Menten model work?",
+        "a": "<p>📊 The Michaelis-Menten equation <strong>y = Vmax·x / (Km + x)</strong> models saturating processes. The calculator uses the Lineweaver-Burk transformation (1/y vs 1/x) to linearize it, then recovers Vmax = 1/intercept and Km = slope/intercept.</p>"
+      },
+      {
+        "q": "Why not just use polynomial regression?",
+        "a": "<p>📐 Polynomial regression can bend to fit any shape, but the coefficients rarely have physical meaning. Nonlinear models like Michaelis-Menten or logarithmic express real-world laws with interpretable parameters.</p>"
+      }
+    ],
+    "relatedTitle": "Related Regression Calculators",
+    "relatedItems": [
+      {
+        "name": "Power Regression Calculator",
+        "url": "/power-regression-calculator/",
+        "desc": "Model scaling laws with y = a·x^b"
+      },
+      {
+        "name": "Logistic Regression Calculator",
+        "url": "/logistic-regression-calculator/",
+        "desc": "Fit S-curve growth with carrying capacity"
+      },
+      {
+        "name": "Exponential Regression Calculator",
+        "url": "/exponential-regression-calculator/",
+        "desc": "Model unlimited growth and decay with y = a·e^(bx)"
+      },
+      {
+        "name": "Polynomial Regression Calculator",
+        "url": "/polynomial-regression-calculator/",
+        "desc": "Fit any-degree polynomial curves (1-5) to your data"
+      },
+      {
+        "name": "Regression Curve Calculator",
+        "url": "/regression-curve-calculator/",
+        "desc": "Compare linear, quadratic, exponential, and logarithmic models"
+      },
+      {
+        "name": "Grubbs' Test Calculator",
+        "url": "/grubbs-test-calculator/",
+        "desc": "Detect a single outlier in normally distributed data"
+      }
+    ],
+    "seeAlsoTitle": "See Also",
+    "modelPoint": "Fit logarithmic, inverse, square-root, and Michaelis-Menten curves with automatic linearization.",
+    "dataPoint": "Enter paired X and Y values. Minimum 2 points required. Watch model constraints (e.g., x > 0 for log).",
+    "statsPoint": "Get model parameters, R², standard error, predictions, and step-by-step transformations.",
+    "tip": "Choose the simplest model that captures your data. Overly complex models overfit noise."
   }
 }

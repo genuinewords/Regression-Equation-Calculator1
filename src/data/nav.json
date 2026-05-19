@@ -13,7 +13,8 @@
       { "label": "powerCalc", "href": "/power-regression-calculator/" },
       { "label": "logisticCalc", "href": "/logistic-regression-calculator/" },
       { "label": "cubicCalc", "href": "/cubic-regression-calculator/" },
-      { "label": "polyCalc", "href": "/polynomial-regression-calculator/" }
+      { "label": "polyCalc", "href": "/polynomial-regression-calculator/" },
+      { "label": "nonlinearCalc", "href": "/nonlinear-regression-calculator/" }
     ]},
     { "label": "aboutUs", "href": "/about-us/" },
     { "label": "blog", "href": "/blog/" },
@@ -33,6 +34,7 @@
       { "label": "logisticCalc", "href": "/logistic-regression-calculator/" },
       { "label": "cubicCalc", "href": "/cubic-regression-calculator/" },
       { "label": "polyCalc", "href": "/polynomial-regression-calculator/" },
+      { "label": "nonlinearCalc", "href": "/nonlinear-regression-calculator/" },
       { "label": "aboutUs", "href": "/about-us/" },
     { "label": "blog", "href": "/blog/" },
     { "label": "contactUs", "href": "/contact-us/" },

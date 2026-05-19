@@ -1,0 +1,483 @@
+---
+import type { MergedTranslations } from 'theme/i18n/types';
+
+interface Props {
+  translations: MergedTranslations;
+}
+
+const { translations } = Astro.props;
+const nc = (translations as any).nonlinearCalc;
+---
+
+<section class="py-8" id="nonlinear-regression-calculator" data-x-label={nc?.xLabel || 'X'} data-y-label={nc?.yLabel || 'Y'} data-invalid-data={nc?.invalidData || 'Please enter at least 2 valid data points'}>
+  <div class="mx-auto max-w-3xl">
+    <div class="rounded-2xl shadow-lg dark:shadow-surface-950/40 shadow-primary-900/5 border border-surface-200/80 dark:border-surface-700/60 overflow-hidden bg-white dark:bg-surface-800/80 backdrop-blur-sm transition-colors duration-300">
+      <div class="bg-gradient-to-r from-primary-600 to-accent-600 px-6 py-5">
+        <h2 class="text-xl font-bold text-white">{nc?.title || 'Nonlinear Regression Calculator'}</h2>
+        <p class="text-primary-100 text-sm mt-1">{nc?.description || 'Enter your data points to fit logarithmic, inverse, square-root, or Michaelis-Menten curves.'}</p>
+      </div>
+
+      <div class="p-6 bg-surface-50/50 dark:bg-surface-800/50">
+        <div class="mb-4">
+          <label class="text-sm font-semibold text-surface-700 dark:text-surface-300 mr-2">{nc?.modelLabel || 'Model:'}</label>
+          <select id="nonlinear-model-select" class="px-3 py-1.5 text-sm rounded-lg border border-surface-200 dark:border-surface-600 bg-white dark:bg-surface-700 dark:text-surface-200 focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-300 dark:focus:border-primary-600 transition-all duration-150">
+            <option value="log">{nc?.logModel || 'Logarithmic: y = a + b·ln(x)'}</option>
+            <option value="inv">{nc?.invModel || 'Inverse: y = a + b/x'}</option>
+            <option value="sqrt">{nc?.sqrtModel || 'Square Root: y = a + b·√x'}</option>
+            <option value="mm">{nc?.mmModel || 'Michaelis-Menten: y = Vmax·x / (Km + x)'}</option>
+          </select>
+        </div>
+
+        <div class="mb-4">
+          <h3 class="text-sm font-semibold text-surface-700 dark:text-surface-300 mb-3">{nc?.enterData || 'Enter your data points'}</h3>
+          <div class="overflow-x-auto rounded-lg border border-surface-200 dark:border-surface-600">
+            <table class="w-full" id="nonlinear-data-table">
+              <thead>
+                <tr class="bg-surface-100 dark:bg-surface-700/50 border-b border-surface-200 dark:border-surface-600">
+                  <th class="px-3 py-2 text-left text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider w-12">#</th>
+                  <th class="px-3 py-2 text-left text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider">{nc?.xLabel || 'X'}</th>
+                  <th class="px-3 py-2 text-left text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider">{nc?.yLabel || 'Y'}</th>
+                  <th class="px-3 py-2 w-10"></th>
+                </tr>
+              </thead>
+              <tbody id="nonlinear-data-rows">
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-3 mb-6">
+          <button
+            id="nonlinear-add-row-btn"
+            type="button"
+            class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/25 border border-primary-200 dark:border-primary-800/50 rounded-lg transition-all duration-200 hover:bg-primary-100 dark:hover:bg-primary-900/40 hover:border-primary-300 dark:hover:border-primary-700 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-primary-500/30"
+          >
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" /></svg>
+            {nc?.addRow || 'Add Row'}
+          </button>
+          <button
+            id="nonlinear-calculate-btn"
+            type="button"
+            class="inline-flex items-center gap-1.5 px-6 py-2 text-sm font-semibold text-white bg-gradient-to-r from-primary-600 to-accent-600 rounded-lg shadow-md shadow-primary-600/20 dark:shadow-primary-900/40 transition-all duration-200 hover:shadow-lg hover:shadow-primary-600/30 dark:hover:shadow-primary-900/50 hover:brightness-110 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-primary-500/30"
+          >
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+            {nc?.calculate || 'Calculate'}
+          </button>
+          <button
+            id="nonlinear-clear-btn"
+            type="button"
+            class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-surface-600 dark:text-surface-400 bg-surface-100 dark:bg-surface-700 border border-surface-200 dark:border-surface-600 rounded-lg transition-all duration-200 hover:bg-surface-200 dark:hover:bg-surface-600 hover:border-surface-300 dark:hover:border-surface-500 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-surface-400/30"
+          >
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
+            {nc?.clear || 'Clear'}
+          </button>
+          <button
+            id="nonlinear-example-btn"
+            type="button"
+            class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-accent-600 dark:text-accent-400 bg-accent-50 dark:bg-accent-900/25 border border-accent-200 dark:border-accent-800/50 rounded-lg transition-all duration-200 hover:bg-accent-100 dark:hover:bg-accent-900/40 hover:border-accent-300 dark:hover:border-accent-700 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-accent-500/30"
+          >
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+            {nc?.loadExample || 'Load Example'}
+          </button>
+        </div>
+
+        <div id="nonlinear-error-msg" class="hidden mb-4 p-3 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800/50 text-red-700 dark:text-red-400 text-sm"></div>
+
+        <div id="nonlinear-results-section" class="animate-[fadeIn_0.3s_ease-out]">
+          <div class="mb-6">
+            <h3 class="text-lg font-bold text-surface-800 dark:text-surface-200 mb-4">{nc?.result || 'Results'}</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="p-4 rounded-xl bg-gradient-to-br from-primary-50 dark:from-primary-900/30 to-accent-50 dark:to-accent-900/30 border border-primary-100 dark:border-primary-800/40 hover:shadow-md dark:hover:shadow-primary-900/20 transition-all duration-200 hover:scale-[1.01] sm:col-span-2">
+                <p class="text-xs font-semibold text-primary-500 dark:text-primary-400 uppercase tracking-wider mb-1">{nc?.equation || 'Equation'}</p>
+                <p id="nonlinear-result-equation" class="text-lg font-bold text-primary-800 dark:text-primary-200 font-mono"></p>
+              </div>
+              <div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 hover:shadow-md dark:hover:shadow-surface-950/30 transition-all duration-200 hover:scale-[1.01]">
+                <p class="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider mb-1" id="nonlinear-param1-label"></p>
+                <p id="nonlinear-param1-value" class="text-lg font-bold text-surface-800 dark:text-surface-200 font-mono"></p>
+              </div>
+              <div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 hover:shadow-md dark:hover:shadow-surface-950/30 transition-all duration-200 hover:scale-[1.01]">
+                <p class="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider mb-1" id="nonlinear-param2-label"></p>
+                <p id="nonlinear-param2-value" class="text-lg font-bold text-surface-800 dark:text-surface-200 font-mono"></p>
+              </div>
+              <div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 hover:shadow-md dark:hover:shadow-surface-950/30 transition-all duration-200 hover:scale-[1.01]">
+                <p class="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider mb-1">{nc?.rSquared || 'R²'}</p>
+                <p id="nonlinear-result-rsquared" class="text-lg font-bold text-surface-800 dark:text-surface-200 font-mono"></p>
+              </div>
+              <div class="p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 hover:shadow-md dark:hover:shadow-surface-950/30 transition-all duration-200 hover:scale-[1.01] sm:col-span-2">
+                <p class="text-xs font-semibold text-surface-500 dark:text-surface-400 uppercase tracking-wider mb-1">{nc?.predictedY || 'Predicted Y'}</p>
+                <div class="flex items-center gap-3">
+                  <label class="text-sm text-surface-600 dark:text-surface-400">{nc?.forX || 'For X ='} </label>
+                  <input type="number" step="any" id="nonlinear-prediction-x" placeholder="e.g. 6" class="w-24 px-3 py-1.5 text-sm rounded-lg border border-surface-200 dark:border-surface-600 bg-white dark:bg-surface-700 dark:text-surface-200 dark:placeholder-surface-500 focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-300 dark:focus:border-primary-600 transition-all duration-150" />
+                  <span id="nonlinear-predicted-y-value" class="text-lg font-bold text-surface-800 dark:text-surface-200 font-mono">—</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <h4 class="text-sm font-semibold text-surface-700 dark:text-surface-300 mb-3">{nc?.statistics || 'Statistics'}</h4>
+            <div class="overflow-x-auto rounded-lg border border-surface-200 dark:border-surface-600">
+              <table class="w-full text-sm">
+                <thead>
+                  <tr class="bg-surface-100 dark:bg-surface-700/50">
+                    <th class="px-4 py-2.5 text-left font-semibold text-surface-600 dark:text-surface-400">{nc?.statistic || 'Statistic'}</th>
+                    <th class="px-4 py-2.5 text-left font-semibold text-surface-600 dark:text-surface-400">{nc?.value || 'Value'}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-t border-surface-200 dark:border-surface-600">
+                    <td class="px-4 py-2.5 text-surface-700 dark:text-surface-300">{nc?.standardError || 'Standard Error'}</td>
+                    <td id="nonlinear-stat-se" class="px-4 py-2.5 font-mono text-surface-800 dark:text-surface-200"></td>
+                  </tr>
+                  <tr class="border-t border-surface-200 dark:border-surface-600 bg-surface-50/50 dark:bg-surface-800/30">
+                    <td class="px-4 py-2.5 text-surface-700 dark:text-surface-300">{nc?.sampleSize || 'Sample Size (n)'}</td>
+                    <td id="nonlinear-stat-n" class="px-4 py-2.5 font-mono text-surface-800 dark:text-surface-200"></td>
+                  </tr>
+                  <tr class="border-t border-surface-200 dark:border-surface-600">
+                    <td class="px-4 py-2.5 text-surface-700 dark:text-surface-300">{nc?.degreesOfFreedom || 'Degrees of Freedom'}</td>
+                    <td id="nonlinear-stat-df" class="px-4 py-2.5 font-mono text-surface-800 dark:text-surface-200"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <h4 class="text-sm font-semibold text-surface-700 dark:text-surface-300 mb-3">{nc?.chart || 'Chart'}</h4>
+            <div class="rounded-xl border border-surface-200 dark:border-surface-600 bg-white dark:bg-surface-700/30 p-2 overflow-hidden">
+              <canvas id="nonlinear-regression-chart" width="640" height="360" class="w-full h-auto"></canvas>
+            </div>
+          </div>
+
+          <details class="group">
+            <summary class="flex items-center gap-2 cursor-pointer text-sm font-semibold text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors select-none">
+              <svg class="w-4 h-4 transition-transform duration-200 group-open:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+              {nc?.stepByStep || 'Step-by-Step Solution'}
+            </summary>
+            <div id="nonlinear-steps-content" class="mt-4 p-4 rounded-xl bg-white dark:bg-surface-700/50 border border-surface-200 dark:border-surface-600/50 text-sm text-surface-700 dark:text-surface-300 space-y-3 font-mono leading-relaxed"></div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('#nonlinear-regression-calculator').forEach((calcEl) => {
+    const tbody = calcEl.querySelector('#nonlinear-data-rows');
+    const addBtn = calcEl.querySelector('#nonlinear-add-row-btn');
+    const calcBtn = calcEl.querySelector('#nonlinear-calculate-btn');
+    const clearBtn = calcEl.querySelector('#nonlinear-clear-btn');
+    const exampleBtn = calcEl.querySelector('#nonlinear-example-btn');
+    const modelSelect = calcEl.querySelector('#nonlinear-model-select');
+    const errorEl = calcEl.querySelector('#nonlinear-error-msg');
+    const resultsSection = calcEl.querySelector('#nonlinear-results-section');
+    const canvas = calcEl.querySelector('#nonlinear-regression-chart');
+    const predictionXInput = calcEl.querySelector('#nonlinear-prediction-x');
+    const xLabel = calcEl.getAttribute('data-x-label') || 'X';
+    const yLabel = calcEl.getAttribute('data-y-label') || 'Y';
+    const invalidData = calcEl.getAttribute('data-invalid-data') || 'Please enter at least 2 valid data points';
+    let rowCounter = 0;
+    let lastResult = null;
+
+    const MODELS = {
+      log: { name: 'Logarithmic', label1: 'Intercept (a)', label2: 'Slope (b)', eq: (a, b) => `y = ${fmt(a)} + ${fmt(b)}·ln(x)`, predict: (a, b, x) => a + b * Math.log(x), transform: (x, y) => ({ u: Math.log(x), v: y }), check: (x) => x > 0 },
+      inv: { name: 'Inverse', label1: 'Intercept (a)', label2: 'Slope (b)', eq: (a, b) => `y = ${fmt(a)} + ${fmt(b)}/x`, predict: (a, b, x) => a + b / x, transform: (x, y) => ({ u: 1 / x, v: y }), check: (x) => x !== 0 },
+      sqrt: { name: 'Square Root', label1: 'Intercept (a)', label2: 'Slope (b)', eq: (a, b) => `y = ${fmt(a)} + ${fmt(b)}·√x`, predict: (a, b, x) => a + b * Math.sqrt(x), transform: (x, y) => ({ u: Math.sqrt(x), v: y }), check: (x) => x >= 0 },
+      mm: { name: 'Michaelis-Menten', label1: 'Vmax', label2: 'Km', eq: (a, b) => `y = ${fmt(a)}·x / (${fmt(b)} + x)`, predict: (a, b, x) => (a * x) / (b + x), transform: (x, y) => ({ u: 1 / x, v: 1 / y }), check: (x, y) => x !== 0 && y > 0, isLB: true }
+    };
+
+    function fmt(v) {
+      if (Math.abs(v) < 1e-8) return '0';
+      if (Math.abs(v) > 1e6 || (Math.abs(v) < 1e-4 && v !== 0)) return v.toExponential(4);
+      return v.toFixed(4).replace(/\.?0+$/, '');
+    }
+
+    function createRow(xVal = '', yVal = '') {
+      rowCounter++;
+      const tr = document.createElement('tr');
+      tr.className = 'border-b border-surface-200 dark:border-surface-600 transition-colors duration-150 hover:bg-primary-50/30 dark:hover:bg-primary-900/10';
+      tr.innerHTML = `
+        <td class="px-3 py-2 text-xs text-surface-400 dark:text-surface-500 font-mono">${rowCounter}</td>
+        <td class="px-3 py-2"><input type="number" step="any" class="data-x w-full px-3 py-1.5 text-sm rounded-lg border border-surface-200 dark:border-surface-600 bg-white dark:bg-surface-700 dark:text-surface-200 dark:placeholder-surface-500 focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-300 dark:focus:border-primary-600 transition-all duration-150 hover:border-primary-300 dark:hover:border-primary-700" placeholder="${xLabel}" value="${xVal}" /></td>
+        <td class="px-3 py-2"><input type="number" step="any" class="data-y w-full px-3 py-1.5 text-sm rounded-lg border border-surface-200 dark:border-surface-600 bg-white dark:bg-surface-700 dark:text-surface-200 dark:placeholder-surface-500 focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-300 dark:focus:border-primary-600 transition-all duration-150 hover:border-primary-300 dark:hover:border-primary-700" placeholder="${yLabel}" value="${yVal}" /></td>
+        <td class="px-3 py-2"><button type="button" class="remove-row text-surface-300 dark:text-surface-600 hover:text-red-500 dark:hover:text-red-400 transition-colors duration-150" aria-label="Remove row"><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button></td>
+      `;
+      tr.querySelector('.remove-row')?.addEventListener('click', () => {
+        tr.style.opacity = '0';
+        tr.style.transform = 'translateX(10px)';
+        tr.style.transition = 'all 0.15s ease';
+        setTimeout(() => { tr.remove(); renumberRows(); }, 150);
+      });
+      tbody?.appendChild(tr);
+    }
+
+    function renumberRows() {
+      const rows = tbody?.querySelectorAll('tr') ?? [];
+      rows.forEach((row, i) => { row.querySelector('td').textContent = String(i + 1); });
+      rowCounter = rows.length;
+    }
+
+    function getData() {
+      const rows = tbody?.querySelectorAll('tr') ?? [];
+      const points = [];
+      for (const row of rows) {
+        const xInput = row.querySelector('.data-x');
+        const yInput = row.querySelector('.data-y');
+        const x = parseFloat(xInput?.value ?? '');
+        const y = parseFloat(yInput?.value ?? '');
+        if (!isNaN(x) && !isNaN(y)) points.push({ x, y });
+      }
+      return points;
+    }
+
+    function showError(msg) {
+      if (errorEl) { errorEl.textContent = msg; errorEl.classList.remove('hidden'); }
+      if (resultsSection) resultsSection.classList.add('hidden');
+    }
+
+    function hideError() {
+      if (errorEl) errorEl.classList.add('hidden');
+    }
+
+    function linReg(points) {
+      const n = points.length;
+      if (n < 2) return null;
+      const sumU = points.reduce((s, p) => s + p.u, 0);
+      const sumV = points.reduce((s, p) => s + p.v, 0);
+      const meanU = sumU / n;
+      const meanV = sumV / n;
+      let ssUU = 0, ssUV = 0;
+      for (const p of points) {
+        const du = p.u - meanU;
+        const dv = p.v - meanV;
+        ssUU += du * du;
+        ssUV += du * dv;
+      }
+      if (ssUU === 0) return null;
+      const b = ssUV / ssUU;
+      const a = meanV - b * meanU;
+      let ssRes = 0, ssTot = 0;
+      for (const p of points) {
+        const pred = a + b * p.u;
+        ssRes += (p.v - pred) ** 2;
+        ssTot += (p.v - meanV) ** 2;
+      }
+      const r2 = ssTot === 0 ? 1 : 1 - ssRes / ssTot;
+      const se = Math.sqrt(ssRes / (n - 2));
+      return { a, b, r2, se, n, meanU, meanV, ssUU, ssUV, ssRes, ssTot };
+    }
+
+    function compute() {
+      hideError();
+      const modelKey = (modelSelect as HTMLSelectElement)?.value || 'log';
+      const model = MODELS[modelKey];
+      const raw = getData();
+      if (raw.length < 2) { showError(invalidData); return; }
+
+      const valid = [];
+      for (const p of raw) {
+        if (model.isLB) {
+          if (model.check(p.x, p.y)) valid.push(model.transform(p.x, p.y));
+        } else {
+          if (model.check(p.x)) valid.push(model.transform(p.x, p.y));
+        }
+      }
+      if (valid.length < 2) { showError(`Please enter at least 2 valid data points meeting model constraints.`); return; }
+
+      const fit = linReg(valid);
+      if (!fit) { showError('Could not compute regression. Check that transformed X values are not all identical.'); return; }
+
+      let a, b, eqStr;
+      if (model.isLB) {
+        // Lineweaver-Burk: 1/y = (Km/Vmax)*(1/x) + 1/Vmax
+        // fit.a = intercept = 1/Vmax, fit.b = slope = Km/Vmax
+        const vmax = 1 / fit.a;
+        const km = fit.b / fit.a;
+        a = vmax; b = km;
+        eqStr = model.eq(a, b);
+      } else {
+        a = fit.a; b = fit.b;
+        eqStr = model.eq(a, b);
+      }
+
+      // R² on original scale
+      const meanOrigY = raw.reduce((s, p) => s + p.y, 0) / raw.length;
+      let ssResOrig = 0, ssTotOrig = 0;
+      for (const p of raw) {
+        const pred = model.predict(a, b, p.x);
+        ssResOrig += (p.y - pred) ** 2;
+        ssTotOrig += (p.y - meanOrigY) ** 2;
+      }
+      const r2Orig = ssTotOrig === 0 ? 1 : 1 - ssResOrig / ssTotOrig;
+      const seOrig = Math.sqrt(ssResOrig / (raw.length - 2));
+
+      lastResult = { model: modelKey, a, b, predict: (x) => model.predict(a, b, x) };
+
+      // Update UI
+      const eqEl = calcEl.querySelector('#nonlinear-result-equation');
+      const p1Label = calcEl.querySelector('#nonlinear-param1-label');
+      const p1Val = calcEl.querySelector('#nonlinear-param1-value');
+      const p2Label = calcEl.querySelector('#nonlinear-param2-label');
+      const p2Val = calcEl.querySelector('#nonlinear-param2-value');
+      const r2El = calcEl.querySelector('#nonlinear-result-rsquared');
+      const seEl = calcEl.querySelector('#nonlinear-stat-se');
+      const nEl = calcEl.querySelector('#nonlinear-stat-n');
+      const dfEl = calcEl.querySelector('#nonlinear-stat-df');
+      const stepsEl = calcEl.querySelector('#nonlinear-steps-content');
+
+      if (eqEl) eqEl.textContent = eqStr;
+      if (p1Label) p1Label.textContent = model.label1;
+      if (p1Val) p1Val.textContent = fmt(a);
+      if (p2Label) p2Label.textContent = model.label2;
+      if (p2Val) p2Val.textContent = fmt(b);
+      if (r2El) r2El.textContent = r2Orig.toFixed(6);
+      if (seEl) seEl.textContent = seOrig.toFixed(6);
+      if (nEl) nEl.textContent = String(raw.length);
+      if (dfEl) dfEl.textContent = String(raw.length - 2);
+
+      // Steps
+      const steps = [];
+      if (model.isLB) {
+        steps.push(`<strong>Step 1:</strong> Transform data using Lineweaver-Burk: X' = 1/x, Y' = 1/y`);
+        steps.push(`<strong>Step 2:</strong> Compute sums for ${valid.length} valid points: ΣX' = ${fit.meanU * valid.length}, ΣY' = ${fit.meanV * valid.length}`);
+        steps.push(`<strong>Step 3:</strong> Fit linear regression on transformed data: slope = ${fmt(fit.b)}, intercept = ${fmt(fit.a)}`);
+        steps.push(`<strong>Step 4:</strong> Recover parameters: Vmax = 1 / intercept = ${fmt(a)}, Km = slope / intercept = ${fmt(b)}`);
+      } else {
+        const txName = modelKey === 'log' ? 'ln(x)' : modelKey === 'inv' ? '1/x' : '√x';
+        steps.push(`<strong>Step 1:</strong> Transform X values: X' = ${txName}`);
+        steps.push(`<strong>Step 2:</strong> Compute sums for ${valid.length} valid points: ΣX' = ${(fit.meanU * valid.length).toFixed(4)}, ΣY = ${(fit.meanV * valid.length).toFixed(4)}`);
+        steps.push(`<strong>Step 3:</strong> Fit linear regression of Y on X': slope b = ${fmt(fit.b)}, intercept a = ${fmt(fit.a)}`);
+        steps.push(`<strong>Step 4:</strong> Form equation: ${eqStr}`);
+      }
+      steps.push(`<strong>Step 5:</strong> Compute predictions on original scale and calculate R² = ${r2Orig.toFixed(6)}`);
+      if (stepsEl) stepsEl.innerHTML = steps.map(s => `<p>${s}</p>`).join('');
+
+      drawChart(raw, model.predict(a, b));
+      if (resultsSection) resultsSection.classList.remove('hidden');
+    }
+
+    function drawChart(points, predictFn) {
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const dpr = window.devicePixelRatio || 1;
+      const width = canvas.clientWidth;
+      const height = canvas.clientHeight;
+      canvas.width = width * dpr;
+      canvas.height = height * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.clearRect(0, 0, width, height);
+
+      const padL = 48, padR = 20, padT = 20, padB = 40;
+      const chartW = width - padL - padR;
+      const chartH = height - padT - padB;
+
+      const xs = points.map(p => p.x);
+      const ys = points.map(p => p.y);
+      const xMin = Math.min(...xs);
+      const xMax = Math.max(...xs);
+      const yMin = Math.min(...ys);
+      const yMax = Math.max(...ys);
+      const xPad = (xMax - xMin) * 0.1 || 1;
+      const yPad = (yMax - yMin) * 0.1 || 1;
+      const xl = xMin - xPad;
+      const xr = xMax + xPad;
+      const yb = yMin - yPad;
+      const yt = yMax + yPad;
+
+      function sx(x) { return padL + (x - xl) / (xr - xl) * chartW; }
+      function sy(y) { return padT + chartH - (y - yb) / (yt - yb) * chartH; }
+
+      // Grid
+      ctx.strokeStyle = 'rgba(148,163,184,0.25)';
+      ctx.lineWidth = 1;
+      for (let i = 0; i <= 5; i++) {
+        const x = padL + (chartW * i) / 5;
+        const y = padT + (chartH * i) / 5;
+        ctx.beginPath(); ctx.moveTo(x, padT); ctx.lineTo(x, padT + chartH); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(padL, y); ctx.lineTo(padL + chartW, y); ctx.stroke();
+      }
+
+      // Axes
+      ctx.strokeStyle = 'rgba(100,116,139,0.5)';
+      ctx.lineWidth = 1.5;
+      ctx.beginPath(); ctx.moveTo(padL, padT); ctx.lineTo(padL, padT + chartH); ctx.lineTo(padL + chartW, padT + chartH); ctx.stroke();
+
+      // Curve
+      ctx.strokeStyle = '#7c3aed';
+      ctx.lineWidth = 2.5;
+      ctx.beginPath();
+      const steps = 200;
+      for (let i = 0; i <= steps; i++) {
+        const x = xl + (xr - xl) * (i / steps);
+        const y = predictFn(x);
+        if (isFinite(y)) { if (i === 0) ctx.moveTo(sx(x), sy(y)); else ctx.lineTo(sx(x), sy(y)); }
+      }
+      ctx.stroke();
+
+      // Points
+      ctx.fillStyle = '#0ea5e9';
+      for (const p of points) {
+        ctx.beginPath();
+        ctx.arc(sx(p.x), sy(p.y), 4, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // Labels
+      ctx.fillStyle = '#64748b';
+      ctx.font = '12px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText(xLabel, padL + chartW / 2, height - 8);
+      ctx.save();
+      ctx.translate(14, padT + chartH / 2);
+      ctx.rotate(-Math.PI / 2);
+      ctx.fillText(yLabel, 0, 0);
+      ctx.restore();
+    }
+
+    addBtn?.addEventListener('click', () => createRow());
+    calcBtn?.addEventListener('click', compute);
+    clearBtn?.addEventListener('click', () => {
+      if (tbody) { tbody.innerHTML = ''; rowCounter = 0; }
+      if (resultsSection) resultsSection.classList.add('hidden');
+      hideError();
+      lastResult = null;
+      if (predictionXInput) predictionXInput.value = '';
+      const predVal = calcEl.querySelector('#nonlinear-predicted-y-value');
+      if (predVal) predVal.textContent = '—';
+      if (canvas) { const ctx = canvas.getContext('2d'); ctx.clearRect(0, 0, canvas.width, canvas.height); }
+    });
+    exampleBtn?.addEventListener('click', () => {
+      if (tbody) { tbody.innerHTML = ''; rowCounter = 0; }
+      const modelKey = (modelSelect as HTMLSelectElement)?.value || 'log';
+      const examples = {
+        log: [[1,2],[2,3.5],[3,4.5],[4,5.2],[5,6],[6,6.5],[8,7.2],[10,7.8]],
+        inv: [[1,10],[2,6],[3,4.5],[4,3.8],[5,3.3],[6,3],[8,2.6],[10,2.3]],
+        sqrt: [[0,1],[1,3],[4,5],[9,7],[16,9],[25,11],[36,13],[49,15]],
+        mm: [[1,1.9],[2,3.2],[3,4.1],[4,4.6],[5,4.9],[6,5.1],[8,5.4],[10,5.6]]
+      };
+      const data = examples[modelKey] || examples.log;
+      data.forEach(([x, y]) => createRow(String(x), String(y)));
+      hideError();
+    });
+    predictionXInput?.addEventListener('input', () => {
+      if (!lastResult) return;
+      const x = parseFloat((predictionXInput as HTMLInputElement).value);
+      const predVal = calcEl.querySelector('#nonlinear-predicted-y-value');
+      if (isNaN(x)) { if (predVal) predVal.textContent = '—'; return; }
+      const y = lastResult.predict(x);
+      if (predVal) predVal.textContent = isFinite(y) ? fmt(y) : '—';
+    });
+
+    // Init with 4 rows
+    for (let i = 0; i < 4; i++) createRow();
+    if (resultsSection) resultsSection.classList.add('hidden');
+  });
+</script>
