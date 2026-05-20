@@ -426,6 +426,11 @@
         "name": "Multiple Regression Calculator",
         "url": "/multiple-regression-calculator/",
         "desc": "Use two or more predictors"
+      },
+      {
+        "name": "Regression Assumptions Checker",
+        "url": "/regression-assumptions-checker/",
+        "desc": "Verify OLS regression assumptions"
       }
     ]
   },
@@ -592,6 +597,11 @@
         "name": "Pearson Correlation Calculator",
         "url": "/pearson-correlation-calculator/",
         "desc": "Measure the strength of linear relationships"
+      },
+      {
+        "name": "Least Squares Regression Line",
+        "url": "/least-squares-regression-line-calculator/",
+        "desc": "Compute the OLS best-fit line"
       }
     ]
   },
@@ -759,6 +769,11 @@
         "name": "Multiple Regression Calculator",
         "url": "/multiple-regression-calculator/",
         "desc": "Use two or more predictors"
+      },
+      {
+        "name": "Pearson Correlation Calculator",
+        "url": "/pearson-correlation-calculator/",
+        "desc": "Measure the strength of linear relationships"
       }
     ]
   },
@@ -1034,6 +1049,11 @@
         "name": "Regression Curve Calculator",
         "url": "/regression-curve-calculator/",
         "desc": "Compare linear, quadratic, exponential, and logarithmic models"
+      },
+      {
+        "name": "Logistic Regression Calculator",
+        "url": "/logistic-regression-calculator/",
+        "desc": "Fit S-curve growth with carrying capacity"
       }
     ]
   },
@@ -1295,6 +1315,11 @@
         "name": "Regression Assumptions Checker",
         "url": "/regression-assumptions-checker/",
         "desc": "Verify OLS regression assumptions"
+      },
+      {
+        "name": "Multiple Regression Calculator",
+        "url": "/multiple-regression-calculator/",
+        "desc": "Use two or more predictors"
       }
     ]
   },
@@ -1490,6 +1515,11 @@
         "name": "Exponential Regression Solvers",
         "url": "/exponential-regression-calculator/",
         "desc": "Model growth and decay with y = a·e^(bx)"
+      },
+      {
+        "name": "Power Regression Calculator",
+        "url": "/power-regression-calculator/",
+        "desc": "Model scaling laws with y = a·x^b"
       }
     ]
   },
@@ -1739,6 +1769,11 @@
         "name": "Regression Curve Calculator",
         "url": "/regression-curve-calculator/",
         "desc": "Compare linear, quadratic, exponential, and logarithmic models"
+      },
+      {
+        "name": "Polynomial & Nonlinear Regression Calculator",
+        "url": "/polynomial-regression-calculator/",
+        "desc": "Fit any-degree polynomial (1-5)"
       }
     ]
   },
@@ -1965,6 +2000,11 @@
         "name": "Pearson Correlation Calculator",
         "url": "/pearson-correlation-calculator/",
         "desc": "Measure the strength of linear relationships"
+      },
+      {
+        "name": "Least Squares Regression Line",
+        "url": "/least-squares-regression-line-calculator/",
+        "desc": "Compute the OLS best-fit line"
       }
     ]
   },
@@ -2094,6 +2134,11 @@
         "name": "Logistic Regression Calculator",
         "url": "/logistic-regression-calculator/",
         "desc": "Fit S-curve growth with carrying capacity"
+      },
+      {
+        "name": "Regression Curve Calculator",
+        "url": "/regression-curve-calculator/",
+        "desc": "Compare linear, quadratic, exponential, and logarithmic models"
       }
     ],
     "seeAlsoTitle": "See Also"
@@ -2178,6 +2223,11 @@
         "name": "Power Regression Calculator",
         "url": "/power-regression-calculator/",
         "desc": "Model scaling laws with y = a·x^b"
+      },
+      {
+        "name": "Exponential Regression Solvers",
+        "url": "/exponential-regression-calculator/",
+        "desc": "Model growth and decay with y = a·e^(bx)"
       }
     ],
     "seeAlsoTitle": "See Also",
@@ -2261,6 +2311,11 @@
         "name": "Quadratic Regression Calculator",
         "url": "/quadratic-regression-calculator/",
         "desc": "Model parabolic relationships with y = ax² + bx + c"
+      },
+      {
+        "name": "Regression Curve Calculator",
+        "url": "/regression-curve-calculator/",
+        "desc": "Compare linear, quadratic, exponential, and logarithmic models"
       }
     ],
     "seeAlsoTitle": "See Also",
@@ -2345,6 +2400,11 @@
         "name": "Nonlinear Regression Calculator",
         "url": "/nonlinear-regression-calculator/",
         "desc": "Log, inverse, sqrt & Michaelis-Menten"
+      },
+      {
+        "name": "Quadratic Regression Calculator",
+        "url": "/quadratic-regression-calculator/",
+        "desc": "Model parabolic relationships with y = ax² + bx + c"
       }
     ],
     "seeAlsoTitle": "See Also",
@@ -2433,6 +2493,11 @@
         "name": "Polynomial & Nonlinear Regression Calculator",
         "url": "/polynomial-regression-calculator/",
         "desc": "Fit any-degree polynomial (1-5)"
+      },
+      {
+        "name": "Exponential Regression Solvers",
+        "url": "/exponential-regression-calculator/",
+        "desc": "Model growth and decay with y = a·e^(bx)"
       }
     ],
     "seeAlsoTitle": "See Also",
@@ -2509,6 +2574,11 @@
         "name": "Pearson Correlation Calculator",
         "url": "/pearson-correlation-calculator/",
         "desc": "Measure the strength of linear relationships"
+      },
+      {
+        "name": "Multiple Regression Calculator",
+        "url": "/multiple-regression-calculator/",
+        "desc": "Use two or more predictors"
       }
     ],
     "seeAlsoTitle": "See Also",
