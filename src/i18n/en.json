@@ -418,34 +418,14 @@
     "relatedTitle": "Related Regression Calculators",
     "relatedItems": [
       {
-        "name": "Exponential Regression Calculator",
-        "url": "/exponential-regression-calculator/",
-        "desc": "Model growth and decay patterns with y = a·e^(bx)"
-      },
-      {
-        "name": "Least Squares Regression Line Calculator",
+        "name": "Least Squares Regression Line",
         "url": "/least-squares-regression-line-calculator/",
-        "desc": "Compute the OLS best-fit line with full statistical output"
-      },
-      {
-        "name": "Quadratic Regression Calculator",
-        "url": "/quadratic-regression-calculator/",
-        "desc": "Model parabolic relationships with y = ax² + bx + c"
+        "desc": "Compute the OLS best-fit line"
       },
       {
         "name": "Multiple Regression Calculator",
         "url": "/multiple-regression-calculator/",
-        "desc": "Use two or more predictors with y = b₀ + b₁x₁ + b₂x₂"
-      },
-      {
-        "name": "Regression Curve Calculator",
-        "url": "/regression-curve-calculator/",
-        "desc": "Compare linear, quadratic, exponential, and logarithmic models side by side"
-      },
-      {
-        "name": "Regression Assumptions Checker",
-        "url": "/regression-assumptions-checker/",
-        "desc": "Verify that your data meets all OLS regression assumptions"
+        "desc": "Use two or more predictors"
       }
     ]
   },
@@ -606,32 +586,12 @@
       {
         "name": "Regression Assumptions Checker",
         "url": "/regression-assumptions-checker/",
-        "desc": "Verify that your data meets all OLS regression assumptions including normality and homoscedasticity"
+        "desc": "Verify OLS regression assumptions"
       },
       {
         "name": "Pearson Correlation Calculator",
         "url": "/pearson-correlation-calculator/",
-        "desc": "Measure the strength and direction of the linear relationship between two variables"
-      },
-      {
-        "name": "Least Squares Regression Line Calculator",
-        "url": "/least-squares-regression-line-calculator/",
-        "desc": "Compute the OLS best-fit line y = mx + b with full statistical output"
-      },
-      {
-        "name": "Exponential Regression Calculator",
-        "url": "/exponential-regression-calculator/",
-        "desc": "Model growth and decay patterns with y = a·e^(bx)"
-      },
-      {
-        "name": "Regression Curve Calculator",
-        "url": "/regression-curve-calculator/",
-        "desc": "Compare linear, quadratic, exponential, and logarithmic models side by side"
-      },
-      {
-        "name": "Quadratic Regression Calculator",
-        "url": "/quadratic-regression-calculator/",
-        "desc": "Model parabolic relationships with y = ax² + bx + c"
+        "desc": "Measure the strength of linear relationships"
       }
     ]
   },
@@ -791,34 +751,14 @@
     "relatedTitle": "Related Regression Calculators",
     "relatedItems": [
       {
-        "name": "Least Squares Regression Line Calculator",
+        "name": "Least Squares Regression Line",
         "url": "/least-squares-regression-line-calculator/",
-        "desc": "Compute the OLS best-fit line y = mx + b with full statistical output"
-      },
-      {
-        "name": "Exponential Regression Calculator",
-        "url": "/exponential-regression-calculator/",
-        "desc": "Model growth and decay patterns with y = a·e^(bx)"
-      },
-      {
-        "name": "Quadratic Regression Calculator",
-        "url": "/quadratic-regression-calculator/",
-        "desc": "Model parabolic relationships with y = ax² + bx + c"
+        "desc": "Compute the OLS best-fit line"
       },
       {
         "name": "Multiple Regression Calculator",
         "url": "/multiple-regression-calculator/",
-        "desc": "Use two or more predictors with y = b₀ + b₁x₁ + b₂x₂"
-      },
-      {
-        "name": "Pearson Correlation Calculator",
-        "url": "/pearson-correlation-calculator/",
-        "desc": "Measure the strength and direction of the linear relationship between two variables"
-      },
-      {
-        "name": "Grubbs' Test Calculator",
-        "url": "/grubbs-test-calculator/",
-        "desc": "Detect a single outlier in normally distributed data using Grubbs' test"
+        "desc": "Use two or more predictors"
       }
     ]
   },
@@ -1086,34 +1026,14 @@
     "relatedTitle": "Related Regression Calculators",
     "relatedItems": [
       {
-        "name": "Linear Regression Calculator",
-        "url": "/least-squares-regression-line-calculator/",
-        "desc": "Fit a straight line y = mx + b to your data with full statistical output"
-      },
-      {
-        "name": "Quadratic Regression Calculator",
-        "url": "/quadratic-regression-calculator/",
-        "desc": "Model parabolic relationships with y = ax² + bx + c"
-      },
-      {
-        "name": "Multiple Regression Calculator",
-        "url": "/multiple-regression-calculator/",
-        "desc": "Use two or more predictors with y = b₀ + b₁x₁ + b₂x₂"
-      },
-      {
-        "name": "Pearson Correlation Calculator",
-        "url": "/pearson-correlation-calculator/",
-        "desc": "Measure the strength and direction of the linear relationship between two variables"
+        "name": "Power Regression Calculator",
+        "url": "/power-regression-calculator/",
+        "desc": "Model scaling laws with y = a·x^b"
       },
       {
         "name": "Regression Curve Calculator",
         "url": "/regression-curve-calculator/",
-        "desc": "Compare linear, quadratic, exponential, and logarithmic models side by side"
-      },
-      {
-        "name": "Grubbs' Test Calculator",
-        "url": "/grubbs-test-calculator/",
-        "desc": "Detect a single outlier in normally distributed data using Grubbs' test"
+        "desc": "Compare linear, quadratic, exponential, and logarithmic models"
       }
     ]
   },
@@ -1367,34 +1287,14 @@
     "relatedTitle": "Related Regression Calculators",
     "relatedItems": [
       {
-        "name": "Exponential Regression Calculator",
-        "url": "/exponential-regression-calculator/",
-        "desc": "Model growth and decay patterns"
-      },
-      {
-        "name": "Quadratic Regression Calculator",
-        "url": "/quadratic-regression-calculator/",
-        "desc": "Fit parabolic curves to your data"
-      },
-      {
-        "name": "Multiple Regression Calculator",
-        "url": "/multiple-regression-calculator/",
-        "desc": "Use two or more predictor variables"
-      },
-      {
         "name": "Pearson Correlation Calculator",
         "url": "/pearson-correlation-calculator/",
-        "desc": "Measure linear association strength"
-      },
-      {
-        "name": "Regression Curve Calculator",
-        "url": "/regression-curve-calculator/",
-        "desc": "Compare multiple model types"
+        "desc": "Measure the strength of linear relationships"
       },
       {
         "name": "Regression Assumptions Checker",
         "url": "/regression-assumptions-checker/",
-        "desc": "Verify your data meets OLS assumptions"
+        "desc": "Verify OLS regression assumptions"
       }
     ]
   },
@@ -1582,39 +1482,14 @@
     "relatedTitle": "Related Regression Calculators",
     "relatedItems": [
       {
-        "name": "Exponential Regression Calculator",
-        "url": "/exponential-regression-calculator/",
-        "desc": "Model growth and decay patterns with y = a·e^(bx)"
-      },
-      {
-        "name": "Least Squares Regression Line Calculator",
-        "url": "/least-squares-regression-line-calculator/",
-        "desc": "Compute the OLS best-fit line y = mx + b with full statistical output"
-      },
-      {
         "name": "Quadratic Regression Calculator",
         "url": "/quadratic-regression-calculator/",
         "desc": "Model parabolic relationships with y = ax² + bx + c"
       },
       {
-        "name": "Multiple Regression Calculator",
-        "url": "/multiple-regression-calculator/",
-        "desc": "Use two or more predictors with y = b₀ + b₁x₁ + b₂x₂"
-      },
-      {
-        "name": "Pearson Correlation Calculator",
-        "url": "/pearson-correlation-calculator/",
-        "desc": "Measure the strength and direction of the linear relationship between two variables"
-      },
-      {
-        "name": "Regression Assumptions Checker",
-        "url": "/regression-assumptions-checker/",
-        "desc": "Verify that your data meets all OLS regression assumptions"
-      },
-      {
-        "name": "Grubbs' Test Calculator",
-        "url": "/grubbs-test-calculator/",
-        "desc": "Detect a single outlier in normally distributed data using Grubbs' test"
+        "name": "Exponential Regression Solvers",
+        "url": "/exponential-regression-calculator/",
+        "desc": "Model growth and decay with y = a·e^(bx)"
       }
     ]
   },
@@ -1856,34 +1731,14 @@
     "relatedTitle": "Related Regression Calculators",
     "relatedItems": [
       {
-        "name": "Exponential Regression Calculator",
-        "url": "/exponential-regression-calculator/",
-        "desc": "Model growth and decay patterns"
-      },
-      {
-        "name": "Least Squares Regression Line Calculator",
-        "url": "/least-squares-regression-line-calculator/",
-        "desc": "Compute the OLS best-fit line"
-      },
-      {
-        "name": "Multiple Regression Calculator",
-        "url": "/multiple-regression-calculator/",
-        "desc": "Use two or more predictor variables"
-      },
-      {
-        "name": "Pearson Correlation Calculator",
-        "url": "/pearson-correlation-calculator/",
-        "desc": "Measure linear association strength"
+        "name": "Cubic Regression Calculator",
+        "url": "/cubic-regression-calculator/",
+        "desc": "Fit cubic curves y = ax³ + bx² + cx + d"
       },
       {
         "name": "Regression Curve Calculator",
         "url": "/regression-curve-calculator/",
-        "desc": "Compare multiple model types"
-      },
-      {
-        "name": "Regression Assumptions Checker",
-        "url": "/regression-assumptions-checker/",
-        "desc": "Verify your data meets OLS assumptions"
+        "desc": "Compare linear, quadratic, exponential, and logarithmic models"
       }
     ]
   },
@@ -2102,34 +1957,14 @@
     "relatedTitle": "Related Regression Calculators",
     "relatedItems": [
       {
-        "name": "Exponential Regression Calculator",
-        "url": "/exponential-regression-calculator/",
-        "desc": "Model growth and decay patterns with y = a·e^(bx)"
-      },
-      {
-        "name": "Least Squares Regression Line Calculator",
-        "url": "/least-squares-regression-line-calculator/",
-        "desc": "Compute the OLS best-fit line for single-predictor models"
-      },
-      {
-        "name": "Quadratic Regression Calculator",
-        "url": "/quadratic-regression-calculator/",
-        "desc": "Fit parabolic curves with y = ax² + bx + c"
+        "name": "Regression Assumptions Checker",
+        "url": "/regression-assumptions-checker/",
+        "desc": "Verify OLS regression assumptions"
       },
       {
         "name": "Pearson Correlation Calculator",
         "url": "/pearson-correlation-calculator/",
-        "desc": "Measure the strength and direction of the linear relationship"
-      },
-      {
-        "name": "Regression Curve Calculator",
-        "url": "/regression-curve-calculator/",
-        "desc": "Compare linear, quadratic, exponential, and logarithmic models side by side"
-      },
-      {
-        "name": "Regression Assumptions Checker",
-        "url": "/regression-assumptions-checker/",
-        "desc": "Verify that your data meets all OLS regression assumptions"
+        "desc": "Measure the strength of linear relationships"
       }
     ]
   },
@@ -2251,34 +2086,14 @@
     "relatedTitle": "Related Regression Calculators",
     "relatedItems": [
       {
-        "name": "Exponential Regression Calculator",
+        "name": "Exponential Regression Solvers",
         "url": "/exponential-regression-calculator/",
         "desc": "Model growth and decay with y = a·e^(bx)"
       },
       {
-        "name": "Quadratic Regression Calculator",
-        "url": "/quadratic-regression-calculator/",
-        "desc": "Model parabolic relationships with y = ax² + bx + c"
-      },
-      {
-        "name": "Multiple Regression Calculator",
-        "url": "/multiple-regression-calculator/",
-        "desc": "Use two or more predictors with y = b₀ + b₁x₁ + b₂x₂"
-      },
-      {
-        "name": "Pearson Correlation Calculator",
-        "url": "/pearson-correlation-calculator/",
-        "desc": "Measure the strength and direction of linear relationships"
-      },
-      {
-        "name": "Regression Curve Calculator",
-        "url": "/regression-curve-calculator/",
-        "desc": "Compare linear, quadratic, exponential, and logarithmic models"
-      },
-      {
-        "name": "Grubbs' Test Calculator",
-        "url": "/grubbs-test-calculator/",
-        "desc": "Detect a single outlier in normally distributed data"
+        "name": "Logistic Regression Calculator",
+        "url": "/logistic-regression-calculator/",
+        "desc": "Fit S-curve growth with carrying capacity"
       }
     ],
     "seeAlsoTitle": "See Also"
@@ -2355,34 +2170,14 @@
     "relatedTitle": "Related Regression Calculators",
     "relatedItems": [
       {
-        "name": "Exponential Regression Calculator",
-        "url": "/exponential-regression-calculator/",
-        "desc": "Model unlimited growth and decay with y = a·e^(bx)"
+        "name": "Nonlinear Regression Calculator",
+        "url": "/nonlinear-regression-calculator/",
+        "desc": "Log, inverse, sqrt & Michaelis-Menten"
       },
       {
-        "name": "Quadratic Regression Calculator",
-        "url": "/quadratic-regression-calculator/",
-        "desc": "Model parabolic relationships with y = ax² + bx + c"
-      },
-      {
-        "name": "Multiple Regression Calculator",
-        "url": "/multiple-regression-calculator/",
-        "desc": "Use two or more predictors with y = b₀ + b₁x₁ + b₂x₂"
-      },
-      {
-        "name": "Pearson Correlation Calculator",
-        "url": "/pearson-correlation-calculator/",
-        "desc": "Measure the strength and direction of linear relationships"
-      },
-      {
-        "name": "Regression Curve Calculator",
-        "url": "/regression-curve-calculator/",
-        "desc": "Compare linear, quadratic, exponential, and logarithmic models"
-      },
-      {
-        "name": "Grubbs' Test Calculator",
-        "url": "/grubbs-test-calculator/",
-        "desc": "Detect a single outlier in normally distributed data"
+        "name": "Power Regression Calculator",
+        "url": "/power-regression-calculator/",
+        "desc": "Model scaling laws with y = a·x^b"
       }
     ],
     "seeAlsoTitle": "See Also",
@@ -2458,34 +2253,14 @@
     "relatedTitle": "Related Regression Calculators",
     "relatedItems": [
       {
-        "name": "Polynomial Regression Calculator",
+        "name": "Polynomial & Nonlinear Regression Calculator",
         "url": "/polynomial-regression-calculator/",
-        "desc": "Fit any-degree polynomial curves (1-5) to your data"
+        "desc": "Fit any-degree polynomial (1-5)"
       },
       {
         "name": "Quadratic Regression Calculator",
         "url": "/quadratic-regression-calculator/",
         "desc": "Model parabolic relationships with y = ax² + bx + c"
-      },
-      {
-        "name": "Multiple Regression Calculator",
-        "url": "/multiple-regression-calculator/",
-        "desc": "Use two or more predictors with y = b₀ + b₁x₁ + b₂x₂"
-      },
-      {
-        "name": "Pearson Correlation Calculator",
-        "url": "/pearson-correlation-calculator/",
-        "desc": "Measure the strength and direction of linear relationships"
-      },
-      {
-        "name": "Regression Curve Calculator",
-        "url": "/regression-curve-calculator/",
-        "desc": "Compare linear, quadratic, exponential, and logarithmic models"
-      },
-      {
-        "name": "Grubbs' Test Calculator",
-        "url": "/grubbs-test-calculator/",
-        "desc": "Detect a single outlier in normally distributed data"
       }
     ],
     "seeAlsoTitle": "See Also",
@@ -2564,32 +2339,12 @@
       {
         "name": "Cubic Regression Calculator",
         "url": "/cubic-regression-calculator/",
-        "desc": "Fit cubic curves with one inflection point"
+        "desc": "Fit cubic curves y = ax³ + bx² + cx + d"
       },
       {
-        "name": "Quadratic Regression Calculator",
-        "url": "/quadratic-regression-calculator/",
-        "desc": "Model parabolic relationships with y = ax² + bx + c"
-      },
-      {
-        "name": "Multiple Regression Calculator",
-        "url": "/multiple-regression-calculator/",
-        "desc": "Use two or more predictors with y = b₀ + b₁x₁ + b₂x₂"
-      },
-      {
-        "name": "Pearson Correlation Calculator",
-        "url": "/pearson-correlation-calculator/",
-        "desc": "Measure the strength and direction of linear relationships"
-      },
-      {
-        "name": "Regression Curve Calculator",
-        "url": "/regression-curve-calculator/",
-        "desc": "Compare linear, quadratic, exponential, and logarithmic models"
-      },
-      {
-        "name": "Grubbs' Test Calculator",
-        "url": "/grubbs-test-calculator/",
-        "desc": "Detect a single outlier in normally distributed data"
+        "name": "Nonlinear Regression Calculator",
+        "url": "/nonlinear-regression-calculator/",
+        "desc": "Log, inverse, sqrt & Michaelis-Menten"
       }
     ],
     "seeAlsoTitle": "See Also",
@@ -2670,34 +2425,14 @@
     "relatedTitle": "Related Regression Calculators",
     "relatedItems": [
       {
-        "name": "Power Regression Calculator",
-        "url": "/power-regression-calculator/",
-        "desc": "Model scaling laws with y = a·x^b"
-      },
-      {
         "name": "Logistic Regression Calculator",
         "url": "/logistic-regression-calculator/",
         "desc": "Fit S-curve growth with carrying capacity"
       },
       {
-        "name": "Exponential Regression Calculator",
-        "url": "/exponential-regression-calculator/",
-        "desc": "Model unlimited growth and decay with y = a·e^(bx)"
-      },
-      {
-        "name": "Polynomial Regression Calculator",
+        "name": "Polynomial & Nonlinear Regression Calculator",
         "url": "/polynomial-regression-calculator/",
-        "desc": "Fit any-degree polynomial curves (1-5) to your data"
-      },
-      {
-        "name": "Regression Curve Calculator",
-        "url": "/regression-curve-calculator/",
-        "desc": "Compare linear, quadratic, exponential, and logarithmic models"
-      },
-      {
-        "name": "Grubbs' Test Calculator",
-        "url": "/grubbs-test-calculator/",
-        "desc": "Detect a single outlier in normally distributed data"
+        "desc": "Fit any-degree polynomial (1-5)"
       }
     ],
     "seeAlsoTitle": "See Also",
@@ -2766,29 +2501,14 @@
     "relatedTitle": "Related Calculators",
     "relatedItems": [
       {
-        "name": "Linear Regression Calculator",
-        "url": "/linear-regression-calculator/",
-        "desc": "Fit the best straight line through many data points"
-      },
-      {
-        "name": "Exponential Regression Calculator",
-        "url": "/exponential-regression-calculator/",
-        "desc": "Model growth and decay with curved relationships"
+        "name": "Least Squares Regression Line",
+        "url": "/least-squares-regression-line-calculator/",
+        "desc": "Compute the OLS best-fit line"
       },
       {
         "name": "Pearson Correlation Calculator",
         "url": "/pearson-correlation-calculator/",
         "desc": "Measure the strength of linear relationships"
-      },
-      {
-        "name": "Regression Curve Calculator",
-        "url": "/regression-curve-calculator/",
-        "desc": "Compare linear, quadratic, exponential, and logarithmic models"
-      },
-      {
-        "name": "Grubbs' Test Calculator",
-        "url": "/grubbs-test-calculator/",
-        "desc": "Detect a single outlier in normally distributed data"
       }
     ],
     "seeAlsoTitle": "See Also",
